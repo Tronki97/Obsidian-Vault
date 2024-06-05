@@ -11,4 +11,3 @@
 - Ciò spiega come la [[Microarchitettura]] possa essere implementata: 
 	- Via hardware: con [[Circuiti logici]]
 	- Via software: con microprogrammazione 
-	- test

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
+                "file": "architettura degli elaboratori/Boole/Circuiti logici.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
+                "file": "architettura degli elaboratori/Boole/Circuiti logici.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
+                "file": "architettura degli elaboratori/Boole/Circuiti logici.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "architettura degli elaboratori/Architettura HACK/CISC e RISC.md"
+                "file": "architettura degli elaboratori/Boole/Circuiti logici.md"
               }
             }
           },
@@ -163,9 +163,9 @@
   },
   "active": "91c916ee04fdb0b2",
   "lastOpenFiles": [
+    "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
     "programmazione/Progetto Programmazione.md",
     "architettura degli elaboratori/Architettura HACK/Registri.md",
-    "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
     "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
     "architettura degli elaboratori/Boole/Circuiti logici.md",
     "architettura degli elaboratori/Boole/Porte logiche/AND.md",

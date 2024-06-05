@@ -5,4 +5,3 @@
 	- OR
 	- NOR
 	- XOR
-	- 
