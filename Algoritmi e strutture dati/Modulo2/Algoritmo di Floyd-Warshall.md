@@ -1,0 +1,21 @@
+- DEF
+	- applicabile anche a grafi con costi negativi ma senza cicli negativi.
+		- basato su programmazione dinamica
+			- e tutti i sotto-problemi sono i [[Cammini minimi]] per ogni coppia di nodi su un sotto-grafo.
+	- identifichiamo $D_{xy}^k$ come la distanza minima dal nodo _x_ a _y_ con l'ipotesi che i nodi intermedi appartengano solo all'insieme {1,...,k}
+	- la soluzione è$D_{xy}^n$ per ogni coppia di nodi.
+	- per rappresentare i sotto-problemi utilizziamo un'array di matrici.
+	- casi:
+		- $$D_{xy}^{0}=\begin {cases} D_{xx}=0 \\ ((x,y)\in E) \Rightarrow  (D_{xy}=w(x,y))\\ ((x,y)\notin E) \Rightarrow  (D_{xy}=\infty)\end {cases}$$
+			- Precondizione x$\ne$y
+	- Casi generali:
+		- 1) non passo per un nodo intermedio _k_, $D_{xy}^{k-1}$
+		- 2) uso il nodo k, ciò implica passarci una volta sola perché è richiesto il cammino minimo: $D_{xk}^{k-1}+D_{ky}^{k-1}$ 
+			- il k-1 non esclude l'utilizzo effettivo del nodo k ma garantisce di evitare il passaggio ripetuto su uno stesso nodo.
+		- riassumendo:
+			- $$D{xy}^{k}=min\{D_{xk}^{k-1},D_{ky}^{k-1}, D_{xy}^{k-1}\}$$
+	- Dopo aver riempito la tabella con il costo per ogni coppia di nodi nel grafo bisogna costruire una tabella che rappresenta gli effettivi cammini da percorrere.
+		- si può usare una matrice di _successori next$[x,y]$_ di n x n 
+			- next$[x,y]$: nelle colonne sono rappresentate le sequenze di passaggio da un vertice all'altro, -1 rappresenta il non poter arrivare ad un nodo attraverso un altro:
+				- ![[Screenshot 2024-05-09 at 10-43-28 Cammini minimi - 19-CamminiMinimi.pdf.png]]
+	- L'algoritmo può anche essere usato per individuare i cicli negativi, infatti quando termina l'algoritmo viene verificata la loro esistenza 

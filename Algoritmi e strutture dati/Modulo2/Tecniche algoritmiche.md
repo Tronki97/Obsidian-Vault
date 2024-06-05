@@ -1,0 +1,6 @@
+- ### [[Divide-et-impera]]
+	- problema suddiviso in sotto-problemi risolti ricorsivamente
+- ### [[Algoritmi Greedy||Greedy]] 
+	- ad ogni passo viene eseguita la scelta ottima; le scelte fatte non vengono mai disfatte
+- ### [[Dynamic]]
+	- la soluzione viene costruita a partire da un insieme di sotto-problemi. 

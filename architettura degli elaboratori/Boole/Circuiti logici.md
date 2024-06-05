@@ -1,0 +1,8 @@
+- ### Porte principali
+	- [[NOT]] 
+	- [[AND]]
+	- NAND
+	- OR
+	- NOR
+	- XOR
+	- 

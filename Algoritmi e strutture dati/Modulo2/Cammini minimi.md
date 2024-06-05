@@ -1,0 +1,50 @@
+- # Definizione del problema
+	- considero un DAG G(V, E) dove ogni arco ha un peso.
+	- il costo di un cammino $\pi=(v_{0},v_{1},...,v_k)$ che collega il nodo $v_{0} \ con\  v_k$ è definito come:
+		- $w(\pi)=\sum_{i=1}^{k}w(v_{i-1}, v_i)$
+	- data una coppia di nodi voglio trovare un cammino di costo minimo tra tutti i cammini che vanno da un nodo all'altro.
+- # Formulazioni del problema
+	- ### Costo minimo tra una singola coppia di nodi _u_ e _v_.
+	- ### Single source shortest path: 
+		- ho una partenza ma non ho una destinazione quindi in output avrò tutte le strade minime per raggiungere ogni punto del [[grafi||grafo]]
+	- ### All-pair shortest paths
+		- determina cammini di costo minimo tra ogni coppie di nodi _u_ e _v_
+- # OSSERVAZIONE:
+	- ci sono situazioni in cui non esiste un cammino minimo
+		- destinazione non raggiungibile
+			- quando ci sono cicli di costo negativo che quindi continuano ad abbassare il costo per procedere e siccome si usa un algoritmo [[Algoritmi Greedy||greedy]] si rimarrebbe bloccati nel ciclo. 
+- # Esistenza
+	- sia G un DAG pesato, se non ci sono cicli negativi allora esiste sempre un cammino semplice di costo minimo 
+- # Proprietà (sottostruttura ottima)
+	- sia G un DAG pesato allora ogni sotto-cammino di un cammino di costo minimo in G è a sua volta un cammino di costo minimo
+- # Albero dei cammini di costo minimo
+	- sia _s_ un vertice di un DAG G=(V, E). allora esiste un [[Alberi e Alberi binari||albero]] che contiene i vertici raggiungibili da _s_ tale che ogni cammino in T sia un cammino di costo minimo
+- # Algoritmo di Belmann Ford
+	- vale la disuguaglianza triangolare:
+		- $d_{xz}\leq d_{xy}+d_{yz}$ 
+			- ovvero: la distanza tra _x_ e _z_ è minore o uguale alla distanza tra _x_ e _y_ + la distanza tra _y_ e _z_ 
+			- sarà uguale quando il punto _y_ è attraversato dal cammino $d_{xz}$ 
+	- ### Distanza dei vertici in un grafo:
+		- la distanza $d_{xy}$ tra x e y è il costo di un cammino di costo minimo che li connette
+			- $d_{xy}=\begin {cases} \exists \pi^{*}_{xy}\Rightarrow  w(\pi^{*}_{xy})\ \\ +\infty \ altrimenti\end{cases}$ 
+			- NOTA: 
+				- $d_w=0$ per ogni vertice v
+				- vale la disuguaglianza triangolare:
+					- $d_{xz}\leq d_{xy}+d_{yz}$ 
+						- ovvero: la distanza tra _x_ e _z_ è minore o uguale alla distanza tra _x_ e _y_ + la distanza tra _y_ e _z_ 
+						- sarà uguale quando il punto _y_ è attraversato dal cammino $d_{xz}$ 
+	- Condizione di Bellman
+		- per ogni arco _(u,v)_ e ogni vertice _s_
+			- $d_{sv}\leq d_{su}+w(u,v)$
+	- procedimento:
+		- uso una struttura ausiliaria che contiene tutte le approssimazioni per eccesso:
+			- $$D_{sv}=\begin {cases}(v=s) \Rightarrow 0 \\ \infty \end {cases}$$
+			- $d_{sv}\leq D_{sv}$ 
+		- Cerchiamo di ridurre queste approssimazioni, facendo:
+			- $D_{sv}> d_{su}+w(u,v)$  e se l'equazione risulta vera aggiorniamo il valore. 
+			- ripetendo questo passaggio controllando ogni arco fino a che non è più possibile ridurre il costo minimo. 
+			- si tiene conto degli ultimi archi che ci hanno permesso di eseguire l'ultimo rilassamento.
+	- ![[Screenshot 2024-05-08 at 12-18-52 Cammini minimi - 19-CamminiMinimi.pdf.png]]
+		- Il for each permette di eseguire ogni volta il rilassamento e si tiene traccia degli ultimi archi rilassati
+		- Il secondo for invece viene ripetuto n volte perché la lunghezza massima di un cammino minimo in un grafo senza cicli è n
+		- costo: $O(n+nm)=O(nm)$ 

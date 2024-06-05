@@ -1,0 +1,7 @@
+- assunzione:
+	- tutti gli archi hanno costo $\geq$ 0
+- ## Lemma
+	- G grafo orientato con peso 
+	- T albero dei [[Cammini minimi]] di costo minimo con radice _s_
+	- l'arco (u,v) con $u\in V(T) \wedge v \notin V(T)$ che minimizza la quantità $d_{su}+w(u,v)$ che appartiene ad un cammino minimo da _s_ a _v_
+	- 

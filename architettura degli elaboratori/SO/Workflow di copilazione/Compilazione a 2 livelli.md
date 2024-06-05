@@ -1,0 +1,3 @@
+- Nella fase di traduzione il linguaggio ad alto livello viene prima tradotto in linguaggio _Virtual machine_ e poi da quello in linguaggio assembly
+- In questo modo viene prodotto prima un codice valido per ogni architettura, perché viene virtualizzato dall'implementazione fisica dell'elaboratore. Il codice VM può poi essere esportato ed eseguito su ogni macchina che lo compilerà a sua volta nel suo specifico [[ISA]] 
+- La JVM di java ne è un esempio 

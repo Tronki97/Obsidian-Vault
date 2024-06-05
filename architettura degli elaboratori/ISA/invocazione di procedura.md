@@ -1,0 +1,14 @@
+- istruzioni per invocare una procedura:
+	- si interrompe l'esecuzione si salta ad una parte di istruzioni e si tiene traccia del punto da dove è stata fatta l'invocazione 
+	- si torna ad eseguire l'istruzione dal punto di invocazione
+- ## Implementazione di invocazione:
+	- ciò richiede di allocare in memoria le informazioni necessarie per eseguire le procedure invocate:
+		- lo spazio è chiamato record di attivazione
+		- esiste un registro specializzato chiamato "frame pointer"
+		- nel record vengono inseriti: 
+			- parametri di invocazione 
+			- indirizzo di ritorno(punto di rientro)
+			- vecchio frame pointer(ripristina il frame pointer al momento del ritorno del chiamante)
+			- variabili locali
+	- questi record sono organizzati a stack(quando termina una procedura viene riattivata quella precedente, cioè l'ultima invocata)
+	- ![[Pasted image 20240529184659.png]]

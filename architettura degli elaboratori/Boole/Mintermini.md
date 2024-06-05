@@ -1,0 +1,5 @@
+- Può essere una variabile, un mintermine su n variabili è l'AND tra n letterali corrispondenti alle n variabili 
+- ES:
+	- se ho A, B, e C un mintermine può essere $ABC$ oppure $\overline {ABC}$ ecc...
+- Il mintermine risulta molto utile per analizzare le tabelle di verità di [[Funzioni booleane]] guardando una riga di quella tabella e mettendo la variabile al posto dell'_1_ e la variabile negata al posto dello _0_ 
+- 

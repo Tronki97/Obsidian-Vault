@@ -1,0 +1,10 @@
+- algoritmo BFS:
+	- partendo da un vertice F mettiamo i vertici adiacenti ad esso in una coda FIFO, si tiene traccia degli archi usati per raggiungere quei determinati vertici.
+	- si procede col punto precedente fino a creare un albero con ogni coda che rappresenta i figli del nodo preso come radice. 
+	- Utile per calcolare le distanze
+- algoritmo DFS: ^0b997c
+	- parto dal vertice F, ne scelgo uno adiacente e continuo cercando di allontanarmi il più possibile dal nodo iniziale e si tiene traccia dei passaggi già fatti e degli archi già percorsi. 
+	- per eseguire questa ricerca vengono eseguite delle chiamate ricorsive
+	- per ogni vertice visitato corrisponde un record di attivazione 
+	- permette di verificare assenza di cicli e risolvere problemi su grafi ordinati.
+	- 

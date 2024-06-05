@@ -1,0 +1,18 @@
+- ## Introduzione:
+	- quando applicare:
+		- fra le molte scelte possibili, si può trovarne facilmente una che porti alla soluzione ottima.
+		- quando il problema ha sotto-struttura ottima
+	- ES: 
+		- Problema del resto:
+			- input: intero positivo R che rappresenta importo da erogare.
+			- output: minimo numero intero di monete necessarie per dare il resto di R centesimi di euro, usando solo monete centesimi.
+		- es: R=78,  5 pezzi: 50+20+5+2+1
+	- ES:
+		- problema del shortest-job first:
+			- nel quale viene eseguito per prima la task che impiega di meno a completarsi per così ridurre il tempo medio di attesa.
+				- Una soluzione sarebbe quella di ordinare l'array contenente le task in maniera crescente.
+				- 
+				  
+	- ES:
+		- Problema della compressione:
+			- rappresentare sequenze di caratteri, secondo una certa codifica(ovvero una funzione matematica; $f(c)=x$). dove "c" è il carattere e "x" è la sua rappresentazione binaria.

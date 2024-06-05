@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "77aeb2112c590fac",
+    "type": "split",
+    "children": [
+      {
+        "id": "28253573d8121257",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a4da7eb08e5bde17",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Analisi/Taylor per le funzioni elementari.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7a1d0bc8f608cae1",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "f7877940419aa726",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "3f05b7940eef2ad8",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "de661e2a37146e11",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "0324fbed77272e83",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "8e1a222079be7d41",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "a28844b90349da50",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Analisi/Taylor per le funzioni elementari.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "87a4000175d56c6a",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Analisi/Taylor per le funzioni elementari.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "3abbf9c511869aa2",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Analisi/Taylor per le funzioni elementari.md"
+          }
+        }
+      },
+      {
+        "id": "8fb99870f3f21f6c",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false
+    }
+  },
+  "active": "a4da7eb08e5bde17",
+  "lastOpenFiles": [
+    "Logica/Deduzione Naturale/Semantica della logica proposizionale.md",
+    "Logica/Deduzione Naturale/Semantica della logica proposizionale.md.tacitpart",
+    "Logica/Deduzione Naturale/Logica del Primo ordine.md",
+    "Logica/Deduzione Naturale/dimostrazioni della logica classica.md",
+    "Logica/Deduzione Naturale/Deduzione Naturale.md",
+    "Logica/Deduzione Naturale/Deduzione Naturale.md.tacitpart",
+    "Logica/Deduzione Naturale",
+    "Logica/Algebra in logica/Strutture algebriche in Informatica.md",
+    "Logica/Algebra in logica/Generalizzazione in informatica.md",
+    "Logica/Algebra in logica/Generalizzazione in informatica.md.tacitpart",
+    "Logica/Algebra in logica/Algebra universale.md",
+    "Logica/Algebra in logica/Algebra universale.md.tacitpart",
+    "Logica/Algebra in logica",
+    "programmazione/Classi.md",
+    "programmazione/Alberi.md",
+    "Logica/Dimostrazioni di logica.md.tacitpart",
+    "Logica/Coppie.md.tacitpart",
+    "Logica/Assiomi.md",
+    "immagini/Pasted image 20231130184535.png",
+    "immagini/Pasted image 20231130184356.png",
+    "immagini/Pasted image 20231130184356.png.tacitpart",
+    "immagini/Pasted image 20231130184328.png",
+    "immagini/Pasted image 20231130184328.png.tacitpart",
+    "immagini/Pasted image 20231129092214.png",
+    "immagini/Pasted image 20231109142958 1.png",
+    "immagini/Pasted image 20231109132730 1.png",
+    "Analisi/Sviluppi di Taylor.md",
+    "Architettura(modulo2)/Segmenti di memoria.md",
+    "Analisi/Taylor per le funzioni elementari.md",
+    "Logica/Ricorsione e induzione.md",
+    "Logica/Funzioni.md",
+    "programmazione/Ricorsione.md",
+    "Logica/Sintassi di definizione di funzione.md",
+    "Logica/Logica del Primo ordine.md",
+    "immagini/Pasted image 20231109142958.png",
+    "immagini/Pasted image 20231109132730.png",
+    "immagini/Pasted image 20230926170945.png",
+    "Logica/Semantica della logica proposizionale.md",
+    "Logica/dimostrazioni della logica classica.md",
+    "Logica/Deduzione Naturale.md",
+    "programmazione/Puntatori e strutture dati Dinamiche.md",
+    "programmazione/Strutture.md",
+    "programmazione/Array.md",
+    "programmazione/Algoritmi di sorting.md",
+    "Analisi/teorema di permanenza del segno.md"
+  ]
+}

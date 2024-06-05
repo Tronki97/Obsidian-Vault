@@ -1,0 +1,25 @@
+- Data una funzione $f(x,y)\in \mathbb{R}^2$ e una curva $\gamma(x_{0},y_{0})$ esistono due modi di calcolare la derivata direzionale:
+	- ## 1) 
+		- $f(\gamma(t))$ dove _t_ sarebbe il vettore di coordinate $(x_{0},y_{0})$ e poi si fa la derivata del risultato.
+			- ES:
+				- $$f(x,y)=x^{3}y^{3}\ ;\ \ \  \gamma(t)=(t, e^t)$$
+				- $$f(\gamma(t))=t^3*(e^t)^3=t^3*e^{3t}$$
+				- $$f'(\gamma(t))=3t^{2}*e^3t+t^3*3e^3t=t^{2}*e^{3t}(3+3t)$$
+	- ## 2) 
+		- Trovo il gradiente di f
+			- $\nabla f(x,y)=(\delta_{x}f(x,y),\delta_{y}f(x,y))$
+		- trovo la derivata della curva gamma:
+			- $\gamma '(t)=(x_{0}',y_{0}')$
+		- trovo il valore del gradiente lungo la curva gamma:
+			- $\nabla f(\gamma(t))$ 
+		- infine eseguo il [[Prodotto scalare Euclideo||prodotto scalare]]:
+			- $<\nabla f(\gamma(t)), \gamma '(t)>$ 
+		- ES:
+			- $$f(x,y)=x^{3}y^{3}\ ;\ \ \  \gamma(t)=(t, e^t)$$
+			- $$\nabla f(x,y)= (3x^{2}y^{3}, 3x^{3}y^2)$$
+			- $$\gamma '(t)=(1, e^{t})$$
+			- $$\nabla f(\gamma(t))= (3*t^{2}*e^{3t},3*t^{3}*e^{2t})$$
+			-  $$<\nabla f(\gamma(t)), \gamma '(t)>=1*(3*t^{2}*e^{3t})+e^{t}(3*t^{3}*e^{2t})=$$
+			- $$=t^2*e^{3t}*(3+3t)$$
+	- _E come è facilmente notabile i metodi 1) e 2) hanno lo stesso risultato_
+	- 

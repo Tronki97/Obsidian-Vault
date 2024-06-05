@@ -1,0 +1,15 @@
+- ## Integrali razionali fratti
+	- #### Hermite Semplice
+		- $$\int{\frac{1}{P(x)*Q(x)} dx}=A*ln|P(x)|+B*ln|Q(x)|$$
+			- P(x) è un polinomio di primo grado
+			- Q(x) è un polinomio di secondo grado.
+		- $$\int \frac{dx}{x^2+bx+c}$$ 
+			- $x^2+bx\equiv(x+\lambda)^2=x^2+{\lambda}^2+2x\lambda$
+			- $$\int {\frac{dx}{(x+\lambda)^{2}-{\lambda}^{2}+c}} \ \ \ \ \ \ \ \ {\lambda}^{2}+c=d$$ 
+	- $x+\lambda=y$  ($dx\equiv dy$)
+		- $$\int{\frac{{dy}}{y^2+d}}$$
+		- raccolgo _d_ poi sostituisco e risulta:
+			- $$\int {\frac{dz}{1+z^2d}}=arctan(z)$$
+	- # ES:
+		- $$\int{\frac{3x}{x^2+3x-1}}=\int{\frac{3x+3-3}{x^2+3x-1}}=\frac{3}{2}*\int{\frac{2x+3}{x^2+3x-1}}+\frac{2}{2}*\int{\frac{3}{x^2+3x-1}}$$
+		- 

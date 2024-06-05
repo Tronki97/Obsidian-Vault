@@ -1,0 +1,3 @@
+- Ogni [[Funzioni booleane||funzione booleana]] può essere scritta come espressione di basata sulle operazioni OR, AND e NOT; prendendo in considerazione i [[Mintermini]] di una funzione che danno _1_ come risultato posso unirli con tante OR quanti sono i mintermini ottenendo così la rappresentazione in forma canonica della funzione.
+- ES:
+	- 

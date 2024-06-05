@@ -1,0 +1,18 @@
+- ## Procedimento:
+	- porre il gradiente di una funzione data = (0,0)
+		- $$\nabla f(x,y)=(0,0)\implies \begin{cases}\delta_{x}=0 \\ \delta_{y}=0\end{cases}$$
+		- in questo modo troveremo dei punti $(x_{0},y_{0})$ che andremo a inserire nella matrice Hessiana($H(f(x,y))$) che sarà composta in questo modo:
+			- $$\begin{pmatrix}\delta_{xx} \ \delta_{xy} \\ \delta_{xy}\ \delta_{yy}\end{pmatrix}$$
+			- dove:
+				- $\delta_{xx}$ è la derivata seconda sulla variabile x
+				- $\delta_{yy}$ è la derivata seconda sulla variabile y
+				- $\delta_{xy}=\delta_{yx}$ sarebbe la derivata parziale su y(o _x_) dopo aver precedentemente derivato parzialmente su x(o _y_) 
+			- Sostituendo le coordinate dell'hessiana con i punti trovati ponendo il gradiente a (0,0) ci risulterà una cosa del genere:
+				- $$\begin{pmatrix}a \ \ b\\ b \ \ c \end{pmatrix}$$
+				- $con \ a,b,c\in \mathbb{R}$ 
+- ## Classificazione
+	- Data: 
+		- $$\begin{pmatrix}a \ \ b\\ b \ \ c \end{pmatrix}$$
+		- $a>0 \ \wedge \det(Hf(x,y))>0$ si tratta di un *punto di minimo*.
+		- $a<0 \ \wedge \det(Hf(x,y))>0$ si tratta di un *punto di massimo*
+		- $det(Hf(x,y))<0$ si tratta di un *punto di sella* 

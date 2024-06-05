@@ -1,0 +1,6 @@
+- ## Problema
+	- Si verifica quando un blocco viene sostituito da uno di dimensione minore lasciando quindi un piccolo _gap_ nella memoria che non potrà essere riempito  
+- ## Soluzione
+	- _best fit_: Consiste nell'inserire il nuovo segmento nella lacuna più piccola sufficiente per il segmento da inserire
+	- _first fit_: Consiste nell'inserire il nuovo segmento nel primo spazio libero sufficientemente grande da contenere il segmento da inserire. Le lacune sono scorse circolarmente, per velocizzare il processo di ricerca. Ciò lo rende molto veloce.
+	- _defrag_: compatta (o deframmenta) i blocchi di memoria non contigui, eliminando così il problema alla radice.

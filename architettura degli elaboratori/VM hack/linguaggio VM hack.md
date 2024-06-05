@@ -1,0 +1,3 @@
+- ![[Pasted image 20240604121055.png]]
+- ES:
+	- ![[Pasted image 20240604121154.png]]
