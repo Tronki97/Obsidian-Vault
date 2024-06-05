@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "programmazione/Progetto Programmazione.md",
+                "file": "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "programmazione/Progetto Programmazione.md",
+                "file": "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "programmazione/Progetto Programmazione.md",
+                "file": "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "programmazione/Progetto Programmazione.md"
+                "file": "architettura degli elaboratori/Architettura HACK/CISC e RISC.md"
               }
             }
           },
@@ -164,6 +163,7 @@
   },
   "active": "91c916ee04fdb0b2",
   "lastOpenFiles": [
+    "programmazione/Progetto Programmazione.md",
     "architettura degli elaboratori/Architettura HACK/Registri.md",
     "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
     "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
@@ -190,7 +190,6 @@
     "architettura degli elaboratori/Rappresentazione dell'informazione/Correzione di errori.md",
     "architettura degli elaboratori/Rappresentazione dell'informazione/Codifica.md",
     "architettura degli elaboratori/SO/Workflow di copilazione/Linking statico.md",
-    "architettura degli elaboratori/SO/Workflow di copilazione/Linker.md",
     "Pasted image 20240604121154.png",
     "Pasted image 20240604121055.png",
     "architettura degli elaboratori/VM hack",
