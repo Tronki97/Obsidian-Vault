@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "architettura degli elaboratori/Boole/Circuiti logici.md",
+                "file": "architettura degli elaboratori/Boole/Algebra Booleana.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tetris",
+                "query": "forma canon",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "architettura degli elaboratori/Boole/Circuiti logici.md",
+                "file": "architettura degli elaboratori/Boole/Algebra Booleana.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "architettura degli elaboratori/Boole/Circuiti logici.md",
+                "file": "architettura degli elaboratori/Boole/Algebra Booleana.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "architettura degli elaboratori/Boole/Circuiti logici.md"
+                "file": "architettura degli elaboratori/Boole/Algebra Booleana.md"
               }
             }
           },
@@ -163,16 +163,20 @@
   },
   "active": "91c916ee04fdb0b2",
   "lastOpenFiles": [
+    "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
+    "architettura degli elaboratori/Boole/Formula canonica.md",
     "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
+    "architettura degli elaboratori/Architettura HACK/Cache.md",
+    "architettura degli elaboratori/Architettura HACK/Pre-fetch istruzioni.md",
+    "architettura degli elaboratori/Architettura HACK/Pipeline.md",
+    "architettura degli elaboratori/Programmazione in C/Makefile.md",
+    "architettura degli elaboratori/Boole/Circuiti logici.md",
     "programmazione/Progetto Programmazione.md",
     "architettura degli elaboratori/Architettura HACK/Registri.md",
-    "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
-    "architettura degli elaboratori/Boole/Circuiti logici.md",
     "architettura degli elaboratori/Boole/Porte logiche/AND.md",
     "Excalidraw/porta NOT.md",
     "Excalidraw/Drawing 2024-06-04 17.43.27.excalidraw.md",
     "architettura degli elaboratori/Boole/Porte logiche/NOT.md",
-    "architettura degli elaboratori/Boole/Formula canonica.md",
     "Excalidraw/Senza nome.md",
     "Excalidraw/Drawing 2024-05-29 16.45.29.excalidraw.md",
     "architettura degli elaboratori/Boole/Porte logiche",
@@ -183,13 +187,9 @@
     "architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
     "architettura degli elaboratori/esempi di funzionamento(fatti male)/MOV [AX], BX.md",
     "architettura degli elaboratori/esempi di funzionamento(fatti male)/ADD AX,5.md",
-    "architettura degli elaboratori/Architettura HACK/Pipeline.md",
-    "architettura degli elaboratori/Architettura HACK/Pre-fetch istruzioni.md",
     "architettura degli elaboratori/ISA/Trap e interrupt.md",
     "architettura degli elaboratori/ISA/invocazione di procedura.md",
     "architettura degli elaboratori/Rappresentazione dell'informazione/Correzione di errori.md",
-    "architettura degli elaboratori/Rappresentazione dell'informazione/Codifica.md",
-    "architettura degli elaboratori/SO/Workflow di copilazione/Linking statico.md",
     "Pasted image 20240604121154.png",
     "Pasted image 20240604121055.png",
     "architettura degli elaboratori/VM hack",
