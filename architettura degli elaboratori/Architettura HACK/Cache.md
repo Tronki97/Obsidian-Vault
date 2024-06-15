@@ -30,5 +30,4 @@
 			- I blocchi dati (_pagine_) vengono spostati dalla memoria di massa alla memoria centrale quando richiesto
 			- Quando i dati non servono più vengono riportati nella memoria di massa
 			- Ogni spostamento è gestito da un algoritmo di Paginazione
-			- 
 

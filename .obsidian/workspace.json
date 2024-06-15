@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "architettura degli elaboratori/Boole/Algebra Booleana.md",
+                "file": "architettura degli elaboratori/Architettura HACK/Pipeline.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b325402c112b19f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "programmazione/c++/sintassi.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "architettura degli elaboratori/Boole/Algebra Booleana.md",
+                "file": "architettura degli elaboratori/Architettura HACK/Pipeline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "architettura degli elaboratori/Boole/Algebra Booleana.md",
+                "file": "architettura degli elaboratori/Architettura HACK/Pipeline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "architettura degli elaboratori/Boole/Algebra Booleana.md"
+                "file": "architettura degli elaboratori/Architettura HACK/Pipeline.md"
               }
             }
           },
@@ -147,68 +159,67 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Apri selezione rapida": false,
-      "graph:Apri vista grafo": false,
-      "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
-      "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false,
-      "audio-recorder:Avvia/ferma registrazione": false,
-      "markdown-importer:Apri importazione Markdown": false,
-      "copilot:Copilot Chat": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "audio-recorder:Start/stop recording": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "copilot:Copilot Chat": false
     }
   },
   "active": "91c916ee04fdb0b2",
   "lastOpenFiles": [
+    "architettura degli elaboratori/Architettura HACK/Circuiti sequenziali.md",
+    "architettura degli elaboratori/Architettura HACK/Memorie.md",
+    "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
+    "immagini/Pasted image 20240604121154.png",
+    "programmazione/c++/sintassi.md",
+    "programmazione/python/Face detection.md",
+    "programmazione/python",
+    "programmazione/c++/Alberi.md",
+    "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
+    "programmazione/c++",
+    "architettura degli elaboratori/HDL.md",
+    "immagini/Pasted image 20240530174058.png",
+    "architettura degli elaboratori/ISA/Istruzioni ISA.md",
+    "architettura degli elaboratori/ISA/Trap e interrupt.md",
+    "architettura degli elaboratori/SO/Compiti/paginazione(SO).md",
+    "architettura degli elaboratori/SO/SO.md",
+    "architettura degli elaboratori/ISA/invocazione di procedura.md",
+    "architettura degli elaboratori/SO/Workflow di copilazione/Workflow di compilazione.md",
+    "architettura degli elaboratori/Architettura HACK/Cache.md",
+    "architettura degli elaboratori/Architettura HACK/Registri.md",
+    "architettura degli elaboratori/Architettura HACK/ALU.md",
+    "architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
+    "architettura degli elaboratori/Architettura HACK/Pre-fetch istruzioni.md",
+    "architettura degli elaboratori/Boole/Algebra Booleana.md",
     "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
     "architettura degli elaboratori/Boole/Formula canonica.md",
-    "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
-    "architettura degli elaboratori/Architettura HACK/Cache.md",
-    "architettura degli elaboratori/Architettura HACK/Pre-fetch istruzioni.md",
     "architettura degli elaboratori/Architettura HACK/Pipeline.md",
     "architettura degli elaboratori/Programmazione in C/Makefile.md",
     "architettura degli elaboratori/Boole/Circuiti logici.md",
-    "programmazione/Progetto Programmazione.md",
-    "architettura degli elaboratori/Architettura HACK/Registri.md",
-    "architettura degli elaboratori/Boole/Porte logiche/AND.md",
-    "Excalidraw/porta NOT.md",
-    "Excalidraw/Drawing 2024-06-04 17.43.27.excalidraw.md",
-    "architettura degli elaboratori/Boole/Porte logiche/NOT.md",
-    "Excalidraw/Senza nome.md",
-    "Excalidraw/Drawing 2024-05-29 16.45.29.excalidraw.md",
     "architettura degli elaboratori/Boole/Porte logiche",
-    "architettura degli elaboratori/Boole/Senza nome.md",
-    "architettura degli elaboratori/Boole/Mintermini.md",
-    "architettura degli elaboratori/Boole/Funzioni booleane.md",
-    "architettura degli elaboratori/Boole/Algebra Booleana.md",
-    "architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
-    "architettura degli elaboratori/esempi di funzionamento(fatti male)/MOV [AX], BX.md",
-    "architettura degli elaboratori/esempi di funzionamento(fatti male)/ADD AX,5.md",
-    "architettura degli elaboratori/ISA/Trap e interrupt.md",
-    "architettura degli elaboratori/ISA/invocazione di procedura.md",
-    "architettura degli elaboratori/Rappresentazione dell'informazione/Correzione di errori.md",
-    "Pasted image 20240604121154.png",
-    "Pasted image 20240604121055.png",
+    "immagini/Pasted image 20240604121055.png",
     "architettura degli elaboratori/VM hack",
     "architettura degli elaboratori/Programmazione in C",
-    "Pasted image 20240530182732.png",
-    "Pasted image 20240530184242.png",
-    "Pasted image 20240530182722.png",
+    "immagini/Pasted image 20240530182732.png",
+    "immagini/Pasted image 20240530184242.png",
+    "immagini/Pasted image 20240530182722.png",
     "architettura degli elaboratori/SO/Workflow di copilazione",
     "architettura degli elaboratori/SO/Compiti",
-    "Pasted image 20240530181244.png",
-    "Pasted image 20240530175336.png",
-    "Pasted image 20240530174058.png",
-    "Pasted image 20240530173006.png",
-    "Pasted image 20240530171402.png",
+    "immagini/Pasted image 20240530181244.png",
+    "immagini/Pasted image 20240530175336.png",
+    "immagini/Pasted image 20240530173006.png",
+    "immagini/Pasted image 20240530171402.png",
     "architettura degli elaboratori/SO",
     "architettura degli elaboratori/esempi di funzionamento(fatti male)",
     "architettura degli elaboratori/ISA",
-    "Excalidraw",
-    "Algebra e geometria/LaTeX-cheat-sheet 1.pdf",
     "template/Senza nome.canvas",
     "Untitled.canvas",
     "programmazione/Untitled.canvas",
