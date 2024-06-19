@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "architettura degli elaboratori/Architettura HACK/Pipeline.md",
+                "file": "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "programmazione/c++/sintassi.md",
+                "file": "architettura degli elaboratori/Architettura HACK/Cache.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "forma canon",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "architettura degli elaboratori/Architettura HACK/Pipeline.md",
+                "file": "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "architettura degli elaboratori/Architettura HACK/Pipeline.md",
+                "file": "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "architettura degli elaboratori/Architettura HACK/Pipeline.md"
+                "file": "architettura degli elaboratori/VM hack/linguaggio VM hack.md"
               }
             }
           },
@@ -175,35 +175,37 @@
   },
   "active": "91c916ee04fdb0b2",
   "lastOpenFiles": [
-    "architettura degli elaboratori/Architettura HACK/Circuiti sequenziali.md",
+    "Senza_titolo.png",
+    "Pasted image 20240619185756.png",
+    "Excalidraw/porta NOT.md",
+    "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
+    "architettura degli elaboratori/Architettura HACK/Pipeline.md",
+    "architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
     "architettura degli elaboratori/Architettura HACK/Memorie.md",
+    "architettura degli elaboratori/Architettura HACK/Cache.md",
+    "programmazione/c++/sintassi.md",
+    "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
+    "architettura degli elaboratori/Boole/Formula canonica.md",
+    "architettura degli elaboratori/Rappresentazione dell'informazione/Correzione di errori.md",
+    "architettura degli elaboratori/SO/Compiti/paginazione(SO).md",
+    "architettura degli elaboratori/SO/Compiti/segmentazione.md",
+    "architettura degli elaboratori/Boole/Algebra Booleana.md",
+    "architettura degli elaboratori/Boole/Circuiti logici.md",
+    "architettura degli elaboratori/Boole/Funzioni booleane.md",
+    "architettura degli elaboratori/Architettura HACK/Circuiti sequenziali.md",
     "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
     "immagini/Pasted image 20240604121154.png",
-    "programmazione/c++/sintassi.md",
     "programmazione/python/Face detection.md",
     "programmazione/python",
     "programmazione/c++/Alberi.md",
-    "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
     "programmazione/c++",
     "architettura degli elaboratori/HDL.md",
     "immagini/Pasted image 20240530174058.png",
     "architettura degli elaboratori/ISA/Istruzioni ISA.md",
     "architettura degli elaboratori/ISA/Trap e interrupt.md",
-    "architettura degli elaboratori/SO/Compiti/paginazione(SO).md",
     "architettura degli elaboratori/SO/SO.md",
     "architettura degli elaboratori/ISA/invocazione di procedura.md",
     "architettura degli elaboratori/SO/Workflow di copilazione/Workflow di compilazione.md",
-    "architettura degli elaboratori/Architettura HACK/Cache.md",
-    "architettura degli elaboratori/Architettura HACK/Registri.md",
-    "architettura degli elaboratori/Architettura HACK/ALU.md",
-    "architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
-    "architettura degli elaboratori/Architettura HACK/Pre-fetch istruzioni.md",
-    "architettura degli elaboratori/Boole/Algebra Booleana.md",
-    "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
-    "architettura degli elaboratori/Boole/Formula canonica.md",
-    "architettura degli elaboratori/Architettura HACK/Pipeline.md",
-    "architettura degli elaboratori/Programmazione in C/Makefile.md",
-    "architettura degli elaboratori/Boole/Circuiti logici.md",
     "architettura degli elaboratori/Boole/Porte logiche",
     "immagini/Pasted image 20240604121055.png",
     "architettura degli elaboratori/VM hack",
@@ -216,7 +218,6 @@
     "immagini/Pasted image 20240530181244.png",
     "immagini/Pasted image 20240530175336.png",
     "immagini/Pasted image 20240530173006.png",
-    "immagini/Pasted image 20240530171402.png",
     "architettura degli elaboratori/SO",
     "architettura degli elaboratori/esempi di funzionamento(fatti male)",
     "architettura degli elaboratori/ISA",

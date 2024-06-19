@@ -1,4 +1,4 @@
-- #### Località temporale o spaziale
+- #### Località temporale o spaziale ^2e4ff7
 	- ##### Località temporale 
 		- l'alta probabilità che si acceda ad una determinata cella di memoria in un determinato lasso di tempo, se la probabilità che la CPU acceda ad una determinata cella di memoria allora quella cella verrà mantenuta nella cache, così da velocizzarne l'accesso
 	- ##### Località spaziale

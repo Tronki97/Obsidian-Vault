@@ -254,6 +254,7 @@ padre
 pila
 prefissa
 postfissa
+perso
 realizzare
 rappresentare
 risultato
@@ -1248,6 +1249,8 @@ cstdlib
 collezione
 conto
 colleziona
+costituita
+costi
 avendo
 alcune
 arriva
@@ -1491,6 +1494,7 @@ attorno
 augmentation
 abbastanza
 allenare
+aritmetiche
 un
 una
 usato
@@ -2053,6 +2057,7 @@ ftz
 fFg
 fratelli
 finta
+false
 in
 il
 invece
@@ -2262,6 +2267,7 @@ immagini
 immagine
 inquadratura
 installare
+interna
 modo
 mentre
 massimo
@@ -2462,6 +2468,7 @@ mLa
 mtJ
 mOFR
 metodo
+memorie
 esempio
 eccede
 errori
@@ -2655,6 +2662,7 @@ ePd
 eIw
 entit
 escape
+elevati
 base
 bit
 basano
@@ -2795,6 +2803,9 @@ bÖ
 bmq
 bmt
 bmhx
+basse
+bassi
+binarie
 quindi
 questo
 quelle
@@ -3258,6 +3269,7 @@ stampa
 sorta
 sinistra
 setupparle
+simili
 otterremmo
 ottenere
 occupare
@@ -3418,6 +3430,7 @@ oLA
 oDb
 oYk
 ordinato
+obiettivo
 va
 valore
 viene
@@ -3588,6 +3601,9 @@ vLx
 vQh
 vWN
 visitati
+veloci
+velocit
+volatili
 troppo
 testimone
 tramite
@@ -3773,6 +3789,7 @@ tmR
 tUp
 tZKu
 telecamera
+trasferiti
 grandi
 gli
 grande
@@ -7693,6 +7710,7 @@ GNL
 GQG
 GIq
 GVZ
+Gerarchia
 Vb
 VD
 VG

@@ -10,7 +10,7 @@
 			- 12 bit lo stesso offset degli indirizzi fisici
 		- ##### Meccanismo:
 			- quando un programma punta ad un indirizzo virtuale, lo scopo è tradurre i bit della pagina nei bit del blocco corrispondente. __infatti l'offset è lo stesso__. 
-			- per tenere tracci della corrispondenza si ha la _Tabella delle pagine_:
+			- per tenere traccia della corrispondenza si ha la _Tabella delle pagine_:
 				-  ![[Pasted image 20240530174058.png]]
 				- Di un indirizzo virtuale vengono presi i bit della pagina (4 in questo caso), che corrispondono ad uno specifico indice nella tabella delle pagine, da cui si ricavano i bit del blocco corrispondente in RAM 
 				- ### !!ATTENZIONE!!
