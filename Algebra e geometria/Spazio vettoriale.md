@@ -4,7 +4,7 @@
 		- dati due vettori $u = (u_{1},...,u_{n})\ , \  v = (v_{1},...,v_{n})$ $\in V$ 
 		  la loro somma $u+v$ è definita come:
 			- $u+v=(u_{1}+v_{1},...,u_{n}+v_{n})$ 
-		- ##### Proprietà
+		- ##### Proprietà ^88ff4e
 			- Commutativa: $u+v=v+u$
 			- Associativa: $(u+v)+\omega=u+(v+\omega)$
 			- elemento neutro: ($\underline{0}$ ovvero vettore nullo) $u+\underline{0}=u$

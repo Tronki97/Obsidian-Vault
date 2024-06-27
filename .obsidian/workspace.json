@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale.md",
+                "file": "Algebra e geometria/Algoritmo di Gauss.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "faf291610f5de00f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algebra e geometria/Sottospazio generato.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale.md",
+                "file": "Algebra e geometria/Sottospazio generato.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale.md",
+                "file": "Algebra e geometria/Sottospazio generato.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale.md"
+                "file": "Algebra e geometria/Sottospazio generato.md"
               }
             }
           },
@@ -161,10 +174,19 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "b325402c112b19f2",
+  "active": "faf291610f5de00f",
   "lastOpenFiles": [
-    "Algebra e geometria/Matrici.md",
+    "Algebra e geometria/Dimensione.md",
+    "Algebra e geometria/Sottospazio generato.md",
+    "Algebra e geometria/Combinazione lineare.md",
+    "Algebra e geometria/Teorema del completamento.md",
+    "Algebra e geometria/LaTeX-cheat-sheet 1.pdf",
+    "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
+    "Algebra e geometria/Algoritmo di Gauss.md",
+    "Algebra e geometria/Base.md",
+    "Algebra e geometria/Indipendenza lineare.md",
     "Algebra e geometria/Spazio vettoriale.md",
+    "Algebra e geometria/Matrici.md",
     "Algebra e geometria/Equazioni lineari.md",
     "Algebra e geometria/Introduzione.md",
     "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
@@ -181,14 +203,6 @@
     "architettura degli elaboratori/Boole/Mintermini.md",
     "architettura degli elaboratori/SO/Compiti/frammentazione esterna.md",
     "architettura degli elaboratori/SO/Compiti/segmentazione.md",
-    "architettura degli elaboratori/SO/Workflow di copilazione/Linking dinamico.md",
-    "architettura degli elaboratori/SO/Workflow di copilazione/Linking statico.md",
-    "architettura degli elaboratori/SO/Workflow di copilazione/Linker.md",
-    "architettura degli elaboratori/Rappresentazione dell'informazione/Codifica.md",
-    "architettura degli elaboratori/Architettura HACK/Cache.md",
-    "architettura degli elaboratori/Architettura HACK/Memorie.md",
-    "architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
-    "architettura degli elaboratori/Architettura HACK/ALU.md",
     "Senza_titolo.png",
     "Pasted image 20240619185756.png",
     "immagini/Pasted image 20240604121154.png",
@@ -208,7 +222,6 @@
     "immagini/Pasted image 20240530175336.png",
     "architettura degli elaboratori/SO",
     "architettura degli elaboratori/esempi di funzionamento(fatti male)",
-    "architettura degli elaboratori/ISA",
     "template/Senza nome.canvas",
     "Untitled.canvas",
     "programmazione/Untitled.canvas",

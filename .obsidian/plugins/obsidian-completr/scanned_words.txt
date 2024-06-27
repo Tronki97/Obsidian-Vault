@@ -259,6 +259,8 @@ provvisto
 possedendola
 parallela
 pratica
+prese
+perci
 realizzare
 rappresentare
 risultato
@@ -499,6 +501,7 @@ riconoscere
 rappresentarlo
 rimuovere
 rendendo
+riduzione
 la
 le
 lo
@@ -652,6 +655,7 @@ lKz
 ldRh
 lwy
 lettere
+linearmente
 ALU
 AND
 Address
@@ -773,6 +777,7 @@ AGD
 ArtV
 Applicazioni
 Aritmetica
+Associativa
 nel
 necessario
 numero
@@ -1265,6 +1270,10 @@ confrontare
 convertire
 conterr
 crittografia
+considerate
+costruiamo
+combinazione
+completamento
 avendo
 alcune
 arriva
@@ -1514,6 +1523,8 @@ affiancarli
 attuazione
 autovalori
 autovettori
+algebrica
+associata
 un
 una
 usato
@@ -1901,6 +1912,9 @@ dependencies
 decimali
 decimale
 diagonalizzabilit
+definita
+dalle
+definizione
 finito
 fanno
 facilmente
@@ -2081,6 +2095,9 @@ fratelli
 finta
 false
 feth
+fondamentali
+finitamente
+finita
 in
 il
 invece
@@ -2292,6 +2309,7 @@ inquadratura
 installare
 interna
 informazione
+ipotesi
 modo
 mentre
 massimo
@@ -2495,6 +2513,8 @@ metodo
 memorie
 maniera
 modulare
+modificare
+multipli
 esempio
 eccede
 errori
@@ -2836,6 +2856,7 @@ bmhx
 basse
 bassi
 binarie
+basi
 quindi
 questo
 quelle
@@ -2993,6 +3014,7 @@ qoL
 qbDgFl
 qIil
 qzx
+quei
 se
 sarebbe
 si
@@ -3304,6 +3326,11 @@ sommasse
 servirebbero
 studiano
 sostanza
+struttura
+scalare
+sottospazio
+sapendo
+sappiamo
 otterremmo
 ottenere
 occupare
@@ -3643,6 +3670,8 @@ verso
 vettoriali
 varie
 vettori
+vettoriale
+vettore
 troppo
 testimone
 tramite
@@ -3830,6 +3859,9 @@ tZKu
 telecamera
 trasferiti
 trasformo
+trasforma
+teoremi
+teorema
 grandi
 gli
 grande
@@ -3982,6 +4014,8 @@ gml
 gLt
 gtB
 generalizzata
+generatori
+generatore
 NOT
 NotePad
 Nu
@@ -4514,6 +4548,7 @@ SOux
 STUDIO
 Stampa
 Spazi
+Sia
 BINARY
 Bus
 BX
@@ -4753,6 +4788,9 @@ PHP
 PHq
 Prodotto
 PROPRIETA
+Presa
+Proposizioni
+Preso
 Di
 Data
 Dati
@@ -4869,6 +4907,8 @@ DU
 DXJ
 DECIMALE
 DOMANDA
+Distributiva
+Dimostrazione
 Le
 La
 Lg
@@ -5251,6 +5291,8 @@ EAM
 Exg
 EdW
 Ecy
+Elemento
+Enunciato
 Come
 Codifica
 Counter
@@ -5396,6 +5438,7 @@ ClF
 CASO
 COSTANTI
 Conversione
+Commutativa
 Questa
 Quello
 Qz
@@ -5511,6 +5554,7 @@ QTV
 QRu
 Qfu
 QuRi
+Questi
 Formato
 FLIP
 FLOP
@@ -6831,6 +6875,7 @@ Odt
 OCcJo
 OoE
 OLc
+OSSERVAZIONE
 xz
 xX
 xF
@@ -7168,6 +7213,7 @@ UNF
 Umw
 UYG
 Uguaglianza
+Uno
 Zx
 ZD
 ZRz
@@ -7639,6 +7685,7 @@ TyT
 TRA
 Trivia
 Trasposta
+Teoremi
 GY
 GT
 Ghw
