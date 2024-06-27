@@ -1,6 +1,6 @@
 - ## Operazioni:
 	- ### 1)Unione dei moduli
-		- i moduli oggetto vengono uniti in un solo file secondo un ordine deciso dal linker esso si tiene traccia di:
+		- i moduli oggetto vengono uniti in un solo file secondo un ordine deciso dal [[Linker]] esso si tiene traccia di:
 			- _lunghezza del modulo_, ovvero da quante istruzioni è composto
 			- _indirizzo di inizio del nuovo spazio di indirizzamento_, ovvero in quale posizione si trova rispetto all'inizio del file.
 	- ### 2)Rilocazione dei riferimenti interni 

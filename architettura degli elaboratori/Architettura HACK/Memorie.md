@@ -6,6 +6,7 @@
 			- RAM
 	- ### persistenti
 		- mantengono i dati salvati in caso di spegnimento
+			- ROM
 			- dischi magnetici e a stato solido (_on-line_ perché sempre accessibili)
 			- dischi ottici(_off-line_ perché devono essere prima montati per potervi accedere)
 - ## Gerarchia di memoria

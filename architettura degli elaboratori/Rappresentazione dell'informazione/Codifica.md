@@ -1,11 +1,18 @@
 - Per realizzare l'ALU nel progetto è necessario capire le codifiche. avendo un decremento per un numero finito è possibile rappresentare in modo preciso il risultato mentre 0.2 per esempio è un numero periodico in base 2 quindi se il risultato del decremento sarebbe 0 otterremmo invece un risultato non proprio preciso.
 - Se si eccede la capacità di una codifica si può ottenere un numero negativo perché in alcune codifiche il bit più significativo è usato per il segno.
-- Di solito i numeri e i caratteri possono occupare massimo sui 32/64 bit, se si va in overflow(il numero diventa troppo grande ) ci sono degli errori di rappresentazione, come succede se si decresce il valore di 0.2 e si arriva allo 0.
+- Di solito i numeri e i caratteri possono occupare massimo sui 32/64 bit, se si va in _overflow_(il numero diventa troppo grande ) ci sono degli errori di rappresentazione, come succede se si decresce il valore di 0.2 e si arriva allo 0.
+	- ##### ES:
+		- su 8 bit senza segno il numero più piccolo da sommare a 20 per ottenere _overflow_ è 236 perché:
+			- con 8 bit posso rappresentare i numeri decimali da $[0\div 255]$ ovvero 256 numeri quindi $256-20=236$ se si sommasse a 20 quel numero servirebbero 9 bit per rappresentarlo in forma binaria
 - Per evitare la corruzione di un dato spesso si aggiungono dei bit uguali in modo che se uno viene cambiato gli altri fanno da testimone di questo evento e lo possono correggere.
 - Le rappresentazioni da usare sono quelle che ci permettono di essere rappresentate facilmente e che si basano sulla matematica e con cui è facile eseguire delle operazioni.
 - I calcolatori preferiscono una codifica binaria a causa della loro composizione di AND e NOT,  
 - ## conversione di base:
 	- ![[Pasted image 20231005133952.png]]Per la conversioni di numeri negativi bisogna usare alcune accortezze, per rappresentare il segno uso il bit più significativo (0 = + e 1 = -)
+	- ##### ES:
+		- trasformo A3 in binario e decimale:
+		- conversione in _DECIMALE_: siccome il sistema esadecimale esprime i numeri dopo il 9 con lettere in ordine alfabetico fino alla F che rappresenta 15, so che A = 10 e 3=3. Quindi il risultato sarà: $(10*16^{1})+(3*16^{0})=160+3=163$
+		- Conversione _BINARIA_: ogni cifra di un numero in base 16 corrisponde a 4 bit ciò mi permette di convertire A=10 in binario quindi: 0110 e il 3 in 0011 per poi affiancarli e ottenere: 01100011 e rimuovere il bit in eccesso: 1100011
 - ## Rappresentazione numeri negativi
 	- ##### Modulo e segno:
 		- Massimo range esprimibile a 4 bit: -7 a +7 

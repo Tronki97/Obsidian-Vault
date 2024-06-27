@@ -255,6 +255,10 @@ pila
 prefissa
 postfissa
 perso
+provvisto
+possedendola
+parallela
+pratica
 realizzare
 rappresentare
 risultato
@@ -492,6 +496,9 @@ rendere
 riceveremmo
 rand
 riconoscere
+rappresentarlo
+rimuovere
+rendendo
 la
 le
 lo
@@ -644,6 +651,7 @@ lRi
 lKz
 ldRh
 lwy
+lettere
 ALU
 AND
 Address
@@ -763,6 +771,8 @@ ARVW
 AE
 AGD
 ArtV
+Applicazioni
+Aritmetica
 nel
 necessario
 numero
@@ -1251,6 +1261,10 @@ conto
 colleziona
 costituita
 costi
+confrontare
+convertire
+conterr
+crittografia
 avendo
 alcune
 arriva
@@ -1495,6 +1509,11 @@ augmentation
 abbastanza
 allenare
 aritmetiche
+alfabetico
+affiancarli
+attuazione
+autovalori
+autovettori
 un
 una
 usato
@@ -1879,6 +1898,9 @@ detti
 disegnare
 dataset
 dependencies
+decimali
+decimale
+diagonalizzabilit
 finito
 fanno
 facilmente
@@ -2058,6 +2080,7 @@ fFg
 fratelli
 finta
 false
+feth
 in
 il
 invece
@@ -2268,6 +2291,7 @@ immagine
 inquadratura
 installare
 interna
+informazione
 modo
 mentre
 massimo
@@ -2469,6 +2493,8 @@ mtJ
 mOFR
 metodo
 memorie
+maniera
+modulare
 esempio
 eccede
 errori
@@ -2663,6 +2689,10 @@ eIw
 entit
 escape
 elevati
+esprime
+effettuando
+effettuato
+excecute
 base
 bit
 basano
@@ -3270,6 +3300,10 @@ sorta
 sinistra
 setupparle
 simili
+sommasse
+servirebbero
+studiano
+sostanza
 otterremmo
 ottenere
 occupare
@@ -3431,6 +3465,7 @@ oDb
 oYk
 ordinato
 obiettivo
+ortogonalit
 va
 valore
 viene
@@ -3604,6 +3639,10 @@ visitati
 veloci
 velocit
 volatili
+verso
+vettoriali
+varie
+vettori
 troppo
 testimone
 tramite
@@ -3790,6 +3829,7 @@ tUp
 tZKu
 telecamera
 trasferiti
+trasformo
 grandi
 gli
 grande
@@ -3941,6 +3981,7 @@ gYK
 gml
 gLt
 gtB
+generalizzata
 NOT
 NotePad
 Nu
@@ -4342,6 +4383,7 @@ RLT
 RON
 RUB
 RAND
+RISPOSTA
 Si
 Se
 Status
@@ -4471,6 +4513,7 @@ Sxv
 SOux
 STUDIO
 Stampa
+Spazi
 BINARY
 Bus
 BX
@@ -4588,6 +4631,7 @@ BDo
 BHd
 BZZ
 BVm
+BINARIA
 Per
 Program
 PC
@@ -4707,6 +4751,8 @@ PfjD
 PI
 PHP
 PHq
+Prodotto
+PROPRIETA
 Di
 Data
 Dati
@@ -4821,6 +4867,8 @@ Dm
 DqX
 DU
 DXJ
+DECIMALE
+DOMANDA
 Le
 La
 Lg
@@ -4933,6 +4981,7 @@ LQy
 LZSB
 LbH
 LIBRERIA
+LABEL
 Modulo
 Massimo
 Memory
@@ -5346,6 +5395,7 @@ CNm
 ClF
 CASO
 COSTANTI
+Conversione
 Questa
 Quello
 Qz
@@ -6294,6 +6344,7 @@ JIB
 JRT
 JIMmJ
 JWUw
+Jump
 kB
 kW
 kWs
@@ -7116,6 +7167,7 @@ UDy
 UNF
 Umw
 UYG
+Uguaglianza
 Zx
 ZD
 ZRz
@@ -7585,6 +7637,8 @@ Toy
 TlO
 TyT
 TRA
+Trivia
+Trasposta
 GY
 GT
 Ghw

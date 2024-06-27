@@ -31,3 +31,7 @@
 			- Quando i dati non servono più vengono riportati nella memoria di massa
 			- Ogni spostamento è gestito da un algoritmo di Paginazione
 
+# Trivia
+- _DOMANDA_: è possibile che un programma venga eseguito in meno tempo senza cache rispetto che senza?
+- _RISPOSTA_: Un calcolatore provvisto di cache sarà quindi sempre più veloce rispetto ad uno senza perché l'ultimo non possedendola dovrà cercare l'informazione necessaria in RAM la quale ha un tempo di accesso più alto rispetto alla cache rendendo l'esecuzione del programma più lenta
+-  

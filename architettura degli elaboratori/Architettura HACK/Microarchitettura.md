@@ -1,7 +1,7 @@
 - è il livello di architettura che realizza il linguaggio macchina(ovvero l'[[ISA]], che poi viene usato dal linguaggio Assembly)
 - Schema Processore hack 
 	- ![[Pasted image 20240529164001.png]]
-	- ogni istruzione viene eseguita in un solo ciclo di _clock_, ciò è possibile perché il set di istruzioni è molto ridotto quindi è di tipo RISC
+	- ogni istruzione viene eseguita in un solo ciclo di _clock_, ciò è possibile perché il set di istruzioni è molto ridotto quindi è di tipo [[CISC e RISC||RISC]] 
 - ### SRAM
 	- La cache dell'architettura hack utilizza l'SRAM(static random access memory) che è la più veloce ma anche la più dispendiosa in fatto di bit e permette, vista l'assenza di memory refresh, di mantenere le informazioni teoricamente all'infinito 
 - ### DRAM & SDRAM
