@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
+                "file": "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
+                "file": "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
+                "file": "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale/Teorema GEL.md"
+                "file": "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md"
               }
             }
           },
@@ -161,17 +161,17 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "b325402c112b19f2",
   "lastOpenFiles": [
+    "Algebra e geometria/Spazio vettoriale/Indipendenza lineare.md",
+    "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
     "Algebra e geometria/Sistema lineare",
     "Algebra e geometria/Spazio vettoriale",
     "Algebra e geometria/Spazio vettoriale/Teorema del completamento.md",
-    "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
     "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R3.md",
-    "Algebra e geometria/Spazio vettoriale/sottospazi vettoriali di R2.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
     "Algebra e geometria/Spazio vettoriale/Sottospazio vettoriale.md",
     "Algebra e geometria/Spazio vettoriale/Spazio vettoriale.md",
-    "Algebra e geometria/Spazio vettoriale/Indipendenza lineare.md",
     "Algebra e geometria/Spazio vettoriale/Sottospazio generato.md",
     "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
     "Algebra e geometria/Sistema lineare/Equazioni lineari.md",
@@ -208,7 +208,6 @@
     "architettura degli elaboratori/SO/Compiti",
     "immagini/Pasted image 20240530181244.png",
     "immagini/Pasted image 20240530175336.png",
-    "architettura degli elaboratori/SO",
     "template/Senza nome.canvas",
     "Untitled.canvas",
     "programmazione/Untitled.canvas",

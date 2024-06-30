@@ -270,6 +270,9 @@ porto
 proposizione
 parla
 piano
+passante
+parallele
+passanti
 realizzare
 rappresentare
 risultato
@@ -1308,6 +1311,7 @@ cancellazione
 conseguenza
 criterio
 contraddizione
+cartesiano
 avendo
 alcune
 arriva
@@ -1567,6 +1571,7 @@ attiva
 aggiungerne
 assurdo
 arrivando
+appartengono
 un
 una
 usato
@@ -1734,6 +1739,7 @@ ukt
 uFo
 uPg
 unione
+unici
 decremento
 del
 di
@@ -2151,6 +2157,8 @@ finita
 fissato
 fisso
 finirli
+fissate
+fissati
 in
 il
 invece
@@ -2787,6 +2795,7 @@ eguagli
 espando
 esisterebbe
 elimino
+edba
 base
 bit
 basano
@@ -3092,6 +3101,7 @@ qzx
 quei
 qualunque
 quell
+qual
 se
 sarebbe
 si
@@ -3587,6 +3597,8 @@ obiettivo
 ortogonalit
 ovvio
 ora
+origine
+origini
 va
 valore
 viene
@@ -3961,6 +3973,7 @@ trasforma
 teoremi
 teorema
 togliere
+tracciare
 grandi
 gli
 grande
@@ -5561,6 +5574,7 @@ Cancello
 Che
 Conseguenze
 Casi
+Corollario
 Questa
 Quello
 Qz

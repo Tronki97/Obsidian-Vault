@@ -1,4 +1,4 @@
-- Gli stessi ragionamenti fatti per i [[sottospazi vettoriali di R2]] si applicano per $\mathbb{R}^{3}$, ma con una dimensione in più. Quindi i possibili sottospazi di $\mathbb{R}^{3}$ sono:
+- Gli stessi ragionamenti fatti per i [[Sottospazi vettoriali di R2]] si applicano per $\mathbb{R}^{3}$, ma con una dimensione in più. Quindi i possibili sottospazi di $\mathbb{R}^{3}$ sono:
 	- $U=\underline{0}=(0,0,0)$, ovvero sottospazio banale
 	- le rette per l'origine
 	- i piani per l'origine.
