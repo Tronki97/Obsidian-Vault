@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Algoritmo di Gauss.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "faf291610f5de00f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra e geometria/Sottospazio generato.md",
+                "file": "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Sottospazio generato.md",
+                "file": "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Sottospazio generato.md",
+                "file": "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Sottospazio generato.md"
+                "file": "Algebra e geometria/Spazio vettoriale/Teorema GEL.md"
               }
             }
           },
@@ -174,21 +161,28 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "faf291610f5de00f",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Algebra e geometria/Dimensione.md",
-    "Algebra e geometria/Sottospazio generato.md",
-    "Algebra e geometria/Combinazione lineare.md",
-    "Algebra e geometria/Teorema del completamento.md",
+    "Algebra e geometria/Sistema lineare",
+    "Algebra e geometria/Spazio vettoriale",
+    "Algebra e geometria/Spazio vettoriale/Teorema del completamento.md",
+    "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R3.md",
+    "Algebra e geometria/Spazio vettoriale/sottospazi vettoriali di R2.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazio vettoriale.md",
+    "Algebra e geometria/Spazio vettoriale/Spazio vettoriale.md",
+    "Algebra e geometria/Spazio vettoriale/Indipendenza lineare.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazio generato.md",
+    "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
+    "Algebra e geometria/Sistema lineare/Equazioni lineari.md",
+    "Algebra e geometria/Spazio vettoriale/Base.md",
+    "Algebra e geometria/Spazio vettoriale/Dimensione.md",
+    "Algebra e geometria/Introduzione.md",
+    "Algebra e geometria/Sistema lineare/Matrici.md",
+    "Algebra e geometria/Sistema lineare/Algoritmo di Gauss.md",
+    "Algebra e geometria/Sistema lineare/Rango righe.md",
     "Algebra e geometria/LaTeX-cheat-sheet 1.pdf",
     "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
-    "Algebra e geometria/Algoritmo di Gauss.md",
-    "Algebra e geometria/Base.md",
-    "Algebra e geometria/Indipendenza lineare.md",
-    "Algebra e geometria/Spazio vettoriale.md",
-    "Algebra e geometria/Matrici.md",
-    "Algebra e geometria/Equazioni lineari.md",
-    "Algebra e geometria/Introduzione.md",
     "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
     "architettura degli elaboratori/Architettura HACK/Registri.md",
     "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
@@ -197,12 +191,6 @@
     "architettura degli elaboratori/SO/Compiti/Combinazione segmentazione-paginazione.md",
     "architettura degli elaboratori/Architettura HACK/Pipeline.md",
     "architettura degli elaboratori/Boole/Algebra Booleana.md",
-    "architettura degli elaboratori/Boole/Circuiti logici.md",
-    "architettura degli elaboratori/Boole/Formula canonica.md",
-    "architettura degli elaboratori/Boole/Funzioni booleane.md",
-    "architettura degli elaboratori/Boole/Mintermini.md",
-    "architettura degli elaboratori/SO/Compiti/frammentazione esterna.md",
-    "architettura degli elaboratori/SO/Compiti/segmentazione.md",
     "Senza_titolo.png",
     "Pasted image 20240619185756.png",
     "immagini/Pasted image 20240604121154.png",
@@ -221,7 +209,6 @@
     "immagini/Pasted image 20240530181244.png",
     "immagini/Pasted image 20240530175336.png",
     "architettura degli elaboratori/SO",
-    "architettura degli elaboratori/esempi di funzionamento(fatti male)",
     "template/Senza nome.canvas",
     "Untitled.canvas",
     "programmazione/Untitled.canvas",
