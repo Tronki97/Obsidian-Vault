@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
+                "file": "Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
+                "file": "Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
+                "file": "Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md"
+                "file": "Algebra e geometria/Applicazione lineare/Applicazione lineare.md"
               }
             }
           },
@@ -163,13 +163,27 @@
   },
   "active": "b325402c112b19f2",
   "lastOpenFiles": [
+    "Algebra e geometria/Applicazione lineare/Teorema di esistenza e unicità di un'applicazione lineare.md",
+    "Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
+    "Algebra e geometria/Applicazione lineare/Immagine di una funzione.md",
+    "Algebra e geometria/Sistema lineare/Algoritmo di Gauss.md",
+    "Algebra e geometria/Spazio vettoriale/Teorema del completamento.md",
+    "Logica/Teoria degli insiemi/Assiomi.md",
+    "Algebra e geometria/Applicazione lineare/Kernel.md",
+    "Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
+    "Algebra e geometria/Applicazione lineare/Coordinate rispetto a una base.md",
+    "Analisi/modulo2/Prodotto scalare Euclideo.md",
+    "Algebra e geometria/Applicazione lineare/Suriettiva.md",
+    "Pasted image 20240701173132.png",
+    "Algebra e geometria/Applicazione lineare/iniettiva.md",
+    "Pasted image 20240701171936.png",
+    "Algebra e geometria/Applicazione lineare",
+    "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
     "Algebra e geometria/Spazio vettoriale/Indipendenza lineare.md",
     "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
     "Algebra e geometria/Sistema lineare",
     "Algebra e geometria/Spazio vettoriale",
-    "Algebra e geometria/Spazio vettoriale/Teorema del completamento.md",
     "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R3.md",
-    "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
     "Algebra e geometria/Spazio vettoriale/Sottospazio vettoriale.md",
     "Algebra e geometria/Spazio vettoriale/Spazio vettoriale.md",
     "Algebra e geometria/Spazio vettoriale/Sottospazio generato.md",
@@ -179,18 +193,8 @@
     "Algebra e geometria/Spazio vettoriale/Dimensione.md",
     "Algebra e geometria/Introduzione.md",
     "Algebra e geometria/Sistema lineare/Matrici.md",
-    "Algebra e geometria/Sistema lineare/Algoritmo di Gauss.md",
     "Algebra e geometria/Sistema lineare/Rango righe.md",
     "Algebra e geometria/LaTeX-cheat-sheet 1.pdf",
-    "architettura degli elaboratori/VM hack/linguaggio VM hack.md",
-    "architettura degli elaboratori/Architettura HACK/CISC e RISC.md",
-    "architettura degli elaboratori/Architettura HACK/Registri.md",
-    "architettura degli elaboratori/Boole/Mappe di Karnaugh.md",
-    "architettura degli elaboratori/Rappresentazione dell'informazione/Correzione di errori.md",
-    "architettura degli elaboratori/SO/Compiti/paginazione(SO).md",
-    "architettura degli elaboratori/SO/Compiti/Combinazione segmentazione-paginazione.md",
-    "architettura degli elaboratori/Architettura HACK/Pipeline.md",
-    "architettura degli elaboratori/Boole/Algebra Booleana.md",
     "Senza_titolo.png",
     "Pasted image 20240619185756.png",
     "immagini/Pasted image 20240604121154.png",
@@ -205,9 +209,6 @@
     "immagini/Pasted image 20240530184242.png",
     "immagini/Pasted image 20240530182722.png",
     "architettura degli elaboratori/SO/Workflow di copilazione",
-    "architettura degli elaboratori/SO/Compiti",
-    "immagini/Pasted image 20240530181244.png",
-    "immagini/Pasted image 20240530175336.png",
     "template/Senza nome.canvas",
     "Untitled.canvas",
     "programmazione/Untitled.canvas",

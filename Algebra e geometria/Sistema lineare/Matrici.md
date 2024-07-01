@@ -2,7 +2,7 @@
 - Una matrice A con n righe e m colonne è una tabella di numeri reali:$$\begin{pmatrix}a_{11}&a_{12} &a_{1m}\\ a_{21} &a_{22} &a_{2m} \\ a_{n1} &a_{n2} &a_{nm}\end{pmatrix}$$ES:$$\begin{pmatrix}20 &54 &-12\\ \sqrt{12} &-6 &0 \\ 90 &\pi &-\sqrt4\end{pmatrix}$$
 - Una matrice non ha spazi vuoti al massimo contiene uno 0  l'insieme delle matrici  con n righe e m colonne si indica con:  $M_{m,n}(R)$ o $M_{mxn}(R)$  
 - _Matrice quadrata_: Una matrice si dice quadrata se m=n 
-- _Trasposta_: la trasposta di una matrice una matrice dove l'elemento $a_{ji}$ diventa l'elemento $a_{ij}$  
+- _Trasposta_: la trasposta di una matrice una matrice dove l'elemento $a_{ji}$ diventa l'elemento $a_{ij}$   ^6c76a0
 	- quindi una matrice di 4 righe e 3 colonne avrà la trasposta di 3 righe e 4 colonne.
 - _Uguaglianza_: Due matrici A e B sono uguali se $\forall i,j \ \  a_{ij}=b_{ij}$ 
 - Una riga (o colonna) di una matrice A può essere vista come una matrice $1\times n$ (rispettivamente $m\times1$) 
