@@ -8,7 +8,7 @@
 	- dato $W = \langle(1,3,4,0), (2,1,-5,7)\rangle\leq \mathbb{R}^4$ ovvero un sottospazio generato da quei due vettori. Questi sono linearmente indipendenti, per cui sono base di W. Quindi $dim(W)=2$
 - #### Proprietà
 	- 1)$dim(W)\leq dim(V)$
-	- 2)$dim(W) = dim(V)\Longleftrightarrow W=V$  
+	- 2)$dim(W) = dim(V)\Longleftrightarrow W=V$   ^bf4054
 - #### Dimostrazione
 	- 1)$$dim(W)\leq dim(V)$$
 		- sia $\beta_{w}=w_{1},...,w_{n}$ base di W, e sapendo che $W \leq V$ per la definizione di [[Sottospazio generato||sottospazio]] $w_{1},...,w_{n}$ sono linearmente indipendenti. Presa $\beta_{v}=v_1,...,v_{r}$ base di V, per il [[Teorema del completamento]] ho che $n\leq r$ e quindi $dim(W)\leq dim(V)$ 

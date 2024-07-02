@@ -24,7 +24,7 @@
 			  Sapendo che Z è sottospazio di V composto dai vettori $v_{1},...,v_{n}$ il sottospazio generato da loro non sfora in V. Per questo si dice che è il più piccolo sottospazio generato dai vettori $v_{1},...,v_{n}$.
 			  Per dimostrarlo basta guardare [[Combinazione lineare#^902652||l'osservazione sulle combinazioni lineari]] e considerarla valida per ogni combinazione lineare del sottospazio generato $\langle u_{1}, ..., u_{n} \rangle$.
 			  In conclusione per dimostrare $\langle v_{1},...v_{n}\rangle\subseteq Z$ basta usare la definizione di essere sottoinsieme quindi ogni elemento di $\langle v_{1},...v_{n}\rangle$ _appartiene_ a Z. quindi fissato un elemento $u$ appartenente al sottospazio generato che può essere espresso come: $u=\lambda_1 v_{1}+...+\lambda_{n}v_{n}$, e per l'ipotesi che $v_{1},...,v_{n}\in Z$ allora anche la sua combinazione lineare appartiene a Z per le proprietà delle combinazioni lineari.
-		- 3)$$w\in \langle v_{1},...v_{n}\rangle \Longleftrightarrow \langle v_{1},...v_{n}\rangle=\langle v_{1},...v_{n}, w\rangle$$
+		- 3)$$w\in \langle v_{1},...v_{n}\rangle \Longleftrightarrow \langle v_{1},...v_{n}\rangle=\langle v_{1},...v_{n}, w\rangle$$ ^e08177
 			- $\implies$)
 				- Per dimostrare che $\langle v_{1},...v_{n}\rangle=\langle v_{1},...v_{n}, w\rangle$ basta dimostrare $w\in \langle v_{1},...v_{n}\rangle$ ovvio per ipotesi.
 			- $\Longleftarrow$) 

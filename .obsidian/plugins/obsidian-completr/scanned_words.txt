@@ -278,6 +278,7 @@ poche
 parole
 passando
 proietta
+pmatrix
 realizzare
 rappresentare
 risultato
@@ -538,6 +539,10 @@ rangle
 risolto
 ridotta
 ricaviamo
+ricavo
+risultando
+risoluzione
+risultare
 la
 le
 lo
@@ -697,6 +702,8 @@ lavorare
 legge
 linearit
 langle
+luce
+legame
 ALU
 AND
 Address
@@ -823,6 +830,8 @@ Analizzo
 Assioma
 Avendo
 Allora
+Algebra
+Applicando
 nel
 necessario
 numero
@@ -1352,6 +1361,10 @@ corollario
 calcola
 conoscere
 certa
+controimmagine
+considerato
+catena
+costruzione
 avendo
 alcune
 arriva
@@ -1623,6 +1636,8 @@ applicazioni
 avremmo
 affinch
 aver
+ammette
+adottati
 un
 una
 usato
@@ -1793,6 +1808,7 @@ unione
 unici
 unicit
 underline
+unire
 decremento
 del
 di
@@ -2034,6 +2050,8 @@ doppia
 dimostrato
 dunque
 dovevo
+distinguono
+dimostrazione
 finito
 fanno
 facilmente
@@ -2226,6 +2244,8 @@ forall
 fef
 falsa
 formare
+fornendo
+finora
 in
 il
 invece
@@ -2459,6 +2479,7 @@ indichiamo
 iniettiva
 implica
 immediatamente
+inversa
 modo
 mentre
 massimo
@@ -2673,6 +2694,7 @@ mappato
 misurare
 meglio
 magari
+massima
 esempio
 eccede
 errori
@@ -2883,6 +2905,9 @@ esistano
 estensionalit
 encoding
 esercizi
+end
+emptyset
+equivalenze
 base
 bit
 basano
@@ -3029,6 +3054,7 @@ binarie
 basi
 banale
 beta
+begin
 quindi
 questo
 quelle
@@ -3541,6 +3567,11 @@ sufficienti
 sfrutto
 scelgo
 suriettivit
+sis
+significherebbe
+scontato
+strumenti
+studiati
 otterremmo
 ottenere
 occupare
@@ -3709,6 +3740,7 @@ origine
 origini
 ottengo
 omogeneo
+ove
 va
 valore
 viene
@@ -4092,6 +4124,7 @@ tutta
 terzo
 tesi
 trovato
+traslate
 grandi
 gli
 grande
@@ -5051,6 +5084,8 @@ Prendiamo
 Presi
 Procedendo
 Poi
+Passaggi
+Parte
 Di
 Data
 Dati
@@ -5716,6 +5751,7 @@ Che
 Conseguenze
 Casi
 Corollario
+Casistiche
 Questa
 Quello
 Qz
@@ -8226,6 +8262,7 @@ Verificato
 Visto
 Verifico
 VERO
+Viene
 öG
 öH
 Öi

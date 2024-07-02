@@ -3,7 +3,7 @@
 	- Restringendo il codominio di una funzione alla sua immagine, la si rende [[Suriettiva]], o meglio:
 		- $\forall f:\mathbb{A} \rightarrow \mathbb{B}$ si ha che $f$, vista come funzione del tipo:$f:\mathbb{A} \rightarrow Im(f)$ è suriettiva.
 - ## Proposizioni:
-	- ### Spazio generato dell'immagine
+	- ### Spazio generato dell'immagine ^c5e9e6
 		- Sia $f:V \rightarrow W$ un'[[Applicazione lineare]] e $\beta = v_1,...,v_n$ [[Base]] di V, allora:$$Im(f)=\langle{f(v_{1}),...,f(v_{n})}\rangle$$ovvero l'immagine di $f$ è generata dal [[Sottospazio vettoriale||sottospazio]] delle immagini della base $\beta$ 
 		- #### Dimostrazione:
 			- per dimostrare l'uguaglianza tra due insiemi uso la doppia inclusione: devo quindi dimostrare che $Im(f)\subseteq \langle{f(v_{1}),...,f(v_{n})}\rangle$ e $\langle{f(v_{1}),...,f(v_{n})}\rangle \subseteq Im(f)$ quindi fisso una funzione $f:V \rightarrow W$ lineare.

@@ -10,3 +10,24 @@
 - ## ES:
 	- $\nexists f:\mathbb{R}^{5} \rightarrow \mathbb{R}^{3}|f\ \ è su$ 
 		- procedendo per assurdo suppongo che $f$ sia iniettiva. Ciò significherebbe che $dim(ker(f))=0$. Il teorema della dimensione dice che deve valere che:$$dim(\mathbb{R}^{5})=dim(ker(f))+dim(Im(f))$$Ovvero$$5=0+dim(Im(f))$$Ma sappiamo per ipotesi che $Im(f)\leq \mathbb{R}^{3}$ avendo quindi dimensione massima 3 risultando in $$5=3$$Che è un assurdo.
+- ## Corollario: ^e2ecda
+	- #### Limite all'iniettività
+		- sia  $f:\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ t.c $n>m$ allora $f$ non è [[iniettiva]]
+	- #### Limite alla suriettività
+		- sia  $f:\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ t.c $n<m$ allora $f$ non è [[Suriettiva]]
+	- #### Iniettività $\iff$ Suriettività
+		- siano $V,W$ [[Spazio vettoriale]] tali che $dim(V)=dim(W)$ e sia $f:V \rightarrow W$ lineare allora$$f \ in \iff f\ su$$
+		- #### Dimostrazione:
+			- è una conseguenza diretta del [[Teorema del completamento]], infatti ho che se $dim(V)=dim(W)$ allora $$dim(V)=dim(ker(f))+dim(Im(f))=dim(W)$$e allora:
+				- $f$ è iniettiva $\implies dim(ker(f))=0\implies dim(V)=$
+				  $=dim(Im(f))=dim(W)\implies f$ è suriettiva.
+				- $f$ è suriettiva$\implies dim(Im(f)=dim(W))\implies dim(V)=$
+				  $=dim(ker(f))+dim(W)=dim(W)\implies$
+				  $dim(ker(f))=0\implies f$ è iniettiva  
+	- #### Righe e colonne di una matrice
+		- Sia $A \in M_{m\times n}(\mathbb{R})$ t.c $r_1,...,r_{m}$ sono le righe di di $A$ e $c_1,...,c_n$ sono le colonne, allora:$$dim(\langle{r_1,...,r_{m}}\rangle)=dim(\langle{c_1,...,c_n}\rangle)$$Ovvero il [[Sottospazio generato]] dalle righe e quello generato dalle colonne sono uguali.
+		  Da questa conseguenza sappiamo infatti che le righe e le colonne di una matrice vivono su spazi vettoriali di dimensione e fattezza diversi, ma la dimensione del dei diversi sottospazi generati da esse saranno uguali.
+		- #### Dimostrazione:
+			- Considerando un'[[Applicazione lineare]] $L_{A}:\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$definita da una [[Matrici||matrice]] $A \in M_{m\times n}(\mathbb{R})$. Ho che $ker(L_{A})$ è definito come l'insieme delle soluzioni del sistema lineare omogeneo $A \underline{x}=\underline{0}$. Riducendo $A$ a scala, ottengo che il $ker(f)$ è l'insieme delle soluzioni dipendenti da $n-rr(A)$ variabili libere, ovvero$$dim(ker(L_{A}))=n-rr(A)$$Ora, considerando $Im(L_{A})$ so che si ricava da $A^{T}$ riducendo tale matrice a scala. Ottengo un certo valore $rr(A^{T})=rc(A)$ che corrisponde a $dim(Im(L_{A}))$ per cui:$$dim(Im(L_{A}))=rc(A)$$Ora applicando il teorema della dimensione, che ci dice$$dim(\mathbb{R}^{n})=dim(ker(L_{A}))+dim(Im(L_{A}))$$Per i risultati precedenti ottengo che:$$n=n-rr(A)+rc(A)$$E quindi che $$rr(A)=rc(A)$$E mi riduco a dire che:$$dim(\langle{r_1,...,r_{m}}\rangle)=dim(\langle{c_1,...,c_n}\rangle)$$Qed. 
+ 
+ 
