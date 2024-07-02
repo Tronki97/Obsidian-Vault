@@ -5,5 +5,8 @@
 	- Questo teorema risulta fondamentale nello sviluppo degli esercizi in cui non viene richiesto di conoscere il [[Sottospazio generato]] dal nucleo né il sottospazio generato dall'immagine, ma magari solo la loro dimensione: calcolando anche solo una delle due dimensioni, per questo teorema ricaviamo immediatamente quella dell'altro.
 	- ad esempio:
 		- per sapere se una certa $f:V \rightarrow W$ è [[Suriettiva]] ci basta avere che $dim(Im(f))=dim(W)$;
-		- per sapere se una certa $f:V \rightarrow W$ è [[iniettiva]] basta avere che $dim(ker(f))=0$
+		- per sapere se una certa $f:V \rightarrow W$ è [[iniettiva]] basta avere che $dim(ker(f))=0$ 
 		 
+- ## ES:
+	- $\nexists f:\mathbb{R}^{5} \rightarrow \mathbb{R}^{3}|f\ \ è su$ 
+		- procedendo per assurdo suppongo che $f$ sia iniettiva. Ciò significherebbe che $dim(ker(f))=0$. Il teorema della dimensione dice che deve valere che:$$dim(\mathbb{R}^{5})=dim(ker(f))+dim(Im(f))$$Ovvero$$5=0+dim(Im(f))$$Ma sappiamo per ipotesi che $Im(f)\leq \mathbb{R}^{3}$ avendo quindi dimensione massima 3 risultando in $$5=3$$Che è un assurdo.

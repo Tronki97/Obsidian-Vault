@@ -535,6 +535,9 @@ regolarit
 rimpiazzamento
 rightarrow
 rangle
+risolto
+ridotta
+ricaviamo
 la
 le
 lo
@@ -965,6 +968,8 @@ nulli
 notare
 naturali
 nessun
+nello
+nucleo
 capire
 codifiche
 capacit
@@ -1344,6 +1349,9 @@ conferma
 calcolare
 coincide
 corollario
+calcola
+conoscere
+certa
 avendo
 alcune
 arriva
@@ -1614,6 +1622,7 @@ afferma
 applicazioni
 avremmo
 affinch
+aver
 un
 una
 usato
@@ -2449,6 +2458,7 @@ inclusione
 indichiamo
 iniettiva
 implica
+immediatamente
 modo
 mentre
 massimo
@@ -2662,6 +2672,7 @@ mathbb
 mappato
 misurare
 meglio
+magari
 esempio
 eccede
 errori
@@ -2871,6 +2882,7 @@ esistono
 esistano
 estensionalit
 encoding
+esercizi
 base
 bit
 basano
@@ -3696,6 +3708,7 @@ ora
 origine
 origini
 ottengo
+omogeneo
 va
 valore
 viene
@@ -5037,6 +5050,7 @@ Passare
 Prendiamo
 Presi
 Procedendo
+Poi
 Di
 Data
 Dati
@@ -6776,6 +6790,7 @@ kcF
 kIR
 kNJ
 ker
+kernel
 jmp
 jy
 jwä
@@ -7489,6 +7504,7 @@ UYG
 Uguaglianza
 Uno
 Usando
+Utilit
 Zx
 ZD
 ZRz

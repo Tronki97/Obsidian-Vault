@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Applicazione lineare/Teorema della dimensione.md",
+                "file": "Algebra e geometria/Applicazione lineare/Controimmagine.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Applicazione lineare/Teorema della dimensione.md",
+                "file": "Algebra e geometria/Applicazione lineare/Controimmagine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Applicazione lineare/Teorema della dimensione.md",
+                "file": "Algebra e geometria/Applicazione lineare/Controimmagine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Applicazione lineare/Teorema della dimensione.md"
+                "file": "Algebra e geometria/Applicazione lineare/Controimmagine.md"
               }
             }
           },
@@ -163,8 +163,10 @@
   },
   "active": "b325402c112b19f2",
   "lastOpenFiles": [
-    "Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
+    "Algebra e geometria/Applicazione lineare/Composizione di applicazioni lineari.md",
+    "Algebra e geometria/Applicazione lineare/Controimmagine.md",
     "Algebra e geometria/Applicazione lineare/Teorema della dimensione.md",
+    "Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
     "Algebra e geometria/Applicazione lineare/Teorema di esistenza e unicità di un'applicazione lineare.md",
     "Algebra e geometria/Applicazione lineare/Immagine di una funzione.md",
     "Algebra e geometria/Sistema lineare/Algoritmo di Gauss.md",
@@ -192,8 +194,6 @@
     "Algebra e geometria/Sistema lineare/Equazioni lineari.md",
     "Algebra e geometria/Spazio vettoriale/Base.md",
     "Algebra e geometria/Spazio vettoriale/Dimensione.md",
-    "Algebra e geometria/Introduzione.md",
-    "Algebra e geometria/Sistema lineare/Matrici.md",
     "Algebra e geometria/LaTeX-cheat-sheet 1.pdf",
     "Senza_titolo.png",
     "Pasted image 20240619185756.png",
