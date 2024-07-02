@@ -1343,6 +1343,7 @@ conosco
 conferma
 calcolare
 coincide
+corollario
 avendo
 alcune
 arriva
@@ -7148,6 +7149,7 @@ OSSERVAZIONI
 Ovvero
 Ora
 Oppure
+Osservazioni
 xz
 xX
 xF
