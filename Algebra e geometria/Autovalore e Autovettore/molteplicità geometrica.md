@@ -1,0 +1,1 @@
+- Sia $A \in M_{n}(\mathbb{R})$ e sia $\lambda$ un [[Autovalore]] dell'[[Applicazioni lineari definite da una matrice||applicazione lineare associata]], allora la _molteplicità geometrica_ di $\lambda$, indicata con $m_{g}(\lambda)$, è la [[Dimensione]] dell'[[Autospazio]] $V_{\lambda}$ ovvero $m_{g}(\lambda)=dim(V_{\lambda})$ 

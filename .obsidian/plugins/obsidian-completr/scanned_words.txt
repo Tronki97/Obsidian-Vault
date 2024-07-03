@@ -279,6 +279,7 @@ parole
 passando
 proietta
 pmatrix
+pone
 realizzare
 rappresentare
 risultato
@@ -543,6 +544,12 @@ ricavo
 risultando
 risoluzione
 risultare
+riesce
+ricavare
+riducendo
+ragionamento
+ricordare
+rappresentata
 la
 le
 lo
@@ -832,6 +839,8 @@ Avendo
 Allora
 Algebra
 Applicando
+Applico
+Autovalore
 nel
 necessario
 numero
@@ -979,6 +988,7 @@ naturali
 nessun
 nello
 nucleo
+nonostante
 capire
 codifiche
 capacit
@@ -1365,6 +1375,14 @@ controimmagine
 considerato
 catena
 costruzione
+comportamento
+concludere
+cancellate
+consente
+caratteristico
+compresa
+consiste
+canoniche
 avendo
 alcune
 arriva
@@ -1638,6 +1656,11 @@ affinch
 aver
 ammette
 adottati
+avviene
+applica
+autovalore
+autovettore
+anzi
 un
 una
 usato
@@ -2052,6 +2075,13 @@ dunque
 dovevo
 distinguono
 dimostrazione
+dim
+determinante
+determinanti
+det
+derivata
+diagonale
+diagonalizzabile
 finito
 fanno
 facilmente
@@ -2246,6 +2276,8 @@ falsa
 formare
 fornendo
 finora
+funge
+funzioner
 in
 il
 invece
@@ -2480,6 +2512,12 @@ iniettiva
 implica
 immediatamente
 inversa
+iff
+identica
+invertibilit
+invertibile
+inferiore
+identificata
 modo
 mentre
 massimo
@@ -2695,6 +2733,11 @@ misurare
 meglio
 magari
 massima
+maggiori
+moltiplicarle
+metodico
+molteplicit
+modificando
 esempio
 eccede
 errori
@@ -2908,6 +2951,8 @@ esercizi
 end
 emptyset
 equivalenze
+exists
+esister
 base
 bit
 basano
@@ -3572,6 +3617,18 @@ significherebbe
 scontato
 strumenti
 studiati
+scomposto
+studiarla
+studiarne
+scambiando
+scambiare
+sommarle
+saper
+state
+scegliere
+stratagemma
+sottraendo
+strumento
 otterremmo
 ottenere
 occupare
@@ -3741,6 +3798,11 @@ origini
 ottengo
 omogeneo
 ove
+ottenute
+ottenuta
+osservazione
+opportune
+obbligatoriamente
 va
 valore
 viene
@@ -3927,6 +3989,8 @@ variare
 vuoto
 valere
 volevo
+volumi
+vorrebbe
 troppo
 testimone
 tramite
@@ -4125,6 +4189,7 @@ terzo
 tesi
 trovato
 traslate
+triangolare
 grandi
 gli
 grande
@@ -4284,6 +4349,7 @@ generati
 generasse
 geq
 generata
+geometrica
 NOT
 NotePad
 Nu
@@ -4571,6 +4637,7 @@ Infine
 Iterando
 Infatti
 Intersezione
+Importanza
 Rappresentazione
 Registri
 Register
@@ -4834,6 +4901,7 @@ Scelgo
 Siano
 Significato
 Suppongo
+Sarrus
 BINARY
 Bus
 BX
@@ -5086,6 +5154,8 @@ Procedendo
 Poi
 Passaggi
 Parte
+Perci
+Posso
 Di
 Data
 Dati
@@ -5324,6 +5394,8 @@ LIBRERIA
 LABEL
 Leggi
 Longleftrightarrow
+Laplace
+Legame
 Modulo
 Massimo
 Memory
@@ -5752,6 +5824,7 @@ Conseguenze
 Casi
 Corollario
 Casistiche
+Calcolo
 Questa
 Quello
 Qz
@@ -5869,6 +5942,7 @@ Qfu
 QuRi
 Questi
 Questo
+Qed
 Formato
 FLIP
 FLOP
@@ -6009,6 +6083,7 @@ FtEo
 Fisso
 Forme
 Fissati
+Formule
 Word
 WK
 WB
@@ -8140,6 +8215,7 @@ GIq
 GVZ
 Gerarchia
 Grazie
+Gamma
 Vb
 VD
 VG
@@ -8263,6 +8339,7 @@ Visto
 Verifico
 VERO
 Viene
+Vale
 öG
 öH
 Öi

@@ -1,0 +1,2 @@
+- Il _cambio di base_ è un processo che consiste nel modificare, attraverso opportune formule, le [[Base||basi]] di riferimento di [[Applicazioni lineari definite da una matrice]] nel dominio e codominio.
+- Infatti un'[[Applicazione lineare]] $f:\mathbb{R}^{n} \to \mathbb{R}^{m}$ identificata da una matrice $A$, può essere rappresentata da infinite basi diverse del dominio e del codominio:non obbligatoriamente quelle canoniche. Allora, modificando le basi, cambiano di conseguenza le [[Coordinate rispetto a una base]]
