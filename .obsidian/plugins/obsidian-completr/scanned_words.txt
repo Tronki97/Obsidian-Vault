@@ -289,6 +289,12 @@ parametriche
 prossimo
 perpendicolarit
 pongo
+procedimento
+piani
+proposizioni
+ponendo
+porre
+proj
 realizzare
 rappresentare
 risultato
@@ -568,6 +574,7 @@ riconferma
 risolvo
 risultanti
 risultata
+ragionamenti
 la
 le
 lo
@@ -864,6 +871,7 @@ Alcuni
 Autovalori
 Assumo
 Anche
+Algoritmo
 nel
 necessario
 numero
@@ -1016,6 +1024,8 @@ normalizzati
 niente
 noti
 norma
+nominati
+nessuno
 capire
 codifiche
 capacit
@@ -1423,6 +1433,15 @@ cartesiana
 chiedo
 consentire
 criteri
+comune
+composte
+completarlo
+cancellarne
+conosciamo
+chiesta
+conviene
+cambiarli
+cases
 avendo
 alcune
 arriva
@@ -1714,6 +1733,10 @@ assunzioni
 appena
 arbitrariamente
 assoluto
+appoggia
+applicano
+appunto
+adattare
 un
 una
 usato
@@ -1885,6 +1908,7 @@ unici
 unicit
 underline
 unire
+unisco
 decremento
 del
 di
@@ -2141,6 +2165,8 @@ dovrebbe
 ddots
 delta
 dette
+determinare
+dipender
 finito
 fanno
 facilmente
@@ -2343,6 +2369,8 @@ fido
 famiglia
 formano
 fondamentalmente
+forniti
+frac
 in
 il
 invece
@@ -2589,6 +2617,7 @@ identificano
 iniziali
 impostati
 inoltre
+indipendenza
 modo
 mentre
 massimo
@@ -3031,6 +3060,8 @@ esister
 esteso
 euclideo
 esercizio
+endomorfismo
+equivale
 base
 bit
 basano
@@ -3179,6 +3210,7 @@ banale
 beta
 begin
 bilinearit
+bot
 quindi
 questo
 quelle
@@ -3716,6 +3748,12 @@ soddisfa
 step
 sostituisco
 svolgere
+simile
+soli
+suddetto
+stabilire
+selezionare
+sigma
 otterremmo
 ottenere
 occupare
@@ -3898,6 +3936,9 @@ ossia
 ovviamente
 ottengono
 obbiettivo
+ortogonalmente
+ortogonalizzo
+osservare
 va
 valore
 viene
@@ -4091,6 +4132,7 @@ volessi
 vdots
 verificato
 voglio
+venisse
 troppo
 testimone
 tramite
@@ -4291,6 +4333,8 @@ trovato
 traslate
 triangolare
 trovo
+trovate
+trattandosi
 grandi
 gli
 grande
@@ -4453,6 +4497,7 @@ generata
 geometrica
 generalizzare
 gauss
+generazione
 NOT
 NotePad
 Nu
@@ -5263,6 +5308,7 @@ Parte
 Perci
 Posso
 Punto
+Procedo
 Di
 Data
 Dati
@@ -5504,6 +5550,7 @@ Leggi
 Longleftrightarrow
 Laplace
 Legame
+Lineare
 Modulo
 Massimo
 Memory
@@ -5934,6 +5981,8 @@ Casi
 Corollario
 Casistiche
 Calcolo
+Cio
+Coordinate
 Questa
 Quello
 Qz
@@ -6541,6 +6590,7 @@ HWcKR
 HOO
 HEW
 HCgml
+Hanno
 XOR
 Xm
 Xo
@@ -8333,6 +8383,8 @@ Gerarchia
 Grazie
 Gamma
 Generalizzazione
+GEL
+Generare
 Vb
 VD
 VG

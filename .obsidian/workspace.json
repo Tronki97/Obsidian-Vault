@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Teorema spettrale.md",
+                "file": "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "molteplici",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Teorema spettrale.md",
+                "file": "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Teorema spettrale.md",
+                "file": "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Teorema spettrale.md"
+                "file": "Algebra e geometria/Ortogonalità/Matrice ortogonale.md"
               }
             }
           },
@@ -163,33 +163,33 @@
   },
   "active": "b325402c112b19f2",
   "lastOpenFiles": [
-    "Algebra e geometria/Ortogonalità/Proiezioni ortogonali.md",
     "Algebra e geometria/Teorema spettrale.md",
-    "Algebra e geometria/Ortogonalità/Algoritmo di Gram-Schmidt.md",
-    "Analisi/modulo2/Norma euclidea.md",
-    "Algebra e geometria/Ortogonalità/Sottospazio ortogonale.md",
-    "Algebra e geometria/Applicazione lineare/Teorema di Rouché-Capelli.md",
-    "Algebra e geometria/Applicazione lineare/Forme dei sottospazi.md",
-    "Algebra e geometria/Ortogonalità/Ortogonalità.md",
-    "Algebra e geometria/Spazio vettoriale/Sottospazio vettoriale.md",
-    "Algebra e geometria/Spazio vettoriale/Sottospazio generato.md",
-    "Analisi/modulo2/Ortogonalità.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
-    "Algebra e geometria/Ortogonalità/Base ortonormale.md",
-    "Algebra e geometria/Ortogonalità/Base ortogonale.md",
-    "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
-    "Analisi/modulo2/Prodotto scalare Euclideo.md",
-    "Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
-    "Algebra e geometria/Cambio di base.md",
-    "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Sistema lineare/Matrici.md",
-    "Algebra e geometria/Determinante/Matrice invertibile.md",
-    "Algebra e geometria/Determinante/Matrice identità.md",
-    "Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
+    "Algebra e geometria/Ortogonalità/Algoritmo di Gram-Schmidt.md",
+    "Algebra e geometria/Simmetria.md",
+    "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
+    "Algebra e geometria/Ortogonalità/Applicazione ortogonale.md",
+    "Algebra e geometria/Ortogonalità/Ortogonalità.md",
     "Algebra e geometria/Autovalore e Autovettore/molteplicità algebrica.md",
-    "Algebra e geometria/Autovalore e Autovettore/molteplicità geometrica.md",
     "Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+    "Algebra e geometria/Applicazione lineare/teorema di struttura per sistemi lineari.md",
+    "Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
+    "Algebra e geometria/Applicazione lineare/Coordinate rispetto a una base.md",
+    "Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R2.md",
+    "Algebra e geometria/Spazio vettoriale/Indipendenza lineare.md",
+    "Algebra e geometria/Spazio vettoriale/Teorema GEL.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazi vettoriali di R3.md",
+    "Algebra e geometria/Spazio vettoriale/Teorema del completamento.md",
+    "Algebra e geometria/Spazio vettoriale/Base Canonica.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazio generato.md",
+    "Algebra e geometria/Spazio vettoriale/Spazio vettoriale.md",
+    "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
+    "Algebra e geometria/Ortogonalità/Base ortogonale.md",
+    "Algebra e geometria/Ortogonalità/Base ortonormale.md",
+    "Algebra e geometria/Ortogonalità/Sottospazio ortogonale.md",
+    "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
+    "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Autovalore e Autovettore",
     "Selezione_001.png",
     "Algebra e geometria/Determinante",
