@@ -280,6 +280,9 @@ passando
 proietta
 pmatrix
 pone
+pensare
+potevo
+perpendicolari
 realizzare
 rappresentare
 risultato
@@ -550,6 +553,10 @@ riducendo
 ragionamento
 ricordare
 rappresentata
+rimangono
+rispettive
+rispettivi
+rimane
 la
 le
 lo
@@ -711,6 +718,7 @@ linearit
 langle
 luce
 legame
+lavorassero
 ALU
 AND
 Address
@@ -841,6 +849,8 @@ Algebra
 Applicando
 Applico
 Autovalore
+Alcuni
+Autovalori
 nel
 necessario
 numero
@@ -1383,6 +1393,13 @@ caratteristico
 compresa
 consiste
 canoniche
+creando
+comodit
+condividono
+concentro
+cdot
+circ
+cdots
 avendo
 alcune
 arriva
@@ -1661,6 +1678,9 @@ applica
 autovalore
 autovettore
 anzi
+applicata
+autospazio
+algebriche
 un
 una
 usato
@@ -2082,6 +2102,10 @@ det
 derivata
 diagonale
 diagonalizzabile
+direzione
+deforma
+dovrebbe
+ddots
 finito
 fanno
 facilmente
@@ -2278,6 +2302,9 @@ fornendo
 finora
 funge
 funzioner
+flippa
+fissata
+fido
 in
 il
 invece
@@ -2518,6 +2545,7 @@ invertibilit
 invertibile
 inferiore
 identificata
+invertono
 modo
 mentre
 massimo
@@ -2738,6 +2766,10 @@ moltiplicarle
 metodico
 molteplicit
 modificando
+mantenendo
+mappati
+multiplo
+monomi
 esempio
 eccede
 errori
@@ -2953,6 +2985,7 @@ emptyset
 equivalenze
 exists
 esister
+esteso
 base
 bit
 basano
@@ -3263,6 +3296,7 @@ quell
 qual
 questione
 quest
+questioni
 se
 sarebbe
 si
@@ -3629,6 +3663,9 @@ scegliere
 stratagemma
 sottraendo
 strumento
+simmetria
+simmetricamente
+scriverebbe
 otterremmo
 ottenere
 occupare
@@ -3803,6 +3840,7 @@ ottenuta
 osservazione
 opportune
 obbligatoriamente
+ortogonali
 va
 valore
 viene
@@ -3991,6 +4029,9 @@ valere
 volevo
 volumi
 vorrebbe
+vogliamo
+volessi
+vdots
 troppo
 testimone
 tramite
@@ -4190,6 +4231,7 @@ tesi
 trovato
 traslate
 triangolare
+trovo
 grandi
 gli
 grande
@@ -4350,6 +4392,8 @@ generasse
 geq
 generata
 geometrica
+generalizzare
+gauss
 NOT
 NotePad
 Nu
@@ -5671,6 +5715,7 @@ Enunciato
 ESEMPI
 Esistenza
 Esiste
+Ebbene
 Come
 Codifica
 Counter
@@ -7276,6 +7321,7 @@ Ovvero
 Ora
 Oppure
 Osservazioni
+Osservo
 xz
 xX
 xF
@@ -8088,6 +8134,7 @@ TRA
 Trivia
 Trasposta
 Teoremi
+Tale
 GY
 GT
 Ghw
@@ -8216,6 +8263,7 @@ GVZ
 Gerarchia
 Grazie
 Gamma
+Generalizzazione
 Vb
 VD
 VG

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Cambio di base.md",
+                "file": "Algebra e geometria/Ortogonalità/base ortonormale.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:prodo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Cambio di base.md",
+                "file": "Algebra e geometria/Ortogonalità/base ortonormale.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Cambio di base.md",
+                "file": "Algebra e geometria/Ortogonalità/base ortonormale.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Cambio di base.md"
+                "file": "Algebra e geometria/Ortogonalità/base ortonormale.md"
               }
             }
           },
@@ -161,37 +161,38 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "b325402c112b19f2",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Algebra e geometria/Autovalore e Autovettore/Diagonalizzabilità.md",
+    "Algebra e geometria/Ortogonalità/Base ortogonale.md",
+    "Algebra e geometria/Ortogonalità/base ortonormale.md",
+    "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
+    "Algebra e geometria/Ortogonalità/Ortogonalità.md",
+    "Analisi/modulo2/Prodotto scalare Euclideo.md",
+    "Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
     "Algebra e geometria/Cambio di base.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
-    "Algebra e geometria/Autovalore e Autovettore/molteplicità geometrica.md",
-    "Algebra e geometria/Autovalore e Autovettore/molteplicità algebrica.md",
-    "Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
+    "Algebra e geometria/Ortogonalità",
+    "Algebra e geometria/Sistema lineare/Matrici.md",
+    "Algebra e geometria/Determinante/Matrice invertibile.md",
     "Algebra e geometria/Determinante/Matrice identità.md",
+    "Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
+    "Algebra e geometria/Autovalore e Autovettore/molteplicità algebrica.md",
+    "Algebra e geometria/Autovalore e Autovettore/molteplicità geometrica.md",
+    "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
+    "Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
+    "Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+    "Algebra e geometria/Autovalore e Autovettore/Diagonalizzabilità.md",
     "Algebra e geometria/Determinante/Determinante.md",
     "Algebra e geometria/Autovalore e Autovettore",
     "Algebra e geometria/Determinante/Regola di Sarrus.md",
     "Selezione_001.png",
-    "Algebra e geometria/Sistema lineare/Matrici.md",
     "Algebra e geometria/Determinante/Teorema di Binet.md",
     "Algebra e geometria/Determinante/Teorema di Laplace.md",
-    "Algebra e geometria/Determinante/Matrice invertibile.md",
     "Algebra e geometria/Applicazione lineare/Teorema di Rouché-Capelli.md",
     "Algebra e geometria/Determinante",
     "Algebra e geometria/Applicazione lineare/Teorema della dimensione.md",
     "Algebra e geometria/Sistema lineare/Rango righe.md",
     "Algebra e geometria/Applicazione lineare/Forme dei sottospazi.md",
     "Algebra e geometria/Spazio vettoriale/Base Canonica.md",
-    "Algebra e geometria/Applicazione lineare/Controimmagine.md",
-    "Algebra e geometria/Applicazione lineare/teorema di struttura per sistemi lineari.md",
-    "Algebra e geometria/Applicazione lineare/Composizione di applicazioni lineari.md",
-    "Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
-    "Algebra e geometria/Applicazione lineare/Teorema di esistenza e unicità di un'applicazione lineare.md",
-    "Algebra e geometria/Applicazione lineare/Immagine di una funzione.md",
     "Pasted image 20240701173132.png",
     "Pasted image 20240701171936.png",
     "Algebra e geometria/Applicazione lineare",
@@ -206,7 +207,6 @@
     "immagini/Pasted image 20240530174058.png",
     "architettura degli elaboratori/Boole/Porte logiche",
     "immagini/Pasted image 20240604121055.png",
-    "architettura degli elaboratori/VM hack",
     "immagini/Pasted image 20240530182732.png",
     "immagini/Pasted image 20240530184242.png",
     "template/Senza nome.canvas",
