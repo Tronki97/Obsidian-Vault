@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Ortogonalità/base ortonormale.md",
+                "file": "Algebra e geometria/Teorema spettrale.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:prodo",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Ortogonalità/base ortonormale.md",
+                "file": "Algebra e geometria/Teorema spettrale.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Ortogonalità/base ortonormale.md",
+                "file": "Algebra e geometria/Teorema spettrale.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Ortogonalità/base ortonormale.md"
+                "file": "Algebra e geometria/Teorema spettrale.md"
               }
             }
           },
@@ -161,12 +161,23 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "b325402c112b19f2",
   "lastOpenFiles": [
-    "Algebra e geometria/Ortogonalità/Base ortogonale.md",
-    "Algebra e geometria/Ortogonalità/base ortonormale.md",
-    "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
+    "Algebra e geometria/Ortogonalità/Proiezioni ortogonali.md",
+    "Algebra e geometria/Teorema spettrale.md",
+    "Algebra e geometria/Ortogonalità/Algoritmo di Gram-Schmidt.md",
+    "Analisi/modulo2/Norma euclidea.md",
+    "Algebra e geometria/Ortogonalità/Sottospazio ortogonale.md",
+    "Algebra e geometria/Applicazione lineare/Teorema di Rouché-Capelli.md",
+    "Algebra e geometria/Applicazione lineare/Forme dei sottospazi.md",
     "Algebra e geometria/Ortogonalità/Ortogonalità.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazio vettoriale.md",
+    "Algebra e geometria/Spazio vettoriale/Sottospazio generato.md",
+    "Analisi/modulo2/Ortogonalità.md",
+    "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
+    "Algebra e geometria/Ortogonalità/Base ortonormale.md",
+    "Algebra e geometria/Ortogonalità/Base ortogonale.md",
+    "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
     "Analisi/modulo2/Prodotto scalare Euclideo.md",
     "Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
     "Algebra e geometria/Cambio di base.md",
@@ -177,22 +188,11 @@
     "Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
     "Algebra e geometria/Autovalore e Autovettore/molteplicità algebrica.md",
     "Algebra e geometria/Autovalore e Autovettore/molteplicità geometrica.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
     "Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
     "Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
-    "Algebra e geometria/Autovalore e Autovettore/Diagonalizzabilità.md",
-    "Algebra e geometria/Determinante/Determinante.md",
     "Algebra e geometria/Autovalore e Autovettore",
-    "Algebra e geometria/Determinante/Regola di Sarrus.md",
     "Selezione_001.png",
-    "Algebra e geometria/Determinante/Teorema di Binet.md",
-    "Algebra e geometria/Determinante/Teorema di Laplace.md",
-    "Algebra e geometria/Applicazione lineare/Teorema di Rouché-Capelli.md",
     "Algebra e geometria/Determinante",
-    "Algebra e geometria/Applicazione lineare/Teorema della dimensione.md",
-    "Algebra e geometria/Sistema lineare/Rango righe.md",
-    "Algebra e geometria/Applicazione lineare/Forme dei sottospazi.md",
-    "Algebra e geometria/Spazio vettoriale/Base Canonica.md",
     "Pasted image 20240701173132.png",
     "Pasted image 20240701171936.png",
     "Algebra e geometria/Applicazione lineare",

@@ -283,6 +283,12 @@ pone
 pensare
 potevo
 perpendicolari
+perpendicolare
+positivi
+parametriche
+prossimo
+perpendicolarit
+pongo
 realizzare
 rappresentare
 risultato
@@ -557,6 +563,11 @@ rimangono
 rispettive
 rispettivi
 rimane
+raccolgo
+riconferma
+risolvo
+risultanti
+risultata
 la
 le
 lo
@@ -851,6 +862,8 @@ Applico
 Autovalore
 Alcuni
 Autovalori
+Assumo
+Anche
 nel
 necessario
 numero
@@ -999,6 +1012,10 @@ nessun
 nello
 nucleo
 nonostante
+normalizzati
+niente
+noti
+norma
 capire
 codifiche
 capacit
@@ -1400,6 +1417,12 @@ concentro
 cdot
 circ
 cdots
+coordinati
+cartesiane
+cartesiana
+chiedo
+consentire
+criteri
 avendo
 alcune
 arriva
@@ -1681,6 +1704,16 @@ anzi
 applicata
 autospazio
 algebriche
+appartenere
+avvenire
+appartenga
+alcuna
+abbassa
+applicate
+assunzioni
+appena
+arbitrariamente
+assoluto
 un
 una
 usato
@@ -2106,6 +2139,8 @@ direzione
 deforma
 dovrebbe
 ddots
+delta
+dette
 finito
 fanno
 facilmente
@@ -2305,6 +2340,9 @@ funzioner
 flippa
 fissata
 fido
+famiglia
+formano
+fondamentalmente
 in
 il
 invece
@@ -2546,6 +2584,11 @@ invertibile
 inferiore
 identificata
 invertono
+impongo
+identificano
+iniziali
+impostati
+inoltre
 modo
 mentre
 massimo
@@ -2986,6 +3029,8 @@ equivalenze
 exists
 esister
 esteso
+euclideo
+esercizio
 base
 bit
 basano
@@ -3133,6 +3178,7 @@ basi
 banale
 beta
 begin
+bilinearit
 quindi
 questo
 quelle
@@ -3666,6 +3712,10 @@ strumento
 simmetria
 simmetricamente
 scriverebbe
+soddisfa
+step
+sostituisco
+svolgere
 otterremmo
 ottenere
 occupare
@@ -3841,6 +3891,13 @@ osservazione
 opportune
 obbligatoriamente
 ortogonali
+ortogonale
+ortonormale
+ortonormali
+ossia
+ovviamente
+ottengono
+obbiettivo
 va
 valore
 viene
@@ -4032,6 +4089,8 @@ vorrebbe
 vogliamo
 volessi
 vdots
+verificato
+voglio
 troppo
 testimone
 tramite
@@ -4527,6 +4586,7 @@ NdZ
 Ngt
 NWb
 NQzT
+Norma
 Il
 Instruction
 IR
@@ -4806,6 +4866,8 @@ Rispettate
 Restrizione
 Restringendo
 Riassunto
+Riducendola
+Risolvendo
 Si
 Se
 Status
@@ -5200,6 +5262,7 @@ Passaggi
 Parte
 Perci
 Posso
+Punto
 Di
 Data
 Dati
@@ -5323,6 +5386,7 @@ Dobbiamo
 Dato
 Devo
 Dimostro
+Dimensione
 Le
 La
 Lg
@@ -5988,6 +6052,7 @@ QuRi
 Questi
 Questo
 Qed
+Queste
 Formato
 FLIP
 FLOP
@@ -6129,6 +6194,8 @@ Fisso
 Forme
 Fissati
 Formule
+Famiglia
+Fissato
 Word
 WK
 WB
@@ -6947,6 +7014,7 @@ kIR
 kNJ
 ker
 kernel
+kronecker
 jmp
 jy
 jwä
@@ -7322,6 +7390,7 @@ Ora
 Oppure
 Osservazioni
 Osservo
+OSS
 xz
 xX
 xF
@@ -8388,6 +8457,8 @@ Verifico
 VERO
 Viene
 Vale
+Vettore
+Vero
 öG
 öH
 Öi

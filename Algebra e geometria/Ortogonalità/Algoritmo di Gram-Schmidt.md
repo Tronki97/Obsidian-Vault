@@ -1,0 +1,3 @@
+- Data una [[Base]] di uno [[Spazio vettoriale]] $W$, l'algoritmo serve per trovare una [[Base ortogonale]](o [[Base ortonormale||ortonormale]]) di $W$, ossia una base di vettori perpendicolari tra loro (e, se ortonormale, di [[Norma euclidea||norma]] 1) 
+- ## Algoritmo
+	- L'algoritmo si appoggia sulle proprietà delle [[Proiezioni ortogonali]] per ottenere una base ortogonale di uno spazio a partire da un'altra.
