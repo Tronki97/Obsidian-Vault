@@ -295,6 +295,8 @@ proposizioni
 ponendo
 porre
 proj
+passi
+parto
 realizzare
 rappresentare
 risultato
@@ -575,6 +577,8 @@ risolvo
 risultanti
 risultata
 ragionamenti
+ricavando
+resti
 la
 le
 lo
@@ -737,6 +741,7 @@ langle
 luce
 legame
 lavorassero
+leq
 ALU
 AND
 Address
@@ -1442,6 +1447,11 @@ chiesta
 conviene
 cambiarli
 cases
+congruo
+congruenza
+chiama
+congrui
+chiamando
 avendo
 alcune
 arriva
@@ -1737,6 +1747,7 @@ appoggia
 applicano
 appunto
 adattare
+algebrico
 un
 una
 usato
@@ -2167,6 +2178,9 @@ delta
 dette
 determinare
 dipender
+divisore
+divisioni
+divisione
 finito
 fanno
 facilmente
@@ -2618,6 +2632,8 @@ iniziali
 impostati
 inoltre
 indipendenza
+implies
+inverso
 modo
 mentre
 massimo
@@ -2842,6 +2858,7 @@ mantenendo
 mappati
 multiplo
 monomi
+mcd
 esempio
 eccede
 errori
@@ -3062,6 +3079,8 @@ euclideo
 esercizio
 endomorfismo
 equivale
+equivalenza
+eseguirlo
 base
 bit
 basano
@@ -3211,6 +3230,8 @@ beta
 begin
 bilinearit
 bot
+basati
+bez
 quindi
 questo
 quelle
@@ -3375,6 +3396,7 @@ qual
 questione
 quest
 questioni
+quoziente
 se
 sarebbe
 si
@@ -3754,6 +3776,9 @@ suddetto
 stabilire
 selezionare
 sigma
+subset
+sostituendoli
+svolge
 otterremmo
 ottenere
 occupare
@@ -4913,6 +4938,7 @@ Restringendo
 Riassunto
 Riducendola
 Risolvendo
+Riflessiva
 Si
 Se
 Status
@@ -5053,6 +5079,7 @@ Siano
 Significato
 Suppongo
 Sarrus
+Simmetrica
 BINARY
 Bus
 BX
@@ -5309,6 +5336,7 @@ Perci
 Posso
 Punto
 Procedo
+Passi
 Di
 Data
 Dati
@@ -5551,6 +5579,7 @@ Longleftrightarrow
 Laplace
 Legame
 Lineare
+Longleftarrow
 Modulo
 Massimo
 Memory
@@ -5983,6 +6012,7 @@ Casistiche
 Calcolo
 Cio
 Coordinate
+Classi
 Questa
 Quello
 Qz
@@ -6471,6 +6501,7 @@ ze
 zIt
 zQpS
 zti
+zout
 Half
 HACK
 HIT
@@ -8254,6 +8285,7 @@ Trivia
 Trasposta
 Teoremi
 Tale
+Transitiva
 GY
 GT
 Ghw

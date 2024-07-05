@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
+                "file": "Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
+                "file": "Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
+                "file": "Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e geometria/Ortogonalità/Matrice ortogonale.md"
+                "file": "Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md"
               }
             }
           },
@@ -163,11 +163,15 @@
   },
   "active": "b325402c112b19f2",
   "lastOpenFiles": [
+    "Algebra e geometria/Aritmetica modulare/Teorema di Bézout.md",
+    "Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
+    "Algebra e geometria/Aritmetica modulare/Algoritmo di Euclide.md",
+    "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
+    "Algebra e geometria/Aritmetica modulare",
     "Algebra e geometria/Teorema spettrale.md",
     "Algebra e geometria/Sistema lineare/Matrici.md",
     "Algebra e geometria/Ortogonalità/Algoritmo di Gram-Schmidt.md",
     "Algebra e geometria/Simmetria.md",
-    "Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
     "Algebra e geometria/Ortogonalità/Applicazione ortogonale.md",
     "Algebra e geometria/Ortogonalità/Ortogonalità.md",
     "Algebra e geometria/Autovalore e Autovettore/molteplicità algebrica.md",
@@ -186,9 +190,6 @@
     "Algebra e geometria/Spazio vettoriale/Spazio vettoriale.md",
     "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
     "Algebra e geometria/Ortogonalità/Base ortogonale.md",
-    "Algebra e geometria/Ortogonalità/Base ortonormale.md",
-    "Algebra e geometria/Ortogonalità/Sottospazio ortogonale.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
     "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Autovalore e Autovettore",
     "Selezione_001.png",
@@ -205,7 +206,6 @@
     "programmazione/python",
     "programmazione/c++",
     "immagini/Pasted image 20240530174058.png",
-    "architettura degli elaboratori/Boole/Porte logiche",
     "immagini/Pasted image 20240604121055.png",
     "immagini/Pasted image 20240530182732.png",
     "immagini/Pasted image 20240530184242.png",
