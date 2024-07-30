@@ -1,0 +1,120 @@
+- ## vantaggi:
+	offre prestazioni medie ottimali: 
+		insert, search, delete hanno costo $O$(1).
+- ### Def
+	- indichiamo:
+		- _U_: tutte le chiavi possibili;
+			- se U è un insieme piccolo: usiamo tabelle ad indirizzamento diretto.
+				- usa array di dimensione U, la chiave k è memorizzata nella posizione k dell'array (tutte le chiavi sono diverse).
+			- se U è grande: usiamo le tabelle Hash.
+				- si usa sempre un array di dimensione m=$\Theta(K)$ usiamo una funzione hash $h: U\rightarrow[0,..., m-1]$ 
+				- _Problema_: evitare e/o gestire le collisioni hash
+					- non possiamo evitarle, almeno possiamo minimizzarle.
+		- K: insieme di tutte le chiavi utilizzate
+- ## Funzione Hash
+	- ### deve:
+		- poter essere calcolata velocemente
+		- garantire una buona distribuzione delle chiavi su T
+			- ciò garantisce il minimizzarsi del rischio di collisioni.
+	- Gestire le collisioni:
+		- inevitabili
+		- dobbiamo gestirle 
+	- per l'array di dimensione m=$\Theta(K)$
+		- possiamo solo stimare _m_
+		- potrebbe essere necessario ridimensionare T(array)
+		- la scelta di m dipende dalla funzione hash e dal metodo di gestione delle collisioni
+	- ### Def:
+		- deve distribuire le chiavi uniformemente negli indici della tabella T
+		- ogni indice i=h(k) deve essere generato con probabilità 1/m.
+		- se alcuni indici vengono scelti con maggiori probabilità allora avremo più collisioni.
+- #### Assunzioni:
+	- tutte le chiavi sono equiprobabili:
+		- tutte le chiavi hanno la stessa probabilità di essere estratte
+		- non sempre è vero. 
+	- la funzione hash ha tempo costante
+		- nella realtà si utilizzeranno funzioni hash  anche senza costo costante, ma abbastanza veloce.
+	- tutte le chiavi hanno valori interi non-negativi
+		- una chiave k può essere sempre rappresentata con un intero.
+- ### Metodo della divisione:
+	- $h(k)=k\%\ m$
+		- es:$m=12, k=100 \ \ h(k)=\frac{100}{12}= 8 \ \ r= 4 \implies h(k)=4$
+	- ##### vantaggio: molto efficiente.
+	- ##### svantaggi:
+		- problemi con alcuni valori di _m_: 
+			- es: se m=10 allora h(k)= ultima cifra di k.
+			- es:se $m=2^p$ allora h(k) dipende dai p bit meno significativi di k e non da tutti i suoi bit.
+			- sol: scegliere m come numer primo distante da potenze di 2 e 10.
+- ### metodo della moltiplicazione:
+	- $h(k)=\lfloor{m(kC-\lfloor{kC}\rfloor)}\rfloor$ 
+		- sia C una costante 0<C<1
+		- moltiplico $k$ per $C$ e prendo la parte frazionaria moltiplico quest'ultima per $m$ e prendo la parte intera 
+	- #### ES:
+		- $m=12,\ k=101, \ C=0.8 \implies h(k)=9$
+	- #### svantaggi: 
+		- la costante $C$ influenza l'uniformità di $h$ 
+		- C=($\sqrt{5}-1$)/2
+	- #### vantaggi:
+		- il valore di $m$ non è critico.
+- ### Metodo della codifica algebrica:
+	- $h(k)=(k_nx^n+k_{n-1}x^{n-1}+...+k_1x+k_0)$ 
+		- $k_i$ è il i-esimo bit della rappresentazione binaria di k
+		- x è costante.
+	- #### Vantaggi:
+		- dipende da tutti i bit/caratteri della chiave.
+	- #### Svantaggi:
+		- costoso da calcolare
+		- richiede n addizioni e $\frac{n*(n+1)}{2}$ prodotti. con costo: $n= \Theta(log(k))$
+- ### Regola di Horner:
+	- il polinomio 
+		  p(x)=$(k_nx^n+k_{n-1}x^{n-1}+...+k_1x+k_0)$  può essere riscritto come: $$k_0+x(k_1+x(...x(k_{n-1}+k_nx)))$$
+		- permette di abbassare il costo del calcolo della funzione hash bastata sul metodo della _codifica algebrica_
+			- siccome la chiave è solitamente un numero piccolo, assumiamo un costo costante per il metodo della codifica.
+- ## Metodi per risolvere le collisioni :
+	- ### Concatenamento
+		- #### gestire le collisioni con liste concatenate.
+			- _search, insert, delete_: hanno costo pessimo lineare e costo ottimo costante. 
+			  Dipendono dalla lunghezza della lista concatenata più lunga 
+			- #### Il caso medio:
+				- fattore di carico $\alpha=\frac{n}{m}$ 
+				 _n_=numero elementi nella tabella 
+				- _m_=numero di slot della tabella 
+				- ogni slot della tabella ha mediamente $\alpha$ chiavi.
+			- #### TH:
+				- una ricerca senza successo in una tabella gestita con concatenamento ha costo medio$\Theta(1+\alpha)$ 
+					- di base la ricerca di una chiave senza successo ha costo $\alpha$ e si aggiunge il costo della funzione di hashing = 1.
+		- #### ES:
+			- ![[Screenshot 2024-07-30 at 13-21-59 Tabelle Hash - 09 - Tabelle Hash.pdf.png]]
+	- ### Indirizzamento Aperto
+		- Tutte le chiavi sono memorizzate nella stessa tabella.
+		- ogni slot contiene o una chiave o $null$
+		- se uno slot è occupato se ne cerca uno alternativo nella tabella 
+		- #### Analisi costo:
+			- ##### caso pessimo:
+				- _search, insert, delete_ hanno costo $O(m)$
+				- $m=$ dimensione tabella
+				- quindi nel caso pessimo ispezioniamo l'intera tabella
+			- ##### Caso medio:
+				- influenzato dalle [[Strategie di ispezione]] 
+				- Utilizzo il fattore di carico $\alpha=\frac{n}{m}$
+					- $n \le m \implies \alpha < 1$
+				- assumo hashing uniforme semplice
+				- assumo permutazioni degli indici $[0,\dots,m-1]$ determinate dall'ispezione:$$h(k,0),h(k,1),\dots,h(k,m-1)$$ abbiano la stessa probabilità
+				- ###### Risulta che:
+					- ogni chiave $k$ ha un'unica sequenza di ispezione associata
+					- ogni sequenza di ispezioni è ugualmente probabile
+					- questo dipende dalla strategia di ispezione: [[Strategie di ispezione#^408d06||l'ispezione lineare]] non soddisfa questa proprietà, mentre le altre due la soddisfano.
+				- ###### TH(ricerca senza successo): ^d25c3a
+					- con hashing uniforme semplice e sequenze di ispezione equiprobabili, il numero medio di ispezioni di una _ricerca senza successo_ in una tabella hash con indirizzamento aperto con $\alpha<1$ è al massimo$$\frac{1}{(1-a)}$$
+				- ###### TH(ricerca con successo):
+					- con hashing uniforme semplice e sequenze di ispezione equiprobabili, il numero medio di ispezioni di una _ricerca con successo_ in una tabella hash con indirizzamento aperto con $\alpha<1$ è al massimo:$$\frac{1}{\alpha}\ln\left( \frac{1}{1-\alpha} \right)$$
+				- in entrambi i casi se $\alpha$ è costante il tempo di accesso è $O(1)$
+				- se la tabella è piena al _50%_, la ricerca senza successo richiede in media al massimo 2 ispezioni, mentre quella con successo meno di 2.
+				- con la tabella al 90%, la ricerca senza successo richiede al massimo 10 ispezioni mentre quella con successo meno di 3. 
+- ## Commenti finali:
+	- le prestazioni delle tabelle di hash sono collegate al fattore di carico $\alpha$
+	- quindi una buona _strategia_ è mantenere questo valore basso
+		- $\alpha<0.75$ è considerato ottimale
+		- ridimensionare la tabella quando il fattore di carico supera una certa soglia critica
+		- N.B: bisogna ridimensionare la completa ricostruzione della tabella hash poiché gli indici cambiano.
+- ## Link utili
+	- https://www.cs.usfca.edu/~galles/visualization/OpenHash.html

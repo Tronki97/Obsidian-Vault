@@ -60,4 +60,4 @@
 		- 9) il sistema $A \underline{x}=\underline{b}$ ha un'unica soluzione $\forall b \in \mathbb{R}^{n}$(dalla definizione di [[Controimmagine]]) 
 		- 10) $A$ è invertibile 
 		- 11) $det(A)\ne0$
-	- Questo è utilissimo perché: se ci viene chiesto, per esempio, se $f$ è iniettiva basta calcolare il determinante della matrice associata e vedere che sia diverso da 0.
+	- Questo è utilissimo perché: se ci viene chiesto, per esempio, se $f$ è iniettiva basta calcolare il determinante della matrice associata e vedere che sia _diverso_ da 0.

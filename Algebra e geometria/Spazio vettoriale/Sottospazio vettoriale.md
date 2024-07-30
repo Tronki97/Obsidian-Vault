@@ -15,7 +15,7 @@
 - ## ES:
 	- Verifico che: $S=(x, 3x)|x\in \mathbb{R}$ è sottospazio di V($\mathbb{R}^{2}$).
 		- 1)$S\ne\emptyset$. VERO 
-		- 2)presi $u_{1}=(x_{1},3x_{1})$ e $u_{2}=(x_{2},3x_{2})$ $\in S$, la loro somma $u_{1}+u_{2}=(x_{1}+x_{2},3x_{1}+2x_{2})=(x_{1}+x_{2},3(x_{1}+x_{2}))\in S$ per definizione 
+		- 2)presi $u_{1}=(x_{1},3x_{1})$ e $u_{2}=(x_{2},3x_{2})$ $\in S$, la loro somma $u_{1}+u_{2}=(x_{1}+x_{2},3x_{1}+3x_{2})=(x_{1}+x_{2},3(x_{1}+x_{2}))\in S$ per definizione 
 		- 3)preso $u_{1}=(x_{1},3x_{1})$ e $\lambda \in \mathbb{R}$, il prodotto $\lambda u_{1}=(\lambda x_{1},\lambda 3x_{1})=(\lambda x_{1},3(\lambda x_{1}))\in S$ per definizione 
 		Quindi S è un sottospazio di V
 	- Verifico che $S=(x_{1},x_{2},x_{3})|x_{1}+2x_{2}-x_{3}\geq0$ è sottospazio di $\mathbb{R}^{3}$
