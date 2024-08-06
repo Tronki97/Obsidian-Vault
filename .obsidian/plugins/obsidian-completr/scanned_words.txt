@@ -334,6 +334,11 @@ perfetto
 passa
 pre
 post
+pseudocodice
+precede
+predecessor
+permetta
+preserva
 realizzare
 rappresentare
 risultato
@@ -632,6 +637,11 @@ right
 rischio
 ridimensionare
 riscritto
+ritorna
+rimuove
+richiedono
+rotazione
+rimuovo
 la
 le
 lo
@@ -1566,6 +1576,12 @@ collisione
 clustering
 connettono
 compattati
+confrontabile
+correttezza
+copio
+campo
+costruito
+casuali
 avendo
 alcune
 arriva
@@ -1895,6 +1911,12 @@ ausiliaria
 assumendo
 assumo
 aperto
+associati
+avente
+altezze
+aggiornamento
+aggiorna
+azzera
 un
 una
 usato
@@ -2357,6 +2379,8 @@ doppio
 determina
 diventano
 determinate
+destro
+disconnect
 finito
 fanno
 facilmente
@@ -2573,6 +2597,7 @@ fattore
 frazionaria
 figli
 foglie
+figlio
 in
 il
 invece
@@ -2851,6 +2876,8 @@ incontra
 ispezioni
 identiche
 ispezionare
+inserisce
+inserimenti
 modo
 mentre
 massimo
@@ -3099,6 +3126,8 @@ moltiplico
 memorizzate
 mod
 medi
+modifica
+mantiene
 esempio
 eccede
 errori
@@ -3333,6 +3362,9 @@ esprimiamo
 evitarle
 equiprobabili
 estratte
+eliminare
+eliminato
+eventualmente
 base
 bit
 basano
@@ -4068,6 +4100,8 @@ succeso
 strategie
 strategia
 secondario
+supporto
+sinistro
 otterremmo
 ottenere
 occupare
@@ -4264,6 +4298,8 @@ offre
 occupato
 occupate
 ordinati
+organizzazione
+ordinamento
 va
 valore
 viene
@@ -4468,6 +4504,8 @@ visualizzatore
 vantaggi
 vantaggio
 vuota
+vincoli
+visita
 troppo
 testimone
 tramite
@@ -4845,6 +4883,8 @@ guardiamo
 garantire
 gestirle
 gestita
+genitore
+gestisce
 NOT
 NotePad
 Nu
@@ -4979,6 +5019,7 @@ Ngt
 NWb
 NQzT
 Norma
+NIL
 Il
 Instruction
 IR
@@ -5143,6 +5184,8 @@ Interpretazione
 Indichiamo
 Interessante
 Indirizzamento
+Implementazioni
+Insert
 Rappresentazione
 Registri
 Register
@@ -5278,6 +5321,8 @@ Richiesta
 Ricerca
 Regola
 Risulta
+Rotazioni
+Rotazione
 Si
 Se
 Status
@@ -5425,6 +5470,7 @@ Sottraggo
 Sviluppo
 Svantaggi
 Sono
+Search
 BINARY
 Bus
 BX
@@ -5544,6 +5590,10 @@ BZZ
 BVm
 BINARIA
 Binaria
+BFS
+BST
+Bilanciamento
+Balancefactor
 Per
 Program
 PC
@@ -5686,6 +5736,7 @@ Passi
 Passo
 Primario
 Profondit
+Predecessor
 Di
 Data
 Dati
@@ -5813,6 +5864,9 @@ Dimensione
 Dipendono
 Def
 Doppio
+DFS
+Delete
+Disconnect
 Le
 La
 Lg
@@ -6081,6 +6135,8 @@ MLM
 Multiplicit
 Medio
 Metodi
+Mantenere
+MIN
 ES
 Esempi
 Ex
@@ -6213,6 +6269,7 @@ ESEMPI
 Esistenza
 Esiste
 Ebbene
+Entrambe
 Come
 Codifica
 Counter
@@ -7221,6 +7278,7 @@ hsWK
 hxO
 hash
 hashing
+height
 JZ
 JT
 Jd
@@ -8194,6 +8252,7 @@ Utilit
 Uso
 Utilizzando
 Utilizzo
+Update
 Zx
 ZD
 ZRz

@@ -17,13 +17,37 @@
 	- albero perfetto fino al livello h-1
 	- tutti i nodi a livello h sono compattati a sinistra 
 #### Algoritmi di Visita:
-- In profondità:
+- In _profondità_( _DFS_ ):
 	- va a profondità massima di un nodo dello stesso livello poi passa al successivo sempre dello stesso livello((pre, post, in)-ordine)
-- In ampiezza:
+- In _ampiezza_(_BFS_):
 	- ricerca eseguita livello per livello.
 
 
 tutti e tre i metodi di ricerca in profondità per alberi binari hanno come costo $\Theta (n)$ perché non si calcola mai il costo di una struttura dati vuota.
 
-### Implementazione in [[Java]] 
+- ## Implementazione in [[Java]] 
+	- ### pseudocodice:
+	- ### DFS
+		```pseudo
+		function preorder(Node T )
+			 if T != NIL then
+				 visit(T)
+				 preorder(T.left)
+				 preorder(T.right)
+		```
+		- per cambiare il tipo di DFS basta cambiare l'ordine delle chiamate ricorsive.
+	- ### BFS
+	```
+	 function BFS(Tree T)
+		 Q = Queue()
+		 if T.root != NIL then
+			 enqueue(Q,T.root)
+		while Q.size != 0 do
+			 x = dequeue(Q)
+			 visit(x)
+			 if x.left != NIL then
+				 enqueue(Q,x.left)
+			 if x.right != NIL then
+				 enqueue(Q,x.right)
+	```
 
