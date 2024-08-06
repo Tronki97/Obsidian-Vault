@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "df0ff18ca1752cd9",
+            "id": "871d9ce20b9b576a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md"
               }
             }
           },
@@ -178,20 +178,27 @@
   },
   "active": "282d7e8d0b262096",
   "lastOpenFiles": [
-    "Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
+    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica \"union by rank\".md",
+    "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
+    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
     "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
-    "Pasted image 20240801160344.png",
-    "Pasted image 20240801155913.png",
-    "Pasted image 20240801142921.png",
+    "immagini/Pasted image 20240701171936.png",
+    "immagini/Pasted image 20240619185756.png",
+    "immagini/Pasted image 20240730135305.png",
+    "immagini/Pasted image 20240701173132.png",
+    "immagini/Pasted image 20240806183242.png",
+    "immagini/Screenshot 2024-07-30 at 13-21-59 Tabelle Hash - 09 - Tabelle Hash.pdf.png",
+    "immagini/Screenshot 2024-07-30 at 13-44-14 Tabelle Hash - 09 - Tabelle Hash.pdf.png",
+    "immagini/Pasted image 20240806181754.png",
+    "immagini/Pasted image 20240806181700.png",
+    "immagini/Pasted image 20240801160344.png",
+    "Algoritmi e strutture dati/Modulo2/Union Find",
+    "Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
     "Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash/Tabelle Hash.md",
     "Algoritmi e strutture dati/Modulo1/alberi",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash",
-    "Pasted image 20240730140134.png",
-    "Pasted image 20240730135305.png",
-    "Screenshot 2024-07-30 at 13-44-14 Tabelle Hash - 09 - Tabelle Hash.pdf.png",
-    "Screenshot 2024-07-30 at 13-21-59 Tabelle Hash - 09 - Tabelle Hash.pdf.png",
     "Algoritmi e strutture dati/Modulo1/Complessità computazionale.md",
     "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
     "Algoritmi e strutture dati/Modulo1/Notazione asintotica.md",
@@ -211,19 +218,13 @@
     "Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
     "Algebra e geometria/Autovalore e Autovettore/Diagonalizzabilità.md",
     "Algebra e geometria/Autovalore e Autovettore/molteplicità algebrica.md",
-    "Algebra e geometria/Autovalore e Autovettore/molteplicità geometrica.md",
-    "Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
     "Algebra e geometria/Aritmetica modulare",
     "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Autovalore e Autovettore",
-    "Selezione_001.png",
     "Algebra e geometria/Determinante",
-    "Pasted image 20240701173132.png",
-    "Pasted image 20240701171936.png",
     "Algebra e geometria/Applicazione lineare",
     "Algebra e geometria/Sistema lineare",
     "Algebra e geometria/Spazio vettoriale",
-    "Algebra e geometria/LaTeX-cheat-sheet 1.pdf",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
     "Untitled 3.canvas",

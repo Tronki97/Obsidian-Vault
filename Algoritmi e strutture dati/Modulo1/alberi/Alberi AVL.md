@@ -75,13 +75,13 @@
 		- la funzione __leftrotate__ è simmetrica
 - ## Sbilanciamenti
 	- esistono 4 casi di sbilanciamento, che avvengono in seguita a delle operazioni di inserimento o rimozione(il nodo __u__ è il nodo sbialnciato):
-		- Sbilanciamento SS: $\beta(u)=2$ e $\beta(\mathbf{u.left})\ge 0$
+		- Sbilanciamento _SS_: $\beta(u)=2$ e $\beta(\mathbf{u.left})\ge 0$
 			- per risolverlo si esegue una rotazione _destra_ con perno sul nodo __u__ 
-		- Sbilanciamento DD: $\beta(u)=-2$ e $\beta(\mathbf{u.right})\le 0$
+		- Sbilanciamento _DD_: $\beta(u)=-2$ e $\beta(\mathbf{u.right})\le 0$
 			- per risolverlo si esegue una rotazione _sinistra_ con perno sul nodo __u__ 
-		- Sbilanciamento SD:$\beta(u)=2$ e $\beta(\mathbf{u.left})=-1$
+		- Sbilanciamento _SD_:$\beta(u)=2$ e $\beta(\mathbf{u.left})=-1$
 			- per risolverlo ruotiamo a _sinistra_ con perno su __u.left__ così da ottenere uno sbilanciamento SS e si procede ruotando a _destra_ con perno su __u__ 
-		- Sbilanciamento DS:$\beta(u)=-2$ e $\beta(\mathbf{u.right})=-1$
+		- Sbilanciamento _DS_ :$\beta(u)=-2$ e $\beta(\mathbf{u.right})=-1$
 			- per risolverlo ruotiamo a _destra_ con perno su __u.right__ così da ottenere uno sbilanciamento DD e si procede ruotando a _sinistra_ con perno su __u__  
 	- ### Implementazione Bilanciamento:
 	```java
@@ -100,18 +100,18 @@
 	- Costo: $O(1)$
 - ## Inserimento 
 	```java
-	  Node insert(AVL T, key k, Data d)
-		  v=BSTinsert(T, k, d);
-		  p=v.parent;
-		  while (p!=null &&
-		   abs(balancefactor(p))!=2)
-			   updateheight(p);
-			   p=p.parent;
-		  if(p!=null)
-			  Balance(T,p)
-		  return v	
+	Node insert(AVL T, key k, Data d)
+		v=BSTinsert(T, k, d);
+		p=v.parent;
+		while (p!=null &&
+		abs(balancefactor(p))!=2)
+			updateheight(p);
+			p=p.parent;
+		if(p!=null)
+			Balance(T,p)
+		return v	
 	```
-	- __BSTinsert__ costa nel caso medio/ottimo/pessimo $\Theta(\log n)$
+	- [[Alberi binari di ricerca#^f08b19||BSTinsert]] costa nel caso medio/ottimo/pessimo $\Theta(\log n)$
 		- l'altezza dell'albero AVL è $\Theta(\log n)$
 		- l'albero risulta sempre bilanciato
 	- Il ciclo while viene eseguito $O(\log n)$ volte 
@@ -124,9 +124,29 @@
 		- dopo il ribilanciamento non aggiorno le altezze
 		- costo nel caso pessimo $O(1)$
 - ## Delete:
-```
-
-```
+	```java
+		Node delete(AVL T, Key k, Data d)
+			v=BSTdelete(T, k);
+			if(v!=null)
+				p=v.parent
+				while (p!=null)
+					if(abs(balancefactor(p))==2)
+						Balance(T, p);
+					else
+						Update(p);
+					p=p.parent;
+			return v
+	```
+	- si rimuove il nodo come per i [[Alberi binari di ricerca||BST]] che quindi richiede una ricerca
+		- costo pessimo/medio: $\Theta(\log n)$
+	- si riaggiornano le altezze dei sotto-alberi
+		- nel caso peggiore ciò deve essere fatto per tutti i nodi del percorso fino alla radice.
+		- Costo caso pessimo: $\Theta(\log n)$ 
+		- Costo caso medio:$O(\log n)$
+	- Se un nodo risulta sbilanciato, occorre utilizzare la funzione per ribilanciarlo.
+		- facendo il delete possiamo avere più di un nodo sbilanciato
+		- Costo caso pessimo: $\Theta(\log n)$ 
+		- Costo caso medio:$O(\log n)$
 - ## Link utili 
 	- visualizzatore albero AVL:
 		- https://www.cs.usfca.edu/~galles/visualization/AVLtree.html

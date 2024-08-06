@@ -165,7 +165,7 @@ Da questo deduciamo che il caso medio $\in O(log_2n)$
 			- per alcuni algoritmi una data operazione può essere molto costosa in alcune situazioni e molto efficiente in altre
 				- l'analisi del caso pessimo può essere troppo pessimistica
 				- l'analisi del caso medio necessità di assunzioni probabilistiche difficili da formulare
-				- esempio [[Strutture union-find|strutture union-find]]
+				- esempio [[Strutture Union-Find|strutture union-find]]
 			- in genere il costo ammortizzato funziona bene con [[Puntatori e strutture dati Dinamiche|strutture dati]] 
 		- esempio: algoritmo che implementa un contatore binario
 			- ci chiediamo complessivamente quanto costano $n$ chiamate dell'algoritmo

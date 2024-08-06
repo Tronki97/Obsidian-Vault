@@ -17,7 +17,7 @@
 			- `Successor(T)`: simmetrico a _predecessor_
 - ## Implementazioni:
 	- ### Search:
-		```
+		```java
 		function search(BST T, Key k) → Node
 			tmp = T.root
 			while tmp != NIL do
@@ -34,8 +34,8 @@
 		- _Costo caso pessimo_: $\Theta(h)$
 			- $h =$ l'altezza dell'albero
 			- N.B: $h=O(n)$ , $n=$ numero nodi in $T$ 
-	- ### Insert:
-	```
+	- ### Insert: ^f08b19
+	```java
 	function insert(BST T, Key k, Data d) 
 		node=Node(k,d), prev=NIL, curr=T.root
 		while curr̸ = NIL do  ▷Search position
@@ -59,7 +59,7 @@
 		- Ricerca posizione: $O(1)$
 		- inserire il nodo: $O(1)$
 	- ### MAX E MIN:
-	```
+	```java
 		function max(Node T) → Node
 			while T != NIL && T.right != NIL do
 				T=T.right
@@ -77,7 +77,7 @@
 		- _caso ottimo_: $O(1)$ ($T$ non ha figlio destro o sinistro)
 		- _caso pessimo_: $\Theta(h)$ 
 	- ### Predecessor:
-	```
+	```java
 		function predecessor(Node T) → Node
 			if T == NIL then
 			  return NIL
@@ -111,7 +111,7 @@
 				- il nodo __u__ ha al massimo un figlio(?)  
 				- rimuovo il nodo __u__ (caso 1 o 2)
 			- La correttezza dell'albero viene mantenuta
-		```
+		```java
 		function delete(BST T ,Key k)
 			v=search(T,k)
 			if v!= NIL then
@@ -127,7 +127,7 @@
 		- la funzione _disconnect_ gestisce solo i casi 1 e 2
 			- eventualmente aggiorna la radice dell'albero.
 	- ### Disconnect
-	```
+	```java
 		function disconnect(BST T, Node v)
 			p = v.parent
 			if v.right == NIL then c = v.left
