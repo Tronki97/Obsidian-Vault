@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "871d9ce20b9b576a",
+            "id": "282d7e8d0b262096",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,20 +21,19 @@
             }
           },
           {
-            "id": "282d7e8d0b262096",
+            "id": "da8ac19736214c98",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
+                "file": "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md"
               }
             }
           },
@@ -178,8 +177,13 @@
   },
   "active": "282d7e8d0b262096",
   "lastOpenFiles": [
-    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica \"union by rank\".md",
+    "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
+    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
+    "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",
+    "Algoritmi e strutture dati/Modulo1/Complessità computazionale.md",
     "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
+    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche",
+    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica \"union by rank\".md",
     "Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
     "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
     "immagini/Pasted image 20240701171936.png",
@@ -199,8 +203,6 @@
     "Algoritmi e strutture dati/Modulo1/alberi",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash",
-    "Algoritmi e strutture dati/Modulo1/Complessità computazionale.md",
-    "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
     "Algoritmi e strutture dati/Modulo1/Notazione asintotica.md",
     "Algebra e geometria/Simmetria.md",
     "Untitled.canvas",
@@ -216,15 +218,12 @@
     "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
     "Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
     "Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
-    "Algebra e geometria/Autovalore e Autovettore/Diagonalizzabilità.md",
-    "Algebra e geometria/Autovalore e Autovettore/molteplicità algebrica.md",
     "Algebra e geometria/Aritmetica modulare",
     "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Autovalore e Autovettore",
     "Algebra e geometria/Determinante",
     "Algebra e geometria/Applicazione lineare",
     "Algebra e geometria/Sistema lineare",
-    "Algebra e geometria/Spazio vettoriale",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
     "Untitled 3.canvas",

@@ -373,6 +373,9 @@ pNO
 pRw
 pDN
 precedenza
+preliminari
+positiva
+piolo
 realizzare
 rappresentare
 risultato
@@ -711,6 +714,11 @@ rws
 rcP
 rAJ
 rUj
+ricalcola
+return
+risultante
+ricorsione
+ricorrenze
 la
 le
 lo
@@ -1761,6 +1769,12 @@ cim
 coF
 chmp
 cIb
+costruire
+cavallo
+combina
+cerchi
+cifre
+calcolato
 avendo
 alcune
 arriva
@@ -2126,6 +2140,8 @@ aCS
 aWU
 ape
 alti
+annidato
+arbitraria
 un
 una
 usato
@@ -2642,6 +2658,8 @@ dsN
 dovessi
 darebbero
 diminuire
+dividi
+divido
 finito
 fanno
 facilmente
@@ -2892,6 +2910,7 @@ fuj
 fCuI
 facessi
 facenti
+finisce
 in
 il
 invece
@@ -3207,6 +3226,11 @@ iIg
 iZXXP
 ift
 inefficienti
+individuare
+impera
+inizia
+iterativamente
+impilare
 modo
 mentre
 massimo
@@ -3491,6 +3515,11 @@ mrw
 mLk
 mRj
 mRW
+met
+massimi
+migliorato
+muovendo
+migliora
 esempio
 eccede
 errori
@@ -3761,6 +3790,7 @@ eCgiK
 eAy
 eKm
 eKl
+else
 base
 bit
 basano
@@ -4131,6 +4161,7 @@ qqv
 qdc
 qyia
 qBO
+qui
 se
 sarebbe
 si
@@ -4578,6 +4609,13 @@ sUI
 sfa
 syB
 slH
+scendendo
+separate
+sostituita
+simboliche
+sostituiamo
+sostituisce
+spostamenti
 otterremmo
 ottenere
 occupare
@@ -5274,6 +5312,8 @@ tGm
 tfLO
 tht
 tRm
+togliendo
+times
 grandi
 gli
 grande
@@ -5630,6 +5670,7 @@ Nyi
 NzU
 NCMs
 NLu
+Nozioni
 Il
 Instruction
 IR
@@ -5826,6 +5867,9 @@ Ipr
 IAe
 IqB
 ITW
+Impera
+Impilare
+Idea
 Rappresentazione
 Registri
 Register
@@ -6003,6 +6047,7 @@ RhDP
 RfC
 RbC
 Rrb
+Ricapitolando
 Si
 Se
 Status
@@ -6182,6 +6227,8 @@ SHKAe
 SOto
 SwL
 SKZ
+Sol
+Scopo
 BINARY
 Bus
 BX
@@ -6664,6 +6711,9 @@ Dvh
 DIm
 DYg
 DJO
+Divide
+Domanda
+Dividono
 Le
 La
 Lg
@@ -7143,6 +7193,7 @@ EIS
 EPE
 Erss
 EuY
+Equazioni
 Come
 Codifica
 Counter
@@ -7330,6 +7381,7 @@ CmD
 CeT
 Cex
 CWc
+Combina
 Questa
 Quello
 Qz
@@ -8092,6 +8144,7 @@ Hxq
 HEE
 HAJ
 HHmgH
+Hanoi
 XOR
 Xm
 Xo
@@ -10126,6 +10179,7 @@ Tau
 TEEE
 TSt
 TNR
+Torre
 GY
 GT
 Ghw
@@ -10444,6 +10498,8 @@ VQd
 VLu
 ViZ
 VGV
+Versione
+Voglio
 öG
 öH
 özw

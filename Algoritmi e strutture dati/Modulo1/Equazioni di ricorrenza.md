@@ -23,7 +23,7 @@
 		- Dividono un problema di dimensione $n$ in $a\geq 1$ sottoproblemi
 		- tutti i sottoproblemi hanno dimensione $\frac{n}{b}$, con $b>1$
 		- il costo di ogni chiamata ricorsiva è dato da $f(n)$
-	- ### Teorema(Master Theorem):
+	- ### Teorema(Master Theorem): ^02fe9e
 		- si considera la seguente equazione di ricorrenza$$T(n)\begin{cases}d&n=1\\aT\left( \frac{n}{b} \right)+f(n)&n>1\end{cases}$$con $a\geq 1$ e $b>1$ , d _costante_ e $f(n)$ funzione di costo.
 			- 1) $f(n)=O(n^{\log_{b}a-\epsilon})$ per qualche $\epsilon>0\implies T(n)=\Theta(n^{\log_{b}a})$
 			- 2)$f(n)=\Theta(n^{\log_{b}a})\implies T(n)=\Theta(n^{\log_{b}a}\log n)$
