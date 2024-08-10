@@ -1,4 +1,4 @@
-- Quando applicare:
+- ## Quando applicare:
 	- Sotto-struttura ottima:
 		- deve essere possibile combinare le soluzioni dei sotto-problemi per trovare la soluzione di un problema più grande
 	- sotto-problemi ripetuti:

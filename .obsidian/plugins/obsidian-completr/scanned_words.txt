@@ -376,6 +376,8 @@ precedenza
 preliminari
 positiva
 piolo
+piccoli
+pixel
 realizzare
 rappresentare
 risultato
@@ -719,6 +721,9 @@ return
 risultante
 ricorsione
 ricorrenze
+ripetuti
+ripetiamo
+ritroso
 la
 le
 lo
@@ -926,6 +931,7 @@ lfD
 lrD
 lxW
 ldC
+lasciare
 ALU
 AND
 Address
@@ -1775,6 +1781,12 @@ combina
 cerchi
 cifre
 calcolato
+combinare
+compare
+capienza
+cercando
+cucitura
+correzione
 avendo
 alcune
 arriva
@@ -2142,6 +2154,9 @@ ape
 alti
 annidato
 arbitraria
+andando
+assegno
+ammessi
 un
 una
 usato
@@ -2354,6 +2369,7 @@ uIe
 udaXbBw
 uLI
 urm
+utilizzato
 decremento
 del
 di
@@ -2660,6 +2676,12 @@ darebbero
 diminuire
 dividi
 divido
+diminuendo
+disposizione
+determino
+desiderata
+distance
+dinamica
 finito
 fanno
 facilmente
@@ -3231,6 +3253,9 @@ impera
 inizia
 iterativamente
 impilare
+iterative
+immaginando
+intende
 modo
 mentre
 massimo
@@ -3520,6 +3545,8 @@ massimi
 migliorato
 muovendo
 migliora
+massimizziamo
+misspelling
 esempio
 eccede
 errori
@@ -3791,6 +3818,8 @@ eAy
 eKm
 eKl
 else
+edit
+editing
 base
 bit
 basano
@@ -3980,6 +4009,8 @@ bjq
 bFw
 bfN
 bjd
+bottom
+battitura
 quindi
 questo
 quelle
@@ -4616,6 +4647,10 @@ simboliche
 sostituiamo
 sostituisce
 spostamenti
+speziamo
+scenari
+soggetti
+scorretta
 otterremmo
 ottenere
 occupare
@@ -4841,6 +4876,8 @@ odc
 opP
 omH
 oXd
+oggetti
+ottenibile
 va
 valore
 viene
@@ -5076,6 +5113,9 @@ vjG
 vmB
 vCP
 vRP
+verticale
+val
+vado
 troppo
 testimone
 tramite
@@ -5510,6 +5550,7 @@ gQQ
 gyr
 gDt
 gxq
+guardo
 NOT
 NotePad
 Nu
@@ -6048,6 +6089,7 @@ RfC
 RbC
 Rrb
 Ricapitolando
+Riassumendo
 Si
 Se
 Status
@@ -6229,6 +6271,8 @@ SwL
 SKZ
 Sol
 Scopo
+Sotto
+Seam
 BINARY
 Bus
 BX
@@ -6858,6 +6902,7 @@ LQe
 Lab
 LPZ
 LMn
+Levenshtein
 Modulo
 Massimo
 Memory
@@ -7382,6 +7427,7 @@ CeT
 Cex
 CWc
 Combina
+Carving
 Questa
 Quello
 Qz
@@ -7996,6 +8042,7 @@ zeJ
 zxyt
 zuX
 zOJ
+zaino
 Half
 HACK
 HIT
@@ -9595,6 +9642,7 @@ UwA
 UHDZ
 UVw
 UTq
+Usare
 Zx
 ZD
 ZRz

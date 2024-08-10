@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md"
               }
             }
           },
@@ -161,7 +161,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -172,13 +171,14 @@
       "audio-recorder:Start/stop recording": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "copilot:Copilot Chat": false
+      "copilot:Copilot Chat": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
   "active": "282d7e8d0b262096",
   "lastOpenFiles": [
-    "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
+    "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
     "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",
     "Algoritmi e strutture dati/Modulo1/Complessità computazionale.md",
     "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
