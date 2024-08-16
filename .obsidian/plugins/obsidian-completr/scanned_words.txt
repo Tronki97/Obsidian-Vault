@@ -378,6 +378,7 @@ positiva
 piolo
 piccoli
 pixel
+principio
 realizzare
 rappresentare
 risultato
@@ -724,6 +725,7 @@ ricorrenze
 ripetuti
 ripetiamo
 ritroso
+riduce
 la
 le
 lo
@@ -1787,6 +1789,9 @@ capienza
 cercando
 cucitura
 correzione
+canonici
+corto
+car
 avendo
 alcune
 arriva
@@ -2159,6 +2164,7 @@ assegno
 ammessi
 alpha
 approx
+alfabeto
 un
 una
 usato
@@ -2684,6 +2690,7 @@ determino
 desiderata
 distance
 dinamica
+def
 finito
 fanno
 facilmente
@@ -2935,6 +2942,9 @@ fCuI
 facessi
 facenti
 finisce
+fallire
+fissa
+frequnze
 in
 il
 invece
@@ -3549,6 +3559,10 @@ muovendo
 migliora
 massimizziamo
 misspelling
+monetari
+minimizzare
+messo
+minimizza
 esempio
 eccede
 errori
@@ -3822,6 +3836,7 @@ eKl
 else
 edit
 editing
+esecutore
 base
 bit
 basano
@@ -4653,6 +4668,8 @@ speziamo
 scenari
 soggetti
 scorretta
+strettamente
+sequnenze
 otterremmo
 ottenere
 occupare
@@ -4880,6 +4897,8 @@ omH
 oXd
 oggetti
 ottenibile
+ottimalit
+osservo
 va
 valore
 viene
@@ -5356,6 +5375,7 @@ tht
 tRm
 togliendo
 times
+tagli
 grandi
 gli
 grande
@@ -5553,6 +5573,7 @@ gyr
 gDt
 gxq
 guardo
+greedy
 NOT
 NotePad
 Nu
@@ -7430,6 +7451,7 @@ Cex
 CWc
 Combina
 Carving
+Codici
 Questa
 Quello
 Qz
@@ -9224,6 +9246,7 @@ OpO
 ORrZ
 Oni
 Oig
+Osservazione
 xz
 xX
 xF
