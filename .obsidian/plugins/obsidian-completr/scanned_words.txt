@@ -2157,6 +2157,8 @@ arbitraria
 andando
 assegno
 ammessi
+alpha
+approx
 un
 una
 usato

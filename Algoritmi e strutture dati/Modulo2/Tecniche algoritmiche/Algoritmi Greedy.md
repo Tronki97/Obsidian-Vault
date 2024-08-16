@@ -1,18 +1,50 @@
 - ## Introduzione:
-	- quando applicare:
+	- ### Quando applicare:
 		- fra le molte scelte possibili, si può trovarne facilmente una che porti alla soluzione ottima.
 		- quando il problema ha sotto-struttura ottima
-	- ES: 
-		- Problema del resto:
-			- input: intero positivo R che rappresenta importo da erogare.
-			- output: minimo numero intero di monete necessarie per dare il resto di R centesimi di euro, usando solo monete centesimi.
-		- es: R=78,  5 pezzi: 50+20+5+2+1
-	- ES:
-		- problema del shortest-job first:
-			- nel quale viene eseguito per prima la task che impiega di meno a completarsi per così ridurre il tempo medio di attesa.
-				- Una soluzione sarebbe quella di ordinare l'array contenente le task in maniera crescente.
-				- 
-				  
-	- ES:
-		- Problema della compressione:
-			- rappresentare sequenze di caratteri, secondo una certa codifica(ovvero una funzione matematica; $f(c)=x$). dove "c" è il carattere e "x" è la sua rappresentazione binaria.
+	- ### Esempi: 
+		- #### Problema del resto:
+			- _input_: intero positivo R che rappresenta importo da erogare.
+			- _output_: minimo numero intero di monete necessarie per dare il resto di R centesimi di euro, usando solo monete centesimi.
+			- _Es_: R=78,  5 pezzi: 50+20+5+2+1
+			- ##### implementazione:
+				- ![[Pasted image 20240816075952.png]]
+				- ###### Osservazione:
+					- i sistemi monetari per cui funziona l'algoritmo sono _quelli canonici_
+					- l'algoritmo infatti può fallire con sistemi del tipo:
+						- erogare 6 con tagli 4,3,2(greedy farà: 4+1+1, ottimo: 3+3).
+		- #### problema del shortest-job first:
+			- ##### def:
+				- 1 esecutore, n job $p_{1}, p_{n}, \dots, p_{n}$ 
+				- ogni job $p_{i}$ ha un tempo di esecuzione $t[i]$
+				- _minimizzare_ il tempo medio di attesa.
+				- il principio è che venga eseguita per prima la task che impiega di meno a completarsi per così ridurre il tempo medio di attesa.
+					- Una soluzione sarebbe quella di ordinare l'array contenente le task in maniera crescente.
+					  
+				- l'algoritmo esegue $n$ passi.
+			- ###### Dimostrazione di ottimalità:
+				- considerando un ordinamento in cui un _job_ "lungo" A viene messo prima di uno "corto" B
+				- x, y, z sono sequenze di altri job
+				- ![[Pasted image 20240816081508.png]]
+				- _osservo che_:
+					- Il tempo di attesa dei job in x e z non cambia.
+					- Il tempo di attesa di B nella seconda soluzione è uguale al tempo di attesa di A nella prima 
+					- Il tempo di attesa di A nella seconda soluzione è _strettamente minore_ al tempo di attesa di B nella prima
+					- Di conseguenza il tempo di attesa di y _si riduce_
+	- #### Problema della compressione:
+		- rappresentare sequenze di caratteri, secondo una certa codifica(ovvero una funzione matematica; $f(c)=x$). dove "c" è il carattere e "x" è la sua rappresentazione binaria.
+		- ##### Problema: 
+			- data la sequnenze $c_1...c_{n}$ definire una funzione di codifica $f$ che minimizza la lunghezza della codifica $f(c_1)...f(c_{n})$ 
+		- ##### Codici a lunghezza fissa:
+			- suppongo di avere un file di $n$ caratteri
+				- possibili car.: 'a', 'b',    'c',     'd'   'e',   'f'
+				- frequnze: 45%, 13%, 12%, 16%, 9%, 5%. 
+			- Codifica tramite ASCII (8 bit per carattere)
+				- dimensione totale $8n$ bit.
+			- Codifica basata sull'alfabeto( 3 bit per carattere)
+				- codifica: 000   001   010   011   100   101
+				- Dimensione totale: $3n$ bit
+			- __N.B: si può fare di meglio__ 
+		- ##### Codici di lunghezza variabile 
+			- caratteri: 'a',   'b',     'c',     'e',     'f'
+			- codifica:  0,   101,   100,   111,   1101,   1100

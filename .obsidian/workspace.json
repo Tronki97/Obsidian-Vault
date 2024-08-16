@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -99,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md"
               }
             }
           },
@@ -177,7 +178,10 @@
   },
   "active": "282d7e8d0b262096",
   "lastOpenFiles": [
+    "Pasted image 20240816081508.png",
+    "Pasted image 20240816075952.png",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
+    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
     "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
     "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",
     "Algoritmi e strutture dati/Modulo1/Complessità computazionale.md",
@@ -195,7 +199,6 @@
     "immagini/Screenshot 2024-07-30 at 13-44-14 Tabelle Hash - 09 - Tabelle Hash.pdf.png",
     "immagini/Pasted image 20240806181754.png",
     "immagini/Pasted image 20240806181700.png",
-    "immagini/Pasted image 20240801160344.png",
     "Algoritmi e strutture dati/Modulo2/Union Find",
     "Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
     "Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
@@ -216,8 +219,6 @@
     "Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
     "Algebra e geometria/Spazio vettoriale/Dimensione.md",
     "Algebra e geometria/Autovalore e Autovettore/Autospazio.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
-    "Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
     "Algebra e geometria/Aritmetica modulare",
     "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Autovalore e Autovettore",
