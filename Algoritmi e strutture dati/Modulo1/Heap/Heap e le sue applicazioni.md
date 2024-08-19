@@ -65,4 +65,8 @@
 			- findMax ha costo costante.
 			- deleteMax ha costo $O(\log c)$ 
 	- ### Costo computazionale:
-		- $O(\mathbf{S.length})$
+		- $O(\mathbf{S.length})$ per l'heapify iniziale.
+		- ogni giro del ciclo for costa: $O(\log c)$ (con c<n)
+		- Totale:
+			- $$T(n)=O(\mathbf{s.length})+O\left( \sum_{c=\mathbf{s.length}}^{1} \log c\right)=O(n\log n)$$
+			- $n=\mathbf{S.length}$ 

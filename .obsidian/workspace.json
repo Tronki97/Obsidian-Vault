@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
+                "file": "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -62,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "master",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,8 +79,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -100,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
+                "file": "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
+                "file": "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md"
+                "file": "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md"
               }
             }
           },
@@ -178,9 +177,11 @@
   },
   "active": "282d7e8d0b262096",
   "lastOpenFiles": [
+    "Pasted image 20240819172231.png",
+    "Pasted image 20240819172121.png",
+    "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Pasted image 20240819170657.png",
     "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
-    "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Pasted image 20240819165529.png",
     "Pasted image 20240819165123.png",
     "Pasted image 20240819164934.png",
@@ -192,8 +193,6 @@
     "Pasted image 20240816152009.png",
     "Pasted image 20240816151911.png",
     "Pasted image 20240816150933.png",
-    "Pasted image 20240816150739.png",
-    "Pasted image 20240816081508.png",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
     "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",

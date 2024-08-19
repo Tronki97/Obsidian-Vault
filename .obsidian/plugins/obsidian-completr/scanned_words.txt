@@ -380,6 +380,10 @@ piccoli
 pixel
 principio
 programmare
+priorit
+pacchetti
+processati
+processare
 realizzare
 rappresentare
 risultato
@@ -730,6 +734,9 @@ riduce
 rappresentati
 rimpiazzare
 ripristinarne
+routing
+reti
+rimpiazza
 la
 le
 lo
@@ -939,6 +946,7 @@ lxW
 ldC
 lasciare
 length
+link
 ALU
 AND
 Address
@@ -1108,6 +1116,8 @@ AXr
 AjL
 Aggiungere
 Array
+Ausiliarie
+Altezza
 nel
 necessario
 numero
@@ -1293,6 +1303,7 @@ nGE
 nnw
 naH
 nuovamente
+nuove
 capire
 codifiche
 capacit
@@ -1802,6 +1813,9 @@ corto
 car
 combinata
 combinato
+comunicazione
+coda
+cancellato
 avendo
 alcune
 arriva
@@ -2177,6 +2191,10 @@ approx
 alfabeto
 arrotondamento
 arrivano
+audio
+ario
+accatastate
+arrotondando
 un
 una
 usato
@@ -2706,6 +2724,9 @@ def
 difetto
 deleteMax
 diventer
+discapito
+deleteMin
+decreaseKey
 finito
 fanno
 facilmente
@@ -2965,6 +2986,7 @@ frequenza
 floor
 findMax
 fixHeap
+findMin
 in
 il
 invece
@@ -3290,6 +3312,7 @@ immaginando
 intende
 individua
 implementiamo
+increaseKey
 modo
 mentre
 massimo
@@ -3590,6 +3613,9 @@ mantenendola
 min
 mantenendone
 masterTheorem
+mantenuti
+muoviAlto
+modellato
 esempio
 eccede
 errori
@@ -3868,6 +3894,7 @@ etichettato
 etichettano
 efficienti
 estrarre
+elem
 base
 bit
 basano
@@ -4059,6 +4086,7 @@ bfN
 bjd
 bottom
 battitura
+binomiali
 quindi
 questo
 quelle
@@ -4705,6 +4733,8 @@ sommata
 suluzione
 super
 scambi
+spostarla
+son
 otterremmo
 ottenere
 occupare
@@ -5172,6 +5202,9 @@ vRP
 verticale
 val
 vado
+videoconferenze
+video
+verranno
 troppo
 testimone
 tramite
@@ -5412,6 +5445,7 @@ togliendo
 times
 tagli
 termine
+trattati
 grandi
 gli
 grande
@@ -6336,6 +6370,7 @@ Sol
 Scopo
 Sotto
 Seam
+Strutture
 BINARY
 Bus
 BX
@@ -7146,6 +7181,8 @@ MkDe
 MsHe
 MSB
 Math
+MAGGIORE
+MINORE
 ES
 Esempi
 Ex
@@ -9721,6 +9758,7 @@ UHDZ
 UVw
 UTq
 Usare
+Utile
 Zx
 ZD
 ZRz
