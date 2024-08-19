@@ -28,7 +28,7 @@
 			- 1) $f(n)=O(n^{\log_{b}a-\epsilon})$ per qualche $\epsilon>0\implies T(n)=\Theta(n^{\log_{b}a})$
 			- 2)$f(n)=\Theta(n^{\log_{b}a})\implies T(n)=\Theta(n^{\log_{b}a}\log n)$
 			- 3) se $f(n)=\Omega(n^{\log_{b} a+\epsilon})$ per qualche $\epsilon>0$, e se $a\cdot f\left( \frac{n}{b} \right)\leq c\cdot f(n)$ per qualche costante $c<1$ e per tutti gli $n$ sufficientemente grandi allora $T(n)=\Theta(f(n))$ 
-- ## Master Theorem (versione semplificata)
+- ## Master Theorem (versione semplificata) ^65d0b1
 	- ### Teorema:
 		- $$T(n)\begin{cases}d&n=1\\aT\left( \frac{n}{b} \right)+cn^\beta&n>1\end{cases}$$
 		  con $a\geq 1$ e $b>1$ , c,d _costanti_ e sia $\alpha=\log_{b}a=\frac{{\log a}}{\log b}$ allora

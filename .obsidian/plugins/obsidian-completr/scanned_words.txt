@@ -379,6 +379,7 @@ piolo
 piccoli
 pixel
 principio
+programmare
 realizzare
 rappresentare
 risultato
@@ -726,6 +727,9 @@ ripetuti
 ripetiamo
 ritroso
 riduce
+rappresentati
+rimpiazzare
+ripristinarne
 la
 le
 lo
@@ -934,6 +938,7 @@ lrD
 lxW
 ldC
 lasciare
+length
 ALU
 AND
 Address
@@ -1101,6 +1106,8 @@ AIN
 APa
 AXr
 AjL
+Aggiungere
+Array
 nel
 necessario
 numero
@@ -1285,6 +1292,7 @@ nLg
 nGE
 nnw
 naH
+nuovamente
 capire
 codifiche
 capacit
@@ -1792,6 +1800,8 @@ correzione
 canonici
 corto
 car
+combinata
+combinato
 avendo
 alcune
 arriva
@@ -2165,6 +2175,8 @@ ammessi
 alpha
 approx
 alfabeto
+arrotondamento
+arrivano
 un
 una
 usato
@@ -2691,6 +2703,9 @@ desiderata
 distance
 dinamica
 def
+difetto
+deleteMax
+diventer
 finito
 fanno
 facilmente
@@ -2945,6 +2960,11 @@ finisce
 fallire
 fissa
 frequnze
+frequenze
+frequenza
+floor
+findMax
+fixHeap
 in
 il
 invece
@@ -3268,6 +3288,8 @@ impilare
 iterative
 immaginando
 intende
+individua
+implementiamo
 modo
 mentre
 massimo
@@ -3563,6 +3585,11 @@ monetari
 minimizzare
 messo
 minimizza
+minori
+mantenendola
+min
+mantenendone
+masterTheorem
 esempio
 eccede
 errori
@@ -3837,6 +3864,10 @@ else
 edit
 editing
 esecutore
+etichettato
+etichettano
+efficienti
+estrarre
 base
 bit
 basano
@@ -4670,6 +4701,10 @@ soggetti
 scorretta
 strettamente
 sequnenze
+sommata
+suluzione
+super
+scambi
 otterremmo
 ottenere
 occupare
@@ -5376,6 +5411,7 @@ tRm
 togliendo
 times
 tagli
+termine
 grandi
 gli
 grande
@@ -6113,6 +6149,10 @@ RbC
 Rrb
 Ricapitolando
 Riassumendo
+Ripetere
+Right
+Ripristina
+Rimuove
 Si
 Se
 Status
@@ -6447,6 +6487,7 @@ BxK
 Bjc
 BAe
 BTq
+Binari
 Per
 Program
 PC
@@ -6623,6 +6664,8 @@ PPy
 PXX
 PuHE
 PgF
+Parent
+Procedimento
 Di
 Data
 Dati
@@ -6926,6 +6969,7 @@ Lab
 LPZ
 LMn
 Levenshtein
+Left
 Modulo
 Massimo
 Memory
@@ -7101,6 +7145,7 @@ MtD
 MkDe
 MsHe
 MSB
+Math
 ES
 Esempi
 Ex
@@ -7452,6 +7497,9 @@ CWc
 Combina
 Carving
 Codici
+Collegarli
+Contiene
+Costruisce
 Questa
 Quello
 Qz
@@ -8216,6 +8264,8 @@ HEE
 HAJ
 HHmgH
 Hanoi
+Heap
+Heapsort
 XOR
 Xm
 Xo
@@ -8490,6 +8540,9 @@ hnnN
 hzy
 hqq
 hHf
+heap
+heapsize
+heapify
 JZ
 JT
 Jd
@@ -10253,6 +10306,7 @@ TEEE
 TSt
 TNR
 Torre
+TreeNode
 GY
 GT
 Ghw
