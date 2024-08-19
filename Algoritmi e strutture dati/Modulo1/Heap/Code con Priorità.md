@@ -28,24 +28,50 @@
 		- _Costo_: $O(h)$ con h altezza dell'albero. 
 	- ### muoviBasso:
 		- ![[Pasted image 20240819172231.png]]
-- #### Implementazioni
-	- d-heap:
+- ## Implementazioni
+	- ### D-heap 
 		- modifica della struttura [[Heap e le sue applicazioni#^2a5e2b||max-heap]] usata nell'[[Heap e le sue applicazioni#^247187||heapsort]]
-	- Heap binomiali e Heap di Fibonacci
-		- (non verranno trattati)
-
-- #### D-heap 
-	- modellato su albero d-ario
-		- altezza h, perfetto fino alla profondità h-1 e al livello h le foglie sono accatastate a sinistra.
-		- ogni nodo v contiene una _chiave(v)_ e un elemento _elem(v)_
-		- ogni nodo diverso dalla radice ha chiave $\geq$ rispetto alla sua radice.
-	- ##### Altezza di un d-heap 
-		- un d-heap son n nodi ha altezza $O(log_{d}\ n)$ 
-	- memorizzazione in un Array
-		- l'ultimo figlio di un nodo in posizione i è in $(i*d)+1$ 
-		- il primo figlio di un nodo in posizione i è in $((i-1)*d)+2$ (d-1 posizioni prima dell'ultimo figlio)
-		- il padre di un nodo in posizione i è in $\frac{i-1}{d}$ arrotondando per eccesso 
-
-
+		- modellato su albero d-ario
+			- _altezza h_, perfetto fino alla profondità h-1 e al livello h le foglie sono accatastate a sinistra.
+			- ogni nodo v contiene una _chiave(v)_ e un elemento _elem(v)_
+			- ogni nodo diverso dalla radice ha chiave $\geq$ rispetto alla sua radice.
+		- #### Altezza di un d-heap 
+			- un d-heap con _n_ nodi ha altezza $O(log_{d}\ n)$
+			- ##### DIM:
+				- Sia _h_ l'altezza di un d-heap con _n_ nodi 
+				- il d-heap è perfetto fino al livello $h-1$ 
+				- I nodi in un albero d-ario perfetto di altezza $h-1$ sono:
+					- $$\sum_{i=0}^{h-1} d^{i}=\frac{{d^{h}-1}}{d-1}$$
+				- Quindi: 
+					- $$\frac{{d^{h}-1}}{d-1}<n$$
+					- $$d^{h}<n(d-1)+1$$
+					- $$h<\log_{d}(n(d-1)+1)=O(\log_{d} n)$$
+		- #### memorizzazione in un Array
+			- l'_ultimo_ figlio di un nodo in posizione _i_ è in $(i*d)+1$ 
+			- il _primo_ figlio di un nodo in posizione _i_ è in $((i-1)*d)+2$ (d-1 posizioni prima dell'ultimo figlio)
+			- il _padre_ di un nodo in posizione _i_ è in $\lceil{\frac{i-1}{d}}\rceil$ arrotondando per eccesso 
+		- #### Proprietà fondamentale dei d-heap:
+			- _La radice contiene un elemento con chiave minima._
+			- ##### DIM:
+				- per induzione sul numero di nodi.
+				- Per $n=0$ (heap vuoto) o $n=1$ la proprietà vale 
+				- Suppongo sia valida per ogni d-heap con al più $n-1$ nodi
+				- Considero un d-heap con $n$ nodi. I sotto-alberi radicati nei figli della radice sono a loro volta d-heap, con al più $n-1$ nodi
+				- la radice $T_{i}$ contiene il minimo di $T_{i}$
+				- la chiave radice $x$ è $\leq$ della chiave di ciascun figlio 
+				- quindi la chiave di $x$ è il minimo dell'intero heap.
+- ## Esempi:
+	- ### delete(D data) (e deleteMin()):
+		- Sia v il nodo che contiene _data_ con chiave _k_ 
+			- ![[Screenshot 2024-08-19 at 17-46-10 Code con priorità - 11-HeapEApplicazioni.pdf.png]]
+		- Sia _w_ l'ultima foglia a destra 
+			- `data.v=data.w;`
+			- `key.v=key.w;`
+			- stacca e cancella _w_ dall'heap.
+		- Eseguo `muoviAlto(v)`
+			- costo $O(\log_{d} n)$
+		- eseguo `muoviBasso(v)`
+			- costo $O(d \log_{d} n)$ 
+		- Costo totale: $O(d \log_{d} n)$
 
 link Utile: https://www.cs.usfca.edu/~galles/visualization/Heap.html
