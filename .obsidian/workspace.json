@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md"
               }
             }
           },
@@ -188,8 +188,11 @@
   },
   "active": "e1d0a8d1cf62785e",
   "lastOpenFiles": [
-    "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
+    "Pasted image 20240820164238.png",
+    "Pasted image 20240820163443.png",
+    "Pasted image 20240820162246.png",
     "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
+    "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",
     "immagini/Pasted image 20230926093429.png",
     "immagini/Pasted image 20240816075952.png",
@@ -199,8 +202,6 @@
     "immagini/Pasted image 20240816152009.png",
     "immagini/Pasted image 20240816081508.png",
     "immagini/Pasted image 20240819172231.png",
-    "immagini/Pasted image 20240819172121.png",
-    "immagini/Pasted image 20240819170657.png",
     "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
     "Algoritmi e strutture dati/Modulo1/Heap",
     "Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",

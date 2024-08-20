@@ -1,65 +1,87 @@
 - ## Quando applicare:
-	- Sotto-struttura ottima:
+	- ### Sotto-struttura ottima:
 		- deve essere possibile combinare le soluzioni dei sotto-problemi per trovare la soluzione di un problema più grande
-	- sotto-problemi ripetuti:
+	- ### sotto-problemi ripetuti:
 		- un sotto-problema compare più volte
 - A differenza del [[Divide-et-impera]] usa tecniche iterative con approccio bottom-up.
--  ES:
-	- calcolare la sequenza di Fibonacci.
+- ## ES:
+	- ### Calcolare la sequenza di Fibonacci.
 		- utilizzare una soluzione che fa utilizzo di un [[Array]] 
 		- ![[Screenshot 2024-04-16 at 12-18-52 Tecniche Algoritmiche - 15-ProgrammazioneDinamica.pdf.png]]
-- ES:
-	- problema dello zaino:
-		- lo speziamo in problemi più piccoli
-			- definiamo i sotto-problemi:
-				- lo zaino ha capienza "j" massimizziamo il valore dei primi "i" oggetti.
-				- quindi P(i, j)
-				- riducendo la quantità di oggetti e diminuendo anche la capacità dello zaino.
-			- definiamo le soluzioni
-				- $V[i, j]$ è il massimo valore ottenibile da un sottoinsieme degli oggetti {1, 2, ..., i} in uno zaino con capacità "j" 
-		- casi base:
-			- $p[i]$ è il peso dell'oggetto "i"; $v[i]$ è il valore dell'oggetto "i".
-			- zaino capienza 0
-				- $V[i, 0]=0\ \ \forall i=1...n$ 
-			- ho a disposizione solo l'oggetto 1:
-				- $V[1, j]=v[1] \ \ \  se \ j\geq p[1]$ 
-					- c'è spazio per l'oggetto 1
-				- $V[1, j]= 0 \ \ \  se \ j< p[1]$ 
-					- non c'è spazio per l'oggetto 1
-		- caso generale:
-			- ora procedo andando a guardare l'oggetto successivo immaginando di aver già inserito gli oggetti precedenti.
-			- quindi avrò 2 scenari:
-				- non uso l'oggetto "i", quindi avrò P(i-1, j)
-				- uso l'oggetto i, quindi avrò $v[i]+P(i-1, j-p[i])$ sempre considerando la condizione: $p[i]\leq j$ 
-			- infine guardo il massimo di quei due valori:
-				- $$V[i,j]=max\{V[i-1,j], V[i-1,j-p[i]+v[i]\}$$
-	- Riassumendo:
-		- $$\begin {cases}  V[i-1,j] \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  se \  j<p[i] \\ max\{V[i-1,j], V[i-1,j-p[i]+v[i]\} \ \ se \ j\geq p[i]\end {cases}$$
-		- costo totale dell'algoritmo: $O(n*P)$ dove P è la capacità dello zaino.
-- Seam Carving
-	- si intende ridimensionare un'immagine cercando di mantenere più soggetti dell'immagine possibile.
-	- assegno ad ogni pixel (i, j) un peso $E[i, j] \in [0,1]$ che determina quanto è importante un pixel.
-	- determino una cucitura verticale di peso minimo 
-	- rimuovo i pixel di quella cucitura ottenendo un'immagine $M*(N-1)$
-	- ripetiamo il procedimento fino ad ottenere la grandezza desiderata.
-	- Definizione dei casi:
-		- casi base: $W[1, j]=E[1,j]\ \forall j=1,...M$
-		- caso generale (i > 1):
-			- se j=1 -> $W[i,j]=E[i,j] +min\{ W[i-1,j], W[i-1,j+1]\}$
-			- se 1 < j < N -> $W[i,j]=E[i,j] +min\{W[i-1,j-1], W[i-1,j], W[i-1,j+1]\}$
-			- se j=N ->$W[i,j]=E[i,j] +min\{W[i-1,j-1], W[i-1,j]\}$
-			  
-	- ora che so che esiste una cucitura di val minimo devo trovare i pixel che la costituiscono, per farlo parto dall'ultimo pixel(ovvero quello con valore più basso) e poi vado a ritroso fino a quello della prima riga.
-- Distanza di Levenshtein
-	- utilizzato nella correzione di errori di battitura o "misspelling"
-	- basato sul concetto "edit distance"
-		- ovvero numero di operazioni di editing servono per trasformare la parola scorretta in quella giusta.
-		- editing ammessi:
-			- lasciare un carattere uguale (costo: 0)
-			- cancellare un carattere(costo: 1)
-			- inserire un carattere (costo: 1)
-			- sostituire un carattere (costo: 1)
-		- ES:
-			- trasformare albero in libero
-			- ![[Screenshot 2024-04-18 at 10-33-16 Tecniche Algoritmiche - 15-ProgrammazioneDinamica.pdf.png]]
-	- Usare la programmazione dinamica per realizzare un algoritmo: 
+	- ### Sottovettore di valore massimo:
+		- Considero un vettore $V[n]$ con $n$ valori reali 
+		- voglio individuare un sottovettore non vuoto di V la somma dei cui elementi sia massima.
+			- ![[Pasted image 20240820162246.png]]
+		- #### Soluzione basata su programmazione dinamica:
+			- Sia $P(i)$ il problema che consiste nel determinare il valore massimo degli elementi dei sottovettori non vuoti del vettore $V[i]$ che ha $V[i-1]$ come ultimo elemento.
+			- Sia $S[i]$ il valore della soluzione di $P(i)$ 
+				- $S[i]$ è la massima somma degli elementi dei sottovettori di $V[i]$ che hanno $V[i-1]$ come ultimo elemento.
+			- la soluzione $S$ si può esprimere come:$$S=max_{0\leq i\leq n}S[i]$$
+			- $P(1)$ ammette un'unica soluzione: $S[1]=V[1]$
+			- Considero il problema in modo generico $P(i), \ i>1$
+				- Suppongo di aver già risolto il problema $P(i-1)$ e quindi di conoscere $S[i-1]$ 
+				- $$S[i-1]+V[i]\geq V[i]\implies S[i]=S[i-1]+V[i]$$
+				-  $$S[i-1]+V[i]< V[i]\implies S[i]=V[i]$$
+			- ![[Pasted image 20240820163443.png]]
+				- Costo: $O(n)$ (Lineare)?
+		- #### Individuare il sottovettore:
+			- Devo determinare quale sottovettore produce la somma di valore massimo.
+				- L'indice dell'elemento finale del sottovettore lo conosco
+				- L'indice iniziale lo posso ricavare procedendo "a ritroso"
+					- Se $S[i]=V[i]$ il sottovettoe massimo inizia nella posizione $i$
+			- ![[Pasted image 20240820164238.png]]
+	- ### Problema dello zaino:
+		- Ho un insieme X di $n$ elementi; l'oggetto i-esimo ha peso $p[i]$ e valore $v[i]$;  
+			- lo speziamo in problemi più piccoli
+				- definiamo i sotto-problemi:
+					- lo zaino ha capienza "j" massimizziamo il valore dei primi "i" oggetti.
+					- quindi P(i, j)
+					- riducendo la quantità di oggetti e diminuendo anche la capacità dello zaino.
+				- definiamo le soluzioni
+					- $V[i, j]$ è il massimo valore ottenibile da un sottoinsieme degli oggetti {1, 2, ..., i} in uno zaino con capacità "j" 
+			- casi base:
+				- $p[i]$ è il peso dell'oggetto "i"; $v[i]$ è il valore dell'oggetto "i".
+				- zaino capienza 0
+					- $V[i, 0]=0\ \ \forall i=1...n$ 
+				- ho a disposizione solo l'oggetto 1:
+					- $V[1, j]=v[1] \ \ \  se \ j\geq p[1]$ 
+						- c'è spazio per l'oggetto 1
+					- $V[1, j]= 0 \ \ \  se \ j< p[1]$ 
+						- non c'è spazio per l'oggetto 1
+			- caso generale:
+				- ora procedo andando a guardare l'oggetto successivo immaginando di aver già inserito gli oggetti precedenti.
+				- quindi avrò 2 scenari:
+					- non uso l'oggetto "i", quindi avrò P(i-1, j)
+					- uso l'oggetto i, quindi avrò $v[i]+P(i-1, j-p[i])$ sempre considerando la condizione: $p[i]\leq j$ 
+				- infine guardo il massimo di quei due valori:
+					- $$V[i,j]=max\{V[i-1,j], V[i-1,j-p[i]+v[i]\}$$
+		- Riassumendo:
+			- $$\begin {cases}  V[i-1,j] \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  se \  j<p[i] \\ max\{V[i-1,j], V[i-1,j-p[i]+v[i]\} \ \ se \ j\geq p[i]\end {cases}$$
+			- costo totale dell'algoritmo: $O(n*P)$ dove P è la capacità dello zaino.
+	- ### Seam Carving
+		- si intende ridimensionare un'immagine cercando di mantenere più soggetti dell'immagine possibile.
+		- assegno ad ogni pixel (i, j) un peso $E[i, j] \in [0,1]$ che determina quanto è importante un pixel.
+		- determino una cucitura verticale di peso minimo 
+		- rimuovo i pixel di quella cucitura ottenendo un'immagine $M*(N-1)$
+		- ripetiamo il procedimento fino ad ottenere la grandezza desiderata.
+		- Definizione dei casi:
+			- casi base: $W[1, j]=E[1,j]\ \forall j=1,...M$
+			- caso generale (i > 1):
+				- se j=1 -> $W[i,j]=E[i,j] +min\{ W[i-1,j], W[i-1,j+1]\}$
+				- se 1 < j < N -> $W[i,j]=E[i,j] +min\{W[i-1,j-1], W[i-1,j], W[i-1,j+1]\}$
+				- se j=N ->$W[i,j]=E[i,j] +min\{W[i-1,j-1], W[i-1,j]\}$
+				  
+		- ora che so che esiste una cucitura di val minimo devo trovare i pixel che la costituiscono, per farlo parto dall'ultimo pixel(ovvero quello con valore più basso) e poi vado a ritroso fino a quello della prima riga.
+	- ### Distanza di Levenshtein
+		- utilizzato nella correzione di errori di battitura o "misspelling"
+		- basato sul concetto "edit distance"
+			- ovvero numero di operazioni di editing servono per trasformare la parola scorretta in quella giusta.
+			- editing ammessi:
+				- lasciare un carattere uguale (costo: 0)
+				- cancellare un carattere(costo: 1)
+				- inserire un carattere (costo: 1)
+				- sostituire un carattere (costo: 1)
+			- ES:
+				- trasformare albero in libero
+				- ![[Screenshot 2024-04-18 at 10-33-16 Tecniche Algoritmiche - 15-ProgrammazioneDinamica.pdf.png]]
+		- Usare la programmazione dinamica per realizzare un algoritmo: 
