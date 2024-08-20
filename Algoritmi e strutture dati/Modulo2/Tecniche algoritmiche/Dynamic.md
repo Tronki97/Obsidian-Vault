@@ -31,15 +31,15 @@
 					- Se $S[i]=V[i]$ il sottovettoe massimo inizia nella posizione $i$
 			- ![[Pasted image 20240820164238.png]]
 	- ### Problema dello zaino:
-		- Ho un insieme X di $n$ elementi; l'oggetto i-esimo ha peso $p[i]$ e valore $v[i]$;  
-			- lo speziamo in problemi più piccoli
-				- definiamo i sotto-problemi:
-					- lo zaino ha capienza "j" massimizziamo il valore dei primi "i" oggetti.
-					- quindi P(i, j)
+		- Ho un insieme X di $n$ elementi; l'oggetto i-esimo ha peso $p[i]$ e valore $v[i]$; Ho un contenitore che può contenere un peso massimo _P_; _Voglio determinare un sottoinsieme $Y \subseteq X:$ il peso totale si $\leq$ P, il valore complessivo degli oggetti sia il massimo possibile_.
+			- #### Scompongo Il problema
+				- _Definiamo i sotto-problemi:_
+					- lo zaino ha capienza "_j_" massimizziamo il valore dei primi "_i_" oggetti.
+					- quindi $P(i, j)$
 					- riducendo la quantità di oggetti e diminuendo anche la capacità dello zaino.
-				- definiamo le soluzioni
-					- $V[i, j]$ è il massimo valore ottenibile da un sottoinsieme degli oggetti {1, 2, ..., i} in uno zaino con capacità "j" 
-			- casi base:
+				- _Definiamo le soluzioni_
+					- $V[i, j]$ è il massimo valore ottenibile da un sottoinsieme degli oggetti $\{1, 2, ..., i\}$ in uno zaino con capacità _"j"_
+			- #### casi base:
 				- $p[i]$ è il peso dell'oggetto "i"; $v[i]$ è il valore dell'oggetto "i".
 				- zaino capienza 0
 					- $V[i, 0]=0\ \ \forall i=1...n$ 
