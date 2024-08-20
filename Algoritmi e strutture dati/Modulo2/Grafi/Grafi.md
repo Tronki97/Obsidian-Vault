@@ -1,63 +1,63 @@
 - ### LINK UTILI: 
 	- https://csacademy.com/app/graph_editor/
-- ### Definizione ^2eb164
-	- #### Orientato ^b29537
-		- è una coppia (V, E) dove:
-			- insieme finito di vertici V
-			- Insieme degli archi E:
+- ## Definizione ^2eb164
+	- ### Orientato ^b29537
+		- è una coppia _(V, E)_ dove:
+			- insieme finito di vertici _V_
+			- Insieme degli archi _E_:
 				- relazione binaria tra vertici
-			- una arco (X, X) è un cappio.
+			- una arco _(X, X)_ è un cappio.
 		- ![[Screenshot 2024-04-23 at 13-25-17 Grafi - 16-Grafi.pdf.png]]
 		- #### Incidenza e Adiacenza:
-			- Si dice incidente un arco (v, w) da v a w 
-				- es: (A, B) è incidente da A a B
+			- Si dice _incidente_ un arco _(v, w)_ da _v_ a _w_ 
+				- _es_: (A, B) è incidente da A a B
 			- Un vertice w è adiacente a v sse (v, w)$\in$ E (ovvero se w è puntato direttamente da v)
-				- es: B è adiacente a A ma non a a D o C
-	- #### Non orientato 
-		- è una coppia (V, E) dove:
-			- insieme finito di vertici V
-			- Insieme degli archi E:
+				- _es_: B è adiacente a A ma non a a D o C
+	- ### Non orientato 
+		- è una coppia _(V, E)_ dove:
+			- insieme finito di vertici _V_
+			- Insieme degli archi _E_:
 				- coppie non ordinate
 			- non ci sono cappi
 		- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]]
-- ### Visite
+- ## Visite
 	- In ampiezza
 		- 
 	- In profondità
-- ### Alberi di copertura minimi 
-- ### Cammini minimi
+- ## Alberi di copertura minimi 
+- ## Cammini minimi
 	- da singola sorgente
 	- fra tutte le coppie di vertici
-- ### Operazioni:
-	- NumVertici() → intero 
-	- NumArchi() → intero 
-	- grado(vertice v) → intero
+- ## Operazioni:
+	- ### NumVertici() → intero 
+	- ### NumArchi() → intero 
+	- ### grado(vertice v) → intero
 		- Grado: identifica la quantità di grafici che hanno a che fare con quel vertice
-	- #archiIncidenti(vertice v) → (arco, arco, ... arco)
-		- restituisce un elenco (lista, array, ecc...) di archi che [[#^b29537||incidono]] incidono sul vertice v 
-	- estremi(arco e) → (vertice, vertice)
-	- opposto(vertice x, arco e) → vertice
+	- ### archiIncidenti(vertice v) → (arco, arco, ... arco)
+		- Restituisce un elenco (lista, array, ecc...) di archi che [[#^b29537||incidono]] incidono sul vertice v 
+	- ### estremi(arco e) → (vertice, vertice)
+	- ### opposto(vertice x, arco e) → vertice
 		- dato un vertice e un arco ad esso collegato restituisce il vertice dall'altro lato dell'arco
-	- #sonoAdiacenti(vertice x, vertice y) → booleano 
-		- dice se due vertici sono collegati direttamente da un arco
-	- aggiungiVertice(vertice v)
-	-  aggiungiArco(vertice x, vertice y)
-	-  rimuoviVertice(vertice v)
-	- rimuoviArco(arco e)
+	- ### sonoAdiacenti(vertice x, vertice y) → booleano 
+		- Dice se due vertici sono collegati direttamente da un arco
+	- ### aggiungiVertice(vertice v)
+	- ### aggiungiArco(vertice x, vertice y)
+	- ### rimuoviVertice(vertice v)
+	- ### rimuoviArco(arco e)
 - ## Rappresentazione di Grafi
 	- ### Matrice di adiacenza
 		- rappresentare i collegamenti tra nodi con una matrice di booleani simmetrica con il seguente riempimento:$$M(u, v)= \begin {cases}1\ \ se \{u,v\}\in E \\ 0 \ \ altrimenti \end {cases}$$
 		- #### Costi:
-			- Spazio:
+			- ##### Spazio:
 				- $\Theta (|V|^2)$
-			- tempi:
+			- ##### tempi:
 				- grado(vertice v)->int ; costo: $O(n)$
 				- archiIncidenti(vertice v)→(arco, arco, ... arco); costo: $O(n)$
 				- sonoAdiacenti(vertice x, vertice y)→booleano; costo: $O(1)$
 				- aggiungiVertice(vertice v);  costo: $O(n^2)$
 				- aggiungiArco(vertice x, vertice y); costo:  $O(1)$
 				- rimuoviVertice(vertice v); costo:  $O(n^2)$
-				-  rimuoviArco(arco e); costo:  $O(1)$
+				- rimuoviArco(arco e); costo:  $O(1)$
 	- ### Lista di adiacenza
 		- Ogni vertice è la testa di una lista e tutti i valori successivi sono i vertici adiacenti al vertice in testa(NOTA: i vertici dopo la testa non hanno un ordine preciso).
 			- ES: se A ha B e D adiacenti, allora la lista sara:
@@ -70,17 +70,19 @@
 			- aggiungiArco(vertice x, vertice y); costo:  $O(1)$
 			- rimuoviVertice(vertice v); costo:  $O(m)$
 			-  rimuoviArco(arco e); costo:  $O(\delta (x)+\delta (y))$ 
-			- NOTA: m= |E| -> (numero di archi).
-			  $\delta (v)$= grado del nodo x.
+			- ##### NOTA: 
+				- m= |E| -> (numero di archi).
+				  $\delta (v)$= grado del nodo x.
 - ## Grafi pesati
 	- in alcuni casi ogni arco ha un peso associato, 
 	- il costo è definito da una funzione $c: E\rightarrow \mathbb{R}$
 	- quando non esiste un arco tra due vertici vuol dire che il costo sarà infinito
 	- ### Matrice di adiacenza in grafi non orientati pesati 
 		- $$M(u, v)= \begin  {cases}c(u , v) \ \ se \{u , v\} \in E \\ \infty \ \ altrimenti \end {cases}$$
+		- ![[Pasted image 20240820175255.png]]
 	- ### Grado:
 		- [[#^2eb164||grafo non orientato]]:
-			-  il grado di un vertice è il numero di archi che partono da esso.
+			- _il grado di un vertice è il numero di archi che partono da esso._
 			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] A, B, E hanno grado 2
 			  C e D hanno grado 3
 			  F ha grado 0

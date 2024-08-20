@@ -387,6 +387,12 @@ processare
 pÜs
 pSd
 paN
+percorsi
+path
+pair
+paths
+pesato
+permesso
 realizzare
 rappresentare
 risultato
@@ -746,6 +752,12 @@ rmM
 rbwzt
 rpS
 radicati
+raggiungere
+rimarrebbe
+raggiungibili
+rilassamento
+rilassati
+ripetuto
 la
 le
 lo
@@ -1138,6 +1150,7 @@ AdW
 Azy
 Anu
 Aee
+All
 nel
 necessario
 numero
@@ -1849,6 +1862,11 @@ cNMOj
 ccz
 ciascun
 cancella
+collega
+cammini
+continuano
+connette
+controllando
 avendo
 alcune
 arriva
@@ -2237,6 +2255,10 @@ aEii
 aOT
 aGh
 aqu
+allontanarmi
+attraversato
+approssimazioni
+aggiorniamo
 un
 una
 usato
@@ -2781,6 +2803,8 @@ dxxX
 doA
 dxk
 dUGäA
+distanze
+disuguaglianza
 finito
 fanno
 facilmente
@@ -3685,6 +3709,8 @@ muoviAlto
 modellato
 mMs
 muoviBasso
+mettiamo
+minime
 esempio
 eccede
 errori
@@ -3970,6 +3996,8 @@ eNhc
 eof
 ehC
 eseguo
+eseguite
+each
 base
 bit
 basano
@@ -4170,6 +4198,7 @@ btG
 bFl
 bQR
 bZX
+bloccati
 quindi
 questo
 quelle
@@ -4829,6 +4858,9 @@ sbD
 szJ
 sSU
 stacca
+source
+strade
+sottostruttura
 otterremmo
 ottenere
 occupare
@@ -5310,6 +5342,7 @@ vUAQ
 vZq
 vZV
 vrPX
+visitato
 troppo
 testimone
 tramite
@@ -6516,6 +6549,7 @@ SOU
 SrDf
 SiR
 SFX
+Single
 BINARY
 Bus
 BX
@@ -6674,6 +6708,8 @@ BTN
 BTn
 BTe
 BaP
+Belmann
+Bellman
 Per
 Program
 PC
@@ -7725,6 +7761,8 @@ CuvB
 CXzY
 Ctt
 CZv
+Condizione
+Cerchiamo
 Questa
 Quello
 Qz
@@ -8084,6 +8122,9 @@ FHb
 FwS
 FfK
 FSd
+FIFO
+Formulazioni
+Ford
 Word
 WK
 WB

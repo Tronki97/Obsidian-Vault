@@ -6,7 +6,7 @@
 - # Formulazioni del problema
 	- ### Costo minimo tra una singola coppia di nodi _u_ e _v_.
 	- ### Single source shortest path: 
-		- ho una partenza ma non ho una destinazione quindi in output avrò tutte le strade minime per raggiungere ogni punto del [[grafi||grafo]]
+		- ho una partenza ma non ho una destinazione quindi in output avrò tutte le strade minime per raggiungere ogni punto del [[Grafi||grafo]]
 	- ### All-pair shortest paths
 		- determina cammini di costo minimo tra ogni coppie di nodi _u_ e _v_
 - # OSSERVAZIONE:

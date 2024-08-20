@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md"
               }
             }
           },
@@ -188,6 +188,12 @@
   },
   "active": "e1d0a8d1cf62785e",
   "lastOpenFiles": [
+    "Pasted image 20240820175255.png",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi",
     "Pasted image 20240820172512.png",
     "Pasted image 20240820171713.png",
     "Pasted image 20240820171615.png",
@@ -201,13 +207,11 @@
     "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
     "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",
-    "immagini/Pasted image 20230926093429.png",
     "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
     "Algoritmi e strutture dati/Modulo1/Heap",
     "Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
     "Algoritmi e strutture dati/Modulo1/Complessità computazionale.md",
     "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche",
@@ -227,14 +231,10 @@
     "Algebra e geometria/Determinante/Regola di Sarrus.md",
     "Algebra e geometria/Applicazione lineare/Suriettiva.md",
     "Algebra e geometria/Applicazione lineare/iniettiva.md",
-    "Algebra e geometria/Determinante/Matrice invertibile.md",
-    "Algebra e geometria/Spazio vettoriale/Base.md",
-    "Algebra e geometria/Spazio vettoriale/Base Canonica.md",
     "Algebra e geometria/Aritmetica modulare",
     "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Autovalore e Autovettore",
     "Algebra e geometria/Determinante",
-    "Algebra e geometria/Applicazione lineare",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
     "Untitled 3.canvas",
