@@ -31,7 +31,7 @@
 					- Se $S[i]=V[i]$ il sottovettoe massimo inizia nella posizione $i$
 			- ![[Pasted image 20240820164238.png]]
 	- ### Problema dello zaino:
-		- Ho un insieme X di $n$ elementi; l'oggetto i-esimo ha peso $p[i]$ e valore $v[i]$; Ho un contenitore che può contenere un peso massimo _P_; _Voglio determinare un sottoinsieme $Y \subseteq X:$ il peso totale si $\leq$ P, il valore complessivo degli oggetti sia il massimo possibile_.
+		- Ho un insieme X di $n$ elementi; _l'oggetto i-esimo ha peso $p[i]$ e valore $v[i]$_; Ho un contenitore che può contenere un peso massimo _P_; _Voglio determinare un sottoinsieme $Y \subseteq X:$ il peso totale si $\leq$ P, il valore complessivo degli oggetti sia il massimo possibile_.
 			- #### Scompongo Il problema
 				- _Definiamo i sotto-problemi:_
 					- lo zaino ha capienza "_j_" massimizziamo il valore dei primi "_i_" oggetti.
@@ -40,24 +40,26 @@
 				- _Definiamo le soluzioni_
 					- $V[i, j]$ è il massimo valore ottenibile da un sottoinsieme degli oggetti $\{1, 2, ..., i\}$ in uno zaino con capacità _"j"_
 			- #### casi base:
-				- $p[i]$ è il peso dell'oggetto "i"; $v[i]$ è il valore dell'oggetto "i".
-				- zaino capienza 0
+				- ##### zaino capienza 0
 					- $V[i, 0]=0\ \ \forall i=1...n$ 
-				- ho a disposizione solo l'oggetto 1:
+				- ##### ho a disposizione solo l'oggetto 1:
 					- $V[1, j]=v[1] \ \ \  se \ j\geq p[1]$ 
 						- c'è spazio per l'oggetto 1
 					- $V[1, j]= 0 \ \ \  se \ j< p[1]$ 
 						- non c'è spazio per l'oggetto 1
-			- caso generale:
-				- ora procedo andando a guardare l'oggetto successivo immaginando di aver già inserito gli oggetti precedenti.
-				- quindi avrò 2 scenari:
-					- non uso l'oggetto "i", quindi avrò P(i-1, j)
-					- uso l'oggetto i, quindi avrò $v[i]+P(i-1, j-p[i])$ sempre considerando la condizione: $p[i]\leq j$ 
+			- #### caso generale:
+				- ora procedo andando a guardare l'oggetto successivo, immaginando di aver già inserito gli oggetti precedenti.
+				- _quindi avrò 2 scenari_:
+					- non uso l'oggetto _i_, quindi avrò $V[i,j]=V[i-1,j]$
+					- uso l'oggetto _i_, quindi avrò $v[i]+V[i-1, j-p[i]]$ sempre considerando la condizione: $p[i]\leq j$ 
 				- infine guardo il massimo di quei due valori:
-					- $$V[i,j]=max\{V[i-1,j], V[i-1,j-p[i]+v[i]\}$$
-		- Riassumendo:
-			- $$\begin {cases}  V[i-1,j] \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  se \  j<p[i] \\ max\{V[i-1,j], V[i-1,j-p[i]+v[i]\} \ \ se \ j\geq p[i]\end {cases}$$
-			- costo totale dell'algoritmo: $O(n*P)$ dove P è la capacità dello zaino.
+					- $$V[i,j]=max\{V[i-1,j], V[i-1,j-p[i]]+v[i]\}$$
+		- ### Riassumendo:
+			- $$\begin {cases}  V[i-1,j] &   \  j<p[i] \\ max\{V[i-1,j], V[i-1,j-p[i]]+v[i]\} &  \ j\geq p[i]\end {cases}$$
+			- ![[Pasted image 20240820165855.png]]
+			- ![[Pasted image 20240820165913.png]]
+			- ![[Pasted image 20240820165930.png]]
+			- _costo totale_ dell'algoritmo: $O(n*P)$ dove P è la capacità dello zaino.
 	- ### Seam Carving
 		- si intende ridimensionare un'immagine cercando di mantenere più soggetti dell'immagine possibile.
 		- assegno ad ogni pixel (i, j) un peso $E[i, j] \in [0,1]$ che determina quanto è importante un pixel.
@@ -85,3 +87,36 @@
 				- trasformare albero in libero
 				- ![[Screenshot 2024-04-18 at 10-33-16 Tecniche Algoritmiche - 15-ProgrammazioneDinamica.pdf.png]]
 		- Usare la programmazione dinamica per realizzare un algoritmo: 
+			- #### Def:
+				- Due stringhe $S[n]$ e $T[m]$ di _n_ e _m_ caratteri
+				- La distanza di levenshtein tra $S$ e $T$ è il costo minimo tra tutte le sequenze di operazioni di editing che trasformano $S$ in $T$ 
+			- #### Soluzione:
+				- ##### Definisco i sotto-problemi $P(i,j)$:
+					- Determinare il numero minimo di operazioni di editing necessarie per trasformare il prefisso $S[0..i]$ in $T[0..j]$ 
+				- ##### Definisco le soluzioni $L[i,j]$:
+					- minimo numero di operazioni di editing necessarie per trasformare il prefisso $S[0..i]$ in $T[0..j]$ 
+				- ##### Calcolo della soluzione del problema originario.
+					- La distanza di levenshtein tra $S[n]$ e $T[m]$ è il valore $L[n,m]$
+				- ##### Calcolo di $L[i,j]$
+					- $i=0 \ \vee \ j=0$
+						- trasformare una stringa vuota in quella non vuota(occorre quindi inserire i caratteri necessari)
+					- $i>0 \wedge \ j>0$, il minimo costo tra: 
+						- trasformare $S[0..i-1]$ in $T[0..j]$ e _cancellare_ l'ultimo carattere $S[i]$
+							- ![[Pasted image 20240820171523.png]]
+							- _Costo_: $L[i-1,j]+1$
+						- trasformare $S[0..i]$ in $T[1..j-1]$ e _inserire_ l'ultimo carattere $T[j]$
+							- ![[Pasted image 20240820171615.png]]
+							- _Costo_: $L[i,j-1]+1$
+						- Trasformare $S[1..i-1]$ in $T[1..j-1]$ e _cambiare_ $S[i]$ in $T[i]$ _se diversi_.
+							- ![[Pasted image 20240820171713.png]]
+							- Costo: $L[i-1,j-1]$ e de sono diversi aggiungo 1
+				- ##### Riassunto:
+					- $i=0 \ \vee \ j=0$
+						- $L[i,j]=max\{i,j\}$
+					- altrimenti:
+						- se $S[i]=T[j]$:
+							- $$L[i,j]=min\{L[i-1,j]+1,L[i,j-1]+1,L[i-1,j-1]\}$$
+						- se $S[i]\neq T[j]$
+							- $$L[i,j]=min\{L[i-1,j]+1,L[i,j-1]+1,L[i-1,j-1]+1\}$$
+			- ### ES:
+				- ![[Pasted image 20240820172512.png]]
