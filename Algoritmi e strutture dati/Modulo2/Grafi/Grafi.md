@@ -98,30 +98,33 @@
 			  B ha grado 2
 			  D ha grado 4
 - ## Cammini
-	- un cammino in G=(V, E) è una sequenza di vertici t.c ogni vertice è adiacente al successivo 
+	- un _cammino_ in G=(V, E) è una sequenza di vertici t.c ogni vertice è adiacente al successivo:
+	- $$\langle{w_{0},w_{1},\dots,w_{k}}\rangle: w_{i+1}\mathbf{\ adiacente \ a\ }w_{i}| 0\leq i\leq k-1$$ 
 	- la lunghezza del cammino è il numero di archi attraversati(pari al numero di vertici meno 1). 
 	- un cammino di dice <font color="red">semplice</font> se tutti i suoi vertici compaiono solo una volta nella sequenza
-	-   se esiste un cammino <font color="red">c</font> tra i vertici <font color="red">v</font> e <font color="red">w</font> vuol dire che <font color="red">w</font> è raggiungibile da <font color="red">v</font> tramite <font color="red">c</font> 
+	- se esiste un cammino <font color="red">c</font> tra i vertici <font color="red">v</font> e <font color="red">w</font> vuol dire che <font color="red">w</font> è raggiungibile da <font color="red">v</font> tramite <font color="red">c</font> 
+	- un cammino si dice _semplice_ se tutti i vertici sono distinti (compaiono una sola volta nella sequenza)
 - ## Connessione 
-	- grafo non orientato:
+	- ### grafo non orientato:
 		- G è connesso se esiste un cammino da ogni vertice ad ogni altro vertice.
-			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] Non è un grafo connesso NOTA:
+			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] Non è un grafo connesso 
+			- #### NOTA:
 				- se F fosse stato collegato ad una altro nodo allora il grafo sarebbe stato di tipo connesso 
-	- grafo orientato 
+	- ### grafo orientato 
 		- G è <font color="red">fortemente connesso</font> se esiste un cammino da ogni vertice ad ogni altro vertice
 		- G è _debolmente connesso_ se non è fortemente connesso ma la sua versione non orientato è connessa.
 - ## Cicli
-	- un ciclo è un cammino di lunghezza:
+	- un _ciclo_ è un cammino di lunghezza:
 		- $\ge 1$ nei grafici orientati 
 		-  $\ge 3$ nei grafici non orientati 
-	- un ciclo è _semplice_ se i nodi della sequnza sono tutti distinti.
+	- un ciclo è _semplice_ se i nodi della seqeunza sono tutti distinti.
 - ## Grafi aciclici
 	- Un grafo non orientato è _aciclico_ se è senza cicli semplici 
 	- Un grafo orientato è _aciclico_ se è privo di cicli
 	- ### NOTA:
 		- un grafico orientato aciclico è chiamato _DAG_
 - ## Grafo completo 
-	- Un grafo non orientato completo è un grafo non orientato che ha un arco tra ogni coppia di vertici.
+	- Un grafo non orientato _completo_ è un grafo non orientato che ha un arco tra ogni coppia di vertici.
 	- in un grafo non orientato _completo_ ha $\begin {pmatrix} n\\2 \end {pmatrix}= \frac{n(n-1)}{2}= \frac{|V|(|V|-1)}{2}$ 
 - ## Alberi
 	- Un _albero libero_ è un grafo non orientato connesso aciclico 

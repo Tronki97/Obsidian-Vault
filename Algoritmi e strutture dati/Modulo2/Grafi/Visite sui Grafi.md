@@ -1,3 +1,7 @@
+- ## Attraversamento grafi:
+	- ### Def:
+		- Dato un [[Grafi||grafo]] $G=<V,E>$ ed un vertice _$s$_ di $V$ _visitare ogni vertice raggiungibile nel grafo dal vertice s_ 
+		- Ogni nodo deve essere visitato una sola volta.
 - algoritmo BFS:
 	- partendo da un vertice F mettiamo i vertici adiacenti ad esso in una coda FIFO, si tiene traccia degli archi usati per raggiungere quei determinati vertici.
 	- si procede col punto precedente fino a creare un albero con ogni coda che rappresenta i figli del nodo preso come radice. 
