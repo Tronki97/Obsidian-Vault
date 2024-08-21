@@ -58,7 +58,7 @@
 				- aggiungiArco(vertice x, vertice y); costo:  $O(1)$
 				- rimuoviVertice(vertice v); costo:  $O(n^2)$
 				- rimuoviArco(arco e); costo:  $O(1)$
-	- ### Lista di adiacenza
+	- ### Lista di adiacenza ^c02f81
 		- Ogni vertice è la testa di una lista e tutti i valori successivi sono i vertici adiacenti al vertice in testa(NOTA: i vertici dopo la testa non hanno un ordine preciso).
 			- ES: se A ha B e D adiacenti, allora la lista sara:
 				- A->B->D 
@@ -77,7 +77,7 @@
 	- in alcuni casi ogni arco ha un peso associato, 
 	- il costo è definito da una funzione $c: E\rightarrow \mathbb{R}$
 	- quando non esiste un arco tra due vertici vuol dire che il costo sarà infinito
-	- ### Matrice di adiacenza in grafi non orientati pesati 
+	- ### Matrice di adiacenza in grafi non orientati pesati  ^574110
 		- $$M(u, v)= \begin  {cases}c(u , v) \ \ se \{u , v\} \in E \\ \infty \ \ altrimenti \end {cases}$$
 		- ![[Pasted image 20240820175255.png]]
 	- ### Grado:

@@ -758,6 +758,7 @@ raggiungibili
 rilassamento
 rilassati
 ripetuto
+ritornato
 la
 le
 lo
@@ -1151,6 +1152,7 @@ Azy
 Anu
 Aee
 All
+Attraversamento
 nel
 necessario
 numero
@@ -1867,6 +1869,8 @@ cammini
 continuano
 connette
 controllando
+crescenti
+corrisponda
 avendo
 alcune
 arriva
@@ -3711,6 +3715,7 @@ mMs
 muoviBasso
 mettiamo
 minime
+marcatura
 esempio
 eccede
 errori
@@ -4861,6 +4866,7 @@ stacca
 source
 strade
 sottostruttura
+seqeunza
 otterremmo
 ottenere
 occupare
@@ -5343,6 +5349,7 @@ vZq
 vZV
 vrPX
 visitato
+visitare
 troppo
 testimone
 tramite
@@ -6357,6 +6364,7 @@ RxkUiF
 RBB
 RlI
 Ritorno
+Restituisce
 Si
 Se
 Status
@@ -7064,6 +7072,7 @@ DGW
 Dfj
 DPEk
 DIM
+Dice
 Le
 La
 Lg
@@ -7763,6 +7772,7 @@ Ctt
 CZv
 Condizione
 Cerchiamo
+Calcola
 Questa
 Quello
 Qz
@@ -10845,6 +10855,7 @@ GOnPR
 GHX
 GJF
 GvN
+Genera
 Vb
 VD
 VG

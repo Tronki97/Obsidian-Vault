@@ -2,13 +2,33 @@
 	- ### Def:
 		- Dato un [[Grafi||grafo]] $G=<V,E>$ ed un vertice _$s$_ di $V$ _visitare ogni vertice raggiungibile nel grafo dal vertice s_ 
 		- Ogni nodo deve essere visitato una sola volta.
-- algoritmo BFS:
-	- partendo da un vertice F mettiamo i vertici adiacenti ad esso in una coda FIFO, si tiene traccia degli archi usati per raggiungere quei determinati vertici.
-	- si procede col punto precedente fino a creare un albero con ogni coda che rappresenta i figli del nodo preso come radice. 
-	- Utile per calcolare le distanze
-- algoritmo DFS: ^0b997c
-	- parto dal vertice F, ne scelgo uno adiacente e continuo cercando di allontanarmi il più possibile dal nodo iniziale e si tiene traccia dei passaggi già fatti e degli archi già percorsi. 
-	- per eseguire questa ricerca vengono eseguite delle chiamate ricorsive
-	- per ogni vertice visitato corrisponde un record di attivazione 
-	- permette di verificare assenza di cicli e risolvere problemi su grafi ordinati.
-	- 
+	- ### Algoritmo BFS(Visita in ampiezza):
+		- partendo da un vertice F mettiamo i vertici adiacenti ad esso in una coda FIFO, si tiene traccia degli archi usati per raggiungere quei determinati vertici.
+		- si procede col punto precedente fino a creare un albero con ogni coda che rappresenta i figli del nodo preso come radice. 
+		- Utile per calcolare le distanze
+		- ![[Pasted image 20240821162737.png]]
+			- F gestito tramite una coda
+			- `v.mark` è la marcatura del nodo _v_
+			- `v.dist` è la distanza del nodo _v_ dal vertice iniziale _s_
+			- `v.parent` è il padre di _v_ nell'albero _T_ 
+			- viene ritornato l'albero _T_ che viene costruito dalla visita.
+		- #### Proprietà:
+			- ##### Visita i nodi a distanze crescenti dalla sorgente:
+				- visita per primi i nodi a distanza $k$ poi quelli a distanza $k+1$
+			- ##### Genera un albero BF
+				- Albero che contiene tutti i vertici raggiungibili da _s_ e tale che il cammino da _s_ ad un altro nodo nell'albero corrisponda al cammino più breve nel grafo.
+			- ##### Calcola la distanza minima da s a tutti i vertici raggiungibili.
+				- numero di archi attraversati per andare da _s_ ad un vertice raggiungibile a partire da _s_
+		- #### Costo: 
+			- $O(n+m)$ usando le [[Grafi#^c02f81||liste di adiacenza]]
+			- $O(n^{2})$ usando la [[Grafi#^574110||matrice di adiacenza]]
+				- _n_ è il numero di vertici, _m_ è il numero di archi.
+		- #### Applicazioni:
+			- si può usare per ottenere il percorso più breve fra due vertici.
+			- 
+	- ### algoritmo DFS(visita in profondità): ^0b997c
+		- parto dal vertice F, ne scelgo uno adiacente e continuo cercando di allontanarmi il più possibile dal nodo iniziale e si tiene traccia dei passaggi già fatti e degli archi già percorsi. 
+		- per eseguire questa ricerca vengono eseguite delle chiamate ricorsive
+		- per ogni vertice visitato corrisponde un record di attivazione 
+		- permette di verificare assenza di cicli e risolvere problemi su grafi ordinati.
+		- 

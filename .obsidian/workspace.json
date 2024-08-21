@@ -8,22 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "282d7e8d0b262096",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "immagini/Screenshot 2024-08-19 at 17-46-10 Code con priorità - 11-HeapEApplicazioni.pdf.png"
-              }
-            }
-          },
-          {
             "id": "e1d0a8d1cf62785e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1428ceed3c7f29a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -43,8 +46,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -189,9 +191,10 @@
   "active": "e1d0a8d1cf62785e",
   "lastOpenFiles": [
     "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+    "Pasted image 20240821162737.png",
     "Pasted image 20240820175255.png",
     "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
     "Algoritmi e strutture dati/Modulo2/Grafi",
     "Pasted image 20240820172512.png",
@@ -202,7 +205,6 @@
     "Pasted image 20240820165913.png",
     "Pasted image 20240820165855.png",
     "Pasted image 20240820164238.png",
-    "Pasted image 20240820163443.png",
     "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
     "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",
