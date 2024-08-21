@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md"
               }
             }
           },
@@ -203,8 +203,18 @@
   },
   "active": "e1d0a8d1cf62785e",
   "lastOpenFiles": [
+    "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
+    "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md",
+    "Pasted image 20240821183334.png",
+    "Pasted image 20240821182439.png",
+    "Pasted image 20240821182239.png",
+    "Pasted image 20240821182056.png",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
+    "Analisi/modulo2/Disuguaglianza triangolare.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
+    "Pasted image 20240821175423.png",
+    "Pasted image 20240821175100.png",
     "Algoritmi e strutture dati/Modulo2/NP-completezza.md",
-    "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche.md",
     "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
     "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
@@ -213,16 +223,8 @@
     "Pasted image 20240821165719.png",
     "Pasted image 20240821165606.png",
     "Pasted image 20240821162737.png",
-    "Pasted image 20240820175255.png",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
     "Algoritmi e strutture dati/Modulo2/Grafi",
-    "Pasted image 20240820172512.png",
-    "Pasted image 20240820171713.png",
-    "Pasted image 20240820171615.png",
-    "Pasted image 20240820171523.png",
-    "Pasted image 20240820165930.png",
-    "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
     "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",
     "Algoritmi e strutture dati/Modulo1/Equazioni di ricorrenza.md",
@@ -243,9 +245,7 @@
     "Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash",
     "Algoritmi e strutture dati/Modulo1/Notazione asintotica.md",
-    "Algebra e geometria/Simmetria.md",
     "Untitled.canvas",
-    "Algebra e geometria/Determinante/Determinante.md",
     "Algebra e geometria/Aritmetica modulare",
     "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Autovalore e Autovettore",

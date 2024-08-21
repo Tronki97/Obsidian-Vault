@@ -4,4 +4,28 @@
 	- G grafo orientato con peso 
 	- T albero dei [[Cammini minimi]] di costo minimo con radice _s_
 	- l'arco (u,v) con $u\in V(T) \wedge v \notin V(T)$ che minimizza la quantità $d_{su}+w(u,v)$ che appartiene ad un cammino minimo da _s_ a _v_
-	- 
+- ## Dim:
+	- suppongo per assurdo che $(u,v)\not \in$ ad un cammino di costo minimo tra _s_ e _v_ 
+		- quindi $d_{su}+w(u,v)>d_{sv}$ ___(1)___
+	- Quindi deve esistere $\Pi_{sv}^*$ (cammino da _s_ a _v_) che non passi per (u,v) con costo inferiore a $d_{su}+w(u,v)$
+	- ![[Pasted image 20240821182056.png]]
+	- il cammino $\Pi_{sv}^*$ si scompone in $\Pi_{sy}^*$ e $\Pi_{yv}^*$ con y primo nodo fuori da _T_ attraversato dal cammino minimo 
+	- Quindi $d_{sv}=d_{sx}+w(x,y)+d_{yv}$ ___(2)___
+	- ![[Pasted image 20240821182239.png]]
+	- Per l'ipotesi, l'arco (u,v) è quello che, tra tutti gli archi che collegano un vertice in _T_ con uno non ancora in _T_, minimizza la somma $d_{su}+w(u,v)$
+	- in particolare $$d_{su}+w(u,v)\leq d_{sx}+w(x,y)$$___(3)___
+	- ![[Pasted image 20240821182439.png]]
+- ## Riassumendo:
+	- combinando ___(1),(2),(3)___ ottengo: $$d_{su}+w(u,v)> d_{sx}+w(x,y)+d_{yv}$$da ___(1) e (2)___ 
+	- $$d_{su}+w(u,v)\geq d_{sx}+w(x,y)+d_{yv}$$dai pesi non negativi.
+	- $$d_{su}+w(u,v)\geq d_{sx}+w(x,y)$$da ___(3)___
+- ## Implementazione:
+	- ![[Pasted image 20240821183334.png]]
+- ## Analisi:
+	- l'inizializzazione(1° for) ha costo $O(n)$ 
+	- le operazioni [[Code con Priorità#^c5a4a0||find()]] e [[Code con Priorità#^a08aa3||deleteMin()]] hanno costo $O(\log n)$ e vengono eseguite al massimo _n_ volte
+		- una volta estratto dalla coda con priorità un nodo non verrà più reinserito.
+	- Le operazioni [[Code con Priorità#^4e87d9||insert()]] e [[Code con Priorità#^c7ebd6||decreaseKey()]] hanno cosro $O(\log n)$ e sono eseguite al massimo _m_ volte 
+		- una volta per ogni arco.
+	- ### Totale:
+		- $$O((n+m)\log n)=O(m\log n)$$Se tutti i nodi sono raggiungibili dalla sorgente.

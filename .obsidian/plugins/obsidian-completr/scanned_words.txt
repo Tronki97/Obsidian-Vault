@@ -1892,6 +1892,8 @@ colora
 crescere
 connes
 costruita
+collegano
+combinando
 avendo
 alcune
 arriva
@@ -2288,6 +2290,7 @@ aperti
 accrescere
 attraversa
 attraversano
+assunzione
 un
 una
 usato
@@ -3447,6 +3450,7 @@ interamente
 ingrandire
 interesse
 inseriamo
+inizializzazione
 modo
 mentre
 massimo
@@ -4044,6 +4048,7 @@ eseguo
 eseguite
 each
 entrata
+ebd
 base
 bit
 basano
@@ -4915,6 +4920,7 @@ scoperto
 selezionandone
 seleziona
 scegliendo
+scompone
 otterremmo
 ottenere
 occupare
@@ -6963,6 +6969,7 @@ PQW
 PIf
 PeF
 Prim
+PROP
 Di
 Data
 Dati
@@ -7132,6 +7139,7 @@ DPEk
 DIM
 Dice
 Definizioni
+Dim
 Le
 La
 Lg
@@ -7282,6 +7290,7 @@ LgS
 LFZr
 Lcq
 LGw
+Lemma
 Modulo
 Massimo
 Memory

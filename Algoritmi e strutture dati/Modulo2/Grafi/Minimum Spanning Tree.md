@@ -34,28 +34,31 @@
 			- del _ciclo_:
 				- Scegli un ciclo semplice in G che _non contenga archi rossi_. tra tutti gli archi non colorati del ciclo, seleziona un arco di costo massimo e coloralo di rosso 
 	- ## Algoritmo di Kruskal:  ^94c267
-		- Fisso un ordine di applicazione delle regole:
-			- idea:
-				- ingrandire sottoinsiemi disgiunti di MST connettendoli fra di loro fino ad avere l'albero finale.
+		- ### idea:
+			- ingrandire sottoinsiemi disgiunti di MST connettendoli fra di loro fino ad avere l'albero finale.
 			- Considero gli archi in ordine crescente di peso:
 				- Se l'arco e = {u, v} connette due alberi blu distinti, lo si colora di blu, altrimenti lo si colora di rosso.
-			- l'algoritmo è greedy perché ad ogni passo si aggiunge alla "foresta" un arco con il peso minimo.
-		- ANALISI:
+			- l'algoritmo è [[Algoritmi Greedy||greedy]] perché ad ogni passo si aggiunge alla "foresta" un arco con il peso minimo.
+		- ### Algoritmo:
+			- ![[Pasted image 20240821175100.png]]
+		- ### ANALISI:
 			- il costo dipende dall'implementazione di [[Strutture Union-Find||union find]] che usiamo:
 				- [[Strutture Union-Find#^9be1ea||quickUnion con euristica sul rango]] il costo totale: $O(m+n\ *log (n+m)\ )=O(2m\ *\ log(n+2n)=$
 				  =$O(m*log\ n))$ 
-	- # Algoritmo di Prim
+	- ## Algoritmo di Prim
 		- usa solo la regola del taglio 
 			- l'ordine di applicazione della regola dipende da un nodo _r_ detto _radice_
-		- procedo mantenendo un albero _T_ facendolo "crescere". 
+		- procedo mantenendo un albero _T_ facendolo "_crescere_". 
 		- un esempio di esecuzione è l'utilizzo di una [[Code con Priorità||coda con priorità]], 
 			- si parte scegliendo un nodo radice e si parte da esso. mettendolo nella queue con interesse 0 che sarà la sua chiave.
 			- si guardano i nodi adiacenti e si prende quello con interesse più basso
 			- quando un vertice ha interesse infinito lo inseriamo nella coda con interesse uguale al peso dell'arco che lo collega all'ultimo nodo scelto. 
 			- quando viene scoperto un arco con peso minore per arrivare ad un vertice con peso maggiore lo si aggiorna nella coda che lo contiene. 
-		- costo computazionale: 
-			- 1° for: $\Theta(n)$
-			- 1° while: $O(n)$ viene eseguito n volte e le operazioni al suo interno hanno costo costante, e deleteMin, decreaseKey, insert hanno costo $O(log \ n )$. 
-			- decreaseKey verrà eseguita massimo m volte che è il numero di archi per ogni vertice. 
+		- ![[Pasted image 20240821175423.png]]
+		- ### costo computazionale: 
+			- _1° for_: $\Theta(n)$
+			- _1° while_: $O(n)$ viene eseguito n volte e le operazioni al suo interno hanno costo costante e [[Code con Priorità#^a08aa3||deleteMin]], [[Code con Priorità#^c7ebd6||decreaseKey]], [[Code con Priorità#^4e87d9||insert]] hanno costo $O(log \ n )$. 
+			- _decreaseKey_ verrà eseguita massimo m volte che è il numero di archi per ogni vertice. 
 			- _Costo totale_: 
-				- $$O(n *log \ n + n *log \ n+m *log \ n)=O(n *log \ n+m *log \ n)= O(m *log \ n)$$
+				- $$O(n *log \ n + n *log \ n+m *log \ n)=$$
+				- $$=O(n *log \ n+m *log \ n)= O(m *log \ n)$$

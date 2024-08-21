@@ -3,21 +3,21 @@
 	- Nel routing dei pacchetti in reti di comunicazione vengono processati i dati con priorità più alta(ad esempio i pacchetti audio nelle videoconferenze a discapito dei pacchetti video)
 	- I pacchetti in ingresso possono essere mantenuti nella coda per processare quelli a priorità maggiore.
 - ## Operazioni
-	- ### findMin()
+	- ### findMin() ^c5a4a0
 		- restituisce un elemento associato alla chiave minima.
 			- costo computazionale $O(1)$
-	- ### insert(D data, K key)
+	- ### insert(D data, K key) ^4e87d9
 		- inserisce un nuovo elemento data con associata chiave key.
 			- _Costo_ computazionale $O(log_{d}\ n)$ 
 	- ### delete(D data)
 		- rimuove elemento dalla coda(assumendo di avere accesso diretto al dato)
-	- ### deleteMin()
+	- ### deleteMin() ^a08aa3
 		- rimuove un elemento associato alla chiave minima 
 			- prende la foglia più a destra ad altezza __h__ e la mette al posto del nodo cancellato e poi verifica se spostarla in basso o in alto(in base al valore della sua chiave)
 			- _costo_: $O(log \ n)$.
 	- ### increaseKey(D data, K key)
 		- rimpiazza la chiave dell'elemento data con la nuova chiave _key_, (se key è MAGGIORE) (assumendo di avere accesso diretto al dato)
-	- ### decreaseKey(D data, K key)
+	- ### decreaseKey(D data, K key) ^c7ebd6
 		- rimpiazza la chiave dell'elemento _data_ con la nuova chiave _key_, (se key è MINORE) (assumendo di avere accesso diretto al dato) ma poi bisogna spostare il dato in base alla nuova chiave.
 		- _Costo_ $O(log \ n)$.
 	- ##### NOTA
