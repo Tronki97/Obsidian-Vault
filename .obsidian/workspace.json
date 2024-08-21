@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md"
               }
             }
           },
@@ -203,6 +203,9 @@
   },
   "active": "e1d0a8d1cf62785e",
   "lastOpenFiles": [
+    "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
     "Pasted image 20240821185254.png",
     "Pasted image 20240821184439.png",
     "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
@@ -211,9 +214,7 @@
     "Pasted image 20240821182439.png",
     "Pasted image 20240821182239.png",
     "Pasted image 20240821182056.png",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
     "Analisi/modulo2/Disuguaglianza triangolare.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
     "Pasted image 20240821175423.png",
     "Pasted image 20240821175100.png",
     "Algoritmi e strutture dati/Modulo2/NP-completezza.md",
@@ -223,7 +224,6 @@
     "Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
     "Pasted image 20240821171416.png",
     "Pasted image 20240821165719.png",
-    "Pasted image 20240821165606.png",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
     "Algoritmi e strutture dati/Modulo2/Grafi",
     "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
