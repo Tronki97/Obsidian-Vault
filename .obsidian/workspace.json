@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -125,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -165,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md"
               }
             }
           },
@@ -203,8 +203,10 @@
   },
   "active": "e1d0a8d1cf62785e",
   "lastOpenFiles": [
+    "Pasted image 20240821185254.png",
+    "Pasted image 20240821184439.png",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
     "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
-    "Algoritmi e strutture dati/Modulo2/Algoritmo di Dijkstra.md",
     "Pasted image 20240821183334.png",
     "Pasted image 20240821182439.png",
     "Pasted image 20240821182239.png",
@@ -222,7 +224,6 @@
     "Pasted image 20240821171416.png",
     "Pasted image 20240821165719.png",
     "Pasted image 20240821165606.png",
-    "Pasted image 20240821162737.png",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
     "Algoritmi e strutture dati/Modulo2/Grafi",
     "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
@@ -244,7 +245,6 @@
     "Algoritmi e strutture dati/Modulo1/alberi",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash",
-    "Algoritmi e strutture dati/Modulo1/Notazione asintotica.md",
     "Untitled.canvas",
     "Algebra e geometria/Aritmetica modulare",
     "Algebra e geometria/Ortogonalità",

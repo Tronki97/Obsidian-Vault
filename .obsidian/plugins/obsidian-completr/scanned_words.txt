@@ -396,6 +396,8 @@ permesso
 parent
 partizione
 pesi
+passarci
+percorrere
 realizzare
 rappresentare
 risultato
@@ -1353,6 +1355,7 @@ nPd
 njjrc
 nYmM
 null
+next
 capire
 codifiche
 capacit
@@ -2291,6 +2294,8 @@ accrescere
 attraversa
 attraversano
 assunzione
+applicabile
+appartengano
 un
 una
 usato
@@ -3451,6 +3456,9 @@ ingrandire
 interesse
 inseriamo
 inizializzazione
+identifichiamo
+intermedi
+intermedio
 modo
 mentre
 massimo
@@ -4049,6 +4057,10 @@ eseguite
 each
 entrata
 ebd
+esclude
+effettivo
+effettivi
+esistenza
 base
 bit
 basano
@@ -5406,6 +5418,7 @@ visitato
 visitare
 vice
 versa
+verificata
 troppo
 testimone
 tramite
@@ -6970,6 +6983,7 @@ PIf
 PeF
 Prim
 PROP
+Precondizione
 Di
 Data
 Dati
@@ -7140,6 +7154,7 @@ DIM
 Dice
 Definizioni
 Dim
+Dopo
 Le
 La
 Lg
