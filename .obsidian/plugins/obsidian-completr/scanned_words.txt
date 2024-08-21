@@ -393,6 +393,9 @@ pair
 paths
 pesato
 permesso
+parent
+partizione
+pesi
 realizzare
 rappresentare
 risultato
@@ -759,6 +762,8 @@ rilassamento
 rilassati
 ripetuto
 ritornato
+riflessivit
+rossi
 la
 le
 lo
@@ -976,6 +981,7 @@ lOR
 lkX
 lEh
 lsR
+leggero
 ALU
 AND
 Address
@@ -1153,6 +1159,8 @@ Anu
 Aee
 All
 Attraversamento
+Archi
+ANALISI
 nel
 necessario
 numero
@@ -1344,6 +1352,7 @@ nSi
 nPd
 njjrc
 nYmM
+null
 capire
 codifiche
 capacit
@@ -1871,6 +1880,18 @@ connette
 controllando
 crescenti
 corrisponda
+componente
+connessi
+chiusi
+colorati
+coloro
+contenga
+coloralo
+connettendoli
+colora
+crescere
+connes
+costruita
 avendo
 alcune
 arriva
@@ -2263,6 +2284,10 @@ allontanarmi
 attraversato
 approssimazioni
 aggiorniamo
+aperti
+accrescere
+attraversa
+attraversano
 un
 una
 usato
@@ -2809,6 +2834,10 @@ dxk
 dUGäA
 distanze
 disuguaglianza
+decido
+discovery
+discendenti
+disfatte
 finito
 fanno
 facilmente
@@ -3073,6 +3102,8 @@ fCM
 fXq
 fCK
 for
+finish
+facendolo
 in
 il
 invece
@@ -3408,6 +3439,14 @@ ijG
 iiY
 iYZ
 induzione
+intersezione
+inesplorati
+intervalli
+intervallo
+interamente
+ingrandire
+interesse
+inseriamo
 modo
 mentre
 massimo
@@ -3716,6 +3755,7 @@ muoviBasso
 mettiamo
 minime
 marcatura
+mettendolo
 esempio
 eccede
 errori
@@ -4003,6 +4043,7 @@ ehC
 eseguo
 eseguite
 each
+entrata
 base
 bit
 basano
@@ -4204,6 +4245,8 @@ bFl
 bQR
 bZX
 bloccati
+black
+blu
 quindi
 questo
 quelle
@@ -4391,6 +4434,7 @@ qDB
 qZo
 qmk
 qfg
+queue
 se
 sarebbe
 si
@@ -4867,6 +4911,10 @@ source
 strade
 sottostruttura
 seqeunza
+scoperto
+selezionandone
+seleziona
+scegliendo
 otterremmo
 ottenere
 occupare
@@ -5350,6 +5398,8 @@ vZV
 vrPX
 visitato
 visitare
+vice
+versa
 troppo
 testimone
 tramite
@@ -5595,6 +5645,9 @@ tCh
 tqd
 tOL
 teQ
+transitivit
+time
+taglio
 grandi
 gli
 grande
@@ -5805,6 +5858,7 @@ gLN
 gVb
 gmsv
 giro
+gray
 NOT
 NotePad
 Nu
@@ -6175,6 +6229,7 @@ Idea
 IdG
 Ipi
 Inserisco
+Input
 Rappresentazione
 Registri
 Register
@@ -6365,6 +6420,7 @@ RBB
 RlI
 Ritorno
 Restituisce
+Regole
 Si
 Se
 Status
@@ -6558,6 +6614,7 @@ SrDf
 SiR
 SFX
 Single
+Scegli
 BINARY
 Bus
 BX
@@ -6905,6 +6962,7 @@ Pbb
 PQW
 PIf
 PeF
+Prim
 Di
 Data
 Dati
@@ -7073,6 +7131,7 @@ Dfj
 DPEk
 DIM
 Dice
+Definizioni
 Le
 La
 Lg
@@ -7773,6 +7832,7 @@ CZv
 Condizione
 Cerchiamo
 Calcola
+Calcolare
 Questa
 Quello
 Qz
@@ -9483,6 +9543,7 @@ wjq
 wIs
 wSw
 wOE
+white
 Oltre
 OgSf
 Od
@@ -9653,6 +9714,7 @@ OjKo
 OtU
 OqZ
 Oabz
+Output
 xz
 xX
 xF
@@ -9941,6 +10003,7 @@ Kjr
 Kcmo
 KYd
 Klz
+Kruskal
 Us
 US
 Ur

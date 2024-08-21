@@ -1,7 +1,7 @@
 - ### LINK UTILI: 
 	- https://csacademy.com/app/graph_editor/
 - ## Definizione ^2eb164
-	- ### Orientato ^b29537
+	- ### Orientato 
 		- è una coppia _(V, E)_ dove:
 			- insieme finito di vertici _V_
 			- Insieme degli archi _E_:
@@ -13,7 +13,7 @@
 				- _es_: (A, B) è incidente da A a B
 			- Un vertice w è adiacente a v sse (v, w)$\in$ E (ovvero se w è puntato direttamente da v)
 				- _es_: B è adiacente a A ma non a a D o C
-	- ### Non orientato 
+	- ### Non orientato ^b29537
 		- è una coppia _(V, E)_ dove:
 			- insieme finito di vertici _V_
 			- Insieme degli archi _E_:
@@ -81,7 +81,7 @@
 		- $$M(u, v)= \begin  {cases}c(u , v) \ \ se \{u , v\} \in E \\ \infty \ \ altrimenti \end {cases}$$
 		- ![[Pasted image 20240820175255.png]]
 	- ### Grado:
-		- [[#^2eb164||grafo non orientato]]:
+		- [[#^2eb164||grafo non orientato]]: ^27e1bf
 			- _il grado di un vertice è il numero di archi che partono da esso._
 			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] A, B, E hanno grado 2
 			  C e D hanno grado 3
@@ -104,7 +104,7 @@
 	- un cammino di dice <font color="red">semplice</font> se tutti i suoi vertici compaiono solo una volta nella sequenza
 	- se esiste un cammino <font color="red">c</font> tra i vertici <font color="red">v</font> e <font color="red">w</font> vuol dire che <font color="red">w</font> è raggiungibile da <font color="red">v</font> tramite <font color="red">c</font> 
 	- un cammino si dice _semplice_ se tutti i vertici sono distinti (compaiono una sola volta nella sequenza)
-- ## Connessione 
+- ## Connessione  ^fc32f8
 	- ### grafo non orientato:
 		- G è connesso se esiste un cammino da ogni vertice ad ogni altro vertice.
 			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] Non è un grafo connesso 

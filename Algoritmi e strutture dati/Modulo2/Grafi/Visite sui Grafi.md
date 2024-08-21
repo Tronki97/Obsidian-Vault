@@ -25,10 +25,25 @@
 				- _n_ è il numero di vertici, _m_ è il numero di archi.
 		- #### Applicazioni:
 			- si può usare per ottenere il percorso più breve fra due vertici.
-			- 
+			- ![[Pasted image 20240821165606.png]]
 	- ### algoritmo DFS(visita in profondità): ^0b997c
 		- parto dal vertice F, ne scelgo uno adiacente e continuo cercando di allontanarmi il più possibile dal nodo iniziale e si tiene traccia dei passaggi già fatti e degli archi già percorsi. 
 		- per eseguire questa ricerca vengono eseguite delle chiamate ricorsive
 		- per ogni vertice visitato corrisponde un record di attivazione 
 		- permette di verificare assenza di cicli e risolvere problemi su grafi ordinati.
-		- 
+		- ![[Pasted image 20240821165719.png]]
+			- _time_ è una variabile che conta il numero di "passi" dell'algoritmo.
+			- `u.dt`(discovery time): tempo in cui il nodo è stato scoperto.
+			- `u.ft`(finish time): tempo in cui la visita del nodo termina.
+			- _white_ = inesplorati
+			- _gray_ = aperti
+			- _black_ = chiusi
+		- #### Proprietà 
+			- in una qualsiasi visita DFS di un grafo $G$ per ogni coppia di vertici $u,v$, _una sola delle seguenti condizioni è vera_:
+				- Gli intervalli $[\mathbf{u.dt}, \mathbf{u.ft}]$ e $[\mathbf{v.dt}, \mathbf{v.ft}]$ sono disgiunti $\implies$ _u,v non sono discendenti l'uno dell'altro nella foresta DF_
+				- L'intervallo $[\mathbf{u.dt,u.ft}]$ è interamente contenuto in $[\mathbf{v.dt,v.ft}]$ $\implies$ _u è discendente di v in un albero della foresta DF_.
+				- L'intervallo $[\mathbf{v.dt,v.ft}]$ è interamente contenuto in $[\mathbf{u.dt,u.ft}]$ $\implies$ _v è discendente di u in un albero della foresta DF_.
+			- ##### Corollario:
+				- Il vertice _v_ è un discendente del vertice _u_ nella foresta _DF_ per un grafo _G_ sse: $$\mathbf{u.dt< v.dt< v.ft< u.ft}$$
+			- ##### Output:
+				- invece di generare un albero genera una foresta _DF_ che contiene un insieme di alberi _DF_ $G_{\pi}=(V, E_{\pi})$ 

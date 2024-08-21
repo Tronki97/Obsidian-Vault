@@ -1,37 +1,37 @@
-- # Input:
-	- G = (V, E) un grafo non orientato e connesso
+- ## Input:
+	- G = (V, E) un grafo [[Grafi#^b29537||non orientato]] e  [[Grafi#^fc32f8||connesso]] 
 	- w: $V \times V \rightarrow \mathbb{R}$ una funzione peso
 		- se $\{u, v\} \in E$ allora  w(u,v) è il peso dell'arco {u, v}
 		- se invece non appartiene w(u, v)= $\infty$ 
 	- visto che G non è orientato  w(u, v)= w(v, u)
-- # Albero di copertura:
-	- Dato un grafo G = (V, E) non orientato e connesso, un albero di copertura di G è un sotto-grafo $T = (V, E_T)$ tale che
+- ## Albero di copertura:
+	- Dato un grafo _G = (V, E)_ non orientato e connesso, un albero di copertura di G è un sotto-grafo $T = (V, E_T)$ tale che
 		- T è un albero 
 		- $E_T\subseteq E$
 		- T contiene tutti i nodi di G
-- # Output:
+- ## Output:
 	- un albero di copertura T con peso totale:
 		- $$w(T) = \sum_{(u,v)\in T}w(u, v)$$
 		  sia minimo tra tutti gli alberi possibili.
 - # Calcolare MST
 	- ## Metodo generico:
 		- ### Idea:
-			- _accrescere_ un sottoinsieme T di archi con la seguente condizione:
-				- T è sottoinsieme di qualche albero di copertura minimo 
+			- _accrescere_ un sottoinsieme _T_ di archi con la seguente condizione:
+				- _T_ è sottoinsieme di qualche albero di copertura minimo 
 			- un arco {u, v} è detto _sicuro_ per T se $T\ \cup \{u, v\}$ è un ancora un sottoinsieme di qualche MST 
 			- ![[Screenshot 2024-05-06 at 09-29-29 Minimum Spanning Tree - 18-MinimumSpanningTree.pdf.png]]
-				- Archi blu: fanno parte della soluzione 
-				- archi rossi  non fanno parte della soluzione.
+				- Archi _blu_: fanno parte della soluzione 
+				- archi _rossi_  non fanno parte della soluzione.
 		- ### Definizioni:
 			- _taglio_ : 
-				- un taglio (S, V - S) di un grafo non orientato G =(V, E) è una partizione di V in due sottoinsiemi disgiunti
+				- un taglio _(S, V - S)_ di un grafo non orientato _G =(V, E)_ è una partizione di _V_ in due sottoinsiemi disgiunti
 				- un arco {u, v} _attraversa il taglio_ se $u\in S \ \wedge \ v\in V-S$
 				- un taglio _rispetta_ un insieme di archi T se nessun arco di T attraversa il taglio 
 				- un arco che attraversa un taglio è _leggero_ se il suo peso è minimo fra i pesi degli archi che attraversano un taglio.
-		- Regole:
+		- ### Regole:
 			- del _taglio_:
 				- scelgo un taglio G che _rispetta_ gli archi già colorati di blu. Tra tutti gli archi non colorati che attraversano il taglio selezionandone uno _leggero_ e lo coloro di blu.
-			- del ciclo:
+			- del _ciclo_:
 				- Scegli un ciclo semplice in G che _non contenga archi rossi_. tra tutti gli archi non colorati del ciclo, seleziona un arco di costo massimo e coloralo di rosso 
 	- ## Algoritmo di Kruskal:  ^94c267
 		- Fisso un ordine di applicazione delle regole:

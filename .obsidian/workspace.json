@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,25 @@
             }
           },
           {
-            "id": "1428ceed3c7f29a8",
+            "id": "ce7da8cbc783254e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "28bcb7da86bc8dc8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -75,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "grafo connesso",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md"
               }
             }
           },
@@ -190,8 +203,15 @@
   },
   "active": "e1d0a8d1cf62785e",
   "lastOpenFiles": [
+    "Algoritmi e strutture dati/Modulo2/NP-completezza.md",
+    "Algoritmi e strutture dati/Modulo2/Minimum Spanning Tree.md",
+    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche.md",
     "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
     "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
+    "Pasted image 20240821171416.png",
+    "Pasted image 20240821165719.png",
+    "Pasted image 20240821165606.png",
     "Pasted image 20240821162737.png",
     "Pasted image 20240820175255.png",
     "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
@@ -202,9 +222,6 @@
     "Pasted image 20240820171615.png",
     "Pasted image 20240820171523.png",
     "Pasted image 20240820165930.png",
-    "Pasted image 20240820165913.png",
-    "Pasted image 20240820165855.png",
-    "Pasted image 20240820164238.png",
     "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
     "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Algoritmi e strutture dati/Modulo1/Analisi ammortizzata.md",
@@ -229,9 +246,6 @@
     "Algebra e geometria/Simmetria.md",
     "Untitled.canvas",
     "Algebra e geometria/Determinante/Determinante.md",
-    "Algebra e geometria/Determinante/Regola di Sarrus.md",
-    "Algebra e geometria/Applicazione lineare/Suriettiva.md",
-    "Algebra e geometria/Applicazione lineare/iniettiva.md",
     "Algebra e geometria/Aritmetica modulare",
     "Algebra e geometria/Ortogonalità",
     "Algebra e geometria/Autovalore e Autovettore",
