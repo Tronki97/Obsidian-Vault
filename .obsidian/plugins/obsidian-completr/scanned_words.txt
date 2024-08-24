@@ -766,6 +766,7 @@ ripetuto
 ritornato
 riflessivit
 rossi
+ricostruzione
 la
 le
 lo
@@ -1897,6 +1898,8 @@ connes
 costruita
 collegano
 combinando
+collegate
+critica
 avendo
 alcune
 arriva
@@ -3112,6 +3115,7 @@ fCK
 for
 finish
 facendolo
+finali
 in
 il
 invece
@@ -4933,6 +4937,8 @@ selezionandone
 seleziona
 scegliendo
 scompone
+supera
+soglia
 otterremmo
 ottenere
 occupare
@@ -5169,6 +5175,7 @@ oSf
 oLO
 oEdH
 oWU
+ottimale
 va
 valore
 viene
@@ -7857,6 +7864,7 @@ Condizione
 Cerchiamo
 Calcola
 Calcolare
+Commenti
 Questa
 Quello
 Qz
