@@ -29,3 +29,5 @@
 		- una volta per ogni arco.
 	- ### Totale:
 		- $$O((n+m)\log n)=O(m\log n)$$Se tutti i nodi sono raggiungibili dalla sorgente.
+- ## Riassunto 
+	- l'[[Algoritmo di Dijkstra]] è una [[Visite sui Grafi#^3c4eb5||BFS]] dove all'inizio la tabella distanze viene settata tutta a $+\infty$ e quella pred a $-1$ si prosegue con la coda dove il dato è il nodo e la chiave è la sua distanza dal nodo _s_ iniziale. Poi fintanto che la coda non è vuota continua il While assegna ad _u_ il nodo con distanza minima da _s_ e lo toglie dalla coda. Procede a controllare ogni nodo adiacente a _u_ e se il nodo non è ancora stato visitato assegna la sua distanza come $D[u]+w(u, v)$ poi lo inserisce in coda con chiave la sua distanza, poi nell'[[Array]] $\mathbf{pred}[v]=u$. se invece il nodo è già stato visitato controlla che  il nuovo percorso sia minore di quello già impostato e lo assegna in maniera tale se è così  poi nell'[[Array]] $\mathbf{pred}[v]=u$. alla fine ritorna l'array con le distanze di ogni vertice da quello iniziale. 

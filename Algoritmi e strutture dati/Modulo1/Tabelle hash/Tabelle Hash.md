@@ -16,10 +16,10 @@
 		- poter essere calcolata velocemente
 		- garantire una buona distribuzione delle chiavi su T
 			- ciò garantisce il minimizzarsi del rischio di collisioni.
-	- Gestire le collisioni:
+	- ### Gestire le collisioni:
 		- inevitabili
 		- dobbiamo gestirle 
-	- per l'array di dimensione m=$\Theta(K)$
+	- ### per l'array di dimensione m=$\Theta(K)$
 		- possiamo solo stimare _m_
 		- potrebbe essere necessario ridimensionare T(array)
 		- la scelta di m dipende dalla funzione hash e dal metodo di gestione delle collisioni

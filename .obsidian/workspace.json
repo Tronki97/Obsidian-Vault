@@ -8,72 +8,32 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e1d0a8d1cf62785e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "91537bf35b065cbf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ce7da8cbc783254e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "28bcb7da86bc8dc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "da8ac19736214c98",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Analisi di costo/Equazioni di ricorrenza.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7ee62c20f86b5e80",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "grafo connesso",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -139,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md"
+                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md"
               }
             }
           },
@@ -215,48 +175,49 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "da8ac19736214c98",
   "lastOpenFiles": [
-    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Complessità computazionale.md",
-    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
-    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Equazioni di ricorrenza.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
-    "Algoritmi e strutture dati/Modulo1/Analisi di costo",
-    "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
-    "Algoritmi e strutture dati/Modulo1/Tabelle hash/Tabelle Hash.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
-    "Pasted image 20240821185254.png",
-    "Pasted image 20240821184439.png",
     "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
-    "Pasted image 20240821183334.png",
-    "Pasted image 20240821182439.png",
-    "Pasted image 20240821182239.png",
-    "Pasted image 20240821182056.png",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
+    "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
+    "Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
+    "Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
+    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica union by rank.md",
+    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
+    "Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
+    "Algoritmi e strutture dati/Modulo1/Tabelle hash/Tabelle Hash.md",
+    "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
+    "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
+    "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
+    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Equazioni di ricorrenza.md",
+    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
+    "Pasted image 20240828151856.png",
+    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
+    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
+    "immagini/Pasted image 20240821185254.png",
+    "immagini/Pasted image 20240820162246.png",
+    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Complessità computazionale.md",
+    "programmazione/c++/Puntatori e strutture dati Dinamiche.md",
+    "Algoritmi e strutture dati/Modulo1/Analisi di costo",
+    "immagini/Pasted image 20240821184439.png",
+    "immagini/Pasted image 20240821183334.png",
+    "immagini/Pasted image 20240821182439.png",
+    "immagini/Pasted image 20240821182239.png",
+    "immagini/Pasted image 20240821182056.png",
     "Analisi/modulo2/Disuguaglianza triangolare.md",
-    "Pasted image 20240821175423.png",
-    "Pasted image 20240821175100.png",
+    "immagini/Pasted image 20240821175423.png",
+    "immagini/Pasted image 20240821175100.png",
     "Algoritmi e strutture dati/Modulo2/NP-completezza.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
-    "Pasted image 20240821171416.png",
-    "Pasted image 20240821165719.png",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
     "Algoritmi e strutture dati/Modulo2/Grafi",
-    "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Algoritmi e strutture dati/Modulo1/Heap",
-    "Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
-    "Algoritmi e strutture dati/Modulo2/Union Find/Strutture Union-Find.md",
     "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche",
-    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica \"union by rank\".md",
-    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
-    "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
     "Algoritmi e strutture dati/Modulo2/Union Find",
-    "Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
     "Algoritmi e strutture dati/Modulo1/alberi",
     "Algoritmi e strutture dati/Modulo1/Tabelle hash",
     "Untitled.canvas",

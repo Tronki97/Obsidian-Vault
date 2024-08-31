@@ -16,7 +16,7 @@
 			- prende la foglia più a destra ad altezza __h__ e la mette al posto del nodo cancellato e poi verifica se spostarla in basso o in alto(in base al valore della sua chiave)
 			- _costo_: $O(log \ n)$.
 	- ### increaseKey(D data, K key)
-		- rimpiazza la chiave dell'elemento data con la nuova chiave _key_, (se key è MAGGIORE) (assumendo di avere accesso diretto al dato)
+		- rimpiazza la chiave dell'elemento _data_ con la nuova chiave _key_, (se key è MAGGIORE) (assumendo di avere accesso diretto al dato)
 	- ### decreaseKey(D data, K key) ^c7ebd6
 		- rimpiazza la chiave dell'elemento _data_ con la nuova chiave _key_, (se key è MINORE) (assumendo di avere accesso diretto al dato) ma poi bisogna spostare il dato in base alla nuova chiave.
 		- _Costo_ $O(log \ n)$.

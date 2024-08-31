@@ -2,7 +2,7 @@
 	- ### Def:
 		- Dato un [[Grafi||grafo]] $G=<V,E>$ ed un vertice _$s$_ di $V$ _visitare ogni vertice raggiungibile nel grafo dal vertice s_ 
 		- Ogni nodo deve essere visitato una sola volta.
-	- ### Algoritmo BFS(Visita in ampiezza):
+	- ### Algoritmo BFS(Visita in ampiezza): ^3c4eb5
 		- partendo da un vertice F mettiamo i vertici adiacenti ad esso in una coda FIFO, si tiene traccia degli archi usati per raggiungere quei determinati vertici.
 		- si procede col punto precedente fino a creare un albero con ogni coda che rappresenta i figli del nodo preso come radice. 
 		- Utile per calcolare le distanze
@@ -24,13 +24,13 @@
 			- $O(n^{2})$ usando la [[Grafi#^574110||matrice di adiacenza]]
 				- _n_ è il numero di vertici, _m_ è il numero di archi.
 		- #### Applicazioni:
-			- si può usare per ottenere il percorso più breve fra due vertici.
+			- _si può usare per ottenere il percorso più breve fra due vertici._
 			- ![[Pasted image 20240821165606.png]]
 	- ### algoritmo DFS(visita in profondità): ^0b997c
 		- parto dal vertice F, ne scelgo uno adiacente e continuo cercando di allontanarmi il più possibile dal nodo iniziale e si tiene traccia dei passaggi già fatti e degli archi già percorsi. 
 		- per eseguire questa ricerca vengono eseguite delle chiamate ricorsive
 		- per ogni vertice visitato corrisponde un record di attivazione 
-		- permette di verificare assenza di cicli e risolvere problemi su grafi ordinati.
+		- _permette di verificare assenza di cicli e risolvere problemi su grafi ordinati._
 		- ![[Pasted image 20240821165719.png]]
 			- _time_ è una variabile che conta il numero di "passi" dell'algoritmo.
 			- `u.dt`(discovery time): tempo in cui il nodo è stato scoperto.

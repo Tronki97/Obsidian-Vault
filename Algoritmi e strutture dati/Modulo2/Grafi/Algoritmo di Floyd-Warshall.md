@@ -14,9 +14,11 @@
 			- il _k-1_ non esclude l'utilizzo effettivo del nodo k ma garantisce di evitare il passaggio ripetuto su uno stesso nodo.
 		- #### riassumendo:
 			- $$D_{xy}^{k}=min\{D_{xk}^{k-1},D_{ky}^{k-1}, D_{xy}^{k-1}\}$$
-	- ![[Pasted image 20240821184439.png]]
+	- ![[Pasted image 20240828151856.png]]
 		- ### Costo: 
 			- tempo: $O(n^{3})$,  spazio: $O(n^{2})$
+		- ### Riassunto:
+			- nella matrice delle distanze di ogni coppia di nodi associa il valore 0 se si parla dello stesso nodo, se sono nodi adiacenti ci associa il peso dell'arco e il campo next viene aggiornato col nodo di destinazione, in tutti gli altri casi $+\infty$ finita l'inizializzazione procede a controllare se, utilizzando un terzo nodo _k_, la distanza tra i nodi _x,y_ diminuisce, in tal caso modifica la distanza nella matrice _D_  e aggiorna il campo next del nodo di partenza con il nodo intermedio _k_ infine restituisce la matrice delle distanze _D_. 
 	- ### Stampa dei cammini:
 		- Al termine dell'algoritmo la procedura seguente stampa i nodi del cammino di costo minimo che va dal nodo _u_ al nodo _v_ in ordine di attraversamento:
 			- ![[Pasted image 20240821185254.png]]
@@ -25,3 +27,5 @@
 			- next$[x,y]$: nelle colonne sono rappresentate le sequenze di passaggio da un vertice all'altro, -1 rappresenta il non poter arrivare ad un nodo attraverso un altro:
 				- ![[Screenshot 2024-05-09 at 10-43-28 Cammini minimi - 19-CamminiMinimi.pdf.png]]
 	- L'algoritmo può anche essere usato per individuare i cicli negativi, infatti quando termina l'algoritmo viene verificata la loro esistenza.
+	- ### Individuare cicli negativi.
+		- al termine dell'algoritmo se la distanza di un nodo da se stesso è minore di 0 allora vuol dire che quel nodo fa parte di un ciclo negativo.
