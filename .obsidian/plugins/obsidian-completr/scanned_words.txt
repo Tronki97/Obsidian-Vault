@@ -6829,6 +6829,7 @@ Super
 SWiEI
 Sva
 SfT
+Storia
 BINARY
 Bus
 BX
