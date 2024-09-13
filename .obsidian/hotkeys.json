@@ -24,5 +24,14 @@
       ],
       "key": "A"
     }
+  ],
+  "editor:toggle-checklist-status": [],
+  "obsidian-git:commit": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
   ]
 }

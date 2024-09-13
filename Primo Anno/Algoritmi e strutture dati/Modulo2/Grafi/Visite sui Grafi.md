@@ -1,0 +1,49 @@
+- ## Attraversamento grafi:
+	- ### Def:
+		- Dato un [[Grafi||grafo]] $G=<V,E>$ ed un vertice _$s$_ di $V$ _visitare ogni vertice raggiungibile nel grafo dal vertice s_ 
+		- Ogni nodo deve essere visitato una sola volta.
+	- ### Algoritmo BFS(Visita in ampiezza): ^3c4eb5
+		- partendo da un vertice F mettiamo i vertici adiacenti ad esso in una coda FIFO, si tiene traccia degli archi usati per raggiungere quei determinati vertici.
+		- si procede col punto precedente fino a creare un albero con ogni coda che rappresenta i figli del nodo preso come radice. 
+		- Utile per calcolare le distanze
+		- ![[Pasted image 20240821162737.png]]
+			- F gestito tramite una coda
+			- `v.mark` è la marcatura del nodo _v_
+			- `v.dist` è la distanza del nodo _v_ dal vertice iniziale _s_
+			- `v.parent` è il padre di _v_ nell'albero _T_ 
+			- viene ritornato l'albero _T_ che viene costruito dalla visita.
+		- #### Proprietà:
+			- ##### Visita i nodi a distanze crescenti dalla sorgente:
+				- visita per primi i nodi a distanza $k$ poi quelli a distanza $k+1$
+			- ##### Genera un albero BF
+				- Albero che contiene tutti i vertici raggiungibili da _s_ e tale che il cammino da _s_ ad un altro nodo nell'albero corrisponda al cammino più breve nel grafo.
+			- ##### Calcola la distanza minima da s a tutti i vertici raggiungibili.
+				- numero di archi attraversati per andare da _s_ ad un vertice raggiungibile a partire da _s_
+		- #### Costo: 
+			- $O(n+m)$ usando le [[Grafi#^c02f81||liste di adiacenza]]
+			- $O(n^{2})$ usando la [[Grafi#^574110||matrice di adiacenza]]
+				- _n_ è il numero di vertici, _m_ è il numero di archi.
+		- #### Applicazioni:
+			- _si può usare per ottenere il percorso più breve fra due vertici._
+			- ![[Pasted image 20240821165606.png]]
+	- ### algoritmo DFS(visita in profondità): ^0b997c
+		- parto dal vertice F, ne scelgo uno adiacente e continuo cercando di allontanarmi il più possibile dal nodo iniziale e si tiene traccia dei passaggi già fatti e degli archi già percorsi. 
+		- per eseguire questa ricerca vengono eseguite delle chiamate ricorsive
+		- per ogni vertice visitato corrisponde un record di attivazione 
+		- _permette di verificare assenza di cicli e risolvere problemi su grafi ordinati._
+		- ![[Pasted image 20240821165719.png]]
+			- _time_ è una variabile che conta il numero di "passi" dell'algoritmo.
+			- `u.dt`(discovery time): tempo in cui il nodo è stato scoperto.
+			- `u.ft`(finish time): tempo in cui la visita del nodo termina.
+			- _white_ = inesplorati
+			- _gray_ = aperti
+			- _black_ = chiusi
+		- #### Proprietà 
+			- in una qualsiasi visita DFS di un grafo $G$ per ogni coppia di vertici $u,v$, _una sola delle seguenti condizioni è vera_:
+				- Gli intervalli $[\mathbf{u.dt}, \mathbf{u.ft}]$ e $[\mathbf{v.dt}, \mathbf{v.ft}]$ sono disgiunti $\implies$ _u,v non sono discendenti l'uno dell'altro nella foresta DF_
+				- L'intervallo $[\mathbf{u.dt,u.ft}]$ è interamente contenuto in $[\mathbf{v.dt,v.ft}]$ $\implies$ _u è discendente di v in un albero della foresta DF_.
+				- L'intervallo $[\mathbf{v.dt,v.ft}]$ è interamente contenuto in $[\mathbf{u.dt,u.ft}]$ $\implies$ _v è discendente di u in un albero della foresta DF_.
+			- ##### Corollario:
+				- Il vertice _v_ è un discendente del vertice _u_ nella foresta _DF_ per un grafo _G_ sse: $$\mathbf{u.dt< v.dt< v.ft< u.ft}$$
+			- ##### Output:
+				- invece di generare un albero genera una foresta _DF_ che contiene un insieme di alberi _DF_ $G_{\pi}=(V, E_{\pi})$ 

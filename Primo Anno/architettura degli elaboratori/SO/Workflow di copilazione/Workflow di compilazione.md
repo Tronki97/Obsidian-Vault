@@ -1,0 +1,12 @@
+- ## Processi 
+	- Compilatore: 
+		- traduce il linguaggio da alto livello in linguaggio oggetto, ovvero Assembly 
+	- [[Linker]]: 
+		- unisce al codice compilato il codice oggetto delle librerie importate
+	- Computer: 
+		- traduce il codice oggetto in codice macchina (binario) e lo esegue
+- ![[Pasted image 20240530182722.png]]
+  ![[Pasted image 20240530182732.png]]
+- ## Tipi di compilazione:
+	- Compilazione diretta: prevede che nella fase di traduzione il linguaggio di programmazione ad alto livello venga tradotto in linguaggio assembly 
+	- [[Compilazione a 2 livelli]]

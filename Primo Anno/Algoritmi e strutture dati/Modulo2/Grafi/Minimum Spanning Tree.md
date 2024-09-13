@@ -1,0 +1,64 @@
+- ## Input:
+	- G = (V, E) un grafo [[Grafi#^b29537||non orientato]] e  [[Grafi#^fc32f8||connesso]] 
+	- w: $V \times V \rightarrow \mathbb{R}$ una funzione peso
+		- se $\{u, v\} \in E$ allora  w(u,v) è il peso dell'arco {u, v}
+		- se invece non appartiene w(u, v)= $\infty$ 
+	- visto che G non è orientato  w(u, v)= w(v, u)
+- ## Albero di copertura:
+	- Dato un grafo _G = (V, E)_ non orientato e connesso, un albero di copertura di G è un sotto-grafo $T = (V, E_T)$ tale che
+		- T è un albero 
+		- $E_T\subseteq E$
+		- T contiene tutti i nodi di G
+- ## Output:
+	- un albero di copertura T con peso totale:
+		- $$w(T) = \sum_{(u,v)\in T}w(u, v)$$
+		  sia minimo tra tutti gli alberi possibili.
+- # Calcolare MST
+	- ## Metodo generico:
+		- ### Idea:
+			- _accrescere_ un sottoinsieme _T_ di archi con la seguente condizione:
+				- _T_ è sottoinsieme di qualche albero di copertura minimo 
+			- un arco {u, v} è detto _sicuro_ per T se $T\ \cup \{u, v\}$ è un ancora un sottoinsieme di qualche MST 
+			- ![[Screenshot 2024-05-06 at 09-29-29 Minimum Spanning Tree - 18-MinimumSpanningTree.pdf.png]]
+				- Archi _blu_: fanno parte della soluzione 
+				- archi _rossi_  non fanno parte della soluzione.
+		- ### Definizioni:
+			- _taglio_ : 
+				- un taglio _(S, V - S)_ di un grafo non orientato _G =(V, E)_ è una partizione di _V_ in due sottoinsiemi disgiunti
+				- un arco {u, v} _attraversa il taglio_ se $u\in S \ \wedge \ v\in V-S$
+				- un taglio _rispetta_ un insieme di archi T se nessun arco di T attraversa il taglio 
+				- un arco che attraversa un taglio è _leggero_ se il suo peso è minimo fra i pesi degli archi che attraversano un taglio.
+		- ### Regole:
+			- del _taglio_:
+				- scelgo un taglio G che _rispetta_ gli archi già colorati di blu. Tra tutti gli archi non colorati che attraversano il taglio selezionandone uno _leggero_ e lo coloro di blu.
+			- del _ciclo_:
+				- Scegli un ciclo semplice in G che _non contenga archi rossi_. tra tutti gli archi non colorati del ciclo, seleziona un arco di costo massimo e coloralo di rosso 
+	- ## Algoritmo di Kruskal:  ^94c267
+		- ### idea:
+			- ingrandire sottoinsiemi disgiunti di MST connettendoli fra di loro fino ad avere l'albero finale.
+			- Considero gli archi in ordine crescente di peso:
+				- Se l'arco e = {u, v} connette due alberi blu distinti, lo si colora di blu, altrimenti lo si colora di rosso.
+			- l'algoritmo è [[Algoritmi Greedy||greedy]] perché ad ogni passo si aggiunge alla "foresta" un arco con il peso minimo.
+		- ### Algoritmo:
+			- ![[Pasted image 20240821175100.png]]
+		- ### ANALISI:
+			- il costo dipende dall'implementazione di [[Strutture Union-Find||union find]] che usiamo:
+				- [[Strutture Union-Find#^9be1ea||quickUnion con euristica sul rango]] il costo totale: $O(m+n\ *log (n+m)\ )=O(2m\ *\ log(n+2n)=$
+				  =$O(m*log\ n))$ 
+	- ## Algoritmo di Prim
+		- usa solo la regola del taglio 
+			- l'ordine di applicazione della regola dipende da un nodo _r_ detto _radice_
+		- procedo mantenendo un albero _T_ facendolo "_crescere_". 
+		- un esempio di esecuzione è l'utilizzo di una [[Code con Priorità||coda con priorità]], 
+			- si parte scegliendo un nodo radice e si parte da esso. mettendolo nella queue con interesse 0 che sarà la sua chiave.
+			- si guardano i nodi adiacenti e si prende quello con interesse più basso
+			- quando un vertice ha interesse infinito lo inseriamo nella coda con interesse uguale al peso dell'arco che lo collega all'ultimo nodo scelto. 
+			- quando viene scoperto un arco con peso minore per arrivare ad un vertice con peso maggiore lo si aggiorna nella coda che lo contiene. 
+		- ![[Pasted image 20240821175423.png]]
+		- ### costo computazionale: 
+			- _1° for_: $\Theta(n)$
+			- _1° while_: $O(n)$ viene eseguito n volte e le operazioni al suo interno hanno costo costante e [[Code con Priorità#^a08aa3||deleteMin]], [[Code con Priorità#^c7ebd6||decreaseKey]], [[Code con Priorità#^4e87d9||insert]] hanno costo $O(log \ n )$. 
+			- _decreaseKey_ verrà eseguita massimo m volte che è il numero di archi per ogni vertice. 
+			- _Costo totale_: 
+				- $$O(n *log \ n + n *log \ n+m *log \ n)=$$
+				- $$=O(n *log \ n+m *log \ n)= O(m *log \ n)$$

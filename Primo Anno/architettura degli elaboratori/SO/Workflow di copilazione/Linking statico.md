@@ -1,0 +1,13 @@
+- ## Operazioni:
+	- ### 1)Unione dei moduli
+		- i moduli oggetto vengono uniti in un solo file secondo un ordine deciso dal [[Linker]] esso si tiene traccia di:
+			- _lunghezza del modulo_, ovvero da quante istruzioni è composto
+			- _indirizzo di inizio del nuovo spazio di indirizzamento_, ovvero in quale posizione si trova rispetto all'inizio del file.
+	- ### 2)Rilocazione dei riferimenti interni 
+		- per ogni modulo ogni indirizzo di salto deve essere sommato all'indirizzo di inizio nel nuovo spazio di indirizzamento
+	- ### 3)Rilocazione dei riferimenti esterni
+		- si utilizza il _modulo oggetto_ prodotto dal traduttore ed esso contiene informazioni utili:
+			-  ![[Pasted image 20240530184242.png]]
+			- in particolare si consulta la _tabella dei riferimenti esterni_ per sostituire per ogni modulo, ad ogni indirizzo di salto esterno, il giusto indirizzo del modulo di riferimento  
+- ## ES:
+	- Il modulo _A_ ha nella sua _tabella dei riferimenti esterni_ una chiamata di funzione(_CALL_) a una procedura del modulo _B_ basta andare nella _tabella dei punti di ingresso_ di _B_ e trovare il corrispondente indirizzo della procedura interessata, da sostituire nella _CALL_ di _A_.

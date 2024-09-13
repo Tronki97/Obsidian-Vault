@@ -1,6 +1,0 @@
-- ## Principio 
-	- ogni segmento viene suddiviso in pagine e ogni segmento ha la sua tabella delle pagine. Quidni un indirizzo virtuale dovrà avere:
-		- bit per il numero di segmento
-		- bit per il numero di pagina 
-		- bit di offset
-		- ![[Pasted image 20240530181244.png]]

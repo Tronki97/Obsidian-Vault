@@ -407,6 +407,9 @@ produce
 prefisso
 pred
 prosegue
+private
+protected
+paul
 realizzare
 rappresentare
 risultato
@@ -781,6 +784,9 @@ riassegnargli
 ridotte
 recuperati
 reinserito
+rHo
+rsD
+rItV
 la
 le
 lo
@@ -1184,6 +1190,10 @@ All
 Attraversamento
 Archi
 ANALISI
+Ays
+ASU
+AqJ
+Apb
 nel
 necessario
 numero
@@ -1383,6 +1393,9 @@ nuovi
 nCA
 nZM
 nLalj
+nKw
+nUE
+nQP
 capire
 codifiche
 capacit
@@ -1934,6 +1947,14 @@ caratterizzato
 cosro
 continua
 controlla
+cartella
+classi
+campi
+cEhY
+cnr
+cAK
+cJA
+cWm
 avendo
 alcune
 arriva
@@ -2350,6 +2371,12 @@ aYi
 attraversamento
 assegna
 aggiornato
+automatica
+anch
+aubB
+ahkB
+aOb
+aBn
 un
 una
 usato
@@ -2570,6 +2597,8 @@ uCWM
 uMaC
 uIDATx
 utilizzando
+uSf
+uhvuh
 decremento
 del
 di
@@ -2908,6 +2937,10 @@ distrutta
 dereferenziazione
 deallocazione
 diminuisce
+dir
+documentazione
+dzS
+dovuto
 finito
 fanno
 facilmente
@@ -3178,6 +3211,8 @@ finali
 fai
 fvA
 fintanto
+fCX
+fhy
 in
 il
 invece
@@ -3531,6 +3566,11 @@ iiiHJJ
 ihE
 iAi
 impostato
+inserite
+iterable
+iZr
+iRP
+imperfezioni
 modo
 mentre
 massimo
@@ -4139,6 +4179,13 @@ estese
 eccetto
 esprimere
 estratto
+espressa
+estende
+estendono
+estesa
+eIP
+ewR
+ejd
 base
 bit
 basano
@@ -4342,6 +4389,11 @@ bZX
 bloccati
 black
 blu
+bje
+bRt
+bbz
+bfax
+btr
 quindi
 questo
 quelle
@@ -4531,6 +4583,8 @@ qmk
 qfg
 queue
 qMC
+qSyc
+qEb
 se
 sarebbe
 si
@@ -5025,6 +5079,15 @@ sottovettoe
 stringhe
 sequenzi
 settata
+specificato
+sottoclasse
+stanti
+stante
+sovrascritto
+sottoclassi
+sSA
+snr
+sYuv
 otterremmo
 ottenere
 occupare
@@ -5266,6 +5329,10 @@ occupano
 operatore
 opera
 originario
+ocm
+oPx
+oNt
+oGGG
 va
 valore
 viene
@@ -5518,6 +5585,7 @@ versa
 verificata
 vien
 vcv
+vin
 troppo
 testimone
 tramite
@@ -5769,6 +5837,7 @@ taglio
 typedef
 trasformano
 toglie
+tMAG
 grandi
 gli
 grande
@@ -5983,6 +6052,7 @@ gray
 garbage
 gruppi
 gPSI
+gjjP
 NOT
 NotePad
 Nu
@@ -6155,6 +6225,8 @@ NULL
 NGQ
 NVaL
 NYFa
+NVC
+NNCJ
 Il
 Instruction
 IR
@@ -6361,6 +6433,7 @@ Input
 Iteratori
 Individuare
 Ipj
+IEJ
 Rappresentazione
 Registri
 Register
@@ -6552,6 +6625,9 @@ RlI
 Ritorno
 Restituisce
 Regole
+RLAN
+RjP
+RTnJ
 Si
 Se
 Status
@@ -6749,6 +6825,10 @@ Scegli
 Suddivisione
 Sottovettore
 Scompongo
+Super
+SWiEI
+Sva
+SfT
 BINARY
 Bus
 BX
@@ -7103,6 +7183,7 @@ Precondizione
 Puntatori
 PTW
 Procede
+PMrt
 Di
 Data
 Dati
@@ -7277,6 +7358,7 @@ Dopo
 DELETE
 Definiamo
 Definisco
+DwF
 Le
 La
 Lg
@@ -7431,6 +7513,8 @@ Lemma
 LEAKS
 Lyh
 LND
+LDvq
+LTr
 Modulo
 Massimo
 Memory
@@ -7613,6 +7697,12 @@ MLSI
 MqUA
 MXgH
 MEMORY
+MQq
+MJz
+Mqyrm
+MNxOVG
+MWD
+MbW
 ES
 Esempi
 Ex
@@ -7783,6 +7873,9 @@ Estrarre
 Eseguo
 Edd
 EiSz
+Ereditariet
+EJL
+Errore
 Come
 Codifica
 Counter
@@ -7988,6 +8081,8 @@ Calcolare
 Commenti
 Ccp
 CSi
+Concetti
+CkgO
 Questa
 Quello
 Qz
@@ -8162,6 +8257,7 @@ QrYx
 QFS
 QCV
 Qhh
+QRfR
 Formato
 FLIP
 FLOP
@@ -8352,6 +8448,8 @@ FIFO
 Formulazioni
 Ford
 Fiq
+FhL
+FAU
 Word
 WK
 WB
@@ -8632,6 +8730,7 @@ zuX
 zOJ
 zaino
 zqq
+zAT
 Half
 HACK
 HIT
@@ -8793,6 +8892,7 @@ HmWA
 Hrb
 Hwt
 HQQQ
+Hrq
 XOR
 Xm
 Xo
@@ -8934,6 +9034,8 @@ XTW
 XCw
 XSe
 XguK
+XPT
+XzH
 ha
 ho
 hack
@@ -9093,6 +9195,8 @@ hin
 hyb
 hand
 hih
+hmG
+heX
 JZ
 JT
 Jd
@@ -9249,6 +9353,12 @@ JBf
 JQm
 Jof
 JzD
+JOM
+JHbaTbT
+JsIM
+Jyt
+JcS
+JZy
 kB
 kW
 kWs
@@ -9407,6 +9517,9 @@ kNH
 ksn
 kySp
 kLB
+kbn
+kAx
+koJ
 jmp
 jy
 jwä
@@ -9551,6 +9664,8 @@ jne
 jLl
 jDi
 jir
+javac
+javadoc
 word
 wu
 wf
@@ -9711,6 +9826,8 @@ white
 wcou
 wne
 wPJ
+warnings
+waz
 Oltre
 OgSf
 Od
@@ -9883,6 +10000,12 @@ OqZ
 Oabz
 Output
 OSb
+Object
+OWyUE
+OYp
+ORK
+OBT
+Oav
 xz
 xX
 xF
@@ -10174,6 +10297,7 @@ Klz
 Kruskal
 KnE
 KHF
+KXg
 Us
 US
 Ur
@@ -10460,6 +10584,7 @@ ZZW
 ZIK
 Zcp
 ZeT
+ZpU
 YQ
 Yz
 YI
@@ -10755,6 +10880,8 @@ yIy
 yDFi
 yyyJ
 ywI
+yxo
+yas
 Tp
 Tv
 TBz
@@ -10932,6 +11059,9 @@ TWf
 Totale
 Trasformare
 TRN
+Terminale
+Toq
+TuA
 GY
 GT
 Ghw
@@ -11094,6 +11224,8 @@ GHX
 GJF
 GvN
 Genera
+Goka
+GLL
 Vb
 VD
 VG
@@ -11269,6 +11401,12 @@ VlC
 VDTl
 VELl
 Variabili
+VuA
+VfX
+VJv
+Vuaa
+VSrX
+VOJ
 öG
 öH
 özw

@@ -1,0 +1,77 @@
+- Strutture dati che restituisce il minimo in un insieme dinamico di coppie(chiave, elemento) ordinate secondo una relazione d'ordine definita sulle chiavi (ha più priorità la chiave con valore minore).
+- ## Esempio di applicazione
+	- Nel routing dei pacchetti in reti di comunicazione vengono processati i dati con priorità più alta(ad esempio i pacchetti audio nelle videoconferenze a discapito dei pacchetti video)
+	- I pacchetti in ingresso possono essere mantenuti nella coda per processare quelli a priorità maggiore.
+- ## Operazioni
+	- ### findMin() ^c5a4a0
+		- restituisce un elemento associato alla chiave minima.
+			- costo computazionale $O(1)$
+	- ### insert(D data, K key) ^4e87d9
+		- inserisce un nuovo elemento data con associata chiave key.
+			- _Costo_ computazionale $O(log_{d}\ n)$ 
+	- ### delete(D data)
+		- rimuove elemento dalla coda(assumendo di avere accesso diretto al dato)
+	- ### deleteMin() ^a08aa3
+		- rimuove un elemento associato alla chiave minima 
+			- prende la foglia più a destra ad altezza __h__ e la mette al posto del nodo cancellato e poi verifica se spostarla in basso o in alto(in base al valore della sua chiave)
+			- _costo_: $O(log \ n)$.
+	- ### increaseKey(D data, K key)
+		- rimpiazza la chiave dell'elemento _data_ con la nuova chiave _key_, (se key è MAGGIORE) (assumendo di avere accesso diretto al dato)
+	- ### decreaseKey(D data, K key) ^c7ebd6
+		- rimpiazza la chiave dell'elemento _data_ con la nuova chiave _key_, (se key è MINORE) (assumendo di avere accesso diretto al dato) ma poi bisogna spostare il dato in base alla nuova chiave.
+		- _Costo_ $O(log \ n)$.
+	- ##### NOTA
+		- le ultime due operazioni cambiano solo la priorità dell'elemento associato alla chiave in modo da farlo processare prima o dopo.
+- ## Operazioni Ausiliarie
+	- ### muoviAlto(v)
+		- ![[Pasted image 20240819172121.png]]
+		- _Costo_: $O(h)$ con h altezza dell'albero. 
+	- ### muoviBasso:
+		- ![[Pasted image 20240819172231.png]]
+- ## Implementazioni
+	- ### D-heap 
+		- modifica della struttura [[Heap e le sue applicazioni#^2a5e2b||max-heap]] usata nell'[[Heap e le sue applicazioni#^247187||heapsort]]
+		- modellato su albero d-ario
+			- _altezza h_, perfetto fino alla profondità h-1 e al livello h le foglie sono accatastate a sinistra.
+			- ogni nodo v contiene una _chiave(v)_ e un elemento _elem(v)_
+			- ogni nodo diverso dalla radice ha chiave $\geq$ rispetto alla sua radice.
+		- #### Altezza di un d-heap 
+			- un d-heap con _n_ nodi ha altezza $O(log_{d}\ n)$
+			- ##### DIM:
+				- Sia _h_ l'altezza di un d-heap con _n_ nodi 
+				- il d-heap è perfetto fino al livello $h-1$ 
+				- I nodi in un albero d-ario perfetto di altezza $h-1$ sono:
+					- $$\sum_{i=0}^{h-1} d^{i}=\frac{{d^{h}-1}}{d-1}$$
+				- Quindi: 
+					- $$\frac{{d^{h}-1}}{d-1}<n$$
+					- $$d^{h}<n(d-1)+1$$
+					- $$h<\log_{d}(n(d-1)+1)=O(\log_{d} n)$$
+		- #### memorizzazione in un Array
+			- l'_ultimo_ figlio di un nodo in posizione _i_ è in $(i*d)+1$ 
+			- il _primo_ figlio di un nodo in posizione _i_ è in $((i-1)*d)+2$ (d-1 posizioni prima dell'ultimo figlio)
+			- il _padre_ di un nodo in posizione _i_ è in $\lceil{\frac{i-1}{d}}\rceil$ arrotondando per eccesso 
+		- #### Proprietà fondamentale dei d-heap:
+			- _La radice contiene un elemento con chiave minima._
+			- ##### DIM:
+				- per induzione sul numero di nodi.
+				- Per $n=0$ (heap vuoto) o $n=1$ la proprietà vale 
+				- Suppongo sia valida per ogni d-heap con al più $n-1$ nodi
+				- Considero un d-heap con $n$ nodi. I sotto-alberi radicati nei figli della radice sono a loro volta d-heap, con al più $n-1$ nodi
+				- la radice $T_{i}$ contiene il minimo di $T_{i}$
+				- la chiave radice $x$ è $\leq$ della chiave di ciascun figlio 
+				- quindi la chiave di $x$ è il minimo dell'intero heap.
+- ## Esempi:
+	- ### delete(D data) (e deleteMin()):
+		- Sia v il nodo che contiene _data_ con chiave _k_ 
+			- ![[Screenshot 2024-08-19 at 17-46-10 Code con priorità - 11-HeapEApplicazioni.pdf.png]]
+		- Sia _w_ l'ultima foglia a destra 
+			- `data.v=data.w;`
+			- `key.v=key.w;`
+			- stacca e cancella _w_ dall'heap.
+		- Eseguo `muoviAlto(v)`
+			- costo $O(\log_{d} n)$
+		- eseguo `muoviBasso(v)`
+			- costo $O(d \log_{d} n)$ 
+		- Costo totale: $O(d \log_{d} n)$
+
+link Utile: https://www.cs.usfca.edu/~galles/visualization/Heap.html

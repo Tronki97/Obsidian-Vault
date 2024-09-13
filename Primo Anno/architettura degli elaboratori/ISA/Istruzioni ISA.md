@@ -1,0 +1,16 @@
+- Le istruzioni contengono due parti: 
+	- opcode o codice operativo indica il tipo di istruzione da eseguire  ^5b1cef
+		- Operazioni:
+			- trasferimento dati
+			- aritmetico logiche
+			- unarie
+			- salti
+			- [[invocazione di procedura]]
+	- indirizzi: gli operandi da usare
+		- dove reperire gli operandi da usare e ci sono diversi modi di indirizzamento:
+			- Immediato: l'istruzione include già l'operando
+			- Diretto: l'istruzione contiene l'indirizzo completo in memoria della cella in cui reperire l'operando
+			- A registro: operando viene prelevato da un registro
+			- A registro indiretto: l'operando viene prelevato dalla memoria all'indirizzo puntato da un registro
+			- Indicizzato: l'istruzione include un offset che viene sommato al contenuto di un registro per ottenere l'indirizzo di memoria da cui prelevare l'operando
+			- A stack: si considera una parte di memoria da gestire in modalità last in-first out; si usa registro dedicato per puntare quel tipo di memoria; le operazione vengono effettuate da questo tipo di registro usando operazioni di push/pop;

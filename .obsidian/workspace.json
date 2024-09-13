@@ -8,25 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "da8ac19736214c98",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7ee62c20f86b5e80",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
+                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -62,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "master",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md"
+                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md"
               }
             }
           },
@@ -172,58 +159,59 @@
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "copilot:Copilot Chat": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "da8ac19736214c98",
+  "active": "7ee62c20f86b5e80",
   "lastOpenFiles": [
-    "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
-    "Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
-    "Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
-    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica union by rank.md",
-    "Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
-    "Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
-    "Algoritmi e strutture dati/Modulo1/Tabelle hash/Tabelle Hash.md",
-    "Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
-    "Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
-    "Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
-    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Equazioni di ricorrenza.md",
-    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
+    "Untitled.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori",
+    "Secondo Anno/Calcolo della probabilità e statistica",
+    "Secondo Anno/Ottimizzazione combinatoria",
+    "Secondo Anno/Reti di Calcolatori",
+    "Secondo Anno/Tecnologie Web",
+    "Secondo Anno/Linguaggi di Programmazione",
+    "Secondo Anno/Calcolo Numerico",
     "Pasted image 20240828151856.png",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
-    "immagini/Pasted image 20240821185254.png",
-    "immagini/Pasted image 20240820162246.png",
-    "Algoritmi e strutture dati/Modulo1/Analisi di costo/Complessità computazionale.md",
-    "programmazione/c++/Puntatori e strutture dati Dinamiche.md",
-    "Algoritmi e strutture dati/Modulo1/Analisi di costo",
-    "immagini/Pasted image 20240821184439.png",
-    "immagini/Pasted image 20240821183334.png",
-    "immagini/Pasted image 20240821182439.png",
-    "immagini/Pasted image 20240821182239.png",
-    "immagini/Pasted image 20240821182056.png",
-    "Analisi/modulo2/Disuguaglianza triangolare.md",
-    "immagini/Pasted image 20240821175423.png",
-    "immagini/Pasted image 20240821175100.png",
-    "Algoritmi e strutture dati/Modulo2/NP-completezza.md",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche.md",
-    "Algoritmi e strutture dati/Modulo2/Grafi",
-    "Algoritmi e strutture dati/Modulo1/Heap",
-    "Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche",
-    "Algoritmi e strutture dati/Modulo2/Union Find",
-    "Algoritmi e strutture dati/Modulo1/alberi",
-    "Algoritmi e strutture dati/Modulo1/Tabelle hash",
+    "Secondo Anno/Sistemi Operativi",
+    "Secondo Anno",
+    "Excalidraw/porta NOT.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
+    "Primo Anno",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/Analisi di costo/Equazioni di ricorrenza.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/Analisi di costo/Complessità computazionale.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
+    "Primo Anno/Algoritmi e strutture dati/Java.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Union Find/Euristica union by rank.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/Tabelle hash/Tabelle Hash.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
+    "Primo Anno/immagini/Pasted image 20240821185254.png",
+    "Primo Anno/immagini/Pasted image 20240820162246.png",
+    "Primo Anno/immagini/Pasted image 20240821184439.png",
+    "Primo Anno/immagini/Pasted image 20240821183334.png",
+    "Primo Anno/immagini/Pasted image 20240821182439.png",
+    "Primo Anno/immagini/Pasted image 20240821182239.png",
+    "Primo Anno/immagini/Pasted image 20240821182056.png",
+    "Primo Anno/immagini/Pasted image 20240821175423.png",
+    "Primo Anno/immagini/Pasted image 20240821175100.png",
     "Untitled.canvas",
-    "Algebra e geometria/Aritmetica modulare",
-    "Algebra e geometria/Ortogonalità",
-    "Algebra e geometria/Autovalore e Autovettore",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
     "Untitled 3.canvas",

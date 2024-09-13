@@ -1,0 +1,23 @@
+- Spesso le [[Formula canonica||formule canoniche]] non bastano per trovare il modo più efficiente per implementare un circuito 
+	- L'implementazione di un multiplexer è un esempio azzeccato:
+		- con la forma canonica il circuito risulta una cosa del tipo:
+			- $\overline{A}Bsel+A\overline{B}\overline{sel}+AB\overline{sel}+ABsel$ 
+		- mentre con la mappa di Karnaugh risulta:
+			- $Y=AP+B\overline P$ 
+			- Dove P sarebbe l'ingresso di selezione.
+- quindi usare le mappe di Karnaugh ci da un modo più efficace per realizzare un circuito:
+	- 1) creo una tabella con una cella per ogni singolo mintermine della tabella di verità 
+	- 2) metto ogni colonna della tabella di verità a 2 a 2 sulle colonne della mappa di Karnaugh e il resto sulle righe della mappa ripetendo a 2 a 2 finché on finiscono le variabili 
+	- 3) ogni cella adiacente deve differire per un solo letterale poi inserisco i valori della [[Funzioni booleane||funzione]] per i [[Mintermini]] corrispondenti 
+	- ES:
+		- ![[Pasted image 20240528173452.png]]
+	- 4) Raggruppo in quadrati  o rettangoli che abbiano i lati di lunghezza una potenza di 2. *Cerco di evitare di fare raggruppamenti che contengano solo celle contenute in altri raggruppamenti.* 
+	- 5) Ogni raggruppamento lo posso scrivere come l'AND tra tra le variabili che non cambiano di valore dentro al quadrato o rettangolo che le raggruppa 
+	- 6)infine faccio l'OR di tutti le rappresentazioni dei raggruppamenti fatti nel punto precedente.
+	- ES:
+		- ![[Pasted image 20240528173902.png]]
+		- Nel rettangolo azzurro le variabili che non cambiano sono B e C quindi scrivo: $B\overline{C}$ 
+		- nel rettangolo verde non cambiano A e B quindi: $A\overline{B}$ 
+		- il quadrato rosso è ridondante.
+		- quindi il risultato finale è: $Y= B\overline{C}+ A\overline{B}$
+		- 

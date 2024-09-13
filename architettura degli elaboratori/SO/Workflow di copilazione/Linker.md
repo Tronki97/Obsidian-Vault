@@ -1,4 +1,0 @@
-- Il suo scopo deriva dal fatto che nella maggior parte dei casi le librerie sono dei _file oggetto_ quindi non si può semplicemente fare copia e incolla d due file oggetto perché _gli indirizzi dei salti vanno rilocati_
-- ## Tipologie
-	- [[Linking statico]]
-	- [[Linking dinamico]]

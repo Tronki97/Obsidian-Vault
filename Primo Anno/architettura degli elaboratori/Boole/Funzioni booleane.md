@@ -1,0 +1,4 @@
+- Una funzione booleana associa a delle variabili in input, rappresentate quasi sempre con _1_ e _0_, dei valori in output.
+- Il modo più semplice per rappresentare delle funzioni booleane è l'utilizzo di una tabella di verità 
+- ## Mintermini
+	- 

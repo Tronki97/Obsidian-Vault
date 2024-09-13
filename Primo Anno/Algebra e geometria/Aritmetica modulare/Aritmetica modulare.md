@@ -1,0 +1,61 @@
+- Siano $a,b,n$ tre interi, con $n>0$ si può dire che $a$ è _congruo_ a $b$ modulo $n$ e scrivo$$a\equiv_{n}b:n|a-b$$ovvero $n$ divide $a-b$ 
+- ## Proprietà
+	- La congruenza è una relazione di equivalenza che rispetta le proprietà:
+		- 1) Riflessiva: $a\equiv_{n}a$ infatti $n|a-a=0$ 
+		- 2) Simmetrica:$a\equiv_{n}b\implies b\equiv_{n}a$ infatti $n|a-b \implies n|b-a$
+		- 3) Transitiva: $(a\equiv_{n}b) \wedge (b\equiv_{n}c) \implies a\equiv_{n}c$ infatti: $(n|a-b)\wedge(n|b-c)\implies n|a-b+b-c=a-c$
+	- N.B: _Quindi ciò mi dice che la relazione di equivalenza rispetta le operazioni di somma e prodotto_
+- ## Proposizione 1:
+	- siano $a,b,c,d,n\in \mathbb{Z}|n>0$. se $a\equiv_{n}b \wedge c\equiv_{n}d$ allora:
+		- 1)$a+c\equiv_{n}b+d$ 
+		- 2)$ac \equiv_{n}bd$ 
+- ## Classi di congruenza
+	- Siano $a,n \in \mathbb{Z}$. Si chiama _classe di congruenza modulo $n$_ e si indica con $[a]_{n}$ l'insieme di numeri interi congrui ad $a$ modulo $n$:$$[a]_{n}=\{b\in \mathbb{Z}|b\equiv_{n}a\}=\{b\in \mathbb{Z}|n\  \text{divide}\ b-a\}=$$$$=\{b\in \mathbb{Z}|b-a=kn:k\in \mathbb{Z}\}=\{a+kn|k\in \mathbb{Z}\}$$
+	- Si chiama insieme degli _interi modulo $n$_, e si indica con $\mathbb{Z}_{n}$, l'insieme delle classi di congruenza modulo $n$:$$\mathbb{Z}_{n}=\{[a]_{n}|a \in \mathbb{Z}\}$$
+	- _Definizione sull'insieme $\mathbb{Z}_{n}$ delle operazioni di somma e prodotto_:
+		- $[a]_{n}+[b]_{n}=[a+b]_{n}$
+		- $[a]_{n}[b]_{n}=[ab]_{n}a$
+	- ### Osservazione:
+		- per la proposizione $1$, le operazioni di somma e prodotto non dipendono dai numeri $a,b$ che scelgo per rappresentare le classi di congruenza, ma solo dalla loro classe di congruenza. Si dice in tal caso che le operazioni sono _ben definite_. 
+		- #### ES:
+			- In $\mathbb{Z}_{4}$ si ha che $[1]_{4}=[5]_{4}$ e $[2]_{4}=[6]_{4}$. Per definizione $$[1+2]_{4}=[5+6]_{4}$$
+- ## Proposizione 2
+	- 1)sia $r$ il resto della divisione di $a$ per $n$. allora $[a]_{n}=[r]_{n}$
+	- 2) Le classi $[0]_{n},[1]_{n},...,[n-1]_{n}\in \mathbb{Z}_{n}$ sono distinte fra loro.
+	- 3) $\mathbb{Z}_{n}=\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$ 
+	- ### Dimostrazione:
+		- 1) Per definizione di divisione con resto,$$\exists q\in \mathbb{Z}:a=qn+r$$Il risultato segue da $n|nq=a-r$
+		- 2) siano $i,j\in \{0,1,...,n-1\}$. posso supporre che $i\ge j$, quindi $0\leq i-j <n$.  $$[i]_{n}=[j]_{n}\implies [i]_{n}-[j]_{n}=[0]_{n}$$E per le proprietà posso dire$$[i-j]_{n}=[0]_{n}$$Quindi $n|i-j$ poiché per ipotesi $0\leq i-j <n$ segue che $i-j=0$ e quindi $i=j$ 
+		- 3) Dimostro la doppia inclusione tra insiemi 
+			- L'inclusione $\{[0]_{n},[1]_{n},...,[n-1]_{n}\}\subset \mathbb{Z}_{n}$ è banale in quanto $\mathbb{Z}_{n}$ contiene tutte le classi di resto, in particolare quelle del primo insieme.
+			- Per dimostrare  $\mathbb{Z}_{n}\subset\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$ consider $[a]_{n}\in \mathbb{Z}_{n}$, per il primo punto di questa proposizione so che $[a]_{n}=[r]_{n}$, dove $r$ è il resto della divisione per $n$ che per definizione appartiene a $\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$. Quindi $[a]_{n}=[r]_{n}\in \{[0]_{n},[1]_{n},...,[n-1]_{n}\}$  
+- ## Invertibilità
+	- Una classe $[a]_{n}\in \mathbb{Z}_{n}$ si dice _invertibile_ se esiste una classe $[c]_{n}\in \mathbb{Z}_{n}$ detta _inverso_ di $[a]_{n}$ tale che:$$[a]_{n}[c]_{n}=[1]_{n}$$e l'inverso di $[a]_{n}$ è scritto $[a]_{n}^{-1}$
+	- ### Proposizione 3
+		- La classe $[a]_{n}$ ammette un inverso in $\mathbb{Z}_{n}$ $\iff$ $$mcd(a,n)=1$$
+		- #### Dimostrazione 
+			- $\Longleftarrow$)
+				- suppongo che $mcd(a,n)=1$ e dimostro che $[a]_{n}$ ammette inverso. per [[Teorema di Bézout||bezout]] $\exists r,s\in \mathbb{Z}$ tali che $ra+sn=1$. Dico che $[r]_{n}=[a]_{n}^{-1}$ infatti si ricorda che $[n]_{n}=[0]_{n}$,$$[1]_{n}=[r]_{n}[a]_{n}+[s]_{n}[n]_{n}=[r]_{n}[a]_{n}$$
+			- $\implies$)
+				- Suppongo che $\exists [c]_{n}\in \mathbb{Z}_{n}$ tale che $$[a]_{n}[c]_{n}=[1]_{n}$$Quindi $$n|1-ac\to 1-ac=nr$$per un qualche $r\in \mathbb{Z}$.
+				- Sia quindi $d=mcd(a,n)$ ho che $$d|a,\ \ d|n$$quindi $$d|ac+nr=1\to d=1$$
+				- Qed
+- ## ES:
+	- calcolo se esiste l'inverso di $[30]_{67}\in \mathbb{Z}_{67}$.
+		- per prima cosa applico l'[[Algoritmo di Euclide]] per calcolare $mcd(30,67)$$$67:30=2\ \ r=7$$$$30:7=4\ \ r=2$$$$7:2=3\ \ r=1$$$$2:1=2\ \ r=0$$Quindi $mcd(30,67)=1$ e la Proposizione 3 mi assicura che esiste l'inverso che si calcola trovando il valore $r$ ripercorrendo a ritroso l'algoritmo:$$1=7-3*2=7-3(30-4*7)=13*7-30*3=$$$$=13*(67-2*30)-3*30=-29*30+13*67$$Così per l'identità di Bézout $$1=-29*30+13*67$$in cui $r=-29$ e Quindi $$[30]_{67}^{-1}=[-29]_{67}=[38]_{67}$$
+- ## Corollario
+	- Se $mcd(a,n)=1$ l'equazione $[a]_{n}x=[b]_{n}$ ha un'unica soluzione in $\mathbb{Z}_{n}$
+	- ### Dimostrazione
+		- Per la proposizione 3, $[a]_{n}$ è invertibile quindi $[a]^{-1}[b]$ è la soluzione dell'equazione.
+		 
+- ## Teorema 
+	- Siano $a,n \in \mathbb{Z}$, $n>0$ e sia $d=mcd(a,n)$ allora:
+		- 1) l'equazione $[a]_{n}x=[b]_{n}$ ha soluzione in $\mathbb{Z}_{n}$ $\iff d|b$
+		- 2) se $d|b$ allora $[a]_{n}x=[b]_{n}$ ha esattamente $d$ soluzioni distinte in $\mathbb{Z}_{n}$
+	- ### Dimostrazione 
+		- Dimostro solo che $[a]_{n}x=[b]_{n}$ ha soluzione in $\mathbb{Z}_{n}$ allora $d|b$.
+		- Sia $[c]_{n}$ una soluzione, allora $[a]_{n}[c]_{n}=[b]_{n}$ ovvero $[ac]_{n}=[b]_{n}$ quindi $d|ac-b$ poiché $d|n$ ho che $d|ac-b$. Inoltre $d|an$ quindi $d|ac$. Infine segue che $d|ac-(ac-b)=b$
+- ## Congruenza lineare
+	- Si dice _congruenza lineare_ nell'incognita $x$ (modulo $n$) una congruenza del tipo $$ax\equiv_{n}b$$Con $a,b,n\in \mathbb{Z}$ , $n>0$. Una soluzione della congruenza è un $c\in \mathbb{Z}$ tale che $$ac\equiv_{n}b$$
+	- ### osservazione
+		- l'intero $c$ è una soluzione della congruenza $ax\equiv_{n}b$$\iff$ $[c]_{n}$ è una soluzione dell'equazione $[a]_{n}x=[b]_{n}$ quindi se la congruenza $ax\equiv_{n}b$ ha una soluzione $c$, allora ha infinite soluzioni, perché tutti gli interi appartenenti a $[c]_{n}$ sono soluzioni. Inoltre per risolvere la congruenza $ax\equiv_{n}b$, qualora ammettesse soluzione, _conviene prima trovare le soluzioni dell'equazione $[a]_{n}x=[b]_{n}\in \mathbb{Z}_{n}$ e poi ricavare le soluzioni intere della congruenza_.  

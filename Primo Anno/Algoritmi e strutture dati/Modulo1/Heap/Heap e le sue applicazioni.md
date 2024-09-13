@@ -1,0 +1,72 @@
+- ## Heap Binari
+	- un albero binario [[Alberi e Alberi binari#^36b3d9||quasi perfetto]] (perfetto fino al livello h-1) è un albero max-heap sse: 
+		- ad ogni nodo i viene associato un valore$A[i]$ 
+		- $A[parent(i)]\geq A[i]$
+		  
+	- invece è min-heap sse:
+		- ad ogni nodo i viene associato un valore$A[i]$ 
+		- $A[parent(i)]\leq A[i]$
+- ## Array heap 
+	- un albero binario heap si può rappresentare come _array heap_
+		- ### Contiene:
+			- Array _A_ di lunghezza __A.length__
+			- dimensione di __A.heapsize__ $\leq$ __A.length__ 
+		- ### Organizzazione
+			- $A[1]$ contiene la radice
+			- __Parent(i)__= Math.floor(i/2) (arrotondamento per difetto)
+			- __Left(i)__= $2*(i)$ 
+			- __Right(i)__=$2*i+1$ (cella dopo Left(i))
+		- Gli elementi nell'Array vengono rappresentati come la visita in ampiezza dell'albero da cui arrivano.
+		- Per vedere se esiste il figlio destro o sinistro di un nodo si verifica che l'indice ottenuto dai calcoli non super l'heapsize(ovvero l'indice dell'ultimo elemento dell'array)
+	- ### Operazioni su Array heap
+		- #### findMax: 
+			- individua il valore massimo contenuto in un heap
+			- il massimo è sempre la radice, $A[0]$
+			- l'operazione ha costo $\Theta(1)$
+		- #### fixHeap:
+			-  Ripristina la proprietà di max-heap 
+			- Suppongo di rimpiazzare la radice di un max-heap con un valore qualsiasi
+			- Voglio fare in modo che $A[]$ diventi nuovamente un heap
+			- ##### Procedimento:
+				- suppongo di rimpiazzare la radice $A[0]$ di un max-heap con un valore qualsiasi e se non è $\geq$ dei figli, si può scambiare con il figlio con valore maggiore e procedere ricorsivamente:
+				-  ![[Pasted image 20240819164715.png]]
+			- ![[Pasted image 20240819164934.png]]
+		- #### heapify: 
+			- Costruisce un heap a partire da un array privo di ordine.
+			- ![[Pasted image 20240819165123.png]]
+				- $S[]$ è un array, assumo che l'Heap abbia $n$ elementi.
+				- $i$ è l'indice dell'elemento che diventerà la radice dell'Heap ($i\geq 1$)
+				- $n$ indica l'indice dell'ultimo elemento.
+		- #### deleteMax:
+			- Rimuove l'elemento massimo(radice) da un max-heap $A[]$ mantenendone la proprietà.
+			- ##### Idea:
+				- al posto del vecchio valore $A[0]$ metto il valore presente nell'ultima posizione dell'array-Heap
+				- applico __fixHeap__ per ripristinarne la proprietà.
+			- ##### ES:
+				- ![[Pasted image 20240819165529.png]]
+	- ### Costo computazionale:
+		- __fixHeap__: 
+			- Nel caso pessimo il numero di scambi è uguale all'altezza dell'albero quindi alla profondità dell'Heap, Ovvero: $O(\log n)$
+		- __heapify__:
+			- $T(n)=2T\left( \frac{n}{2} \right)+\log(n)$ ($\leq 2T\left( \frac{n}{2} \right)+n^{\frac{1}{2}}$, per n>16)
+			- da cui $T(n)=O(n)$ (caso (1) del [[Equazioni di ricorrenza#^65d0b1||master Theorem]]) 
+		- __findMax__:
+			- $O(1)$
+		- __deleteMax__:
+			- uguale a __fixHeap__ quindi $O(\log n)$
+- ## Heapsort  ^247187
+	- costruire un max-heap a partire da un array usando heapify. ^2a5e2b
+	- Estrarre il massimo(findMax + deleteMax)
+	- Inserisco il massimo in ultima posizione di $A[]$
+	- Ritorno al punto 2 finché l'heap diventa vuoto.
+	- ### Implementazione:
+		-  ![[Pasted image 20240819170657.png]]
+			- heapify ha costo lineare $O(\mathbf{S.length})$
+			- findMax ha costo costante.
+			- deleteMax ha costo $O(\log c)$ 
+	- ### Costo computazionale:
+		- $O(\mathbf{S.length})$ per l'heapify iniziale.
+		- ogni giro del ciclo for costa: $O(\log c)$ (con c<n)
+		- Totale:
+			- $$T(n)=O(\mathbf{s.length})+O\left( \sum_{c=\mathbf{s.length}}^{1} \log c\right)=O(n\log n)$$
+			- $n=\mathbf{S.length}$ 

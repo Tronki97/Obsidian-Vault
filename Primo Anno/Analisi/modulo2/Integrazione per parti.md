@@ -1,0 +1,4 @@
+- Deriva dal concetto di derivata di un prodotto e si risolve come segue:
+	- $$\int f(x)*g'(x)=f(x)*g(x)-\int f'(x)*g(x)$$
+	- infatti la derivata del prodotto di due funzioni è:
+		- $$(f(x)*g(x))'=f'(x)*g(x)+f(x)*g'(x)$$

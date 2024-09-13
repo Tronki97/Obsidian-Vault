@@ -1,0 +1,4 @@
+- Sia $f:\mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ un'[[Applicazione lineare]], allora un vettore $v\in \mathbb{R}^{n}$ si dice _autovettore_ di [[Autovalore]] $\lambda\in \mathbb{R}$ se per $v\ne \underline{0}$si ha che$$f(v)=\lambda v$$Un'applicazione lineare deforma lo spazio dei vettori su ci viene applicata. Alcuni vettori rimangono nello stesso [[Sottospazio generato]] ($Span$)_mantenendo quindi la loro direzione_ : vengono _mappati in un multiplo di loro stessi_.
+- ## Importanza
+	- Di una [[Matrici||matrice]] che [[Applicazioni lineari definite da una matrice||identifica un'applicazione lineare]] vogliamo fare il [[Cambio di base]] in modo che tale matrice sia _diagonale_, per questioni di comodità. Ebbene questa base, affinché la matrice associata sia diagonale, dovrà essere composta da autovettori in colonna.
+	  Per cui se esiste una base di questo tipo, l'applicazione lineare definita da questa matrice si dice [[Diagonalizzabilità||diagonalizzabile]]

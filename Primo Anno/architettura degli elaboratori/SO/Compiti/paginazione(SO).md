@@ -1,0 +1,19 @@
+- ## Principio di funzionamento
+	- la RAM viene divisa in _blocchi_, e la memoria virtuale in _pagine_, della stessa dimensione dei blocchi, il numero massimo di pagine contenibili in RAM è il suo numero di blocchi. Quando un programma punta ad un indirizzo virtuale, si verifica prima che esso si trovi in RAM in tal caso viene tradotto in fisico, altrimenti viene caricato in RAM e poi tradotto in fisico.
+	- ES:
+		- ![[Pasted image 20240530173006.png]]
+		- I $2^{15}$ indirizzi fisici in RAM vengono suddivisi in 8 blocchi di memoria con:
+			- 3 bit dedicati al blocco 
+			- 12 bit di __offset__, per questo ogni blocco/pagina è di $2^{12}$ locazioni (~4k)   
+		- Gli indirizzi virtuali invece sono $2^{16}$:
+			- 4 bit dedicati alla pagina 
+			- 12 bit lo stesso offset degli indirizzi fisici
+		- ##### Meccanismo:
+			- quando un programma punta ad un indirizzo virtuale, lo scopo è tradurre i bit della pagina nei bit del blocco corrispondente. __infatti l'offset è lo stesso__. 
+			- per tenere traccia della corrispondenza si ha la _Tabella delle pagine_:
+				-  ![[Pasted image 20240530174058.png]]
+				- Di un indirizzo virtuale vengono presi i bit della pagina (4 in questo caso), che corrispondono ad uno specifico indice nella tabella delle pagine, da cui si ricavano i bit del blocco corrispondente in RAM 
+				- ### !!ATTENZIONE!!
+					- La RAM non può contenere ogni pagina infatti nella tabella, ad ogni record è associato un bit:
+						- Se è 1: indica che la pagina è già in RAM e quindi basta ottenere i bit del blocco associato e si ottiene l'indirizzo fisico
+						- Se è 0: vuol dire che la pagina non è in RAM, si ha il [[Trap e interrupt||trap]] __Page fault__, bisogna applicare un _algoritmo di paginazione_ che, in caso non ci sia un blocco in RAM disponibile, "faccia spazio" e trasferisca la pagina salvata in memoria secondaria.

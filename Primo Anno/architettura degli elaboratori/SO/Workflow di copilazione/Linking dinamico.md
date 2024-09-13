@@ -1,0 +1,3 @@
+- attraverso l'utilizzo di un [[segmentazione||segmento]] che contiene i nomi e indirizzi delle librerie Il programma viene appositamente modificato così da contenere, per ogni chiamata di funzione, il collegamento alla rispettiva porzione di quel segmento riservata alla libreria. Così, quando un programma richiama una funzione di libreria, il [[SO]] la ricerca in tale segmento, trovando un indirizzo sbagliato che genera una [[Trap e interrupt||trap]] il gestore della medesima cerca la libreria, la carica in memoria e scrive il giusto indirizzo nel segmento, così che le future chiamate non generino più trap. 
+- ## Vantaggi:
+	- Il processo di compilazione viene velocizzato nel caso in cui la procedura di un modulo esterno venga invocata rare volte 

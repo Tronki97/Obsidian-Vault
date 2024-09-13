@@ -1,0 +1,26 @@
+- ## Grafo non orientato:
+	- due vertici _"u"_ e "_v_" appartengono alla stessa componente connessa se _u_ è raggiungibile da _v_ 
+		- questa relazione "raggiungibile" è di equivalenza:
+			- ##### Riflessiva:
+				- u è raggiungibile da se stesso
+			- ##### Simmetrica:
+				- se u è raggiungibile da v allora è vero anche il vice versa
+			- ##### Transitiva:
+				- se u è raggiungibile da v, e v è raggiungibile da w allora u è raggiungibile da w
+	- ### algoritmo:
+		- ![[Pasted image 20240821171416.png]]
+		- primo for:
+			- nel campo cc viene messo -1 e il parent = null 
+		- si esegue una visita [[Visite sui Grafi#^0b997c||DFS]] 
+- ## Grafi orientati:
+	- consideriamo quelli fortemente connessi 
+	- per scegliere solo i nodi fortemente connessi:
+		- decido di togliere tutti i nodi che hanno solo archi in uscita o in entrata
+	- un modo efficiente per risolvere il problema è usare una [[Visite sui Grafi#^0b997c||DFS]] 
+	- la relazione di essere fortemente connessi ha le proprietà di _riflessività, simmetria, transitività_ 
+	- $D(x)$: rappresenta l'insieme di vertici raggiungibili partendo da x
+	- $A(x)$ insieme di vertici che possono arrivare ad x 
+		- l'intersezione delle due funzioni rappresenta l'insieme di vertici fortemente connessi.
+		- ##### NOTA: 
+			- il calcolo di $D(x) \ e \ A(x) \ costa \ O(n+m)$ 
+	- però per calcolare il costo totale per tutti i vertici del grafo bisogna eseguire la funzione che individua l'insieme dei vertici fortemente connessi ad un vertice x. risultando quindi in un costo totale di $O((n+m)*n) \ = O(nm+n^2)$ 

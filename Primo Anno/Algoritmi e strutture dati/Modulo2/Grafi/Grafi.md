@@ -1,0 +1,131 @@
+- ### LINK UTILI: 
+	- https://csacademy.com/app/graph_editor/
+- ## Definizione ^2eb164
+	- ### Orientato 
+		- è una coppia _(V, E)_ dove:
+			- insieme finito di vertici _V_
+			- Insieme degli archi _E_:
+				- relazione binaria tra vertici
+			- una arco _(X, X)_ è un cappio.
+		- ![[Screenshot 2024-04-23 at 13-25-17 Grafi - 16-Grafi.pdf.png]]
+		- #### Incidenza e Adiacenza:
+			- Si dice _incidente_ un arco _(v, w)_ da _v_ a _w_ 
+				- _es_: (A, B) è incidente da A a B
+			- Un vertice w è adiacente a v sse (v, w)$\in$ E (ovvero se w è puntato direttamente da v)
+				- _es_: B è adiacente a A ma non a a D o C
+	- ### Non orientato ^b29537
+		- è una coppia _(V, E)_ dove:
+			- insieme finito di vertici _V_
+			- Insieme degli archi _E_:
+				- coppie non ordinate
+			- non ci sono cappi
+		- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]]
+- ## Visite
+	- In ampiezza
+		- 
+	- In profondità
+- ## Alberi di copertura minimi 
+- ## Cammini minimi
+	- da singola sorgente
+	- fra tutte le coppie di vertici
+- ## Operazioni:
+	- ### NumVertici() → intero 
+	- ### NumArchi() → intero 
+	- ### grado(vertice v) → intero
+		- Grado: identifica la quantità di grafici che hanno a che fare con quel vertice
+	- ### archiIncidenti(vertice v) → (arco, arco, ... arco)
+		- Restituisce un elenco (lista, array, ecc...) di archi che [[#^b29537||incidono]] incidono sul vertice v 
+	- ### estremi(arco e) → (vertice, vertice)
+	- ### opposto(vertice x, arco e) → vertice
+		- dato un vertice e un arco ad esso collegato restituisce il vertice dall'altro lato dell'arco
+	- ### sonoAdiacenti(vertice x, vertice y) → booleano 
+		- Dice se due vertici sono collegati direttamente da un arco
+	- ### aggiungiVertice(vertice v)
+	- ### aggiungiArco(vertice x, vertice y)
+	- ### rimuoviVertice(vertice v)
+	- ### rimuoviArco(arco e)
+- ## Rappresentazione di Grafi
+	- ### Matrice di adiacenza
+		- rappresentare i collegamenti tra nodi con una matrice di booleani simmetrica con il seguente riempimento:$$M(u, v)= \begin {cases}1\ \ se \{u,v\}\in E \\ 0 \ \ altrimenti \end {cases}$$
+		- #### Costi:
+			- ##### Spazio:
+				- $\Theta (|V|^2)$
+			- ##### tempi:
+				- grado(vertice v)->int ; costo: $O(n)$
+				- archiIncidenti(vertice v)→(arco, arco, ... arco); costo: $O(n)$
+				- sonoAdiacenti(vertice x, vertice y)→booleano; costo: $O(1)$
+				- aggiungiVertice(vertice v);  costo: $O(n^2)$
+				- aggiungiArco(vertice x, vertice y); costo:  $O(1)$
+				- rimuoviVertice(vertice v); costo:  $O(n^2)$
+				- rimuoviArco(arco e); costo:  $O(1)$
+	- ### Lista di adiacenza ^c02f81
+		- Ogni vertice è la testa di una lista e tutti i valori successivi sono i vertici adiacenti al vertice in testa(NOTA: i vertici dopo la testa non hanno un ordine preciso).
+			- ES: se A ha B e D adiacenti, allora la lista sara:
+				- A->B->D 
+		- #### Costi
+			- grado(vertice v)->int ; costo: $O(\delta (v))$
+			- archiIncidenti(vertice v)→(arco, arco, ... arco); costo: $O(\delta (v))$
+			- sonoAdiacenti(vertice x, vertice y)→booleano; costo: $O(min\{\delta (x), \delta (y)\})$
+			- aggiungiVertice(vertice v);  costo: $O(1)$ supponendo di avere accesso costante per accedere al vertice, tramite key come nelle [[Tabelle Hash||hasmap]] per esempio
+			- aggiungiArco(vertice x, vertice y); costo:  $O(1)$
+			- rimuoviVertice(vertice v); costo:  $O(m)$
+			-  rimuoviArco(arco e); costo:  $O(\delta (x)+\delta (y))$ 
+			- ##### NOTA: 
+				- m= |E| -> (numero di archi).
+				  $\delta (v)$= grado del nodo x.
+- ## Grafi pesati
+	- in alcuni casi ogni arco ha un peso associato, 
+	- il costo è definito da una funzione $c: E\rightarrow \mathbb{R}$
+	- quando non esiste un arco tra due vertici vuol dire che il costo sarà infinito
+	- ### Matrice di adiacenza in grafi non orientati pesati  ^574110
+		- $$M(u, v)= \begin  {cases}c(u , v) \ \ se \{u , v\} \in E \\ \infty \ \ altrimenti \end {cases}$$
+		- ![[Pasted image 20240820175255.png]]
+	- ### Grado:
+		- [[#^2eb164||grafo non orientato]]: ^27e1bf
+			- _il grado di un vertice è il numero di archi che partono da esso._
+			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] A, B, E hanno grado 2
+			  C e D hanno grado 3
+			  F ha grado 0
+		- [[#^2eb164||grafo orientato]]:
+			- grado entrante o uscente: 
+				- numero di archi entranti o uscenti da un vertice. 
+			- grado: somma dei gradi entranti o uscenti.
+			- ![[Screenshot 2024-04-23 at 13-25-17 Grafi - 16-Grafi.pdf.png]]A ha g. u. 2 e g. e. 1
+			  B ha g. u. 1 e g. e. 1
+			  C ha g. u. 0 e g. e. 3
+			  D ha g. u. 3 e g. e. 1
+			  A e C hanno grado 3
+			  B ha grado 2
+			  D ha grado 4
+- ## Cammini
+	- un _cammino_ in G=(V, E) è una sequenza di vertici t.c ogni vertice è adiacente al successivo:
+	- $$\langle{w_{0},w_{1},\dots,w_{k}}\rangle: w_{i+1}\mathbf{\ adiacente \ a\ }w_{i}| 0\leq i\leq k-1$$ 
+	- la lunghezza del cammino è il numero di archi attraversati(pari al numero di vertici meno 1). 
+	- un cammino di dice <font color="red">semplice</font> se tutti i suoi vertici compaiono solo una volta nella sequenza
+	- se esiste un cammino <font color="red">c</font> tra i vertici <font color="red">v</font> e <font color="red">w</font> vuol dire che <font color="red">w</font> è raggiungibile da <font color="red">v</font> tramite <font color="red">c</font> 
+	- un cammino si dice _semplice_ se tutti i vertici sono distinti (compaiono una sola volta nella sequenza)
+- ## Connessione  ^fc32f8
+	- ### grafo non orientato:
+		- G è connesso se esiste un cammino da ogni vertice ad ogni altro vertice.
+			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] Non è un grafo connesso 
+			- #### NOTA:
+				- se F fosse stato collegato ad una altro nodo allora il grafo sarebbe stato di tipo connesso 
+	- ### grafo orientato 
+		- G è <font color="red">fortemente connesso</font> se esiste un cammino da ogni vertice ad ogni altro vertice
+		- G è _debolmente connesso_ se non è fortemente connesso ma la sua versione non orientato è connessa.
+- ## Cicli
+	- un _ciclo_ è un cammino di lunghezza:
+		- $\ge 1$ nei grafici orientati 
+		-  $\ge 3$ nei grafici non orientati 
+	- un ciclo è _semplice_ se i nodi della seqeunza sono tutti distinti.
+- ## Grafi aciclici
+	- Un grafo non orientato è _aciclico_ se è senza cicli semplici 
+	- Un grafo orientato è _aciclico_ se è privo di cicli
+	- ### NOTA:
+		- un grafico orientato aciclico è chiamato _DAG_
+- ## Grafo completo 
+	- Un grafo non orientato _completo_ è un grafo non orientato che ha un arco tra ogni coppia di vertici.
+	- in un grafo non orientato _completo_ ha $\begin {pmatrix} n\\2 \end {pmatrix}= \frac{n(n-1)}{2}= \frac{|V|(|V|-1)}{2}$ 
+- ## Alberi
+	- Un _albero libero_ è un grafo non orientato connesso aciclico 
+	- se un vertice è detto radice, otteniamo un _albero radicato_

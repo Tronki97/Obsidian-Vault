@@ -1,0 +1,9 @@
+- ### Trap
+	- chiamata di procedura effettuata quando si verificano condizioni rilevanti, come : 
+		- [[Istruzioni ISA#^5b1cef||opcode]] non definito
+		- accesso ad aree di memoria non consentito.
+	- se si verificassero uno di questi eventi il controllo è definito da una procedura detta "gestore" 
+- ### Interrupt
+	- interrompono il programma in esecuzione ma sono asincroni cioè che vengono scatenati da un dispositivo indipendentemente dal programma in esecuzione
+	- es: l'uso di un dispositivo I/O
+	- è fondamentale per evitare il "busy waiting" (il continuo eseguirsi di istruzioni per andare a verificare l'accadimento di qualcosa).

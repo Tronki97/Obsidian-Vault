@@ -1,0 +1,46 @@
+- ## lineare: ^408d06
+	-  funzione di ispezione($m=$ dimensione tabella): 
+		-  $h(k,i)=(h'(k)+i)$ mod $m$
+			- $h'(k)$ è una funzione hash ausiliaria
+		- Quando si ha una collisione si ispeziona l'indice successivo
+			-  il 1° indice $h'(k)$ determina l'intera sequenza:$$h'(k),h'(k)+1,\dots,m-1,0,1,\dots,h'(k)-1$$
+			- sono possibile solo $m$ sequenze distinte di ispezione
+			- Ogni slot è ispezionato una sola volta
+	- ### Problema: 
+		- _clustering Primario_
+			- lunghe sotto-sequenze occupate, che diventano sempre più lunghe
+			- assumendo hashing uniforme semplice, uno slot vuoto preceduto da $i$ slot pieni viene riempito con probabilità $\frac{i+1}{m}$ 
+			- i tempi medi per _insert, delete_ crescono
+	- ### ES:
+		- ![[Screenshot 2024-07-30 at 13-44-14 Tabelle Hash - 09 - Tabelle Hash.pdf.png]]
+	- ### Analisi costo medio
+		- questo tipo di ispezione non assicura che le sequenzi di ispezione siano equiprobabili a causa del clustering primario.
+		- il costo medio non è caratterizzato dai [[Tabelle Hash#^d25c3a||2 teoremi già descritti]]
+			- costo medio di ricerca senza successo:$$\frac{(1-\alpha)^{2}+1}{2(1-\alpha)^{2}}$$
+			- costo medio ricerca con successo:$$\frac{\left( 1-\frac{\alpha}{2} \right)}{2(1-\alpha)}$$
+- ## Quadratica
+	- funzione di ispezione ($m=$ dimensione tabella)$$h(k,i)=(h'(k)+c_{1}i+c_{2}i^{2})mod \ \ m$$
+		- $(c_{1} \ne c_{2})$ e $h'(k)$ è una funzione hash ausiliaria. 
+	- Quando si incontra una collisione, si usa un passo quadratico
+		- il 1° indice $h'(k)$ determina l'intera sequenza
+		- le ispezioni successive hanno un offset che dipende da una funzione quadratica nel numero di ispezione $i$
+		- sono possibili solo $m$ sequenze distinte di ispezione 
+		- $c_{1},c_{2}$ devono garantire una permutazione di $[0,\dots,m-1]$
+	- ### Problema:
+		- _Clustering secondario_
+			- se due chiavi hanno la stessa ispezione iniziale, allora le loro sequenze di ispezione sono identiche.
+	- ### ES:
+		- ![[Pasted image 20240730135305.png]]
+- ## Doppio hashing
+	- funzione di ispezione ($m=$ dimensione tabella)$$h(k,i)=(h_{1}(k)+ih_{2}(k))mod \ \ m$$
+		- dove $h_{1},h_{2}$ sono la funzione di hash primaria e secondaria
+	- Quando c'è una collisione, si usa la funzione secondaria e l'indice di ispezione per determinare il successivo slot da ispezionare 
+		- ciò evita il clustering primario e secondario
+		- se $h_{1}\ne h_{2}$ è meno probabile per una coppia di chiavi $a\ne b$ $$h_{1}(a)=h_{1}(b) \ \ e\ \ h_{2}(a)=h_{2}(b)$$
+		- Sono possibili più di $m$ sequenze distinte di ispezione
+	- ### Vincoli
+		- sulla funzione di hash secondaria $h_{2}$
+			- non deve mai dare come risultato $0$
+			- deve permettere di iterare su tutta la tabella
+	- ### ES:
+		- ![[Pasted image 20240730140134.png]]
