@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md"
+                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md"
               }
             }
           },
@@ -165,8 +165,16 @@
   },
   "active": "7ee62c20f86b5e80",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Spazi di probabilità.md",
+    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
+    "Secondo Anno/Linguaggi di Programmazione/Macchine astratte interpreti e compilatori.md",
+    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
+    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli.md",
+    "Secondo Anno/Tecnologie Web/Il WWW",
+    "Secondo Anno/Ottimizzazione combinatoria/Untitled.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+    "Untitled.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori",
@@ -181,7 +189,6 @@
     "Secondo Anno",
     "Excalidraw/porta NOT.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
-    "Primo Anno",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/Analisi di costo/Equazioni di ricorrenza.md",
@@ -195,13 +202,6 @@
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
     "Primo Anno/Algoritmi e strutture dati/Java.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Dynamic.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Union Find/Euristica union by rank.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Union Find/Euristica sul peso.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/Tabelle hash/Tabelle Hash.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Divide-et-impera.md",
     "Primo Anno/immagini/Pasted image 20240821185254.png",
     "Primo Anno/immagini/Pasted image 20240820162246.png",
     "Primo Anno/immagini/Pasted image 20240821184439.png",
