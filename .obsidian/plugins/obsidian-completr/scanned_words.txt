@@ -790,6 +790,7 @@ rsD
 rItV
 riservati
 rappresentabili
+resource
 la
 le
 lo
@@ -1198,6 +1199,8 @@ ASU
 AqJ
 Apb
 Appunti
+Angular
+ARIA
 nel
 necessario
 numero
@@ -1963,6 +1966,7 @@ cWm
 convertito
 causano
 corso
+componnenti
 avendo
 alcune
 arriva
@@ -2609,6 +2613,7 @@ uIDATx
 utilizzando
 uSf
 uhvuh
+uniform
 decremento
 del
 di
@@ -2952,6 +2957,7 @@ documentazione
 dzS
 dovuto
 discreti
+documenti
 finito
 fanno
 facilmente
@@ -3584,6 +3590,7 @@ iZr
 iRP
 imperfezioni
 intorno
+identifier
 modo
 mentre
 massimo
@@ -6248,6 +6255,7 @@ NYFa
 NVC
 NNCJ
 Nei
+NodeJs
 Il
 Instruction
 IR
@@ -6649,6 +6657,9 @@ Regole
 RLAN
 RjP
 RTnJ
+REST
+React
+RDF
 Si
 Se
 Status
@@ -6851,6 +6862,8 @@ SWiEI
 Sva
 SfT
 Storia
+Server
+SPARQL
 BINARY
 Bus
 BX
@@ -7013,6 +7026,7 @@ Belmann
 Bellman
 BIDAT
 Base
+Basi
 Per
 Program
 PC
@@ -7727,6 +7741,7 @@ Mqyrm
 MNxOVG
 MWD
 MbW
+MongoDB
 ES
 Esempi
 Ex
@@ -8108,6 +8123,8 @@ CSi
 Concetti
 CkgO
 Caratteristica
+CSS
+Client
 Questa
 Quello
 Qz
@@ -8476,6 +8493,7 @@ Fiq
 FhL
 FAU
 Floating
+Framework
 Word
 WK
 WB
@@ -8614,6 +8632,7 @@ WeS
 WaM
 WIr
 While
+Web
 zero
 zip
 zL
@@ -8919,6 +8938,8 @@ Hrb
 Hwt
 HQQQ
 Hrq
+HTTP
+HTML
 XOR
 Xm
 Xo
@@ -9062,6 +9083,7 @@ XSe
 XguK
 XPT
 XzH
+XML
 ha
 ho
 hack
@@ -9385,6 +9407,8 @@ JsIM
 Jyt
 JcS
 JZy
+Javascript
+JSON
 kB
 kW
 kWs
@@ -10472,6 +10496,7 @@ UFJ
 UQm
 Udg
 UuI
+URI
 Zx
 ZD
 ZRz
@@ -11435,6 +11460,7 @@ VJv
 Vuaa
 VSrX
 VOJ
+Vue
 öG
 öH
 özw

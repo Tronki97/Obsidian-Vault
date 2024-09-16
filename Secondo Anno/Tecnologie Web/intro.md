@@ -1,0 +1,29 @@
+- ## Basi:
+	- ### HTTP
+	- ### REST
+	- ### URI
+		- uniform resource identifier 
+		- 
+	- ### Codifica dei caratteri
+- ## Web dei documenti:
+	- ### XML
+	- ### CSS
+	- ### HTML
+- ## Web dei programmi:
+	- ### Client side:
+		- #### Javascript:
+		- #### JS Framework
+		- #### Framework a componnenti:
+			- ##### Angular
+			- ##### React
+			- ##### Vue
+		- #### ARIA
+	- ### Server side:
+		- #### PHP:
+		- #### [[Python]]
+		- ### NodeJs
+- ## Web dei dati:
+	- ### SPARQL
+	- ### JSON-LD RDF
+	- ### MongoDB
+- 

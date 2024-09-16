@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Python.md",
+                "file": "Secondo Anno/Tecnologie Web/intro.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Python.md",
+                "file": "Secondo Anno/Tecnologie Web/intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Python.md",
+                "file": "Secondo Anno/Tecnologie Web/intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Python.md"
+                "file": "Secondo Anno/Tecnologie Web/intro.md"
               }
             }
           },
@@ -163,17 +163,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "7ee62c20f86b5e80",
   "lastOpenFiles": [
+    "Secondo Anno/Tecnologie Web/intro.md",
+    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
+    "Secondo Anno/Calcolo Numerico/Python.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Calcolo Numerico/Intro.md",
-    "Secondo Anno/Calcolo Numerico/Python.md",
     "2024-09-16.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Spazi di probabilità.md",
     "Secondo Anno/Linguaggi di Programmazione/Macchine astratte interpreti e compilatori.md",
     "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
-    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli.md",
     "Secondo Anno/Tecnologie Web/Il WWW",
     "Secondo Anno/Ottimizzazione combinatoria/Untitled.md",
@@ -201,7 +202,6 @@
     "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Floyd-Warshall.md",
     "Primo Anno/immagini/Pasted image 20240821185254.png",
     "Primo Anno/immagini/Pasted image 20240820162246.png",
     "Primo Anno/immagini/Pasted image 20240821184439.png",
