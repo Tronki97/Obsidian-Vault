@@ -1,6 +1,51 @@
 ---
 ~
 ---
+- # 16/09/24
+- ## Base-N e binario
+	- il calcolatore usa la base binaria e ogni base è una rappresentazione a se: 
+		- $147,3= 1\cdot 10^{2}+4\cdot{1}0^{1}+7\cdot{1}0^{0}+3\cdot 10^{-1}$
+			- che era quindi in base 10.
+		- stessa cosa per ogni altro tipo di base.
+	- per convertire si può fare in modo facile:
+		- $11_{(10)}=8+2+1=1\cdot 2^{3}+0\cdot{2}^{2}+1\cdot 2^{1}+1\cdot 2^{0}=1011_{(2)}$ 
+	- oppure usando le divisioni successive e per trovare il numero convertito prendo i resti ottenuti dalle divisioni nell'ordine opposto in cui li ho trovati.
+		- **TODO foto**.
+	- ### Floating point:
+		- faccio moltiplicazioni successive alla parte decimale per la base:
+			- $$0.1_{(10)}= 0.1*2=0.2*2=0.4*2 =0.8*2=1.6*2=1.2*2\dots$$
+			- e poi prendo le parti intere ottenute ad ogni moltiplicazione nell'ordine ottenuto.
+		- Quindi le conversioni delle parti decimali dei numeri causano problemi perché convertire la parte decimale in base binaria può dare dei numeri infiniti ed è quindi a questo che servono i *floating point* 
+		- Nei floating point dei bit sono riservati a :
+			- **segno** 
+			- **parte intera** 
+			- **parte frazionaria**
+		- in *Python* 
+			- `import sys`
+			- `sys.float_info`
+			- mi danno informazioni sulle rappresentazioni floating point.
+		- Ogni numero può essere rappresentato come: 
+			- $n= (-1)^{s}2^{e-1023}(1+f)$. per numeri a 64 bit 
+				- $s$ è il segno del numero
+				- $e-1023$ rappresenta la grandezza del numero e divide tutti i numeri rappresentabili che vanno da $[0,2048]$
+				- $f$ è la mantissa.
+		- Il modo generale è:
+			- $n=\pm \beta^{p}\cdot d_{0},d_{1}\dots d_{t}$
+			- $\mathbb{F}=(\beta, t, l, u)=\{\{\emptyset\}\cup n=\pm \beta^{p}\cdot d_{0},d_{1}\dots d_{t}\}$
+			- 
+		- ES:
+			- $\beta=2$
+			- $t=52$
+			- $l=-1023$ 
+			- $u=1023$
+			- $-l \leq p\leq u$
+		- quando un numero non può essere convertito esattamente quindi $x\not \in \mathbb{F}(\beta, t, l, u)$ il numero viene _approssimato_ ad un numero appartenente a quell'insieme. 
+		- procedendo quindi a _troncare_ la mantissa.
+		- ### Caratteristica codifiche:
+			- numeri _discreti_.
+			- intorno allo 0 non ci sono valori
+			- esiste un _min_ e un _max_
+			- i valori dipendono dall'_esponente_.
 - ## Tipi di errori:
 	- ### Errore di misura:
 		- dovuto alle imperfezioni dello strumento di misura dei dati del problema

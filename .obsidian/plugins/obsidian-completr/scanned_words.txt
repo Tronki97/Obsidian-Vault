@@ -787,6 +787,8 @@ reinserito
 rHo
 rsD
 rItV
+riservati
+rappresentabili
 la
 le
 lo
@@ -1955,6 +1957,8 @@ cnr
 cAK
 cJA
 cWm
+convertito
+causano
 avendo
 alcune
 arriva
@@ -3213,6 +3217,7 @@ fvA
 fintanto
 fCX
 fhy
+foto
 in
 il
 invece
@@ -3881,6 +3886,7 @@ minime
 marcatura
 mettendolo
 mkCg
+moltiplicazioni
 esempio
 eccede
 errori
@@ -5838,6 +5844,7 @@ typedef
 trasformano
 toglie
 tMAG
+trovati
 grandi
 gli
 grande
@@ -6227,6 +6234,7 @@ NVaL
 NYFa
 NVC
 NNCJ
+Nei
 Il
 Instruction
 IR
@@ -6991,6 +6999,7 @@ BaP
 Belmann
 Bellman
 BIDAT
+Base
 Per
 Program
 PC
@@ -7185,6 +7194,7 @@ Puntatori
 PTW
 Procede
 PMrt
+Python
 Di
 Data
 Dati
@@ -8451,6 +8461,7 @@ Ford
 Fiq
 FhL
 FAU
+Floating
 Word
 WK
 WB
@@ -11063,6 +11074,7 @@ TRN
 Terminale
 Toq
 TuA
+TODO
 GY
 GT
 Ghw
