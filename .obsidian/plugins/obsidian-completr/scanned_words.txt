@@ -410,6 +410,7 @@ prosegue
 private
 protected
 paul
+python
 realizzare
 rappresentare
 risultato
@@ -1196,6 +1197,7 @@ Ays
 ASU
 AqJ
 Apb
+Appunti
 nel
 necessario
 numero
@@ -1398,6 +1400,7 @@ nLalj
 nKw
 nUE
 nQP
+numerica
 capire
 codifiche
 capacit
@@ -1959,6 +1962,7 @@ cJA
 cWm
 convertito
 causano
+corso
 avendo
 alcune
 arriva
@@ -2381,6 +2385,8 @@ aubB
 ahkB
 aOb
 aBn
+aumentare
+approssimazione
 un
 una
 usato
@@ -2945,6 +2951,7 @@ dir
 documentazione
 dzS
 dovuto
+discreti
 finito
 fanno
 facilmente
@@ -3576,6 +3583,7 @@ iterable
 iZr
 iRP
 imperfezioni
+intorno
 modo
 mentre
 massimo
@@ -3887,6 +3895,7 @@ marcatura
 mettendolo
 mkCg
 moltiplicazioni
+mancanza
 esempio
 eccede
 errori
@@ -4400,6 +4409,7 @@ bRt
 bbz
 bfax
 btr
+book
 quindi
 questo
 quelle
@@ -5845,6 +5855,8 @@ trasformano
 toglie
 tMAG
 trovati
+troncare
+troncamento
 grandi
 gli
 grande
@@ -6060,6 +6072,7 @@ garbage
 gruppi
 gPSI
 gjjP
+gratis
 NOT
 NotePad
 Nu
@@ -8094,6 +8107,7 @@ Ccp
 CSi
 Concetti
 CkgO
+Caratteristica
 Questa
 Quello
 Qz
@@ -11239,6 +11253,7 @@ GvN
 Genera
 Goka
 GLL
+Guida
 Vb
 VD
 VG
