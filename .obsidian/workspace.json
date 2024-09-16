@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+                "file": "Secondo Anno/Calcolo Numerico/Python.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -66,13 +66,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -88,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+                "file": "Secondo Anno/Calcolo Numerico/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+                "file": "Secondo Anno/Calcolo Numerico/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md"
+                "file": "Secondo Anno/Calcolo Numerico/Python.md"
               }
             }
           },
@@ -165,10 +163,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7ee62c20f86b5e80",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo Numerico/Intro.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+    "Secondo Anno/Calcolo Numerico/Intro.md",
     "Secondo Anno/Calcolo Numerico/Python.md",
     "2024-09-16.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
