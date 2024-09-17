@@ -413,6 +413,10 @@ paul
 python
 primitivi
 primitive
+puro
+propria
+parziale
+perdita
 realizzare
 rappresentare
 risultato
@@ -797,6 +801,7 @@ realizzazione
 recupero
 realizzati
 risiedono
+realizzata
 la
 le
 lo
@@ -1021,6 +1026,7 @@ leak
 levenshtein
 lVu
 lQK
+lontananza
 ALU
 AND
 Address
@@ -1977,6 +1983,11 @@ corso
 componnenti
 componenti
 convenzionale
+costituito
+corretta
+compilativa
+compilatore
+calcolano
 avendo
 alcune
 arriva
@@ -2403,6 +2414,9 @@ aumentare
 approssimazione
 astratta
 adeguati
+astratte
+assimilando
+aggiunti
 un
 una
 usato
@@ -2971,6 +2985,10 @@ dovuto
 discreti
 documenti
 dedicate
+decodificare
+decodificata
+debug
+decodifica
 finito
 fanno
 facilmente
@@ -3608,6 +3626,11 @@ intorno
 identifier
 interprete
 interpretare
+informatica
+interpreta
+interpretativa
+interagire
+interpretato
 modo
 mentre
 massimo
@@ -3923,6 +3946,9 @@ mancanza
 macchine
 manipolazione
 microprogrammi
+microprogrammabile
+misto
+mix
 esempio
 eccede
 errori
@@ -4230,6 +4256,9 @@ ewR
 ejd
 essenziale
 emulazione
+elaborazione
+efficienza
+esigenze
 base
 bit
 basano
@@ -5138,6 +5167,11 @@ subroutine
 statica
 sofisticata
 simulazione
+sofisticato
+servizi
+semantica
+sintesi
+scarsa
 otterremmo
 ottenere
 occupare
@@ -5383,6 +5417,9 @@ ocm
 oPx
 oNt
 oGGG
+ospite
+originale
+occupazione
 va
 valore
 viene
@@ -5891,6 +5928,7 @@ tMAG
 trovati
 troncare
 troncamento
+tradotti
 grandi
 gli
 grande
@@ -6107,6 +6145,7 @@ gruppi
 gPSI
 gjjP
 gratis
+gerarchiche
 NOT
 NotePad
 Nu
@@ -6896,6 +6935,7 @@ Storia
 Server
 SPARQL
 SDeA
+Scartando
 BINARY
 Bus
 BX
@@ -7059,6 +7099,7 @@ Bellman
 BIDAT
 Base
 Basi
+Bytecode
 Per
 Program
 PC
@@ -7254,6 +7295,9 @@ PTW
 Procede
 PMrt
 Python
+Preconcetto
+Perch
+Poco
 Di
 Data
 Dati
@@ -7429,6 +7473,7 @@ DELETE
 Definiamo
 Definisco
 DwF
+Difficile
 Le
 La
 Lg
@@ -7775,6 +7820,7 @@ MWD
 MbW
 MongoDB
 Macchina
+Meno
 ES
 Esempi
 Ex
@@ -7949,6 +7995,7 @@ Ereditariet
 EJL
 Errore
 Esterna
+Efficiente
 Come
 Codifica
 Counter
@@ -8160,6 +8207,7 @@ Caratteristica
 CSS
 Client
 Controllo
+Caratteristiche
 Questa
 Quello
 Qz
@@ -8529,6 +8577,8 @@ FhL
 FAU
 Floating
 Framework
+Formalmente
+Facile
 Word
 WK
 WB
@@ -10091,6 +10141,8 @@ OYp
 ORK
 OBT
 Oav
+Out
+Obiettivo
 xz
 xX
 xF

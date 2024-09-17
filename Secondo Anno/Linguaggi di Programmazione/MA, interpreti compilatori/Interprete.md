@@ -4,3 +4,8 @@
 	- Operazioni e strutture dati per il _controllo del trasferimento_ dei dati 
 	- Operazioni e strutture dati per la _gestione della memoria_
 - La struttura dell'interprete è uguale per ogni [[MA (macchina astratta)||MA]] cambiano i diversi componenti.
+- ## Definizione formale di interprete per un linguaggio: ^68f4bc
+	- Un interprete per il linguaggio $L$, scritto nel linguaggio $Lo$, è un programma che realizza una [[Implementare un linguaggio#^7219a0||funzione parziale]] 
+		- $$(I_{L}^{Lo}:(Prog^{L}\times D)\to D) : I_{L}^{Lo}(P_{r}^{L}, Input)=P^{L}(Input)$$ 
+- ## In sostanza:
+	- 

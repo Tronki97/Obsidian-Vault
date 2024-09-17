@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "621a377e0e533cf2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algoritmi e strutture dati/Java.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,12 +62,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ROM",
+                "query": "programma",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabeticalReverse"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -66,8 +79,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -87,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md"
               }
             }
           },
@@ -166,13 +178,20 @@
   },
   "active": "7ee62c20f86b5e80",
   "lastOpenFiles": [
-    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Memorie.md",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Linguaggio macchina.md",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Implementare un linguaggio.md",
+    "Pasted image 20240917162109.png",
+    "Primo Anno/Algoritmi e strutture dati/Java.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Interprete.md",
+    "Pasted image 20240917153145.png",
+    "Pasted image 20240917152330.png",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Linguaggio macchina.md",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
+    "Primo Anno/architettura degli elaboratori/SO/SO.md",
+    "Pasted image 20240917150018.png",
+    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Memorie.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Pasted image 20240917142524.png",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
     "Secondo Anno/Tecnologie Web/intro.md",
@@ -200,18 +219,10 @@
     "Pasted image 20240828151856.png",
     "Secondo Anno/Sistemi Operativi",
     "Excalidraw/porta NOT.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/Analisi di costo/Equazioni di ricorrenza.md",
     "Primo Anno/immagini/Pasted image 20240821185254.png",
     "Primo Anno/immagini/Pasted image 20240820162246.png",
     "Primo Anno/immagini/Pasted image 20240821184439.png",
     "Primo Anno/immagini/Pasted image 20240821183334.png",
-    "Primo Anno/immagini/Pasted image 20240821182439.png",
-    "Primo Anno/immagini/Pasted image 20240821182239.png",
-    "Primo Anno/immagini/Pasted image 20240821182056.png",
-    "Primo Anno/immagini/Pasted image 20240821175423.png",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
