@@ -1,0 +1,6 @@
+- è il componente che interpreta le istruzioni ed è costituito da:
+	- Operazioni per *l'elaborazione dei dati primitivi*
+	- Operazioni e strutture dati per il *controllo della sequenza* di esecuzione delle operazioni
+	- Operazioni e strutture dati per il _controllo del trasferimento_ dei dati 
+	- Operazioni e strutture dati per la _gestione della memoria_
+- La struttura dell'interprete è uguale per ogni [[MA (macchina astratta)||MA]] cambiano i diversi componenti.

@@ -1,0 +1,29 @@
+- M(o [[MA (macchina astratta)||MA]]) = macchina astratta
+- $L_{M}$ = linguaggio macchina di M. Ovvero è il linguaggio che è "compreso" dall'[[Interprete]] di M:
+	- I programmi sono particolari dati primitivi su cui opera l'interprete.
+- Ai componenti di _M_ corrispondono adeguati componenti di $L_{M}$ 
+- ## Rappresentazioni dei programmi scritti in $L_{M}$ 
+	- ### Interna: 
+		- struttura dati in memoria 
+	- ### Esterna:
+		- stringa di caratteri.
+- ## Linguaggio della macchina HW:
+	- set di istruzioni direttamente implementata dalla [[ALU]]:
+		- [[CISC e RISC]]
+	- ### Macchina HW come MA
+		- la macchina HW è un tipo di MA il cui interprete esegue:
+			- #### Operazioni primitive:
+				- aritmetico logiche, manipolazione di stringhe di bit, lettura e scrittura sui [[Registri]] e celle di memoria, I/O.
+			- #### Controllo sequenza:
+				- Salti condizionati e non, chiamate di subroutine tramite il [[Registri#^b1a012||PC]] e strutture dati 
+			- #### Controllo dati:
+				- Acquisizione operandi e memorizzazione risultato
+				- ##### Architettura a registri: 
+					- indice e indirizzamento diretto
+				- ##### Architettura a pila.
+			- #### Gestione memoria:
+				- ##### Architettura a registri: 
+					- memoria statica:
+				- ##### Architettura a pila.
+					- allocazione e recupero dati sulla pila.
+		- Un processore convenzionale è a suo modo una forma di [[MA (macchina astratta)||MA]] il cui linguaggio è quello _macchina_, Un'architettura più sofisticata può interpretare lo stesso linguaggio macchina

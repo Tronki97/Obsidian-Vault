@@ -4,7 +4,7 @@
 		- ax, bx, cx, dx ecc..
 - ## Registri speciali
 	- specializzati a memorizzare determinati valori per contribuire al corretto funzionamento della CPU 
-		- _PC_ (_program counter_) contiene l'indirizzo della prossima istruzione da eseguire
+		- _PC_ (_program counter_) contiene l'indirizzo della prossima istruzione da eseguire ^b1a012
 		- _IR_ (_instruction register_) contiene il valore della prossima istruzione da eseguire
 		- _MAR_ (_memory address register_) contiene l'indirizzo di una cella di RAM sulla quale si vuole eseguire una qualsiasi operazione
 		- _MDR_ (_memory data register_) contiene un valore ottenuto da o che si vuole inserire in RAM

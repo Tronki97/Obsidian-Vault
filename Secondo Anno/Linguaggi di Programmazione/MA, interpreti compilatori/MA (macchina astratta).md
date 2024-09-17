@@ -1,0 +1,18 @@
+- è un insieme di strutture dati ed algoritmi che permettono di memorizzare ed eseguire un programma ha come componente essenziale l'interprete.
+- ![[Pasted image 20240917142524.png]]
+- ## Realizzare una macchina astratta:
+	- ### 1) realizzazione _hardware_
+		- sempre possibile ma usata solo per macchine a basso livello o dedicate
+		- massima velocità
+		- niente flessibilità
+	- ### 2) emulazione o simulazione _firmware_
+		- SDeA _MA_ realizzati tramite microprogrammi, che risiedono in [[Memorie#^ff2552||ROM]] 
+		- macchina ospite microprogrammabile
+		- alta velocità
+		- flessibilità maggiore rispetto all'HW puro.
+	- ### 3) Interpretazione o simulazione via software 
+		- SDeA _MA_ realizzati tramite _programmi scritti nel linguaggio della macchina ospite(MO)_
+			- _MO_ qualsiasi
+			- minore velocità
+			- _massima flessibilità_
+	- nella relatà si usa un misto delle 3 tecniche precedenti

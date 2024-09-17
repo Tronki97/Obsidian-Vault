@@ -411,6 +411,8 @@ private
 protected
 paul
 python
+primitivi
+primitive
 realizzare
 rappresentare
 risultato
@@ -791,6 +793,10 @@ rItV
 riservati
 rappresentabili
 resource
+realizzazione
+recupero
+realizzati
+risiedono
 la
 le
 lo
@@ -1201,6 +1207,8 @@ Apb
 Appunti
 Angular
 ARIA
+Acquisizione
+Architettura
 nel
 necessario
 numero
@@ -1967,6 +1975,8 @@ convertito
 causano
 corso
 componnenti
+componenti
+convenzionale
 avendo
 alcune
 arriva
@@ -2391,6 +2401,8 @@ aOb
 aBn
 aumentare
 approssimazione
+astratta
+adeguati
 un
 una
 usato
@@ -2958,6 +2970,7 @@ dzS
 dovuto
 discreti
 documenti
+dedicate
 finito
 fanno
 facilmente
@@ -3231,6 +3244,8 @@ fintanto
 fCX
 fhy
 foto
+flessibilit
+firmware
 in
 il
 invece
@@ -3591,6 +3606,8 @@ iRP
 imperfezioni
 intorno
 identifier
+interprete
+interpretare
 modo
 mentre
 massimo
@@ -3903,6 +3920,9 @@ mettendolo
 mkCg
 moltiplicazioni
 mancanza
+macchine
+manipolazione
+microprogrammi
 esempio
 eccede
 errori
@@ -4208,6 +4228,8 @@ estesa
 eIP
 ewR
 ejd
+essenziale
+emulazione
 base
 bit
 basano
@@ -5111,6 +5133,11 @@ sottoclassi
 sSA
 snr
 sYuv
+scritti
+subroutine
+statica
+sofisticata
+simulazione
 otterremmo
 ottenere
 occupare
@@ -6463,6 +6490,8 @@ Iteratori
 Individuare
 Ipj
 IEJ
+Interprete
+Interna
 Rappresentazione
 Registri
 Register
@@ -6660,6 +6689,8 @@ RTnJ
 REST
 React
 RDF
+Rappresentazioni
+Realizzare
 Si
 Se
 Status
@@ -6864,6 +6895,7 @@ SfT
 Storia
 Server
 SPARQL
+SDeA
 BINARY
 Bus
 BX
@@ -7742,6 +7774,7 @@ MNxOVG
 MWD
 MbW
 MongoDB
+Macchina
 ES
 Esempi
 Ex
@@ -7915,6 +7948,7 @@ EiSz
 Ereditariet
 EJL
 Errore
+Esterna
 Come
 Codifica
 Counter
@@ -8125,6 +8159,7 @@ CkgO
 Caratteristica
 CSS
 Client
+Controllo
 Questa
 Quello
 Qz

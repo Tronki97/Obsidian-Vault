@@ -1,0 +1,3 @@
+- Una macchina fisica _MF_ esiste per eseguire il suo _linguaggio_. 
+- Un linguaggio però può essere eseguito su più macchine. 
+- Una MF è la realizzazione di un particolare algoritmo che ha il nome di _[[Interprete]]_ che, usando alcune strutture dati, è in grado di eseguire programmi scritti in un certo linguaggio detto [[Linguaggio macchina||macchina]].
