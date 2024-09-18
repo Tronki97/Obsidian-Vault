@@ -49,7 +49,7 @@
 			- $D_{sv}> d_{su}+w(u,v)$  e se l'equazione risulta vera aggiorniamo il valore. 
 			- ripetendo questo passaggio controllando ogni arco fino a che non è più possibile ridurre il costo minimo. 
 			- si tiene conto degli ultimi archi che ci hanno permesso di eseguire l'ultimo rilassamento.
-	- ![[Screenshot 2024-05-08 at 12-18-52 Cammini minimi - 19-CamminiMinimi.pdf.png]]
+	- ![[BellmanFord algoritmo.png]]
 		- Il for each permette di eseguire ogni volta il rilassamento e si tiene traccia degli ultimi archi rilassati
 		- Il secondo for invece viene ripetuto n volte perché la lunghezza massima di un cammino minimo in un grafo senza cicli è n
 		- costo: $O(n+nm)=O(nm)$ 

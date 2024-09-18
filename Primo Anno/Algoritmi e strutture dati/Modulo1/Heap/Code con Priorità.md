@@ -63,7 +63,7 @@
 - ## Esempi:
 	- ### delete(D data) (e deleteMin()):
 		- Sia v il nodo che contiene _data_ con chiave _k_ 
-			- ![[Screenshot 2024-08-19 at 17-46-10 Code con priorità - 11-HeapEApplicazioni.pdf.png]]
+			- ![[albero AVL.png]]
 		- Sia _w_ l'ultima foglia a destra 
 			- `data.v=data.w;`
 			- `key.v=key.w;`

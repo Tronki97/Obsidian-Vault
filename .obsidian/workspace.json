@@ -11,9 +11,19 @@
             "id": "7ee62c20f86b5e80",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "immagini/Implementazione del linguaggio Java.png"
+              }
+            }
+          },
+          {
+            "id": "1ee87ec66d48f0b1",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -33,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md"
+                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md"
               }
             }
           },
@@ -152,7 +164,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -176,23 +188,29 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7ee62c20f86b5e80",
+  "active": "887d7b99e2658c7c",
   "lastOpenFiles": [
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Implementare un linguaggio.md",
-    "Pasted image 20240917162109.png",
-    "Primo Anno/Algoritmi e strutture dati/Java.md",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Interprete.md",
-    "Pasted image 20240917153145.png",
-    "Pasted image 20240917152330.png",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Linguaggio macchina.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Implementare un linguaggio.md",
+    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Interprete.md",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Linguaggio macchina.md",
+    "immagini/Pasted image 20240821182056.png",
+    "immagini/Procedimento distanza di levenshtein.png",
+    "immagini/Teoria Dijkstra.png",
+    "immagini/Kruskal PseudoCode.png",
+    "immagini/Prim-MST PseudoCode.png",
+    "immagini/Teoria di Dijkstra.png",
+    "immagini/PseudoCode Dijkstra.png",
+    "immagini/PseudoCode FW.png",
+    "immagini/Stampa cammini.png",
+    "immagini/FloydWarshall ottimizzato.png",
+    "Primo Anno/Algoritmi e strutture dati/Java.md",
     "Primo Anno/architettura degli elaboratori/SO/SO.md",
-    "Pasted image 20240917150018.png",
     "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Memorie.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
-    "Pasted image 20240917142524.png",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
     "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
@@ -202,7 +220,6 @@
     "2024-09-16.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Spazi di probabilità.md",
-    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli.md",
     "Secondo Anno/Tecnologie Web/Il WWW",
     "Secondo Anno/Ottimizzazione combinatoria/Untitled.md",
@@ -216,13 +233,8 @@
     "Secondo Anno/Tecnologie Web",
     "Secondo Anno/Linguaggi di Programmazione",
     "Secondo Anno/Calcolo Numerico",
-    "Pasted image 20240828151856.png",
     "Secondo Anno/Sistemi Operativi",
     "Excalidraw/porta NOT.md",
-    "Primo Anno/immagini/Pasted image 20240821185254.png",
-    "Primo Anno/immagini/Pasted image 20240820162246.png",
-    "Primo Anno/immagini/Pasted image 20240821184439.png",
-    "Primo Anno/immagini/Pasted image 20240821183334.png",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

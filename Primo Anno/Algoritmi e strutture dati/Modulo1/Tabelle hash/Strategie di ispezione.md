@@ -12,7 +12,7 @@
 			- assumendo hashing uniforme semplice, uno slot vuoto preceduto da $i$ slot pieni viene riempito con probabilità $\frac{i+1}{m}$ 
 			- i tempi medi per _insert, delete_ crescono
 	- ### ES:
-		- ![[Screenshot 2024-07-30 at 13-44-14 Tabelle Hash - 09 - Tabelle Hash.pdf.png]]
+		- ![[procedimento esercizio Hash.png]]
 	- ### Analisi costo medio
 		- questo tipo di ispezione non assicura che le sequenzi di ispezione siano equiprobabili a causa del clustering primario.
 		- il costo medio non è caratterizzato dai [[Tabelle Hash#^d25c3a||2 teoremi già descritti]]

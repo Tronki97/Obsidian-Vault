@@ -11,16 +11,16 @@
 	- ![[Pasted image 20240821182056.png]]
 	- il cammino $\Pi_{sv}^*$ si scompone in $\Pi_{sy}^*$ e $\Pi_{yv}^*$ con y primo nodo fuori da _T_ attraversato dal cammino minimo 
 	- Quindi $d_{sv}=d_{sx}+w(x,y)+d_{yv}$ ___(2)___
-	- ![[Pasted image 20240821182239.png]]
+	- ![[Teoria Dijkstra.png]]
 	- Per l'ipotesi, l'arco (u,v) è quello che, tra tutti gli archi che collegano un vertice in _T_ con uno non ancora in _T_, minimizza la somma $d_{su}+w(u,v)$
 	- in particolare $$d_{su}+w(u,v)\leq d_{sx}+w(x,y)$$___(3)___
-	- ![[Pasted image 20240821182439.png]]
+	- ![[Teoria di Dijkstra.png]]
 - ## Riassumendo:
 	- combinando ___(1),(2),(3)___ ottengo: $$d_{su}+w(u,v)> d_{sx}+w(x,y)+d_{yv}$$da ___(1) e (2)___ 
 	- $$d_{su}+w(u,v)\geq d_{sx}+w(x,y)+d_{yv}$$dai pesi non negativi.
 	- $$d_{su}+w(u,v)\geq d_{sx}+w(x,y)$$da ___(3)___
 - ## Implementazione:
-	- ![[Pasted image 20240821183334.png]]
+	- ![[PseudoCode Dijkstra.png]]
 - ## Analisi:
 	- l'inizializzazione(1° for) ha costo $O(n)$ 
 	- le operazioni [[Code con Priorità#^c5a4a0||find()]] e [[Code con Priorità#^a08aa3||deleteMin()]] hanno costo $O(\log n)$ e vengono eseguite al massimo _n_ volte

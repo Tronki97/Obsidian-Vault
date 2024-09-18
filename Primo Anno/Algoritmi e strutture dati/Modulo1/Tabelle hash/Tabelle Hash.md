@@ -83,7 +83,7 @@
 				- una ricerca senza successo in una tabella gestita con concatenamento ha costo medio$\Theta(1+\alpha)$ 
 					- di base la ricerca di una chiave senza successo ha costo $\alpha$ e si aggiunge il costo della funzione di hashing = 1.
 		- #### ES:
-			- ![[Screenshot 2024-07-30 at 13-21-59 Tabelle Hash - 09 - Tabelle Hash.pdf.png]]
+			- ![[Hashing con liste.png]]
 	- ### Indirizzamento Aperto
 		- Tutte le chiavi sono memorizzate nella stessa tabella.
 		- ogni slot contiene o una chiave o $null$

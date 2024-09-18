@@ -6,4 +6,4 @@
 		- l'operazione viene eseguita tra il valore di $[SP-1]$ e $[SP-2]$ dove SP sarebbe lo _stack pointer_ 
 			- ![[Pasted image 20240619185756.png]] il valore ottenuto dall'operazione viene inserito in $[SP-2]$ e il valore in $[SP-1]$ viene perso.
 		- La stessa cosa vale per le operazioni booleane ma al posto di esserci dei valori ci sono dei _true_ o _false_ 
-			- ![[Senza_titolo.png]]
+			- ![[operazione a stack.png]]

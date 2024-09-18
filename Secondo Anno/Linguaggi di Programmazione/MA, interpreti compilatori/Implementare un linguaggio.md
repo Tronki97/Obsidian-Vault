@@ -22,7 +22,7 @@
 - ## Metodi:
 	- ### Implementazione interpretativa pura:
 		- $M_{L}$ è realizzata scrivendo un [[Interprete]] per $L$ su $Mo_{Lo}$ 
-			- ![[Pasted image 20240917152330.png]]
+			- ![[Schema di un Interprete.png]]
 		- #### Formalmente:
 			- [[Interprete#^68f4bc||DEF]] o in sintesi: _calcola la corretta semantica_ del programma.
 		- #### Caratteristiche:
@@ -35,7 +35,7 @@
 		- la traduzione viene effettuata da un altro programma 
 			- $C^{L_{a}}_{L,Lo}$ 
 			- il _Compilatore_ da $L$ a $Lo$ scritto in $L_{a}$ 
-			- ![[Pasted image 20240917153145.png]]
+			- ![[Schema di un compilatore.png]]
 			- #### Formalmente: 
 				- Un compilatore  da $L$ a $Lo$ è un programma che realizza una funzione $$C_{L,Lo}:Prog^{L}\to Prog^L$$
 				  tale che dato un programma $P_{r}^{L}$, se: $$C_{L,Lo}(P_{r}^{L})=P_{r}^{L}$$
@@ -51,5 +51,5 @@
 				- occupazione di memoria del codice prodotto.
 	- _Nella realtà si fa un mix di entrambi questi metodi a seconda delle esigenze_.
 		- Un esempio è [[Java]] prima compilato in _Bytecode_ poi interpretato dalla JVM 
-		- ![[Pasted image 20240917162109.png]]
+		- ![[Implementazione del linguaggio Java.png]]
 		- 

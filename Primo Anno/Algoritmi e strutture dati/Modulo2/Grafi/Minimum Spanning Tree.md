@@ -19,7 +19,7 @@
 			- _accrescere_ un sottoinsieme _T_ di archi con la seguente condizione:
 				- _T_ è sottoinsieme di qualche albero di copertura minimo 
 			- un arco {u, v} è detto _sicuro_ per T se $T\ \cup \{u, v\}$ è un ancora un sottoinsieme di qualche MST 
-			- ![[Screenshot 2024-05-06 at 09-29-29 Minimum Spanning Tree - 18-MinimumSpanningTree.pdf.png]]
+			- ![[PseudoCode MST-generico.png]]
 				- Archi _blu_: fanno parte della soluzione 
 				- archi _rossi_  non fanno parte della soluzione.
 		- ### Definizioni:
@@ -40,7 +40,7 @@
 				- Se l'arco e = {u, v} connette due alberi blu distinti, lo si colora di blu, altrimenti lo si colora di rosso.
 			- l'algoritmo è [[Algoritmi Greedy||greedy]] perché ad ogni passo si aggiunge alla "foresta" un arco con il peso minimo.
 		- ### Algoritmo:
-			- ![[Pasted image 20240821175100.png]]
+			- ![[Kruskal PseudoCode.png]]
 		- ### ANALISI:
 			- il costo dipende dall'implementazione di [[Strutture Union-Find||union find]] che usiamo:
 				- [[Strutture Union-Find#^9be1ea||quickUnion con euristica sul rango]] il costo totale: $O(m+n\ *log (n+m)\ )=O(2m\ *\ log(n+2n)=$
@@ -54,7 +54,7 @@
 			- si guardano i nodi adiacenti e si prende quello con interesse più basso
 			- quando un vertice ha interesse infinito lo inseriamo nella coda con interesse uguale al peso dell'arco che lo collega all'ultimo nodo scelto. 
 			- quando viene scoperto un arco con peso minore per arrivare ad un vertice con peso maggiore lo si aggiorna nella coda che lo contiene. 
-		- ![[Pasted image 20240821175423.png]]
+		- ![[Prim-MST PseudoCode.png]]
 		- ### costo computazionale: 
 			- _1° for_: $\Theta(n)$
 			- _1° while_: $O(n)$ viene eseguito n volte e le operazioni al suo interno hanno costo costante e [[Code con Priorità#^a08aa3||deleteMin]], [[Code con Priorità#^c7ebd6||decreaseKey]], [[Code con Priorità#^4e87d9||insert]] hanno costo $O(log \ n )$. 

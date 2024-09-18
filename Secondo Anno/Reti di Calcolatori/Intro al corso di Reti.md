@@ -1,0 +1,33 @@
+- una rete di calcolatori è un insieme di dispositivi _autonomi_(fanno decisioni di calcolo o altro in modo autonomo) e _interconnessi_(possono parlare tra di loro) ne bastano almeno 2 per crearne 1 di rete.
+- per esempio internet è una rete di calcolatori;
+- una rete telefonica non lo è.
+- Una rete serve a supportare una rete di utenti e la loro comunicazione.
+- _Host_: dispositivo in grado di usufruire della rete a cui è connesso. appunto usando _internet_ si ha accesso alla rete e se ne usa un servizio (come guardare la posta elettronica.) 
+- ## Sistemi scalabili
+	- la macchina ti da la risposta in un certo tempo limite determinabile in base alla complessità della domanda posta quindi i tempi di risposta rimangono accettabili nonostante la scalata della complessità del problema 
+- ## calcolo distribuito: 
+	- unione di calcolatori nel mondo che eseguono calcoli in parallelo per ridurre il tempo di calcolo spezzandolo in parti non sovrapponibili.
+	- Applicabile per esempio nella ricerca di una sequenza del DNA umano. 
+- ## Tipi di reti:
+	- ### PAN
+		- personal area network: connessione di dispositivi a breve distanza
+	- ### LAN
+		- tutte le reti con connessioni a distanza di circa 100/200 metri
+	- ### MAN
+		- metropolitan area network: reti che connettono aree urbane civili 
+	- ### WAN
+		- wide area network: aree molto ampie di solito nazionali, e spesso satellitari.
+	- tutte queste reti connesse formano Internet.
+- per far comunicare due calcolatori ci si appoggiava alla linea telefonica e deve appunto trasferire i dati attraverso un _Modem_ 
+- Internet of things: insieme di oggetti e sensori connessi e controllabili attraverso l'internet.
+- ## Prestazioni:
+	- ### capacità di trasmissione
+		- numero massimo di bit/s trasmissibili nella rete.  
+	- ### ritardo del collegamento
+		- ovvero il tempo richiesto ai dati per transitare dal mittente al destinatario
+			- determinato dalla distanza fisica e anche da diversi tipi di _protocolli_
+		- ed appunto quando vengono spediti dei pacchetti dati rischiano di non arrivare tutti insieme ma spesso con dei ritardi diversi per ogni gruppo di pacchetti.
+	- ### Jitter:
+		- la dispersione o la lontananza dal ritardo medio ed avere un jitter _alto_ causa problemi per l'interruzione di arrivo dei dati:
+			- per esempio la riproduzione di un video che si avvia subito ma causa continue interruzioni. 
+		- per risolvere questo problema si usa un _Buffer di dati_  ma ciò richiede della memoria aggiuntiva impiegata per questo motivo.  

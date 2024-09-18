@@ -7,7 +7,7 @@
 - ## ES:
 	- ### Calcolare la sequenza di Fibonacci.
 		- utilizzare una soluzione che fa utilizzo di un [[Array]] 
-		- ![[Screenshot 2024-04-16 at 12-18-52 Tecniche Algoritmiche - 15-ProgrammazioneDinamica.pdf.png]]
+		- ![[Fibonacci Dinamico.png]]
 	- ### Sottovettore di valore massimo:
 		- Considero un vettore $V[n]$ con $n$ valori reali 
 		- voglio individuare un sottovettore non vuoto di V la somma dei cui elementi sia massima.
@@ -85,7 +85,7 @@
 				- sostituire un carattere (costo: 1)
 			- ES:
 				- trasformare albero in libero
-				- ![[Screenshot 2024-04-18 at 10-33-16 Tecniche Algoritmiche - 15-ProgrammazioneDinamica.pdf.png]]
+				- ![[Distanza di levenshtein.png]]
 		- Usare la programmazione dinamica per realizzare un algoritmo: 
 			- #### Def:
 				- Due stringhe $S[n]$ e $T[m]$ di _n_ e _m_ caratteri

@@ -7,7 +7,7 @@
 			- Insieme degli archi _E_:
 				- relazione binaria tra vertici
 			- una arco _(X, X)_ è un cappio.
-		- ![[Screenshot 2024-04-23 at 13-25-17 Grafi - 16-Grafi.pdf.png]]
+		- ![[Grafo Orientato.png]]
 		- #### Incidenza e Adiacenza:
 			- Si dice _incidente_ un arco _(v, w)_ da _v_ a _w_ 
 				- _es_: (A, B) è incidente da A a B
@@ -19,7 +19,7 @@
 			- Insieme degli archi _E_:
 				- coppie non ordinate
 			- non ci sono cappi
-		- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]]
+		- ![[Grafo non orientato.png]]
 - ## Visite
 	- In ampiezza
 		- 
@@ -83,14 +83,14 @@
 	- ### Grado:
 		- [[#^2eb164||grafo non orientato]]: ^27e1bf
 			- _il grado di un vertice è il numero di archi che partono da esso._
-			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] A, B, E hanno grado 2
+			- ![[Grafo non orientato.png]] A, B, E hanno grado 2
 			  C e D hanno grado 3
 			  F ha grado 0
 		- [[#^2eb164||grafo orientato]]:
 			- grado entrante o uscente: 
 				- numero di archi entranti o uscenti da un vertice. 
 			- grado: somma dei gradi entranti o uscenti.
-			- ![[Screenshot 2024-04-23 at 13-25-17 Grafi - 16-Grafi.pdf.png]]A ha g. u. 2 e g. e. 1
+			- ![[Grafo Orientato.png]]A ha g. u. 2 e g. e. 1
 			  B ha g. u. 1 e g. e. 1
 			  C ha g. u. 0 e g. e. 3
 			  D ha g. u. 3 e g. e. 1
@@ -107,7 +107,7 @@
 - ## Connessione  ^fc32f8
 	- ### grafo non orientato:
 		- G è connesso se esiste un cammino da ogni vertice ad ogni altro vertice.
-			- ![[Screenshot 2024-04-23 at 13-27-05 Grafi - 16-Grafi.pdf.png]] Non è un grafo connesso 
+			- ![[Grafo non orientato.png]] Non è un grafo connesso 
 			- #### NOTA:
 				- se F fosse stato collegato ad una altro nodo allora il grafo sarebbe stato di tipo connesso 
 	- ### grafo orientato 

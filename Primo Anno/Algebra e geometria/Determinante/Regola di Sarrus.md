@@ -3,7 +3,7 @@
 	- 2) Sommo i prodotti degli elementi delle prime 3 diagonali principali che si incontrano procedendo da $sx$ verso $dx$ 
 	- 3) sommo i prodotti degli elementi delle 3 antidiagonali complete che si incontrano procedendo da $dx$ verso $sx$
 	- 4) Sottraggo nell'ordine i risultati ottenuti.
-	  ![[Selezione_001.png]]
+	  ![[regola di Sarrus.png]]
 	- ## Importante 
 		- _La regola di Sarrus vale solo per matrici di ordine 3_!
 - ## ES:
