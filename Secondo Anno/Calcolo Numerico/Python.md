@@ -6,6 +6,10 @@
 		- nel terminale: 
 			- `conda create --name CN24`
 			- `conda activate CN24`
+- ## Eseguire un file
+	- ### Windows:
+		- andare nella directory che contiene il file da eseguire poi digitare:
+			- `python "nome file.py"`
 - ## Librerie usate:
 	- Tutte da installare usando o _pip_ o _conda_
 	- ### numpy:

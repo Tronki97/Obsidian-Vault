@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/intro.md",
+                "file": "Secondo Anno/Calcolo Numerico/Python.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/intro.md",
+                "file": "Secondo Anno/Calcolo Numerico/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/intro.md",
+                "file": "Secondo Anno/Calcolo Numerico/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/intro.md"
+                "file": "Secondo Anno/Calcolo Numerico/Python.md"
               }
             }
           },
@@ -189,8 +189,9 @@
   },
   "active": "1ee87ec66d48f0b1",
   "lastOpenFiles": [
-    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
+    "Secondo Anno/Tecnologie Web/intro.md",
+    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Implementare un linguaggio.md",
@@ -212,7 +213,6 @@
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Memorie.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
-    "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Calcolo Numerico/Python.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Calcolo Numerico/Intro.md",
