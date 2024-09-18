@@ -26,4 +26,17 @@
 	- ### SPARQL
 	- ### JSON-LD RDF
 	- ### MongoDB
-- 
+- ## Mashup
+	- realizzare di siti e servizi web, è complesso e richiede varie conoscenze e la difficoltà sta nell'unire queste conoscenze 
+- ## Dichiaratività:
+	- dichiaro lo stato delle info in input e in Output, e gli algoritmi diventano sempre più semplici e automatici
+	- un errore nella dichiarazione non porta ad un'interruzione ma solo ad un risultato sbagliato.
+- ## Semantica:
+	- il web contiene informazioni significative che attivano ruoli, processi, ecc...
+	- Un'applicazione semantica _collega, attiva e rende eseguibile_ le informazioni in modo ricco e complesso.
+- ## Accessibilità:
+	- I siti web possono contenere varie funzionalità che aiutano persone con disabilità di vario tipo
+	- E varie istituzioni (banche, stato, assicurazioni) hanno l'obbligo di avere questo tipo di accessibilità
+	- Queste funzionalità possono anche essere sfruttate da persone senza disabilità 
+		- _Esempio_: quando si guida e col navigatore che ti dice la strada a voce.
+	- 

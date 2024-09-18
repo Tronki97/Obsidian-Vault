@@ -443,6 +443,7 @@ pZM
 paJo
 piI
 pML
+persone
 realizzare
 rappresentare
 risultato
@@ -862,6 +863,8 @@ rpl
 rTU
 rUp
 rzY
+ruoli
+ricco
 la
 le
 lo
@@ -1356,6 +1359,7 @@ AcJ
 AHl
 ADNl
 ATD
+Accessibilit
 nel
 necessario
 numero
@@ -1611,6 +1615,7 @@ nSz
 nLs
 nwc
 ngkFd
+navigatore
 capire
 codifiche
 capacit
@@ -2231,6 +2236,7 @@ cWf
 crhom
 ciI
 cuA
+conoscenze
 avendo
 alcune
 arriva
@@ -2710,6 +2716,11 @@ adu
 ahs
 axO
 apertura
+automatici
+attivano
+aiutano
+assicurazioni
+accessibilit
 un
 una
 usato
@@ -3350,6 +3361,10 @@ dgfM
 dxb
 dZh
 disponibilit
+difficolt
+dichiaro
+dichiarazione
+disabilit
 finito
 fanno
 facilmente
@@ -3673,6 +3688,7 @@ fTk
 fuN
 fzO
 finestra
+funzionalit
 in
 il
 invece
@@ -4077,6 +4093,8 @@ inBe
 ixN
 innn
 iJZ
+interruzione
+istituzioni
 modo
 mentre
 massimo
@@ -4790,6 +4808,7 @@ eazi
 egS
 eHA
 eoW
+eseguibile
 base
 bit
 basano
@@ -5032,6 +5051,7 @@ bsY
 bFKI
 bBg
 bpB
+banche
 quindi
 questo
 quelle
@@ -5828,6 +5848,9 @@ sMN
 sdF
 sqS
 sUv
+siti
+significative
+sfruttate
 otterremmo
 ottenere
 occupare
@@ -6104,6 +6127,7 @@ ovHZ
 ohY
 oPH
 oVS
+obbligo
 va
 valore
 viene
@@ -6400,6 +6424,8 @@ vroyN
 vgi
 vaWj
 veP
+vario
+voce
 troppo
 testimone
 tramite
@@ -6956,6 +6982,7 @@ gzY
 gMP
 gIm
 glge
+guida
 NOT
 NotePad
 Nu
@@ -7941,6 +7968,7 @@ Spp
 SPlC
 Slp
 SWd
+Semantica
 BINARY
 Bus
 BX
@@ -8638,6 +8666,7 @@ Dry
 Drh
 DJHa
 DoF
+Dichiarativit
 Le
 La
 Lg
@@ -9065,6 +9094,7 @@ MOkI
 MEv
 MBq
 MPiu
+Mashup
 ES
 Esempi
 Ex
@@ -11807,6 +11837,7 @@ wdV
 wvs
 wNm
 wuW
+web
 Oltre
 OgSf
 Od
