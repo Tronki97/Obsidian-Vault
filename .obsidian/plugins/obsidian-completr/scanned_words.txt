@@ -9509,6 +9509,7 @@ ENIGc
 Eseguire
 Essi
 Errori
+Elenco
 Come
 Codifica
 Counter
