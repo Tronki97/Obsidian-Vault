@@ -23,4 +23,4 @@
 			- perché grazie ai "_.._" viene eliminato "_tre_" poi stesso passaggio viene eliminato "_due_" poi con "_pippo_" viene eliminato "_uno_" e inserito "_pippo_"
 		- _pippo:pluto_
 			- pippo:pluto
-			- perché ":" fanno si che sia già un _URI assoluto_ siccome facenti parte dello [[URI (Uniform Resource Identifier)#^ee83e1||schema]]
+			- perché ":" fanno si che sia già un _URI assoluto_ siccome facenti parte dello [[URI (Uniform Resource Identifier)#^ee83e1||schema]] 
