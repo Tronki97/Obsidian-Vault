@@ -1,0 +1,35 @@
+- ## Alfabeto:
+	- Elenco dei simboli di un linguaggio
+	- ### Lessico:
+		- insieme di sequenze finite di _parole_ scritte usando l'alfabeto
+		- #### Frase: 
+			- insieme di sequenze finite costruite a partire del lessico 
+- ## Linguaggio formale:
+	- un linguaggio $L$ su un alfabeto $A$ è un sottoinsieme di $A^{*}$ $(L\subseteq A^{*})$ 
+	- $A^{*}=\bigcup_{n\geq0} A^n$  dove $A^{0}=\{\epsilon\} \ \ |\ \ \epsilon=$ _parola vuota_
+		- $n$= lunghezza delle parole quindi $A^{1}$ è l'insieme delle parole lunghe 1 ovvero le _lettere dell'alfabeto_
+- ## Definizioni ausiliarie:
+	- ### Lunghezza di una parola:
+		- indicata con $|...|$ un esempio è:
+			- $|\epsilon|=0$ 
+	- ### Concatenazione:
+		- operazione di "_append_" di una parola $(y)$ ad un'altra $(x)$.$$w = xy \iff \begin{cases} |w| = |x| + |y| \\ w(J) = x(J) & per \ 1 \leq J \leq |x| \\ w(|x| + J) = y(J) & per \ 1 \leq J \leq |y| \end{cases}$$
+			- $w(j)$ indica il j-esimo _simbolo_ di $w$
+				- #### Proprietà:
+					- ___Associativa___: $x(yz)=(xy)z$
+					- ___elemento neutro___: $\epsilon$ perché: $x \epsilon=x=\epsilon x$ 
+	- ### Sottostringa:
+		- $$\exists x, y \in A^{*} \ \ \ tali \ che \ \ \ w = xvy$$
+			- dove $v$ è _sottostringa_ di $w$
+		- $x$ e/o $y$ possono essere $\epsilon$
+		- ogni stringa è sottostringa di se stessa
+		- $\epsilon$ è sottostringa di ogni stringa
+	- ### Suffisso:
+		- $v$ è _suffisso_ di $w$ $\iff \exists x \in A^{*} \vert w = xv$ 
+	- ### Prefisso:
+		- $v$ è _prefisso_ di $w$ $\iff \exists x \in A^{*} \vert w = vx$  
+	- ### Potenza:
+		- la potenza $n$-esima di una stringa $w$ è: $$w^{0}=\epsilon \ \ \ w^{n+1}=ww^{n} \ \ \ \forall n >0$$
+		- #### ES:
+			- $(ab)^{3}=ababab$
+	- 

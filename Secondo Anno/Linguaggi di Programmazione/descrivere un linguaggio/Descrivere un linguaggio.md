@@ -1,0 +1,20 @@
+- ## Sintassi:
+	- regole che dicono quando una frase è corretta
+	- relazione tra segni
+		- ### Aspetto lessicale:
+			- descrizione del lessico: si usa strutture chiamate strutture regolari.
+			- errori: vocaboli inesistenti
+		- ### Aspetto grammaticale:
+			- in che modo posso _strutturare_ il lessico per formare frasi sensate
+			- le frasi grammaticali sono infinite
+			- _Errori_: "frase scorretta" ma tutto il lessico è giusto, quindi non ha rispettato delle regole grammaticali.
+- ## semantica
+	- una frase corretta rispetta la relazione tra segni e il significato che gli diamo
+		- *A quale linguaggio la frase appartiene*: infatti una frase potrebbero avere significati diversi in più linguaggi.
+		- su quale linguaggio basarsi per fare la traduzione: 
+		- quindi per dare significato a un linguaggio ci si _appoggia_ ad un altro del quale non necessitiamo l'_interpretazione_(o traduzione). 
+- ## Pragmatica:
+	- relazione tra _segni_, _significati_ e _utenti_, insieme di regole che guidano l'uso di un linguaggio.
+- ## Implementazione:
+	- come posso eseguire una frase corretta rispettandone la semantica 
+	- solo per i linguaggi eseguibili

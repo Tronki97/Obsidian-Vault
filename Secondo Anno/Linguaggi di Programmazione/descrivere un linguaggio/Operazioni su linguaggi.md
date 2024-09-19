@@ -1,0 +1,10 @@
+- ## Complemento:
+	- $$\overline{L} = \{w \in A^{*} \vert w \notin L\} = A^{*} \setminus L$$
+- ## Unione
+	-  $$L_{1} \cup L_{2} = \{w \vert w \in L_{1} \lor w \in  L_{2}\}$$
+- ## intersezione:
+	- $$L_{1} \cap L_{2} = \{w \vert w \in L_{1} \land w \in  L_{2}\}$$
+- ## Concatenazione:
+	- $$L_{1} \cdot L_{2} = \{w_{1}w_{2}\vert w_{1} \in L_{1} \land w_{2} \in L_{2}\}$$
+- ## Chiusura positiva:
+	- $$L^{+} = \bigcup_{n \geq 1}L^{n}$$

@@ -11,9 +11,12 @@
             "id": "7ee62c20f86b5e80",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "immagini/Implementazione del linguaggio Java.png"
+                "file": "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           },
@@ -23,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Python.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Lezione 3.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -43,8 +46,26 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "5a60943e746018f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f5042efe6c11c2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/Lezione 3.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Python.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Python.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Python.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md"
               }
             }
           },
@@ -187,13 +208,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1ee87ec66d48f0b1",
+  "active": "7ee62c20f86b5e80",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Operazioni su linguaggi.md",
+    "Secondo Anno/Linguaggi di Programmazione/Lezione 3.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
+    "immagini/Implementazione del linguaggio Java.png",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/generare un compilatore.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio",
+    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
+    "Secondo Anno/Calcolo Numerico/Python.md",
     "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Implementare un linguaggio.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Interprete.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Linguaggio macchina.md",
@@ -206,14 +235,12 @@
     "immagini/PseudoCode Dijkstra.png",
     "immagini/PseudoCode FW.png",
     "immagini/Stampa cammini.png",
-    "immagini/FloydWarshall ottimizzato.png",
     "Primo Anno/Algoritmi e strutture dati/Java.md",
     "Primo Anno/architettura degli elaboratori/SO/SO.md",
     "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Memorie.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
-    "Secondo Anno/Calcolo Numerico/Python.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Calcolo Numerico/Intro.md",
     "2024-09-16.md",
@@ -222,9 +249,6 @@
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli.md",
     "Secondo Anno/Tecnologie Web/Il WWW",
     "Secondo Anno/Ottimizzazione combinatoria/Untitled.md",
-    "Untitled.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi binari di ricerca.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori",
     "Secondo Anno/Calcolo della probabilità e statistica",
     "Secondo Anno/Ottimizzazione combinatoria",
@@ -232,8 +256,6 @@
     "Secondo Anno/Tecnologie Web",
     "Secondo Anno/Linguaggi di Programmazione",
     "Secondo Anno/Calcolo Numerico",
-    "Secondo Anno/Sistemi Operativi",
-    "Excalidraw/porta NOT.md",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
