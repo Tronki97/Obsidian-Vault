@@ -1,0 +1,26 @@
+- ## URI resolution: 
+	- L'[[URI (Uniform Resource Identifier)#^ceaf14||URL]] assoluto corrisponde all'[[URI (Uniform Resource Identifier)||URI]]  
+	- si esegue quando l'URI è di tipo [[URI ref]] oppure al quale non corrisponde una risorsa fisica(non un URL)
+	- _input_: URI
+	- _output_: un URI
+- ## URI dereferencing:
+	- La fornitura della risorsa identificata dall'URI (ad esempio, il documento cercato)
+	- _input_: un URL
+	- _output_: una risorsa
+- ## Risolvere un URI reference:
+	- bisogna identificare l'_URI assoluto_ cercato sulla base dell'*URI relativo* stesso e dell'_URI di base_:
+		- ![[Pasted image 20240919230054.png]]![[Pasted image 20240919230123.png]]
+	- ### ES:
+		- URI base: http://www.sito.com/uno/due/tre 
+		- _pippo_:
+			-  http://www.sito.com/uno/due/pippo
+		- _#pippo_:
+			- http://www.sito.com/uno/due/tre#pippo
+		- _./_
+			- http://www.sito.com/uno/due/
+		- _../../pippo_
+			- http://www.sito.com/pippo 
+			- perché grazie ai "_.._" viene eliminato "_tre_" poi stesso passaggio viene eliminato "_due_" poi con "_pippo_" viene eliminato "_uno_" e inserito "_pippo_"
+		- _pippo:pluto_
+			- pippo:pluto
+			- perché ":" fanno si che sia già un _URI assoluto_ siccome facenti parte dello [[URI (Uniform Resource Identifier)#^ee83e1||schema]]

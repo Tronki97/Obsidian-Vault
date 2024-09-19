@@ -1,0 +1,48 @@
+- ## Identificatori:
+	- ogni elemento di interesse, nel web, è identificato dall'_URI_
+		- ### Risorsa: ^b16e0a
+			- qualunque struttura che sia oggetto di scambio tra applicazioni all'interno del web(file, immagini, ecc...)
+			- ma potrebbero essere anche un _database_ e l'URI la chiave di ricerca. 
+			- una risorsa non elettronica e l'URI il suo nome uniforme. 
+			- Quindi si fornisce una sintassi indipendente dal sistema di effettivo di memorizzazione.
+- ## L'URI 
+	- è una sintassi (_stringa_) per definire le risorse su Internet e permette l'interazione tra diverse risorse ciò sempre grazie all'utilizzo di vari _protocolli_.
+	- ### URL:  ^ceaf14
+		- mutabile. e permette di accedere alla risorsa in maniera veloce 
+			- Possono essere usati anche solo per riferirsi al soggetto dell'URL
+	- ### URN: 
+		- immutabile. ma può non essere immediatamente utilizzabile e quindi richiedere un processo di risoluzione che trasformi il _name_ in _Locator_.
+	- ### Componenti:
+		- #### Schema: ^ee83e1
+			- Negli URL è il protocollo.
+			- Identificato da una stringa usata come _prefisso_$$\mathbf{schema:} [// \mathbf{authority}] \mathbf{path}\ [?\ \mathbf{query}]\ [ \mathbf{\#fragment}]   $$
+				- ##### _path_:  ^9dafd0
+					- parte identificativa all'interno dello spazio di nomi identificato dallo schema 
+				- ##### _authority_:
+					- Evidenzia una gestione gerarchica dei blocchi separati da "_/_" e permette appunto di gestirli meglio:
+						- divisa a sua volta in: $[\mathbf{userinfo \ @}]\   \mathbf{host[:port]}$
+						- la parte _userinfo_ non è necessariamente presente.
+						- _host_ rappresenta il _dominio_ o l'_IP_
+						- la _port_ può essere omessa se ne usiamo una _well-known_ (per http è la 80) 
+				- ##### _query_ : 
+					- un'ulteriore specificazione della risorsa di solito sono parametri passati dall'URI per specificare un risultato dinamico 
+						- ES: _nome1=valore1&nome2=_
+						  _= valore+con+molte+parole_
+					- presente tra il "_?_" e il "_#_"
+				- ##### _fragment_:
+					- individua una risorsa secondaria di quella primaria indicata dopo il simbolo "_#_" 
+	- ### Caratteri ammessi:
+		- #### Non riservati:
+			- alfanumerici e alcuni caratteri di punteggiatura come:
+				- -_!~*'()
+		- #### Riservati:
+			- caratteri che hanno delle funzioni speciali in uno o più schemi dell'URI:
+				-  ;/?:@&=+$,
+		- #### Escaped:
+			- ne fanno parte quelli riservati quando vengono usati in contesto diverso dal loro uso riservato. In questo caso vanno scritti con _notazione escaped_
+				- %XX dove XX è il codice base 16 del carattere.
+			- ##### ES:
+				- http://www.alpha.edu/uno/due/tre
+				- http://www.alpha.edu/uno/due%2Ftre
+					- sono diversi perché nonostante "%2F" corrisponda a "/" è usato in un contesto diverso e quindi farebbe parte dell'ultima sotto-parte della gerarchia "c/d". 
+- 

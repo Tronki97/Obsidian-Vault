@@ -1,1 +1,20 @@
-- 
+- ## Basi:
+	- il _client_ o _browser_ è visualizzatore di documenti ipertestuali(meccanismo per collegare documenti tra di loro in maniera non lineare) e multimediali però non può modificare questi documenti. per realizzare delle verifiche di dati e applicazioni complicate è stato creato il linguaggio _javascript_ 
+	- _il server_ è un meccanismo di accesso a risorse locali(file, database, ecc...) in grado di trasmettere documenti  ,individuati da un identificatore univoco, tramite _socket TCP_. Il server può collegarsi ad alcune applicazioni _server-side_ in modo da esserne l'interfaccia.
+	- ### Protocolli:
+		- _URI_:
+		- _HTTP_: protocollo di comunicazione _state-less_ client-server per accedere a risorse di vario tipo via rete
+		- _HTML_: un linguaggio per realizzare documenti ipertestuali incentrato sulla realizzazione connessioni ipertestuali in linea nella descrizione strutturale del documento.
+- ## Client scripting:
+	- verifica che tutte le caratteristiche sia verificate e al posto giusto, come la verifica che un input sia giusto, che dentro un campo sia inserito effettivamente un valore, ecc...
+- ## Stili tipografici:
+	- per ovviare al problema di mancanza gestione di vari stili grafici, di tipografia, ecc... viene creato CSS.
+- ## gestione transazioni:
+	- meccanismi per la gestione dello stato (cookies) 
+	- _HTTPrequest_: poter richiedere frammenti di dati da un altra pagina senza il bisogno di navigare.
+- ## Siti web dinamici:
+	- la prima pagina è un file HTML scritto statico, le prossime generate dopo aver cliccato qualcosa sono appunto generate dinamicamente e possono cambiare a seconda delle interazioni con altre pagine.
+	- _architettura a 3 livelli:_
+		- *UI, Application logic, data storage*: l'utente inserisce i dati, vengono poi processati e infine immagazzinati nel data storage.  
+- ## Framework di sviluppo:
+	- IDE dotati di grosse API e librerie per semplificare la realizzazione di applicazioni _client-side_ e _server-side_. 

@@ -1,0 +1,7 @@
+- è una associazione della parte [[URI (Uniform Resource Identifier)#^9dafd0||path]] di un [[URI (Uniform Resource Identifier)||URI]] ad una [[URI (Uniform Resource Identifier)#^b16e0a||risorsa]] gestita o restituita da un server web
+- ## Managed route:
+	- Il server associa ogni URI ad una risorsa attraverso il file system locale (_risorse statiche_) oppure generate attraverso una computazione (_risorse dinamiche_) 
+		- ![[managed route.png]]
+- ## File-system route:
+	- il server associa la radice della parte path ad una directory del file system locale e ogni _filename_ valido all'interno di quella directory genera un URI corretto e funzionante
+		- ![[file_system route.png]]
