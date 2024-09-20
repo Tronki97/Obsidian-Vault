@@ -1,0 +1,18 @@
+- le [[Infrastruttura e collegamenti di rete||infrastrutture]] di rete hanno diversi schemi di connessione dei dispositivi. Questi schemi topologici spesso si usano per organizzare una _rete locale_ ([[Intro al corso di Reti#^35cee0||LAN]]). Con diverse topologie:
+	- ### Anello:
+		- Disposti a forma di anello
+		- ![[Pasted image 20240920151922.png]]
+		- Questo schema può causare un loop continuo infatti si utilizza un protocollo che quando l'informazione inviata parte si ferma quando fa il giro completo e torna al mittente
+		- #### problema:
+			- Se si rompe un collegamento il segnale arriva al punto rotto e "rimbalza" facendo la strada a ritroso impiegando più tempo
+	- ### Stella:
+		- Composto con un Hub centrale a cui tutti gli altri host sono collegati, 
+		- ![[Pasted image 20240920151935.png]]
+		- 
+	- ### Bus:
+		- Linea sui cui passano più segnali che poi si dirama per incontrare i vari host.
+		- ![[Pasted image 20240920151947.png]]
+	- ### Albero:
+		- Parte da un'host padre e si dirama con una gerarchia su altri.
+		- ![[Pasted image 20240920151957.png]]
+- 

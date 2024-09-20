@@ -481,6 +481,10 @@ pRR
 propagazione
 poco
 prendono
+proteggono
+parlarsi
+produzione
+passano
 realizzare
 rappresentare
 risultato
@@ -932,6 +936,8 @@ ricevono
 rottura
 radio
 riconosca
+reciso
+rifermento
 la
 le
 lo
@@ -1458,6 +1464,7 @@ Axk
 AfvV
 AIF
 AÖ
+Anello
 nel
 necessario
 numero
@@ -1731,6 +1738,7 @@ nQnkq
 nai
 ncS
 necessitano
+nvv
 capire
 codifiche
 capacit
@@ -2382,6 +2390,8 @@ collegare
 compatibili
 chi
 completamente
+comunicazioni
+control
 avendo
 alcune
 arriva
@@ -2895,6 +2905,8 @@ aKu
 alDp
 aCN
 appositi
+appoggiandosi
+azienda
 un
 una
 usato
@@ -3594,6 +3606,11 @@ dub
 decodificano
 dura
 driver
+direzioni
+diretti
+disposti
+dirama
+diy
 finito
 fanno
 facilmente
@@ -3941,6 +3958,7 @@ fpR
 fdD
 fPX
 fattura
+finiscano
 in
 il
 invece
@@ -4373,6 +4391,10 @@ iFm
 iSD
 inw
 installa
+inviati
+infrastruttura
+incontrare
+iVz
 modo
 mentre
 massimo
@@ -4740,6 +4762,9 @@ med
 mHvn
 mrx
 msl
+medium
+minimamente
+msh
 esempio
 eccede
 errori
@@ -5120,6 +5145,9 @@ eTD
 eSc
 eXk
 eYe
+eventuali
+eoR
+eHC
 base
 bit
 basano
@@ -5624,6 +5652,7 @@ qPQ
 qLe
 qnt
 qvJ
+qBw
 se
 sarebbe
 si
@@ -6234,6 +6263,9 @@ schede
 standardizzate
 standard
 scheda
+sullo
+seguono
+segnalicollisioni
 otterremmo
 ottenere
 occupare
@@ -6528,6 +6560,10 @@ orT
 obu
 oMl
 onde
+opposte
+ovviare
+oICeO
+oWpj
 va
 valore
 viene
@@ -7163,6 +7199,9 @@ tuT
 tyt
 tEe
 trasmettono
+trasmissioni
+topologie
+topologici
 grandi
 gli
 grande
@@ -7437,6 +7476,7 @@ gJK
 gTW
 gTr
 gestiti
+guasti
 NOT
 NotePad
 Nu
@@ -7672,6 +7712,8 @@ NcCp
 NBd
 NXf
 NtE
+NLi
+NCoJ
 Il
 Instruction
 IR
@@ -8206,6 +8248,8 @@ Risolvere
 Rbx
 RGO
 RjM
+RVF
+Rpb
 Si
 Se
 Status
@@ -8492,6 +8536,11 @@ SjL
 Sqn
 SnA
 Schemi
+Stella
+SCOuWW
+Ssn
+Syx
+SUv
 BINARY
 Bus
 BX
@@ -8999,6 +9048,9 @@ PUF
 PfS
 PAR
 Parzialmente
+Partizioni
+Ppr
+Ppj
 Di
 Data
 Dati
@@ -9250,6 +9302,8 @@ Dhj
 Dpf
 Dpd
 DQt
+Disposti
+Dvi
 Le
 La
 Lg
@@ -9465,6 +9519,8 @@ LEMG
 LwrgC
 Lcd
 LPX
+Linea
+LIh
 Modulo
 Massimo
 Memory
@@ -9710,6 +9766,7 @@ MLi
 MHJl
 MPj
 Mtq
+Minimamente
 ES
 Esempi
 Ex
@@ -10255,6 +10312,9 @@ CXl
 CRg
 Connettore
 Collegamenti
+Composto
+Cftz
+Clv
 Questa
 Quello
 Qz
@@ -10482,6 +10542,8 @@ QZxK
 QRY
 QHN
 QZM
+QnL
+QWS
 Formato
 FLIP
 FLOP
@@ -11367,6 +11429,7 @@ HSm
 HPG
 HHX
 Hxe
+Hub
 XOR
 Xm
 Xo
@@ -11568,6 +11631,8 @@ XQI
 XXB
 XbEj
 XGK
+XMS
+Xvw
 ha
 ho
 hack
@@ -11789,6 +11854,7 @@ html
 hsU
 haF
 hxK
+hYy
 JZ
 JT
 Jd
@@ -12410,6 +12476,7 @@ jKDp
 jpZ
 jUC
 jwWg
+jäw
 word
 wu
 wf
@@ -13491,6 +13558,8 @@ Uux
 USC
 UnY
 UgU
+UvD
+UJC
 Zx
 ZD
 ZRz
@@ -13687,6 +13756,7 @@ Znu
 Zkk
 ZBv
 ZQM
+ZsQ
 YQ
 Yz
 YI
@@ -14085,6 +14155,7 @@ yUAD
 yTGU
 yBg
 yFL
+yZx
 Tp
 Tv
 TBz
@@ -14816,6 +14887,7 @@ VTJ
 Vfb
 VLk
 Vengono
+Voq
 öG
 öH
 özw

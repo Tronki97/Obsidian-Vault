@@ -11,16 +11,27 @@
             "id": "05a47bd8c1cf5e6e",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "immagini/Pasted image 20240920151957.png"
+              }
+            }
+          },
+          {
+            "id": "be43b710c3f79c2d",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md"
+                "file": "Secondo Anno/Reti di Calcolatori/Topologia di rete.md"
               }
             }
           },
@@ -171,12 +182,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "05a47bd8c1cf5e6e",
+  "active": "be43b710c3f79c2d",
   "lastOpenFiles": [
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
-    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
-    "Secondo Anno/Reti di Calcolatori/Lezione 2.md",
+    "Secondo Anno/Reti di Calcolatori/Infrastruttura e collegamenti di rete.md",
+    "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
+    "immagini/Pasted image 20240920151922.png",
+    "immagini/Pasted image 20240920151957.png",
     "Recording 20240920135216.webm",
+    "immagini/Pasted image 20240920151947.png",
+    "immagini/Pasted image 20240920151935.png",
+    "Secondo Anno/Reti di Calcolatori/Componenti di rete.md",
+    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
+    "Secondo Anno/Reti di Calcolatori/Lezione 2.md",
     "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
     "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
@@ -202,17 +220,9 @@
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Interprete.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Linguaggio macchina.md",
     "immagini/Pasted image 20240821182056.png",
-    "immagini/Procedimento distanza di levenshtein.png",
-    "immagini/Teoria Dijkstra.png",
-    "immagini/Kruskal PseudoCode.png",
-    "immagini/Prim-MST PseudoCode.png",
     "Primo Anno/Algoritmi e strutture dati/Java.md",
     "Primo Anno/architettura degli elaboratori/SO/SO.md",
-    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Memorie.md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Tecnologie Web/Il WWW",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori",
     "Secondo Anno/Calcolo della probabilità e statistica",
