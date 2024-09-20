@@ -2,5 +2,8 @@
   "accentColor": "#30cf4b",
   "cssTheme": "Blue Topaz",
   "baseFontSize": 22,
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "monospaceFontFamily": "Arial",
+  "textFontFamily": "Arial",
+  "baseFontSizeAction": false
 }
