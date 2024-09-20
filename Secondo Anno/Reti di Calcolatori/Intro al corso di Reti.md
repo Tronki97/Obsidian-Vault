@@ -69,3 +69,4 @@
 				- può verificarsi quando uno schema _minimamente connesso_ perde un collegamento. 
 	- nella trasmissioni di dati per garantire che i dati finiscano alla macchina giusta nell'infrastruttura si usa il MAC-address della scheda di rete di ogni macchina in questo modo tutte le macchine hanno un codice di rifermento unico. 
 		- le prime 3 coppie di valori di un indirizzo identificano l'azienda di produzione della scheda di rete.
+		- 
