@@ -8,9 +8,10 @@
 		- #### problema:
 			- Se si rompe un collegamento il segnale arriva al punto rotto e "rimbalza" facendo la strada a ritroso impiegando più tempo
 	- ### Stella:
-		- Composto con un Hub centrale a cui tutti gli altri host sono collegati, 
+		- Composto con un Hub centrale a cui tutti gli altri host sono collegati, è [[Infrastruttura e collegamenti di rete#^27c57e||minimamente connessa]] perché sono presenti 6 elementi e 5 collegamenti nonostante l'hub non sia effettivamente un host 
 		- ![[Pasted image 20240920151935.png]]
-		- 
+		- è facilmente scalabile visto che se si volesse aggiungere un host non dobbiamo modificare nessun collegamento ma basta aggiungerne 1
+		- è più veloce perchè la comunicazione tra 2 host ha al massimo due [[Infrastruttura e collegamenti di rete#^fe68f0||collegamenti punto a punto]].
 	- ### Bus:
 		- Linea sui cui passano più segnali che poi si dirama per incontrare i vari host.
 		- ![[Pasted image 20240920151947.png]]

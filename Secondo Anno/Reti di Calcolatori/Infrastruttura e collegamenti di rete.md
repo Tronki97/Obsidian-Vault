@@ -6,7 +6,7 @@
 - ## Infrastrutture:
 	- la forma che ha lo schema di connessione
 	- ### Schemi di connessione:
-		- #### punto a punto:
+		- #### punto a punto: ^fe68f0
 			- va dal punto "x" a "y"
 			- immagine:
 		- #### completamente connesse:
@@ -15,7 +15,7 @@
 				- Avendo questi collegamenti fa si che i percorsi spesso non sono diretti ma seguono il cammino più corto.
 				- Inoltre proteggono da eventuali guasti nel caso uno dei collegamenti venga reciso.
 			-  immagine:
-		- #### Minimamente connessi:
+		- #### Minimamente connessi: ^27c57e
 			- tutti i nodi sono connessi come le [[Componenti connesse di un grafo#^f240bd||componenti connesse di un grafo non orientato]] e possono parlarsi tutti tra di loro ma con il minimo numero di collegamenti appoggiandosi a quelli in mezzo.
 				- un problema sono le collisioni e per ovviare a questo si utilizza un protocollo chiamato MAC(_medium access control_)  
 			- per essere tale il numero di collegamenti deve essere $n-1$ dove $n$ è il numero di nodi
