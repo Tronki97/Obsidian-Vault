@@ -137,9 +137,17 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "e685526dce0dc2c7",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -165,9 +173,10 @@
   },
   "active": "05a47bd8c1cf5e6e",
   "lastOpenFiles": [
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
+    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "Secondo Anno/Reti di Calcolatori/Lezione 2.md",
     "Recording 20240920135216.webm",
-    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
     "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",

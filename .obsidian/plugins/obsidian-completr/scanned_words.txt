@@ -931,6 +931,7 @@ rqUrbQ
 ricevono
 rottura
 radio
+riconosca
 la
 le
 lo
@@ -2380,6 +2381,7 @@ connettore
 collegare
 compatibili
 chi
+completamente
 avendo
 alcune
 arriva
@@ -2892,6 +2894,7 @@ agn
 aKu
 alDp
 aCN
+appositi
 un
 una
 usato
@@ -3590,6 +3593,7 @@ dUo
 dub
 decodificano
 dura
+driver
 finito
 fanno
 facilmente
@@ -4368,6 +4372,7 @@ iZv
 iFm
 iSD
 inw
+installa
 modo
 mentre
 massimo
@@ -6228,6 +6233,7 @@ sOb
 schede
 standardizzate
 standard
+scheda
 otterremmo
 ottenere
 occupare
@@ -7943,6 +7949,7 @@ IPesM
 IuG
 ItB
 Interfaccia
+Infrastrutture
 Rappresentazione
 Registri
 Register
@@ -8484,6 +8491,7 @@ Scy
 SjL
 Sqn
 SnA
+Schemi
 BINARY
 Bus
 BX
@@ -8990,6 +8998,7 @@ Pyf
 PUF
 PfS
 PAR
+Parzialmente
 Di
 Data
 Dati
@@ -10245,6 +10254,7 @@ Cbk
 CXl
 CRg
 Connettore
+Collegamenti
 Questa
 Quello
 Qz

@@ -48,5 +48,14 @@
     }
   ],
   "editor:open-link-in-new-leaf": [],
-  "quick-latex:addInlineMath": []
+  "quick-latex:addInlineMath": [],
+  "obsidian-git:push2": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ]
 }

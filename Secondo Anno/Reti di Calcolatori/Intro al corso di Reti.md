@@ -44,3 +44,27 @@
 		- Interfaccia o connettore di rete per collegare il dispositivo di rete al mezzo di trasmissione
 	- ### protocolli di rete:
 		- Sono delle regole standardizzate (sotto forma di software) che prendono segnali e informazioni e li rendono compatibili per chi usa standard diversi.
+- ## Infrastrutture di rete:
+	- ### Collegamenti:
+		- mezzo di trasmissione di rete tra due calcolatori:
+		- supporta fisicamente la trasmissione di segnali
+		- collisioni: quando più segnali vengono inviati sullo stesso collegamento ma in direzioni opposte 
+	- ### Infrastrutture:
+		- la forma che ha lo schema di connessione
+		- #### Schemi di connessione:
+			- ##### punto a punto: 
+				- va dal punto "x" a "y"
+				- immagine:
+			- ##### completamente connesse:
+				- come un grafo non orientato che ogni punto collega tutti gli altri nodi direttamente 
+				- molto più costoso, ma permettono molte più comunicazioni contemporaneamente
+					- Avendo questi collegamenti fa si che i percorsi spesso non sono diretti ma seguono il cammino più corto.
+					- Inoltre proteggono da eventuali guasti nel caso uno dei collegamenti venga reciso.
+				- immagine:
+			- ##### Minimamente connessi:
+				- tutti i nodi sono connessi come le [[Componenti connesse di un grafo#^f240bd||componenti connesse di un grafo non orientato]] e possono parlarsi tutti tra di loro ma con il minimo numero di collegamenti appoggiandosi a quelli in mezzo.
+					- un problema sono le collisioni e per ovviare a questo si utilizza un protocollo chiamato MAC(_medium access control_)  
+			- ##### Partizioni di rete:
+				- c'è almeno un gruppo di nodi connessi tra di loro che sono separati da altri gruppi di nodi sempre connessi tra di loro.
+				- può verificarsi quando uno schema _minimamente connesso_ perde un collegamento. 
+	- nella trasmissioni di dati per garantire che i dati finiscano alla macchina giusta nell'infrastruttura si usa il MAC-address della scheda di rete di ogni macchina in questo modo tutte le macchine hanno un codice di rifermento unico. 
