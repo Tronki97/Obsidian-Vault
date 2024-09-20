@@ -4,42 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "83cef515f301c9c7",
+        "id": "5ef697a5aa0cbaa7",
         "type": "tabs",
         "children": [
           {
-            "id": "7ee62c20f86b5e80",
+            "id": "05a47bd8c1cf5e6e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1ee87ec66d48f0b1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "621a377e0e533cf2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Anno/Algoritmi e strutture dati/Java.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -112,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md"
+                "file": "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md"
               }
             }
           },
@@ -189,20 +163,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7ee62c20f86b5e80",
+  "active": "05a47bd8c1cf5e6e",
   "lastOpenFiles": [
+    "Secondo Anno/Reti di Calcolatori/Lezione 2.md",
+    "Recording 20240920135216.webm",
+    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
+    "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
+    "Secondo Anno/Tecnologie Web/URI/Route.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
     "immagini/Pasted image 20240919230123.png",
     "immagini/Pasted image 20240919230054.png",
     "Secondo Anno/Tecnologie Web/URI/URI ref.md",
-    "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
-    "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Tecnologie Web/URI/URI (Uniform Resource Identifier).md",
     "immagini/file_system route.png",
     "immagini/managed route.png",
     "Secondo Anno/Tecnologie Web/URI",
     "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Tecnologie Web/intro.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
     "Secondo Anno/Linguaggi di Programmazione/Lezione 3.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Operazioni su linguaggi.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
@@ -211,7 +188,6 @@
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
     "Secondo Anno/Calcolo Numerico/Python.md",
-    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Implementare un linguaggio.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Interprete.md",
@@ -221,7 +197,6 @@
     "immagini/Teoria Dijkstra.png",
     "immagini/Kruskal PseudoCode.png",
     "immagini/Prim-MST PseudoCode.png",
-    "immagini/Teoria di Dijkstra.png",
     "Primo Anno/Algoritmi e strutture dati/Java.md",
     "Primo Anno/architettura degli elaboratori/SO/SO.md",
     "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
@@ -229,14 +204,12 @@
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
-    "Secondo Anno/Calcolo Numerico/Intro.md",
     "Secondo Anno/Tecnologie Web/Il WWW",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori",
     "Secondo Anno/Calcolo della probabilità e statistica",
     "Secondo Anno/Ottimizzazione combinatoria",
     "Secondo Anno/Reti di Calcolatori",
     "Secondo Anno/Tecnologie Web",
-    "Secondo Anno/Linguaggi di Programmazione",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
