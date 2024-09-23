@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md",
+                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md",
+                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md",
+                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md"
+                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md"
               }
             }
           },
@@ -173,8 +173,16 @@
   },
   "active": "be43b710c3f79c2d",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
+    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
+    "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
+    "Secondo Anno/Tecnologie Web/URI/Schemi HTTP e HTTPS.md",
+    "Secondo Anno/Tecnologie Web/Set di caratteri",
+    "Secondo Anno/Tecnologie Web/URI/URI ref.md",
+    "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
+    "Secondo Anno/Tecnologie Web/URI/URI (Uniform Resource Identifier).md",
+    "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md",
+    "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
     "Secondo Anno/Calcolo Numerico/Python.md",
     "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
     "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
@@ -187,17 +195,12 @@
     "Secondo Anno/Reti di Calcolatori/Componenti di rete.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
     "Secondo Anno/Reti di Calcolatori/Lezione 2.md",
-    "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
-    "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
     "immagini/Pasted image 20240919230123.png",
     "immagini/Pasted image 20240919230054.png",
-    "Secondo Anno/Tecnologie Web/URI/URI ref.md",
-    "Secondo Anno/Tecnologie Web/URI/URI (Uniform Resource Identifier).md",
     "immagini/file_system route.png",
     "immagini/managed route.png",
     "Secondo Anno/Tecnologie Web/URI",
-    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Linguaggi di Programmazione/Lezione 3.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Operazioni su linguaggi.md",
@@ -209,16 +212,13 @@
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Implementare un linguaggio.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Interprete.md",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Linguaggio macchina.md",
     "immagini/Pasted image 20240821182056.png",
-    "Primo Anno/Algoritmi e strutture dati/Java.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
     "Secondo Anno/Tecnologie Web/Il WWW",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori",
     "Secondo Anno/Calcolo della probabilità e statistica",
     "Secondo Anno/Ottimizzazione combinatoria",
     "Secondo Anno/Reti di Calcolatori",
-    "Secondo Anno/Tecnologie Web",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

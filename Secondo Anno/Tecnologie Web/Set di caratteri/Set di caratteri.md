@@ -1,0 +1,22 @@
+- digitalizzazione
+	- trasformare dati anche enormi in codifica binaria quindi in presenza o mancanza di un qualche tipo di segnale.
+	- un problema è rendere digitale qualsiasi tipo di alfabeto.
+		- per i protocolli non è un problema visto che sono serie di byte
+	- per rappresentare del testo serve creare uno standard condiviso che possano usare tutti per poter comunicare tra tutti.
+- ## Caratteri:
+	- l'entità atomica della lingua
+	- ogni lingua usa diverse rappresentazioni visive per descrivere i suoni. 
+	- in lingue diverse come latino e cirillico è presente la stessa lettera $\mathbf{P}$ che in quello cirillico rappresenta invece una $\mathbf{R}$ 
+		- in base ad una tabella di rappresentazione od un'altra avremo un differente risultato
+		- Quindi il contesto determina il significato di una parola o frase. 
+		- 
+		-  
+	- _Ordine_: mapping tra valori e caratteristiche, quindi i valori in cui i caratteri vengono mappati seguono l'ordine alfabetico. 
+	- _Contiguità_: il successore alfabetico di una lettera avrà il valore successivo anche nella codifica digitale.
+	- ### Shift:
+		- un codice riservato che cambia la mappatura di un carattere che viene deciso arbitrariamente.
+	- ### Codici liberi:
+		- codici non associati a nessun carattere. servono a rilevare un errore nella trasmissione dei dati.
+	- ### Codice controllo:
+		- codice associato alla trasmissione e non al messaggio.
+	- 
