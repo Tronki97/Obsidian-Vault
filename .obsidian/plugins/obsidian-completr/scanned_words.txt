@@ -2914,6 +2914,7 @@ aCN
 appositi
 appoggiandosi
 azienda
+accertarmi
 un
 una
 usato
@@ -3618,6 +3619,7 @@ diretti
 disposti
 dirama
 diy
+dimezzando
 finito
 fanno
 facilmente
@@ -5159,6 +5161,7 @@ eYe
 eventuali
 eoR
 eHC
+esista
 base
 bit
 basano
@@ -5417,6 +5420,7 @@ bls
 brT
 bFQv
 bHL
+binary
 quindi
 questo
 quelle
@@ -7492,6 +7496,7 @@ gTW
 gTr
 gestiti
 guasti
+generica
 NOT
 NotePad
 Nu
@@ -8556,6 +8561,7 @@ SCOuWW
 Ssn
 Syx
 SUv
+Scrivi
 BINARY
 Bus
 BX
@@ -8783,6 +8789,7 @@ Bks
 BGK
 BLI
 BYZ
+Bisezione
 Per
 Program
 PC
@@ -10330,6 +10337,7 @@ Collegamenti
 Composto
 Cftz
 Clv
+Coglione
 Questa
 Quello
 Qz
@@ -11022,6 +11030,7 @@ WoEPj
 Wwc
 WNx
 WXr
+Weirstrass
 zero
 zip
 zL
@@ -11223,6 +11232,7 @@ zTT
 zUyU
 zhL
 zewp
+zoomare
 Half
 HACK
 HIT

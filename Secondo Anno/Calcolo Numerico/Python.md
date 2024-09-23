@@ -1,6 +1,7 @@
 - ## Conda
 	- scaricare anaconda dal sito.
 	- https://www.anaconda.com/download/success
+	- `source ~/anaconda3/bin/activate` 
 - ## Creare il VENV
 	- Virtual environment:
 		- nel terminale: 
