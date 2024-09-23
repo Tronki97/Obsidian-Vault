@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
+                "file": "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
+                "file": "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
+                "file": "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Topologia di rete.md"
+                "file": "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md"
               }
             }
           },
@@ -156,6 +156,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -166,14 +168,13 @@
       "audio-recorder:Start/stop recording": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "copilot:Copilot Chat": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "copilot:Copilot Chat": false
     }
   },
   "active": "be43b710c3f79c2d",
   "lastOpenFiles": [
     "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
+    "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
     "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "Secondo Anno/Reti di Calcolatori/Infrastruttura e collegamenti di rete.md",
     "immagini/Pasted image 20240920151922.png",

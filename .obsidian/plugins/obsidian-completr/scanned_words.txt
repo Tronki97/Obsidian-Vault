@@ -6277,6 +6277,7 @@ scheda
 sullo
 seguono
 segnalicollisioni
+scalabile
 otterremmo
 ottenere
 occupare
@@ -6889,6 +6890,7 @@ vuW
 vfA
 vCg
 vyY
+volesse
 troppo
 testimone
 tramite
@@ -11868,6 +11870,7 @@ hsU
 haF
 hxK
 hYy
+hub
 JZ
 JT
 Jd
