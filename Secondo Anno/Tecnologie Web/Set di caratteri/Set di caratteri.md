@@ -19,4 +19,6 @@
 		- codici non associati a nessun carattere. servono a rilevare un errore nella trasmissione dei dati.
 	- ### Codice controllo:
 		- codice associato alla trasmissione e non al messaggio.
+- ## ISO 646
+	- questa codifica permette di rappresentare in ASCII i caratteri Europei 
 	- 

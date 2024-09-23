@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
+                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
+                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
+                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md"
+                "file": "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md"
               }
             }
           },
@@ -173,8 +173,9 @@
   },
   "active": "be43b710c3f79c2d",
   "lastOpenFiles": [
-    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
+    "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
+    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Tecnologie Web/URI/Schemi HTTP e HTTPS.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri",
     "Secondo Anno/Tecnologie Web/URI/URI ref.md",
@@ -211,7 +212,6 @@
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/MA (macchina astratta).md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Implementare un linguaggio.md",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/Interprete.md",
     "immagini/Pasted image 20240821182056.png",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
     "Secondo Anno/Tecnologie Web/Il WWW",

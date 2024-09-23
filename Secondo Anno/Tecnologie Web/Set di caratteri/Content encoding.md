@@ -1,0 +1,2 @@
+- in informatica si usano due codifiche molto simili per rappresentare un contenuto e tutto ciò che c'è intorno
+- molti ambienti informatici hanno restrizioni sui vari caratteri utilizzabili.
