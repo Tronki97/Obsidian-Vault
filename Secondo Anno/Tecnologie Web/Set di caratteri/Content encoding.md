@@ -1,2 +1,8 @@
 - in informatica si usano due codifiche molto simili per rappresentare un contenuto e tutto ciò che c'è intorno
 - molti ambienti informatici hanno restrizioni sui vari caratteri utilizzabili.
+- per gestire ambiente e contenuto si usa:
+	- Escaping:
+		- interpretare un carattere particolare come contenuto e non come ambiente o parte di codice.
+	- Encoding:
+		- il carattere proibito viene rappresentato numericamente con il suo codice secondo la sintesi speciale:
+			- 
