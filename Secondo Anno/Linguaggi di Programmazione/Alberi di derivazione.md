@@ -1,0 +1,12 @@
+- ## Prop:
+	- Considerando la [[Grammatiche]] $$S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$$
+	-  e la derivazione:$$S \Rightarrow S*S \Rightarrow S+S*S \Rightarrow a+S*S \Rightarrow a+b*S \Rightarrow a+b * c$$
+		- ___Leftmost___: ad ogni passo si riscrive il non terminale più a sx  
+		- ad ognuno di questi passi si associa un piano dell'_albero di derivazione:
+			-  ![[Pasted image 20240924183128.png]]
+		- Se decidessi di fare una derivazione diversa andando a riscrivere il non terminale più a dx l'_albero non cambierebbe_
+	- ### OSS:
+		- 1) l'albero "riassume" tante derivazioni diverse ma tutte equivalenti.
+		- 2) L'albero fornisce informazioni semantiche: "_quali operandi per quali operazioni_"
+			- se leggo le [[Alberi e Alberi binari#^d80a92||foglie]] viene come risultato l'operazione con gli adeguati operandi ovvero :
+				- ![[Pasted image 20240924183709.png]]E questo si chiama _Albero sintattico_

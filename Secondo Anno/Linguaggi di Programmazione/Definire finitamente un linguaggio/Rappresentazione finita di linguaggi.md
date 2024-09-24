@@ -1,17 +1,18 @@
 - se $L$ è infinito usiamo varie tecniche per rappresentarlo:
 	- 1) $\mathbb{N}=\{ 0,1,2,...\}$ non memorizzabile perché infinito 
 		- posso trovare una rappresentazione implicita in forma finita:
-		- $\frac{}{o\in \mathbb{N}}$  $\frac{x\in \mathbb{N}}{S(x)in \mathbb{N}}$
+		- $$\frac{}{o\in \mathbb{N}} \ \ \ \ \frac{x\in \mathbb{N}}{S(x)in \mathbb{N}}$$  
 		- Genero $\mathbb{N}$ come più piccolo insieme generato dall'assioma e dalla regola:
 			- $\mathbb{N}=\{0, S(O), S(S(0)),...\}$ 
 	- 2) $\mathbb{P}=$ numeri pari
 		- $fun \ \ pari(x:\mathbf{int}):bool$
-- esistono metodi
-	- generativo/sintetico:
-		- linguaggio: struttura finita generata dalla grammatica
-	- riconoscitivo:
-		- insieme riconosciuto da un _automa_
-	- non per tutti i linguaggi valgono questi metodi
+		- $pari:= (x\ mod \ 2=0)$
+- ## Metodi:
+	- ### Generativo/Sintetico:
+		- ___linguaggio___: insieme finito generato dalla struttura [[Grammatiche||grammatica]] 
+	- #### Riconoscitivo/analitico:
+		- ___linguaggio___: insieme riconosciuto da un _automa_
+	- _non per tutti i linguaggi valgono questi metodi_
 - $A^{*}$ è equipotente a $\mathbb{N}$
 - $L\subseteq A^*$ è contabile
 - un formalismo è un linguaggio su un alfabeto quindi i suoi "programmi" (grammatiche, automi) sono numerabili

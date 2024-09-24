@@ -1,0 +1,41 @@
+- ## Definire finitamente un linguaggio:
+	- 1) prendendo le parole _palindrome_ come : abba:
+		- $A=\{a,b\}$ $L=\{\epsilon, a,b, aa,bb, aba, bab,...\}$
+		- una palindroma è $\epsilon$ o "_a_", o "_b_" oppure:
+			- $a+\mathbf{palindromo+ a}$
+			- $b+\mathbf{palindromo+ b}$
+	- ### Backus-nau form:
+		- $<P>::= \epsilon|a|b|a<P>a| b<P>b$ 
+		- _definizione ricorsiva_:
+			- $P\to \epsilon|a|b|aPa|bPb$
+				- P non terminale 
+				- a e b di inferenza.
+		- $L(P)$ quindi è il più piccolo insieme di  
+	- ### Forma grammatica:
+		- $P\to \epsilon\ |\ a\ |\ b\ |\ aPa\ |\ bPb$
+			- P è detto _simbolo non terminale_
+			- _a_ e _b_ sono _simboli terminali_
+	- 2) espressioni aritmetiche formate da variabili a e b.
+		- $<E>::= a|b|<E>*<E>|<E>+<E>|(<E>)$
+	- ### Come derivare una stringa:
+		- uso la grammatica di P e dimostro che la parola "abba" è palindroma:
+			- $$P\implies aPa \implies abPba \implies abba$$
+			- Quindi $P \Rightarrow^{*} abba$ 
+			- ![[Pasted image 20240924173550.png]]
+- ## Grammatica def: ^653185
+	- di tanti tipi come: _regolari, libere_ ecc...
+	- tutte seguono lo stesso pattern, sono diverse solo per alcune caratteristiche come:
+		- _le produzioni (o regole)_.
+	- dopo aver definito una grammatica serve capire quale linguaggio genera
+	- ### Libere (da contesto): ^c95cdc
+		- è una _quadrupla_$(NT, T, R, S)$ 
+			- $NT$ _non terminali_ (di solito maiuscole)
+			- $T$ _terminali_ (minuscole)
+			- $S \in NT$ simbolo da cui _partire_
+			- $R$ insieme finito di _regole_
+				- $V\to w$ dove $V\in NT$ e $w\in (T\cup NT)^{*}$
+		- #### ES:
+			- $G=(\{ S\}, \{a,b,+,*\},S,R )$
+			- $R=\{S\to_{1}a_{1}; S\to_{2} b; S\to_{3}S+S; S\to_{4}S*S\}$ 
+	- ### Regolari:
+		- permettono di definire linguaggi regolari. 

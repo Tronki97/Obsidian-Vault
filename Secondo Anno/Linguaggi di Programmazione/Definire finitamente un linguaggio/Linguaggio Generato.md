@@ -1,0 +1,21 @@
+- il linguaggio generato dalla [[Grammatiche]] G è l'insieme $$L(G)=\{w\in T^{*}|S \Rightarrow^{*}  w\}$$
+- _Come determinare un $L(G)$ e come capire se una stringa $w$ appartiene a quel linguaggio_:
+	- algoritmi "naif":
+		- parto da $S$ e applico in tutti i modi possibili le regole per trovare una derivazione $w$ 
+	- in alcuni casi la verifica è semplice:
+		- ![[Pasted image 20240924122419.png]]
+		- $S\to AB$   $A\to aAb\ |\ \epsilon$    $B\to bB\ |\ \epsilon$
+		- $$L(S)=L(A)\cdot L(B)$$
+		- $$L(A)=\{a^{n}\ b^{n}\ |\ n\geq 0\}$$
+		- $$L(B)=\{ b^{n}\ |\ n\geq 0\}$$
+		- Quindi $L(S)$ risulta:
+			- $$\{ a^{n}\ b^{n}\ b^{m}|n,m \ge 0\}$$
+			- $$L(S)=\{a^{n}\ b^{n+m}\ |\ n,m\ge0\}$$
+- _Dato un linguaggio determinare una grammatica che lo genera_ 
+	- ![[Pasted image 20240924181837.png]]
+	- $$L=\{a^{n}\ b^{m}\ b^{n}\ a^{m}\ |\  n,m\geq 0 \}$$
+	- L può essere riscritto come:$$L=\{a^{n}\ b^{n}\ b^{m}\ a^{m}\ |\  n,m\geq 0 \}$$Perché $b^{m} b^{n}=b^{m+n}=b^{n} b^{m}$ 
+	- quindi la sua grammatica _G_ sarà:
+		- $S\to AB$
+		- $A\to aAb\ |\ \epsilon$
+		- $B\to aBb\ |\ \epsilon$ 

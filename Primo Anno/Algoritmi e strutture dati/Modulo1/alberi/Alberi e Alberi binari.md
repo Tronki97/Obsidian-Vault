@@ -4,7 +4,7 @@
 		- archi che connettono i nodi 
 		- c'è un solo percorso per andare da un nodo ad un altro.
 	-  è ordinato se i figli di ogni nodo sono ordinati
-	- Le foglie sono nodi senza figli. Da ogni nodo si può identificare sotto-albero sx e dx.
+	- Le foglie sono nodi senza figli. Da ogni nodo si può identificare sotto-albero sx e dx. ^d80a92
 	- _Profondità_:
 		- lunghezza del percorso che va dalla radice al nodo foglia(radice sta a 0 e albero vuoto -1)
 	- _livello_: insieme di nodi alla stessa profondità.

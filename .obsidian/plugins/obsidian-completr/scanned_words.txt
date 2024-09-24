@@ -487,6 +487,11 @@ produzione
 passano
 precisione
 provoca
+palindrome
+palindroma
+produzioni
+prop
+pQt
 realizzare
 rappresentare
 risultato
@@ -944,6 +949,12 @@ rompe
 rotto
 rimbalza
 ring
+riconoscitivo
+riconosciuto
+rispetti
+riscrive
+riscrivere
+riassume
 la
 le
 lo
@@ -1223,6 +1234,10 @@ lxz
 lgs
 lhS
 loop
+legata
+lSX
+lVf
+leggo
 ALU
 AND
 Address
@@ -1746,6 +1761,9 @@ nai
 ncS
 necessitano
 nvv
+nau
+naif
+numerabili
 capire
 codifiche
 capacit
@@ -2403,6 +2421,10 @@ cee
 causare
 contato
 contrattiva
+complessi
+cerve
+cdc
+cambierebbe
 avendo
 alcune
 arriva
@@ -2920,6 +2942,14 @@ appoggiandosi
 azienda
 andrebbe
 arrestato
+anna
+abba
+automa
+automi
+avvicina
+accertarmi
+analitico
+aql
 un
 una
 usato
@@ -3201,6 +3231,8 @@ uQGG
 umf
 uAq
 uOG
+usabile
+uuq
 decremento
 del
 di
@@ -3624,6 +3656,15 @@ diretti
 disposti
 dirama
 diy
+denomino
+derivazione
+dimezzando
+derivare
+denoto
+derivazioni
+derivato
+ddÖ
+decidessi
 finito
 fanno
 facilmente
@@ -3973,6 +4014,9 @@ fPX
 fattura
 finiscano
 ferma
+form
+formate
+formalismo
 in
 il
 invece
@@ -4413,6 +4457,9 @@ inviata
 impiegando
 implementabile
 interrotto
+inferenza
+implicita
+immediate
 modo
 mentre
 massimo
@@ -4785,6 +4832,12 @@ minimamente
 msh
 meccanismo
 mappatura
+maiuscole
+minuscole
+memorizzabile
+mrH
+mmZ
+muS
 esempio
 eccede
 errori
@@ -5169,6 +5222,12 @@ eventuali
 eoR
 eHC
 eps
+espressioni
+equipotente
+esista
+eRWW
+eey
+eXKm
 base
 bit
 basano
@@ -5427,6 +5486,8 @@ bls
 brT
 bFQv
 bHL
+binary
+btOkK
 quindi
 questo
 quelle
@@ -5674,6 +5735,7 @@ qLe
 qnt
 qvJ
 qBw
+quadrupla
 se
 sarebbe
 si
@@ -6290,6 +6352,9 @@ segnalicollisioni
 scalabile
 successione
 senn
+sintetico
+slP
+semantiche
 otterremmo
 ottenere
 occupare
@@ -6588,6 +6653,8 @@ opposte
 ovviare
 oICeO
 oWpj
+oii
+oAf
 va
 valore
 viene
@@ -7230,6 +7297,7 @@ topologici
 token
 trasmettere
 troncato
+terminali
 grandi
 gli
 grande
@@ -7506,6 +7574,11 @@ gTr
 gestiti
 guasti
 generando
+grammatica
+generativo
+grammatiche
+generica
+gxWF
 NOT
 NotePad
 Nu
@@ -7743,6 +7816,7 @@ NXf
 NtE
 NLi
 NCoJ
+NzT
 Il
 Instruction
 IR
@@ -8279,6 +8353,9 @@ RGO
 RjM
 RVF
 Rpb
+Regolari
+Riconoscitivo
+RQQ
 Si
 Se
 Status
@@ -8570,6 +8647,9 @@ SCOuWW
 Ssn
 Syx
 SUv
+Scrivi
+Sintetico
+SvW
 BINARY
 Bus
 BX
@@ -8797,6 +8877,10 @@ Bks
 BGK
 BLI
 BYZ
+Backus
+Bisezione
+Bmq
+BNp
 Per
 Program
 PC
@@ -9080,6 +9164,8 @@ Parzialmente
 Partizioni
 Ppr
 Ppj
+PUU
+Prop
 Di
 Data
 Dati
@@ -9333,6 +9419,9 @@ Dpd
 DQt
 Disposti
 Dvi
+Derivazioni
+Definire
+DCpo
 Le
 La
 Lg
@@ -9550,6 +9639,10 @@ Lcd
 LPX
 Linea
 LIh
+Libere
+LFg
+LFb
+Leftmost
 Modulo
 Massimo
 Memory
@@ -9796,6 +9889,7 @@ MHJl
 MPj
 Mtq
 Minimamente
+MOc
 ES
 Esempi
 Ex
@@ -10048,6 +10142,7 @@ EEC
 EQY
 EoR
 EuO
+Eee
 Come
 Codifica
 Counter
@@ -10344,6 +10439,8 @@ Collegamenti
 Composto
 Cftz
 Clv
+Coglione
+ChJ
 Questa
 Quello
 Qz
@@ -10573,6 +10670,7 @@ QHN
 QZM
 QnL
 QWS
+QVp
 Formato
 FLIP
 FLOP
@@ -10845,6 +10943,7 @@ FUH
 FGHb
 FXh
 FsQ
+Forma
 Word
 WK
 WB
@@ -11036,6 +11135,8 @@ WoEPj
 Wwc
 WNx
 WXr
+Weirstrass
+WIU
 zero
 zip
 zL
@@ -11237,6 +11338,7 @@ zTT
 zUyU
 zhL
 zewp
+zoomare
 Half
 HACK
 HIT
@@ -11459,6 +11561,8 @@ HPG
 HHX
 Hxe
 Hub
+HAa
+HbT
 XOR
 Xm
 Xo
@@ -11885,6 +11989,11 @@ haF
 hxK
 hYy
 hub
+hmB
+hyma
+hQx
+hhK
+hIDAT
 JZ
 JT
 Jd
@@ -12092,6 +12201,7 @@ JmMk
 JSQ
 Jdd
 JLy
+JQk
 kB
 kW
 kWs
@@ -12507,6 +12617,7 @@ jpZ
 jUC
 jwWg
 jäw
+jke
 word
 wu
 wf
@@ -12954,6 +13065,7 @@ OOe
 OqX
 OBU
 OMN
+OUML
 xz
 xX
 xF
@@ -13163,6 +13275,7 @@ xzm
 xuL
 xOY
 xSVx
+xJRi
 Kq
 KG
 KR
@@ -13362,6 +13475,8 @@ KJZ
 KQl
 KjP
 KHw
+Kgi
+KQk
 Us
 US
 Ur
@@ -13788,6 +13903,8 @@ Zkk
 ZBv
 ZQM
 ZsQ
+ZZl
+ZCa
 YQ
 Yz
 YI
@@ -13989,6 +14106,8 @@ YDM
 YSx
 YJh
 YoD
+YlV
+YIH
 yI
 ys
 yN
@@ -14667,6 +14786,9 @@ Ggjw
 GeY
 GPc
 Gcm
+Grammatica
+Genero
+Generativo
 Vb
 VD
 VG
