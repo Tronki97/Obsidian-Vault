@@ -1,0 +1,2 @@
+- una mappatura $g: D\to D$ è chiamata contrattiva se $\exists C: |g(x)-g(y)|\leq C|x-y|$
+	- $C$ viene chiamata costante contrattiva

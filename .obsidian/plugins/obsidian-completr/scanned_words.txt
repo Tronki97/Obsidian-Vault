@@ -485,6 +485,8 @@ proteggono
 parlarsi
 produzione
 passano
+precisione
+provoca
 realizzare
 rappresentare
 risultato
@@ -1221,9 +1223,6 @@ lxz
 lgs
 lhS
 loop
-less
-livelli
-logic
 ALU
 AND
 Address
@@ -1473,8 +1472,6 @@ AfvV
 AIF
 AÖ
 Anello
-Application
-API
 nel
 necessario
 numero
@@ -1749,7 +1746,6 @@ nai
 ncS
 necessitano
 nvv
-navigare
 capire
 codifiche
 capacit
@@ -2405,12 +2401,7 @@ comunicazioni
 control
 cee
 causare
-ceaf
-client
-complicate
-collegarsi
-cookies
-cliccato
+contato
 avendo
 alcune
 arriva
@@ -2926,7 +2917,6 @@ aCN
 appositi
 appoggiandosi
 azienda
-accertarmi
 andrebbe
 arrestato
 un
@@ -3210,8 +3200,6 @@ uQGG
 umf
 uAq
 uOG
-univoco
-utente
 decremento
 del
 di
@@ -3635,8 +3623,6 @@ diretti
 disposti
 dirama
 diy
-dimezzando
-dotati
 finito
 fanno
 facilmente
@@ -3986,7 +3972,6 @@ fPX
 fattura
 finiscano
 ferma
-frammenti
 in
 il
 invece
@@ -4427,12 +4412,6 @@ inviata
 impiegando
 implementabile
 interrotto
-ipertestuali
-individuati
-identificatore
-incentrato
-interazioni
-immagazzinati
 modo
 mentre
 massimo
@@ -4804,8 +4783,6 @@ medium
 minimamente
 msh
 meccanismo
-multimediali
-meccanismi
 esempio
 eccede
 errori
@@ -5189,8 +5166,7 @@ eYe
 eventuali
 eoR
 eHC
-esista
-esserne
+eps
 base
 bit
 basano
@@ -5449,8 +5425,6 @@ bls
 brT
 bFQv
 bHL
-binary
-browser
 quindi
 questo
 quelle
@@ -6314,13 +6288,6 @@ segnalicollisioni
 scalabile
 successione
 senn
-socket
-strutturale
-scripting
-stili
-statico
-storage
-semplificare
 otterremmo
 ottenere
 occupare
@@ -6934,7 +6901,6 @@ vfA
 vCg
 vyY
 volesse
-verifiche
 troppo
 testimone
 tramite
@@ -7262,9 +7228,6 @@ topologici
 token
 trasmettere
 troncato
-tipografici
-tipografia
-transazioni
 grandi
 gli
 grande
@@ -7540,9 +7503,7 @@ gTW
 gTr
 gestiti
 guasti
-generica
 generando
-grosse
 NOT
 NotePad
 Nu
@@ -8058,7 +8019,6 @@ IuG
 ItB
 Interfaccia
 Infrastrutture
-IDE
 Rappresentazione
 Registri
 Register
@@ -8608,9 +8568,6 @@ SCOuWW
 Ssn
 Syx
 SUv
-Scrivi
-Stili
-Siti
 BINARY
 Bus
 BX
@@ -8838,7 +8795,6 @@ Bks
 BGK
 BLI
 BYZ
-Bisezione
 Per
 Program
 PC
@@ -9122,7 +9078,6 @@ Parzialmente
 Partizioni
 Ppr
 Ppj
-Protocolli
 Di
 Data
 Dati
@@ -10387,7 +10342,6 @@ Collegamenti
 Composto
 Cftz
 Clv
-Coglione
 Questa
 Quello
 Qz
@@ -11080,7 +11034,6 @@ WoEPj
 Wwc
 WNx
 WXr
-Weirstrass
 zero
 zip
 zL
@@ -11282,7 +11235,6 @@ zTT
 zUyU
 zhL
 zewp
-zoomare
 Half
 HACK
 HIT
@@ -11505,7 +11457,6 @@ HPG
 HHX
 Hxe
 Hub
-HTTPrequest
 XOR
 Xm
 Xo
@@ -12554,7 +12505,6 @@ jpZ
 jUC
 jwWg
 jäw
-javascript
 word
 wu
 wf
@@ -14489,7 +14439,6 @@ TQO
 TPv
 TgUwMG
 Tpr
-TCP
 GY
 GT
 Ghw
