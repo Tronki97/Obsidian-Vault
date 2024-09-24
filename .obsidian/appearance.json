@@ -5,5 +5,9 @@
   "theme": "obsidian",
   "monospaceFontFamily": "Arial",
   "textFontFamily": "Arial",
-  "baseFontSizeAction": false
+  "baseFontSizeAction": false,
+  "enabledCssSnippets": [
+    "dashboard",
+    "readLineLength"
+  ]
 }

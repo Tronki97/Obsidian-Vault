@@ -955,6 +955,9 @@ rispetti
 riscrive
 riscrivere
 riassume
+rel
+review
+recipes
 la
 le
 lo
@@ -1487,6 +1490,7 @@ AfvV
 AIF
 AÖ
 Anello
+Anno
 nel
 necessario
 numero
@@ -2425,6 +2429,7 @@ complessi
 cerve
 cdc
 cambierebbe
+cssclass
 avendo
 alcune
 arriva
@@ -2950,6 +2955,8 @@ avvicina
 accertarmi
 analitico
 aql
+agisce
+anno
 un
 una
 usato
@@ -3233,6 +3240,7 @@ uAq
 uOG
 usabile
 uuq
+updates
 decremento
 del
 di
@@ -3665,6 +3673,8 @@ derivazioni
 derivato
 ddÖ
 decidessi
+derivabile
+dashboard
 finito
 fanno
 facilmente
@@ -4017,6 +4027,7 @@ ferma
 form
 formate
 formalismo
+favorite
 in
 il
 invece
@@ -5228,6 +5239,8 @@ esista
 eRWW
 eey
 eXKm
+evincere
+elaboratori
 base
 bit
 basano
@@ -7579,6 +7592,7 @@ generativo
 grammatiche
 generica
 gxWF
+geometria
 NOT
 NotePad
 Nu
@@ -8356,6 +8370,11 @@ Rpb
 Regolari
 Riconoscitivo
 RQQ
+ROLLE
+Remodeling
+Read
+Review
+Recent
 Si
 Se
 Status
@@ -8650,6 +8669,9 @@ SUv
 Scrivi
 Sintetico
 SvW
+Sunday
+Stats
+Secondo
 BINARY
 Bus
 BX
@@ -8881,6 +8903,7 @@ Backus
 Bisezione
 Bmq
 BNp
+Budget
 Per
 Program
 PC
@@ -9166,6 +9189,11 @@ Ppr
 Ppj
 PUU
 Prop
+Personal
+Projects
+Personnel
+Primo
+Programmazione
 Di
 Data
 Dati
@@ -9643,6 +9671,8 @@ Libere
 LFg
 LFb
 Leftmost
+LAGRANGE
+Learning
 Modulo
 Massimo
 Memory
@@ -9890,6 +9920,7 @@ MPj
 Mtq
 Minimamente
 MOc
+Movies
 ES
 Esempi
 Ex
@@ -10143,6 +10174,7 @@ EQY
 EoR
 EuO
 Eee
+Exotic
 Come
 Codifica
 Counter
@@ -10441,6 +10473,8 @@ Cftz
 Clv
 Coglione
 ChJ
+CAUCHY
+Count
 Questa
 Quello
 Qz
@@ -10944,6 +10978,7 @@ FGHb
 FXh
 FsQ
 Forma
+Family
 Word
 WK
 WB
@@ -11137,6 +11172,10 @@ WNx
 WXr
 Weirstrass
 WIU
+WEIERSTRASS
+Watch
+Writing
+Work
 zero
 zip
 zL
@@ -13066,6 +13105,7 @@ OqX
 OBU
 OMN
 OUML
+Objectives
 xz
 xX
 xF
@@ -14560,6 +14600,7 @@ TQO
 TPv
 TgUwMG
 Tpr
+Tagged
 GY
 GT
 Ghw
@@ -15041,6 +15082,8 @@ Vfb
 VLk
 Vengono
 Voq
+Vacations
+Vault
 öG
 öH
 özw

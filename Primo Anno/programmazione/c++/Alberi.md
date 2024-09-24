@@ -1,3 +1,8 @@
+---
+tags:
+  - programmazione
+---
+
 collezione di nodi e archi 
 - ogni nodo ha solo un predecessore  e vari successori, la radice non ha predecessori
 - ogni nodo contiene un valore 

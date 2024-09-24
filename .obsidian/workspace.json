@@ -8,33 +8,40 @@
         "type": "tabs",
         "children": [
           {
-            "id": "be43b710c3f79c2d",
+            "id": "7771b63a9e93cc29",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
-            }
-          },
-          {
-            "id": "6e93e48d241b3ef9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Alberi di derivazione.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
+            },
+            "group": "ead17b1d4f09ac13"
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "15f27f362b2ad289",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "78194be08c006b1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Homepage.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            },
+            "group": "ead17b1d4f09ac13"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Alberi di derivazione.md",
+                "file": "Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Alberi di derivazione.md",
+                "file": "Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Alberi di derivazione.md"
+                "file": "Homepage.md"
               }
             }
           },
@@ -159,14 +166,21 @@
               "type": "git-view",
               "state": {}
             }
+          },
+          {
+            "id": "9882b26e7253d011",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,22 +196,31 @@
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "copilot:Copilot Chat": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "homepage:Open homepage": false
     }
   },
-  "active": "6e93e48d241b3ef9",
+  "active": "7771b63a9e93cc29",
   "lastOpenFiles": [
-    "immagini/Pasted image 20240924183709.png",
+    "Primo Anno/Logica/Algebra in logica/Generalizzazione in informatica.md",
+    "Homepage.md",
+    "Primo Anno/programmazione/c++/Alberi.md",
     "Secondo Anno/Linguaggi di Programmazione/Alberi di derivazione.md",
+    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Derivazioni.md",
+    "().md",
+    "Primo Anno/Analisi/modulo1/Teoremi.md",
+    "Spicy-Sweet Buffalo Popcorn.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
+    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
+    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Linguaggio Generato.md",
+    "immagini/Pasted image 20240924183709.png",
     "immagini/Pasted image 20240924183128.png",
     "Secondo Anno/Reti di Calcolatori/Componenti di rete.md",
     "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
     "Secondo Anno/Reti di Calcolatori/Infrastruttura e collegamenti di rete.md",
     "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "Secondo Anno/Reti di Calcolatori/Lezione 2.md",
-    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Linguaggio Generato.md",
     "immagini/Pasted image 20240924181837.png",
-    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Derivazioni.md",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Rappresentazione finita di linguaggi.md",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio",
@@ -211,20 +234,13 @@
     "Secondo Anno/Calcolo Numerico/Python.md",
     "Secondo Anno/Calcolo Numerico/Intro.md",
     "immagini/Pasted image 20240924122419.png",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Operazioni su linguaggi.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
-    "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
-    "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri",
     "immagini/Pasted image 20240920151922.png",
     "immagini/Pasted image 20240920151957.png",
     "Recording 20240920135216.webm",
     "immagini/Pasted image 20240920151947.png",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
-    "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
-    "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Tecnologie Web/URI",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",

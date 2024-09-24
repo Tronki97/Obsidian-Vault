@@ -9,4 +9,4 @@
 		- 1) l'albero "riassume" tante derivazioni diverse ma tutte equivalenti.
 		- 2) L'albero fornisce informazioni semantiche: "_quali operandi per quali operazioni_"
 			- se leggo le [[Alberi e Alberi binari#^d80a92||foglie]] viene come risultato l'operazione con gli adeguati operandi ovvero :
-				- ![[Pasted image 20240924183709.png]]E questo si chiama _Albero sintattico_
+				- ![[Pasted image 20240924183709.png]]E questo si chiama _Albero sintattico_.

@@ -13,4 +13,4 @@
 		- $S \to AB$     $A\to aA\ |\ a$    $B\to bB\ |\ b$
 		- $$S \Rightarrow AB \Rightarrow AbB \Rightarrow Abb \Rightarrow abb $$
 		- quindi: $$S \Rightarrow^{*} abb$$
-		- ma anche:$$S \Rightarrow AB \Rightarrow aB \Rightarrow abB \Rightarrow abb$$Quindi si può evincere che esistono _derivazioni diverse_ che danno come risultato la stessa stringa.
+		- ma anche:$$S \Rightarrow AB \Rightarrow aB \Rightarrow abB \Rightarrow abb$$Quindi si può evincere che esistono _derivazioni diverse_ che danno come risultato la stessa stringa. nao
