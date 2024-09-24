@@ -1,0 +1,14 @@
+- più veloce rispetto all'[[Algoritmo di bisezione]] 
+	- può essere usato per numeri complessi $\mathbb{C}$
+	- usabile anche per equazioni non lineari.
+	-  
+- è un tipo di metodo di [[algoritmo di iterazione di punto fisso||punto fisso]] 
+- prendo una funzione $g(x)$ che nella radice abbia la derivata prima nulla. 
+	- $g(x)=x-w(x)f(x)$ e quindi scelgo $w(x)$ che rispetti la condizione
+	- $$g'(r)=1-w'(r)f(r)-w(r)f'(r)=$$
+	- $$=1-w(r)f'(r)=g'(r)$$
+	- e ci serve $g'(r)=0$ quindi ci cerve che $$w(r)=\frac{1}{f'(r)}$$Quindi $f'(r)\ne 0$  
+	- Risulta quindi che$$g(x)=1-\frac{f(x)}{f'(x)}$$E quindi per la formula dell'iterazione:
+		- $$x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{k})}$$
+	- 
+ 

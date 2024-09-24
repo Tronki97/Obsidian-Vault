@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/mappa contrattiva.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6e93e48d241b3ef9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/Grammatiche.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/mappa contrattiva.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Grammatiche.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/mappa contrattiva.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Grammatiche.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/mappa contrattiva.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/Grammatiche.md"
               }
             }
           },
@@ -171,16 +185,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "be43b710c3f79c2d",
+  "active": "6e93e48d241b3ef9",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md",
+    "Secondo Anno/Linguaggi di Programmazione/Rappresentazione finita di linguaggi.md",
+    "Secondo Anno/Linguaggi di Programmazione/Grammatiche.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Operazioni su linguaggi.md",
+    "Secondo Anno/Calcolo Numerico/metodo di newton.md",
     "Secondo Anno/Calcolo Numerico/mappa contrattiva.md",
+    "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri",
     "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
-    "Secondo Anno/Calcolo Numerico/mappa contrattiva.md",
     "Secondo Anno/Calcolo Numerico/Intro.md",
     "Secondo Anno/Calcolo Numerico/Python.md",
     "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
@@ -196,7 +215,6 @@
     "Secondo Anno/Reti di Calcolatori/Lezione 2.md",
     "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
     "Secondo Anno/Tecnologie Web/URI/Route.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
     "immagini/Pasted image 20240919230123.png",
     "immagini/Pasted image 20240919230054.png",
     "Secondo Anno/Tecnologie Web/URI/URI ref.md",
@@ -206,11 +224,7 @@
     "Secondo Anno/Tecnologie Web/URI",
     "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Tecnologie Web/intro.md",
-    "Secondo Anno/Linguaggi di Programmazione/Lezione 3.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Operazioni su linguaggi.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
     "immagini/Implementazione del linguaggio Java.png",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/generare un compilatore.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio",
     "immagini/Pasted image 20240821182056.png",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
