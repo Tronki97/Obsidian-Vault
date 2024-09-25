@@ -3,7 +3,7 @@
 		- Disposti a forma di anello
 		- ![[Pasted image 20240920151922.png]]
 		- Questo schema può causare un loop continuo infatti si utilizza un protocollo che quando l'informazione inviata parte si ferma quando fa il giro completo e torna al mittente
-		- Usa un meccanismo chiamato _token ring_ che evita di controllare ogni volta le collisioni
+		- Usa un meccanismo chiamato _token ring_ che evita di controllare ogni volta le collisioni ^4bad82
 			- solo chi ha il _token_ può trasmettere quindi c'è solo un segnale.
 		- #### problema:
 			- Se si rompe un collegamento il segnale arriva al punto rotto e "rimbalza" facendo la strada a ritroso impiegando più tempo

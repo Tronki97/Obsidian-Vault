@@ -70,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#programmazione",
+                "query": "token",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,7 +87,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -202,7 +203,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f233b7e5c8302dda",
+  "active": "d68fdf52a817ee6a",
   "lastOpenFiles": [
     "Secondo Anno/Reti di Calcolatori/Componenti di rete.md",
     "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete.md",
