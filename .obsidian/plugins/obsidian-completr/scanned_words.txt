@@ -2463,6 +2463,7 @@ contare
 cubica
 conduce
 canale
+comunicano
 avendo
 alcune
 arriva
@@ -2997,6 +2998,7 @@ ahU
 adattati
 arbitraggio
 attenuazione
+acceso
 un
 una
 usato
@@ -3282,6 +3284,7 @@ usabile
 uuq
 updates
 uLZ
+univoci
 decremento
 del
 di
@@ -3720,6 +3723,7 @@ dau
 duplicato
 decisa
 diodo
+destinatari
 finito
 fanno
 facilmente
@@ -5568,6 +5572,7 @@ binary
 btOkK
 bottiglia
 banner
+bad
 quindi
 questo
 quelle
@@ -8469,6 +8474,7 @@ Recent
 Reti
 RMH
 RDf
+Richiede
 Si
 Se
 Status
@@ -9002,6 +9008,8 @@ Bisezione
 Bmq
 BNp
 Budget
+Broadcast
+Bisogna
 Per
 Program
 PC
@@ -10582,6 +10590,7 @@ ChJ
 CAUCHY
 Count
 Cavi
+Canale
 Questa
 Quello
 Qz
@@ -14724,6 +14733,7 @@ Tpr
 Tagged
 Tecnologie
 Terzo
+Tutti
 GY
 GT
 Ghw
