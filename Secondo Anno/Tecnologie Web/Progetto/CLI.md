@@ -1,0 +1,6 @@
+- ## Cos'é:
+	- Command-Line Interface
+	- Script, programmi e/o librerie da usare tramite terminale o IDE per risolvere problemi specifici e quindi migliorare la produttività del programmatore
+- ## Come usarli:
+	- vengono eseguiti nell'ambiente di sviluppo sul codice sorgente dell'app
+	- In produzione invece viene caricato il codice risultante dall'esecuzione
