@@ -973,6 +973,7 @@ rumore
 realizzarla
 ricevitore
 raccoglie
+ricevere
 la
 le
 lo
@@ -2461,6 +2462,7 @@ cavo
 contare
 cubica
 conduce
+canale
 avendo
 alcune
 arriva
@@ -7063,6 +7065,7 @@ volesse
 vqt
 vqH
 viceversa
+virtualizzazione
 troppo
 testimone
 tramite
@@ -8766,6 +8769,7 @@ Secondo
 Skkq
 SCN
 Sajj
+Supporto
 BINARY
 Bus
 BX

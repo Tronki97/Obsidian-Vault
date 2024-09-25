@@ -25,7 +25,7 @@
 						- l'hub centrale quindi lavora solo sulla corrente elettrica, e quindi il segnale che gli arriva viene duplicato e spedito a tutti gli altri lati mancanti.
 						- rigenera il segnale che gli arriva. cioè se il segnale arriva con problemi ma lui riesce a capirlo tutti gli altri lo riceveranno rigenerato.
 			- la probabilità di collisione aumenta con l'aumentare del numero dei nodi.
-				- #### Ethernet:
+				- #### Ethernet: ^0240d4
 					- Quando un segnale viene trasmesso e nel frattempo rivela un altro segnale entrambi smettono di trasmettere e quindi si ricrea l'opportunità di trasmissione.
 		- #### Switch 
 			- rispetto all'hub è più "intelligente" e utilizza i  [[Infrastruttura e collegamenti di rete#^31066a||MAC address]] 

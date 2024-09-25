@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Scheda di rete.md"
+                "file": "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete.md"
               }
             }
           },
@@ -174,21 +174,14 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "7e7e9f535dfdf977",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,20 +202,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7e7e9f535dfdf977",
+  "active": "f233b7e5c8302dda",
   "lastOpenFiles": [
+    "Secondo Anno/Reti di Calcolatori/Componenti di rete.md",
+    "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete.md",
+    "Secondo Anno/Reti di Calcolatori/Canali di comunizcazione",
+    "Secondo Anno/Reti di Calcolatori/Mezzo fisico di trasmissione.md",
+    "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete",
+    "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
     "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
     "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
     "Primo Anno/programmazione/c++/sintassi.md",
-    "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
-    "Secondo Anno/Reti di Calcolatori/Mezzo fisico di trasmissione.md",
     "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "immagini/Pasted image 20240925140120.png",
     "immagini/Pasted image 20240925135715.png",
     "immagini/Pasted image 20240925135730.png",
     "Secondo Anno/Reti di Calcolatori/Infrastruttura e collegamenti di rete.md",
-    "Secondo Anno/Reti di Calcolatori/Componenti di rete.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli.md",
     "Primo Anno/Logica/Algebra in logica/Generalizzazione in informatica.md",
     "Primo Anno/programmazione/c++/Alberi.md",
@@ -246,7 +242,6 @@
     "immagini/Pasted image 20240924173550.png",
     "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md",
     "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
-    "Secondo Anno/Calcolo Numerico/mappa contrattiva.md",
     "immagini/Pasted image 20240924122419.png",
     "Secondo Anno/Tecnologie Web/Set di caratteri",
     "Recording 20240920135216.webm",
@@ -255,8 +250,6 @@
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
     "Secondo Anno/Tecnologie Web/Il WWW",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori",
-    "Secondo Anno/Calcolo della probabilità e statistica",
-    "Secondo Anno/Ottimizzazione combinatoria",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
