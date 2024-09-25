@@ -1,0 +1,6 @@
+- ## Dotato di:
+	- _Interfaccia di collegamento al calcolatore_
+	- _Connettore di rete_
+		- raccoglie i dati in arrivo dal [[Mezzo fisico di trasmissione||mezzo di trasmissione]]  
+- conduce i dati dal mezzo di rete al calcolatore e viceversa.
+- Ogni scheda di rete ha il proprio [[Infrastruttura e collegamenti di rete#^31066a||MAC address]] 

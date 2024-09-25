@@ -1,7 +1,7 @@
 ---
 cssclasses:
   - dashboard
-banner: http://www.michaelrigley.com/cyberpunk-2077
+banner: "http://www.michaelrigley.com/cyberpunk-2077"
 banner_x: 0.5
 ---
 

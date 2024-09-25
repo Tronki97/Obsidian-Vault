@@ -12,3 +12,7 @@
 	- viaggia senza nessun tipo di supporto alla propagazione (senza contare il campo elettromagnetico)
 	- ![[Pasted image 20240925140120.png]]
 	- un problema è l'attenuazione del segnale basata sulla distanza che potrebbe essere quadratica o cubica. 
+- ## Supporto alla trasmissione:
+	- virtualizzazione del mezzo di trasmissione.
+	- ### ES: 
+		- se con la fibra ottica voglio ricevere solo la luce verde vuol dire che sono nel canale della luce verde.

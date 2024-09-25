@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -70,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MAC",
+                "query": "tag:#programmazione",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md"
+                "file": "Secondo Anno/Reti di Calcolatori/Scheda di rete.md"
               }
             }
           },
@@ -174,14 +174,21 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "7e7e9f535dfdf977",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,18 +205,22 @@
       "copilot:Copilot Chat": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "homepage:Open homepage": false
+      "homepage:Open homepage": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f233b7e5c8302dda",
+  "active": "7e7e9f535dfdf977",
   "lastOpenFiles": [
+    "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
+    "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
+    "Primo Anno/programmazione/c++/sintassi.md",
+    "Secondo Anno/Reti di Calcolatori/Scheda di rete.md",
+    "Secondo Anno/Reti di Calcolatori/Mezzo fisico di trasmissione.md",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "immagini/Pasted image 20240925140120.png",
     "immagini/Pasted image 20240925135715.png",
-    "Homepage.md",
-    "Secondo Anno/Reti di Calcolatori/Mezzo fisico di trasmissione.md",
     "immagini/Pasted image 20240925135730.png",
-    "Secondo Anno/Reti di Calcolatori/Topologia di rete.md",
-    "Secondo Anno/Reti di Calcolatori/Intro al corso di Reti.md",
     "Secondo Anno/Reti di Calcolatori/Infrastruttura e collegamenti di rete.md",
     "Secondo Anno/Reti di Calcolatori/Componenti di rete.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli.md",
@@ -236,8 +247,6 @@
     "Secondo Anno/Calcolo Numerico/algoritmo di iterazione di punto fisso.md",
     "Secondo Anno/Calcolo Numerico/Algoritmo di bisezione.md",
     "Secondo Anno/Calcolo Numerico/mappa contrattiva.md",
-    "Secondo Anno/Calcolo Numerico/metodo di newton.md",
-    "Secondo Anno/Calcolo Numerico/Python.md",
     "immagini/Pasted image 20240924122419.png",
     "Secondo Anno/Tecnologie Web/Set di caratteri",
     "Recording 20240920135216.webm",

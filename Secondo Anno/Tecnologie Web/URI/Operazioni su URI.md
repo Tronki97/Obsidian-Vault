@@ -14,7 +14,7 @@
 		- URI base: http://www.sito.com/uno/due/tre 
 		- _pippo_:
 			-  http://www.sito.com/uno/due/pippo
-		- _#pippo_:
+		- _`#pippo`_:
 			- http://www.sito.com/uno/due/tre#pippo
 		- _./_
 			- http://www.sito.com/uno/due/

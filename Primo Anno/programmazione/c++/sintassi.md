@@ -9,7 +9,7 @@ la variabile media non ha specificatori e siccome sono interi il risultato sarà
 COSTANTI
 const double pi= 3.14; // occupa effettivamente uno slot in memoria 
 
-#define pi 3.14 // non occupa memoria 
+`#define` pi 3.14 // non occupa memoria 
 
 non è possibile cambiare il valore ad una costante(riceveremmo errore)
 
