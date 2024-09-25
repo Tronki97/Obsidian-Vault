@@ -3,19 +3,44 @@
 		- Disposti a forma di anello
 		- ![[Pasted image 20240920151922.png]]
 		- Questo schema può causare un loop continuo infatti si utilizza un protocollo che quando l'informazione inviata parte si ferma quando fa il giro completo e torna al mittente
-		- Usa un meccanismo chiamato token ring che evita di controllare ogni volta le collisioni
-			- solo chi ha il token può trasmettere quindi c'è solo un segnale.
+		- Usa un meccanismo chiamato _token ring_ che evita di controllare ogni volta le collisioni
+			- solo chi ha il _token_ può trasmettere quindi c'è solo un segnale.
 		- #### problema:
 			- Se si rompe un collegamento il segnale arriva al punto rotto e "rimbalza" facendo la strada a ritroso impiegando più tempo
+			- se il _token_ viene perso per un qualsiasi motivo comporta la paralisi dell'intero sistema di comunicazione 
+				- in più il tempo di rigenerazione del token deve essere maggiore del tempo di transito di una conversazione e quindi di trasferimento del token
+				- 
+			- se il _token_ va a qualcuno che non ha nulla da comunicare si spetta del tempo inutile.
 	- ### Stella:
 		- Composto con un Hub centrale a cui tutti gli altri host sono collegati, è [[Infrastruttura e collegamenti di rete#^27c57e||minimamente connessa]] perché sono presenti 6 elementi e 5 collegamenti nonostante l'hub non sia effettivamente un host 
 		- ![[Pasted image 20240920151935.png]]
 		- è facilmente scalabile visto che se si volesse aggiungere un host non dobbiamo modificare nessun collegamento ma basta aggiungerne 1
 		- è più veloce perché la comunicazione tra 2 host ha al massimo due [[Infrastruttura e collegamenti di rete#^fe68f0||collegamenti punto a punto]].
+		- #### Problemi:
+			- Se si rompe un link esso rimane senza rete ma almeno è solo uno 
+			- ##### Single point of failure:
+				- se si rompe l'host non comunica più nessuno
+				- ###### Soluzione
+					- ma ci siamo adattati a rendere l'hub centrale molto resistente a problemi sia meccanici che di interferenze. 
+						- l'hub centrale quindi lavora solo sulla corrente elettrica, e quindi il segnale che gli arriva viene duplicato e spedito a tutti gli altri lati mancanti.
+						- rigenera il segnale che gli arriva. cioè se il segnale arriva con problemi ma lui riesce a capirlo tutti gli altri lo riceveranno rigenerato.
+			- la probabilità di collisione aumenta con l'aumentare del numero dei nodi.
+				- #### Ethernet:
+					- Quando un segnale viene trasmesso e nel frattempo rivela un altro segnale entrambi smettono di trasmettere e quindi si ricrea l'opportunità di trasmissione.
+		- #### Switch 
+			- rispetto all'hub è più "intelligente" e utilizza i  [[Infrastruttura e collegamenti di rete#^31066a||MAC address]] 
+			- mentre un nodo trasmette allo switch anche un altro riuscirebbe a trasmettere allo switch senza far collidere i segnali.
+			- Quando 2 segnali devono andare allo stesso host li mette in un _Buffer_ per far si che non vengano spediti insieme 
 	- ### Bus:
-		- Linea sui cui passano più segnali che poi si dirama per incontrare i vari host.
+		- Linea sui cui passano più segnali che poi si dirama per incontrare i vari host. Ha basso costo
 		- ![[Pasted image 20240920151947.png]]
+		- #### Problema:
+			- rilevare chi può usare il bus in quel preciso momento
+				- per risolvere si usa un protocollo di _arbitraggio del bus_
+			- rappresenta anche problemi del tipo di "collo di bottiglia" 
+			- se si rompe un collegamento si creano due isole di partizione.
 	- ### Albero:
 		- Parte da un'host padre e si dirama con una gerarchia su altri.
 		- ![[Pasted image 20240920151957.png]]
+		- 
 - 
