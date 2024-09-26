@@ -1,8 +1,6 @@
 ---
 cssclasses:
   - dashboard
-banner: "http://www.michaelrigley.com/cyberpunk-2077"
-banner_x: 0.5
 ---
 # Vault Info
 
@@ -10,8 +8,8 @@ banner_x: 0.5
 
 - 🗄️ Recent file updates `$=dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").limit(5).file.link)`
 - 〽️ Stats
-    - File Count: `$=dv.pages().length`
-- Da fare/finire:
+    - File Count: 
+- Da fare/finire:`$=$dv.list()` 
 ```dataview
 LIST
 FROM #TODO
