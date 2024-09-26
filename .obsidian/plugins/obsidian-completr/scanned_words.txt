@@ -496,6 +496,7 @@ paralisi
 pcJ
 plastica
 patologiche
+parzialmente
 realizzare
 rappresentare
 risultato
@@ -978,6 +979,8 @@ ricevere
 rappresenti
 rimossa
 rightmost
+rudimentale
+riempie
 la
 le
 lo
@@ -1519,6 +1522,7 @@ Anno
 Akg
 Approcci
 Ambiguit
+Automi
 nel
 necessario
 numero
@@ -1797,6 +1801,7 @@ nau
 naif
 numerabili
 numerico
+necessita
 capire
 codifiche
 capacit
@@ -3019,6 +3024,8 @@ ambigue
 ambiguit
 approcci
 astratto
+aumentato
+ammissibile
 un
 una
 usato
@@ -3305,6 +3312,7 @@ uuq
 updates
 uLZ
 univoci
+utilizzati
 decremento
 del
 di
@@ -4107,6 +4115,7 @@ flessibili
 fibra
 fattorizzare
 forzare
+finiti
 in
 il
 invece
@@ -4559,6 +4568,7 @@ invio
 interferenza
 inerente
 iterativi
+intermedia
 modo
 mentre
 massimo
@@ -6478,6 +6488,9 @@ sottili
 shell
 ssh
 singolare
+sintattica
+scanner
+spezza
 otterremmo
 ottenere
 occupare
@@ -6782,6 +6795,7 @@ oZvU
 oiG
 opportunit
 ottica
+ottimizzata
 va
 valore
 viene
@@ -7101,6 +7115,7 @@ vqt
 vqH
 viceversa
 virtualizzazione
+validi
 troppo
 testimone
 tramite
@@ -8506,6 +8521,7 @@ Reti
 RMH
 RDf
 Richiede
+Realizzarlo
 Si
 Se
 Status

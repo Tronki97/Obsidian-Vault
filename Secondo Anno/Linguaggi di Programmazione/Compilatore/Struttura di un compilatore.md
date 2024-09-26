@@ -1,0 +1,18 @@
+---
+tags:
+  - TODO
+---
+- ## Analisi lessicale:
+	- controlla che tutti i simboli utilizzati siano validi
+		- dentro la tabella dei simboli
+	- una volta completata genera una lista di token.
+- ## Analisi sintattica:
+	- Parser
+	- dalla lista di token produce un albero di derivazione 
+- ## Analisi semantica:
+	- produce un albero di derivazione aumentato
+- ## Genera forma intermedia:
+	- genera un codice intermedio ancora rudimentale
+- ## Ottimizzazione:
+	- viene generata una forma intermedia ottimizzata.
+- 
