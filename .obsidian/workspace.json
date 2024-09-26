@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a3292e01f3e36c1c",
+        "id": "b66f55943689efcc",
         "type": "tabs",
         "children": [
           {
-            "id": "5f9b7735058514fa",
+            "id": "89aefc08c28eef94",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
+                "file": "Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
+                "file": "Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/Shell.md"
+                "file": "Homepage.md"
               }
             }
           },
@@ -174,17 +174,16 @@
       "audio-recorder:Start/stop recording": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
-      "copilot:Copilot Chat": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "homepage:Open homepage": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5f9b7735058514fa",
+  "active": "89aefc08c28eef94",
   "lastOpenFiles": [
-    "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
+    "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Tecnologie Web/Progetto",
     "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Topologia di rete.md",

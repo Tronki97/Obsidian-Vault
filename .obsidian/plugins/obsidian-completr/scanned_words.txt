@@ -1260,6 +1260,7 @@ leggo
 lTS
 lavora
 lui
+laboratorio
 ALU
 AND
 Address
@@ -6448,6 +6449,8 @@ spedito
 smettono
 switch
 sottili
+shell
+ssh
 otterremmo
 ottenere
 occupare

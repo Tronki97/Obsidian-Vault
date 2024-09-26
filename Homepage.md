@@ -4,6 +4,18 @@ cssclasses:
 banner: "http://www.michaelrigley.com/cyberpunk-2077"
 banner_x: 0.5
 ---
+# Vault Info
+
+[](https://github.com/TfTHacker/DashboardPlusPlus/blob/master/Dashboard%2B%2B.md#vault-info)
+
+- 🗄️ Recent file updates `$=dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").limit(5).file.link)`
+- 〽️ Stats
+    - File Count: `$=dv.pages().length`
+- Da fare/finire:
+```dataview
+LIST
+FROM #TODO
+```
 
 # Primo anno
 
@@ -114,15 +126,3 @@ LIMIT 5
 # Terzo anno
 
 
-# Vault Info
-
-[](https://github.com/TfTHacker/DashboardPlusPlus/blob/master/Dashboard%2B%2B.md#vault-info)
-
-- 🗄️ Recent file updates `$=dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").limit(5).file.link)`
-- 〽️ Stats
-    - File Count: `$=dv.pages().length`
-- Da fare/finire:
-```dataview
-LIST
-FROM #TODO
-```
