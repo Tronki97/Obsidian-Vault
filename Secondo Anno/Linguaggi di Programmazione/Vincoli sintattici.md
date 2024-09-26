@@ -1,0 +1,15 @@
+- ES:
+	- una variabile deve prima essere dichiarata
+	- compatibilità di tipo: $x=e$
+		- "x" ed "e" devono avere lo stesso tipo.
+- non sono esprimibili tramite le [[Grammatiche#^c95cdc||grammatiche libere]] perché non sono in grado di descrivere vincoli che dipendono dal contesto 
+- Soluzioni:
+	- usare grammatiche dipendenti dal contesto.
+		- Poco pratico: "$w\in L(G)$ (con G contestuale) è esponenziale nella lunghezza della stringa $w$ e nella taglia di $G$ 
+	- Usare controlli specifici:
+		- nella costruzione di un compilatore la fase di "Analisi semantica" fa questi controlli:
+			- 
+- Sintassi o Semantica:
+	- sintassi quello che si descrive in grammatiche libere
+	- semantica: tutto il resto
+		- 

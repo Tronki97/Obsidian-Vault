@@ -4,42 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b66f55943689efcc",
+        "id": "181b2e697a46837e",
         "type": "tabs",
         "children": [
           {
-            "id": "89aefc08c28eef94",
+            "id": "d3a8c1b62c1feb9d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e883dabfe8df53fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dd1dcd7bd9b9f357",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Alberi di derivazione.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -92,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -113,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Alberi di derivazione.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Alberi di derivazione.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Alberi di derivazione.md"
               }
             }
           },
@@ -207,19 +180,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "89aefc08c28eef94",
+  "active": "d3a8c1b62c1feb9d",
   "lastOpenFiles": [
-    "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
+    "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Ambiguità.md",
+    "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Alberi di derivazione.md",
+    "Secondo Anno/Linguaggi di Programmazione/Vincoli sintattici.md",
+    "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione",
+    "Pasted image 20240926122238.png",
+    "Pasted image 20240926121627.png",
+    "Pasted image 20240926121615.png",
+    "2024-09-26.md",
     "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+    "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
     "Primo Anno/Algebra e geometria/Sistema lineare/Equazioni lineari.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
-    "2024-09-26.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
-    "Homepage.md",
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
     "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Tecnologie Web/Progetto",
@@ -240,21 +220,14 @@
     "immagini/Pasted image 20240925135730.png",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Infrastruttura e collegamenti di rete.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli.md",
-    "Primo Anno/Logica/Algebra in logica/Generalizzazione in informatica.md",
-    "Primo Anno/programmazione/c++/Alberi.md",
-    "Secondo Anno/Linguaggi di Programmazione/Alberi di derivazione.md",
     "immagini/Pasted image 20240924183709.png",
     "immagini/Pasted image 20240924183128.png",
     "immagini/Pasted image 20240924181837.png",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio",
     "immagini/Pasted image 20240924175152.png",
-    "immagini/Pasted image 20240924174523.png",
-    "immagini/Pasted image 20240924173550.png",
-    "immagini/Pasted image 20240924122419.png",
     "Secondo Anno/Tecnologie Web/Set di caratteri",
     "Recording 20240920135216.webm",
     "Secondo Anno/Tecnologie Web/URI",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

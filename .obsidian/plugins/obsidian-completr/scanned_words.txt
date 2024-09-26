@@ -495,6 +495,7 @@ pQt
 paralisi
 pcJ
 plastica
+patologiche
 realizzare
 rappresentare
 risultato
@@ -975,6 +976,8 @@ ricevitore
 raccoglie
 ricevere
 rappresenti
+rimossa
+rightmost
 la
 le
 lo
@@ -1262,6 +1265,7 @@ lTS
 lavora
 lui
 laboratorio
+leftmost
 ALU
 AND
 Address
@@ -1514,6 +1518,7 @@ Anello
 Anno
 Akg
 Approcci
+Ambiguit
 nel
 necessario
 numero
@@ -1791,6 +1796,7 @@ nvv
 nau
 naif
 numerabili
+numerico
 capire
 codifiche
 capacit
@@ -2468,6 +2474,7 @@ conduce
 canale
 comunicano
 computazionalmente
+concreta
 avendo
 alcune
 arriva
@@ -3005,6 +3012,13 @@ attenuazione
 acceso
 algoritmici
 accurati
+ambigua
+avranno
+ambiguo
+ambigue
+ambiguit
+approcci
+astratto
 un
 una
 usato
@@ -3730,6 +3744,7 @@ duplicato
 decisa
 diodo
 destinatari
+disambiguo
 finito
 fanno
 facilmente
@@ -4091,6 +4106,7 @@ fili
 flessibili
 fibra
 fattorizzare
+forzare
 in
 il
 invece
@@ -5319,6 +5335,8 @@ elaboratori
 elettrica
 entrare
 elettromagnetico
+etichettata
+estraggo
 base
 bit
 basano
@@ -9315,6 +9333,7 @@ Personnel
 Primo
 Programmazione
 Premessa
+Parsing
 Di
 Data
 Dati
@@ -9573,6 +9592,7 @@ Definire
 DCpo
 DpS
 Dotato
+Disambiguazione
 Le
 La
 Lg
@@ -11513,6 +11533,7 @@ zUyU
 zhL
 zewp
 zoomare
+zucchero
 Half
 HACK
 HIT
@@ -14750,6 +14771,7 @@ Tagged
 Tecnologie
 Terzo
 Tutti
+Togliere
 GY
 GT
 Ghw
