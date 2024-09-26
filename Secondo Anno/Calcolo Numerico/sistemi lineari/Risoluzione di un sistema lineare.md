@@ -1,0 +1,32 @@
+---
+tags:
+  - TODO
+---
+
+- Premessa 
+	- DEF: [[Equazioni lineari#^ff8be3||sistema lineare]]
+	- m equazioni 
+	- n incognite 
+- Sistema quadrato:
+	- $m=n$
+	- $A \underline{x}=\underline{b}$ 
+	- è una matrice $n \times n$ 
+	- $\underline{x}=\begin{pmatrix}x_{1}\\ \vdots \\ x_{n}\end{pmatrix}$
+	- $\underline{b}=\begin{pmatrix}b_{1}\\ \vdots \\ b_{n}\end{pmatrix}$
+- Il sistema $A \underline{x}= \underline{b}$ ha una sola soluzione $\iff$ A è non singolare
+	- ovvero [[Determinante||det]](A) $\ne0$ 
+- Approcci algoritmici per calcolare la soluzione:
+	- 
+- Stima dell'_errore inerente_:
+	- $$A \underline{x}= \underline{b}\iff A^{-1}Ax=A^{-1}b\iff x=A^{-1}b$$
+	- [[Complessità computazionale]] del calcolo di $A^{-1}$ è $O(n^{3})$ 
+	- 1) metodi diretti:
+		- sono più accurati, non hanno errori di troncamento ma sono poco efficienti computazionalmente
+		- fattorizzare la [[Matrici||matrice]] $A$ equivale a scrivere $A$ come [[Matrici#^f58df4||prodotto tra matrici]] 
+	- 2) metodi iterativi:
+		- meno accurati ma sono più efficienti computazionalmente.
+- ## Fattorizzazione LU
+	- chiamata così perché rappresenti $A=L*U$ che sono due matrici _triangolari_ 
+		- _L_ inferiore(0 sotto la diagonale principale),
+		- _M_ superiore(0 sopra la diagonale principale) 
+	- tra L e M fai il prodotto righe per colonne.

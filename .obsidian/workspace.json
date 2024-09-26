@@ -13,7 +13,33 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e883dabfe8df53fd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "dd1dcd7bd9b9f357",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "token",
+                "query": "matrici triangolare",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +92,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -86,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md"
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md"
               }
             }
           },
@@ -182,6 +209,17 @@
   },
   "active": "89aefc08c28eef94",
   "lastOpenFiles": [
+    "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
+    "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+    "Primo Anno/Algebra e geometria/Sistema lineare/Equazioni lineari.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
+    "2024-09-26.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
+    "Homepage.md",
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
     "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Tecnologie Web/Progetto",
@@ -198,7 +236,6 @@
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Scheda di rete.md",
     "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
     "Primo Anno/programmazione/c++/sintassi.md",
-    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Intro al corso di Reti.md",
     "immagini/Pasted image 20240925135730.png",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Infrastruttura e collegamenti di rete.md",
@@ -206,18 +243,9 @@
     "Primo Anno/Logica/Algebra in logica/Generalizzazione in informatica.md",
     "Primo Anno/programmazione/c++/Alberi.md",
     "Secondo Anno/Linguaggi di Programmazione/Alberi di derivazione.md",
-    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Derivazioni.md",
-    "().md",
-    "Primo Anno/Analisi/modulo1/Teoremi.md",
-    "Spicy-Sweet Buffalo Popcorn.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Descrivere un linguaggio.md",
-    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
-    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Linguaggio Generato.md",
     "immagini/Pasted image 20240924183709.png",
     "immagini/Pasted image 20240924183128.png",
-    "Secondo Anno/Reti di Calcolatori/Lezione 2.md",
     "immagini/Pasted image 20240924181837.png",
-    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio",
     "immagini/Pasted image 20240924175152.png",
     "immagini/Pasted image 20240924174523.png",
@@ -227,7 +255,6 @@
     "Recording 20240920135216.webm",
     "Secondo Anno/Tecnologie Web/URI",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

@@ -8,6 +8,9 @@ xy-8=0 non lo è
 Una soluzione è un n-upla ordinata($c_{1,}c_{2,}...c_n$)di numeri reali che sostituiti alle incognite rendono vera l'equazione.
 
 #### Sistema lineare
+
+^ff8be3
+
 di n incognite è un insieme di equazioni che devono essere verificate contemporaneamente. 
 ES:$$\begin {cases}3x_1-2x_2=1 \\x_1+x_2=7 \end {cases}$$
 

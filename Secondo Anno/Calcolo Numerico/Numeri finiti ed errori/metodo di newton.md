@@ -11,4 +11,14 @@
 	- Risulta quindi che$$g(x)=1-\frac{f(x)}{f'(x)}$$E quindi per la formula dell'iterazione:
 		- $$x_{k+1}=x_{k}-\frac{f(x_{k})}{f'(x_{k})}$$
 	- 
- 
+ - ## Velocità di convergenza:
+	- $x^{*}$ soluzione esatta
+	- $x_{k}$ soluzione all'iterazione $k$
+	- $|x_{k+1}-x^{*}|=E_{k+1}$ errore assoluto al passo $k+1$ 
+	- $|E_{k+1}|\le C|E_{k}|$
+		- 1) [[Algoritmo di bisezione]]: $C=\frac{1}{2}$
+		- 2) [[algoritmo di iterazione di punto fisso]]: fino $C$ costante di contrazione; $|g'(x)|<C$ 
+	- $|E_{k+1}|\le C|E_{k}|^{P}$
+		- $\frac{|E_{k+1}|}{|E_{k}|^{P}}\le C: 1<P$
+			- $P\leq 1$ lineare
+			- $1\le P\le2$ quadratico
