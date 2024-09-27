@@ -3,7 +3,7 @@ tags:
   - TODO
 ---
 
-- fatto da uno scanner:
+- ## Scanner:
 	- spezza il programma in token e controlla che il linguaggio sia ammissibile
 	- riempie parzialmente la tabella dei simboli
 	- ### Realizzarlo:

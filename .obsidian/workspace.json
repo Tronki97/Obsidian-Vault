@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "18280c288adbefc2",
+        "id": "e0594724f1535ba4",
         "type": "tabs",
         "children": [
           {
-            "id": "12cbd55e99e3899f",
+            "id": "4ddb26b1913cfaa2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi semantica.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi semantica.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi semantica.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi semantica.md"
               }
             }
           },
@@ -180,53 +180,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "12cbd55e99e3899f",
+  "active": "4ddb26b1913cfaa2",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
+    "immagini/Pasted image 20240927191754.png",
+    "immagini/Pasted image 20240927180634.png",
+    "Untitled 1.md",
+    "Untitled.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi semantica.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi sintattica.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Implementazione.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Pragmatica.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Sintassi e semantica.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Vincoli sintattici.md",
+    "Primo Anno/programmazione/c++/sintassi(programmazione).md",
+    "immagini/Pasted image 20240927185601.png",
+    "immagini/Pasted image 20240927185549.png",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Sintassi concreta e astratta.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Alberi di derivazione.md",
+    "immagini/Pasted image 20240927183959.png",
+    "immagini/albero di derivazione.png",
+    "immagini/albero di derivazione.png.~tmp",
+    "immagini/albero di derivazione 1.png",
+    "immagini/Pasted image 20240927183155.png",
+    "immagini/Pasted image 20240927182932.png",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
     "immagini/Pasted image 20240927131025.png",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/reti a commutazione di circuito.md",
-    "immagini/Pasted image 20240927133352.png",
-    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Infrastruttura e collegamenti di rete.md",
-    "immagini/Pasted image 20240927131326.png",
-    "immagini/Pasted image 20240927131158.png",
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
     "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
     "Secondo Anno/Tecnologie Web/Markup.md",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
-    "Secondo Anno/Linguaggi di Programmazione/Vincoli sintattici.md",
-    "immagini/Pasted image 20240926121615.png",
-    "immagini/Pasted image 20240926154818.png",
-    "immagini/Pasted image 20240926152157.png",
-    "immagini/Pasted image 20240926151748.png",
-    "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Alberi di derivazione.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore",
-    "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Ambiguità.md",
-    "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione",
-    "immagini/Pasted image 20240926122238.png",
-    "immagini/Pasted image 20240926121627.png",
-    "2024-09-26.md",
-    "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-    "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
-    "Primo Anno/Algebra e geometria/Sistema lineare/Equazioni lineari.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione",
     "Secondo Anno/Calcolo Numerico/sistemi lineari",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
     "Secondo Anno/Tecnologie Web/Progetto",
     "Secondo Anno/Reti di Calcolatori/intro livello 1",
     "Secondo Anno/Reti di Calcolatori/Canali di comunizcazione",
     "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio",
     "Secondo Anno/Tecnologie Web/Set di caratteri",
-    "Recording 20240920135216.webm",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

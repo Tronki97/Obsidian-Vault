@@ -1,0 +1,46 @@
+---
+tags:
+  - TODO
+---
+- ## Ambiguità:
+	- considero la grammatica: $S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$
+	- ### due diverse derivazioni:
+		- ![[Pasted image 20240926121615.png]]
+		- ![[Pasted image 20240926121627.png]]
+		- Quindi in questa grammatica $a*b+c$ ha più di un albero di derivazione Perciò la grammatica è _ambigua_ 
+			- Ovvero non è utilizzabile per dare semantica a $a*b+c$
+		- anche perché le operazioni da eseguire avranno un ordine di esecuzione diverso.
+		- #### 1) $(a*b)+c$
+		- #### 2) $a*(b+c)$
+	- ### Formalmente:
+		- una grammatica libera G è ambigua se $\exists w \in L(G)$ che ammette più alberi di derivazione 
+		- Un linguaggio è ambiguo se tutte le grammatiche che lo _generano_ sono ambigue
+- ## Togliere l'ambiguità:
+	- mantiene lo stesso linguaggio.
+	- ### ES:
+		- $A\to A\ |\ \epsilon$
+		- $A\to \epsilon$
+		- ambigua perché:
+			- ![[Pasted image 20240926122238.png]]
+		- la disambiguo modificando S 
+			- $S\to \epsilon$
+		- alcune grammatiche però non possono avere rimossa l'ambiguità dette _patologiche_
+	- Un metodo per appunto rimuovere l'ambiguità può essere forzare la grammatica ad un approcciò [[Alberi di derivazione#^308569||leftmost]] o _rightmost_. 
+		- $S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$ è ambigua 
+		- ha dei problemi con la precedenza del $*$ e l'associatività di $* \ \mathbf{e}\ +$ quindi bisogna scegliere se associare a dx o sx 
+			- ![[Pasted image 20240927182932.png]]
+		- $E\to E+T\ |\ T$ associativo a sx
+		- $T\to A*T \ |\ A$ associativo a dx 
+		- $A\to a\ | \ b\ |\ c$
+		- ma il $*$ ha la precedenza sul $+$ 
+		- La nuova grammatica $E$ è equivalente a $S$ e non è ambigua ($L(S)=L(E)$) e genera questo albero:
+			- ![[albero di derivazione.png||350]]
+			-  tuttavia non può generare quello precedente
+			- per farlo si utilizzano delle tecniche come quella dello zucchero sintattico per modificare la grammatica:
+				- $E\to E+T\ |\ T$ associativo a sx
+				- $T\to A*T \ |\ A$ associativo a dx 
+				- $A\to a\ | \ b\ |\ c\ |\ (E)$
+				- che genera questo nuovo albero:
+				- ![[Pasted image 20240927183959.png]]
+				- che raggiunge l'obbiettivo che avevamo.
+- 

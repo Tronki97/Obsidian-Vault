@@ -24,16 +24,4 @@ tags:
 	- se il nodo $n$
 		- ha etichetta $A\in NT$ e i figli sono nell'ordine $m_{1},...m_{k}$ con etichetta $x_{1},...,x_{k}$ allora 
 			- $A\to x_{1},...,x_{k}$ è una regola di $R$
-- ## Ambiguità:
-	- considero la grammatica: $S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$
-	- ### due diverse derivazioni:
-		- ![[Pasted image 20240926121615.png]]
-		- ![[Pasted image 20240926121627.png]]
-		- Quindi in questa grammatica $a*b+c$ ha più di un albero di derivazione Perciò la grammatica è _ambigua_ 
-			- Ovvero non è utilizzabile per dare semantica a $a*b+c$
-		- anche perché le operazioni da eseguire avranno un ordine di esecuzione diverso.
-		- #### 1) $(a*b)+c$
-		- #### 2) $a*(b+c)$
-	- ### Formalmente:
-		- una grammatica libera G è ambigua se $\exists w \in L(G)$ che ammette più alberi di derivazione 
-		- Un linguaggio è ambiguo se tutte le grammatiche che lo _generano_ sono ambigue
+- 

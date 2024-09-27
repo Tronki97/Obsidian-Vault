@@ -2,7 +2,8 @@
 tags:
   - TODO
 ---
-- ## Analisi lessicale:
+- Un compilatore è corretto quando preserva la [[Sintassi e semantica#^78ca9a||semantica]] e quindi per dimostrare sia corretto serve una semantica per il _linguaggio sorgente e quello oggetto_
+- ## [[Analisi lessicale]]:
 	- controlla che tutti i simboli utilizzati siano validi
 		- dentro la tabella dei simboli
 	- una volta completata genera una lista di token.
