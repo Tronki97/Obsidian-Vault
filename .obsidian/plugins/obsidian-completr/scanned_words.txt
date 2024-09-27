@@ -506,6 +506,7 @@ presentazioni
 procedurale
 produttivit
 programmatore
+pQR
 realizzare
 rappresentare
 risultato
@@ -3807,6 +3808,7 @@ dichiarata
 disporne
 decide
 distinguibili
+dSSS
 finito
 fanno
 facilmente
@@ -4174,6 +4176,7 @@ fornire
 figura
 fruibile
 formati
+fPT
 in
 il
 invece
@@ -5949,6 +5952,7 @@ qXrh
 qbU
 qsi
 qRc
+qihq
 se
 sarebbe
 si
@@ -6591,6 +6595,7 @@ strutturata
 specifici
 specifiche
 strutturalmente
+sOV
 otterremmo
 ottenere
 occupare
@@ -7225,6 +7230,7 @@ vCbj
 vita
 virgole
 visualizzazione
+vhy
 troppo
 testimone
 tramite
@@ -7856,6 +7862,7 @@ gVM
 gufB
 gnc
 generici
+gIDAT
 NOT
 NotePad
 Nu
@@ -8963,6 +8970,7 @@ Svd
 SEF
 Soluzioni
 Script
+SQR
 BINARY
 Bus
 BX
@@ -10244,6 +10252,7 @@ MoU
 Murkup
 Modi
 Metamarkup
+Mtx
 ES
 Esempi
 Ex
@@ -11042,6 +11051,7 @@ QWS
 QVp
 QZT
 QAq
+QnK
 Formato
 FLIP
 FLOP
@@ -11525,6 +11535,7 @@ WCy
 WcS
 Whu
 WLm
+WUe
 zero
 zip
 zL
@@ -13499,6 +13510,8 @@ OEoK
 OvJ
 OFX
 OLm
+OwyI
+Oqz
 xz
 xX
 xF
@@ -14353,6 +14366,8 @@ ZHM
 ZHm
 ZHy
 ZxG
+ZZr
+ZTH
 YQ
 Yz
 YI
@@ -15022,6 +15037,7 @@ Tutti
 Togliere
 Tabelle
 Testo
+THJ
 GY
 GT
 Ghw
@@ -15514,6 +15530,7 @@ Vault
 VYl
 VCr
 Valori
+VAk
 öG
 öH
 özw

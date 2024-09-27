@@ -6,7 +6,7 @@ cssclasses:
 
 [](https://github.com/TfTHacker/DashboardPlusPlus/blob/master/Dashboard%2B%2B.md#vault-info)
 
-- 🗄️ Recent file updates `$=dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").limit(5).file.link)`
+- 🗄️ Recent file updates `$=dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").limit(6).file.link)`
 - 〽️ Stats
     - File Count: 
 - ## Da fare/finire: 
@@ -22,14 +22,14 @@ FROM #TODO
 ```dataview
 LIST
 FROM "Primo Anno/programmazione" 
-limit 5
+limit 6
 ```
 - ### Analisi
   
 ```dataview
 LIST 
 FROM "Primo Anno/Analisi"
-limit 5
+limit 6
 ```
 
 - ### Logica 
@@ -37,7 +37,7 @@ limit 5
 ```dataview
 LIST 
 FROM "Primo Anno/Logica" 
-limit 5
+limit 6
 ```
 
 - Architettura degli elaboratori:
@@ -45,21 +45,21 @@ limit 5
 ```dataview
 LIST
 FROM "Primo Anno/architettura degli elaboratori"
-limit 5
+limit 6
 ```
 
 - Algebra e geometria
 ```dataview 
 LIST
 FROM "Primo Anno/Algebra e geometria"
-LIMIT 5
+LIMIT 6
 ```
 
 - Algoritmi e strutture dati:
 ```dataview
 LIST
 FROM "Primo Anno/Algoritmi e strutture dati"
-LIMIT 5
+LIMIT 6
 ```
 
 
@@ -72,7 +72,7 @@ LIMIT 5
 ```dataview
 LIST
 FROM "Secondo Anno/Calcolo Numerico"
-LIMIT 5
+LIMIT 6
 ```
 
 - ### Reti di calcolatori
@@ -80,14 +80,14 @@ LIMIT 5
 ```dataview
 LIST
 FROM "Secondo Anno/Reti di Calcolatori"
-LIMIT 5
+LIMIT 6
 ```
 
 - ### Tecnologie Web
 ```dataview
 LIST
 FROM "Secondo Anno/Tecnologie Web"
-LIMIT 5
+LIMIT 6
 ```
 
 - ### Linguaggi di Programmazione
@@ -95,14 +95,14 @@ LIMIT 5
 ```dataview
 LIST
 FROM "Secondo Anno/Linguaggi di Programmazione"
-LIMIT 5
+LIMIT 6
 ```
 
 - ### Sistemi Operativi
 ```dataview
 LIST
 FROM "Secondo Anno/Sistemi Operativi"
-LIMIT 5
+LIMIT 6
 ```
 
 - ### Calcolo della probabilità e statistica
@@ -110,7 +110,7 @@ LIMIT 5
 ```dataview
 LIST
 FROM "Secondo Anno/Calcolo della probabilità e statistica"
-LIMIT 5
+LIMIT 6
 ```
 
 - ### Ottimizzazione combinatoria
@@ -118,7 +118,7 @@ LIMIT 5
 ```dataview 
 LIST
 FROM "Secondo Anno/Ottimizzazione combinatoria"
-LIMIT 5
+LIMIT 6
 ```
 
 # Terzo anno
