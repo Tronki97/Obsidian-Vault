@@ -4173,6 +4173,7 @@ finiti
 fornire
 figura
 fruibile
+formati
 in
 il
 invece
@@ -9495,6 +9496,7 @@ Parsing
 Parser
 Proprietario
 Pubblico
+Protocollo
 Di
 Data
 Dati

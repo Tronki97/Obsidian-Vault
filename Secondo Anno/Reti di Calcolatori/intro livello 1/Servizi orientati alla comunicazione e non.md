@@ -9,7 +9,8 @@ tags:
 - ## I servizi orientati alla connessione:
 	- garantiscono la consegna ordinata dei pacchetti trasmessi secondo l'ordine di invio
 	- i pacchetti persi vengono ri-trasferiti.
-	- 
+	- Usa il _TCP_(transfer control protocol) per garantire che il dato arrivi  e sia giusto:
+		- usato per servizi di visualizzazione di file, siti o dati 
 - ## servizi non orientati:
 	- i _protocolli_ permettono la comunicazione nonostante questi servizi non ne siano orientati.
 		- anche quando i pacchetti vengono persi o arrivano duplicati a causa della velocità nella comunicazione di questi dati
@@ -22,3 +23,5 @@ tags:
 				- ed è possibile perché ogni pacchetto è indipendente l'uno dall'altro e quindi potrebbero prendere tutti strade diverse
 				- poi se mancano dei pacchetti il mittente si accorge che è passato del tempo (_round trip time_) senza che sia arrivato il pacchetto di conferma quindi decide di ritrasferirlo. 
 				- se il pacchetto di conferma parte ma non arriva allora il mittente ritrasmette il dato quindi duplicandolo, Il destinatario vedendo il pacchetto duplicato lo cestina e rimanda il pacchetto di conferma 
+		- Usa l'_UDP_(user data protocol) per indovinare il pacchetto dati mancante nella trasmissione interpolando i dati adiacenti come fa il nostro cervello che infatti non se ne accorge:
+			- usato nello streaming.

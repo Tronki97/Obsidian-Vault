@@ -1,0 +1,7 @@
+- ## Protocollo:
+	- regole e procedure di gestione dei processi di  comunicazione
+	- regole e formati per definire lo scambio di dati senza ambiguità
+		- ogni dato ha esplicito il significato di ogni bit e questo permette di avere un'efficienza più alta nella trasmissione del dato.
+	- garantisce la compatibilità tra vari dispositivi.
+- ## Architettura dei protocolli:
+	- 
