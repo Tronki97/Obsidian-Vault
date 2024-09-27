@@ -1,6 +1,9 @@
 ---
 tags:
   - TODO
+aliases:
+  - scanner
+  - Scanner
 ---
 
 - ## Scanner:

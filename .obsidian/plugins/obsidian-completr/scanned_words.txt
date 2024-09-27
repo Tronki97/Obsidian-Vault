@@ -524,6 +524,10 @@ pae
 pDn
 pai
 pto
+parser
+parentesi
+posizionato
+pfSYY
 realizzare
 rappresentare
 risultato
@@ -1030,6 +1034,8 @@ rKCV
 rMB
 rAj
 rcj
+riconoscendo
+renderlo
 la
 le
 lo
@@ -2601,6 +2607,10 @@ contestuali
 clll
 ckk
 cii
+costruisce
+calcolino
+cPz
+cqnJ
 avendo
 alcune
 arriva
@@ -3168,6 +3178,9 @@ avevamo
 andamento
 anm
 aQE
+arricchisce
+aliases
+attributo
 un
 una
 usato
@@ -3936,6 +3949,7 @@ dividendo
 dipenderebbe
 descriva
 dRD
+dGi
 finito
 fanno
 facilmente
@@ -4311,6 +4325,7 @@ fgF
 fMR
 fcS
 fYH
+fasi
 in
 il
 invece
@@ -4792,6 +4807,7 @@ iirX
 iuH
 iok
 iihh
+iGl
 modo
 mentre
 massimo
@@ -5197,6 +5213,10 @@ mettesse
 modello
 matematico
 mDB
+mostra
+mantenga
+mii
+mZyIOi
 esempio
 eccede
 errori
@@ -5608,6 +5628,7 @@ elI
 ejs
 ebm
 eeu
+espansione
 base
 bit
 basano
@@ -5885,6 +5906,8 @@ bzW
 bUG
 bmm
 bRXf
+bpU
+bvH
 quindi
 questo
 quelle
@@ -6806,6 +6829,10 @@ semantici
 scF
 scN
 skY
+specie
+sbilanciate
+sensato
+sjji
 otterremmo
 ottenere
 occupare
@@ -7462,6 +7489,8 @@ vQp
 vwK
 vlH
 vfly
+variano
+vediamo
 troppo
 testimone
 tramite
@@ -7817,6 +7846,10 @@ tuttavia
 tia
 tLa
 tBo
+tiuz
+tGj
+traducibile
+trasformata
 grandi
 gli
 grande
@@ -8362,6 +8395,7 @@ NiN
 NyP
 Nwb
 NWH
+Nzxs
 Il
 Instruction
 IR
@@ -8943,6 +8977,7 @@ RVd
 RmM
 RHx
 RBN
+RFx
 Si
 Se
 Status
@@ -10076,6 +10111,8 @@ DjG
 DlCt
 DgCf
 DtrtP
+Denotazionale
+DtK
 Le
 La
 Lg
@@ -10317,6 +10354,7 @@ LXK
 Liej
 LPy
 LcASDJN
+LyZ
 Modulo
 Massimo
 Memory
@@ -11165,6 +11203,7 @@ Controlli
 CjT
 CoIv
 CiB
+Correttezza
 Questa
 Quello
 Qz
@@ -13055,6 +13094,7 @@ JZo
 JYI
 JQN
 JiljV
+JeU
 kB
 kW
 kWs
@@ -13735,6 +13775,7 @@ wikZ
 wLt
 wTv
 wKV
+woL
 Oltre
 OgSf
 Od
@@ -13986,6 +14027,7 @@ Oym
 OYi
 OZx
 Oyg
+OtB
 xz
 xX
 xF
@@ -14423,6 +14465,7 @@ KAW
 KYM
 KRnuu
 KbY
+Kgy
 Us
 US
 Ur
@@ -14876,6 +14919,8 @@ ZJo
 ZdG
 ZnP
 ZFG
+ZYz
+ZIa
 YQ
 Yz
 YI
@@ -15090,6 +15135,7 @@ YhX
 YeT
 Yod
 Yeq
+YMe
 yI
 ys
 yN
@@ -15810,6 +15856,7 @@ Grammatiche
 GTN
 GFxR
 GiB
+Generazione
 Vb
 VD
 VG
@@ -16086,6 +16133,7 @@ Vwn
 VÄ
 Vmt
 VkC
+VQF
 öG
 öH
 özw

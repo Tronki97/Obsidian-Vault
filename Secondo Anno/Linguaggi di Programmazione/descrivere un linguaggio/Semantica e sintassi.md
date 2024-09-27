@@ -4,7 +4,7 @@
 - ## Semantica: ^78ca9a
 	- I vincoli contestuali sono quindi vincoli "semantici", ovvero possono essere verificati ispezionando il codice del programma, _senza eseguirlo_ 
 	- il compilatore delega questi controlli alla 3°fase detta [[Analisi semantica]].
-	- ### Semantica statica:
+	- ### Semantica statica: ^303459
 		- insieme di quei controlli che possono essere fatti sul testo del programma _senza eseguirlo_:
 			- ![[Pasted image 20240927185549.png]]
 	- ### Semantica dinamica:
