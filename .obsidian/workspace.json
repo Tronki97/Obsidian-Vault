@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
+                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
+                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
+                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md"
+                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md"
               }
             }
           },
@@ -182,8 +182,9 @@
   },
   "active": "12cbd55e99e3899f",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/reti a commutazione di circuito.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
+    "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
+    "Secondo Anno/Reti di Calcolatori/intro livello 1/reti a commutazione di circuito.md",
     "Pasted image 20240927133352.png",
     "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Infrastruttura e collegamenti di rete.md",
@@ -223,7 +224,6 @@
     "Secondo Anno/Reti di Calcolatori/intro livello 1",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Componenti di rete.md",
     "Secondo Anno/Reti di Calcolatori/Canali di comunizcazione",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Mezzo fisico di trasmissione.md",
     "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio",
     "Secondo Anno/Tecnologie Web/Set di caratteri",

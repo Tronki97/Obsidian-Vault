@@ -1,0 +1,24 @@
+---
+tags:
+  - TODO
+---
+
+- un servizio è ciò che si può realizzare per l'utente che può poi utilizzare. Quindi ciò che ci puoi fare con il trasferimento dei dati.
+- nelle [[Rete a commutazione di pacchetto||Reti a commutazione di pacchetto]] ad ogni passo intermedio i dati vengono se-instradati verso la direzione giusta dai _router_ 
+- è possibile che i pacchetti dati trasmessi vengano persi oppure arrivino non in ordine.
+- ## I servizi orientati alla connessione:
+	- garantiscono la consegna ordinata dei pacchetti trasmessi secondo l'ordine di invio
+	- i pacchetti persi vengono ri-trasferiti.
+	- 
+- ## servizi non orientati:
+	- i _protocolli_ permettono la comunicazione nonostante questi servizi non ne siano orientati.
+		- anche quando i pacchetti vengono persi o arrivano duplicati a causa della velocità nella comunicazione di questi dati
+		- ogni elemento intermedio re-instrada il pacchetto e non guarda l'ordine dei pacchetti ma solo il _destinatario finale_ 
+			- Come conseguenza: i dati non sono garantiti di arrivare in ordine.
+			- per risolvere: i pacchetti vengono bufferizzati dal destinatario e ogni pacchetto dovrà contenere anche il numero del pacchetto per poi analizzarli nell'ordine giusto. 
+		- nel caso in cui il router venga congestionato dai dati e non riesca appunto a smistare i dati succede che _cancella_ i dati che non può bufferizzare che quindi vanno persi.
+			- per risolvere: il destinatario vede quali pacchetti sono mancanti e manda una richiesta al mittente per quelli specifici pacchetti.
+			- oppure: il destinatario comunica al mittente i pacchetti che sono arrivati mandando un pacchetto a sua volta con la conferma di arrivo.
+				- ed è possibile perché ogni pacchetto è indipendente l'uno dall'altro e quindi potrebbero prendere tutti strade diverse
+				- poi se mancano dei pacchetti il mittente si accorge che è passato del tempo (_round trip time_) senza che sia arrivato il pacchetto di conferma quindi decide di ritrasferirlo. 
+				- se il pacchetto di conferma parte ma non arriva allora il mittente ritrasmette il dato quindi duplicandolo, Il destinatario vedendo il pacchetto duplicato lo cestina e rimanda il pacchetto di conferma 
