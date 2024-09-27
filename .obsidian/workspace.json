@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "be6bf04b5eff49c7",
+        "id": "18280c288adbefc2",
         "type": "tabs",
         "children": [
           {
-            "id": "2405cbff3d1c19ab",
+            "id": "12cbd55e99e3899f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
+                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
+                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
+                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/CLI.md"
+                "file": "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md"
               }
             }
           },
@@ -180,10 +180,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2405cbff3d1c19ab",
+  "active": "12cbd55e99e3899f",
   "lastOpenFiles": [
+    "Secondo Anno/Reti di Calcolatori/intro livello 1/reti a commutazione di circuito.md",
+    "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
+    "Pasted image 20240927133352.png",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/intro livello 1/Infrastruttura e collegamenti di rete.md",
+    "Pasted image 20240927131326.png",
+    "Pasted image 20240927131158.png",
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
     "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
+    "Pasted image 20240927131025.png",
     "Secondo Anno/Tecnologie Web/Markup.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
@@ -192,7 +200,6 @@
     "immagini/Pasted image 20240926154818.png",
     "immagini/Pasted image 20240926152157.png",
     "immagini/Pasted image 20240926151748.png",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Alberi di derivazione.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore",
     "Secondo Anno/Linguaggi di Programmazione/alberi di derivazione/Ambiguità.md",
@@ -212,18 +219,12 @@
     "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Tecnologie Web/Progetto",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Topologia di rete.md",
-    "immagini/Pasted image 20240925140120.png",
-    "immagini/Pasted image 20240925135715.png",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Canali di comunicazione della rete.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Componenti di rete.md",
     "Secondo Anno/Reti di Calcolatori/Canali di comunizcazione",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Mezzo fisico di trasmissione.md",
     "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Scheda di rete.md",
-    "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
-    "immagini/Pasted image 20240925135730.png",
-    "immagini/Pasted image 20240924183709.png",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio",
     "Secondo Anno/Tecnologie Web/Set di caratteri",
     "Recording 20240920135216.webm",
