@@ -4,11 +4,15 @@ cssclasses:
 ---
 # Vault Info
 
-[](https://github.com/TfTHacker/DashboardPlusPlus/blob/master/Dashboard%2B%2B.md#vault-info)
 
-- 🗄️ Recent file updates `$=dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").limit(6).file.link)`
-- 〽️ Stats
-    - File Count: 
+- ### Ultimi modificati
+  
+```dataview
+LIST 
+FROM ""
+SORT file.mtime DESC
+LIMIT 6
+```
 - ## Da fare/finire: 
 ```dataview
 LIST
@@ -40,7 +44,7 @@ FROM "Primo Anno/Logica"
 limit 6
 ```
 
-- Architettura degli elaboratori:
+- ### Architettura degli elaboratori:
   
 ```dataview
 LIST
@@ -48,14 +52,14 @@ FROM "Primo Anno/architettura degli elaboratori"
 limit 6
 ```
 
-- Algebra e geometria
+- ### Algebra e geometria
 ```dataview 
 LIST
 FROM "Primo Anno/Algebra e geometria"
 LIMIT 6
 ```
 
-- Algoritmi e strutture dati:
+- ### Algoritmi e strutture dati:
 ```dataview
 LIST
 FROM "Primo Anno/Algoritmi e strutture dati"

@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 ---
 - ## Ambiguità:
 	- considero la grammatica: $S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$

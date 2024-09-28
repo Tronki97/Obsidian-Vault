@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e0594724f1535ba4",
+        "id": "5be20fdd29777a30",
         "type": "tabs",
         "children": [
           {
-            "id": "509b129a31506631",
+            "id": "8e7446976b153e82",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Compilazione di un programma.md",
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Compilazione di un programma.md",
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Compilazione di un programma.md",
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Compilazione di un programma.md"
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md"
               }
             }
           },
@@ -180,8 +180,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "509b129a31506631",
+  "active": "8e7446976b153e82",
   "lastOpenFiles": [
+    "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
+    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Alberi di derivazione.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Compilazione di un programma.md",
     "Pasted image 20240927200308.png",
     "Pasted image 20240927200232.png",
     "Pasted image 20240927195850.png",
@@ -189,27 +195,20 @@
     "Pasted image 20240927194740.png",
     "Pasted image 20240927194635.png",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Implementazione.md",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Compilazione di un programma.md",
     "Pasted image 20240927193723.png",
     "Pasted image 20240927193714.png",
     "Pasted image 20240927193650.png",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi semantica.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi sintattica.md",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Semantica e sintassi.md",
     "immagini/Pasted image 20240927191754.png",
-    "immagini/Pasted image 20240927180634.png",
     "Untitled 1.md",
     "Untitled.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Pragmatica.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Vincoli sintattici.md",
     "Primo Anno/programmazione/c++/sintassi(programmazione).md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Sintassi concreta e astratta.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Alberi di derivazione.md",
     "immagini/albero di derivazione.png.~tmp",
-    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",

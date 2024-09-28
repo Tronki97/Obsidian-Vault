@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 ---
 
 - ## Prop:
@@ -24,4 +23,3 @@ tags:
 	- se il nodo $n$
 		- ha etichetta $A\in NT$ e i figli sono nell'ordine $m_{1},...m_{k}$ con etichetta $x_{1},...,x_{k}$ allora 
 			- $A\to x_{1},...,x_{k}$ è una regola di $R$
-- 

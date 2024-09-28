@@ -1602,6 +1602,7 @@ APG
 AXt
 APy
 ACo
+Assembler
 nel
 necessario
 numero
@@ -2611,6 +2612,8 @@ costruisce
 calcolino
 cPz
 cqnJ
+converte
+code
 avendo
 alcune
 arriva
@@ -3181,6 +3184,7 @@ aQE
 arricchisce
 aliases
 attributo
+arithmetics
 un
 una
 usato
@@ -3950,6 +3954,7 @@ dipenderebbe
 descriva
 dRD
 dGi
+dbd
 finito
 fanno
 facilmente
@@ -4326,6 +4331,7 @@ fMR
 fcS
 fYH
 fasi
+faab
 in
 il
 invece
@@ -4808,6 +4814,7 @@ iuH
 iok
 iihh
 iGl
+indirizzato
 modo
 mentre
 massimo
@@ -5217,6 +5224,7 @@ mostra
 mantenga
 mii
 mZyIOi
+modificati
 esempio
 eccede
 errori
@@ -7850,6 +7858,8 @@ tiuz
 tGj
 traducibile
 trasformata
+three
+temporaneo
 grandi
 gli
 grande
@@ -14707,6 +14717,7 @@ UFB
 UrV
 UKzQ
 USX
+Ultimi
 Zx
 ZD
 ZRz
