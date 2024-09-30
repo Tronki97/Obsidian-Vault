@@ -5,8 +5,8 @@ tags:
 
 - Premessa 
 	- DEF: [[Equazioni lineari#^ff8be3||sistema lineare]]
-	- m equazioni 
-	- n incognite 
+	- _m_ equazioni 
+	- _n_ incognite 
 - Sistema quadrato:
 	- $m=n$
 	- $A \underline{x}=\underline{b}$ 
@@ -16,7 +16,7 @@ tags:
 - Il sistema $A \underline{x}= \underline{b}$ ha una sola soluzione $\iff$ A è non singolare
 	- ovvero [[Determinante||det]](A) $\ne0$ 
 - Approcci algoritmici per calcolare la soluzione:
-	- 
+	- usando [[Algoritmo di Gauss||gauss]] 
 - Stima dell'_errore inerente_:
 	- $$A \underline{x}= \underline{b}\iff A^{-1}Ax=A^{-1}b\iff x=A^{-1}b$$
 	- [[Complessità computazionale]] del calcolo di $A^{-1}$ è $O(n^{3})$ 
@@ -27,6 +27,51 @@ tags:
 		- meno accurati ma sono più efficienti computazionalmente.
 - ## Fattorizzazione LU
 	- chiamata così perché rappresenti $A=L*U$ che sono due matrici _triangolari_ 
-		- _L_ inferiore(0 sotto la diagonale principale),
-		- _M_ superiore(0 sopra la diagonale principale) 
+		- _U_ inferiore(0 sotto la diagonale principale),
+		- _L_ superiore(0 sopra la diagonale principale) 
 	- tra L e M fai il prodotto righe per colonne.
+	- questo metodo funziona solo se A è una matrice singolare.
+	- per farlo funzionare su tutte le matrici si aggiunge una matrice _P_ tale che $PA=LU$  
+	- [[Complessità computazionale]]:
+		- $O\left( \frac{n^{3}}{3} \right)$
+	- ### Caso particolare: 
+		- $A\to$ simmetrica e definita _positiva_ ovvero:
+			- quadrata e se $\forall x \in \mathbb{R}^{n}$ $x^{T}Ax\geq 0$ 
+			- #### Proprietà:
+				- gli [[Autovalore]] di $A$ sono tutti positivi. se la matrice $A$ è definita positiva.
+				- se $A$ è definita semi-positiva, gli autovalori sono positivi o nulli.
+		- #### Fattorizzazione di Cholesky
+			- $A=LL^{T}$ 
+			- $L$ è una matrice triangolare inferiore
+			- e questa operazione ha una complessità computazionale più bassa rispetto a quella $LU$:
+				- $O\left( \frac{n^{3}}{6} \right)$
+			- in [[Python]] la funzione per fare questa forma particolare di fattorizzazione è `from scipy import linalg` e `cholesky(A, lower, overwrite_a, check_finite)`. `Lower`(`Bool`) determina quale triangolare ritornare se superiore o inferiore 
+- ## Errore inerente:
+	- ### Norma:
+		- #### vettoriale:
+			- è una funzione che si indica con $\| . \| : \mathbb{R}^{n} \to \mathbb{R}$ 
+			- 1) $\| x \|\geq 0$ $\forall x \in \mathbb{R}^{n}$  
+				- $\| x \|= 0\iff x=0$ 
+			- 2) $x \in \mathbb{R}, \| \alpha x\| = |\alpha| *\|x\|$
+			- 3) $\forall x,y \in \mathbb{R}^{n}$
+				- $\| x+y\|\leq \|x\|+\|y\|$
+		- #### Matriciale:
+			- è una funzione che si indica con $\| A \| : \mathbb{R}^{m \times n} \to \mathbb{R}$ 
+			- 1) $\| A \| \ge 0 \ \ \ \forall A \in \mathbb{R}^{m \times n}$
+			- 2) $\alpha\in \mathbb{R}$, $\| \alpha A \| =|\alpha| * ||A||$
+			- 3) $\forall A, B$ 
+			- $||A||_{2}=\sqrt{P(A^{T}A)}: A^{T}A\in \mathbb{R}^{n}$
+				- $P(M)\to$ massimo autovalore in modulo
+			- $||A||_{1}$ valore massimo della somma aritmetica di ogni riga.
+	- ### Norma di Frobenius:
+		- $||A||_{F} =\sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}}$ 
+		- $A=\begin{pmatrix}0&-1&2\\3&4&-5\end{pmatrix}$
+		- $||A||_{F}=\sqrt{55}$ 
+		- $||I||=\sqrt{3}$
+		- Quindi è la radice di tutti i valori nella [[Matrici||matrice]] elevati alla seconda 
+	- ## ES:
+		- $A\in \mathbb{R}^3$
+		- $A=\begin{pmatrix}1&0&0\\0&-4&0\\0&0&6\end{pmatrix}$
+		- gli autovalori sono:
+			- $\lambda_{1}=1; \ \lambda_{2}=16; \ \ \lambda_{3}=36$
+		- $||A||_{2}=\sqrt{36}=6$ 

@@ -1336,6 +1336,8 @@ lke
 lNZfS
 lpN
 liw
+lMNt
+lJN
 ALU
 AND
 Address
@@ -1903,6 +1905,7 @@ nsss
 ncc
 nvyMd
 nwQU
+nblf
 capire
 codifiche
 capacit
@@ -2614,6 +2617,9 @@ cPz
 cqnJ
 converte
 code
+ckuY
+cia
+cYn
 avendo
 alcune
 arriva
@@ -3491,6 +3497,7 @@ uSS
 utilizzano
 uWI
 uwl
+uHkb
 decremento
 del
 di
@@ -3955,6 +3962,8 @@ descriva
 dRD
 dGi
 dbd
+dSb
+drY
 finito
 fanno
 facilmente
@@ -4332,6 +4341,9 @@ fcS
 fYH
 fasi
 faab
+fCc
+fXQz
+funzionare
 in
 il
 invece
@@ -4815,6 +4827,8 @@ iok
 iihh
 iGl
 indirizzato
+iVN
+iLa
 modo
 mentre
 massimo
@@ -5225,6 +5239,8 @@ mantenga
 mii
 mZyIOi
 modificati
+mNL
+mHi
 esempio
 eccede
 errori
@@ -6184,6 +6200,8 @@ qyi
 qIaHO
 qzC
 qrIiV
+qqU
+qkgm
 se
 sarebbe
 si
@@ -6841,6 +6859,7 @@ specie
 sbilanciate
 sensato
 sjji
+sSb
 otterremmo
 ottenere
 occupare
@@ -7158,6 +7177,8 @@ oir
 onnEg
 oIw
 oö
+ood
+oEB
 va
 valore
 viene
@@ -7499,6 +7520,9 @@ vlH
 vfly
 variano
 vediamo
+vOSoq
+veSC
+vYK
 troppo
 testimone
 tramite
@@ -7860,6 +7884,7 @@ traducibile
 trasformata
 three
 temporaneo
+tGA
 grandi
 gli
 grande
@@ -8156,6 +8181,7 @@ gKC
 gKY
 gmlH
 gxz
+gYs
 NOT
 NotePad
 Nu
@@ -8988,6 +9014,7 @@ RmM
 RHx
 RBN
 RFx
+RQZ
 Si
 Se
 Status
@@ -9854,6 +9881,7 @@ PPV
 PZBi
 Pdl
 PyK
+Prrv
 Di
 Data
 Dati
@@ -10123,6 +10151,7 @@ DgCf
 DtrtP
 Denotazionale
 DtK
+DWV
 Le
 La
 Lg
@@ -10365,6 +10394,7 @@ Liej
 LPy
 LcASDJN
 LyZ
+LGc
 Modulo
 Massimo
 Memory
@@ -10901,6 +10931,7 @@ EeD
 EuMu
 Egg
 Eyge
+EOX
 Come
 Codifica
 Counter
@@ -11214,6 +11245,8 @@ CjT
 CoIv
 CiB
 Correttezza
+Crf
+Cxi
 Questa
 Quello
 Qz
@@ -11742,6 +11775,7 @@ Fxq
 FOyZ
 Frx
 Fsy
+FKL
 Word
 WK
 WB
@@ -11957,6 +11991,9 @@ WwJ
 WBX
 WuX
 WPX
+WoV
+WNt
+WHE
 zero
 zip
 zL
@@ -12182,6 +12219,7 @@ zVd
 zlT
 zgg
 zGS
+zIG
 Half
 HACK
 HIT
@@ -13105,6 +13143,7 @@ JYI
 JQN
 JiljV
 JeU
+JkbF
 kB
 kW
 kWs
@@ -13554,6 +13593,7 @@ jsi
 jbI
 jtd
 jqV
+jbR
 word
 wu
 wf
@@ -13786,6 +13826,8 @@ wLt
 wTv
 wKV
 woL
+wRE
+wKa
 Oltre
 OgSf
 Od
@@ -14038,6 +14080,8 @@ OYi
 OZx
 Oyg
 OtB
+OyL
+Ojbo
 xz
 xX
 xF
@@ -14263,6 +14307,7 @@ xYB
 xXi
 xBM
 xpR
+xSbFCI
 Kq
 KG
 KR
@@ -16145,6 +16190,7 @@ VÄ
 Vmt
 VkC
 VQF
+VQQ
 öG
 öH
 özw
