@@ -1,3 +1,12 @@
+---
+tags:
+  - TODO
+aliases:
+  - Guerra dei browser
+  - guerra dei browser
+  - html
+---
+
 - ## Storia:
 	- ### prima guerra dei browser(anni '90):
 		- _Netscape navigator_: primo browser commerciale.
@@ -26,6 +35,25 @@
 				- Compatibile con le specifiche attuali.
 	- ### XHTML 1.0
 		- creato dal W3C che riformula HTML4 basata su XML
+		- La semantica è uguale a quella di HTML 4 
+		- i documenti devono essere ben formati e l'annidamento deve essere corretto
+		- Gli editor non riescono ad adattarsi
+		- #### Differenze con HTML4:
+			- scrivile!!!!
+	- ### HTML 5
+		- viene creato per ovviare ai problemi sorti con XHTML da WHATWG grazie alla concessione del gruppo W3C creando anche il DOM(_document object model_) 
 		- 
 - ## Concetti base:
-	- 
+	- ### Struttura di un documento:
+		- `html` è la radice dell'albero:
+		- `head`: informazioni generali sul documento che non dovrebbero essere visualizzabili detti _metadati_
+		- `body`: il contenuto del documento.
+		- ![[albero html.png]]
+	- ### ES:
+		- ![[Pasted image 20240930171033.png]]
+		- che corrisponde a:
+			- ![[Pasted image 20240930171056.png]]
+	- ### Elementi inline:
+		- non spezzano il blocco quindi non vanno a capoe possono essere inseriti all'interno di ogni blocco senza un ordine preciso 
+		- si suggerisce di non usare i _tag_ di tipo _fontstyle_ perché sono compresi dentro agli stili da usare in CSS.
+		- 

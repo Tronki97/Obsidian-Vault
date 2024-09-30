@@ -528,6 +528,10 @@ parser
 parentesi
 posizionato
 pfSYY
+pubblico
+pensano
+preoccupati
+permissivo
 realizzare
 rappresentare
 risultato
@@ -1037,6 +1041,10 @@ rcj
 riconoscendo
 renderlo
 ritornare
+rilascia
+rendering
+riformula
+riescono
 la
 le
 lo
@@ -1606,6 +1614,7 @@ AXt
 APy
 ACo
 Assembler
+AngularJS
 nel
 necessario
 numero
@@ -1907,6 +1916,9 @@ ncc
 nvyMd
 nwQU
 nblf
+navigator
+neutrale
+native
 capire
 codifiche
 capacit
@@ -2621,6 +2633,20 @@ code
 ckuY
 cia
 cYn
+commerciale
+competizione
+cresce
+conclude
+contro
+comparabile
+cellulari
+continuare
+conflitto
+comuni
+comunit
+conformi
+compatibile
+concessione
 avendo
 alcune
 arriva
@@ -3193,6 +3219,13 @@ aliases
 attributo
 arithmetics
 aritmetica
+anni
+adatte
+abbandonato
+abbandonata
+agli
+annidamento
+adattarsi
 un
 una
 usato
@@ -3966,6 +3999,10 @@ dGi
 dbd
 dSb
 drY
+differenziazione
+developer
+diventato
+differenze
 finito
 fanno
 facilmente
@@ -4347,6 +4384,7 @@ fCc
 fXQz
 funzionare
 fattorizzazione
+fallimento
 in
 il
 invece
@@ -4832,6 +4870,11 @@ iGl
 indirizzato
 iVN
 iLa
+inventato
+iPhone
+invito
+ipertestuale
+introdotti
 modo
 mentre
 massimo
@@ -5244,6 +5287,11 @@ mZyIOi
 modificati
 mNL
 mHi
+motore
+modernizzare
+modelli
+mode
+model
 esempio
 eccede
 errori
@@ -5656,6 +5704,9 @@ ejs
 ebm
 eeu
 espansione
+esponenzialmente
+entrate
+editor
 base
 bit
 basano
@@ -5936,6 +5987,7 @@ bRXf
 bpU
 bvH
 bassa
+browser
 quindi
 questo
 quelle
@@ -6866,6 +6918,14 @@ sjji
 sSb
 semi
 suppone
+sviluppare
+seguito
+stabilito
+settare
+sviluppatori
+sostanziali
+scrivile
+sorti
 otterremmo
 ottenere
 occupare
@@ -7185,6 +7245,8 @@ oIw
 oö
 ood
 oEB
+oggi
+object
 va
 valore
 viene
@@ -7529,6 +7591,8 @@ vediamo
 vOSoq
 veSC
 vYK
+vittoria
+vennero
 troppo
 testimone
 tramite
@@ -7891,6 +7955,9 @@ trasformata
 three
 temporaneo
 tGA
+trascina
+tavolo
+telefono
 grandi
 gli
 grande
@@ -8188,6 +8255,8 @@ gKY
 gmlH
 gxz
 gYs
+guerra
+giorno
 NOT
 NotePad
 Nu
@@ -8438,6 +8507,8 @@ NyP
 Nwb
 NWH
 Nzxs
+Netscape
+Navigator
 Il
 Instruction
 IR
@@ -8739,6 +8810,7 @@ IAoO
 IDATf
 Ilo
 IGy
+ISP
 Rappresentazione
 Registri
 Register
@@ -9342,6 +9414,9 @@ SZm
 SdwW
 StM
 Scanner
+Seconda
+Safari
+Strict
 BINARY
 Bus
 BX
@@ -9586,6 +9661,7 @@ BFP
 Bmmc
 BzQ
 BXC
+Browser
 Per
 Program
 PC
@@ -10158,6 +10234,7 @@ DtrtP
 Denotazionale
 DtK
 DWV
+DOM
 Le
 La
 Lg
@@ -10668,6 +10745,7 @@ MzB
 Msqt
 MVO
 Matriciale
+Microsoft
 ES
 Esempi
 Ex
@@ -10939,6 +11017,7 @@ EuMu
 Egg
 Eyge
 EOX
+Explorer
 Come
 Codifica
 Counter
@@ -11255,6 +11334,7 @@ Correttezza
 Crf
 Cxi
 Cholesky
+Compatibile
 Questa
 Quello
 Qz
@@ -11497,6 +11577,7 @@ QXE
 Qxi
 QPT
 Qce
+Quirk
 Formato
 FLIP
 FLOP
@@ -11785,6 +11866,8 @@ Frx
 Fsy
 FKL
 Frobenius
+Firefox
+Facebook
 Word
 WK
 WB
@@ -12003,6 +12086,8 @@ WPX
 WoV
 WNt
 WHE
+WHAT
+WHATWG
 zero
 zip
 zL
@@ -12465,6 +12550,7 @@ HHP
 Hww
 HqX
 HgLsi
+Hardware
 XOR
 Xm
 Xo
@@ -12685,6 +12771,7 @@ XLDIG
 XgNN
 Xot
 Xyyyx
+XHTML
 ha
 ho
 hack
@@ -15679,6 +15766,7 @@ TcE
 TWw
 TqV
 TOs
+Terza
 GY
 GT
 Ghw
@@ -15922,6 +16010,8 @@ GTN
 GFxR
 GiB
 Generazione
+Guerra
+Google
 Vb
 VD
 VG
@@ -16200,6 +16290,7 @@ Vmt
 VkC
 VQF
 VQQ
+VueJS
 öG
 öH
 özw
