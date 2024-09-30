@@ -62,16 +62,29 @@ tags:
 			- 3) $\forall A, B$ 
 			- $||A||_{2}=\sqrt{P(A^{T}A)}: A^{T}A\in \mathbb{R}^{n}$
 				- $P(M)\to$ massimo autovalore in modulo
-			- $||A||_{1}$ valore massimo della somma aritmetica di ogni riga.
+			- $||A||_{1}$ valore massimo della somma aritmetica di ogni riga. 
 	- ### Norma di Frobenius:
 		- $||A||_{F} =\sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}}$ 
 		- $A=\begin{pmatrix}0&-1&2\\3&4&-5\end{pmatrix}$
 		- $||A||_{F}=\sqrt{55}$ 
 		- $||I||=\sqrt{3}$
 		- Quindi è la radice di tutti i valori nella [[Matrici||matrice]] elevati alla seconda 
-	- ## ES:
+	- ### ES:
 		- $A\in \mathbb{R}^3$
 		- $A=\begin{pmatrix}1&0&0\\0&-4&0\\0&0&6\end{pmatrix}$
 		- gli autovalori sono:
 			- $\lambda_{1}=1; \ \lambda_{2}=16; \ \ \lambda_{3}=36$
 		- $||A||_{2}=\sqrt{36}=6$ 
+	- La soluzione esatta di $Ax=b$ è:
+		- $x=\begin{pmatrix}1\\1\\1\end{pmatrix}$ e quella calcolata sia $x_{0}=\begin{pmatrix}1.01\\0.98\\1\end{pmatrix}$
+		- $E_{A}=||x-x_{0}||$  $E_{R}=\frac{||x-x_{0}||}{||x||}$ [[Numeri finiti#^f6f707||errore assoluto]] e [[Numeri finiti#^db020b||relativo]]
+			- $$E_{A}=||(-0.01,0.02,0)||_{2}=\sqrt{10^{-4}+2*10^{-4}+0}=3*10^{-2}$$ 
+			- $$E_{R}=\frac{E_{A}}{||x||_{2}}=\frac{E_{A}}{\sqrt{3}}=\frac{3*10^{-2}}{\sqrt{3}}$$
+	- ### Definizione:
+		- dovuto alla rappresentazione con i [[Numeri finiti]] quello chiamato chiamato "errore di rappresentazione" 
+		- si suppone che ci sia un errore nella rappresentazione dei dati ma le operazioni vengono fatti in aritmetica reale.
+		- ![[Drawing 2024-09-30 14.45.43.excalidraw]]
+		- $||x-(x-\Delta x)||=||\Delta x||$
+		- $$\frac{||\Delta x||}{||x||}\le K(A)\left( \frac{||\Delta A||}{||A||} +\frac{||\Delta b||}{||b||}\right)$$
+			- $K(A)$ è il numero di condizione della matrice 
+				- $K(A)=||A||*||A^{-1}||\ge1$ 

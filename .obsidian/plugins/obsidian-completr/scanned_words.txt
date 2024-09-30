@@ -1036,6 +1036,7 @@ rAj
 rcj
 riconoscendo
 renderlo
+ritornare
 la
 le
 lo
@@ -3191,6 +3192,7 @@ arricchisce
 aliases
 attributo
 arithmetics
+aritmetica
 un
 una
 usato
@@ -4344,6 +4346,7 @@ faab
 fCc
 fXQz
 funzionare
+fattorizzazione
 in
 il
 invece
@@ -5932,6 +5935,7 @@ bmm
 bRXf
 bpU
 bvH
+bassa
 quindi
 questo
 quelle
@@ -6860,6 +6864,8 @@ sbilanciate
 sensato
 sjji
 sSb
+semi
+suppone
 otterremmo
 ottenere
 occupare
@@ -10661,6 +10667,7 @@ Mhp
 MzB
 Msqt
 MVO
+Matriciale
 ES
 Esempi
 Ex
@@ -11247,6 +11254,7 @@ CiB
 Correttezza
 Crf
 Cxi
+Cholesky
 Questa
 Quello
 Qz
@@ -11776,6 +11784,7 @@ FOyZ
 Frx
 Fsy
 FKL
+Frobenius
 Word
 WK
 WB

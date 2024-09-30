@@ -1,0 +1,5 @@
+- $Ax=b: A \to m \times n$ con  $m>n$ 
+	- non ha soluzione.
+- ## Obiettivo:
+	- $\min_{x\in \mathbb{R}^{n}}||Ax-b||^{2}_2$
+- 

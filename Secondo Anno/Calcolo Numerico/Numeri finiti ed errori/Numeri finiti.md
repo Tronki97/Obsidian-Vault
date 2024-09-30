@@ -65,9 +65,9 @@
 		- infatti se si esegue: 
 			- $4.9-4.845=0.05500000000000604$
 			- ciò è a causa appunto di questo tipo di errore.
-		- #### Errore assoluto :
+		- #### Errore assoluto : ^f6f707
 			- $\mid fl(x)-x\mid<\beta^{1-t}$ 
-		- #### Errore relativo 
+		- #### Errore relativo  ^db020b
 			- $\frac{{\mid fl(x)-x\mid}}{\mid x\mid}< \frac{1}{2}\beta^{1-t}$
 			- la parte maggiore ($\frac{1}{2}\beta^{1-t}$)si chiama _precisione macchina_ (_eps_) ed è il più piccolo numero macchina positivo t.c: 
 				- $fl(1+eps)>1$ 

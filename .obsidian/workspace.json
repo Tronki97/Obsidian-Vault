@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,19 +21,43 @@
             }
           },
           {
-            "id": "f275744097c43ba4",
+            "id": "c298c7ea59fb4ee0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
+                "file": "Secondo Anno/Tecnologie Web/HTML.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
+          },
+          {
+            "id": "09f2d729c6b98439",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "59daf3a1be0af43c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -62,7 +86,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "heapsort",
+                "query": "autova",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -99,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+                "file": "Secondo Anno/Tecnologie Web/HTML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+                "file": "Secondo Anno/Tecnologie Web/HTML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md"
+                "file": "Secondo Anno/Tecnologie Web/HTML.md"
               }
             }
           },
@@ -193,16 +217,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cbb0740b8b17657c",
+  "active": "c298c7ea59fb4ee0",
   "lastOpenFiles": [
+    "Homepage.md",
+    "Secondo Anno/Tecnologie Web/HTML.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
     "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
+    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-    "lezione 30-09-24.md",
+    "Primo Anno/Analisi/modulo2/Norma euclidea.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+    "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
+    "Excalidraw",
     "Secondo Anno/Tecnologie Web/intro.md",
     "immagini/Pasted image 20240927193714.png",
     "Secondo Anno/Tecnologie Web/Markup.md",
     "Secondo Anno/Calcolo Numerico/Intro.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
@@ -227,11 +257,6 @@
     "Primo Anno/programmazione/c++/sintassi(programmazione).md",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Sintassi concreta e astratta.md",
     "immagini/albero di derivazione.png.~tmp",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Heap e le sue applicazioni.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore",
     "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione",
     "Secondo Anno/Calcolo Numerico/sistemi lineari",
@@ -240,7 +265,6 @@
     "Secondo Anno/Reti di Calcolatori/Canali di comunizcazione",
     "Secondo Anno/Reti di Calcolatori/Canali di comunicazione della rete",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio",
-    "Secondo Anno/Tecnologie Web/Set di caratteri",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

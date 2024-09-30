@@ -1,0 +1,31 @@
+- ## Storia:
+	- ### prima guerra dei browser(anni '90):
+		- _Netscape navigator_: primo browser commerciale.
+		- _Microsoft_ è in competizione con loro e procede a sviluppare _ISP_ e _Internet Explorer_. in seguito al fallimento Netscape rilascia al pubblico la _Navigator v5_ (che diventa base di _Firefox_). 
+		- e questa differenziazione si trascina fino al giorno d'oggi e in quel periodo HTML cresce esponenzialmente. La guerra si conclude con la vittoria di Microsoft
+		- W3C viene stabilito come tavolo neutrale per settare le basi per il _Web_ e lavorare su HTML
+	- ### Seconda guerra(2005-2019):
+		- Microsoft contro _Google_: _Firefox_ Vs _Chrome_
+		- In quel periodo viene inventato il primo _iPhone_ ovvero il primo telefono cn una struttura Hardware comparabile con un calcolatore con _Safari_ come motore di ricerca pre-installato.
+		- Per il W3C lo sviluppo web per cellulari si conclude con HTML 4.5 però altri sviluppatori pensano di continuare a modernizzare HTML e si crea _WHAT WG_(che è formato da persone entrate su invito) che andrà in conflitto con W3C.  
+	- ### Terza guerra(in corso):
+		- Viene creato, da Google, _AngularJS_ che è formato da componenti adatte comuni a tutti, poi abbandonato per creare _Angular_
+		- In risposta Facebook crea _React_ e _React native_
+		- La comunità procede a sviluppare _VueJS_ che rappresenta la parte di AngularJS abbandonata da Google  
+		- Quindi l'obiettivo di questa guerra è portare sempre più developer verso un particolare Framework
+	- ### HTML oggi:
+		- rispetto a tempo fa è diventato un vero e proprio linguaggio per applicazioni 
+	- ### HTML 4
+		- per documenti ipertestuale ed è possibile fare documenti con una struttura semplice.
+		- ed era un insieme di elementi non conformi allo standard e quindi i browser non si sono preoccupati del [[Analisi sintattica||parsing]] dei documenti HTML
+			- ciò vuol dire che ci sono differenze sostanziali tra un documento corretto e uno leggibile da un Browser.
+		- per gestire sia le pagine conformi agli standard che quelle non compatibili vennero introdotti 2 modelli di _rendering_:
+			- #### Quirk mode:
+				- compatibile col passato e più permissivo
+			- #### Strict mode:
+				- Compatibile con le specifiche attuali.
+	- ### XHTML 1.0
+		- creato dal W3C che riformula HTML4 basata su XML
+		- 
+- ## Concetti base:
+	- 
