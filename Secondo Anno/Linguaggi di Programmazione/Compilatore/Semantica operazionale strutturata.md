@@ -1,6 +1,8 @@
 ---
 tags:
   - TODO
+aliases:
+  - sistema di transizione
 ---
 
 - ## Linguaggio:
