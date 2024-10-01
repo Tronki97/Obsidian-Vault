@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cbb0740b8b17657c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c298c7ea59fb4ee0",
             "type": "leaf",
             "state": {
@@ -34,12 +21,12 @@
             }
           },
           {
-            "id": "09f2d729c6b98439",
+            "id": "59daf3a1be0af43c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,17 +34,33 @@
             }
           },
           {
-            "id": "59daf3a1be0af43c",
+            "id": "5e425068f8b7f21d",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a5aecf412babb619",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -107,7 +110,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -123,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/HTML.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/HTML.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/HTML.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md"
               }
             }
           },
@@ -217,16 +221,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c298c7ea59fb4ee0",
+  "active": "5e425068f8b7f21d",
   "lastOpenFiles": [
-    "Pasted image 20240930171056.png",
-    "Pasted image 20240930171033.png",
+    "Pasted image 20241001112854.png",
+    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
+    "Pasted image 20241001111806.png",
+    "Pasted image 20241001111738.png",
+    "Homepage.md",
+    "Pasted image 20241001110818.png",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Semantica e sintassi.md",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Vincoli sintattici.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
+    "immagini/Pasted image 20240930171033.png",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+    "Secondo Anno/Tecnologie Web/HTML.md",
+    "immagini/Pasted image 20240930171056.png",
     "immagini/albero html.png.~tmp",
     "immagini/albero html.png",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-    "Secondo Anno/Tecnologie Web/HTML.md",
-    "Homepage.md",
     "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
     "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
     "Primo Anno/Analisi/modulo2/Norma euclidea.md",
@@ -237,29 +250,20 @@
     "immagini/Pasted image 20240927193714.png",
     "Secondo Anno/Tecnologie Web/Markup.md",
     "Secondo Anno/Calcolo Numerico/Intro.md",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione/Alberi di derivazione.md",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione/Alberi di derivazione.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Compilazione di un programma.md",
     "immagini/Pasted image 20240927200308.png",
     "immagini/Pasted image 20240927200232.png",
     "immagini/Pasted image 20240927195850.png",
-    "immagini/Pasted image 20240927194824.png",
-    "immagini/Pasted image 20240927194740.png",
-    "immagini/Pasted image 20240927194635.png",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Implementazione.md",
-    "immagini/Pasted image 20240927193723.png",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi semantica.md",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi sintattica.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Semantica e sintassi.md",
     "Untitled 1.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Pragmatica.md",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/Vincoli sintattici.md",
-    "Primo Anno/programmazione/c++/sintassi(programmazione).md",
     "immagini/albero di derivazione.png.~tmp",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore",
-    "Secondo Anno/Linguaggi di Programmazione/descrivere un linguaggio/alberi di derivazione",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione",
     "Secondo Anno/Calcolo Numerico/sistemi lineari",
     "Secondo Anno/Tecnologie Web/Progetto",
     "Secondo Anno/Reti di Calcolatori/intro livello 1",

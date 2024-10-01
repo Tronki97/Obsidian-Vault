@@ -4,7 +4,7 @@
 		- una palindroma è $\epsilon$ o "_a_", o "_b_" oppure:
 			- $a+\mathbf{palindromo+ a}$
 			- $b+\mathbf{palindromo+ b}$
-	- ### Backus-nau form:
+	- ### Backus-nau form: ^0c16bf
 		- $<P>::= \epsilon|a|b|a<P>a| b<P>b$ 
 		- _definizione ricorsiva_:
 			- $P\to \epsilon|a|b|aPa|bPb$

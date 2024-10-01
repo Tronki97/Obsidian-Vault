@@ -532,6 +532,10 @@ pubblico
 pensano
 preoccupati
 permissivo
+pLr
+pdv
+pIk
+pNIx
 realizzare
 rappresentare
 risultato
@@ -1045,6 +1049,8 @@ rilascia
 rendering
 riformula
 riescono
+rVtx
+riflessiva
 la
 le
 lo
@@ -1347,6 +1353,7 @@ lpN
 liw
 lMNt
 lJN
+lGk
 ALU
 AND
 Address
@@ -1919,6 +1926,9 @@ nblf
 navigator
 neutrale
 native
+nTR
+nSXY
+nyk
 capire
 codifiche
 capacit
@@ -2647,6 +2657,9 @@ comunit
 conformi
 compatibile
 concessione
+capoe
+compresi
+complicata
 avendo
 alcune
 arriva
@@ -3226,6 +3239,12 @@ abbandonata
 agli
 annidamento
 adattarsi
+auFNN
+aHE
+aun
+awS
+ayh
+awAD
 un
 una
 usato
@@ -3533,6 +3552,11 @@ utilizzano
 uWI
 uwl
 uHkb
+uJI
+uCF
+uph
+uqJw
+umz
 decremento
 del
 di
@@ -4003,6 +4027,11 @@ differenziazione
 developer
 diventato
 differenze
+dovrebbero
+deN
+dXHo
+dDX
+derivati
 finito
 fanno
 facilmente
@@ -4385,6 +4414,8 @@ fXQz
 funzionare
 fattorizzazione
 fallimento
+fontstyle
+fDu
 in
 il
 invece
@@ -4875,6 +4906,13 @@ iPhone
 invito
 ipertestuale
 introdotti
+inline
+iDXx
+iZU
+iBq
+ijS
+iyX
+indico
 modo
 mentre
 massimo
@@ -5292,6 +5330,12 @@ modernizzare
 modelli
 mode
 model
+metadati
+myL
+mFH
+mGJJg
+mdb
+metavariabili
 esempio
 eccede
 errori
@@ -5707,6 +5751,10 @@ espansione
 esponenzialmente
 entrate
 editor
+eAI
+eXgO
+eRj
+eyyLPB
 base
 bit
 basano
@@ -5988,6 +6036,10 @@ bpU
 bvH
 bassa
 browser
+bLE
+bKOr
+bTO
+bCp
 quindi
 questo
 quelle
@@ -6258,6 +6310,8 @@ qzC
 qrIiV
 qqU
 qkgm
+qDr
+quegli
 se
 sarebbe
 si
@@ -6926,6 +6980,10 @@ sviluppatori
 sostanziali
 scrivile
 sorti
+spezzano
+suggerisce
+stili
+ssx
 otterremmo
 ottenere
 occupare
@@ -7247,6 +7305,9 @@ ood
 oEB
 oggi
 object
+omW
+oMJ
+oAx
 va
 valore
 viene
@@ -7593,6 +7654,7 @@ veSC
 vYK
 vittoria
 vennero
+visualizzabili
 troppo
 testimone
 tramite
@@ -7958,6 +8020,11 @@ tGA
 trascina
 tavolo
 telefono
+tXWv
+tira
+transizione
+tripla
+transizioni
 grandi
 gli
 grande
@@ -8257,6 +8324,8 @@ gxz
 gYs
 guerra
 giorno
+gSba
+gMwF
 NOT
 NotePad
 Nu
@@ -8509,6 +8578,9 @@ NWH
 Nzxs
 Netscape
 Navigator
+NzYu
+NdQ
+NvS
 Il
 Instruction
 IR
@@ -8811,6 +8883,8 @@ IDATf
 Ilo
 IGy
 ISP
+IhQ
+Insiemi
 Rappresentazione
 Registri
 Register
@@ -9093,6 +9167,7 @@ RHx
 RBN
 RFx
 RQZ
+RqK
 Si
 Se
 Status
@@ -9417,6 +9492,10 @@ Scanner
 Seconda
 Safari
 Strict
+SZe
+Sxq
+SLl
+Snek
 BINARY
 Bus
 BX
@@ -9662,6 +9741,8 @@ Bmmc
 BzQ
 BXC
 Browser
+BDBD
+BIO
 Per
 Program
 PC
@@ -9964,6 +10045,7 @@ PZBi
 Pdl
 PyK
 Prrv
+PYjw
 Di
 Data
 Dati
@@ -10235,6 +10317,7 @@ Denotazionale
 DtK
 DWV
 DOM
+DmQ
 Le
 La
 Lg
@@ -10478,6 +10561,7 @@ LPy
 LcASDJN
 LyZ
 LGc
+LDL
 Modulo
 Massimo
 Memory
@@ -10746,6 +10830,8 @@ Msqt
 MVO
 Matriciale
 Microsoft
+Mwmt
+Mwi
 ES
 Esempi
 Ex
@@ -11018,6 +11104,9 @@ Egg
 Eyge
 EOX
 Explorer
+Elementi
+EtLp
+Esm
 Come
 Codifica
 Counter
@@ -11335,6 +11424,7 @@ Crf
 Cxi
 Cholesky
 Compatibile
+Cng
 Questa
 Quello
 Qz
@@ -11868,6 +11958,7 @@ FKL
 Frobenius
 Firefox
 Facebook
+FtH
 Word
 WK
 WB
@@ -12088,6 +12179,7 @@ WNt
 WHE
 WHAT
 WHATWG
+WHS
 zero
 zip
 zL
@@ -12314,6 +12406,9 @@ zlT
 zgg
 zGS
 zIG
+zoXE
+zjiG
+zHB
 Half
 HACK
 HIT
@@ -12551,6 +12646,10 @@ Hww
 HqX
 HgLsi
 Hardware
+HoCu
+HkZN
+Hpl
+HIV
 XOR
 Xm
 Xo
@@ -12772,6 +12871,8 @@ XgNN
 Xot
 Xyyyx
 XHTML
+Xuu
+Xkq
 ha
 ho
 hack
@@ -13018,6 +13119,7 @@ hfC
 hir
 hZuN
 hItZ
+hiM
 JZ
 JT
 Jd
@@ -13240,6 +13342,8 @@ JQN
 JiljV
 JeU
 JkbF
+JNK
+JKT
 kB
 kW
 kWs
@@ -13474,6 +13578,7 @@ kkXM
 kqn
 kqcC
 kIdW
+kJb
 jmp
 jy
 jwä
@@ -13690,6 +13795,7 @@ jbI
 jtd
 jqV
 jbR
+jpxO
 word
 wu
 wf
@@ -13924,6 +14030,9 @@ wKV
 woL
 wRE
 wKa
+wkv
+wWx
+wlX
 Oltre
 OgSf
 Od
@@ -14178,6 +14287,7 @@ Oyg
 OtB
 OyL
 Ojbo
+OEq
 xz
 xX
 xF
@@ -14404,6 +14514,9 @@ xXi
 xBM
 xpR
 xSbFCI
+xQQ
+xWH
+xXe
 Kq
 KG
 KR
@@ -15073,6 +15186,8 @@ ZnP
 ZFG
 ZYz
 ZIa
+ZoAZ
+ZoH
 YQ
 Yz
 YI
@@ -15496,6 +15611,8 @@ ydY
 yks
 yLN
 yCwf
+ybl
+yJhc
 Tp
 Tv
 TBz
@@ -15767,6 +15884,8 @@ TWw
 TqV
 TOs
 Terza
+THw
+TQoy
 GY
 GT
 Ghw
@@ -16012,6 +16131,8 @@ GiB
 Generazione
 Guerra
 Google
+GdGg
+GqE
 Vb
 VD
 VG
@@ -16291,6 +16412,9 @@ VkC
 VQF
 VQQ
 VueJS
+VnPV
+VFD
+VJO
 öG
 öH
 özw

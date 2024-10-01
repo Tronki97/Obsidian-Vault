@@ -26,6 +26,7 @@ FROM #TODO
 ```dataview
 LIST
 FROM "Primo Anno/programmazione" 
+SORT file.mtime DESC
 limit 6
 ```
 - ### Analisi
@@ -33,6 +34,7 @@ limit 6
 ```dataview
 LIST 
 FROM "Primo Anno/Analisi"
+SORT file.mtime DESC
 limit 6
 ```
 
@@ -76,6 +78,7 @@ LIMIT 6
 ```dataview
 LIST
 FROM "Secondo Anno/Calcolo Numerico"
+SORT file.mtime DESC
 LIMIT 6
 ```
 
@@ -84,6 +87,7 @@ LIMIT 6
 ```dataview
 LIST
 FROM "Secondo Anno/Reti di Calcolatori"
+SORT file.mtime DESC
 LIMIT 6
 ```
 
@@ -91,6 +95,7 @@ LIMIT 6
 ```dataview
 LIST
 FROM "Secondo Anno/Tecnologie Web"
+SORT file.mtime DESC
 LIMIT 6
 ```
 
@@ -99,6 +104,7 @@ LIMIT 6
 ```dataview
 LIST
 FROM "Secondo Anno/Linguaggi di Programmazione"
+SORT file.mtime DESC
 LIMIT 6
 ```
 
@@ -106,6 +112,7 @@ LIMIT 6
 ```dataview
 LIST
 FROM "Secondo Anno/Sistemi Operativi"
+SORT file.mtime DESC
 LIMIT 6
 ```
 
@@ -114,6 +121,7 @@ LIMIT 6
 ```dataview
 LIST
 FROM "Secondo Anno/Calcolo della probabilità e statistica"
+SORT file.mtime DESC
 LIMIT 6
 ```
 
@@ -122,6 +130,7 @@ LIMIT 6
 ```dataview 
 LIST
 FROM "Secondo Anno/Ottimizzazione combinatoria"
+SORT file.mtime DESC
 LIMIT 6
 ```
 

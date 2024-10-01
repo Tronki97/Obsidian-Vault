@@ -11,7 +11,7 @@ tags: []
 		- Se decidessi di fare una derivazione diversa andando a riscrivere il non terminale più a dx l'_albero non cambierebbe_
 	- ### OSS:
 		- 1) l'albero "riassume" tante derivazioni diverse ma tutte equivalenti.
-		- 2) L'albero fornisce informazioni semantiche: "_quali operandi per quali operazioni_" ^09f5c6
+		- 2) L'albero fornisce informazioni semantiche: "_quali operandi per quali operazioni_" ^09f5c6 ^c6e9bf
 			- se leggo le [[Alberi e Alberi binari#^d80a92||foglie]] viene come risultato l'operazione con gli adeguati operandi ovvero :
 				- ![[Pasted image 20240924183709.png|300]]
 				  E questo si chiama _Albero sintattico_.
