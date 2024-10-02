@@ -551,6 +551,10 @@ problematiche
 portabilit
 premessa
 propagare
+pup
+pjw
+ptz
+pnl
 realizzare
 rappresentare
 risultato
@@ -1086,6 +1090,8 @@ realizzano
 riflettono
 runtime
 riguardano
+rGw
+rya
 la
 le
 lo
@@ -1399,6 +1405,8 @@ lql
 lWc
 livelli
 lessicali
+lNg
+lilC
 ALU
 AND
 Address
@@ -1683,6 +1691,11 @@ AHYB
 Argomento
 Astrae
 Altri
+AdY
+AUW
+Agn
+Ayt
+AgK
 nel
 necessario
 numero
@@ -2000,6 +2013,8 @@ nBF
 neanche
 necessito
 nondeterminismo
+nKb
+npR
 capire
 codifiche
 capacit
@@ -3351,6 +3366,7 @@ analizzatori
 analoghe
 ammesso
 aggiungersi
+acc
 un
 una
 usato
@@ -3674,6 +3690,7 @@ uRU
 uNda
 uku
 univoco
+uaK
 decremento
 del
 di
@@ -4164,6 +4181,9 @@ dHC
 dialogo
 deterministica
 derivi
+dvi
+dNu
+dRv
 finito
 fanno
 facilmente
@@ -4561,6 +4581,9 @@ fcOh
 fFm
 forniscono
 facilita
+fjk
+fxe
+fqx
 in
 il
 invece
@@ -5089,6 +5112,8 @@ inviare
 implemento
 implicazione
 induttiva
+ioc
+iVi
 modo
 mentre
 massimo
@@ -5527,6 +5552,7 @@ mRO
 mSeb
 mSt
 mkr
+mpS
 esempio
 eccede
 errori
@@ -5957,6 +5983,8 @@ ebR
 eGO
 eXX
 eTg
+elB
+eEF
 base
 bit
 basano
@@ -6539,6 +6567,7 @@ qAfR
 qNM
 qsm
 qvv
+qsx
 se
 sarebbe
 si
@@ -7224,6 +7253,10 @@ sottostante
 sintattici
 store
 strutturale
+svp
+sVg
+sdfs
+seu
 otterremmo
 ottenere
 occupare
@@ -7560,6 +7593,7 @@ olo
 oiPr
 oaXD
 opportunamente
+osI
 va
 valore
 viene
@@ -7923,6 +7957,11 @@ vbZx
 vkb
 vRg
 valutazione
+vnn
+vDg
+vmi
+vpt
+vyF
 troppo
 testimone
 tramite
@@ -8303,6 +8342,7 @@ tnk
 tHG
 tok
 tJy
+tsQL
 grandi
 gli
 grande
@@ -8614,6 +8654,9 @@ guG
 gpT
 gBu
 gEi
+gNM
+gJF
+gMX
 NOT
 NotePad
 Nu
@@ -8884,6 +8927,10 @@ NZqq
 NOi
 Neg
 Nondeterminismo
+NxZQ
+NhnoOc
+Nvd
+NUg
 Il
 Instruction
 IR
@@ -9207,6 +9254,8 @@ IQxN
 IDATe
 ISO
 Interconnection
+IzF
+IGQ
 Rappresentazione
 Registri
 Register
@@ -9499,6 +9548,8 @@ RvB
 RFB
 Riz
 Reference
+RdHh
+Rwl
 Si
 Se
 Status
@@ -9842,6 +9893,9 @@ System
 Strumenti
 Semplifica
 Store
+Sud
+SyU
+SgS
 BINARY
 Bus
 BX
@@ -10098,6 +10152,7 @@ BCA
 Bff
 BOG
 Bootstrapping
+BgKB
 Per
 Program
 PC
@@ -10407,6 +10462,7 @@ Pyu
 Ptp
 PzT
 Propagatori
+PdL
 Di
 Data
 Dati
@@ -10942,6 +10998,7 @@ LHa
 Livelli
 LLC
 Lex
+LjR
 Modulo
 Massimo
 Memory
@@ -11222,6 +11279,9 @@ Mta
 Mrv
 Muz
 Model
+MOGN
+MAF
+Mnz
 ES
 Esempi
 Ex
@@ -11509,6 +11569,8 @@ Ehm
 EONK
 Equivalenze
 Expr
+Esd
+EnU
 Come
 Codifica
 Counter
@@ -11835,6 +11897,8 @@ CiT
 CNMB
 Cuuuu
 Configurazione
+CpI
+Crn
 Questa
 Quello
 Qz
@@ -12617,6 +12681,8 @@ WVZe
 WYS
 WzX
 WAR
+Whx
+WOM
 zero
 zip
 zL
@@ -13102,6 +13168,7 @@ HSX
 Huz
 Hvh
 HKL
+HKx
 XOR
 Xm
 Xo
@@ -13337,6 +13404,8 @@ XGq
 XeYf
 Xya
 Xhy
+Xyi
+XNa
 ha
 ho
 hack
@@ -13595,6 +13664,8 @@ hdib
 hiO
 hka
 hKP
+hMTm
+htv
 JZ
 JT
 Jd
@@ -13828,6 +13899,7 @@ JkO
 JBh
 JyA
 JUUX
+JMI
 kB
 kW
 kWs
@@ -14074,6 +14146,10 @@ kYdf
 kAc
 kam
 knnr
+kpi
+kLd
+kpB
+kNY
 jmp
 jy
 jwä
@@ -14299,6 +14375,7 @@ jDO
 jmP
 jiH
 jMR
+jUHp
 word
 wu
 wf
@@ -14540,6 +14617,7 @@ wmc
 wSz
 wsn
 wPvxpZ
+wVW
 Oltre
 OgSf
 Od
@@ -14808,6 +14886,9 @@ OBy
 OYE
 Omy
 Open
+Oqn
+OOk
+OMW
 xz
 xX
 xF
@@ -15047,6 +15128,7 @@ xjGR
 xPx
 xhf
 xCR
+xfr
 Kq
 KG
 KR
@@ -15270,6 +15352,8 @@ KJO
 KQFY
 KeQ
 KHa
+KvZ
+Kye
 Us
 US
 Ur
@@ -15529,6 +15613,8 @@ UHI
 UKf
 URlh
 Utili
+UIZ
+UCVu
 Zx
 ZD
 ZRz
@@ -15755,6 +15841,7 @@ ZwN
 Ztu
 Zuz
 Zor
+Zma
 YQ
 Yz
 YI
@@ -15981,6 +16068,8 @@ YJGC
 YdG
 YXL
 Yacc
+YWX
+YWN
 yI
 ys
 yN
@@ -16208,6 +16297,12 @@ ypP
 ycP
 yBv
 yVa
+yIi
+yjW
+yVgq
+yZi
+ymmmw
+ytC
 Tp
 Tv
 TBz
@@ -16491,6 +16586,7 @@ TfbA
 TQb
 TLc
 TTg
+TVO
 GY
 GT
 Ghw
@@ -17044,6 +17140,8 @@ VYX
 Vgf
 VZHi
 Var
+VCj
+VGP
 öG
 öH
 özw
@@ -17057,6 +17155,7 @@ Var
 Üw
 Üv
 Üc
+ÜS
 ßE
 ßz
 ßp
