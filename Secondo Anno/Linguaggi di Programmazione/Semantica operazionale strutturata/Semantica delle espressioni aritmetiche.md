@@ -1,0 +1,52 @@
+---
+tags: 
+aliases:
+  - espressioni aritmetiche
+date: 2024-10-02
+---
+- # Semantica delle espressioni aritmetiche:
+	- $$<\Gamma_{e},T_{e},\to_{e}>$$
+		- $\Gamma_{e}=\{<e,\sigma>|e\in Exp, \ \sigma\in \mathbf{Store}\}$
+		- $T_{e}=\{<n,\sigma>|n\in \mathbb{N}, \ \sigma\in \mathbf{Store}\}$
+		- $\to_{e}$ è la minima relazione che soddisfa gli assiomi e regole di inferenza seguenti:
+			- ![[Pasted image 20241001112854.png]]
+			- ### Osservazioni: ^38f86f
+				- 1) se nella premessa lo store $\sigma$ non viene modificato allora neanche nella conclusione verrà modificato. Questo è il caso di _Var, sum3, sub3_ in caso contrario verrà modificato. ^e0325b
+				- 2) in _sub3_ se la condizione $m\ge m'$ non viene rispettata lo stato $<m-m', \sigma>$ viene bloccato ma non sarà uno stato terminale.
+				- 3) in _sum1, sum2_ riflettono una regola detta Interna sinistra(_IS_)
+					- prima verificano l'argomento più a sx, ovvero $e_{0}$ 
+					- dopo aver valutato $e_{0}$ procede a valutare $e_{1}$
+					- dopo aver terminato la valutazione di $e_{1}$ si esegue la somma.
+					- _Caso interno destro (ID)_
+						- ![[Pasted image 20241002194607.png]]
+- ## Dim: ^48bf4e
+	- voglio dimostrare che $\to_e$ è deterministica ovvero che:$$(\gamma\to_{e} \gamma') \wedge (\gamma\to_{e} \gamma'')\implies \gamma'=\gamma''  \ \ \ \ \forall \gamma,\gamma',\gamma''$$
+	- $P(e)=\forall \sigma,\gamma',\gamma''$ e dimostro che $P(e)$ è vera $\forall e \in Exp$ 
+	- uso l'induzione strutturale:
+	- 1) $e=m\in \mathbb{N}$ 
+		- so che $<m, \sigma>\not \to e$ quindi $P(m)$ è vera siccome la premessa è falsa dell'implicazione è falsa.
+	- 2) $e=v \in \mathbf{Var}$
+		-  per la regola Var $<v, \sigma>\to <\sigma(v), \sigma>$ siccome la  $\sigma(v)$ è univoco e c'è solo una regola (Var) la tesi segue:$$<v,\sigma>\to_{e} \gamma'  \wedge <v,\sigma>\to_{e} \gamma'' \implies \gamma'=\gamma''$$
+	- 3) $e=e_{0}+e_{1}$ 
+		- suppongo che $<e_{0}+e_{1},\sigma>$ derivi in $\gamma', \gamma''$ e devo dimostrare siano uguali. Ci sono 3 sotto-casi:
+			- a) $<e_{0}, \sigma>\to <e_{0}', \sigma'>$ e  $\gamma'=<e_{0}'+e_{1}, \sigma'>$
+				- $e_{0}\notin \mathbb{N}$ e si applica solo (_sum1_)  e allora per far si che $<e_{0}+e_{1},\sigma>\to \gamma''$ è necessario che:
+					- $<e_{0}, \sigma>\to <e_{0}'', \sigma''>$ e  $\gamma''=<e_{0}''+e_{1}, \sigma'''>$
+				- ma per l'ipotesi induttiva $P(e_{0})$ vale per cui deve essere $e_{0}'=e_{0}''$ e $\sigma'=\sigma''$ da cui consegue $\gamma'=\gamma''$
+			- b)
+				-  $e_{0}=m \in \mathbb{N}$ e $<e_{0}, \sigma>\to <e_{0}', \sigma'>$ in questo caso $e_{1}\notin \mathbb{N}$ e applico (_sum2_) quindi per far si che 
+					- $<e_{0}+e_{1},\sigma>\to \gamma''$ necessito che $<e_{1}, \sigma>\to <e_{1}'', \sigma''>$ e $\gamma''=<e_{0}+e_{1}'', \sigma'''>$ 
+				- ma per l'ipotesi induttiva $P(e_{1})$ vale per cui deve essere $e_{1}'=e_{1}''$ e $\sigma'=\sigma''$ da cui consegue $\gamma'=\gamma''$
+			- c) $e_{0}, e_{1}\in \mathbb{N}$ 
+				- si applica solo (_sum3_) ottenendo _una sola transizione_ :
+					- $<e_{0}+e_{1}, \sigma> \to <p, \sigma>: p=e_{0}+e_{1}$ 
+				- segue che $$<e_{0}+e_{1}, \sigma>\to \gamma' \wedge <e_{0}+e_{1}, \sigma>\to \gamma'' \implies \gamma'=\gamma''$$ 
+	- Visto che $\to _e$ è deterministica significa che partendo da $<e,\sigma>$ si arriva ad una sola configurazione terminale $<n, \sigma>$ con $n$ che è il valore di  $e$ in $\sigma$ 
+	- è possibile definire una funzione: 
+		- $\mathbf{eval}: Expr \times Store$ deriva parzialmente in $\mathbb{N}$ 
+		- $eval(e, \sigma)=\begin{cases}m & <e,\sigma\>\to^{*}<m,\sigma>\\ indefinta & altrimenti\end{cases}$
+			- perché non sempre raggiunge uno stato terminale.
+			- ![[Pasted image 20241002203435.png]]
+			- Configurazione bloccata ma non terminale.
+- # Link Utili:
+	- 

@@ -548,6 +548,9 @@ pTg
 plL
 pAG
 problematiche
+portabilit
+premessa
+propagare
 realizzare
 rappresentare
 risultato
@@ -1080,6 +1083,9 @@ rts
 rpMg
 richieste
 realizzano
+riflettono
+runtime
+riguardano
 la
 le
 lo
@@ -1392,6 +1398,7 @@ lkpYM
 lql
 lWc
 livelli
+lessicali
 ALU
 AND
 Address
@@ -1675,6 +1682,7 @@ AjC
 AHYB
 Argomento
 Astrae
+Altri
 nel
 necessario
 numero
@@ -1989,6 +1997,9 @@ nyu
 noV
 nMM
 nBF
+neanche
+necessito
+nondeterminismo
 capire
 codifiche
 capacit
@@ -2735,6 +2746,8 @@ cwe
 caAm
 cNS
 codificare
+conseguenze
+compilatori
 avendo
 alcune
 arriva
@@ -3334,6 +3347,10 @@ aIa
 aVqO
 attento
 andata
+analizzatori
+analoghe
+ammesso
+aggiungersi
 un
 una
 usato
@@ -3656,6 +3673,7 @@ uiiu
 uRU
 uNda
 uku
+univoco
 decremento
 del
 di
@@ -4144,6 +4162,8 @@ dü
 dZe
 dHC
 dialogo
+deterministica
+derivi
 finito
 fanno
 facilmente
@@ -4540,6 +4560,7 @@ fsMq
 fcOh
 fFm
 forniscono
+facilita
 in
 il
 invece
@@ -5065,6 +5086,9 @@ iBx
 iTp
 inferiori
 inviare
+implemento
+implicazione
+induttiva
 modo
 mentre
 massimo
@@ -6232,6 +6256,8 @@ btO
 bkM
 bZvrq
 buon
+bloccato
+bloccata
 quindi
 questo
 quelle
@@ -7195,6 +7221,9 @@ sRhl
 ssI
 superiori
 sottostante
+sintattici
+store
+strutturale
 otterremmo
 ottenere
 occupare
@@ -7530,6 +7559,7 @@ oZq
 olo
 oiPr
 oaXD
+opportunamente
 va
 valore
 viene
@@ -7892,6 +7922,7 @@ vIO
 vbZx
 vkb
 vRg
+valutazione
 troppo
 testimone
 tramite
@@ -8851,6 +8882,8 @@ NYt
 NYG
 NZqq
 NOi
+Neg
+Nondeterminismo
 Il
 Instruction
 IR
@@ -9806,6 +9839,9 @@ SIDAT
 SKv
 Standard
 System
+Strumenti
+Semplifica
+Store
 BINARY
 Bus
 BX
@@ -10061,6 +10097,7 @@ BlSqx
 BCA
 Bff
 BOG
+Bootstrapping
 Per
 Program
 PC
@@ -10369,6 +10406,7 @@ PVS
 Pyu
 Ptp
 PzT
+Propagatori
 Di
 Data
 Dati
@@ -10903,6 +10941,7 @@ Lmb
 LHa
 Livelli
 LLC
+Lex
 Modulo
 Massimo
 Memory
@@ -11468,6 +11507,8 @@ EGP
 ENf
 Ehm
 EONK
+Equivalenze
+Expr
 Come
 Codifica
 Counter
@@ -11793,6 +11834,7 @@ CCz
 CiT
 CNMB
 Cuuuu
+Configurazione
 Questa
 Quello
 Qz
@@ -15938,6 +15980,7 @@ YQI
 YJGC
 YdG
 YXL
+Yacc
 yI
 ys
 yN
@@ -17000,6 +17043,7 @@ Vkj
 VYX
 Vgf
 VZHi
+Var
 öG
 öH
 özw
