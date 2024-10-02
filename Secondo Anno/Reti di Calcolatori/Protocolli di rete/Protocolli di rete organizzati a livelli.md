@@ -5,6 +5,6 @@
 	- garantisce la compatibilità tra vari dispositivi.
 - ## Architettura dei protocolli:
 	- ogni livello risolve un problema specifico della comunicazione.
-	- i livelli superiori fanno richieste di vario tipo ai livelli inferiori.
-	- i livelli inferiori forniscono servizi a quelli superiori
+	- i livelli superiori _fanno richieste_ di vario tipo ai livelli inferiori.
+	- i livelli inferiori _forniscono servizi_ a quelli superiori
 	- richieste e servizi realizzano l'interfaccia del protocollo verso altri livelli. 
