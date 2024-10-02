@@ -8,46 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a5aecf412babb619",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "template/Modello appunti.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "e59d0d7bd4f426ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "template/Modello appunti.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "67dfaa86d9d63ddc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md"
               }
             }
           },
@@ -207,19 +180,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "67dfaa86d9d63ddc",
+  "active": "e59d0d7bd4f426ab",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
+    "Pasted image 20241002205419.png",
+    "Pasted image 20241002204331.png",
+    "Pasted image 20241002204311.png",
+    "Pasted image 20241002203435.png",
+    "Pasted image 20241002194607.png",
+    "Homepage.md",
     "template/Modello appunti.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
     "template/Tabella 2x3.md",
     "template/Matrice 4x4.md",
     "template/Matrice completa 4x4.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
     "Pasted image 20241002134308.png",
     "2024-10-02.md",
     "Untitled.md",
     "0002-10-08.md",
-    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
     "immagini/Pasted image 20241001112854.png",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Semantica operazionale strutturata.md",
@@ -233,9 +211,7 @@
     "immagini/Pasted image 20240930171033.png",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
-    "immagini/Pasted image 20240930171056.png",
     "immagini/albero html.png.~tmp",
-    "immagini/albero html.png",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
     "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
     "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
@@ -244,10 +220,7 @@
     "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
     "Excalidraw",
     "Secondo Anno/Tecnologie Web/intro.md",
-    "immagini/Pasted image 20240927193714.png",
     "Secondo Anno/Tecnologie Web/Markup.md",
-    "Secondo Anno/Calcolo Numerico/Intro.md",
-    "immagini/Pasted image 20240927200308.png",
     "immagini/albero di derivazione.png.~tmp",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore",
     "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione",

@@ -3333,6 +3333,7 @@ aAz
 aIa
 aVqO
 attento
+andata
 un
 una
 usato
@@ -6230,6 +6231,7 @@ bya
 btO
 bkM
 bZvrq
+buon
 quindi
 questo
 quelle
@@ -10900,6 +10902,7 @@ LoK
 Lmb
 LHa
 Livelli
+LLC
 Modulo
 Massimo
 Memory
