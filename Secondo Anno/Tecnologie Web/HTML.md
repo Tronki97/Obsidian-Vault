@@ -56,4 +56,6 @@ aliases:
 	- ### Elementi inline:
 		- non spezzano il blocco quindi non vanno a capoe possono essere inseriti all'interno di ogni blocco senza un ordine preciso 
 		- si suggerisce di non usare i _tag_ di tipo _fontstyle_ perché sono compresi dentro agli stili da usare in CSS.
-		- 
+	- ### Form:
+		- si utilizzano per far inserire agli utenti valori poi elaborati dal server e sono legati ad applicazioni server-side 
+		- il browser raccoglie dati dall'utente, crea una connessione HTTP con il server specificando una ACTION(ovvero una app che funga da destinatario) a cui far arrivare i dati che poi li elabora e genera un documento di risposta specifico per i dati forniti dall'utente  

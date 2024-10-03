@@ -1097,6 +1097,8 @@ replicata
 ripetizione
 regolare
 ricordano
+riconosciuta
+raggiunto
 la
 le
 lo
@@ -6310,6 +6312,7 @@ bZvrq
 buon
 bloccato
 bloccata
+blocca
 quindi
 questo
 quelle
@@ -8373,6 +8376,7 @@ tHG
 tok
 tJy
 tsQL
+testina
 grandi
 gli
 grande
