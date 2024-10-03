@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ca459497000a3412",
+        "id": "7963de77ed4c4ca3",
         "type": "tabs",
         "children": [
           {
-            "id": "b944120c7e1379fe",
+            "id": "0d63f5d6fb59dea4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md"
+                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md"
               }
             }
           },
@@ -180,10 +180,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b944120c7e1379fe",
+  "active": "0d63f5d6fb59dea4",
   "lastOpenFiles": [
-    "Secondo Anno/Tecnologie Web/HTML.md",
     "Homepage.md",
+    "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni booleane.md",
     "immagini/Pasted image 20241002134308.png",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni aritmetiche.md",
