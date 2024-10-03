@@ -1,7 +1,8 @@
 ---
-tags: []
+tags: 
 aliases:
   - compilatore
+  - tabella dei simboli
 ---
 - Un compilatore è corretto quando preserva la [[Semantica e sintassi#^78ca9a||semantica]] e quindi per dimostrare sia corretto serve una semantica per il _linguaggio sorgente e quello oggetto_
 - ## [[Analisi lessicale]]:

@@ -1,0 +1,55 @@
+---
+tags:
+  - TODO
+aliases:
+  - lessema
+  - pattern
+date: 2024-10-03
+---
+- # Analisi lessicale:
+	- la stringa o programma in input viene trasformata in una sequenza di simboli detta token
+	- ## Token:
+		- è una coppia formata da (nome, valore)
+		- nome: simbolo che rappresenta la categoria
+		- valore: una sequenza di simboli che appartiene a quella categoria.
+		- ### ES:
+			-  $<Ide, x_{1}>$ 
+		- pattern è una descrizione generale della forma dei valori di una classe di token come:
+			- $(x|y)(x|y|0|1)^{*}$ 
+		- lessema: è una striga istanza di un pattern come $x_{1}$  è un lessema dell'istanza del pattern visto prima 
+	- ## ES:
+		- dalla stringa: `if(x==0)printf ("zero")` 
+			- lo scanner potrebbe generare una sequenza di token di questo tipo:
+				- ![[Pasted image 20241003121115.png]]
+				- anche se in realtà ogni identificatore viene associato ad un indirizzo nella [[Struttura di un compilatore#^80f144||tabella dei simboli]]
+	- ## Espressioni regolari:
+		- si fissa un alfabeto $A=\{a_{1},a_{2},...\}$ e si definiscono le espressioni regolari:
+			- $$r::= \emptyset \ |\ \epsilon \ |\  a \ |\  r \cdot r \ |\ r|r \ |\ r^{*}$$
+			- N.B: per [[Ambiguità#^ea4c8c||disambiguare]] la sintassi si potrebbe usare le parentesi. 
+			- per semplicità si assume che:
+				- _concatenazione, disgiunzione e ripetizione_ sono _associative a sx_ 
+			- ![[Pasted image 20241003121750.png]]
+			- ### Esempio di espressione regolare:
+				- 
+	- ## Linguaggio denotato da una espressione regolare:
+		- dato l'alfabeto $A$ si definisce la funzione:
+			- $$L:ExpReg\to P(A^{*})$$
+			- segue che:
+				- ![[Pasted image 20241003121940.png]]
+				- e si ricordano queste [[Operazioni su linguaggi||operazioni]]  
+	- ## Linguaggio regolare:
+		- Def: sono quei linguaggi rappresentabili usando le espressioni regolari
+		- ogni linguaggio finito è sicuramente regolare 
+			- ![[Pasted image 20241003122421.png]] 
+		- esistono anche linguaggi regolari infiniti:
+			- ![[Pasted image 20241003122513.png]]
+		- ### Operatori ausiliari:
+			- permettono di rendere più sintetiche le operazioni base.
+	- ## Definizioni regolari:
+		- una definizione regolare su di un alfabeto $A$ è una lista di definizioni:
+			- $d_{1}:= r_{1}, \ d_{2}:=r_{2}, ...,d_{k}:=r_{k}$
+			- dove $d_{i}$ rappresentano i nuovi simboli e $r_{i}$ le espressioni regolari sull'alfabeto esteso $A\cup \{d_{1},...,d_{k}\}$ 
+		- ### ES:
+			- ![[Pasted image 20241003124349.png]]
+- # Link Utili:
+	- 

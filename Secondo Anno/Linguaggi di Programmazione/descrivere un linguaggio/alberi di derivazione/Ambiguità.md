@@ -14,7 +14,7 @@ tags: []
 	- ### Formalmente:
 		- una grammatica libera G è ambigua se $\exists w \in L(G)$ che ammette più alberi di derivazione 
 		- Un linguaggio è ambiguo se tutte le grammatiche che lo _generano_ sono ambigue
-- ## Togliere l'ambiguità:
+- ## Togliere l'ambiguità: ^ea4c8c
 	- mantiene lo stesso linguaggio.
 	- ### ES:
 		- $A\to A\ |\ \epsilon$

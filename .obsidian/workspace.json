@@ -4,16 +4,42 @@
     "type": "split",
     "children": [
       {
-        "id": "7963de77ed4c4ca3",
+        "id": "839e741c07469324",
         "type": "tabs",
         "children": [
           {
-            "id": "0d63f5d6fb59dea4",
+            "id": "4a16fa59150acb2a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8d670b7b922bb133",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Operazioni su linguaggi.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d129eb4676a1c02b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sistema di trans",
+                "query": "$L",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md"
               }
             }
           },
@@ -180,9 +206,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0d63f5d6fb59dea4",
+  "active": "4a16fa59150acb2a",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Analisi lessicale dei linguaggi regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
+    "Pasted image 20241003124349.png",
+    "Pasted image 20241003122513.png",
+    "Pasted image 20241003122421.png",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Operazioni su linguaggi.md",
+    "Pasted image 20241003121940.png",
+    "Pasted image 20241003121750.png",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
+    "Pasted image 20241003121115.png",
     "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
+    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni booleane.md",
     "immagini/Pasted image 20241002134308.png",
@@ -195,15 +233,9 @@
     "immagini/Pasted image 20241002220527.png",
     "immagini/Pasted image 20241002220332.png",
     "immagini/Pasted image 20241002220320.png",
-    "immagini/Pasted image 20241002215902.png",
-    "immagini/Pasted image 20241002215740.png",
-    "immagini/Pasted image 20241002215653.png",
-    "immagini/Pasted image 20241002215613.png",
-    "immagini/Pasted image 20241002215122.png",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/sa.md",
     "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/generare un compilatore.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
-    "immagini/Pasted image 20241002214830.png",
     "template/Modello appunti.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
@@ -215,10 +247,6 @@
     "0002-10-08.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
-    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Semantica e sintassi.md",
-    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Vincoli sintattici.md",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "immagini/albero html.png.~tmp",
     "Excalidraw",
     "immagini/albero di derivazione.png.~tmp",
@@ -226,7 +254,6 @@
     "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione",
     "Secondo Anno/Calcolo Numerico/sistemi lineari",
     "Secondo Anno/Tecnologie Web/Progetto",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

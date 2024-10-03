@@ -555,6 +555,7 @@ pup
 pjw
 ptz
 pnl
+produttive
 realizzare
 rappresentare
 risultato
@@ -1092,6 +1093,10 @@ runtime
 riguardano
 rGw
 rya
+replicata
+ripetizione
+regolare
+ricordano
 la
 le
 lo
@@ -1407,6 +1412,7 @@ livelli
 lessicali
 lNg
 lilC
+lessema
 ALU
 AND
 Address
@@ -2763,6 +2769,9 @@ cNS
 codificare
 conseguenze
 compilatori
+concorrente
+concorrenti
+conoscenza
 avendo
 alcune
 arriva
@@ -3367,6 +3376,12 @@ analoghe
 ammesso
 aggiungersi
 acc
+atto
+automatico
+andranno
+analizzati
+associative
+ausiliari
 un
 una
 usato
@@ -4184,6 +4199,9 @@ derivi
 dvi
 dNu
 dRv
+disgiunzione
+denotato
+definizioni
 finito
 fanno
 facilmente
@@ -5114,6 +5132,9 @@ implicazione
 induttiva
 ioc
 iVi
+informatico
+informatici
+identificatore
 modo
 mentre
 massimo
@@ -5553,6 +5574,8 @@ mSeb
 mSt
 mkr
 mpS
+materia
+misurazione
 esempio
 eccede
 errori
@@ -5985,6 +6008,7 @@ eXX
 eTg
 elB
 eEF
+emulatore
 base
 bit
 basano
@@ -7257,6 +7281,11 @@ svp
 sVg
 sdfs
 seu
+storie
+studia
+striga
+semplicit
+sintetiche
 otterremmo
 ottenere
 occupare
@@ -7962,6 +7991,7 @@ vDg
 vmi
 vpt
 vyF
+voluti
 troppo
 testimone
 tramite
@@ -10463,6 +10493,8 @@ Ptp
 PzT
 Propagatori
 PdL
+Progetto
+Pensieri
 Di
 Data
 Dati
@@ -11282,6 +11314,7 @@ Model
 MOGN
 MAF
 Mnz
+MultiPandOS
 ES
 Esempi
 Ex
@@ -11571,6 +11604,7 @@ Equivalenze
 Expr
 Esd
 EnU
+Espressioni
 Come
 Codifica
 Counter
@@ -14889,6 +14923,7 @@ Open
 Oqn
 OOk
 OMW
+Operatori
 xz
 xX
 xF
@@ -16587,6 +16622,7 @@ TQb
 TLc
 TTg
 TVO
+Token
 GY
 GT
 Ghw
