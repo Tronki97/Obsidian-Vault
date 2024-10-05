@@ -5,7 +5,13 @@ cssclasses:
 # Vault Info
 
 
-- ### Ultimi modificati
+- ## Da fare/finire: 
+```dataview
+LIST
+FROM #TODO
+```
+
+- ## Ultimi modificati
   
 ```dataview
 LIST 
@@ -13,12 +19,6 @@ FROM ""
 SORT file.mtime DESC
 LIMIT 6
 ```
-- ## Da fare/finire: 
-```dataview
-LIST
-FROM #TODO
-```
-
 # Primo anno
 
 - ### Programmazione: 

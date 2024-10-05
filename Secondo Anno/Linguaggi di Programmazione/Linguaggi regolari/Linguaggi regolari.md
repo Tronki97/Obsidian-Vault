@@ -1,9 +1,11 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - lessema
   - pattern
+  - linguaggio regolare
+  - espressione regolare
+  - definizione regolare
 date: 2024-10-03
 ---
 - # Analisi lessicale:
@@ -14,9 +16,11 @@ date: 2024-10-03
 		- valore: una sequenza di simboli che appartiene a quella categoria.
 		- ### ES:
 			-  $<Ide, x_{1}>$ 
-		- pattern è una descrizione generale della forma dei valori di una classe di token come:
-			- $(x|y)(x|y|0|1)^{*}$ 
-		- lessema: è una striga istanza di un pattern come $x_{1}$  è un lessema dell'istanza del pattern visto prima 
+		- ### pattern 
+			- è una descrizione generale della forma dei valori di una classe di token come:
+				- $(x\ |\ y)(x\ |\ y\ |\ 0\ |\ 1)^{*}$ 
+		- ### lessema: 
+			- è una striga istanza di un _pattern_ come $x_{1}$  è un lessema dell'istanza del pattern visto prima 
 	- ## ES:
 		- dalla stringa: `if(x==0)printf ("zero")` 
 			- lo scanner potrebbe generare una sequenza di token di questo tipo:
@@ -27,7 +31,7 @@ date: 2024-10-03
 			- $$r::= \emptyset \ |\ \epsilon \ |\  a \ |\  r \cdot r \ |\ r|r \ |\ r^{*}$$
 			- N.B: per [[Ambiguità#^ea4c8c||disambiguare]] la sintassi si potrebbe usare le parentesi. 
 			- per semplicità si assume che:
-				- _concatenazione, disgiunzione e ripetizione_ sono _associative a sx_ 
+				- _concatenazione $(\ \cdot\ )$, disgiunzione$(\ |\ )$ e ripetizione$(\ *\ )$_ sono _associative a sx_ 
 			- ![[Pasted image 20241003121750.png]]
 			- ### Esempio di espressione regolare:
 				- 
@@ -46,10 +50,19 @@ date: 2024-10-03
 		- ### Operatori ausiliari:
 			- permettono di rendere più sintetiche le operazioni base.
 	- ## Definizioni regolari:
-		- una definizione regolare su di un alfabeto $A$ è una lista di definizioni:
+		- una _definizione regolare_ su di un [[Lessico e frasi di un linguaggio#^de2f85||alfabeto]] $A$ è una lista di definizioni:
 			- $d_{1}:= r_{1}, \ d_{2}:=r_{2}, ...,d_{k}:=r_{k}$
 			- dove $d_{i}$ rappresentano i nuovi simboli e $r_{i}$ le espressioni regolari sull'alfabeto esteso $A\cup \{d_{1},...,d_{k}\}$ 
 		- ### ES:
 			- ![[Pasted image 20241003124349.png]]
+	- ## Equivalenze tra espressioni regolari:
+		- $$r \wedge s\ \  \mathbf{equivalenti }\iff L[r]=L[s]$$
+			- ovvero denotano lo stesso linguaggio e si indica con:
+				- $r \simeq s$
+		- ### Leggi:
+			- ![[Pasted image 20241005195400.png]]
+	- Le _espressioni regolari_ servono a specificare il _pattern_ di una categoria sintattica, ovvero la forma dei possibili _lessemi_
+	- per riconoscere che una certa sequenza in ingresso sia un lessema per una certa categoria sintattica si usano gli [[Automi a stati finiti]]  
 - # Link Utili:
+	- https://virtuale.unibo.it/pluginfile.php/2200368/mod_resource/content/0/Lez06-Gorrieri.pdf fino alla pagina 11.
 	- 

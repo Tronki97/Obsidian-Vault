@@ -2,7 +2,7 @@
 tags:
   - TODO
 aliases: 
-date:
+data: "`<% tp.file.creation_date() %>`"
 ---
 - # Argomento:
 	- 

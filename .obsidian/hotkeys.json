@@ -1,12 +1,4 @@
 {
-  "insert-template": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "M"
-    }
-  ],
   "obsidian-autocomplete-plugin:autocomplete-toggle": [
     {
       "modifiers": [
@@ -56,6 +48,20 @@
         "Mod"
       ],
       "key": "P"
+    }
+  ],
+  "templater-obsidian:create-new-note-from-template": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "n"
+    },
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
     }
   ]
 }

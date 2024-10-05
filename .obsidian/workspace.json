@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "839e741c07469324",
+        "id": "971e692c8bbe557f",
         "type": "tabs",
         "children": [
           {
-            "id": "8d670b7b922bb133",
+            "id": "78742f0817b6573b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/HTML.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "$L",
+                "query": "alfabe",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/HTML.md",
+                "file": "Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/HTML.md",
+                "file": "Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/HTML.md"
+                "file": "Homepage.md"
               }
             }
           },
@@ -177,57 +177,58 @@
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "homepage:Open homepage": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "8d670b7b922bb133",
+  "active": "78742f0817b6573b",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
     "Homepage.md",
-    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Operazioni su linguaggi.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti non deterministici.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Analisi lessicale dei linguaggi regolari.md",
-    "Pasted image 20241003124349.png",
-    "Pasted image 20241003122513.png",
-    "Pasted image 20241003122421.png",
-    "Pasted image 20241003121940.png",
-    "Pasted image 20241003121750.png",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
+    "immagini/Pasted image 20241005202807.png",
+    "Untitled.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Untitled.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
+    "LaTeX-cheat-sheet 1.pdf",
+    "immagini/Pasted image 20241005195400.png",
+    "immagini/Pasted image 20241005201650.png",
+    "immagini/Pasted image 20241005201619.png",
+    "Untitled 2.md",
+    "immagini/Pasted image 20241005200304.png",
+    "template/Modello appunti.md",
+    "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
+    "immagini/Pasted image 20241003121115.png",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
+    "Secondo Anno/Tecnologie Web/HTML.md",
+    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Operazioni su linguaggi.md",
+    "immagini/Pasted image 20241003124349.png",
+    "immagini/Pasted image 20241003122513.png",
+    "immagini/Pasted image 20241003122421.png",
+    "immagini/Pasted image 20241003121940.png",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
-    "Pasted image 20241003121115.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
-    "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni booleane.md",
-    "immagini/Pasted image 20241002134308.png",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni aritmetiche.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica operazionale strutturata.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica dei comandi.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Errori dinamici.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Equivalenze tra espressioni.md",
-    "immagini/Pasted image 20241002220527.png",
-    "immagini/Pasted image 20241002220332.png",
-    "immagini/Pasted image 20241002220320.png",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/sa.md",
-    "Secondo Anno/Linguaggi di Programmazione/MA, interpreti compilatori/generare un compilatore.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
-    "template/Modello appunti.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
-    "template/Tabella 2x3.md",
-    "template/Matrice 4x4.md",
-    "template/Matrice completa 4x4.md",
-    "2024-10-02.md",
-    "Untitled.md",
-    "0002-10-08.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
-    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
     "immagini/albero html.png.~tmp",
     "Excalidraw",
     "immagini/albero di derivazione.png.~tmp",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore",
     "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione",
     "Secondo Anno/Calcolo Numerico/sistemi lineari",
-    "Secondo Anno/Tecnologie Web/Progetto",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

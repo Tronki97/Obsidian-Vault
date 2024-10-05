@@ -1,4 +1,11 @@
-- ## Alfabeto:
+---
+tags: []
+aliases:
+  - alfabeto
+  - linguaggio formale
+data: "`2024-09-19 12:42`"
+---
+- ## Alfabeto: ^de2f85
 	- Elenco dei simboli di un linguaggio
 	- ### Lessico:
 		- insieme di sequenze finite di _parole_ scritte usando l'alfabeto
