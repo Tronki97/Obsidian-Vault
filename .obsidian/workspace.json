@@ -8,57 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "11584fd5124a5abc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "708d2f49f4771c45",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7d273ceb056c8c2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "55633e279290acec",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "9de79ea818eadb78",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
+                "file": "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -115,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -132,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
+                "file": "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
+                "file": "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md"
+                "file": "Secondo Anno/Tecnologie Web/CSS e tipografia.md"
               }
             }
           },
@@ -227,14 +181,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9de79ea818eadb78",
+  "active": "708d2f49f4771c45",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
+    "Untitled.md",
+    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+    "Untitled 1.md",
+    "Secondo Anno/Tecnologie Web/HTML.md",
+    "Homepage.md",
     "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
     "Primo Anno/Analisi/modulo2/Ortogonalità.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti non deterministici.md",
@@ -253,7 +211,6 @@
     "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
     "immagini/Pasted image 20241003121115.png",
     "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
-    "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Operazioni su linguaggi.md",
     "immagini/Pasted image 20241003124349.png",
     "immagini/Pasted image 20241003122513.png",
@@ -264,9 +221,6 @@
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni booleane.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni aritmetiche.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica operazionale strutturata.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica dei comandi.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
     "immagini/albero html.png.~tmp",
