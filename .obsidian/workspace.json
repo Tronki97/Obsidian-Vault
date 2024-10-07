@@ -4,16 +4,61 @@
     "type": "split",
     "children": [
       {
-        "id": "971e692c8bbe557f",
+        "id": "f9c72b47bc50d629",
         "type": "tabs",
         "children": [
           {
-            "id": "78742f0817b6573b",
+            "id": "11584fd5124a5abc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "708d2f49f4771c45",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7d273ceb056c8c2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "55633e279290acec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9de79ea818eadb78",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "alfabe",
+                "query": "sis",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +115,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -86,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md"
+                "file": "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md"
               }
             }
           },
@@ -181,17 +227,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "78742f0817b6573b",
+  "active": "9de79ea818eadb78",
   "lastOpenFiles": [
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
+    "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
+    "Primo Anno/Analisi/modulo2/Ortogonalità.md",
     "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti non deterministici.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
     "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
     "immagini/Pasted image 20241005202807.png",
-    "Untitled.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Untitled.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
     "LaTeX-cheat-sheet 1.pdf",
@@ -218,9 +267,6 @@
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica operazionale strutturata.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica dei comandi.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Errori dinamici.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Equivalenze tra espressioni.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/sa.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
     "immagini/albero html.png.~tmp",

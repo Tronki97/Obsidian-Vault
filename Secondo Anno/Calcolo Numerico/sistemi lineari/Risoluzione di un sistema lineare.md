@@ -1,5 +1,9 @@
 ---
-tags: []
+tags:
+  - TODO
+aliases:
+  - cholesky
+  - numero di condizione
 ---
 
 - Premessa 
@@ -39,7 +43,7 @@ tags: []
 			- #### Proprietà:
 				- gli [[Autovalore]] di $A$ sono tutti positivi. se la matrice $A$ è definita positiva.
 				- se $A$ è definita semi-positiva, gli autovalori sono positivi o nulli.
-		- #### Fattorizzazione di Cholesky
+		- #### Fattorizzazione di Cholesky ^c7c2d7
 			- $A=LL^{T}$ 
 			- $L$ è una matrice triangolare inferiore
 			- e questa operazione ha una complessità computazionale più bassa rispetto a quella $LU$:
@@ -48,12 +52,15 @@ tags: []
 - ## Errore inerente:
 	- ### Norma:
 		- #### vettoriale:
+			- ##### 1:
 			- è una funzione che si indica con $\| . \| : \mathbb{R}^{n} \to \mathbb{R}$ 
 			- 1) $\| x \|\geq 0$ $\forall x \in \mathbb{R}^{n}$  
 				- $\| x \|= 0\iff x=0$ 
 			- 2) $x \in \mathbb{R}, \| \alpha x\| = |\alpha| *\|x\|$
 			- 3) $\forall x,y \in \mathbb{R}^{n}$
 				- $\| x+y\|\leq \|x\|+\|y\|$
+			- ##### 2:
+				- 
 		- #### Matriciale:
 			- è una funzione che si indica con $\| A \| : \mathbb{R}^{m \times n} \to \mathbb{R}$ 
 			- 1) $\| A \| \ge 0 \ \ \ \forall A \in \mathbb{R}^{m \times n}$
@@ -85,5 +92,5 @@ tags: []
 		- ![[Drawing 2024-09-30 14.45.43.excalidraw]]
 		- $||x-(x-\Delta x)||=||\Delta x||$
 		- $$\frac{||\Delta x||}{||x||}\le K(A)\left( \frac{||\Delta A||}{||A||} +\frac{||\Delta b||}{||b||}\right)$$
-			- $K(A)$ è il numero di condizione della matrice 
+			- $K(A)$ è il _numero di condizione_ della matrice 
 				- $K(A)=||A||*||A^{-1}||\ge1$ 

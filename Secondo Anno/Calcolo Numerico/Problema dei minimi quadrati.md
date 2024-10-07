@@ -1,0 +1,59 @@
+---
+tags:
+  - TODO
+aliases:
+  - minimi quadrati
+  - residuo
+data: "`2024-10-07 14:03`"
+---
+- # Problema:
+	- $Ax=b$ con A di tipo $m \times n$ con $m>n$ 
+		- $x\in \mathbb{R}^{n}$, $y\in \mathbb{R}^{m}$ 
+	- questo problema non ha soluzione. 
+- # Soluzione:
+	- devo trovare una $x$ tale che:
+		- $\min_{x\in \mathbb{R}^{n}}||Ax-b||^{2}_2$=F
+		- $Ax-b$ è detta _residuo_ $r$  
+	- quindi tra tutte le x di $\mathbb{R}^{n}$ quella che rende il residuo $r$ minimo. 
+		- $F:\mathbb{R}^{n} \to \mathbb{R^{+}}$ 
+- # Procedimento:
+	- ## Equazioni normali:
+		- normali perché guardano la norma.
+		- minimizzare $||Ax-b||^{2}_2$ quindi:
+		- $$(Ax-b)^{T}(Ax-b)=$$
+		- $$=(-b^{T}+x^{T}A^{T})(Ax-b)=$$
+		- $$=-b^{T}Ax+b^{T}b+x^{T}A^{T}Ax-x^{T}A^{T}b=$$
+		- $$=x^{T}A^{T}Ax-2x^{T}Ab+b^{T}b$$
+		- che pongo poi come $f(x)$ 
+		- per minimizzare la norma devo imporre che la derivata prima sia nulla e visto che le incognite sono più di 1 devo fare il gradiente:
+			- $\nabla (x^{T}A^{T}Ax)=2A^{T}Ax$
+			- $\nabla(2x^{T}Ab)=2A^{T}b$
+			- $\nabla(b^{T}b)=0$ 
+		- risulta quindi : 
+			- $\nabla f(x)=2A^{T}Ax-2A^{T}b$ e devo trovare il punto in cui questo gradiente è uguale a 0.
+			- e posso riscrivere $A^{T}Ax = A^{T}b\in \mathbb{R}^{n}$ 
+		- $A^{T}Ax = A^{T}b$ è quindi un sistema lineare con matrice simmetrica e definita positiva e quindi si può usare [[Risoluzione di un sistema lineare#^c7c2d7||cholesky]]
+	- ## Decomposizione in valori singolari:
+		- se $rk(A)<min(m,n)$ ci sono infinite soluzioni e tra tutte queste c'è una $x'=min\| y\|_{2}^{2}$ che appunto ha norma minima e per calcolarla si usa la _singular value decomposition_  
+		- $$||Ax-b||^{2}_{2}=||U^{T}Ax-U^{T}b||^{2}_2=$$ 
+			- fattibile grazie alle proprietà delle matrici ortogonali
+		- $$=||U^{T}AVV^{T}x-U^{T}b||^{2}_2$$
+			- risulta anche che $U^{T}AV=\Sigma$ [[autovalori e autovettori#^30ec44||matrice sigma]] 
+			- ponendo anche $y=V^{T}x$ e $U^{T}b=g$ risulta infine che:
+				- $$||Ax-b||^{2}_{2}=\|\Sigma y-g\|_{2}^{2}$$   
+			- quindi minimizzare la funzione iniziale significa minimizzare
+				- $$\sum\limits_{i=1}^{k}(\sigma_{i}y_{i}-g_{i})^{2}$$
+				- che in particolare vuol dire renderlo nullo, ovvero:
+					- $$y_{i}=\frac{g_{i}}{\sigma_{i}}=\frac{U^{T}b}{\sigma_{i}}$$
+	- ## definizione di pseudoinversa:
+		- per scrivere in modo più elegante la soluzione a questo problema come fosse la soluzione di un sistema lineare
+		- $A^{+}=V \Sigma^{+}U^{T}$ $\frac{1}{\sigma_{1}}$
+			- $$\Sigma^{+}=\begin{pmatrix}\frac{1}{\sigma_{1}}& 0& 0\\ 0&\frac{1}{\sigma_{2}}&0\\ \cdots&\cdots&\cdots\\0&0 & \frac{1}{\sigma_{n}}\\&0&\end{pmatrix}$$ 
+		- ### Proprietà:
+			- $AA^{+}A=A$
+			- $A^{+}AA^{+}=A^{+}$
+			- $(AA^{+})^{T}=AA^{+}$
+			- $(A^{+}A)^{T}=A^{+}A$
+		- 
+- # Link Utili:
+	- 

@@ -575,6 +575,7 @@ pUy
 paL
 pTX
 potenziali
+pseudoinversa
 realizzare
 rappresentare
 risultato
@@ -1134,6 +1135,7 @@ rmZ
 rEp
 rEpo
 ryH
+residuo
 la
 le
 lo
@@ -2114,6 +2116,7 @@ nqH
 nONx
 nQn
 noJ
+normali
 capire
 codifiche
 capacit
@@ -2889,6 +2892,8 @@ cBi
 cyT
 cUT
 costruirli
+cholesky
+calcolarla
 avendo
 alcune
 arriva
@@ -3873,6 +3878,7 @@ uVW
 uwW
 uNT
 utV
+unitaria
 decremento
 del
 di
@@ -4386,6 +4392,10 @@ dSyP
 diar
 deterministici
 dfa
+decomposizioni
+dec
+decomposizione
+decomposition
 finito
 fanno
 facilmente
@@ -4801,6 +4811,7 @@ fqt
 fqW
 fmL
 fbL
+fattibile
 in
 il
 invece
@@ -5817,6 +5828,8 @@ mGQ
 mXW
 mVm
 mosse
+matriciali
+modificano
 esempio
 eccede
 errori
@@ -6268,6 +6281,7 @@ eiD
 eJa
 epS
 eUZ
+elegante
 base
 bit
 basano
@@ -7617,6 +7631,8 @@ sFX
 slV
 sCZZl
 singoletto
+singolari
+singular
 otterremmo
 ottenere
 occupare
@@ -8361,6 +8377,7 @@ vmq
 vdZ
 vHTw
 vsF
+vett
 troppo
 testimone
 tramite
@@ -9090,6 +9107,7 @@ gNF
 gix
 gxd
 gKg
+gradiente
 NOT
 NotePad
 Nu
@@ -10026,6 +10044,7 @@ RGi
 Reu
 Rjj
 RGZgS
+Risolvi
 Si
 Se
 Status
@@ -10398,6 +10417,7 @@ SYy
 SesO
 SWL
 SPe
+SVD
 BINARY
 Bus
 BX
@@ -11274,6 +11294,7 @@ DCC
 DiZ
 DLn
 DFA
+Decomposizione
 Le
 La
 Lg
@@ -11849,6 +11870,7 @@ Mgy
 Mkq
 MqM
 Mij
+Matrici
 ES
 Esempi
 Ex
@@ -15715,6 +15737,7 @@ OKW
 OKV
 OGzS
 OxV
+Ortonormalit
 xz
 xX
 xF
@@ -18137,6 +18160,7 @@ VPR
 VqcG
 VfN
 VWI
+Vettori
 öG
 öH
 özw
