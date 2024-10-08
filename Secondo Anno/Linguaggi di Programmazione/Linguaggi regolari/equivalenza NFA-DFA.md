@@ -1,0 +1,45 @@
+---
+tags: []
+aliases: 
+data: "`2024-10-08 17:45`"
+---
+- # Teorema:
+	- sia $N=(\Sigma, Q,\delta, q_{0}, F)$ un [[Automi finiti non deterministici||NFA]] e sia $M_{N}$ l'automa ottenuto con la [[Automi finiti deterministici#^f26364||costruzione per sottoinsiemi]], allora $M_{N}$ è un [[Automi finiti deterministici||DFA]] e si ha che: 
+		- $$L[N]=L[M_{N}]$$
+- # Conseguenza:
+	- La classe dei linguaggi riconosciuti dagli NFA coincide con la classe dei linguaggi riconosciuti dai DFA
+- # Dim:
+	- sia $N=(\Sigma, Q,\delta, q_{0}, F)$ un [[Automi finiti non deterministici||NFA]] e sia $M_{N}=(\Sigma, T, \Delta, \epsilon-closure(q_{0}), \scr{F})$ l'automa ottenuto con l'[[Automi finiti deterministici#^f20c1c||algoritmo]] 
+		- 1) $M_{N}$ è deterministico infatti $\Delta(A,a)$ è definita per ogni coppia $(A,a)$ con $A \in T$ e $a \in \Sigma$ in modo univoco, e il risultato sarà un elemento di $T$ 
+		- 2) l'unica cosa da dimostrare è che: $L[N]=L[M_{N}]$   
+			- ##### OSS:
+				- Per un [[Automi finiti deterministici||DFA]], $\epsilon-closure(R)=R$ siccome non è presente la mossa $\epsilon$ 
+			- ##### Notazione:
+				- chiamo $i_{M}=\epsilon-closure(q_{0})$ lo stato iniziale di $M_{N}$
+	- dimostro che $\forall w \in \Sigma^{*}$:
+		- $$\hat{\delta}(q_{0},w)=\hat{\Delta}(i_{M},w)$$
+			- per induzione sulla lunghezza di $w$ 
+		- #### Caso base:
+			- $|w|=0$ ovvero $w=\epsilon$
+				- $$\hat{\delta}(q_{0},\epsilon)=\epsilon-closure(q_{0})$$
+				- $$\hat{\Delta}(i_{M},\epsilon)=\epsilon-closure(i_{M})=i_{M}=\epsilon-closure(q_{0})$$
+			- quindi risultano uguali
+		- #### Caso induttivo:
+			- $w=xa$ con $a\in \Sigma^{}$ e $x\in \Sigma^{*}$
+			- per ipotesi induttiva so che:
+				- $$\hat{\delta}(q_{0},x)=\hat{\Delta}(i_{M},x)=\{P_{1},...,P_{k} \}$$
+			- per definizione di $\hat{\delta}$
+				- $$\hat{\delta}(q_{0},xa)=\epsilon-closure(\bigcup_{i=1}^{k}\delta(P_{i},a))$$
+			- similmente:
+				- $$\hat{\Delta}(i_{M},xa)=\Delta(\{P_{1},...,P_{k} \},a)$$
+			- in base all'algoritmo la definizione di $\Delta$ ci dice che:
+				- $$\Delta(\{P_{1},...,P_{k} \},a)=\epsilon-closure(mossa(\{P_{1},...,P_{k} \},a))=$$
+				- $$=\epsilon-closure(\bigcup_{i=1}^{k}\delta(p_{i},a))=\hat{\delta}(q_{0},xa)$$
+			- Quindi infine si ha che:
+				- $$w\in L[N]\iff \exists p \in \hat{\delta}(q_{0},w) \ |\ p\in F\iff$$
+				- $$\iff \exists p\in \hat{\Delta}(i_{M},w)\ |\ p\in F \iff$$
+				- $$\iff \hat{\Delta}(i_{M},w)\in \scr F \iff$$
+				- $$\iff w\in L[M_{N}] \ \ \ \forall w \in \Sigma^{*}$$
+				- $$L[N]=L[M_{N}]$$
+- # Link Utili:
+	- https://virtuale.unibo.it/pluginfile.php/2200368/mod_resource/content/0/Lez06-Gorrieri.pdf pagina 29 in poi.

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f9c72b47bc50d629",
+        "id": "0e1e10b656c20326",
         "type": "tabs",
         "children": [
           {
-            "id": "708d2f49f4771c45",
+            "id": "1100a48817cf4ea5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sis",
+                "query": "grammatica libera",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+                "file": "Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+                "file": "Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/CSS e tipografia.md"
+                "file": "Homepage.md"
               }
             }
           },
@@ -181,46 +181,45 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "708d2f49f4771c45",
+  "active": "1100a48817cf4ea5",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
-    "Untitled 1.md",
-    "Secondo Anno/Tecnologie Web/HTML.md",
+    "Da DFA a grammatiche regolari.md",
     "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/equivalenza NFA-DFA.md",
+    "Grammatiche regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
+    "Pasted image 20241008191509.png",
+    "Pasted image 20241008191424.png",
+    "immagini/Pasted image 20241008185748.png",
+    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
+    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Derivazioni.md",
+    "immagini/Pasted image 20241008190017.png",
+    "immagini/Pasted image 20241008185820.png",
+    "Da exp regolari a NFA equivalenti.md",
+    "immagini/Pasted image 20241008174622.png",
+    "immagini/Pasted image 20241008185145.png",
+    "immagini/Pasted image 20241008184147.png",
+    "immagini/Screenshot 2024-10-08 at 18-40-27 Lez07-Gorrieri.pdf.png",
+    "immagini/Pasted image 20241008183954.png",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti non deterministici.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Untitled.md",
     "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
+    "Primo Anno/Analisi/modulo2/Ortogonalità.md",
+    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+    "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
+    "Secondo Anno/Tecnologie Web/HTML.md",
+    "Untitled 1.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
-    "Primo Anno/Analisi/modulo2/Ortogonalità.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti non deterministici.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
     "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
-    "immagini/Pasted image 20241005202807.png",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Untitled.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
     "LaTeX-cheat-sheet 1.pdf",
-    "immagini/Pasted image 20241005195400.png",
-    "immagini/Pasted image 20241005201650.png",
-    "immagini/Pasted image 20241005201619.png",
     "Untitled 2.md",
-    "immagini/Pasted image 20241005200304.png",
-    "template/Modello appunti.md",
-    "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
-    "immagini/Pasted image 20241003121115.png",
-    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
-    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Operazioni su linguaggi.md",
-    "immagini/Pasted image 20241003124349.png",
-    "immagini/Pasted image 20241003122513.png",
-    "immagini/Pasted image 20241003122421.png",
-    "immagini/Pasted image 20241003121940.png",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Struttura di un compilatore.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
-    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni booleane.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni aritmetiche.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
     "immagini/albero html.png.~tmp",

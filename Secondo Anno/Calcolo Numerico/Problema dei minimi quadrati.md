@@ -14,7 +14,7 @@ data: "`2024-10-07 14:03`"
 	- devo trovare una $x$ tale che:
 		- $\min_{x\in \mathbb{R}^{n}}||Ax-b||^{2}_2$=F
 		- $Ax-b$ è detta _residuo_ $r$  
-	- quindi tra tutte le x di $\mathbb{R}^{n}$ quella che rende il residuo $r$ minimo. 
+	- _quindi tra tutte le x di $\mathbb{R}^{n}$ quella che rende il residuo $r$ minimo. _
 		- $F:\mathbb{R}^{n} \to \mathbb{R^{+}}$ 
 - # Procedimento:
 	- ## Equazioni normali:
@@ -54,6 +54,12 @@ data: "`2024-10-07 14:03`"
 			- $A^{+}AA^{+}=A^{+}$
 			- $(AA^{+})^{T}=AA^{+}$
 			- $(A^{+}A)^{T}=A^{+}A$
-		- 
+		- e appunto la soluzione si può scrivere come:
+			- $x=A^{-1}b$
+			- $x^{*}=V \Sigma^{*}U^{T}b \implies x^{*}=A^{+}b$
+		- inoltre il [[Risoluzione di un sistema lineare#^47956e||numero di condizione]] di una matrice $A\in \mathbb{R}^{m \times n}$ si può scrivere usando la pseudoinversa come:
+			- $$K(A)=||A||||A^{+}||$$
+		- e il numero di condizionamento spettrale come:
+			- $$K(A)_{2} =||A||_{2}||A^{+}||_{2}=\frac{\sigma_{1}}{\sigma_{n}}$$
 - # Link Utili:
 	- 

@@ -92,5 +92,5 @@ aliases:
 		- ![[Drawing 2024-09-30 14.45.43.excalidraw]]
 		- $||x-(x-\Delta x)||=||\Delta x||$
 		- $$\frac{||\Delta x||}{||x||}\le K(A)\left( \frac{||\Delta A||}{||A||} +\frac{||\Delta b||}{||b||}\right)$$
-			- $K(A)$ è il _numero di condizione_ della matrice 
+			- $K(A)$ è il _numero di condizione_ della matrice  ^47956e
 				- $K(A)=||A||*||A^{-1}||\ge1$ 

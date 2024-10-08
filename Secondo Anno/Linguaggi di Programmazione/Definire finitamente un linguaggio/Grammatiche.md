@@ -25,7 +25,7 @@
 - ## Grammatica def: ^653185
 	- di tanti tipi come: _regolari, libere_ ecc...
 	- tutte seguono lo stesso pattern, sono diverse solo per alcune caratteristiche come:
-		- _le produzioni (o regole)_.
+		- _le produzioni (o regole)_. ^125369
 	- dopo aver definito una grammatica serve capire quale linguaggio genera
 	- ### Libere (da contesto): ^c95cdc
 		- è una _quadrupla_$(NT, T, R, S)$ 

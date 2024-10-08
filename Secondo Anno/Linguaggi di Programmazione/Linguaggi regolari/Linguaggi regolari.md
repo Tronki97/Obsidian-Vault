@@ -26,7 +26,7 @@ date: 2024-10-03
 			- lo scanner potrebbe generare una sequenza di token di questo tipo:
 				- ![[Pasted image 20241003121115.png]]
 				- anche se in realtà ogni identificatore viene associato ad un indirizzo nella [[Struttura di un compilatore#^80f144||tabella dei simboli]]
-	- ## Espressioni regolari:
+	- ## Espressioni regolari: ^aca36f
 		- si fissa un alfabeto $A=\{a_{1},a_{2},...\}$ e si definiscono le espressioni regolari:
 			- $$r::= \emptyset \ |\ \epsilon \ |\  a \ |\  r \cdot r \ |\ r|r \ |\ r^{*}$$
 			- N.B: per [[Ambiguità#^ea4c8c||disambiguare]] la sintassi si potrebbe usare le parentesi. 
@@ -34,7 +34,11 @@ date: 2024-10-03
 				- _concatenazione $(\ \cdot\ )$, disgiunzione$(\ |\ )$ e ripetizione$(\ *\ )$_ sono _associative a sx_ 
 			- ![[Pasted image 20241003121750.png]]
 			- ### Esempio di espressione regolare:
-				- 
+				- $A=\{0,1\}$
+				- $0^{*}\ 1\ 0^{*}$
+					- $$L_{1}=\{w\in A^{*}|\mathbf{w \ contiene \ solo \ un \ 1}\}$$
+				- $(0\ |\ 1)^{*}1$
+					- $L_{2}=\{w\in A^{*}\ |\ \mathbf{w\ termina\  con \ 1}\}$ 
 	- ## Linguaggio denotato da una espressione regolare:
 		- dato l'alfabeto $A$ si definisce la funzione:
 			- $$L:ExpReg\to P(A^{*})$$
@@ -61,7 +65,7 @@ date: 2024-10-03
 				- $r \simeq s$
 		- ### Leggi:
 			- ![[Pasted image 20241005195400.png]]
-	- Le _espressioni regolari_ servono a specificare il _pattern_ di una categoria sintattica, ovvero la forma dei possibili _lessemi_
+	- Le _espressioni regolari_ servono a specificare il _pattern_ di una categoria sintattica, ovvero la forma dei possibili _lessemi_ ^808f0a
 	- per riconoscere che una certa sequenza in ingresso sia un lessema per una certa categoria sintattica si usano gli [[Automi a stati finiti]]  
 - # Link Utili:
 	- https://virtuale.unibo.it/pluginfile.php/2200368/mod_resource/content/0/Lez06-Gorrieri.pdf fino alla pagina 11.
