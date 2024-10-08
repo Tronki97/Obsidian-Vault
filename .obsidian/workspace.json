@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md"
+                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md"
               }
             }
           },
@@ -183,8 +183,9 @@
   },
   "active": "1100a48817cf4ea5",
   "lastOpenFiles": [
-    "Da DFA a grammatiche regolari.md",
+    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
     "Homepage.md",
+    "Da DFA a grammatiche regolari.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/equivalenza NFA-DFA.md",
     "Grammatiche regolari.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
