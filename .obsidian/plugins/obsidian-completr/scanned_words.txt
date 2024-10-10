@@ -549,6 +549,7 @@ plL
 pAG
 problematiche
 produttive
+process
 realizzare
 rappresentare
 risultato
@@ -2740,6 +2741,7 @@ codificare
 concorrente
 concorrenti
 conoscenza
+colui
 avendo
 alcune
 arriva
@@ -3343,6 +3345,8 @@ atto
 automatico
 andranno
 analizzati
+attuale
+assegnate
 un
 una
 usato
@@ -4153,6 +4157,8 @@ dü
 dZe
 dHC
 dialogo
+direttive
+device
 finito
 fanno
 facilmente
@@ -5516,6 +5522,7 @@ mSt
 mkr
 materia
 misurazione
+multitasking
 esempio
 eccede
 errori
@@ -5947,6 +5954,7 @@ eGO
 eXX
 eTg
 emulatore
+elaborati
 base
 bit
 basano
@@ -6246,6 +6254,8 @@ btO
 bkM
 bZvrq
 buon
+block
+boot
 quindi
 questo
 quelle
@@ -8289,6 +8299,7 @@ tnk
 tHG
 tok
 tJy
+trasporta
 grandi
 gli
 grande
@@ -9191,6 +9202,7 @@ IQxN
 IDATe
 ISO
 Interconnection
+Istruzione
 Rappresentazione
 Registri
 Register
@@ -9823,6 +9835,7 @@ SIDAT
 SKv
 Standard
 System
+Scheduler
 BINARY
 Bus
 BX
@@ -10388,6 +10401,7 @@ Ptp
 PzT
 Progetto
 Pensieri
+PCB
 Di
 Data
 Dati
@@ -15507,6 +15521,7 @@ UHI
 UKf
 URlh
 Utili
+User
 Zx
 ZD
 ZRz

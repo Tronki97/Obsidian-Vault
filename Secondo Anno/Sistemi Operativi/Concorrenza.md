@@ -1,0 +1,67 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-10 10:56`"
+---
+- # Argomento:
+	- 
+	- 
+- # Processo:
+	- attività statica controllata da un programma che si svolge in un processore.
+	- ## Assioma di finite progress
+		- ogni processo viene eseguito a velocità finita non nulla, ma sconosciuta.
+			- ovvero se un processo può avanzare prima o poi lo farà
+	- _ad ogni istante un processo può essere descritto da:_
+		- ### la sua immagine in memoria
+			- la memoria assegnata al processo
+			- le strutture dati del S.O associate al processo.
+		- ### la sua immagine nel processore:
+			- contenuto dei [[Registri]] generali e speciali
+		- ### Lo stato di avanzamento:
+			- descrive lo stato corrente: in esecuzione o attesa
+	- _Più processi possono eseguire lo stesso programma_:
+		- es: due istanze dello stesso programma (es: browser)
+	- _Ogni istanza viene considerata un processo separato_
+		- possono condividere lo stesso codice
+		- i dati, le immagini e lo stato di avanzamento sono separati
+- # Stati dei processi:
+	- running:
+		- che stanno venendo eseguiti
+	- waiting:
+		- aspettano o i dati o che vengano completati altri processi prima di entrare nello stato _running_
+	- ready:
+		-  pronto per entrare nello stato _running_
+- # Concorrenza:
+	- nel [[Sistema operativo]] tante attività vengono eseguite più o meno contemporaneamente dal processore
+	- serve il _modello di riferimento_ che è basato sul concetto di _processo_ 
+	- ## gestire _processi multipli_:
+		- ### multiprogramming:
+			- più processi su un solo processori
+			- parallelismo apparente
+		- ### Multiprocessing:
+			- più processi su una macchina con processi multipli 
+			- parallelismo reale
+		- ### Distributed processing:
+			- più processi su di un insieme di computer indipendenti
+			- parallelismo reale
+	- due programmi si dicono in esecuzione concorrente se _vengono eseguiti in parallelo_
+	- ## DEF:
+		- la concorrenza è l'insieme dell notazioni per descrivere l'esecuzione concorrente di vari programmi e di tenciche per gestire problemi legati all'esecuzione come: _comunicazione e sincronizzazione_
+- # ES:
+	- ![[Pasted image 20241010113346.png]]
+	- suppongo che esista un processo $P_{1}$ che esegue `modifica(10)` e $P_{2}$ che esegue `modifica(-10)`
+	- e suppongo che $P_{1}$ e $P_{2}$ siano in esecuzione concorrente.
+	- sia `totale=100` 
+	- esecuzione corretta:
+		- viene eseguito $P_{1}$ che fa si `totale=110`
+		- arriva un interrupt 
+		- salva i registri $P_{1}$
+		- ripristina i registri $P_{2}$
+		- poi viene eseguito $P_{2}$ che fa si `totale=100`
+		-  
+- # Race condition:
+	- il risultato non dipende dai processi ma dall'evoluzione temporale dei processi.
+	- 
+- # Link Utili:
+	- 

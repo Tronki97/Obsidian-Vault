@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi operativi.md",
+                "file": "Secondo Anno/Sistemi Operativi/Concorrenza.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi operativi.md",
+                "file": "Secondo Anno/Sistemi Operativi/Concorrenza.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi operativi.md",
+                "file": "Secondo Anno/Sistemi Operativi/Concorrenza.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi operativi.md"
+                "file": "Secondo Anno/Sistemi Operativi/Concorrenza.md"
               }
             }
           },
@@ -183,8 +183,10 @@
   },
   "active": "de07f600c949f506",
   "lastOpenFiles": [
+    "Pasted image 20241010113346.png",
+    "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
-    "Sistemi operativi.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza.md",
     "Homepage.md",
     "template/Modello appunti.md",
     "template/Matrice completa 4x4.md",
@@ -219,9 +221,7 @@
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
-    "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
     "LaTeX-cheat-sheet 1.pdf",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
     "immagini/albero html.png.~tmp",
     "Excalidraw",
