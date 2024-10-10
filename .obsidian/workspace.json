@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0e1e10b656c20326",
+        "id": "14d00a52269deade",
         "type": "tabs",
         "children": [
           {
-            "id": "1100a48817cf4ea5",
+            "id": "dc0fe5e7e9640bb6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+                "file": "Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+                "file": "Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md"
+                "file": "Homepage.md"
               }
             }
           },
@@ -181,29 +181,36 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1100a48817cf4ea5",
+  "active": "dc0fe5e7e9640bb6",
   "lastOpenFiles": [
-    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
-    "Homepage.md",
-    "Da DFA a grammatiche regolari.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/equivalenza NFA-DFA.md",
-    "Grammatiche regolari.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura protocolli di internet.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Da exp regolari a NFA equivalenti.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Da DFA a grammatiche regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti non deterministici.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
-    "Pasted image 20241008191509.png",
-    "Pasted image 20241008191424.png",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Untitled.md",
+    "immagini/Pasted image 20241008191509.png",
+    "immagini/Pasted image 20241008191424.png",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/equivalenza NFA-DFA.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
+    "Homepage.md",
+    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
     "immagini/Pasted image 20241008185748.png",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Derivazioni.md",
     "immagini/Pasted image 20241008190017.png",
     "immagini/Pasted image 20241008185820.png",
-    "Da exp regolari a NFA equivalenti.md",
     "immagini/Pasted image 20241008174622.png",
     "immagini/Pasted image 20241008185145.png",
     "immagini/Pasted image 20241008184147.png",
     "immagini/Screenshot 2024-10-08 at 18-40-27 Lez07-Gorrieri.pdf.png",
     "immagini/Pasted image 20241008183954.png",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti non deterministici.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Untitled.md",
     "Secondo Anno/Calcolo Numerico/Problema dei minimi quadrati.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
@@ -212,14 +219,7 @@
     "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
     "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
-    "Untitled 1.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
-    "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
     "LaTeX-cheat-sheet 1.pdf",
-    "Untitled 2.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",

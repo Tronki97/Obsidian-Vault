@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - livelli
 date: 2024-10-02
 ---
 - # Link utili:
@@ -18,8 +19,31 @@ date: 2024-10-02
 		- ![[Pasted image 20241002134308.png||600]]
 		- ## Livelli:
 			- ### 1°
+				- #### livello fisico
 				- definisce le tecniche per codificare trasmettere e ricevere i dati.
 			- ### 2° 
+				- #### livello MAC
 				- il MAC(medium access control) definisce il Frame che è il nome del pacchetto gestito al _livello 2_ e li dentro deve essere contenuto l'indirizzo di mittente e destinatario.
 				- questo livello decide quando inviare ogni frame e deve stare attento ad evitare le collisioni 
-				- _LLC_: verifica che la trasmissione dei frame sia andata a buon fine. 
+				- _LLC_: (logical link control) verifica che la trasmissione dei frame sia andata a buon fine. utilizzando la strategia della matrice di bit di parità che può anche essere in grado di correggere gli errori senza ritrasmettere
+			- ### 3°
+				- #### Livello rete.
+				- Indirizzi IP che sono sovrapposti agli indirizzi MAC nello stack dei protocolli
+				- Deve riuscire a definire mittente e destinatario ma considerando la rete internet non più quella locale.
+				- usando i _router_ riescono a smistare i pacchetti dati attraverso la rete per poter raggiungere destinazioni lontane. 
+				- se un pacchetto è troppo grande viene diviso in pacchetti più piccoli.
+				- ogni segmento che parte viene contabilizzato come segmento del quale si aspetta l'_aknowledgement_ 
+			- ### 4°
+				- livello trasporto
+				- fa il controllo della congestione controllando i router. Perché se ad uno arrivano troppi pacchetti alcuni andranno persi
+				- serve quindi che i mittenti non devono accelerare nell'invio di dati per evitare di sovraccaricare la rete.
+				- per capire il massimo numero di dati da inviare serve il protocollo _TCP_
+			- ### 5°
+				- Livello sessione
+				- controllo dello stato del collegamento 
+			- ### 6°
+				- Livello presentazione
+				- controllo dell'adattamento dei data per ogni architettura 
+			- ### 7°
+				- Livello applicazione
+				- contiene i protocolli usati dalle applicazioni per comunicare con la rete.
