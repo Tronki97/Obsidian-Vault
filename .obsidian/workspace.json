@@ -8,33 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "45cef79e40f1950e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Homepage.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "113da0edde3d6913",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Equivalenza o indistinguibilità degli stati.md",
+                "file": "API REST.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Equivalenza o indistinguibilità degli stati.md",
+                "file": "API REST.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Equivalenza o indistinguibilità degli stati.md",
+                "file": "API REST.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Equivalenza o indistinguibilità degli stati.md"
+                "file": "API REST.md"
               }
             }
           },
@@ -197,16 +183,21 @@
   },
   "active": "113da0edde3d6913",
   "lastOpenFiles": [
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
-    "Homepage.md",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/HTTP.md",
+    "API REST.md",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/Computer network.md",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/Untitled.md",
+    "Secondo Anno/Linguaggi di Programmazione/Untitled.md",
+    "Secondo Anno/Tecnologie Web/HTTP & REST",
     "LaTeX-cheat-sheet 1.pdf",
-    "Equivalenza o indistinguibilità degli stati.md",
-    "Pasted image 20241010125052.png",
-    "Pasted image 20241010124218.png",
-    "minimizzazione.md",
-    "Pasted image 20241010123412.png",
-    "Pasted image 20241010123258.png",
-    "Untitled.md",
+    "immagini/Pasted image 20241010123412.png",
+    "immagini/Pasted image 20241010125052.png",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
+    "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
+    "immagini/Pasted image 20241010124218.png",
+    "immagini/Pasted image 20241010123258.png",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Da exp regolari a NFA equivalenti.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Da DFA a grammatiche regolari.md",
@@ -227,10 +218,7 @@
     "immagini/Pasted image 20241008191424.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
     "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
-    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
     "immagini/Pasted image 20241008185748.png",
-    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
-    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Derivazioni.md",
     "immagini/Pasted image 20241008190017.png",
     "immagini/Pasted image 20241008185820.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
@@ -241,7 +229,6 @@
     "immagini/albero di derivazione.png.~tmp",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore",
     "Secondo Anno/Linguaggi di Programmazione/Descrivere un linguaggio/alberi di derivazione",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

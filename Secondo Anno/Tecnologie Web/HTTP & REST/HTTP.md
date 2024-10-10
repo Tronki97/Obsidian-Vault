@@ -1,0 +1,61 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-10 15:56`"
+---
+- # Argomento:
+	- è un protocollo indipendente dal formato dei dati con cui vengono trasmessi i dati 
+	- è _stateless_ ovvero il server non è tenuto a mantenere la connessione tra una sessione ed un altra 
+- # Ruoli 
+	- Origin server: il server contenente il dato che sto trasferendo
+	- User agent: chi ha fatto la richiesta HTTP 
+		- lo è il pc che fa una ricerca su google.
+	- Proxy/gateway:
+		- Proxy è intermediario tra l'Origin server e l'User agent che velocizza il trasferimento e lo si sceglie manualmente
+		- mentre il Gateway è più trasparente e non viene scelto 
+- # Metodi:
+	- elemento centrale di una architettura REST
+	- proprietà:
+		- sicurezza :
+			- non genera cambiamenti sullo stato del server.
+			- qualunque intermediario può eseguire questo metodo
+		- idempotenza:
+			- eseguire questo metodo una volta ha lo stesso effetto che eseguirlo più volte
+			- può essere rieseguito da più intermediari 
+	- ## GET:
+		- `get "risorsa" `
+		- richiede una risorsa al server
+	- ## POST:
+		- trasmette informazioni dal client al server relative alla risorsa identificata nell'[[URI (Uniform Resource Identifier)||URI]] 
+		- può creare anche nuove risorse 
+		- può essere usato per spedire i dati di un Form HTML ad un'applicazione server-side.
+	- ## PUT:
+		- trasmette delle info dal client al server _creando o sostituendo la risorsa specificata_  
+		- l'argomento è la risorsa che ci si aspetta di ottenere facendo GET in seguito con lo stesso nome 
+		- non offre garanzie di controllo degli accessi o locking
+	- PATCH:
+		- aggiorna parzialmente la risorsa indentificata dall'URI
+		- indica quali modifiche incrementali e non sovrascrivere 
+- # Status code:
+	- 1xx: informational:
+		- una risposta temporanea alla richiesta, durante lo svolgimento
+	- 2xx: successful: 
+		- il server ha ricevuto capito e accettata la richiesta
+	- 3xx redirection:
+		- la richiesta è corretta ma servono altre azioni da parte del client per terminare la richiesta 
+	- 4xx: client-error:
+		- ra richiesta del client non può essere soddisfatta
+	- 5xx: Server error: 
+		- il server non riesce a soddisfare la richiesta per un problema interno
+- # Header 
+	- informazioni aggiuntive che caratterizzano le richieste e le risposte e ne descrivono certi aspetti
+	- ## Dell'entità:
+		- danno info sul body del messaggio oppure sulla risorsa specificata.
+		- ### Content-type: 
+			- il tipo MIME. obbligatorio in ogni messaggio che abbia un body.
+		- ### Content-length:
+			- le lunghezza in byte del body. Obbligatorio soprattutto se la connessione è persistente
+		- ### Content, -encoding, -lenguage, -location, MD5
+- # Link Utili:
+	- 
