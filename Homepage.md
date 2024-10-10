@@ -17,7 +17,7 @@ FROM #TODO
 LIST 
 FROM ""
 SORT file.mtime DESC
-LIMIT 6
+LIMIT 10
 ```
 # Primo anno
 

@@ -1,0 +1,49 @@
+---
+tags:
+  - TODO
+aliases:
+  - indistinguibilità
+data: "`2024-10-10 12:37`"
+---
+- # Def:
+	- due stati sono _indistinguibili_ tra loro se $\forall x \in \Sigma^{*}$ 
+		- $$\hat{\delta}(q_{1},x)\in F \iff \hat{\delta}(q_{2},x)\in F$$
+	- ovvero se $L[N,q_{1}]=L[N,q_{2}]$
+- # Strategia:
+	- cerco di distinguere due stati considerando le $x\in \Sigma^{*}$ a partire dalla più corta ($\epsilon$)
+		- ![[Pasted image 20241010124218.png]]
+			- cerco di vedere quali coppie di stati _non sono equivalenti_ a cominciare dalle stringhe $\epsilon$
+	- ## 1)
+		- $\epsilon$ distingue ogni stato in $F$ da ogni stato in $Q - \{F\}$ 
+			-  ~~(A,D)~~; ~~(B,D)~~; ~~(C,D)~~ 
+	- ## 2) 
+		- stringhe di lunghezza 1 ovvero "a" e "b"
+			- "a" distingue B e C perché:
+				- $\delta(B,a)=B$   e   $\delta(C,a)=D$
+				- cancellate nel passo _1_ 
+				- $B\in Q-F$ e $D\in F$ 
+			- "a" distingue A e C perché:
+				- $\delta(A,a)=B$   e   $\delta(C, a)=A$ 
+				- ma $B\in Q-F$ e $D\in F$
+			- "b" non permette di fare nuove distinzioni 
+	- ## 3) 
+		- stringhe di lunghezza 2 ma non permette di fare nuove distinzioni quindi _non ha senso procedere con stringhe più lunghe_
+	- Risulta che $A$ e $B$ sono _equivalenti_ 
+		- ![[Pasted image 20241010125052.png]]
+- # Formalizzazione:
+	- dato un [[Automi finiti deterministici||DFA]] _M_ definisco una famiglia di relazioni:
+		- $$\sim_{i}\subseteq Q \times Q$$ 
+	- $$\sim_{0}=F \times F \cup (Q-F)\times(Q-F)$$
+	- ## OSS:
+		- 1) la relazione $Id\{(q,q)|q\in Q\}$ è tale che $Id\subseteq \sim_{i}\ \ \ \forall i$ 
+			- uno stato è sempre equivalente a se stesso
+		- 2) $\sim_{i}$ è una relazione di equivalenza $\forall i$ 
+		- 3)$\sim_{i+1}\subseteq \sim_{i}$ 
+			- ad ogni passo rimuovo qualche coppia 
+		- 4) $$\exists k : \sim_{k}=\sim_{k+1}\implies\forall j>k  \sim_{k}=\sim_{j}$$
+		- 5) $k$ esiste ed è minore di 
+			- $$|\sim_{0}|=|F \times F|+|(Q-F) \times (Q-F)|=$$
+			- $$=|F|^{2}+|(Q-F)|^{2}$$
+			- 
+- # Link Utili:
+	- 

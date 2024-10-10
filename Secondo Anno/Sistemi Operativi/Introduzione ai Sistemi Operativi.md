@@ -4,8 +4,6 @@ tags:
 aliases: 
 date: 2024-10-03
 ---
-
-
 - # Argomento:
 	- programmazione concorrente:
 		- programmi che hanno più storie produttive concorrenti.

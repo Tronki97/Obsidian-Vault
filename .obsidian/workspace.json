@@ -4,23 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "49cd58019acda792",
+        "id": "e30fd6cb5468a63d",
         "type": "tabs",
         "children": [
           {
-            "id": "de07f600c949f506",
+            "id": "45cef79e40f1950e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Concorrenza.md",
+                "file": "Homepage.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "113da0edde3d6913",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Equivalenza o indistinguibilità degli stati.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -49,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "espressioni regolare",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Concorrenza.md",
+                "file": "Equivalenza o indistinguibilità degli stati.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Concorrenza.md",
+                "file": "Equivalenza o indistinguibilità degli stati.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Concorrenza.md"
+                "file": "Equivalenza o indistinguibilità degli stati.md"
               }
             }
           },
@@ -181,47 +195,46 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "de07f600c949f506",
+  "active": "113da0edde3d6913",
   "lastOpenFiles": [
-    "Pasted image 20241010113346.png",
-    "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
-    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza.md",
-    "Homepage.md",
-    "template/Modello appunti.md",
-    "template/Matrice completa 4x4.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
-    "immagini/Screenshot 2024-10-08 at 18-40-27 Lez07-Gorrieri.pdf.png",
-    "immagini/Pasted image 20241008191509.png",
-    "immagini/Pasted image 20241008191424.png",
-    "immagini/Pasted image 20241008190017.png",
-    "immagini/Pasted image 20241008185820.png",
-    "immagini/Pasted image 20241008185748.png",
-    "immagini/Pasted image 20241008185145.png",
-    "immagini/Pasted image 20241008184147.png",
-    "immagini/Pasted image 20241008183954.png",
-    "immagini/Pasted image 20241008183928.png",
-    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura protocolli di internet.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica operazionale strutturata.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni aritmetiche.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica delle espressioni booleane.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Semantica dei comandi.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Errori dinamici.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/Equivalenze tra espressioni.md",
-    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/equivalenza NFA-DFA.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari.md",
+    "Homepage.md",
+    "LaTeX-cheat-sheet 1.pdf",
+    "Equivalenza o indistinguibilità degli stati.md",
+    "Pasted image 20241010125052.png",
+    "Pasted image 20241010124218.png",
+    "minimizzazione.md",
+    "Pasted image 20241010123412.png",
+    "Pasted image 20241010123258.png",
+    "Untitled.md",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi lessicale.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Da exp regolari a NFA equivalenti.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Da DFA a grammatiche regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/equivalenza NFA-DFA.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti non deterministici.md",
+    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
+    "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza.md",
+    "immagini/Pasted image 20241010113346.png",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura protocolli di internet.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Untitled.md",
+    "immagini/Pasted image 20241008191509.png",
+    "immagini/Pasted image 20241008191424.png",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
+    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
+    "immagini/Pasted image 20241008185748.png",
+    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
+    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Derivazioni.md",
+    "immagini/Pasted image 20241008190017.png",
+    "immagini/Pasted image 20241008185820.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
-    "LaTeX-cheat-sheet 1.pdf",
+    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
     "immagini/albero html.png.~tmp",
     "Excalidraw",

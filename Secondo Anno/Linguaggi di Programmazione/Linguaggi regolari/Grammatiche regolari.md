@@ -8,7 +8,7 @@ data: "`2024-10-08 11:10`"
 		- $$V\to aW \ \ \ \mathbf{oppure}\ \ \  V\to a $$
 		- dove: $V,W\in NT$ (simboli non terminali) e $a\in T$ (simboli terminali)
 		- per il simbolo inziale $S$ è ammessa anche la regola $S\to \epsilon$
-- # ES:
+- # ES: 
 	- ## 1:
 		- ![[Pasted image 20241008185748.png]]
 		- l'[[Automi finiti non deterministici||NFA]] associato a $G$ è:

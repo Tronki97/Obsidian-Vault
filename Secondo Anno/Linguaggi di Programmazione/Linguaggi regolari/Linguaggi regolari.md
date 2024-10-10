@@ -1,11 +1,12 @@
 ---
-tags: []
+tags: 
 aliases:
   - lessema
   - pattern
   - linguaggio regolare
   - espressione regolare
   - definizione regolare
+  - regex
 date: 2024-10-03
 ---
 - # Analisi lessicale:
