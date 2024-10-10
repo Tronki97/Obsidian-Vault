@@ -14,6 +14,23 @@ data: "`2024-10-10 09:17`"
 	- stati dei device: rappresenta lo stato in cui si trovano i vari componenti
 	- interrupt: procedura che interrompe il lavoro del processore
 	- lista dei processi: processi che possono almeno iniziare ad essere eseguiti
-	-  
+	-  processo attuale: processi che sono attualmente in corso
+	- code di attesa: lista di processi in attesa di un qualche input o di un qualche fine di processo
+	- process control block (PCB): struttura dati che tiene le info di ogni processo
+	- mode del processore: 
+		- kernel: accede a tutte le risorse del sistema
+		- User: esegue i processi dell'utente e può accedere solo ad alcune locazioni di memoria che gli sono assegnate
+	- chiamate a sistema:
+		-  quando il processore necessita di risorse a cui non può accedere dalla modalità utente
+	- Memoria dei processi:
+	- Istruzione corrente: 
+		-  copia l'informazione presente nel program counter e rappresenta l'istruzione in cui si trova
+	- Scheduler:
+		-  sceglie quali istruzioni mandare ad eseguire in base a varie caratteristiche come la _priorità_
+	- multitasking: 
+		- eseguire più processi contemporaneamente.
+	- ## Il sistema operativo:
+		-  programma che viene caricato al boot e crea vari processi, esegue i programmi
+	- 
 - # Link Utili:
 	- 
