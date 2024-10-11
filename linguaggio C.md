@@ -1,0 +1,32 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-11 09:30`"
+---
+- # Argomento:
+	- nasce per l'esigenza di risolvere certi problemi che linguaggi già esistenti non potevano risolvere, e poter realizzare un sistema operativo senza scrivere in _assembly_ 
+- # UNIX:
+	- SO multitasking che all'inizio venne chiamato MULTIX
+	- diventò UNIX dopo che gli azionisti fecero accantonare il progetto così gli sviluppatori lo continuarono per conto loro. 
+	- per essere realizzato necessitava di un linguaggio di basso livello che potesse accedere ai registri facilmente e poter far fare al processore quello che voleva ovvero: _Assembly_
+- i compilatori hanno due parti:
+	- analisi sintattica, lessicale.
+	- gestione memoria.
+- # Cross Compiler:
+	- funziona su un tipo di macchina ma genera codice per un altra macchina
+- # Kernel 
+	- deve poter funzionare senza nulla di esterno anche senza Sistema operativo.
+- # C:
+	- non ammette funzioni nidificate quindi le variabili o sono locali alla funzione o sono globali
+	- se si fanno operazioni tra due tipi diversi il risultato sarà del tipo più alto in gerarchia tra gli operandi.
+	- `y=!!x` è come se fosse una OR tra tutti i bit di $x$ 
+	- $\sim \sim x$ da come risultato $x$ perché fai il NOT due volte 
+	- `r|= 1<<4 ` per "accendere" un bit nella posizione indicata da $000000$ a $001000$  
+	- `r&= 1<<5` spegne il bit in posizione 5 
+	- `y=x<<2` moltiplica per 4 
+		- perché shifta di due posizioni a sinistra i bit.
+			- $001010=10$ diventa $101000= 40$  
+	- 
+- # Link Utili:
+	- 

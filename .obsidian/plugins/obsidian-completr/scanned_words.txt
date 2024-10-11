@@ -1911,6 +1911,7 @@ ASP
 APd
 Aqb
 Aei
+API
 nel
 necessario
 numero
@@ -3796,6 +3797,8 @@ aLO
 awH
 ampia
 angolo
+ambito
+automatiche
 un
 una
 usato
@@ -6806,6 +6809,7 @@ eTuS
 eKW
 eeT
 efficientemente
+espone
 base
 bit
 basano
