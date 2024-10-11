@@ -609,6 +609,9 @@ processing
 process
 prova
 propagato
+potevano
+potesse
+puri
 realizzare
 rappresentare
 risultato
@@ -1216,6 +1219,8 @@ rHe
 rlVN
 rwI
 ridondanza
+realizzato
+riesci
 la
 le
 lo
@@ -2278,6 +2283,9 @@ npO
 nCM
 nMc
 nIQ
+nasce
+necessitava
+nidificate
 capire
 codifiche
 capacit
@@ -3116,6 +3124,7 @@ cominciare
 csnr
 csD
 com
+continuarono
 avendo
 alcune
 arriva
@@ -3799,6 +3808,10 @@ ampia
 angolo
 ambito
 automatiche
+azionisti
+accantonare
+accendere
+analogici
 un
 una
 usato
@@ -4738,6 +4751,8 @@ distingue
 distinzioni
 dym
 domain
+divent
+digitali
 finito
 fanno
 facilmente
@@ -5188,6 +5203,7 @@ fZs
 fLBJ
 fisse
 fallimenti
+fecero
 in
 il
 invece
@@ -6810,6 +6826,8 @@ eKW
 eeT
 efficientemente
 espone
+esigenza
+esistenti
 base
 bit
 basano
@@ -8298,6 +8316,9 @@ scudare
 strutturali
 spezzettare
 simbolici
+spegne
+shifta
+spettro
 otterremmo
 ottenere
 occupare
@@ -9123,6 +9144,10 @@ vPm
 vOjy
 vYZ
 viaggiare
+venne
+voleva
+viaggiano
+viste
 troppo
 testimone
 tramite
@@ -13057,6 +13082,7 @@ MeB
 Mmmm
 Mjp
 Mezzo
+MULTIX
 ES
 Esempi
 Ex
@@ -13796,6 +13822,8 @@ CHxo
 CPV
 Canali
 Commutazione
+Cross
+Compiler
 Questa
 Quello
 Qz
@@ -17993,6 +18021,7 @@ KFK
 KKo
 KSg
 Khu
+Kernel
 Us
 US
 Ur
@@ -18301,6 +18330,7 @@ URP
 UwX
 UTy
 UDvv
+UNIX
 Zx
 ZD
 ZRz
@@ -19462,6 +19492,7 @@ ToT
 TyU
 TTW
 Toz
+Throughput
 GY
 GT
 Ghw
