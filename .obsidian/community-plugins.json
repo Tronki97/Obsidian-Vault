@@ -19,5 +19,8 @@
   "homepage",
   "dataview",
   "obsidian-banners",
-  "templater-obsidian"
+  "templater-obsidian",
+  "local-gpt",
+  "obsidian-textgenerator-plugin",
+  "smart-connections"
 ]
