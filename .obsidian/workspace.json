@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Il Livello fisico.md",
+                "file": "Livello 2.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari ed Expr.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -43,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Il Livello fisico.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Il Livello fisico.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Il Livello fisico.md"
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md"
               }
             }
           },
@@ -205,10 +206,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9ccb6bf1f2b91f6d",
+  "active": "8a8d64c71963c149",
   "lastOpenFiles": [
+    "Pasted image 20241011142131.png",
+    "Pasted image 20241011142014.png",
+    "Pasted image 20241011141354.png",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari ed Expr.md",
+    "Livello 2.md",
     "Il Livello fisico.md",
+    "Pasted image 20241011140421.png",
     "LaTeX-cheat-sheet 1.pdf",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura protocolli di internet.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi a stati finiti.md",
@@ -223,7 +230,6 @@
     "Secondo Anno/Tecnologie Web/HTTP & REST",
     "immagini/Pasted image 20241010123412.png",
     "immagini/Pasted image 20241010125052.png",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
     "immagini/Pasted image 20241010124218.png",
@@ -238,12 +244,8 @@
     "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza.md",
     "immagini/Pasted image 20241010113346.png",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automi finiti deterministici.md",
     "immagini/Pasted image 20241008191509.png",
     "immagini/Pasted image 20241008191424.png",
-    "immagini/Pasted image 20241008185748.png",
-    "immagini/Pasted image 20241008190017.png",
-    "immagini/Pasted image 20241008185820.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",

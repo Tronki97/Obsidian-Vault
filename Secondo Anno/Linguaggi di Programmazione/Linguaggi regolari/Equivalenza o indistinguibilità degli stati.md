@@ -44,6 +44,20 @@ data: "`2024-10-10 12:37`"
 		- 5) $k$ esiste ed è minore di 
 			- $$|\sim_{0}|=|F \times F|+|(Q-F) \times (Q-F)|=$$
 			- $$=|F|^{2}+|(Q-F)|^{2}$$
-			- 
+- # ES:
+	- ![[Pasted image 20241011141354.png]]
+	- Gli stati equivalenti risultano essere:
+		- $A,B$ 
+		- $F$
+		- $C,D,E$ 
+	- e l'automa minimo risultante da questa considerazione è:
+		- ![[Pasted image 20241011142014.png]]
+		- col linguaggio $L= 0^{*}10^{*}$
+- # Identità:
+	- ![[Pasted image 20241011142131.png]]
+	- ogni stato è equivalente solo a se stesso.
+- # Algoritmo di Tabella a Scala:
+	- tabella con coppie che non si ripetono
+	- prima della prima iterazione metto il segno $x_{0}$ per segnalare che la coppia è distinta 
 - # Link Utili:
 	- 

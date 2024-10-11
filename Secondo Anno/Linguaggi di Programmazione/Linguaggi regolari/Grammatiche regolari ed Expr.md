@@ -30,6 +30,24 @@ data: "`2024-10-10 12:10`"
 		- $$A_{1}\approx=a_{11}A_{1}|...|a_{1n}A_{n}|b_{11}|...|b_{1}p_{1}$$
 		- $$A_{2}\approx=a_{21}A_{1}|...|a_{2n}A_{n}|b_{21}|...|b_{2}p_{2}$$
 		- $$A_{1}\approx=a_{n1}A_{1}|...|a_{nn}A_{n}|b_{n1}|...|b_{n}p_{n}$$
-		- si costruisce una _espressione regolare_ 
+		- si costruisce una _espressione regolare_ per $A_{n}$ che usa $A_{1},...,A_{n-1}$
+			- $$A_{n}\approx S_{n}[A_{1},..,A_{n-1}]$$
+		- e si procede facendo:
+			- $$A_{n-1}\approx S_{n-1}[A_{1},...,A_{n-2}]$$
+		- fino ad arrivare ad $A_{1}$ ovvero il simbolo iniziale
+- # ES:
+	- ![[Pasted image 20241011140421.png]]
+- # OSS: 
+	- 1)
+		- la [[Grammatiche regolari]] con unica regola 
+			- $A\to aA$ 
+		- definisce il linguaggio vuoto, non $a^{*}$
+		- quindi: $S_{G}=\emptyset$ 
+	- 2) 
+		- Tutti i formalismi sono equivalenti:
+			- generano: [[Grammatiche regolari]]
+			- riconoscono: [[Automi finiti non deterministici||NFA]]/[[Automi finiti deterministici||DFA]]
+			- descrivono: _regex_ 
+		- la stessa classe di linguaggi ovvero i [[Linguaggi regolari]] 
 - # Link Utili:
 	- 

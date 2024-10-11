@@ -10,6 +10,7 @@ data: "`2024-10-11 13:48`"
 		- codifica di dati digitali usando i segnali analogici
 		- la velocità dei segnali è fissa siccome viaggiano sullo spettro elettromagnetico andando (quasi) a quella della luce
 		- capacità del canale di trasmissione ovvero: il numero massimo di bit al secondo trasmissibili. ciò che la determina è la lunghezza del canale su cui viaggiano i dati che quindi è l'indice del tempo di descrizione di ogni bit.
+			- quindi la limitazione nel trasferire le informazioni spesso è delimitata dalla _capacità di leggerle piuttosto che dal trasferirle_. 
 		- ## Throughput: 
 			- l'indice che dice quanti _b/s puri di sola informazione_ riesci a trasmettere sul canale 
 		- 
