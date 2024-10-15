@@ -4,6 +4,8 @@ tags:
 aliases:
   - minimi quadrati
   - residuo
+  - equazioni normali
+  - SVD
 data: "`2024-10-07 14:03`"
 ---
 - # Problema:
@@ -17,7 +19,7 @@ data: "`2024-10-07 14:03`"
 	- _quindi tra tutte le x di $\mathbb{R}^{n}$ quella che rende il residuo $r$ minimo. _
 		- $F:\mathbb{R}^{n} \to \mathbb{R^{+}}$ 
 - # Procedimento:
-	- ## Equazioni normali:
+	- ## Equazioni normali: ^51204a
 		- normali perché guardano la norma.
 		- minimizzare $||Ax-b||^{2}_2$ quindi:
 		- $$(Ax-b)^{T}(Ax-b)=$$
@@ -33,7 +35,7 @@ data: "`2024-10-07 14:03`"
 			- $\nabla f(x)=2A^{T}Ax-2A^{T}b$ e devo trovare il punto in cui questo gradiente è uguale a 0.
 			- e posso riscrivere $A^{T}Ax = A^{T}b\in \mathbb{R}^{n}$ 
 		- $A^{T}Ax = A^{T}b$ è quindi un sistema lineare con matrice simmetrica e definita positiva e quindi si può usare [[Risoluzione di un sistema lineare#^c7c2d7||cholesky]]
-	- ## Decomposizione in valori singolari:
+	- ## Decomposizione in valori singolari (SVD):  ^3e0cd7
 		- se $rk(A)<min(m,n)$ ci sono infinite soluzioni e tra tutte queste c'è una $x'=min\| y\|_{2}^{2}$ che appunto ha norma minima e per calcolarla si usa la _singular value decomposition_  
 		- $$||Ax-b||^{2}_{2}=||U^{T}Ax-U^{T}b||^{2}_2=$$ 
 			- fattibile grazie alle proprietà delle matrici ortogonali
@@ -45,21 +47,6 @@ data: "`2024-10-07 14:03`"
 				- $$\sum\limits_{i=1}^{k}(\sigma_{i}y_{i}-g_{i})^{2}$$
 				- che in particolare vuol dire renderlo nullo, ovvero:
 					- $$y_{i}=\frac{g_{i}}{\sigma_{i}}=\frac{U^{T}b}{\sigma_{i}}$$
-	- ## definizione di pseudoinversa:
-		- per scrivere in modo più elegante la soluzione a questo problema come fosse la soluzione di un sistema lineare
-		- $A^{+}=V \Sigma^{+}U^{T}$ $\frac{1}{\sigma_{1}}$
-			- $$\Sigma^{+}=\begin{pmatrix}\frac{1}{\sigma_{1}}& 0& 0\\ 0&\frac{1}{\sigma_{2}}&0\\ \cdots&\cdots&\cdots\\0&0 & \frac{1}{\sigma_{n}}\\&0&\end{pmatrix}$$ 
-		- ### Proprietà:
-			- $AA^{+}A=A$
-			- $A^{+}AA^{+}=A^{+}$
-			- $(AA^{+})^{T}=AA^{+}$
-			- $(A^{+}A)^{T}=A^{+}A$
-		- e appunto la soluzione si può scrivere come:
-			- $x=A^{-1}b$
-			- $x^{*}=V \Sigma^{*}U^{T}b \implies x^{*}=A^{+}b$
-		- inoltre il [[Risoluzione di un sistema lineare#^47956e||numero di condizione]] di una matrice $A\in \mathbb{R}^{m \times n}$ si può scrivere usando la pseudoinversa come:
-			- $$K(A)=||A||||A^{+}||$$
-		- e il numero di condizionamento spettrale come:
-			- $$K(A)_{2} =||A||_{2}||A^{+}||_{2}=\frac{\sigma_{1}}{\sigma_{n}}$$
+	- oppure si potrebbe usare la [[Pseudoinversa]] per rappresentare la soluzione del problema in modo più elegante 
 - # Link Utili:
 	- 

@@ -1,0 +1,67 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-15 13:54`"
+---
+- # Set di dati:
+	- Un set di dati è composto principalmente da:
+		- variabili _indipendenti_, o _input_ indicate spesso con la lettera $x$
+		- variabili _dipendenti_, o _output_ che rappresentano il valore da prevedere
+	- Quindi si potrebbe dire che un _Set di dati_ è una collezione di coppie di valori:
+		- $$\{(x_{1},y_{1}),(x_{2},y_{2}),...,(x_{n},y_{n})\}$$
+- # Approssimazione:
+	- gli algoritmi di approssimazione si basano su due ipotesi:
+		- 1) I dati seguono l'andamento di una _curva_ complessa, ma con un _pattern_ riconoscibile.
+			- Quindi si può rappresentare questa assunzione dicendo che:
+				- $$\exists f(x):y\approx f(x)$$
+				- dove l'errore tra la previsione dei dati e l'effettiva $y$ è data dal _rumore_ 
+		- 2) I dati _NON_ sono disposti in maniera precisa lungo la curva, ma mostrano un comportamento casuale: soggetti a _rumore_ 
+			- può essere riformulata con:
+				- $$\exists e: y=f(x)+e \ \ \ \ \forall x$$
+- # Problema test:
+	- visto che si lavora con dati reali si cerca di eliminare certi problemi.
+	- quindi di solito si costruisce un problema test dove il risultato _esatto_ è noto per definizione.
+	- La creazione di questo problema test deve rispettare le 2 ipotesi descritte in precedenza:
+		- 1) specificare una $f(x)$ 
+		- 2) generare del "rumore" Gaussiano $e$  
+	- Si usa un modello di approssimazione _polinomiale_ ovvero dove $f(x)$ si assume essere un polinomio nella variabile $x$ di grado $d$ ovvero:
+		- $$f(x)=a_{0}+a_{1}x+a_{2}x^{2}+...+a_{d}x^{d}=\sum_{k=0}^{d}a_{k}x^{k}$$
+		- Questa funzione dipende in maniera _unica_ dai coefficienti $a$.
+- # Approssimazione ai minimi quadrati:
+	- come modello per l'approssimazione uso:
+		- $$f_{\theta}(x,\alpha)=\sum\limits_{k=0}^{d}a_{k}x^{k}$$
+		- dove $d$ viene scelto dall'utente 
+	- da notare che la definizione di $f_{\theta}(x,\alpha)$ può essere modificata osservando che definendo:
+		- $$x^{(d)}:=[x^{0}x^{1}...x^{d}]\in \mathbb{R}^{d+1}$$
+	- come vettore di lunghezza $d+1$ il cui $k$-esimo elemento è $x^{k}$ allora:
+		- $$f_{\theta}(x,\alpha)=\alpha^{T}x^{(d)}$$
+	- e quindi devo trovare quei parametri che approssimino $f_{\theta}(x,\alpha)$ a $y$ (a meno del _rumore_). Per farlo è possibile minimizzare l'errore medio di predizione del modello $f_{\theta}(x,\alpha)$:
+		- $$min_{\alpha} \sum\limits_{i=1}^{n} (f_{\theta}(x_{i},\alpha)-y_{i})^{2}=$$
+		- $$=min_{\alpha}\sum\limits_{i=1}^{n}(\alpha^{T}x_{i}^{(d)}-y_{i})^{2}$$
+	- ## Matrice di Vandermonde:
+		- $$X=\begin{pmatrix}x_{1}^{(d)^{T}}\\ x_{2}^{(d)^{T}}\\ \vdots \\ x_{n}^{(d)^{T}}\end{pmatrix}=\begin{pmatrix}x_{1}^{0}& x_{1}^{1} & ... & x_{1}^{d}\\ x_{2}^{0}& x_{2}^{1} & ... & x_{2}^{d}\\ \vdots & \vdots & & \vdots \\ x_{n}^{0}& x_{n}^{1} & ... & x_{n}^{d}\end{pmatrix} \in \mathbb{R}^{n \times d}$$
+		- questa [[Matrici||matrice]] ha per righe i dati, è di grado $d$, è associata ad $\{ x_1,...,x_n\}$ e la formula del minimo è equivalente a:
+			- $$min_{\alpha}||X \alpha -y||_{2}^{2}$$ 
+	- Tutto questo risulta essere un [[Problema dei minimi quadrati]] in cui la amatrice è quella di _Vandermonde_ di grado $d$ associata ai dati $\{ x_1,...,x_n\}$ mentre $y$ è il vettore dei dati _compresi di rumore_ $\{ y_1,...,y_n\}$ 
+	- ## Risoluzione con equazioni normali
+		- bisogna trovare $\alpha$ che risolva:
+			- $$min_{a}||X \alpha -y||^{2}_{2}$$
+		- si può risolvere con le [[Problema dei minimi quadrati#^51204a||equazioni normali]] associati a tale problema:
+			- $$X^{T}X \alpha=X^{T}y$$ 
+		- Ciò si può fare anche con:
+			- decomposizione di [[Risoluzione di un sistema lineare#^c7c2d7||Cholesky]]
+			- [[autovalori e autovettori#^30ec44||SVD]]  
+		- ### Risoluzione tramite Cholesky:
+			- la matrice associata al problema è [[Simmetria#^f22f7f||simmetrica]] e definita positiva e ciò basta per applicare Cholesky.
+			- Siccome $dim(X)=(n,d+1)$ il rango di $X$ è massimo $\iff$ è uguale a $d+1$ verifico con python:
+				- ![[Screenshot (4).png]] 
+			- Si può quindi applicare Cholesky che trova la matrice triangolare inferiore $L$:
+				- $$X^{T}X=LL^{T}$$
+			- Si risolve il sistema di equazioni sostituendo:
+				- $$\begin{cases}Lz=X^{T}y\\L^{T}\alpha=z\end{cases}$$
+		- ### Risoluzione con SVD:
+			- considerando la decomposizione della matrice X:
+				- $$X=U \Sigma V^{T}$$ 
+- # Link Utili:
+	- 

@@ -1,8 +1,8 @@
 ---
-tags:
-  - TODO
+tags: 
 aliases:
   - indistinguibilità
+  - tabella a scala
 data: "`2024-10-10 12:37`"
 ---
 - # Def:

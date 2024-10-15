@@ -625,6 +625,10 @@ pzx
 pBE
 pcQ
 pAjz
+principalmente
+previsione
+precisa
+predizione
 realizzare
 rappresentare
 risultato
@@ -1248,6 +1252,11 @@ rat
 rzyYYY
 rxX
 rJn
+riconoscibile
+riformulata
+risolva
+rJc
+rFD
 la
 le
 lo
@@ -1619,6 +1628,9 @@ lKHCC
 lMC
 lxs
 lgc
+limitazione
+leggerle
+lettera
 ALU
 AND
 Address
@@ -1971,6 +1983,7 @@ AKW
 Ahe
 Aym
 ACl
+Approssimazione
 nel
 necessario
 numero
@@ -3220,6 +3233,13 @@ cGOHkK
 ceYy
 cum
 cwvs
+convergenza
+contrazione
+curva
+complessa
+casuale
+creazione
+condizionamento
 avendo
 alcune
 arriva
@@ -3921,6 +3941,8 @@ aiay
 aAFl
 aoU
 aCr
+approssimino
+amatrice
 un
 una
 usato
@@ -4900,6 +4922,11 @@ dyQ
 dQt
 dzJ
 duc
+delimitata
+descrivono
+descritte
+definendo
+deY
 finito
 fanno
 facilmente
@@ -5364,6 +5391,7 @@ fnnfn
 fmf
 fya
 fXp
+formalismi
 in
 il
 invece
@@ -6532,6 +6560,10 @@ mWc
 mVkG
 mzb
 mSX
+mostrano
+mpa
+mOa
+mxU
 esempio
 eccede
 errori
@@ -7039,6 +7071,8 @@ eGx
 eBhij
 eCK
 eVV
+effettiva
+esatto
 base
 bit
 basano
@@ -8578,6 +8612,8 @@ sQJ
 sal
 sEE
 szua
+spettrale
+suG
 otterremmo
 ottenere
 occupare
@@ -8995,6 +9031,7 @@ oJa
 oCo
 oXx
 oPW
+osservando
 va
 valore
 viene
@@ -9440,6 +9477,9 @@ vSH
 vuO
 vKG
 vLf
+verifico
+vaEfs
+vIi
 troppo
 testimone
 tramite
@@ -9907,6 +9947,9 @@ talf
 tKCk
 taw
 tpO
+trasferirle
+test
+tnSO
 grandi
 gli
 grande
@@ -10294,6 +10337,8 @@ gFF
 geY
 geCr
 gYc
+gvV
+gUme
 NOT
 NotePad
 Nu
@@ -10637,6 +10682,7 @@ NoYb
 NWuK
 Nnv
 NSa
+NON
 Il
 Instruction
 IR
@@ -11035,6 +11081,8 @@ IeU
 IAA
 Iik
 ISf
+ISC
+IMW
 Rappresentazione
 Registri
 Register
@@ -11403,6 +11451,8 @@ RpJ
 Rhj
 RQY
 RwH
+Risoluzione
+ROvR
 Si
 Se
 Status
@@ -11835,6 +11885,9 @@ Sxa
 SBU
 SVP
 SOZ
+Siccome
+Syh
+SUPU
 BINARY
 Bus
 BX
@@ -12861,6 +12914,7 @@ DEe
 DfY
 Dlp
 Don
+DDg
 Le
 La
 Lg
@@ -13178,6 +13232,7 @@ LyYU
 LBk
 LEqYy
 LOer
+LdV
 Modulo
 Massimo
 Memory
@@ -13528,6 +13583,7 @@ Mmm
 MSy
 MGt
 Mza
+MDDDD
 ES
 Esempi
 Ex
@@ -14292,6 +14348,7 @@ CWI
 CqY
 CFM
 CWNc
+CiX
 Questa
 Quello
 Qz
@@ -14612,6 +14669,8 @@ QlKy
 Qbx
 QNJ
 QXC
+Qgr
+QQw
 Formato
 FLIP
 FLOP
@@ -15291,6 +15350,7 @@ WIVz
 WcC
 WZPr
 WWXb
+WGH
 zero
 zip
 zL
@@ -15610,6 +15670,7 @@ zmam
 zhhn
 zxml
 zEC
+zJtY
 Half
 HACK
 HIT
@@ -15925,6 +15986,7 @@ HWJ
 HMQ
 Hynz
 HaX
+HDDDDM
 XOR
 Xm
 Xo
@@ -16210,6 +16272,7 @@ Xbf
 XFya
 Xic
 XiS
+XUv
 ha
 ho
 hack
@@ -16534,6 +16597,7 @@ hnnF
 hjq
 hjkO
 hFC
+hqh
 JZ
 JT
 Jd
@@ -16834,6 +16898,7 @@ JSz
 Jii
 JKxC
 Jaz
+Jcf
 kB
 kW
 kWs
@@ -17150,6 +17215,7 @@ kJiJO
 kvt
 kjQp
 kBV
+kOk
 jmp
 jy
 jwä
@@ -17447,6 +17513,7 @@ jvt
 jPcL
 jeB
 jwO
+jte
 word
 wu
 wf
@@ -18103,6 +18170,7 @@ Onpz
 OhedK
 OEC
 OIC
+OLD
 xz
 xX
 xF
@@ -18419,6 +18487,7 @@ xXf
 xHv
 xAN
 xbSr
+xLl
 Kq
 KG
 KR
@@ -18704,6 +18773,7 @@ KYq
 KrH
 Khe
 KvC
+KEv
 Us
 US
 Ur
@@ -19295,6 +19365,8 @@ ZNT
 ZXI
 Zmn
 ZQY
+ZNN
+ZnLw
 YQ
 Yz
 YI
@@ -20241,6 +20313,7 @@ TyIe
 TVm
 TUW
 Tlw
+Tutto
 GY
 GT
 Ghw
@@ -20573,6 +20646,7 @@ GRU
 GOPM
 GHz
 GVLxl
+Gaussiano
 Vb
 VD
 VG
@@ -20940,6 +21014,8 @@ VGK
 VHu
 VtM
 VfO
+Velocit
+Vandermonde
 öG
 öH
 özw

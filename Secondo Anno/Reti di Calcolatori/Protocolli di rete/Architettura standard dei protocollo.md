@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - livelli
 date: 2024-10-02
