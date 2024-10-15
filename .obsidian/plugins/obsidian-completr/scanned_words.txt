@@ -642,6 +642,10 @@ pdQ
 pyX
 ppJ
 pZFX
+precedentemente
+presenza
+portando
+purtroppo
 realizzare
 rappresentare
 risultato
@@ -1284,6 +1288,7 @@ rpf
 rgy
 rNp
 rYwK
+risolvendo
 la
 le
 lo
@@ -1669,6 +1674,7 @@ lxy
 lPs
 lTp
 lIb
+lontano
 ALU
 AND
 Address
@@ -3322,6 +3328,8 @@ cqa
 cMn
 ciU
 cOq
+considerati
+curve
 avendo
 alcune
 arriva
@@ -4046,6 +4054,7 @@ aKwB
 ail
 aas
 aUOnU
+avanzati
 un
 una
 usato
@@ -5045,6 +5054,8 @@ determini
 dyY
 dGG
 dGn
+definite
+dietro
 finito
 fanno
 facilmente
@@ -5516,6 +5527,7 @@ finiamo
 filz
 ffV
 fqr
+favorisce
 in
 il
 invece
@@ -6160,6 +6172,7 @@ ixho
 indicati
 icO
 iGo
+impatto
 modo
 mentre
 massimo
@@ -6707,6 +6720,7 @@ marchi
 marchiamo
 mano
 mrl
+match
 esempio
 eccede
 errori
@@ -7221,6 +7235,8 @@ elencate
 equivaleze
 erano
 eql
+elencato
+elaborato
 base
 bit
 basano
@@ -8792,6 +8808,8 @@ smQ
 sON
 stZ
 sUf
+scattare
+svolto
 otterremmo
 ottenere
 occupare
@@ -9679,6 +9697,7 @@ vRc
 vFF
 vIAA
 vcb
+visualizzando
 troppo
 testimone
 tramite
@@ -10552,6 +10571,7 @@ guidare
 gia
 gyZ
 gUi
+generer
 NOT
 NotePad
 Nu
@@ -13186,6 +13206,8 @@ Diamo
 Dnrpj
 DzQi
 Djry
+Dichiarazioni
+Dal
 Le
 La
 Lg
@@ -14649,6 +14671,7 @@ Cjk
 CQjQ
 Cyb
 CWy
+Composizione
 Questa
 Quello
 Qz
@@ -15350,6 +15373,7 @@ Fya
 Fsd
 FlW
 Frp
+Funzioni
 Word
 WK
 WB
@@ -20720,6 +20744,7 @@ TMyDy
 TJI
 TYU
 TNU
+Tikhonov
 GY
 GT
 Ghw

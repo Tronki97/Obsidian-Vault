@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases: 
 data: "`2024-10-15 16:36`"
 ---
@@ -48,4 +47,4 @@ data: "`2024-10-15 16:36`"
 			- ![[Pasted image 20241015182804.png]]
 			- purtroppo non è applicabile facilmente siccome la sua risoluzione non è associata alle equazioni normali e quindi richiede di sviluppare algoritmi avanzati. 
 - # Link Utili:
-	- 
+	- https://devangelista2.github.io/calcolo-numerico/approssimazione/overfit_underfit_regolarizzazione.html 

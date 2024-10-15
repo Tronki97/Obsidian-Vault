@@ -1,9 +1,12 @@
 ---
-tags:
-  - TODO
+tags: 
 aliases:
   - cholesky
   - numero di condizione
+  - errore inerente
+  - norma 1
+  - norma 2
+  - norma matriciale
 ---
 
 - Premessa 

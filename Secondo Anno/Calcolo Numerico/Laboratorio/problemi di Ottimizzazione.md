@@ -19,4 +19,4 @@ data: "`2024-10-15 18:30`"
 	- Se $f(x)=x^{T}w$ è una funzione lineare in $x$ allora il problema è detto _lineare_
 	- se $f(x)=x^{T}Ax+x^{T}b$ è quadratica allora il problema è detto _quadratico_ 
 - # Link Utili:
-	- 
+	- https://devangelista2.github.io/calcolo-numerico/ottimizzazione/intro.html

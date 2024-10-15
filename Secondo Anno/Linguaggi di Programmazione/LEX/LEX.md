@@ -1,7 +1,7 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: 
+aliases:
+  - file.l
 data: "`2024-10-15 18:44`"
 ---
 - # LEX:

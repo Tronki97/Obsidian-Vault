@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases: 
 data: "`2024-10-15 13:54`"
 ---
@@ -64,4 +63,4 @@ data: "`2024-10-15 13:54`"
 			- considerando la decomposizione della matrice X:
 				- $$X=U \Sigma V^{T}$$ 
 - # Link Utili:
-	- 
+	- https://devangelista2.github.io/calcolo-numerico/approssimazione/modelli_approssimazione.html 
