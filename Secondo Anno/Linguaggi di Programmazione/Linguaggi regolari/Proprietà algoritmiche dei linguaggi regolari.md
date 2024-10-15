@@ -1,0 +1,55 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-15 19:10`"
+---
+- # Def:
+	- Sono utili per dimostrare che esistono linguaggi, che non hanno queste proprietà, che _non sono regolari_
+	- ## ES:
+		- $$\{a^{n}b^{n}|n\ge 0\}$$
+			- necessita di contare all'infinito e per farlo sarebbero necessari _infiniti_ stati 
+		- Ciò va in contrapposizione con i [[Automi finiti deterministici||DFA]] e [[Automi finiti non deterministici||NFA]] in quanto hanno stati _finiti_ 
+- # Proprietà algoritmiche:
+	- ## Pumping Lemma:
+		- se $L$ è un [[Linguaggi regolari||linguaggio regolare]] allora 
+			- $$\exists N>0: \forall z\in L | \ |z| \geq N, \exists u,v,w:$$
+				- $z=uvw$
+				- $|uv|\le N$
+				- $|v|\ge 1$ 
+				- $\forall k\ge 0$    $uv^{k}w\in L$ 
+			- inoltre $N$ $\leq$ del numero di stati del DFA [[minimizzazione||minimo]] che accetta $L$ 
+		- ### Dim:
+			- $N=|Q_{M}|$ dove $M$ è il DFA minimo che accetta $L$ 
+			- $z=a_{1}...a_{m}\in L$ $m\geq N$
+			- quindi: 
+				- $$q_{0}\to^{a_{0}}q_{1}....\to^{a_{m}}q_{m}\in F$$ 
+			- ora $o-m$ è dato da $m+1$ stati con $m+1>N$
+			- ciò implica che $\exists i,j: q_{i}=q_{j}$  con $i\ne j$ 
+				- ![[Pasted image 20241015193002.png||600]] 
+			- $i\ne j \implies v=a_{i+1}...a_{j}$ è tale che $|v| \geq 1$ 
+			- $|uv|\le N$ mi dice che(se $m$ è molto grande potrebbero esserci più cicli) prendo il primo ciclo.
+			- ![[Pasted image 20241015193241.png]]
+				- $\forall k\ge 0$   $uv^{k}w\in L$ perché il ciclo $v$ può essere percorso un numero arbitrario di volte 
+	- Spesso viene utilizzato il _pumping lemma_ per dire che un linguaggio non è regolare. 
+	- ## Negazione pumping lemma:
+		- Se $\forall N>0 \ \ \exists z \in L| \ |z|\geq N$
+			- $\forall u,v,w$ se:
+				- $z=uvw$
+				- $|uv|\le N$
+				- $|v|\ge 1$
+			- allora $\exists k\ge 0: uv^{k}w \notin L$ 
+		- allora $L$ non è regolare.
+	- ## ES:
+		- Dimostro che $L=\{a^{n}b^{n}|n\ge 1\}$ non è regolare.
+		- fisso un $N$ generico $(\forall N >0)$
+		- Scelgo $z=a^{N}b^{N}$
+		- Guardo tutte le possibili scomposizioni di $z$ in tre sottostringhe $(\forall u,v,w):$
+			- $z=uvw$
+			- $|uv|\le N$
+			- $|v|\ge 1$ 
+			- La condizione $|uv|\le N$ impone che $u$ e $v$ siano fatte di "a". quindi $v=a^{j}$ con $j\geq 1$ 
+		- $\exists k =2: uv^{2}w=uvvw=a^{N+j}b^{N}\notin L$ 
+		- Quindi il linguaggio $L$ non è regolare. 
+- # Link Utili:
+	- 

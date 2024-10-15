@@ -28,7 +28,7 @@ data: "`2024-10-15 13:54`"
 	- Si usa un modello di approssimazione _polinomiale_ ovvero dove $f(x)$ si assume essere un polinomio nella variabile $x$ di grado $d$ ovvero:
 		- $$f(x)=a_{0}+a_{1}x+a_{2}x^{2}+...+a_{d}x^{d}=\sum_{k=0}^{d}a_{k}x^{k}$$
 		- Questa funzione dipende in maniera _unica_ dai coefficienti $a$.
-- # Approssimazione ai minimi quadrati:
+- # Approssimazione ai minimi quadrati: ^9b2ae0
 	- come modello per l'approssimazione uso:
 		- $$f_{\theta}(x,\alpha)=\sum\limits_{k=0}^{d}a_{k}x^{k}$$
 		- dove $d$ viene scelto dall'utente 

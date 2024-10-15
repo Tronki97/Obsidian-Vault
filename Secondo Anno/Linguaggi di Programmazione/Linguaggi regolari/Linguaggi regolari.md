@@ -20,7 +20,7 @@ date: 2024-10-03
 		- ### pattern 
 			- è una descrizione generale della forma dei valori di una classe di token come:
 				- $(x\ |\ y)(x\ |\ y\ |\ 0\ |\ 1)^{*}$ 
-		- ### lessema: 
+		- ### lessema:  ^114588
 			- è una striga istanza di un _pattern_ come $x_{1}$  è un lessema dell'istanza del pattern visto prima 
 	- ## ES:
 		- dalla stringa: `if(x==0)printf ("zero")` 

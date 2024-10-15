@@ -1,0 +1,47 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-15 18:44`"
+---
+- # LEX:
+	- Generatore di scanner, specifico di Unix
+	- _FLEX_ più recente
+	- ## Input:
+		- `File.l` che ha insieme di definizioni e assiomi
+	- ## Output
+		- Programma in C che genera un automa in grado di riconoscere il linguaggio
+	- Lo diamo poi in pasto ad un compilatore $C$ che genera un _eseguibile_
+	- Diamo in input ad esso un programma scritto in $l$ e abbiamo una lista di _token_ in output 
+	- ## File.l:
+		- ### Composizione:
+			- #### Dichiarazioni:
+				- ![[Pasted image 20241015185023.png||600]]
+			- #### Regole:
+				- ![[Pasted image 20241015185102.png||600]]
+			- #### Funzioni ausiliarie:
+				- se si usano funzioni complesse nella parte "azione" queste potrebbero essere definite qui.
+		- ### File lex.yy.c
+			- Implementa il [[Automi finiti deterministici||DFA]] riconoscitore del linguaggio
+				- Produce il token relativo al [[Linguaggi regolari#^114588||lessema]] in input, se riconoscibile ed esegue l'azione relativa
+				- Ricerca sempre il pattern più lungo se uno è prefisso dell'altro
+				- Se uno è caso speciale dell'altro sceglie il primo in elenco
+					- Applicare queste regole nella simulazione del DFA relativo all'[[Automi finiti non deterministici||NFA]]
+				- Le parole riservate devono essere elencate  prima di tutto questo 
+		- A guidare il processo è l'_analizzatore sintattico_ che lavora dando istruzioni all'_analizzatore lessicale_ 
+		- ### Es:
+			- ![[Pasted image 20241015185250.png||600]]
+			- nel caso l'input fosse $babba$
+				- $b$ = $P_{3}$ 
+				- $abb= P_{2}$
+				- $a=P_{1}$ 
+			- che traduce in $ykz$ 
+			- _Per riconoscere questi lessemi_ usa un _NFA_ per ogni pattern.
+				- ![[Pasted image 20241015185728.png]]
+			- #### Procedimento:
+				- procede leggendo l'input finché non si blocca 
+				- se lo stato in cui si trova non è di riconoscimento torna indietro finche non ne trova uno.
+					- Questo fa si che se più pattern possono essere riconosciuti nello stesso prefisso sceglie quello più lungo. 
+				- Se arrivati al _match_ più pattern vanno bene si sceglie quello elencato prima
+- # Link Utili:
+	- 

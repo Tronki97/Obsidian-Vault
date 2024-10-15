@@ -1,0 +1,51 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-15 16:36`"
+---
+- # Intro:
+	- la soluzione calcolata tramite i [[Approssimazione dei dati#^9b2ae0||minimi quadrati]] non assomiglia alla soluzione corretta.
+	- per migliorare c'è bisogno di gestire in maniera corretta gli _iperparametri_ del modello di approssimazione.
+	- ## Iperparametri:
+		- tutti i parametri che devono essere scelti a mano dall'utente  
+	- In particolare il modello precedente aveva solo _1_ iperparametro ovvero il grado $d$ del polinomio. Infatti si nota che come il valore selezionato per alcune prove è $d=5$ mentre i dati erano costruiti con $d=3$ 
+	- ![[Pasted image 20241015172706.png]]
+		- grafico delle soluzioni al variare di $d$
+- # Underfit e Overfit:
+	- Guardano il Grafico precedente è chiaro come la scelta degli iperparametri determini il verificarsi o meno degli Underfit o Overfit.
+		- _Underfit_ è troppo approssimativo
+		- _Overfit_ interpola anche il rumore dei dati reali
+	- Per evitare l'_underfit_ basta guardare il valore residuo che quando molto grande implica un valore dell'iperparametro troppo lontano da quello giusto. 
+		- ![[Pasted image 20241015173240.png]]
+		- infatti più ci si avvicina al valore giusto di $d$ più il residuo diminuisce.
+	- Per evitare l'_overfit_  si può utilizzare la _Regolarizzazione_.
+- # Regolarizzazione:
+	- Suppongo che $d=3$ sia giusto ma scelgo $d=5$ così faccio scattare l'_overfit_
+	- Faccio poi richiesta al modello elaborato precedentemente di porre più valori possibili a $0$ riducendo al minimo l'impatto sull'approssimazione
+	- Ciò si riduce a:
+		- $$min_{\alpha} \frac{1}{2} ||X \alpha-y||_{2}^{2}+\frac{\lambda}{2} ||\alpha||^{2}_{2}$$
+		- il primo termine rappresenta il [[Problema dei minimi quadrati]]
+		- il secondo richiede i valori di $\alpha$ più piccoli possibile andando a forzare la presenza di vari elementi uguali a 0.
+			- Questo termine è chiamato : _termine di regolarizzazione_ 
+			- Questo in particolare è il _termine di regolarizzazione alla Tikhonov_. 
+	- per risolvere questo problema di nota che il gradiente è uguale a $0$ se:
+		- $$X^{T}X \alpha-X^{T}y+\lambda \alpha=0$$
+		- $$(X^{T}X+\lambda)\alpha=X^{T}y$$
+		- se pongo $\alpha=0$ ottengo le [[Problema dei minimi quadrati#^51204a||equazioni normali]] 
+	- Anche questo sistema può essere svolto sia con [[Risoluzione di un sistema lineare#^c7c2d7||Cholesky]] che con [[autovalori e autovettori#^30ec44||SVD]] 
+	- ## Risoluzione con Cholesky:
+		- $n=10, \ \ d=5$  
+		- ![[Pasted image 20241015181056.png]]
+			- grafico ottenuto dal codice risolvendo con Cholesky 
+		- Dal grafico si può notare come per valori "piccoli" di $\lambda$ la soluzione ottenuta è migliore di quella del caso precedente che non aveva il termine di regolarizzazione 
+		- Nel caso in cui $\lambda$ sia troppo grande il termine di regolarizzazione genererà una curva con dei parametri _troppo piccoli_ che quindi non fitta i dati considerati portando ad un _underfit_ 
+	- ## Metodo LASSO:
+		- $$min_{\alpha}||X \alpha -y||^{2}_{2}+\lambda||\alpha||_{1}$$
+		- l'idea che c'è dietro è che:
+			- visualizzando la forma delle curve di livello della norma 1 rispetto alla 2 si nota che il punto di intersezione di una retta casuale tangente a quelle curve ha più probabilità di stare sugli assi del piano cartesiano.
+			- Ciò comporta che la norma 1 favorisce delle soluzioni $\alpha$ con più elementi uguali a $0$ 
+			- ![[Pasted image 20241015182804.png]]
+			- purtroppo non è applicabile facilmente siccome la sua risoluzione non è associata alle equazioni normali e quindi richiede di sviluppare algoritmi avanzati. 
+- # Link Utili:
+	- 
