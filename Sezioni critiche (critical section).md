@@ -1,0 +1,43 @@
+---
+tags:
+  - TODO
+aliases:
+  - CS
+  - critical section
+data: "`2024-10-19 18:44`"
+---
+- # Non-interferenza:
+	- come garantire la non-interferenza?
+	- si specificano certe parti come _speciali_, ovvero devono essere eseguite in modo atomico (senza interruzioni): in [[Proprietà di un programma#^1acdf8||mutua esclusione]] 
+	- Questo meccanismo è chiamato _sezione critica_:
+		- la parte di un programma che utilizza una o più risorse condivise
+- # Obiettivi:
+	- mutua esclusione.
+		- solo un processo dentro la CS fra tutti quelli che hanno una CS per la stessa risorsa condivisa
+	- no [[Proprietà di un programma#^2a9ed1||deadlock]] 
+	- no [[Proprietà di un programma#^054a32||starvation]] 
+	- niente attese non necessarie:
+		- un processo attende altri solo se questi devono usare una sezione critica attualmente occupata dal primo
+- # Notazione:
+	- Per indicare sezioni critiche `[enter cs] statement critico [exit cs]`
+- Il [[Sistema operativo]] non può capire da solo cosa sia una sezione critica bisogna indicargli cosa può essere eseguito in parallelo e cosa in maniera atomica.
+- # Problema:
+	- bisogna realizzare NN processi di una forma specificata (da inserire) in modo che valgano gli obiettivi descritti prima.
+- # Approcci meccanismo:
+	- ## Software:
+		- `enter cs` e `exit cs` si implementa con una libreria
+		- soggetto a errori
+		- costoso in termini di esecuzione (busy waiting)
+	- ## Hardware:
+		- utilizzano istruzioni speciali del linguaggio, progettate apposta
+		- efficienti
+		- non adatte come soluzioni general-purpose
+- # Approccio per implementare CS:
+	- basati su supporto nel SO o nel linguaggio
+	- ## Esempi:
+		- semafori
+		- monitor
+		- message passing.
+		- 
+- # Link Utili:
+	- 

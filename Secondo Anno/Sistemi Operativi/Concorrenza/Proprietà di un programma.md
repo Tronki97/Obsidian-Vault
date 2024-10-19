@@ -1,0 +1,36 @@
+---
+tags:
+  - TODO
+aliases:
+  - mutua esclusione
+  - deadlock
+  - stallo
+  - safety
+  - liveness
+  - starvation
+data: "`2024-10-19 18:25`"
+---
+- # Def:
+	- un espressione logica che rimane vera per ogni possibile storia di esecuzione del programma
+- # Tipologie:
+	- ## Safety:
+		- mostrano che il programma (se avanza) va nella direzione voluta, che non fa qualcosa di sbagliato
+		- ### Proprietà:
+			- nei processi concorrenti _non devono interferire tra di loro_ nell'accesso alle risorse condivise
+	- ## Liveness:
+		- il programma avanza, non si ferma (è vitale), che arrivi in fondo alla sua esecuzione
+		- ### Proprietà:
+			- nei processi concorrenti _i meccanismi di sincronizzazione usati non devono prevenire l'avanzamento del programma_ 
+- # ES:
+	- si consideri un sistema con NN processi; all'inizio ogni processo propone un valore, e alla fine tutti i processi si devono accordare su uno dei valori proposti
+	- _safety_ $\to$ se un processo decide, deve decidere uno dei valori proposti; se due decidono, devono decidere lo stesso valore
+	- _liveness_ $\to$ prima o poi ogni processo corretto prenderà una decisione (_non va in crash_)
+- # Mutua esclusione: ^1acdf8
+	- l'accesso a una risorsa è mutualmente esclusiva se ad ogni istante un processo può accedere a quella risorsa
+- # Deadlock: ^2a9ed1
+	- a mutua esclusione permette di risolvere il problema della non interferenza, ma può causare il blocco permanente dei processi
+	- la soluzione ad uno di questi stalli nei sistemi reali sarebbe di _uccidere uno dei processi_ 
+- # Starvation: ^054a32
+	- Quando un processo non può accedere a una risorsa perché è sempre occupata
+- # Link Utili:
+	- 

@@ -1,13 +1,11 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - processo
 data: "`2024-10-10 10:56`"
 ---
-- # Argomento:
-	- 
-	- 
-- # Processo:
+- # Processo: ^68dcd8
 	- attività statica controllata da un programma che si svolge in un processore.
 	- ## Assioma di finite progress
 		- ogni processo viene eseguito a velocità finita non nulla, ma sconosciuta.
@@ -62,6 +60,5 @@ data: "`2024-10-10 10:56`"
 		-  
 - # Race condition:
 	- il risultato non dipende dai processi ma dall'evoluzione temporale dei processi.
-	- 
 - # Link Utili:
 	- 

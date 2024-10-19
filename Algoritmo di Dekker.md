@@ -1,0 +1,53 @@
+---
+tags:
+  - TODO
+aliases:
+  - Dekker
+  - dekker
+data: "`2024-10-19 18:56`"
+---
+- # Def:
+	- Basato per la [[Proprietà di un programma#^1acdf8||mutua esclusione]] eseguito a _fasi_
+- # Fasi:
+	- ## 1°
+		- ![[Pasted image 20241019190208.png]]
+		- suppongo di avere 2 processi
+		- fanno busy waiting  (_secondo while_) finche non è il loro turno
+		- quando è il loro turno nella [[Sezioni critiche (critical section)||CS]] assegnano il turno all'altro processo 
+		- è garantita la mutua esclusione
+		- _non rispetta l'assenza di delay non necessari_
+	- ## 2°
+		- ![[Pasted image 20241019190257.png]]
+		- viola la mutua esclusione della sezione critica
+	- ## 3°
+		- ![[Pasted image 20241019190314.png]]
+		- provoca deadlock
+	- ## 4°
+		- ![[Pasted image 20241019190330.png]]
+		- provoca starvation
+- # Algoritmo di Dekker:
+	- ![[Pasted image 20241019190435.png]]
+	- ## Dimostrazione delle proprietà:
+		- ### Mutua esclusione:
+			- per assurdo: supponiamo che $P$ e $Q$ siano in CS contemporaneamente
+			- implica che `needp` e `needq` siano entrambe vere
+			- uno dei due entra per primo, supponiamo sia $Q$
+			- `needq` sarà `true` fino a quando `Q` non esce dalla CS
+			- P entra nella CS mentre $Q$ è nella CS, significa che esiste un istante temporale in cui `needq = false` e $Q$ è in CS $\to$ ASSURDO!
+		- ### Assenza di [[Proprietà di un programma#^2a9ed1||deadlock]] 
+			- per assurdo supponiamo che né $P$ né $Q$ possano entrare in CS
+			- $P$ e $Q$ devono essere bloccati nel primo `while`
+			- esiste un istante $t$ dopo di che `needp` e `needq` sono sempre`true`
+			- supponiamo che all'istante $t$ `turn = Q` (non può essere contemporaneamente anche $=$ a `P`) 
+			- l'unica modifica a `turn` può avvenire solo quando `Q` entra in CS 
+			- dopo $t$, `turn` resterà sempre uguale a `Q`
+			- `P` entra nel primo ciclo, e mette `needp = false` $\to$ASSURDO!
+		- ### Assenza di ritardi non necessari:
+			- se `Q` sta eseguendo codice non critico, allora `needq = false` 
+			- allora `P` può entrare nella CS
+		- ### Assenza di [[Proprietà di un programma#^054a32||starvation]]:
+			- se `Q` richiede di accedere alla CS $\to$ `needq = true`
+			- se `P` sta eseguendo codice non critico $\to$ `Q` entra
+			- se `P` sta eseguendo il resto del codice, prima o poi ne uscirà e metterà il turno a `Q`, quindi `Q` potrà entrare
+- # Link Utili:
+	- 

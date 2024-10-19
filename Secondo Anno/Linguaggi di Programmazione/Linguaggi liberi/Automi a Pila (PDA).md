@@ -1,0 +1,57 @@
+---
+tags:
+  - TODO
+aliases:
+  - PDA
+  - push down automata
+  - automa a pila
+data: "`2024-10-19 16:41`"
+---
+- # Intro:
+	- tratta grammatiche più generali rispetto a quelle [[Grammatiche regolari||regolari]] 
+	- per poter identificare i linguaggi liberi è necessario conoscere gli _Automi a pila_
+- # PDA (Push down automata)
+	- sono un tipo di automa che usano memoria ausiliaria di tipo _stack_ invece degli stati finiti.
+	- Si dividono in _deterministici e non_ i primi utili per costruire i _[[Struttura di un compilatore||compilatori]]_ gli altri per i _linguaggi liberi_ 
+	- infatti l'[[Analisi sintattica||l'analizzatore sintattico]], presa la lista di token dell'[[Analisi lessicale||analizzatore lessicale]], genera un [[Alberi di derivazione]] relativo alla grammatica libera usata per fare il _parser_ 
+	- per far si che gli [[Automi finiti non deterministici||NFA]]/[[Automi finiti deterministici||DFA]] riconoscano i linguaggi liberi necessitano di avere una _pila che cresce illimitatamente_ 
+		- per esempio nel riconoscere una stringa palindroma
+		- l'automa deve "ricordare" la prima metà dell'input in modo da confrontarlo con la seconda metà in ordine inverso
+	- ## Pila:
+		- può leggere solo l'elemento in cima 
+		- può rimuovere solo l'elemento in cima 
+		- può inserire un nuovo elemento solo in cima 
+- # Automa a pila:
+	- è una 7-upla :
+		- $$(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$$
+			- $\Sigma$ alfabeto finito.
+			- $\Gamma$ è un insieme finito di simboli della Pila.
+			- $\delta$ è la funzione di transizione di tipo:
+				- $$\delta: Q \times (\Sigma \cup \{\epsilon\})\times \Gamma\to P(Q\times \Gamma^{*})$$
+				- ($\Sigma \cup \{\epsilon\}$) consuma un simbolo dell'input $\Sigma$ oppure no $\epsilon$ 
+				- $\Gamma$ consuma il simbolo in cima alla pila.
+				- $P(Q\times \Gamma^{*})$ : Sulla pila scrive una stringa di lunghezza qualsiasi di simboli $\Gamma$ 
+			- $\bot\in \Gamma$ è il simbolo inziale sulla pila.
+			- $F$ sono gli stati finali 
+- # Transizioni di un PDA:
+	- ## Descrizione istantanea:
+		- ($q,w,\beta$) 
+		- $q$ è lo stato corrente.
+		- $w\in \Sigma^{*}$ input non ancora letto.
+		- $\beta\in \Gamma^{*}$ stringa sulla pila 
+	- ## Mossa:
+		- ![[Pasted image 20241019170918.png]]
+	- ## Computazione:
+		- ![[Pasted image 20241019170943.png]]
+- # Linguaggio accettato:
+	- due modi per il riconoscimento: 
+	- $N=(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$ 
+	- ## Per stato finale:
+		- $$L[N]=\{w\in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \alpha) \ \ q\in F \}$$
+	- ## Per pila vuota:
+		- $$P[N]=\{w \in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \epsilon)\}$$
+	- ### OSS:
+		- Spesso per un certo PDA $N$ 
+			- $$L[N]\ne P[N]$$ 
+- # Link Utili:
+	- 

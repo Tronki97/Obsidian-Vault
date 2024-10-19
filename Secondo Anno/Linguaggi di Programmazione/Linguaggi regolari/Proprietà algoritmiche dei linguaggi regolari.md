@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - pumping lemma
 data: "`2024-10-15 19:10`"
 ---
 - # Def:
@@ -51,5 +52,28 @@ data: "`2024-10-15 19:10`"
 			- La condizione $|uv|\le N$ impone che $u$ e $v$ siano fatte di "a". quindi $v=a^{j}$ con $j\geq 1$ 
 		- $\exists k =2: uv^{2}w=uvvw=a^{N+j}b^{N}\notin L$ 
 		- Quindi il linguaggio $L$ non è regolare. 
+- # Altre proprietà:
+	- la classe dei [[Linguaggi regolari]] è chiusa per:
+		- Unione
+		- Concatenazione
+		- Ripetizione
+		- Complementazione
+		- Intersezione
+	- ## Dim:
+		- le prime 3 si dimostrano dal fatto che: se $L_{1}$ e $L_{2}$ sono regolari allora $\exists s_{1}, s_{2}$ [[Linguaggi regolari#^808f0a||regex]] tali che:
+			- $$L_{1}=\scr L \mathbf{[s_{1}]},\mathbf{L_{2}=}L \mathbf{[s_{2}]}$$ 
+			- E facendo le prime 3 operazioni si dimostra
+		- la 4 si dimostra usando un [[Automi finiti deterministici||DFA]] $M$, col quale si costruisce il suo complementare $\overline{M}$ (ottenumto avendo come stati finali $Q - F$) 
+		- La 5 deriva dalla legge di De Morgan
+			- da quest'ultima proprietà si può dimostrare che un linguaggio non è regolare: intersecandolo con uno regolare _se il risultato non lo è vuol dire che quello di partenza non lo era a sua volta_
+- # Altre proprietà:
+	- verificabili automaticamente:
+		- $w\in L[M]$ in tempo lineare
+		- $L[M]=\emptyset$  si verifica guardando l'esistenza di un cammino aciclico dallo stato iniziale ad uno finale
+		- $L[M]=A^{*}$ si verifica considerando che vale $\iff L[\overline{M}]=\emptyset$
+		- $L[M_{1}]\subseteq L[M_{2}]\iff L[\overline{M_{2}}]\cap L[M_{1}]=\emptyset$
+		- $L[M_{1}]=L[M_{2}]\iff ...$
+		- $L[M]$ è infinito se esiste una parola $z\in L[M]: n\leq z\leq2n$ dove $n=|Q|$
 - # Link Utili:
+	- 
 	- 

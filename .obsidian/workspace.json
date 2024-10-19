@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "798509eb85422abc",
+            "id": "cf288771b522b93d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -17,20 +17,54 @@
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Homepage"
             }
           },
           {
-            "id": "ab917590a2e09a52",
+            "id": "a0f479b3d0bd6562",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
+                "file": "Algoritmo di Peterson.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmo di Peterson"
+            }
+          },
+          {
+            "id": "84971df061d36d2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Azioni atomiche.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Azioni atomiche"
+            }
+          },
+          {
+            "id": "57da3da9c7e5330a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi/Concorrenza/Proprietà di un programma.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Proprietà di un programma"
             }
           }
         ],
@@ -54,7 +88,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -69,7 +105,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byModifiedTime"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -77,7 +115,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -100,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
+                "file": "Algoritmo di Peterson.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +148,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Algoritmo di Peterson"
             }
           },
           {
@@ -117,10 +159,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
+                "file": "Algoritmo di Peterson.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Algoritmo di Peterson"
             }
           },
           {
@@ -131,7 +175,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -140,8 +186,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md"
-              }
+                "file": "Algoritmo di Peterson.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Algoritmo di Peterson"
             }
           },
           {
@@ -149,7 +197,9 @@
             "type": "leaf",
             "state": {
               "type": "calendar",
-              "state": {}
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
@@ -157,7 +207,9 @@
             "type": "leaf",
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -165,7 +217,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -173,7 +227,9 @@
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -181,7 +237,9 @@
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
@@ -213,9 +271,34 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "ab917590a2e09a52",
+  "active": "a0f479b3d0bd6562",
   "lastOpenFiles": [
+    "Pasted image 20241019191628.png",
+    "Algoritmo di Dekker.md",
+    "Algoritmo di Peterson.md",
+    "Pasted image 20241019191437.png",
+    "Sezioni critiche (critical section).md",
+    "Pasted image 20241019190435.png",
+    "Pasted image 20241019190330.png",
+    "Pasted image 20241019190314.png",
+    "Pasted image 20241019190257.png",
+    "Pasted image 20241019190208.png",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Proprietà di un programma.md",
+    "Azioni atomiche.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Interazioni tra processi.md",
     "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Concorrenza.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Untitled.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
+    "LaTeX-cheat-sheet 1.pdf",
+    "Pasted image 20241019170943.png",
+    "Pasted image 20241019170918.png",
+    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi sintattica.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Untitled.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio/problemi di Ottimizzazione.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio/Underfit, Overfit e Regolarizzazione.md",
@@ -225,42 +308,17 @@
     "Secondo Anno/Linguaggi di Programmazione/LEX/LEX.md",
     "immagini/Pasted image 20241015193241.png",
     "Lectures 2024-10-15-092156.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
     "immagini/Pasted image 20241015193002.png",
-    "immagini/Pasted image 20241015192811.png",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
-    "immagini/Pasted image 20241015185728.png",
-    "immagini/Pasted image 20241015185250.png",
-    "immagini/Pasted image 20241015185102.png",
-    "immagini/Pasted image 20241015185023.png",
     "Minimizzazione DFA.md",
     "Secondo Anno/Linguaggi di Programmazione/LEX/Untitled.md",
     "Secondo Anno/Linguaggi di Programmazione/LEX",
-    "immagini/Pasted image 20241015182804.png",
-    "immagini/Pasted image 20241015181839.png",
-    "immagini/Pasted image 20241015181056.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
-    "Secondo Anno/Calcolo Numerico/Laboratorio/Untitled.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Pseudoinversa.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-    "Primo Anno/Algebra e geometria/Simmetria.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
-    "Secondo Anno/Calcolo Numerico/Laboratorio/Python.md",
-    "Secondo Anno/Calcolo Numerico/Untitled.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari ed Expr.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggi regolari.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Da DFA a grammatiche regolari.md",
-    "immagini/LaTeX-cheat-sheet 1.pdf",
     "smart-chats",
     "Secondo Anno/Tecnologie Web/HTTP & REST",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete",
-    "immagini/albero html.png.~tmp",
-    "Excalidraw",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
