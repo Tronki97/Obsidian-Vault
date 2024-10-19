@@ -1,7 +1,8 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: 
+aliases:
+  - AA
+  - aa
 data: "`2024-10-19 18:37`"
 ---
 - # Def:

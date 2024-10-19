@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - processo
 data: "`2024-10-10 10:56`"
