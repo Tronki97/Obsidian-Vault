@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7bc279b737731a3c",
+        "id": "baeeb3dd2aa3501b",
         "type": "tabs",
         "children": [
           {
-            "id": "cf288771b522b93d",
+            "id": "c05a035e9722d8e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo Numerico/Interpolazione.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Interpolazione"
             }
           }
         ]
@@ -94,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Homepage"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +112,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Homepage"
+              "title": "Outgoing links"
             }
           },
           {
@@ -139,11 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Homepage.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of Homepage"
+              "title": "Outline"
             }
           },
           {
@@ -225,10 +221,12 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "cf288771b522b93d",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Concorrenza.md",
+    "Secondo Anno/Calcolo Numerico/Laboratorio/Approssimazione dei dati.md",
+    "Secondo Anno/Calcolo Numerico/Interpolazione.md",
     "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Concorrenza.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Azioni atomiche.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Proprietà di un programma.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
@@ -256,7 +254,6 @@
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio/problemi di Ottimizzazione.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio/Underfit, Overfit e Regolarizzazione.md",
-    "Secondo Anno/Calcolo Numerico/Laboratorio/Approssimazione dei dati.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automa minimo.md",
     "Secondo Anno/Linguaggi di Programmazione/LEX/LEX.md",
