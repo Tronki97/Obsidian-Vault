@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Interpolazione.md",
+                "file": "Secondo Anno/Tecnologie Web/Markup.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Interpolazione"
+              "title": "Markup"
             }
           }
         ]
@@ -221,10 +221,12 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "c05a035e9722d8e5",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo Numerico/Laboratorio/Approssimazione dei dati.md",
+    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+    "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Calcolo Numerico/Interpolazione.md",
+    "Secondo Anno/Calcolo Numerico/Laboratorio/Approssimazione dei dati.md",
     "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Concorrenza.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Azioni atomiche.md",
@@ -260,9 +262,7 @@
     "immagini/Pasted image 20241015193241.png",
     "Lectures 2024-10-15-092156.md",
     "Minimizzazione DFA.md",
-    "Secondo Anno/Linguaggi di Programmazione/LEX/Untitled.md",
     "Secondo Anno/Linguaggi di Programmazione/LEX",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio",
     "smart-chats",
     "Secondo Anno/Tecnologie Web/HTTP & REST",

@@ -1,12 +1,18 @@
-- ## Rappresentazione dell'informazione
-	- ### Dati:
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-09-26 15:08`"
+---
+- # Rappresentazione dell'informazione
+	- ## Dati:
 		- informazioni raccolte semplificate per un facile utilizzo da parte di applicazioni
 		- vengono utilizzati per fornire un'applicazione concreta ad algoritmi generici:
 			- come il calcolo dell'area di una figura.
-	- ### Strutture dati:
+	- ## Strutture dati:
 		- spesso i dati sono complessi e vengono organizzati in strutture dati secondo un certo ordinamento 
 			- Come i Contatti telefonici, i miei libri, ecc...
-	- ### Valori, chiavi, entità:
+	- ## Valori, chiavi, entità:
 		- senza contesto un dato non significa nulla:
 			- 42 da solo non vuol dire niente.
 		- appena gli do una _chiave_ assume significato:
@@ -14,42 +20,42 @@
 		- un entità della vita reale coem una persona ha vari campi nei quali vengono inseriti i dati,
 			- ![[Pasted image 20240926151748.png]]
 			- si chiama _record_
-	- ### Record:
+	- ## Record:
 		- una collezione di elementi con determinate chiavi(o etichette) che descrive un'entità e tutto ciò che si sa su di essa. 
-	- ### Liste:
+	- ## Liste:
 		- sequenza di valori spesso ordinata secondo alcune condizioni 
-	- ### Tabelle:
+	- ## Tabelle:
 		- ![[Pasted image 20240926152157.png]]
 		- strutturata in modo omogeneo 
 		- ogni riga rappresenta il record e ogni colonna la chiave.
-	- ### Testo:
+	- ## Testo:
 		- il testo può contenere dati che vengono poi interpretati se ce n'è bisogno
 		- possiede una struttura, ordine, parti significative da identificare oppure non significative 
 		- Il _Murkup_ descrive il testo come un albero ma con una gerarchia non ignorabile.
 			- i nodi sono etichettati in modo esplicito.
 			- gli elementi possono contenere altri elementi o una raccolta di elementi o nodi di testo oppure tutto quanto insieme(_contenuto misto_)
-- ## Cos'è il murkup:
+- # Cos'è il murkup:
 	- mezzo per rendere esplicita un'interpretazione di un testo
 		- tipo le aggiunte ad un testo scritto che lo rendono più fruibile. come le virgole o i punti. 
 	- rende il testo più leggibile, specifica anche ulteriori usi del testo.
-- ## Modi del markup:
-	- ### Proprietario: 
+- # Modi del markup:
+	- ## Proprietario: 
 		- posseduto da una azienda che può disporne come vuole e decide chi può usarlo.
-	- ### Pubblico 
+	- ## Pubblico 
 		- un gruppo pubblica le specifiche del formato e cedo il controllo del prodotto
-	- ### binario:
+	- ## binario:
 		- memorizzazione esatta delle strutture in memoria efficiente ma non leggibile da una persona, e testo e markup non sono distinguibili fra di loro.
-	- ### Leggibile:
+	- ## Leggibile:
 		- testo e markup sono distinguibili.
-	- ### Interno:
+	- ## Interno:
 		- istruzioni di presentazioni all'interno del testo tra le parole 
-	- ### Esterno:
+	- ## Esterno:
 		- blocchi di contenuto e blocchi di markup.
-	- ### procedurale:
+	- ## procedurale:
 		- indicare con precisione ad un sistema informatica che effetto attivare e che procedura eseguire nella visualizzazione.
-	- ### Descrittivo:
+	- ## Descrittivo:
 		- identifica strutturalmente il tipo di ogni elemento del contenuto.
 		- individua all'interno del documento il funzionamento di ogni blocco.
-	- ### Metamarkup:
+	- ## Metamarkup:
 		- fornisce le regole di interpretazione del markup e permette di estendere o controllare il significato.
 	- 

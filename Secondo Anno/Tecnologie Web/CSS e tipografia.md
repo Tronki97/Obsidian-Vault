@@ -4,6 +4,7 @@ tags:
 aliases:
   - css
   - tipografia
+  - CSS
 data: "`2024-10-07 16:14`"
 ---
 - # Tipografia:
