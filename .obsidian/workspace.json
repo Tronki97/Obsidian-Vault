@@ -8,18 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c05a035e9722d8e5",
+            "id": "614725cd7258d808",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Markup.md",
+                "file": "Page layout.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Markup"
+              "title": "Page layout"
             }
           }
         ]
@@ -221,9 +221,11 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "c05a035e9722d8e5",
+  "active": "614725cd7258d808",
   "lastOpenFiles": [
     "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+    "Page layout.md",
+    "Secondo Anno/Tecnologie Web/Markup.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Calcolo Numerico/Interpolazione.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio/Approssimazione dei dati.md",
@@ -260,8 +262,6 @@
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automa minimo.md",
     "Secondo Anno/Linguaggi di Programmazione/LEX/LEX.md",
     "immagini/Pasted image 20241015193241.png",
-    "Lectures 2024-10-15-092156.md",
-    "Minimizzazione DFA.md",
     "Secondo Anno/Linguaggi di Programmazione/LEX",
     "Secondo Anno/Calcolo Numerico/Laboratorio",
     "smart-chats",

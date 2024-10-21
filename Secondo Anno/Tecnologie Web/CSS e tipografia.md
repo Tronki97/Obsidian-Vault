@@ -16,6 +16,5 @@ data: "`2024-10-07 16:14`"
 		- oppure usare le immagini per decorare il contenuto.
 - # Font:
 	- insieme di tratti che permettono di descrivere la forma di un carattere. creando appunto una sorta di riconoscimento tra lettere appartenenti alla stessa font-family
-	- 
 - # Link Utili:
 	- 
