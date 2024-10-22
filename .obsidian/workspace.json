@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "baeeb3dd2aa3501b",
+        "id": "106a7e20eecce4f4",
         "type": "tabs",
         "children": [
           {
-            "id": "614725cd7258d808",
+            "id": "9daf8b5c7f15a2fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Page layout.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Page layout"
+              "title": "Automi a Pila (PDA)"
             }
           }
         ]
@@ -221,15 +221,16 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "614725cd7258d808",
+  "active": "9daf8b5c7f15a2fe",
   "lastOpenFiles": [
+    "Secondo Anno/Calcolo Numerico/Laboratorio/problemi di Ottimizzazione.md",
+    "Homepage.md",
+    "Secondo Anno/Tecnologie Web/Page layout.md",
     "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
-    "Page layout.md",
     "Secondo Anno/Tecnologie Web/Markup.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Calcolo Numerico/Interpolazione.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio/Approssimazione dei dati.md",
-    "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Concorrenza.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Azioni atomiche.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Proprietà di un programma.md",
@@ -256,7 +257,6 @@
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-    "Secondo Anno/Calcolo Numerico/Laboratorio/problemi di Ottimizzazione.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio/Underfit, Overfit e Regolarizzazione.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automa minimo.md",

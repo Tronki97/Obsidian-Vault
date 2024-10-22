@@ -53,5 +53,7 @@ data: "`2024-10-19 16:41`"
 	- ### OSS:
 		- Spesso per un certo PDA $N$ 
 			- $$L[N]\ne P[N]$$ 
+		- $$L=L[N]\implies \exists N': L=P[N']$$
+			- ovvero non cambia la classe dei linguaggi riconosciuti da PDA per stato finale o per pila vuota
 - # Link Utili:
 	- 

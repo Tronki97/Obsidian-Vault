@@ -667,6 +667,8 @@ pFK
 poTq
 pÖ
 ppW
+piacevoli
+portrait
 realizzare
 rappresentare
 risultato
@@ -1318,6 +1320,7 @@ rZv
 rPO
 rXNw
 rEF
+retro
 la
 le
 lo
@@ -1711,6 +1714,8 @@ lFe
 lVxP
 lai
 lerW
+lette
+landscape
 ALU
 AND
 Address
@@ -3405,6 +3410,11 @@ cOj
 caFk
 cLJ
 cbi
+carta
+cinema
+cursore
+cliccare
+clicca
 avendo
 alcune
 arriva
@@ -4151,6 +4161,7 @@ aQY
 aByF
 aQJ
 acdf
+affiancate
 un
 una
 usato
@@ -9438,6 +9449,9 @@ onT
 oac
 oCt
 oSI
+opaca
+orizzonti
+orientamenti
 va
 valore
 viene
@@ -10392,6 +10406,7 @@ tNp
 tEh
 tXW
 tcd
+telefoni
 grandi
 gli
 grande
@@ -12400,6 +12415,7 @@ Starvation
 Software
 SOW
 SXz
+Selettore
 BINARY
 Bus
 BX
@@ -13806,6 +13822,7 @@ LlA
 LTg
 Ltm
 LuT
+Layout
 Modulo
 Massimo
 Memory
@@ -18915,6 +18932,7 @@ Oai
 Oft
 OUJ
 OYb
+Orientamento
 xz
 xX
 xF
