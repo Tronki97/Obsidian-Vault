@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pumping Theorem.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Pumping Theorem.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -240,8 +239,8 @@
   "active": "0b37739619323f86",
   "lastOpenFiles": [
     "Pasted image 20241022181749.png",
-    "Proprietà di chiusura.md",
-    "Pumping Theorem.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Proprietà di chiusura.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Pumping Theorem.md",
     "Pasted image 20241022180524.png",
     "Pasted image 20241022180210.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
