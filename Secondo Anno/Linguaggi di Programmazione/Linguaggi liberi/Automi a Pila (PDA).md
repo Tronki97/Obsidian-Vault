@@ -55,5 +55,50 @@ data: "`2024-10-19 16:41`"
 			- $$L[N]\ne P[N]$$ 
 		- $$L=L[N]\implies \exists N': L=P[N']$$
 			- ovvero non cambia la classe dei linguaggi riconosciuti da PDA per stato finale o per pila vuota
+- # ES:
+	- ![[Pasted image 20241022171731.png]]
+	- ![[Pasted image 20241022171758.png]]
+- # Determinismo:
+	- $|\delta(q,a,Z)|\le 1$    $\forall q \in Q, \ \ \forall a\in \Sigma, \ \ \forall Z \in \Gamma$
+	- $\delta(q,\epsilon,Z)\ne \emptyset \implies \delta(q,a,Z)= \emptyset$   $\forall a \in \Sigma$ 
+	- ![[Pasted image 20241022172300.png]]
+	- PDA deterministico perché rispetta le condizioni descritte.
+	- ## OSS: 
+		- i PDA a differenza dei [[Automi finiti deterministici||DFA]] non garantiscono di leggere tutta la stringa in input infatti l'esempio precedente si blocca con $acc$ 
+- # Teorema:
+	- la classe dei linguaggi riconosciuti per pila vuota o per stato finale _non cambia_
+	- (1) se $L=P[N]$ allora posso costruire $N'$ tale che $L=L[N']$
+	- (2) se $L=L[N]$ allora posso costruire $N'$ tale che $L=P[N']$
+	- ## Dim:
+		- (1) ![[Pasted image 20241022172907.png]]
+		- (2) ![[Pasted image 20241022173002.png]]
+			- $Z$ può essere rimossa dallo stack solo grazie alla $X\in \Gamma \cup \{Z\}$ perché $Z\notin \Gamma$ 
+- # Da linguaggio a PDA:
+	- $$L=\{ a^{n}c b^{n}| n\ge 0\}$$
+	- $Z$ simbolo iniziale; $\Gamma=\{A,Z\}$ ; $X\in \Gamma$
+	- ![[Pasted image 20241022173255.png]]
+	- $L=L[N]=P[N]$ 
+- # Da grammatica a PDA:
+	- $S\to aSb\ |\  \epsilon$
+	- ![[Pasted image 20241022173416.png]]
+- # Teorema 2:
+	- un linguaggio $L$ è libero da contesto sse è accettato da un PDA 
+	- ## Dim:
+		- $\implies$)  $L$ è libero, $\implies\exists G= (NT, T, R, S)$ libera tale che:
+			- $$L=P[N]$$
+			- $$N=(\underset{\Sigma}{T}\ ,\  \{q\}\ ,\  \underset{\Gamma}{T\cup NT}\ ,\  \delta\ ,\  q\ ,\  \underset{\bot}{S}\ ,\  \emptyset)$$
+				- $\delta(q, \epsilon, A)=\{(q,\beta)| A\to \beta \in R\}$ $\forall A\in NT$
+				- $\delta(q,a,a)=\{(q, \epsilon)\}$ 
+				- _ovvero_:
+					-  Ogni volta che $N$ ha $A$ in cima alla pila sceglie una regola per $A$, senza consumare l'input.
+					-  se invece c'è $a$ in cima e l'input ha $a$ allora vengono entrambi consumati.
+					-  se l'input invece è diverso dalla cima della pila ci si blocca e si fa backtracking provando un'altra regola. 
+		- $\impliedby$) $L=P[N] \implies \exists G$ libera tale che $L=L(G)$ 
+			- ## Lemma 1:
+				- ogni PDA  $N$ può essere simulato da uno $N'$ con un solo stato 
+			- ## Lemma 2:
+				- Ogni PDA con un solo stato ha una equivalente [[Grammatiche#^c95cdc||grammatica libera]] 
+- # Riassunto:
+	- Un linguaggio $L$ è libero sse è accettato da un PDA (nondeterministico) 
 - # Link Utili:
 	- 

@@ -1,3 +1,10 @@
+---
+tags:
+  - TODO
+aliases:
+  - grammatiche libere
+data: "`2024-09-24 11:24`"
+---
 - ## Definire finitamente un linguaggio:
 	- 1) prendendo le parole _palindrome_ come : abba:
 		- $A=\{a,b\}$ $L=\{\epsilon, a,b, aa,bb, aba, bab,...\}$

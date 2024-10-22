@@ -4,22 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "106a7e20eecce4f4",
+        "id": "617b0511dd4a5284",
         "type": "tabs",
         "children": [
           {
-            "id": "9daf8b5c7f15a2fe",
+            "id": "0b37739619323f86",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
+                "file": "Pumping Theorem.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Automi a Pila (PDA)"
+              "title": "Pumping Theorem"
+            }
+          },
+          {
+            "id": "7d4ea4acb89baf75",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Grammatiche regolari"
             }
           }
         ]
@@ -53,12 +68,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "DFA minimo",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "byModifiedTime"
+                "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
               "title": "Search"
@@ -78,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -221,10 +237,26 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "9daf8b5c7f15a2fe",
+  "active": "0b37739619323f86",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo Numerico/Laboratorio/problemi di Ottimizzazione.md",
+    "Pasted image 20241022181749.png",
+    "Proprietà di chiusura.md",
+    "Pumping Theorem.md",
+    "Pasted image 20241022180524.png",
+    "Pasted image 20241022180210.png",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
+    "immagini/Pasted image 20241022171731.png",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
+    "immagini/Pasted image 20241022173416.png",
+    "immagini/Pasted image 20241022173255.png",
+    "immagini/Pasted image 20241022173002.png",
+    "immagini/Pasted image 20241022172907.png",
+    "immagini/Pasted image 20241022172300.png",
+    "immagini/Pasted image 20241022171758.png",
     "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
+    "Secondo Anno/Calcolo Numerico/Laboratorio/problemi di Ottimizzazione.md",
     "Secondo Anno/Tecnologie Web/Page layout.md",
     "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
     "Secondo Anno/Tecnologie Web/Markup.md",
@@ -234,34 +266,18 @@
     "Secondo Anno/Sistemi Operativi/Concorrenza/Concorrenza.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Azioni atomiche.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Proprietà di un programma.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Sezioni critiche (critical section).md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Peterson.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Dekker.md",
     "immagini/Pasted image 20241019170918.png",
-    "immagini/Pasted image 20241019191628.png",
-    "immagini/Pasted image 20241019191437.png",
-    "immagini/Pasted image 20241019190435.png",
-    "immagini/Pasted image 20241019190330.png",
-    "immagini/Pasted image 20241019190314.png",
-    "immagini/Pasted image 20241019190257.png",
-    "immagini/Pasted image 20241019190208.png",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Interazioni tra processi.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Untitled.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza",
     "LaTeX-cheat-sheet 1.pdf",
-    "immagini/Pasted image 20241019170943.png",
     "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi sintattica.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Untitled.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-    "Secondo Anno/Calcolo Numerico/Laboratorio/Underfit, Overfit e Regolarizzazione.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automa minimo.md",
-    "Secondo Anno/Linguaggi di Programmazione/LEX/LEX.md",
-    "immagini/Pasted image 20241015193241.png",
     "Secondo Anno/Linguaggi di Programmazione/LEX",
     "Secondo Anno/Calcolo Numerico/Laboratorio",
     "smart-chats",

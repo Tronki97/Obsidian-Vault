@@ -1,0 +1,38 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-22 17:51`"
+---
+- # Teorema:
+	- i linguaggi liberi sono chiusi per:
+		- _unione_
+		- _concatenazione_
+		- _ripetizione_  
+	- ## Dim:
+		- Sia $L_{1}=L(G_{1})$ con $G_{1}=(NT_{1},T_{1},R_{1},S_{1})$
+		- Sia $L_{2}=L(G_{2})$ con $G_{2}=(NT_{2},T_{2},R_{2},S_{2})$
+		- ### Unione:
+			- $L_{1}\cup L_{2}=L(G)$ dove G è: 
+			- $$(NT_{1}\cup NT_{2}\cup \{S\}\ ,\ T_{1}\cup T_{2},R_{1}\cup R_{2}\cup \{S\to S_{1}|S_{2}\},S)$$
+		- ### Concatenazione:
+			- $L_{1}\cdot L_{2}=L(G)$ dove $G$ è: 
+			- $$(NT_{1}\cup NT_{2}\cup \{S\}\ ,\ T_{1}\cup T_{2},R_{1}\cup R_{2}\cup \{S\to S_{1}S_{2}\},S)$$
+		- ### Ripetizione:
+			- $(L_{1})^{*}=L(G)$ dove $G$ è:
+			- $$\{NT_{1}\cup \{S\}, T_{1}, S, R_{1}\cup \{S\to \epsilon|S_{1}S\}\}$$
+- # Intersezione:
+	- L'intersezione di un linguaggio libero $L_{1}$ con uno [[Linguaggi regolari||regolare]] $L_{2}$ è un _linguaggio libero_ 
+	- ## Dim:
+		-  ![[Pasted image 20241022180210.png]]
+		- $N$ segue le mosse di $N_{1}$ tenendo traccia dello stato raggiunto da $N_{2}$ 
+- # ES:
+	- mostrare che l'intersezione tra $L_{1}\cap L_{2}$ è un linguaggio libero
+		- $$L_{1}=\{a^{n}b^{n}|n\geq 0\}$$
+		- $$L_{2}=\{w\in \{a,b\}^{*}|\exists k\in \mathbb{N}. |w|=4k\}$$
+		- ![[Pasted image 20241022180524.png]]
+- # OSS:
+	- 1) se $L_{1}\cap L_{2}$ non è regolare, ma $L_{2}$ lo è, allora $L_{1}$ non è regolare (_a causa della chiusura per l'intersezione_)
+	- 2) se $L_{1}\cap L_{2}$ non è libero, ma $L_{2}$ è regolare, allora $L_{1}$ non è libero (_perché l'intersezione di un libero con un regolare da un libero_)
+- # Link Utili:
+	- 
