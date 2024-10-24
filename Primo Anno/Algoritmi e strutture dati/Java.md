@@ -1,9 +1,10 @@
-#### Concetti:
-- Terminale: 
-	- javac: si usa per compilare un file .java; se voglio compilare tutti i file in una cartella posso andare in quella precedente e fare:
-		- javac $dir/^*.java$ dove dir sarebbe la cartella.
-	- java: esegue il file specificato (ogni codice ha le sue modalità di esecuzione).
-	- javadoc: crea la documentazione automatica java.
+
+- #### Concetti:
+	- Terminale: 
+		- javac: si usa per compilare un file .java; se voglio compilare tutti i file in una cartella posso andare in quella precedente e fare:
+			- javac $dir/^*.java$ dove dir sarebbe la cartella.
+		- java: esegue il file specificato (ogni codice ha le sue modalità di esecuzione).
+		- javadoc: crea la documentazione automatica java.
 
 #### Ereditarietà
 la relazione di sottoclasse viene espressa con `extends`

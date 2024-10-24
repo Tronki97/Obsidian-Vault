@@ -1,7 +1,7 @@
 ---
 ~
 ---
-- per la CPU si considerano due distinti ingressi:
+- Per la CPU si considerano due distinti ingressi:
 	- ##### instruction:
 		- per caricare le istruzioni da eseguire
 	- ##### inM:

@@ -1,3 +1,4 @@
+
 - è l'unità aritmetico logica del processore
 - Si occupa di prendere i valori dei registri _A_/_M_ e _D_ e di eseguire le operazioni indicate nei 6 bit di controllo, per poi salvare l'output nel registro indicato per la destinazione 
 - Oltre all'output l'ALU hack genera due _flag_(bit di stato) che indicano se l'output è uguale o minore a 0 

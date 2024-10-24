@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - peterson
 data: "`2024-10-19 19:14`"

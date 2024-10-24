@@ -1,3 +1,4 @@
+
 - grazie all'[[Pre-fetch istruzioni#^0b8e3f||IFU]] il processore hack ha una minima tecnica di di pipeline disponibile (_a due stadi_)
 - visto che possono esserci salti nell'esecuzione dell'istruzione non sempre fare [[Pre-fetch istruzioni||pre-fetch]] aiuta 
 - permette di eseguire più operazioni di _feth-decode-excecute_ in un unico periodo grazie all'attuazione di quelle operazioni in maniera parallela

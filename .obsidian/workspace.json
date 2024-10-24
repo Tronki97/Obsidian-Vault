@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Soluzioni speciali hardware.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Soluzioni speciali hardware.md",
+                "file": "Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Soluzioni speciali hardware.md",
+                "file": "Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Soluzioni speciali hardware.md"
+                "file": "Homepage.md"
               }
             }
           },
@@ -183,22 +183,31 @@
   },
   "active": "cce1b78c73313c30",
   "lastOpenFiles": [
-    "Pasted image 20241024101412.png",
-    "Pasted image 20241024095102.png",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Peterson.md",
-    "Soluzioni speciali hardware.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Dekker.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori Binari.md",
     "Homepage.md",
-    "livello Rete.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Peterson.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Pipeline.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Pre-fetch istruzioni.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Cache.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/ALU.md",
+    "Primo Anno/Algoritmi e strutture dati/Java.md",
+    "suca.md",
+    "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
+    "immagini/Pasted image 20241024112848.png",
+    "immagini/Pasted image 20241024112037.png",
+    "immagini/Pasted image 20241024110012.png",
+    "immagini/Pasted image 20241024105052.png",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Soluzioni speciali hardware.md",
+    "immagini/Pasted image 20241024101412.png",
+    "immagini/Pasted image 20241024095102.png",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Dekker.md",
+    "Secondo Anno/Reti di Calcolatori/livello Rete.md",
     "immagini/Screenshot (4).png",
     "immagini/Pasted image 20241022181749.png",
     "immagini/Pasted image 20241022180524.png",
     "immagini/Pasted image 20241022180210.png",
-    "immagini/Pasted image 20241022173416.png",
-    "immagini/Pasted image 20241022173255.png",
-    "immagini/Pasted image 20241022173002.png",
-    "immagini/Pasted image 20241022172907.png",
-    "immagini/Pasted image 20241022172300.png",
     "Secondo Anno/Tecnologie Web/Page layout.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/API REST.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/HTTP.md",
@@ -212,16 +221,7 @@
     "Secondo Anno/Sistemi Operativi/Concorrenza/Azioni atomiche.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza",
     "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/minimizzazione.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Grammatiche regolari ed Expr.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Automa minimo.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Pumping Theorem.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Proprietà di chiusura.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi",
-    "Secondo Anno/Linguaggi di Programmazione/LEX/LEX.md",
     "Secondo Anno/Linguaggi di Programmazione/LEX",
     "Secondo Anno/Calcolo Numerico/Laboratorio",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata",

@@ -554,6 +554,10 @@ progress
 pronto
 processori
 processing
+peterson
+privato
+partecipa
+paradigma
 realizzare
 rappresentare
 risultato
@@ -1090,6 +1094,12 @@ replicata
 running
 ready
 rester
+rXp
+riceve
+rilascio
+restituite
+risolverla
+raramente
 la
 le
 lo
@@ -1403,6 +1413,9 @@ lql
 lWc
 livelli
 legati
+lAtc
+lXr
+lBB
 ALU
 AND
 Address
@@ -2002,6 +2015,8 @@ nyu
 noV
 nMM
 nBF
+need
+needq
 capire
 codifiche
 capacit
@@ -2758,6 +2773,12 @@ condividere
 completati
 concorrenza
 condition
+cnkYs
+cLf
+cooperano
+cooperare
+conseguente
+critiche
 avendo
 alcune
 arriva
@@ -3370,6 +3391,10 @@ avanzamento
 aspettano
 apparente
 assegnano
+attese
+aBg
+avvenuto
+attendere
 un
 una
 usato
@@ -3693,6 +3718,8 @@ uRU
 uNda
 uku
 uscir
+uAY
+uWv
 decremento
 del
 di
@@ -4188,6 +4215,8 @@ difficilissimo
 dekker
 delay
 deadlock
+dIU
+decrementa
 finito
 fanno
 facilmente
@@ -4584,6 +4613,8 @@ fsMq
 fcOh
 fFm
 forniscono
+falso
+fHRc
 in
 il
 invece
@@ -5112,6 +5143,10 @@ inviare
 informatico
 informatici
 istante
+inutili
+itv
+incrementa
+invariante
 modo
 mentre
 massimo
@@ -5991,6 +6026,9 @@ elaborati
 evoluzione
 esce
 eseguendo
+entri
+eDW
+eKH
 base
 bit
 basano
@@ -6292,6 +6330,9 @@ bZvrq
 buon
 block
 boot
+bvQ
+bloccato
+brevi
 quindi
 questo
 quelle
@@ -6573,6 +6614,7 @@ qAfR
 qNM
 qsm
 qvv
+qGM
 se
 sarebbe
 si
@@ -7264,6 +7306,16 @@ sincronizzazione
 salva
 sezione
 starvation
+sfd
+semafori
+semaforo
+sequenziali
+succeda
+svolte
+soddisfatte
+sospeso
+svegliato
+sezioni
 otterremmo
 ottenere
 occupare
@@ -7964,6 +8016,8 @@ vRg
 voluti
 venendo
 viola
+vYdF
+vRvhK
 troppo
 testimone
 tramite
@@ -8347,6 +8401,7 @@ tJy
 trasporta
 tenciche
 turno
+tGP
 grandi
 gli
 grande
@@ -8929,6 +8984,7 @@ NYt
 NYG
 NZqq
 NOi
+Nmt
 Il
 Instruction
 IR
@@ -9253,6 +9309,12 @@ IDATe
 ISO
 Interconnection
 Istruzione
+IJYj
+IDATE
+IDATYe
+IYI
+Invariante
+Intro
 Rappresentazione
 Registri
 Register
@@ -9888,6 +9950,7 @@ Standard
 System
 Scheduler
 Stati
+Semafori
 BINARY
 Bus
 BX
@@ -10456,6 +10519,7 @@ Progetto
 Pensieri
 PCB
 Processo
+PGu
 Di
 Data
 Dati
@@ -10734,6 +10798,9 @@ DAB
 Djl
 Distributed
 Dekker
+DUc
+Dfu
+Deadlock
 Le
 La
 Lg
@@ -10992,6 +11059,7 @@ Lmb
 LHa
 Livelli
 LLC
+LSG
 Modulo
 Massimo
 Memory
@@ -11886,6 +11954,8 @@ CiT
 CNMB
 Cuuuu
 Concorrenza
+CdU
+CUO
 Questa
 Quello
 Qz
@@ -12139,6 +12209,9 @@ QFY
 QZu
 Qon
 QGw
+QRD
+Qob
+QEfO
 Formato
 FLIP
 FLOP
@@ -12440,6 +12513,8 @@ FPi
 Fit
 Frame
 Fasi
+FHnSH
+FmGT
 Word
 WK
 WB
@@ -12909,6 +12984,10 @@ zCN
 znI
 zQF
 zRn
+zJd
+zHu
+zgrV
+zOK
 Half
 HACK
 HIT
@@ -13880,6 +13959,7 @@ JkO
 JBh
 JyA
 JUUX
+JGRb
 kB
 kW
 kWs
@@ -14126,6 +14206,7 @@ kYdf
 kAc
 kam
 knnr
+kWmZd
 jmp
 jy
 jwä
@@ -15099,6 +15180,7 @@ xjGR
 xPx
 xhf
 xCR
+xcg
 Kq
 KG
 KR
@@ -15322,6 +15404,7 @@ KJO
 KQFY
 KeQ
 KHa
+KlXZ
 Us
 US
 Ur
@@ -15582,6 +15665,7 @@ UKf
 URlh
 Utili
 User
+UJG
 Zx
 ZD
 ZRz
@@ -15808,6 +15892,9 @@ ZwN
 Ztu
 Zuz
 Zor
+ZLB
+ZKVF
+ZIR
 YQ
 Yz
 YI
@@ -16033,6 +16120,8 @@ YQI
 YJGC
 YdG
 YXL
+YAg
+YeJSD
 yI
 ys
 yN
@@ -16543,6 +16632,7 @@ TfbA
 TQb
 TLc
 TTg
+TSM
 GY
 GT
 Ghw
@@ -17095,6 +17185,8 @@ Vkj
 VYX
 Vgf
 VZHi
+Vhj
+VgK
 öG
 öH
 özw

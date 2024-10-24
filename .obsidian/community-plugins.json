@@ -7,6 +7,7 @@
   "obsidian-latex-suite",
   "obsidian-autocomplete-plugin",
   "obsidian-git",
+  "obsidian-icon-folder",
   "obsidian-annotator",
   "obsidian-completr",
   "obsidian-mind-map",
@@ -18,5 +19,6 @@
   "homepage",
   "dataview",
   "obsidian-banners",
-  "templater-obsidian"
+  "templater-obsidian",
+  "auto-correct-capitals"
 ]

@@ -1,3 +1,7 @@
+---
+
+---
+
 - ## Registri generali
 	- dedicati solo alla memorizzazione di calcoli temporanei della [[ALU]] 
 	- ES:

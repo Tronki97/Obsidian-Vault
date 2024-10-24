@@ -36,5 +36,6 @@ data: "`2024-10-24 09:50`"
 		- Busy waiting.
 		- Starvation che potrebbe accadere
 		- complesse da programmare.
+		- 
 - # Link Utili:
 	- 
