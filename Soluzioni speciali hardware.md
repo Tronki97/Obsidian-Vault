@@ -29,9 +29,9 @@ data: "`2024-10-24 09:50`"
 	- ## No starvation
 - # Riassunto:
 	- ## Vantaggi:
-		- per tutti i tipi di processore
-		- semplice e facile da verificare
-		- supporta sezioni critiche multiple (ogni sezione critica è rappresentata da una _variabile_)
+		- _Per tutti i tipi di processore_
+		- _Semplice e facile da verificare_
+		- _Supporta sezioni critiche multiple_ (ogni sezione critica è rappresentata da una _variabile_)
 	- ## Svantaggi:
 		- Busy waiting.
 		- Starvation che potrebbe accadere
