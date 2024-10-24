@@ -1,0 +1,40 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-10-24 09:50`"
+---
+- # Disabilitare gli Interrupt:
+	- ![[Pasted image 20241024095102.png]]
+- # Problema:
+	- funziona solo per macchine con processori _a un solo core_.
+	- quindi si dovrebbe lasciare la responsabilità di riattivare gli [[Trap e interrupt||interrupt]] ai processi  
+	- riduce la possibilità di parallelismo.  
+- # Test & Set:
+	- istruzioni che realizzano 2 azioni in modo atomico 
+	- come:
+		- _lettura e scrittura_ 
+		- _test e scrittura_ 
+	- ## ES:
+		- `TS(x,y) := < y=x ; x=1>`
+		- ovvero che ritorna in `y` il valore precedente di `x` 
+		- e `x=1` 
+	- ![[Pasted image 20241024101412.png]]
+	- ## mutua esclusione:
+		- entra solo chi trova per primo `lock=0`
+	- ## No Deadlock:
+		- Il primo che esegue `TS` entra senza problemi.
+	- ## niente delay non-necessari:
+		- un processo fuori dalla [[Sezioni critiche (critical section)||CS]] non blocca gli altri
+	- ## No starvation
+- # Riassunto:
+	- ## Vantaggi:
+		- per tutti i tipi di processore
+		- semplice e facile da verificare
+		- supporta sezioni critiche multiple (ogni sezione critica è rappresentata da una _variabile_)
+	- ## Svantaggi:
+		- Busy waiting.
+		- Starvation che potrebbe accadere
+		- complesse da programmare.
+- # Link Utili:
+	- 
