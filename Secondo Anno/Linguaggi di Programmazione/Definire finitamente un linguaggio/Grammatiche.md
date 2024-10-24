@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - grammatiche libere
 data: "`2024-09-24 11:24`"
