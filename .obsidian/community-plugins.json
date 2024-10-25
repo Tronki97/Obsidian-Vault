@@ -20,5 +20,11 @@
   "dataview",
   "obsidian-banners",
   "templater-obsidian",
-  "auto-correct-capitals"
+  "auto-correct-capitals",
+  "colored-text",
+  "execute-code",
+  "mousewheel-image-zoom",
+  "obsidian-smart-typography",
+  "oz-clear-unused-images",
+  "obsidian-reading-time"
 ]

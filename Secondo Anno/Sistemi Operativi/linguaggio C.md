@@ -27,6 +27,11 @@ data: "`2024-10-11 09:30`"
 	- `y=x<<2` moltiplica per 4 
 		- perché shifta di due posizioni a sinistra i bit.
 			- $001010=10$ diventa $101000= 40$  
-	- 
+	- funzione `Inline`:
+		- es:
+			- `static inline int f()` 
+		- necessita dello `static` prima della funzione perchè questo tipo sono visibili solo nel file in cui sono presenti
+	- `#if 0 ... #endif` 
+		- commenta tutta la parte di codice compresa.
 - # Link Utili:
 	- 

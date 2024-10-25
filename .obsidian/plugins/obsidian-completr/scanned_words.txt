@@ -1389,6 +1389,8 @@ rNf
 rxi
 roWF
 rYetJ
+ricollegate
+rileva
 la
 le
 lo
@@ -2230,6 +2232,7 @@ Axq
 AOc
 AGW
 Attivazione
+Aprendo
 nel
 necessario
 numero
@@ -3616,6 +3619,10 @@ chel
 cfz
 cRL
 client
+click
+callback
+ciascuno
+commenta
 avendo
 alcune
 arriva
@@ -4386,6 +4393,9 @@ aSJ
 anbR
 aSY
 amministrazione
+attributi
+aprendo
+aggiornare
 un
 una
 usato
@@ -5475,6 +5485,7 @@ dFZ
 dJF
 dsC
 dbB
+disconnessione
 finito
 fanno
 facilmente
@@ -6661,6 +6672,9 @@ izxWX
 instradamento
 inoltrare
 istituti
+inserendo
+invocato
+ipv
 modo
 mentre
 massimo
@@ -7256,6 +7270,7 @@ mtj
 mtg
 mAn
 mmQ
+mac
 esempio
 eccede
 errori
@@ -7800,6 +7815,7 @@ eer
 ewz
 eHB
 eLU
+elemnto
 base
 bit
 basano
@@ -9498,6 +9514,7 @@ sKe
 syDV
 staccate
 script
+scollegate
 otterremmo
 ottenere
 occupare
@@ -10469,6 +10486,7 @@ vogLX
 vTX
 voum
 vQn
+visibili
 troppo
 testimone
 tramite
@@ -11805,6 +11823,7 @@ NHK
 Noza
 NQc
 NYB
+Nodejs
 Il
 Instruction
 IR
@@ -12272,6 +12291,7 @@ IDATZ
 IKZ
 IEU
 IPv
+Indirizzo
 Rappresentazione
 Registri
 Register
@@ -13160,6 +13180,7 @@ SGW
 Smb
 SOK
 SOM
+Statico
 BINARY
 Bus
 BX
@@ -14293,6 +14314,7 @@ Doja
 DJV
 DFC
 DWH
+Dinamico
 Le
 La
 Lg
@@ -18390,6 +18412,7 @@ hqx
 hUqz
 hls
 hHv
+hover
 JZ
 JT
 Jd
@@ -19402,6 +19425,7 @@ jIV
 jbn
 jlGw
 jmlCu
+javascript
 word
 wu
 wf

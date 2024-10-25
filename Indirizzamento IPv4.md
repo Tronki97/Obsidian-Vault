@@ -1,0 +1,53 @@
+---
+tags:
+  - TODO
+aliases:
+  - IPv4
+  - ipv4
+data: "`2024-10-25 13:24`"
+---
+- # Indirizzo:
+	- un indirizzo IP viene associato ad una sola [[Scheda di rete]] 
+	- è possibile che però che una scheda di rete possa cambiare indirizzo IP, quando vengono scollegate e ricollegate alla rete. 
+	- ## Statico:
+		- indirizzo che rimane_ sempre quello anche dopo una disconnessione_. 
+		- operazione fatta dal router che rileva il mac-address della scheda e ci associa sempre lo stesso indirizzo.
+		- ### Conseguenze 
+			- non è ottimale usare solo questo a causa di alcune macchine che stanno poco tempo connesse a internet
+			- Utile invece per i _server_. 
+			- non è possibile cambiare rete locale con questo IP 
+	- ## Dinamico:
+		- può cambiare indirizzo dopo una disconnessione anche breve. 
+		- ### Conseguenze:
+			- utile per macchine che non stanno sempre collegate alla rete. Come i Portatili
+	- per quanto riguarda la privacy non cambia il tipo di IP usato 
+- # IPv4
+	- è composto da $32$ bit = sequenza di 4 valori decimali a _8 bit l’uno_ separati da un punto ed ogni valore è compreso tra $[0-255]$ come:
+		- $130.136.25.1$
+	- ed è composto da:
+		- ## Network number:
+			- numero della rete IP alla quale appartiene la scheda
+		- ## Host number:
+			- numero dell’interfaccia di rete.
+- # Classi di rete:
+	- ## Classe A:
+		- se il network number inizia con $0$ e occupa $1$ byte (8 bit)
+		- ciò implica poter rappresentare 126 reti e $2^{24}$ host $[0.0.1 - 255.255.255]$ 
+		- es:
+			- $83.1.2.3$ è un esempio. 
+		- ### Corollario
+			- Utilizzato dai servizi di telecomunicazioni perché si possono rappresentare circa $16$ milioni di host 
+	- ## Classe B:
+		- se inizia con $10$ e il Network number è composto da 2 byte (16 bit)
+		- $2^{14}$ reti rappresentabili a partire da $128.0$ a $191.255$
+		- host number rappresentabili: $2^{16}$ 
+		- ### Corollario:
+			- 
+	- ## Classe C:
+		- se Inizia con $110$ e occupa $3$ byte 
+		- $2^{21}$ reti rappresentabili.
+			- da $192.0.0$ a $223.255.255$ 
+		- $256$ host rappresentabili _meno gli host $0$ e $1$_ quindi un totale di $254$ 
+		- 
+- # Link Utili:
+	- 

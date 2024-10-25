@@ -1,5 +1,9 @@
 ---
-tags: []
+tags: 
+aliases:
+  - completamente connesso
+  - minimamente connesso
+  - partizione di rete
 ---
 
 - ## Collegamenti: 

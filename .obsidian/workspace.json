@@ -4,22 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "533de870b99abd15",
+        "id": "9763e299d3894899",
         "type": "tabs",
         "children": [
           {
-            "id": "9722d74802ef8901",
+            "id": "fa0573c804aaef47",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript.md",
+                "file": "Indirizzamento IPv4.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Javascript"
+              "title": "Indirizzamento IPv4"
+            }
+          },
+          {
+            "id": "489eeb083eda5be1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Reti di Calcolatori/livello Rete.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "livello Rete"
             }
           }
         ]
@@ -53,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "router",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Javascript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Javascript"
             }
           },
           {
@@ -112,11 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Javascript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Javascript"
             }
           },
           {
@@ -137,9 +154,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Javascript.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Javascript"
             }
           },
           {
@@ -171,33 +190,14 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
-          },
-          {
-            "id": "029a5d7f45b9f50d",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
-            }
-          },
-          {
-            "id": "f7ee119df0f68e0f",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 673.5
+    "width": 673.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,14 +215,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "homepage:Open homepage": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "9722d74802ef8901",
+  "active": "fa0573c804aaef47",
   "lastOpenFiles": [
-    "lezione 24-10-24.md",
-    "Javascript.md",
+    "Secondo Anno/Reti di Calcolatori/livello Rete.md",
+    "Indirizzamento IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
+    "Secondo Anno/Linguaggi di Programmazione/lezione 24-10-24.md",
+    "Secondo Anno/Reti di Calcolatori/intro livello 1/Infrastruttura e collegamenti di rete.md",
     "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/linguaggio C.md",
+    "Secondo Anno/Tecnologie Web/Javascript.md",
     "immagini/Pasted image 20241024112848.png",
     "immagini/Pasted image 20241024112037.png",
     "immagini/Pasted image 20241024110012.png",
@@ -232,7 +238,6 @@
     "Secondo Anno/Sistemi Operativi/Concorrenza/Soluzioni speciali hardware.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori Binari.md",
-    "Secondo Anno/Reti di Calcolatori/livello Rete.md",
     "livello Rete.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
     "immagini/Pasted image 20241022180210.png",
@@ -252,10 +257,6 @@
     "Secondo Anno/Tecnologie Web/Markup.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Calcolo Numerico/Interpolazione.md",
-    "Secondo Anno/Calcolo Numerico/Laboratorio/Approssimazione dei dati.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Concorrenza.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Azioni atomiche.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Proprietà di un programma.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza",
     "LaTeX-cheat-sheet 1.pdf",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi",
