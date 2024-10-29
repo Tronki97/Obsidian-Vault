@@ -1,0 +1,46 @@
+---
+tags:
+  - TODO
+  - linguaggi
+aliases: 
+data: "`2024-10-24 12:01`"
+---
+- # Def:
+	- un linguaggio è libero e deterministico se è accettato da un [[PDA deterministico|DPDA]]  _per stato finale_ 
+- # Teorema:
+	- la classe dei linguaggi liberi deterministici è inclusa _propriamente_ nella classe dei _linguaggi liberi_ 
+	- ## ES:
+		- $$L_{1}=\{ww^{R}|w\in\{a,b\}^{*}\}$$
+			- è libero ma non esiste un DPDA che lo [[Automi a Pila (PDA)#^edde38||riconosce]].
+		- $$L_{2}=\{wcw^{R}|w\in \{a,b^{*}\}\}$$
+			- è libero deterministico 
+			- ![[Pasted image 20241029171257.png]]
+			- ed è riconosciuto per [[Automi a Pila (PDA)#^879bee|stato finale]] 
+- # Prop:
+	- $$L\ \mathbf{regolare}\implies \exists N: L=L[N]$$
+		- N è un DPDA 
+		- N lo riconosce per stato finale.
+	- ## Dim:
+		- Se $L$ è [[Linguaggi regolari|regolare]] allora $\exists$ un [[Automi finiti deterministici|DFA]] $M$ tale che: $L=L[M]$ 
+		- a partire da $M$ posso costruire un _DPDA_ $N$ che si comporta come $M$ __senza mai manipolare lo stack__ 
+			- $\implies L=L[N]$ 
+	- Quindi un linguaggio libero deterministico $L$ è riconosciuto da un DPDA per [[Automi a Pila (PDA)|pila vuota]] sse:
+		- $L$ gode della _prefix proprety_ 
+			- $$\not \exists x,y\in L : x \ \ \mathbf{prefisso \ di} \ \ y$$
+	- Si osserva che $L_{2}=\{wcw^{R}|w\in \{a,b^{*}\}\}$ gode di questa proprietà. 
+		- ![[Pasted image 20241029174422.png]]
+- # Corollario:
+	- ## 1:
+		- Se $L$ _libero deterministico_ non gode della _prefix proprety_ non può essere riconosciuto da un _DPDA_ per _pila vuota_ 
+	- ## 2:
+		- Se $L$ _libero deterministico_, allora $L\$ = \{w\$\ |\ w\in L\}$ gode della _prefix proprety_ 
+			- $\implies L\$$ può essere riconosciuto da un DPDA per pila vuota. 
+- # ES:
+	- $L=\{a^{n}b^{n}| n\ge 0\}$ non gode della *prefix proprety* perché $\epsilon \in L$ e $\epsilon$ è prefisso di $ab$ 
+		- ![[Pasted image 20241029180400.png]]
+		- ![[Pasted image 20241029180419.png]]
+- # Prop:
+	- $L$ libero deterministico $\implies$ $L$ è generabile da una *grammatica libera non ambigua* 
+	- Quindi i Linguaggi liberi deterministici *non sono ambigui* 
+- # Link Utili:
+	- 

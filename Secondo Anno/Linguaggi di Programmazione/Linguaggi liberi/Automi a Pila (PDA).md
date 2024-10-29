@@ -5,6 +5,8 @@ aliases:
   - PDA
   - push down automata
   - automa a pila
+  - stato finale
+  - pila vuota
 data: "`2024-10-19 16:41`"
 ---
 - # Intro:
@@ -43,10 +45,10 @@ data: "`2024-10-19 16:41`"
 		- ![[Pasted image 20241019170918.png]]
 	- ## Computazione:
 		- ![[Pasted image 20241019170943.png]]
-- # Linguaggio accettato:
+- # Linguaggio riconosciuto: ^edde38
 	- due modi per il riconoscimento: 
 	- $N=(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$ 
-	- ## Per stato finale:
+	- ## Per stato finale: ^879bee
 		- $$L[N]=\{w\in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \alpha) \ \ q\in F \}$$
 	- ## Per pila vuota:
 		- $$P[N]=\{w \in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \epsilon)\}$$
