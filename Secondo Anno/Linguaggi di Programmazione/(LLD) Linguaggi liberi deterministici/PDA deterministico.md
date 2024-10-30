@@ -1,6 +1,6 @@
 ---
 tags:
-  - TODO
+  - linguaggi
 aliases:
   - DPDA
 data: "`2024-10-29 17:00`"

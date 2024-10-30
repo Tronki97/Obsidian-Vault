@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - PDA
   - push down automata
@@ -26,15 +25,15 @@ data: "`2024-10-19 16:41`"
 - # Automa a pila:
 	- è una 7-upla :
 		- $$(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$$
-			- $\Sigma$ alfabeto finito.
-			- $\Gamma$ è un insieme finito di simboli della Pila.
-			- $\delta$ è la funzione di transizione di tipo:
+			- $\Sigma$ : alfabeto finito.
+			- $\Gamma$ : è un insieme finito di simboli della Pila.
+			- $\delta$ : è la funzione di transizione di tipo:
 				- $$\delta: Q \times (\Sigma \cup \{\epsilon\})\times \Gamma\to P(Q\times \Gamma^{*})$$
 				- ($\Sigma \cup \{\epsilon\}$) consuma un simbolo dell'input $\Sigma$ oppure no $\epsilon$ 
 				- $\Gamma$ consuma il simbolo in cima alla pila.
 				- $P(Q\times \Gamma^{*})$ : Sulla pila scrive una stringa di lunghezza qualsiasi di simboli $\Gamma$ 
-			- $\bot\in \Gamma$ è il simbolo inziale sulla pila.
-			- $F$ sono gli stati finali 
+			- $\bot\in \Gamma$ : è il simbolo inziale sulla pila.
+			- $F$ : sono gli stati finali 
 - # Transizioni di un PDA:
 	- ## Descrizione istantanea:
 		- ($q,w,\beta$) 
@@ -50,7 +49,7 @@ data: "`2024-10-19 16:41`"
 	- $N=(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$ 
 	- ## Per stato finale: ^879bee
 		- $$L[N]=\{w\in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \alpha) \ \ q\in F \}$$
-	- ## Per pila vuota:
+	- ## Per pila vuota: ^a594b1
 		- $$P[N]=\{w \in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \epsilon)\}$$
 	- ### OSS:
 		- Spesso per un certo PDA $N$ 

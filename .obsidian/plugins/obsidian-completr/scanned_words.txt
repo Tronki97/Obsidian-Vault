@@ -701,6 +701,9 @@ pDR
 pdB
 pYU
 pmK
+prefix
+proprety
+parsing
 realizzare
 rappresentare
 risultato
@@ -1403,6 +1406,12 @@ rjw
 rCM
 rih
 rjd
+riconosce
+ricostruiscono
+reduce
+rhc
+rcX
+rJW
 la
 le
 lo
@@ -1849,6 +1858,9 @@ lYZ
 lhygg
 leLz
 lIK
+look
+lxP
+leftomost
 ALU
 AND
 Address
@@ -2255,6 +2267,9 @@ Attivazione
 Aprendo
 ACb
 ACe
+Accept
+AVf
+AVee
 nel
 necessario
 numero
@@ -3658,6 +3673,8 @@ cGY
 cNi
 cqwm
 cyIq
+compone
+consumo
 avendo
 alcune
 arriva
@@ -4437,6 +4454,9 @@ amZ
 aOg
 ayP
 abJLP
+ambigui
+ahead
+accept
 un
 una
 usato
@@ -4891,6 +4911,8 @@ udz
 uyy
 uSuL
 uQv
+uJkC
+uXy
 decremento
 del
 di
@@ -5543,6 +5565,11 @@ dZx
 dKV
 dQtr
 drA
+dawm
+dXg
+daB
+diAP
+dLob
 finito
 fanno
 facilmente
@@ -6041,6 +6068,7 @@ fej
 frammentati
 futuro
 fov
+fyB
 in
 il
 invece
@@ -7345,6 +7373,8 @@ mrh
 mpg
 mxO
 mSf
+manipolare
+mqq
 esempio
 eccede
 errori
@@ -7903,6 +7933,10 @@ efIy
 eci
 ePNQ
 elx
+espandi
+espandere
+ehT
+eaVYL
 base
 bit
 basano
@@ -8324,6 +8358,7 @@ bGsD
 bvGgx
 bsC
 bLm
+bwv
 quindi
 questo
 quelle
@@ -9621,6 +9656,8 @@ sDY
 stz
 soi
 sQW
+shift
+sKony
 otterremmo
 ottenere
 occupare
@@ -10107,6 +10144,7 @@ oWY
 oyc
 oqk
 oed
+oVX
 va
 valore
 viene
@@ -10605,6 +10643,7 @@ vZZ
 vle
 vlx
 vgg
+vIjx
 troppo
 testimone
 tramite
@@ -11132,6 +11171,9 @@ tenendo
 tvn
 tKX
 ttgg
+tornando
+top
+twQ
 grandi
 gli
 grande
@@ -11566,6 +11608,11 @@ gMsv
 gzQ
 gtUu
 gyl
+gode
+generabile
+generalizzazione
+giH
+gmm
 NOT
 NotePad
 Nu
@@ -11959,6 +12006,7 @@ NQa
 Nsq
 NGc
 NNY
+NXFK
 Il
 Instruction
 IR
@@ -12433,6 +12481,9 @@ Ica
 IIq
 IcLC
 IDATCe
+IAdYZ
+IVp
+IKJ
 Rappresentazione
 Registri
 Register
@@ -12857,6 +12908,12 @@ RqX
 RPR
 RvmS
 RFf
+Richiami
+Reduce
+Rgi
+RLV
+Rzt
+Roim
 Si
 Se
 Status
@@ -13342,6 +13399,10 @@ SRZ
 SOKYy
 SgC
 SyR
+Shift
+SHIFT
+Sil
+Svg
 BINARY
 Bus
 BX
@@ -13703,6 +13764,9 @@ BtK
 BpO
 BnL
 BBe
+BPD
+BTa
+Bottom
 Per
 Program
 PC
@@ -14115,6 +14179,8 @@ POX
 Protocol
 Portatili
 POg
+Ponendo
+PNl
 Di
 Data
 Dati
@@ -14486,6 +14552,9 @@ DiV
 DVWT
 Drl
 DrbH
+Demorgan
+Deterministici
+Dji
 Le
 La
 Lg
@@ -14856,6 +14925,8 @@ LRhm
 LHz
 LLq
 LOqa
+Lck
+LMO
 Modulo
 Massimo
 Memory
@@ -15251,6 +15322,10 @@ MHP
 MPq
 Mmy
 MHx
+MHG
+Mhkp
+Mnv
+MKEK
 ES
 Esempi
 Ex
@@ -15661,6 +15736,7 @@ EeT
 EKl
 ERZV
 EKK
+EML
 Come
 Codifica
 Counter
@@ -16114,6 +16190,9 @@ Chy
 Clk
 Cum
 Cpa
+Chiusi
+Ctz
+CaX
 Questa
 Quello
 Qz
@@ -16475,6 +16554,7 @@ QGyCQ
 QWJyE
 QIh
 QtV
+Qvm
 Formato
 FLIP
 FLOP
@@ -16888,6 +16968,10 @@ FhRb
 Faa
 FOi
 FncN
+FTF
+FUv
+FLj
+Fwc
 Word
 WK
 WB
@@ -17236,6 +17320,9 @@ Wß
 WeP
 WTH
 WFx
+WGl
+Wge
+WBm
 zero
 zip
 zL
@@ -17963,6 +18050,7 @@ HpbZR
 HOUA
 HqI
 HpN
+HkkF
 XOR
 Xm
 Xo
@@ -18289,6 +18377,7 @@ XjG
 Xrqc
 XXK
 XNj
+XXy
 ha
 ho
 hack
@@ -18659,6 +18748,8 @@ hols
 hpz
 hmZ
 hRJ
+hHKI
+hennf
 JZ
 JT
 Jd
@@ -19009,6 +19100,12 @@ JMd
 JTYY
 JJe
 JEEJ
+JYx
+Juuu
+JXf
+JXbO
+JpE
+JlF
 kB
 kW
 kWs
@@ -19367,6 +19464,12 @@ kfK
 kje
 kUh
 kbX
+keS
+kXp
+kseb
+kCuMqsil
+kBm
+kJJJ
 jmp
 jy
 jwä
@@ -19693,6 +19796,7 @@ jhF
 jtW
 jWY
 jkoo
+jqq
 word
 wu
 wf
@@ -20033,6 +20137,8 @@ wTy
 wkT
 whv
 wRe
+wcX
+wzP
 Oltre
 OgSf
 Od
@@ -20453,6 +20559,8 @@ OPH
 OcX
 OHaa
 ODK
+Ocom
+Ocy
 xz
 xX
 xF
@@ -20818,6 +20926,9 @@ xYJ
 xZv
 xhy
 xLF
+xvq
+xCa
+xxw
 Kq
 KG
 KR
@@ -21149,6 +21260,8 @@ KGX
 Kmb
 KkJ
 KdL
+Kjq
+Kqo
 Us
 US
 Ur
@@ -21520,6 +21633,7 @@ UWKQ
 UFq
 UWq
 UVNYY
+UePpe
 Zx
 ZD
 ZRz
@@ -22160,6 +22274,10 @@ Ysl
 YGW
 YgM
 YXG
+YQp
+Yimi
+YmQ
+YYu
 yI
 ys
 yN
@@ -22537,6 +22655,9 @@ yvR
 yOi
 yLkd
 yRUH
+yih
+yBb
+yrj
 Tp
 Tv
 TBz
@@ -22920,6 +23041,10 @@ TVVI
 THGBx
 TPvL
 TnN
+Top
+TXEU
+TnXyAe
+TZV
 GY
 GT
 Ghw
@@ -23699,6 +23824,9 @@ Voy
 Vze
 VeT
 VVKY
+VLGb
+Vgy
+VHK
 öG
 öH
 özw

@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
   - linguaggi
 aliases: 
 data: "`2024-10-24 12:01`"

@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases: 
 data: "`2024-10-22 17:51`"
 ---

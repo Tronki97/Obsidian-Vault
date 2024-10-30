@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - pumping lemma
 data: "`2024-10-15 19:10`"
