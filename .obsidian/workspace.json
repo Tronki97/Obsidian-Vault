@@ -8,48 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "41c685dd197a498c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/livello Rete.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "livello Rete"
-            }
-          },
-          {
             "id": "8273edd9ddd880c0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
+                "file": "Secondo Anno/Tecnologie Web/Javascript.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Automi a Pila (PDA)"
-            }
-          },
-          {
-            "id": "8b2e6d95b04d62d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Top-down Parsing.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Top-down Parsing"
+              "title": "Javascript"
             }
           }
         ]
@@ -233,19 +203,27 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "41c685dd197a498c",
+  "active": "8273edd9ddd880c0",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/Indirizzamento IPv4.md",
+    "immagini/LaTeX-cheat-sheet 1.pdf",
+    "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
+    "immagini/Pasted image 20241104151237.png",
+    "immagini/Pasted image 20241104151205.png",
+    "immagini/Pasted image 20241104145356.png",
+    "immagini/Pasted image 20241104144854.png",
+    "immagini/Pasted image 20241104144836.png",
+    "immagini/Pasted image 20241104144329.png",
+    "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
     "Secondo Anno/Reti di Calcolatori/livello Rete.md",
+    "Secondo Anno/Reti di Calcolatori/Indirizzamento IPv4.md",
     "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura protocolli di internet.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
     "immagini/Pasted image 20241030185355.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Proprietà di chiusura dei linguaggi liberi.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Parser.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Proprietà linguaggi liberi deterministici.md",
-    "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Bottom-up parsing.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Top-down Parsing.md",
     "immagini/Pasted image 20241030184147.png",
@@ -255,25 +233,16 @@
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/PDA deterministico.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
     "immagini/Pasted image 20241029180419.png",
-    "immagini/Pasted image 20241029180400.png",
-    "immagini/Pasted image 20241029174422.png",
-    "immagini/Pasted image 20241029171257.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Linguaggo riconosciuto.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Pumping Theorem.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Infrastruttura e collegamenti di rete.md",
     "Secondo Anno/Sistemi Operativi/linguaggio C.md",
     "Secondo Anno/Tecnologie Web/Javascript.md",
-    "immagini/Pasted image 20241024112848.png",
-    "immagini/Pasted image 20241024112037.png",
-    "immagini/Pasted image 20241024110012.png",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Soluzioni speciali hardware.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori Binari.md",
-    "livello Rete.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza",
-    "LaTeX-cheat-sheet 1.pdf",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi",
     "Secondo Anno/Linguaggi di Programmazione/LEX",
     "Secondo Anno/Calcolo Numerico/Laboratorio",

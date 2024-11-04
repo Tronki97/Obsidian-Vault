@@ -9,6 +9,7 @@ cssclasses:
 ```dataview
 LIST
 FROM #TODO
+SORT data
 ```
 
 - ## Ultimi modificati

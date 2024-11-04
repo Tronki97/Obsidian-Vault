@@ -1,0 +1,55 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-11-04 13:22`"
+---
+- # Argomento:
+	- ogni fenomeno può essere descritto come:
+		- causa→modello→effetto.
+		- x→A→y
+	- ovvero: $Ax=y$ che quindi applica il modello $A$ alla causa $x$ ovvero la risoluzione di un sistema lineare 
+- # Problemi inversi:
+	- è una sorta di ponte che unisce i _dati_ ai _modelli matematici_. Dai dati arrivo a descrivere un modello che porti appunto a certi risultati.
+	- $A=$  _Sistema di acquisizione dei dati_
+		- spesso è una _matrice mal condizionata_ ($K(A)>>1$) 
+	- c’è però l’influenza degli errori:
+		- $$Ax=y+\delta = y^{\delta}$$ 
+	- ## Problemi mal posti
+		- Quando i problemi hanno $A$ mal condizionata si dicono _mal posti_ quindi si procede a risolvere come un [[Problema dei minimi quadrati]] che ci da una matrice rettangolare:
+			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}$$
+- # Problema test
+	- ## Creazione:
+		- si considera prima una soluzione di riferimento “vera” definita come _ground truth_ $x_{GA}$ alla quale applico il modello definito dalla matrice $A$ 
+			- ![[Pasted image 20241104144329.png]]
+		- in presenza di errori sui dati la soluzione:
+			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}=min_{x}||Ax-y-\delta||^{2}_{2}$$
+			- $$x^{*}=\sum_{i=1}^{n} \frac{u^{T}_{i}y}{\sigma_{i}}v_{i}+\sum_{i=1}^{n} \frac{u^{T}_{i}\delta}{\sigma_{i}}v_{i}$$
+			- la seconda sommatoria produce le oscillazioni nella soluzione.
+			- i valori ${u^{T}_{i}y^\delta}$ sono detti _coefficienti di Fourier_
+		- ![[Pasted image 20241104145356.png]]
+			- la condizione discreta di Picard viene rispettata quando i coefficienti di Fourier decrescono più velocemente dei valori singolari $\sigma$ in questo caso fino ad $i=15$ in assenza di rumore e fino ad $i=5$ col rumore.
+			- quando la condizione non è rispettata i coefficienti cominciano a crescere e il $\delta$ viene amplificato 
+- # Regolarizzazione di Tikhonov:
+	- uso dei filtri che considerano di più le prime componenti andando a scendere con l’avanzare delle componenti.
+		- che hanno un range: $[0,1]$ 
+	- che quindi il problema diventa: 
+		- $$min_{x}||Ax-y^{\delta}||_{2}^{2}+\lambda||Lx||_{2}^{2}$$
+		- $\lambda>0$ è il _parametro di regolarizzazione_ che pesa la parte di congruenza(_fit_) con i dati della soluzione.
+		- $L$ è la [[Matrice identità]] o un altra cosa ma noi usiamo sempre $L=I$ 
+	- Quindi il problema è equivalente a:
+		- $$x_{tikh}=min_{x}||Mx-Y||_{2}^{2}$$
+		- $M =$ matrice $2m \times n$ che ha come blocchi in colonna la matrice $A$ e la matrice $\lambda I$ 
+		- $Y$ è il vettore di $\dim=2m$ che ha come vettori colonna rispettivamente $y^\delta$ e $\underline{0}$ 
+	- ## Come scegliere $\lambda$ 
+		- $\lambda=0.1$
+			- ![[Pasted image 20241104151205.png]]
+		- $\lambda=0.00001$
+			- ![[Pasted image 20241104151237.png]]
+		- la scelta di questo parametro è delicata. Teoricamente quello ottimale sarebbe:
+			- $$\lambda_{opt}=min_{\lambda}||x_{\lambda}-x_{GT}||_{2}^{2}$$
+			- $x_{\lambda}$ è la soluzione calcolata in corrispondenza di un certo $\lambda$
+			- $x_{GT}$ è la soluzione esatta.
+ 
+- # Link Utili:
+	- 
