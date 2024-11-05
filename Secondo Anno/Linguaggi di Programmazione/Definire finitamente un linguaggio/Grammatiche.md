@@ -1,7 +1,8 @@
 ---
-tags: []
+tags: 
 aliases:
   - grammatiche libere
+  - grammatica libera
 data: "`2024-09-24 11:24`"
 ---
 - ## Definire finitamente un linguaggio:

@@ -23,7 +23,7 @@ data: "`2024-11-05 09:41`"
 - # Condizioni di arresto:
 	- si ferma l’algoritmo quando il residuo:
 		- $$||r_{k}||_{2}<tol \cdot ||r_{0}||_{2}$$
-		- tol= _tolleranza_
+		- $tol$= _tolleranza_
 		- bisogna stare attenti che il residuo iniziale non sia uguale a 0 altrimenti si trova una soluzione ma per caso e forse sbagliata. 
 - # Convergenza dell’algoritmo:
 	- gli altri algoritmi necessitano di infinite iterazioni per convergere sulla soluzione esatta.
@@ -31,7 +31,7 @@ data: "`2024-11-05 09:41`"
 		- $n=$ max iterazioni.
 		- spesso questo $n$ è troppo grande 
 - # Adattamento:
-	- questo algoritmo si può adattare ai minimi quadrati con tikhonov. 
+	- questo algoritmo si può adattare ai minimi quadrati con [[Problemi inversi#^071864|Tikhonov]]. 
 	- 
 - # Link Utili:
 	- 

@@ -1,7 +1,8 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: []
+aliases:
+  - Tikhonov
+  - tikhonov
 data: "`2024-11-04 13:22`"
 ---
 - # Argomento:
@@ -30,7 +31,7 @@ data: "`2024-11-04 13:22`"
 		- ![[Pasted image 20241104145356.png]]
 			- la condizione discreta di Picard viene rispettata quando i coefficienti di Fourier decrescono più velocemente dei valori singolari $\sigma$ in questo caso fino ad $i=15$ in assenza di rumore e fino ad $i=5$ col rumore.
 			- quando la condizione non è rispettata i coefficienti cominciano a crescere e il $\delta$ viene amplificato 
-- # Regolarizzazione di Tikhonov:
+- # Regolarizzazione di Tikhonov: ^071864
 	- uso dei filtri che considerano di più le prime componenti andando a scendere con l’avanzare delle componenti.
 		- che hanno un range: $[0,1]$ 
 	- che quindi il problema diventa: 

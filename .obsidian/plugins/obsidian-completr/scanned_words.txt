@@ -710,6 +710,7 @@ posti
 parametro
 pesa
 producono
+polinomi
 realizzare
 rappresentare
 risultato
@@ -1421,6 +1422,7 @@ rJW
 rettangolare
 raggiungubili
 raggurppare
+rallenterebbero
 la
 le
 lo
@@ -2279,6 +2281,7 @@ ACe
 Accept
 AVf
 AVee
+Adattamento
 nel
 necessario
 numero
@@ -3687,6 +3690,9 @@ consumo
 casting
 condizionata
 cominciano
+chiamati
+converger
+convergere
 avendo
 alcune
 arriva
@@ -4472,6 +4478,10 @@ accept
 acquisizione
 amplificato
 annullabile
+approssimare
+approssimi
+attenti
+annullabili
 un
 una
 usato
@@ -6092,6 +6102,7 @@ fov
 fyB
 falso
 filtri
+forse
 in
 il
 invece
@@ -6797,6 +6808,9 @@ ipQc
 inversi
 inutili
 inadatte
+interpolazione
+itera
+introduco
 modo
 mentre
 massimo
@@ -9690,6 +9704,8 @@ strutturato
 scope
 strutturati
 scendere
+sparsa
+sbagliata
 otterremmo
 ottenere
 occupare
@@ -11209,6 +11225,10 @@ top
 twQ
 tipate
 truth
+tantissimi
+tol
+tolleranza
+tikhonov
 grandi
 gli
 grande
@@ -12520,6 +12540,7 @@ IDATCe
 IAdYZ
 IVp
 IKJ
+Inadatte
 Rappresentazione
 Registri
 Register
@@ -13441,6 +13462,7 @@ Sil
 Svg
 Similitudini
 Semplificare
+Simbolo
 BINARY
 Bus
 BX
@@ -14220,6 +14242,7 @@ POg
 Ponendo
 PNl
 Picard
+Pol
 Di
 Data
 Dati
@@ -15778,6 +15801,8 @@ EKl
 ERZV
 EKK
 EML
+Eliminazioni
+Eliminare
 Come
 Codifica
 Counter
@@ -16235,6 +16260,8 @@ Chiusi
 Ctz
 CaX
 Creazione
+Condizioni
+Convergenza
 Questa
 Quello
 Qz

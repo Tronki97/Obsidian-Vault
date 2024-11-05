@@ -1,0 +1,58 @@
+---
+tags:
+  - TODO
+  - linguaggi
+aliases: 
+data: "`2024-11-05 11:09`"
+---
+- # Eliminazioni da fare:
+	- ## produzioni $\epsilon$:
+		- del tipo $A\to \epsilon$. Inadatte al [[Bottom-up parsing]] 
+	- ## produzione unitaria:
+		- del tipo $B\to B$ che possono creare dei cicli visto che vanno in dei NT 
+	- ## simboli inutili:
+		- T o NT che non sono raggiungibili dal simbolo iniziale o che non producono parole 
+	- ## ricorsione sinistra:
+		- $A\to A \alpha$ perché inadatte al [[Top-down Parsing]] 
+	- ## fattorizzazione di grammatiche:
+		- raggurppare diverse produzioni per rendere le grammatiche meno non deterministiche.
+- # Semplificare:
+	- ## Eliminare $\epsilon$:
+		- voglio una $G'$ tale che $L(G')=L(G)-\{\epsilon\}$ 
+		- ### Oss:
+			- con $\epsilon \in L(G)$ e voglio una grammatica $G'': L(G)=L(G'')$ 
+			- considero $G'=(NT, T, S, R')$
+			- definisco: 
+				- $$G''=G'\cup \{S'\to \epsilon|S\}$$
+				-  $$G''=(NT\cup \{S'\}, T, S', R'\cup \{S'\to \epsilon|S\})$$
+		- ### Simbolo annullabile:
+			- per definire un algoritmo che la genera bisogna definire un simbolo annullabile :
+				- $A\in NT: S \Rightarrow^{+} \epsilon$
+			- bisogna calcolare tutti quelli appartenenti a quella grammatica
+			- $$N_{0}(G)=\{A\in NT| A\to \epsilon\in R\}$$
+				- insieme dei simboli annullabili al passo 0
+			- $$N_{i+1}=N_{i}(G)\cup\{B\in NT|B\to c_{1}...c_{k}\in R\wedge c_{1},...,c_{k}\in N_{i}(G)\}$$
+			- #### OSS:
+				- questo insieme non può essere infinito siccome $NT$ è finito quindi esiste un passo $i$ al quale $N_{i}(G)=N_{i+1}(G)$ 
+		- dopo aver aver calcolato l’insieme $N(G)$ costruisco la grammatica $G'=(NT, T, S, R')$ 
+		- in $G'$ non metto produzioni del tipo $A\to \epsilon\in R$ e non introduco produzioni del tipo $A\to \epsilon$ 
+		- ### Prop:
+			- data la [[Grammatiche#^653185|grammatica libera]] $G$. $G'$ non ha $\epsilon$-produzioni e $L(G')=L(G)-\{\epsilon\}$ 
+		- ### ES:
+			- ![[Pasted image 20241105224451.png]]
+			- ![[Pasted image 20241105224510.png]]
+	- ## Eliminare le produzioni unitarie:
+		- _coppie unitarie_: $(A,B): A \Rightarrow^{*}B$ 
+		- ### Calcolarle:
+			- $$U_{0}(G)=\{(A,A)|A\in NT\}$$
+			- $$U_{i+1}(G)=U_{i}(G)\cup \{(A,C)| (A,B)\in U_{i}(G)\wedge B\to C\in R\}$$
+		- ### OSS:
+			- $$U_{i}(G)\subseteq U_{i+1}(G)$$
+			- per lo stesso motivo delle degli insiemi di simboli annullabili.
+		- ### Algoritmo:
+			- data $G$ libera, definisco $G'=(NT, T, S, R')$ dove, $\forall (A,B)\in U(G)$ $R'$ contiene tutte le produzioni $A\to \alpha$, dove $B\to \alpha \in R$ _e non è unitaria_.
+		- ## ES:
+			- ![[Pasted image 20241105225620.png|600]]
+			-  ![[Pasted image 20241105225925.png|600]]
+- # Link Utili:
+	- 
