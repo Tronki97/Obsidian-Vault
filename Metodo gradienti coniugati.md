@@ -1,0 +1,37 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-11-05 09:41`"
+---
+- # Argomento:
+	- risolve sistemi lineari del tipo:
+		- $$Ax=y$$
+	- _Utile quando $A$ è molto grande ed ha tantissimi 0 (sparsa)_
+	- usato più spesso però per il [[Problema dei minimi quadrati]]:
+		- $$min_{x\in \mathbb{R}^{n}} \frac{1}{2}||Ax-y||^{2}_{2}$$ 
+	- è un algoritmo _iterativo_, che dati dei parametri convergerà sulla soluzione quindi gli serve un parametro di arresto.
+	- 1) le matrici $A$  e $A^{T}$ compaiono sempre moltiplicate per qualcosa, come:
+		- $Ax$ o $A^{T}z$ 
+	- 2) queste operazioni con le matrici appaiono il meno possibile siccome le matrici sono molto grandi e rallenterebbero il processo.
+- # Implementazione:
+	- si parte da un dato iniziale $x_{0}$ 
+	- si ha un residuo iniziale: $r_{0}=A^{T}(y-Ax_{0})$
+	- si itera su $k$ all’infinito.
+	- si aggiorna la soluzione: $x_{k+1}=x_{k}+\alpha_{k}p_{k}$
+	- si aggiorna il residuo: $r_{k+1}=r_{k}-\alpha_{k}A^{T}q_{k}$
+- # Condizioni di arresto:
+	- si ferma l’algoritmo quando il residuo:
+		- $$||r_{k}||_{2}<tol \cdot ||r_{0}||_{2}$$
+		- tol= _tolleranza_
+		- bisogna stare attenti che il residuo iniziale non sia uguale a 0 altrimenti si trova una soluzione ma per caso e forse sbagliata. 
+- # Convergenza dell’algoritmo:
+	- gli altri algoritmi necessitano di infinite iterazioni per convergere sulla soluzione esatta.
+	- questo algoritmo trova il risultato al massimo in $n$ passi 
+		- $n=$ max iterazioni.
+		- spesso questo $n$ è troppo grande 
+- # Adattamento:
+	- questo algoritmo si può adattare ai minimi quadrati con tikhonov. 
+	- 
+- # Link Utili:
+	- 

@@ -704,6 +704,12 @@ pmK
 prefix
 proprety
 parsing
+parentetico
+ponte
+posti
+parametro
+pesa
+producono
 realizzare
 rappresentare
 risultato
@@ -1412,6 +1418,9 @@ reduce
 rhc
 rcX
 rJW
+rettangolare
+raggiungubili
+raggurppare
 la
 le
 lo
@@ -3675,6 +3684,9 @@ cqwm
 cyIq
 compone
 consumo
+casting
+condizionata
+cominciano
 avendo
 alcune
 arriva
@@ -4457,6 +4469,9 @@ abJLP
 ambigui
 ahead
 accept
+acquisizione
+amplificato
+annullabile
 un
 una
 usato
@@ -4913,6 +4928,8 @@ uSuL
 uQv
 uJkC
 uXy
+undefined
+ulteriormente
 decremento
 del
 di
@@ -5570,6 +5587,10 @@ dXg
 daB
 diAP
 dLob
+discreta
+decrescono
+delicata
+deterministiche
 finito
 fanno
 facilmente
@@ -6069,6 +6090,8 @@ frammentati
 futuro
 fov
 fyB
+falso
+filtri
 in
 il
 invece
@@ -6771,6 +6794,9 @@ iAH
 iqW
 igx
 ipQc
+inversi
+inutili
+inadatte
 modo
 mentre
 massimo
@@ -7375,6 +7401,8 @@ mxO
 mSf
 manipolare
 mqq
+modificabile
+matematici
 esempio
 eccede
 errori
@@ -9658,6 +9686,10 @@ soi
 sQW
 shift
 sKony
+strutturato
+scope
+strutturati
+scendere
 otterremmo
 ottenere
 occupare
@@ -10145,6 +10177,7 @@ oyc
 oqk
 oed
 oVX
+oscillazioni
 va
 valore
 viene
@@ -11174,6 +11207,8 @@ ttgg
 tornando
 top
 twQ
+tipate
+truth
 grandi
 gli
 grande
@@ -11613,6 +11648,7 @@ generabile
 generalizzazione
 giH
 gmm
+ground
 NOT
 NotePad
 Nu
@@ -13403,6 +13439,8 @@ Shift
 SHIFT
 Sil
 Svg
+Similitudini
+Semplificare
 BINARY
 Bus
 BX
@@ -14181,6 +14219,7 @@ Portatili
 POg
 Ponendo
 PNl
+Picard
 Di
 Data
 Dati
@@ -14555,6 +14594,8 @@ DrbH
 Demorgan
 Deterministici
 Dji
+Definirle
+Dai
 Le
 La
 Lg
@@ -16193,6 +16234,7 @@ Cpa
 Chiusi
 Ctz
 CaX
+Creazione
 Questa
 Quello
 Qz
@@ -16972,6 +17014,7 @@ FTF
 FUv
 FLj
 Fwc
+Fourier
 Word
 WK
 WB
@@ -23045,6 +23088,7 @@ Top
 TXEU
 TnXyAe
 TZV
+Teoricamente
 GY
 GT
 Ghw
