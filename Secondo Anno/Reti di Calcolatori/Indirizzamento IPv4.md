@@ -4,6 +4,8 @@ tags:
 aliases:
   - IPv4
   - ipv4
+  - network number
+  - host number
 data: "`2024-10-25 13:24`"
 ---
 - # Indirizzo:
@@ -31,16 +33,16 @@ data: "`2024-10-25 13:24`"
 			- numero dell’interfaccia di rete.
 - # Classi di rete:
 	- ## Classe A:
-		- se il network number inizia con $0$ e occupa $1$ byte (8 bit)
+		- se il _network number_ inizia con $0$ e occupa $1$ byte (8 bit)
 		- ciò implica poter rappresentare 126 reti e $2^{24}$ host $[0.0.1 - 255.255.255]$ 
 		- es:
 			- $83.1.2.3$ è un esempio. 
-		- ### Corollario
+		- ### utilizzi IRL
 			- Utilizzato dai servizi di telecomunicazioni perché si possono rappresentare circa $16$ milioni di host 
 	- ## Classe B:
-		- se inizia con $10$ e il Network number è composto da 2 byte (16 bit)
+		- se inizia con $10$ e il _Network number_ è composto da 2 byte (16 bit)
 		- $2^{14}$ reti rappresentabili a partire da $128.0$ a $191.255$
-		- host number rappresentabili: $2^{16}$ 
+		- _host number_ rappresentabili: $2^{16}$ 
 		- ### Corollario:
 			- 
 	- ## Classe C:

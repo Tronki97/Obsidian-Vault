@@ -6,6 +6,7 @@ aliases:
   - produzione unitaria
   - simboli inutili
   - ricorsione sinistra
+  - fattorizzazione a sinistra
 data: "`2024-11-05 11:09`"
 ---
 - # Eliminazioni da fare:
@@ -120,7 +121,34 @@ data: "`2024-11-05 11:09`"
 			- Considero:
 				- ![[Pasted image 20241106130619.png]]
 			- c’è sia quella immediata $(B\to Bc)$ che quella non ($S \implies Ba \implies Sca$) 
-			- ### Algoritmo:
-				- 
+			- #### Algoritmo:
+				- ![[Pasted image 20241106194102.png||600]]
+				- alla fine del secondo `for` saranno presenti solo ricorsioni sx di tipo immediato.
+				- quando `i=1` viene fatta solo l’istruzione 2 
+				- alla i-esima iterazione del `for` esterno tutti gli NT $A_{m}$ con $m<i$ saranno con la proprietà desiderata. In quello interno l’indice del NT in prima posizione viene aumentato fino al termine del ciclo, dove ogni produzione $A_{i}\to A_{k} \alpha$ è tale che $i\le k$.
+				  Siccome ogni produzione è $A_{i}\to A_{k} \alpha: i\le k$ verrà rimossa ogni _ricorsione sx di tipo immediato_ 
+			- #### ES:
+				- $S\to Ba | b$
+				- $B\to Bc| Sc|d$
+					- $NT=\{ S, B\}$
+				- ad `i=1` (per $S$) non è presente ricorsione sx immediata quindi non viene eseguito nulla.
+				- ad `i=2` ($A_{i}=B$), il ciclo interno viene eseguito solo per $A_{j}=A_{1}=S$ 
+				- quindi $B\to Sc$ viene rimpiazzato con:
+					- $$B\to Bac| bc$$ 
+				- E in totale le produzioni per $B$ sono:
+					- $$B\to Bc|Bac|bc|d$$
+				- e ora tocca rimuovere la ricorsione immediata:
+					- $$\begin{cases}B\to bcB'|dB' \\ B'\to cB'|acB'|\epsilon\end{cases}$$
+				- Quindi la grammatica finale risultante 
+					- $$\begin{cases}S\to Ba | b  \\B\to bcB'|dB' \\ B'\to cB'|acB'|\epsilon\end{cases}$$
+- # Fattorizzazione a sinistra:
+	- $$A\to aBbC|aBd$$
+	-  se sulla pila leggo $A$ non so quale produzione scegliere per l’input $a$ (nondeterminismo) 
+	- scelgo quindi la parte comune ($aB$) e “raccolgo” introducendo un nuovo $NT$ per definire il resto. 
+		- $A\to aB A'$
+		- $A'\to bC|d$
+	- ## ES:
+		- ![[Pasted image 20241106200736.png]]
+		- ![[Pasted image 20241106200751.png]]
 - # Link Utili:
 	- 

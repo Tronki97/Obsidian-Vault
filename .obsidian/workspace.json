@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "grammatiche libere",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,12 +74,12 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -206,15 +206,21 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Pasted image 20241106130619.png",
-    "Pasted image 20241106125238.png",
-    "Pasted image 20241106123715.png",
-    "Homepage.md",
+    "Pasted image 20241106200751.png",
+    "Pasted image 20241106200736.png",
+    "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Semplificare le Grammatiche.md",
-    "Pasted image 20241105225925.png",
-    "Pasted image 20241105225620.png",
-    "Pasted image 20241105224510.png",
-    "Pasted image 20241105224451.png",
+    "Pasted image 20241106194102.png",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/Sottoreti.md",
+    "Secondo Anno/Reti di Calcolatori/Indirizzamento IPv4.md",
+    "immagini/Pasted image 20241105224451.png",
+    "immagini/Pasted image 20241106130619.png",
+    "immagini/Pasted image 20241106125238.png",
+    "immagini/Pasted image 20241106123715.png",
+    "immagini/Pasted image 20241105225925.png",
+    "immagini/Pasted image 20241105225620.png",
+    "immagini/Pasted image 20241105224510.png",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Grammatiche.md",
     "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
     "Secondo Anno/Calcolo Numerico/Laboratorio/Python.md",
@@ -226,12 +232,8 @@
     "Secondo Anno/Tecnologie Web/Javascript.md",
     "immagini/LaTeX-cheat-sheet 1.pdf",
     "immagini/Pasted image 20241104151237.png",
-    "immagini/Pasted image 20241104151205.png",
-    "immagini/Pasted image 20241104145356.png",
-    "immagini/Pasted image 20241104144854.png",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi/Automi a Pila (PDA).md",
     "Secondo Anno/Reti di Calcolatori/livello Rete.md",
-    "Secondo Anno/Reti di Calcolatori/Indirizzamento IPv4.md",
     "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura protocolli di internet.md",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
@@ -241,8 +243,6 @@
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Bottom-up parsing.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Top-down Parsing.md",
     "Secondo Anno/Linguaggi di Programmazione/Definire finitamente un linguaggio/Derivazioni.md",
-    "Secondo Anno/Linguaggi di Programmazione/Compilatore/Analisi sintattica.md",
-    "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/PDA deterministico.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici",
     "Secondo Anno/Sistemi Operativi/Concorrenza",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi",
