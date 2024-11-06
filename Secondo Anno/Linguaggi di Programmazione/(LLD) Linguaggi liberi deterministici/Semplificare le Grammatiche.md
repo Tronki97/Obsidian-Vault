@@ -19,7 +19,7 @@ data: "`2024-11-05 11:09`"
 	- ## ricorsione sinistra:
 		- $A\to A \alpha$ perché inadatte al [[Top-down Parsing]] 
 	- ## fattorizzazione di grammatiche:
-		- raggurppare diverse produzioni per rendere le grammatiche meno non deterministiche.
+		- raggruppare diverse produzioni per rendere le grammatiche meno non deterministiche.
 - # Semplificare:
 	- ## Eliminare $\epsilon$:
 		- voglio una $G'$ tale che $L(G')=L(G)-\{\epsilon\}$ 
