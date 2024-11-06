@@ -4940,6 +4940,7 @@ uJkC
 uXy
 undefined
 ulteriormente
+unitarie
 decremento
 del
 di
@@ -16262,6 +16263,7 @@ CaX
 Creazione
 Condizioni
 Convergenza
+Calcolarle
 Questa
 Quello
 Qz

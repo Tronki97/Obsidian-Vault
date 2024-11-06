@@ -2,7 +2,10 @@
 tags:
   - TODO
   - linguaggi
-aliases: 
+aliases:
+  - produzione unitaria
+  - simboli inutili
+  - ricorsione sinistra
 data: "`2024-11-05 11:09`"
 ---
 - # Eliminazioni da fare:
@@ -54,5 +57,70 @@ data: "`2024-11-05 11:09`"
 		- ## ES:
 			- ![[Pasted image 20241105225620.png|600]]
 			-  ![[Pasted image 20241105225925.png|600]]
+	- ## Eliminare i simboli inutili:
+		- ### Def:
+			- un simbolo $X\in T \cup NT$ :
+				- _Generatore_ $\iff \exists w\in T^{*}\ |X \Rightarrow^{*}w$
+				- _raggiungibile_ $\iff S \Rightarrow^{*} \alpha X \beta$ per qualche $\alpha, \beta \in (T\cup NT)^{*}$ 
+				- _Utile_: se è sia generatore che raggiungibile. Ovvero se $X$ compare in almeno una derivazione  di una stringa $z\in L(G)$ 
+		- ### ES:
+			- ![[Pasted image 20241106123715.png]]
+			- Siccome $B$ non è più raggiungibile posso eliminarlo.
+			- $$G''=\begin{cases} S\to a\end{cases}$$
+			- La grammatica risultante è uguale a quella di partenza ma senza _simboli inutili_ 
+		- ### Calcolare i generatori:
+			- $G_{0}(G)=T$ 
+				- Se $a\in T, a\Rightarrow^{*}a$ allora tutti i terminali sono generatori.
+			- $$G_{i+1}(G)=G_{i}(G)\cup \{B\in NT|B\to c_{1,...,k}\in R \wedge c_{1...k} \in G_{i}(G) \}$$
+			- #### OSS:
+				- nel caso ci sia una produzione $B\to \epsilon$ allora $B$ è considerato come generatore.
+				- $G_{i}(G)\subseteq G_{i+1}(G)$ 
+					- Perché $T\cup NT$ è un insieme finito.
+		- ### Calcolare i raggiungibili:
+			- $$R_{0}(G)=\{S\}$$
+			- $$R_{i+1}(G)=R_{i} \cup \bigcup_{B\in R_{i}, B\to x_{1...k}\in R}  \{x_{1,...,k}\}$$
+			- #### OSS:
+				- $R_{i}(G)\subseteq R_{i+1}(G)$
+					- Perché $T\cup NT$ è un insieme finito.
+		- ### Algoritmo:
+			- Eliminare per primi i simboli _non generatori_, quindi tutte le produzioni che li usano.
+			- dalla grammatica generata dal punto precedente eliminare tutti i simboli _non raggiungibili_ 
+			- La grammatica risultante è equivalente a quella originale ma non ha simboli inutili.
+			- L’ordine di eliminazione è importante perché nel caso invertissi potrei non eliminare tutti i _simboli inutili_
+		- ### ES:
+			- ![[Pasted image 20241106125238.png]]
+			- Elimino i _non generatori_:
+				- $S\to a$
+				- $B\to b$
+			- elimino i _non raggiungibili_:
+				- $S\to a$ 
+			- se avessi invertito l’ordine delle operazioni la grammatica risultante sarebbe stata:
+				- $S\to a$
+				- $B\to b$ 
+				- _La quale non è priva di simboli inutili_ 
+	- ## Eliminare la ricorsione sinistra:
+		- ### Eliminare quella immediata:
+			- $A\to A \alpha_{1}|...|A \alpha_{n}|\beta_{1}|...|\beta_{m}$
+			- Queste produzioni possono essere __sostituite__ con:
+				- $A\to \beta_{1}A'|...|\beta_{m}A'$
+				- $A'\to \alpha_{1}A'|...|\alpha_{n}A'|\epsilon$ 
+			- #### ES:
+				- $A\to Aa|b$
+					- diventa:
+						- $A\to bA'$
+						- $A'\to aA'|\epsilon$ 
+				- $A\to Ab|Ac|d$
+					- diventa:
+						- $A\to dA'$
+						- $A'\to bA'|cA'|\epsilon$
+			- #### OSS:
+				- Se $G= A\to Aa$ non si può applicare l’algoritmo, perché mancano le produzioni di base da cui partire.
+				- infatti $L(G)=\emptyset$ e la grammatica corrispondente non ha produzioni.
+		- ### Eliminare quella non immediata:
+			- Considero:
+				- ![[Pasted image 20241106130619.png]]
+			- c’è sia quella immediata $(B\to Bc)$ che quella non ($S \implies Ba \implies Sca$) 
+			- ### Algoritmo:
+				- 
 - # Link Utili:
 	- 
