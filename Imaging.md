@@ -21,5 +21,22 @@ data: "`2024-11-11 13:40`"
 	- elemento di coordinate $\frac{{D+1}}{2},\frac{{D+1}}{2}$ dove $D$ è il numero di colonne e righe della matrice. ($D$ è dispari)
 		- $$M=\begin{pmatrix}1&2&3&4&5\\6&7& 8 & 9 & 10\\ 11&12& 13& 14 &15\\ 16&17&18 & 19& 20\\ 21&22&23&24&25\end{pmatrix}$$
 		- in questo caso è 13.
+- # Convoluzione:
+	- operazione fra una matrice $A:M \times N$ (_l’immagine_) e una di dimensione $D \times D$ con $D$ dispari (_kernel_).
+	- il risultato ha le stesse dimensioni di $A$ si chiama $C$ 
+		- $$C=[K*A|B]$$
+		- $$C_{(i,j)}=\sum\limits_{m=1}^{(D-1)/2}\sum\limits_{n=1}^\frac{(D-1)}{2}K(m,n)W_{(i,j)}(m,n)$$
+		- 
+- # Come estendere una matrice:
+	- estendere un immagine aggiungendo un bordo nero:
+		- ![[Pasted image 20241111141145.png]] 
+	- estendere in modo periodico:
+		- ![[Pasted image 20241111141223.png]]
+	- condizioni riflessive:
+		- ![[Pasted image 20241111141244.png]]
+- # Applicare un filtro:
+	- applicare un filtro ad un immagine è semplicemente fare la media dei valori ai punti cardinali di quell’indice:
+		- ![[Pasted image 20241111142554.png]]
+		- 
 - # Link Utili:
 	- 
