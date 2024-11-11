@@ -40,5 +40,40 @@ data: "`2024-10-24 17:08`"
 	- ## Dati strutturati:
 		- lista di coppie, `nome: "valore"` 
 		- `"valore"` può anche essere un altro dato strutturato.   
+- # Sintassi avanzata:
+	- ## Falsy e Truthy:
+		- _falsy_: valori che in caso vengano castati come booleani diventano falsi:
+			- _false, 0, null, undefined, ““, NaN_
+			- $NaN$ qualsiasi valore non rappresentabile come numero.
+		- _truthy_: è il complementare:
+			- _Qualsiasi stringa non vuota_, _numero_, _infinity_
+			- _Array vuoto_ $[]$
+			- _Oggetto vuoto_ $\{\}$ 
+		- questo concetto può essere usato come controllo negli `if`:
+			- `if(value) //agisci`
+			- per controllare che la variabile non sia vuota e nulla.
+		- 
+	- ## funzioni come entità di prima classe:
+		- una funzione è un oggetto che ha un valore (_di tipo object_) e con metodo _exec_ 
+		- 
+		- ### funzione filtro:
+			- permette di fare certe operazioni (sugli array) molto efficientemente
+			- per esempio basandosi su un certo campo di un array.
+			- 
+		- ### funzione anonima:
+			- funzione esterna che ha come parametro una funzione interna.
+		- ### funzione bind(obj, args):
+			- associa dei parametri a funzioni anonime o chiamate indirettamente:
+				- ![[Pasted image 20241111170432.png]]
+			- 
+	- ## Classi e prototipi:
+	- ## Closure e IIFE:
+		- closure è uno scope delle variabili strano, ma frequente e porta alla IIFE(Immediatly Invoked function expression)
+	- ## Gestione asincronicità:
+		- algoritmi complessi in cui varie parti non vengono eseguite sequenzialmente ma con interruzioni di durata non prevedibile, 
+		- promesse:
+		- funzioni di callback:
+		- async e await:
+		- 
 - # Link Utili:
 	- 

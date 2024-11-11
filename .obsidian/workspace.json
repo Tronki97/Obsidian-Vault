@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Imaging.md",
+                "file": "Secondo Anno/Tecnologie Web/Javascript.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Imaging"
+              "title": "Javascript"
             }
           }
         ]
@@ -205,12 +205,16 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Pasted image 20241111142554.png",
-    "Pasted image 20241111141244.png",
-    "Pasted image 20241111141223.png",
-    "Pasted image 20241111141145.png",
+    "Pasted image 20241111170432.png",
+    "immagini/Pasted image 20241111141145.png",
+    "immagini/Pasted image 20241111142554.png",
+    "Secondo Anno/Calcolo Numerico/Imaging.md",
+    "immagini/Pasted image 20241111152022.png",
+    "immagini/Pasted image 20241111145632.png",
+    "immagini/Pasted image 20241111144932.png",
+    "immagini/Pasted image 20241111141244.png",
+    "immagini/Pasted image 20241111141223.png",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-    "Imaging.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
     "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
     "Homepage.md",
@@ -222,7 +226,6 @@
     "immagini/Pasted image 20241107112018.png",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Proprietà di un programma.md",
     "immagini/Pasted image 20241107105920.png",
-    "immagini/Pasted image 20241107093912.png",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori.md",
     "Secondo Anno/Sistemi Operativi/Laboratorio SO.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
@@ -230,15 +233,12 @@
     "Secondo Anno/Sistemi Operativi/Untitled.md",
     "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori Binari.md",
-    "immagini/Pasted image 20241106194102.png",
     "Secondo Anno/Sistemi Operativi/linguaggio C.md",
     "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Sezioni critiche (critical section).md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Soluzioni speciali hardware.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Dekker.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Semplificare le Grammatiche.md",
-    "immagini/Pasted image 20241106200751.png",
-    "immagini/Pasted image 20241106200736.png",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
     "Secondo Anno/Reti di Calcolatori/Sottoreti.md",
     "immagini/LaTeX-cheat-sheet 1.pdf",

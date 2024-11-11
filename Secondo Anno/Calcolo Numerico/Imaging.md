@@ -37,6 +37,30 @@ data: "`2024-11-11 13:40`"
 - # Applicare un filtro:
 	- applicare un filtro ad un immagine è semplicemente fare la media dei valori ai punti cardinali di quell’indice:
 		- ![[Pasted image 20241111142554.png]]
-		- 
+- # allargamento e Point spread function 
+	- per allargare un oggetto posso approssimarlo ad una funzione $A$ che però non funziona quasi mai perfettamente ma genera una _distorsione_.
+		- ![[Pasted image 20241111144932.png]]
+	- questa funzione $A$ si chiama _point-spread function_ (_PSF_)
+	- $$A(x)=[K*x |\ P]$$
+		- $x$ l’oggetto.
+		- $K$ è un qualche kernel di convoluzione 
+		- $P$ è un pattern di estensione 
+	- Gli errori nell’immagine possono essere sia deterministici ovvero “prevedibili” e non ovvero dati da fenomeni casuali.
+	- Si può definire un’immagine $w$ i cui valori dei pixel vengono generati da del _rumore gaussiano_
+	- e quindi si può definire un modello che descrive come si sia formata un’immagine $g$ a partire dall’oggetto $x$:
+		- $$y^{\delta}=A(x)+w=[K*x|P]+w$$
+		- $K$ è un qualche kernel di convoluzione 
+		- $P$ è un pattern di estensione 
+		- $A$ è la PSF.
+		- ![[Pasted image 20241111145632.png]]
+- # Riottenere l’immagine originale da quella col rumore.
+	- so che l’immagine corrotta è:
+		- $$y^{\delta}=Ax+w$$
+			- $A$ è una matrice $M \times N$ che contiene le info sul nucleo di convoluzione ed è tale che:
+				- $$Ax=K*x$$
+	- ## Soluzione Naive:
+		- risolvo usando il [[Problema dei minimi quadrati]]:
+			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}$$
+			- ![[Pasted image 20241111152022.png]]
 - # Link Utili:
 	- 
