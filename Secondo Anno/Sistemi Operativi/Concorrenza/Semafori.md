@@ -1,6 +1,8 @@
 ---
-tags: []
-aliases: 
+tags: 
+aliases:
+  - operazioni semafori
+  - invariante semafori
 data: "`2024-10-24 10:42`"
 ---
 - # Intro:
@@ -26,7 +28,7 @@ data: "`2024-10-24 10:42`"
 		- che deve essere quindi sempre $\ge0$  
 	- ## Casi d'uso:
 		- `eventi(init=0)`
-			- il numero "conseguente" di eventi deve essere $\le$ al numero di volte che l'evento si èverificato
+			- il numero "conseguente" di eventi deve essere $\le$ al numero di volte che l'evento si è verificato
 		- `risorse(init>0)`:
 			- il numero di richieste soddisfatte deve essere $\leq$ al numero iniziale di risorse + numero risorse restituite.
 - # Implementazione di [[Sezioni critiche (critical section)||CS]] 

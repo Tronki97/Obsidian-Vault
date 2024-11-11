@@ -1,0 +1,33 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-11-07 15:19`"
+---
+- # Argomento ♥♥♥♥♥♥♥:
+	- ## window:
+		- finestra principale in cui si eseguono le pagine web.
+		- due finestre separate non possono comunicare.
+		- ### Frame:
+			- divide l’area della finestra in aree indipendenti con [[HTML]] separati
+		- ### Location:
+			- L’URL del documento attuale, se modificato crea un _redirect_
+		- ### History:
+			- array di URL che sono stati visitati durante la navigazione, di una specifica finestra.
+				- _proprietà_: `length, current, next`
+				- _metodi_: `back(), forward(), go(int)` 
+		- ### Document☻:
+			- rappresenta il contenuto del documento visualizzato correntemente all’interno della window 
+			- #### DOM:
+				- è una API per documenti [[HTML]], definisce la struttura logica dei documenti ed il modo in cui si accede e si manipola un documento
+				- identico in tutti i browser 
+				- ad ogni componente può essere applicata qualsiasi tipo di operazione  
+			- #### Struttura del DOM:
+				- basata sulla classe principale (_astratta_) DOM-NODE, da cui discendono altre classi. 
+				- 
+	- ## navigator:
+		- permette di sapere informazioni riguardanti varie cose del PC come : dimensione finestra, sistema operativo, browser, ecc..
+		- 
+		-  
+- # Link Utili:
+	- 

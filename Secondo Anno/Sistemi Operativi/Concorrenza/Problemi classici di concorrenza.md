@@ -1,0 +1,35 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-11-07 09:19`"
+---
+- # Problemi classici:
+	- questi problemi rappresentano le interazioni tipiche dei processi.
+	- ## produttore/consumatore:
+		- __producer__: genera _valori_
+		- __consumer__: consuma i _valori_
+		- __valori__: è una variabile condivisa dai due soggetti. 
+		- ### Proprietà:
+			- producer deve aspettare che consumer abbia consumato il valore precedente prima di produrne un altro.
+		- ### Codice:
+			- ![[Pasted image 20241107105908.png]]
+			- ![[Pasted image 20241107105920.png]]
+	- ## buffer limitato:
+		- come il problema precedente ma il buffer è un array di valori.
+		- ### Proprietà:
+			- il produttore non deve sovrapporre gli elementi nell array.
+			- il consumatore non deve consumare due volte lo stesso valore, ma aspettare che il produttore produca il secondo valore.
+			- niente [[Proprietà di un programma#^2a9ed1|deadlock]]
+			- niente [[Proprietà di un programma#^054a32|starvation]]
+		- ### Codice:
+			- ![[Pasted image 20241107112018.png]]
+			- 
+	- ## filosofi a cena:
+		- cinque filosofi _pensano e mangiano_ alternatamente 
+		- sono in una tavola rotonda con 5 posti, piatti e posate 
+		- un filosofo mangia solo con 2 posate 
+		- per pensare lascia le posate dove le ha trovate.
+	- ## lettori e scrittori:
+- # Link Utili:
+	- 

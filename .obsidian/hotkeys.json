@@ -31,14 +31,6 @@
   "obsidian-completr:completr-fake-arrow-down": [],
   "obsidian-excalidraw-plugin:insert-link-to-element": [],
   "obsidian-excalidraw-plugin:save": [],
-  "workspace:next-tab": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "PageDown"
-    }
-  ],
   "editor:open-link-in-new-leaf": [],
   "quick-latex:addInlineMath": [],
   "obsidian-git:push2": [
@@ -63,5 +55,14 @@
       ],
       "key": "M"
     }
-  ]
+  ],
+  "workspace:next-tab": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "Tab"
+    }
+  ],
+  "obsidian-completr:completr-bypass-tab-key": []
 }

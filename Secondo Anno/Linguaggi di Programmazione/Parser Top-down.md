@@ -1,0 +1,36 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-11-07 12:01`"
+---
+- # Argomento:
+	- essenzialmente un [[PDA deterministico|DPDA]] che riconosce per [[Automi a Pila (PDA)#^a594b1|pila vuota]] quindi si necessita che il linguaggio $L$ goda della _prefix proprety_, e $L\cdot \$$ ne gode.
+	- un parser a discesa ricorsiva è molto inefficiente:
+		- ## Nondeterminismo:
+			- nel caso peggiore guarda tutte le produzioni con complessità totale di $O(b^{|w|})$
+		- ## Guidare la scelta delle produzioni:
+			- guardano 1 o più caratteri successivi:
+				- $A\to aB|bC$
+					- $a \implies$ uso $A\to aB$
+					- $b \implies  A\to bC$
+				- $S\to ac|aSb$
+					- $ac \implies S\to ac$
+					- $aa \implies S\to aSb$
+			- Si utilizzano due funzioni ausiliare:
+				- ### First:
+					- dico che $First(\alpha)$ è insieme dei T che possono stare in prima posizione in una stringa derivabile da $\alpha$
+					- $$\alpha \Rightarrow^{*}\epsilon \implies \epsilon \in First(\alpha)$$
+					- #### ES:
+						- $A\to aB|bC$
+							- $\begin{cases} First(aB)=\{a\}\\ First(bC)=\{b\} \end{cases}$ 
+							- e se faccio l’intersezione dei risultati ottengo $\emptyset$ che mi garantisce il determinismo
+					- #### OSS:
+						- a volte il first non basta 
+					- #### Calcolarli:
+						- $$\forall x\in T, \ \ First(x)=\{x\}$$
+						- $$\forall x\in NT, \ \ First(x)=\emptyset$$
+						- 
+				- ### Follow:
+- # Link Utili:
+	- 
