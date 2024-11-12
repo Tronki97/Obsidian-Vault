@@ -740,6 +740,10 @@ prB
 pwu
 prM
 puLU
+prototipi
+prevedibile
+promesse
+prL
 realizzare
 rappresentare
 risultato
@@ -1493,6 +1497,7 @@ rEk
 rkL
 rdr
 rdi
+rll
 la
 le
 lo
@@ -1979,6 +1984,11 @@ lgW
 lTUoT
 lgZy
 lweBc
+limits
+lUU
+lCB
+lHkW
+lwh
 ALU
 AND
 Address
@@ -2892,6 +2902,10 @@ nSk
 navigazione
 nfk
 nsI
+nero
+nArb
+nFW
+nTEYJ
 capire
 codifiche
 capacit
@@ -3908,6 +3922,11 @@ correntemente
 cPZ
 cnO
 cHy
+castati
+coefficiente
+colore
+colori
+combinati
 avendo
 alcune
 arriva
@@ -4728,6 +4747,13 @@ ausiliare
 ays
 aCFb
 afB
+avanzata
+anonima
+args
+anonime
+asincronicit
+async
+await
 un
 una
 usato
@@ -5224,6 +5250,7 @@ uhC
 uYS
 upC
 uYp
+ubka
 decremento
 del
 di
@@ -5915,6 +5942,10 @@ discendono
 dpm
 dVf
 dwP
+durata
+dXX
+dJt
+dfl
 finito
 fanno
 facilmente
@@ -6435,6 +6466,11 @@ filosofi
 finestre
 fQfoS
 fwXx
+falsy
+falsi
+filtro
+fdTt
+fcL
 in
 il
 invece
@@ -7188,6 +7224,10 @@ iyk
 icN
 iOs
 iYyP
+infinity
+indirettamente
+inlG
+ixF
 modo
 mentre
 massimo
@@ -7837,6 +7877,7 @@ mHA
 mJeE
 mYTD
 mpz
+mfjE
 esempio
 eccede
 errori
@@ -8431,6 +8472,11 @@ essenzialmente
 eLA
 eHS
 ebU
+exec
+esterna
+eDk
+eNY
+eJY
 base
 bit
 basano
@@ -8884,6 +8930,13 @@ buffer
 bRl
 bSc
 bDS
+basandosi
+bind
+bianco
+blue
+bfwr
+bio
+bjz
 quindi
 questo
 quelle
@@ -9320,6 +9373,7 @@ qev
 qUP
 qjV
 qvu
+qoS
 se
 sarebbe
 si
@@ -10247,6 +10301,11 @@ sMQ
 sSx
 scrittori
 sqf
+strano
+sequenzialmente
+swtc
+sbU
+sJI
 otterremmo
 ottenere
 occupare
@@ -10766,6 +10825,9 @@ oSG
 oEs
 oLL
 oYt
+oZKb
+oGZY
+ohl
 va
 valore
 viene
@@ -11865,6 +11927,8 @@ tPH
 tAz
 tLG
 tYb
+truthy
+tHeb
 grandi
 gli
 grande
@@ -12331,6 +12395,11 @@ gUp
 grx
 gRs
 gVw
+grigi
+gak
+gWzy
+gNNW
+glw
 NOT
 NotePad
 Nu
@@ -12764,6 +12833,9 @@ NfE
 NPhrnQ
 Nrio
 NhdEO
+NaN
+NFx
+NkCA
 Il
 Instruction
 IR
@@ -13275,6 +13347,12 @@ IQW
 IoG
 IQO
 IIf
+IIFE
+Immediatly
+Invoked
+IlNg
+IdjiZ
+IiC
 Rappresentazione
 Registri
 Register
@@ -13732,6 +13810,7 @@ RFt
 RSI
 RZJM
 RCg
+Rcc
 Si
 Se
 Status
@@ -14267,6 +14346,10 @@ Son
 SOX
 Sjq
 SZI
+SOIE
+SdZ
+SuC
+Soe
 BINARY
 Bus
 BX
@@ -14653,6 +14736,7 @@ Bbrv
 BgB
 BZy
 Bcy
+BwJ
 Per
 Program
 PC
@@ -15097,6 +15181,8 @@ PPju
 PJk
 PnN
 PYf
+PLY
+PgkF
 Di
 Data
 Dati
@@ -15497,6 +15583,8 @@ Document
 DyO
 DLH
 Dpk
+Dbq
+DQws
 Le
 La
 Lg
@@ -15907,6 +15995,9 @@ Lyu
 LAwK
 Lmk
 Ljj
+Lyr
+LUz
+LGo
 Modulo
 Massimo
 Memory
@@ -16333,6 +16424,8 @@ MGh
 MBlx
 MTJ
 MoZeq
+MeV
+MzG
 ES
 Esempi
 Ex
@@ -16785,6 +16878,9 @@ EHH
 Epm
 EKb
 EdR
+ESp
+EgE
+EqNX
 Come
 Codifica
 Counter
@@ -17272,6 +17368,10 @@ CLa
 CZy
 Calcolarli
 ClhG
+CeB
+Cqm
+CrY
+CxC
 Questa
 Quello
 Qz
@@ -18097,6 +18197,7 @@ FUp
 FEm
 First
 Follow
+Falsy
 Word
 WK
 WB
@@ -18471,6 +18572,7 @@ Wtkv
 Wai
 WVh
 WlIfN
+WLQ
 zero
 zip
 zL
@@ -18888,6 +18990,9 @@ zvF
 ztP
 zQe
 zqe
+zgq
+zDue
+znh
 Half
 HACK
 HIT
@@ -19266,6 +19371,7 @@ History
 HTf
 HUX
 Hnf
+HIf
 XOR
 Xm
 Xo
@@ -19622,6 +19728,9 @@ Xln
 XRU
 XPq
 XVi
+Xiu
+XLM
+Xaj
 ha
 ho
 hack
@@ -20022,6 +20131,7 @@ hpV
 hal
 htM
 hKV
+hKy
 JZ
 JT
 Jd
@@ -20797,6 +20907,9 @@ kKx
 kjN
 kIy
 kcs
+koL
+koT
+kMn
 jmp
 jy
 jwä
@@ -21151,6 +21264,7 @@ jbB
 jcc
 jmd
 jBJ
+jqJ
 word
 wu
 wf
@@ -21522,6 +21636,7 @@ wwO
 wJL
 wfGlT
 wQT
+wiAk
 Oltre
 OgSf
 Od
@@ -21975,6 +22090,12 @@ OCP
 Ojh
 ODw
 Olg
+Oggetto
+OEm
+Otz
+OiB
+OmD
+OLH
 xz
 xX
 xF
@@ -22374,6 +22495,8 @@ xKi
 xUs
 xOqe
 xsa
+xIl
+xrR
 Kq
 KG
 KR
@@ -22735,6 +22858,7 @@ KeFL
 KMf
 KgY
 KKX
+KQyu
 Us
 US
 Ur
@@ -23473,6 +23597,9 @@ Zmj
 Zhp
 Zml
 ZyA
+ZBo
+Zyv
+ZPm
 YQ
 Yz
 YI
@@ -23844,6 +23971,7 @@ Yuo
 YTw
 YYU
 YOZ
+YAV
 yI
 ys
 yN
@@ -24260,6 +24388,8 @@ yuP
 yii
 yHkg
 yxh
+yVe
+yiN
 Tp
 Tv
 TBz
@@ -24670,6 +24800,10 @@ Tihz
 TSC
 TMXx
 THNn
+Truthy
+TBB
+Tod
+TOw
 GY
 GT
 Ghw
@@ -25085,6 +25219,7 @@ GPK
 Gaf
 GIY
 Gsv
+GyY
 Vb
 VD
 VG

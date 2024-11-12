@@ -59,7 +59,7 @@ data: "`2024-10-24 17:08`"
 		- ### funzione filtro:
 			- permette di fare certe operazioni (sugli array) molto efficientemente
 			- per esempio basandosi su un certo campo di un array.
-			- 
+			- []()
 		- ### funzione anonima:
 			- funzione esterna che ha come parametro una funzione interna.
 		- ### funzione bind(obj, args):

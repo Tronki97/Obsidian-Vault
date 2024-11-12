@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Javascript.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Javascript"
+              "title": "Homepage"
             }
           }
         ]
@@ -205,10 +205,12 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Pasted image 20241111170432.png",
+    "immagini/Pasted image 20241111170432.png",
+    "Secondo Anno/Calcolo Numerico/Imaging.md",
+    "Homepage.md",
+    "Secondo Anno/Tecnologie Web/Javascript.md",
     "immagini/Pasted image 20241111141145.png",
     "immagini/Pasted image 20241111142554.png",
-    "Secondo Anno/Calcolo Numerico/Imaging.md",
     "immagini/Pasted image 20241111152022.png",
     "immagini/Pasted image 20241111145632.png",
     "immagini/Pasted image 20241111144932.png",
@@ -217,7 +219,6 @@
     "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
     "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
-    "Homepage.md",
     "Secondo Anno/Calcolo Numerico/Interpolazione.md",
     "immagini/Pasted image 20241107105908.png",
     "Secondo Anno/Tecnologie Web/client-side JS.md",
@@ -225,7 +226,6 @@
     "Secondo Anno/Sistemi Operativi/Concorrenza/Problemi classici di concorrenza.md",
     "immagini/Pasted image 20241107112018.png",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Proprietà di un programma.md",
-    "immagini/Pasted image 20241107105920.png",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Semafori.md",
     "Secondo Anno/Sistemi Operativi/Laboratorio SO.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
@@ -240,7 +240,6 @@
     "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Dekker.md",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici/Semplificare le Grammatiche.md",
     "Secondo Anno/Linguaggi di Programmazione/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
-    "Secondo Anno/Reti di Calcolatori/Sottoreti.md",
     "immagini/LaTeX-cheat-sheet 1.pdf",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici",
     "Secondo Anno/Sistemi Operativi/Concorrenza",

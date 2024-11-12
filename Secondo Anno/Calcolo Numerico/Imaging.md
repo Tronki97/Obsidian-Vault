@@ -1,7 +1,12 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - matrice estesa
+  - centro di una matrice
+  - convoluzione
+  - Point spread function
+  - point spread function
 data: "`2024-11-11 13:40`"
 ---
 - # Intro:
