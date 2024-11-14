@@ -746,6 +746,8 @@ promesse
 prL
 pregio
 preventivamente
+pcbFree
+pcb
 realizzare
 rappresentare
 risultato
@@ -1506,6 +1508,7 @@ rubare
 regalare
 regalando
 rendendola
+restituirlo
 la
 le
 lo
@@ -1998,6 +2001,8 @@ lCB
 lHkW
 lwh
 lasciandone
+listx
+list
 ALU
 AND
 Address
@@ -2445,6 +2450,7 @@ Ahh
 AOx
 AbV
 ACCEPT
+ASL
 nel
 necessario
 numero
@@ -4769,6 +4775,7 @@ anonime
 asincronicit
 async
 await
+active
 un
 una
 usato
@@ -5961,6 +5968,7 @@ durata
 dXX
 dJt
 dfl
+deallcoazione
 finito
 fanno
 facilmente
@@ -6489,6 +6497,7 @@ fcL
 fondendo
 frammentazione
 farsi
+fermato
 in
 il
 invece
@@ -7248,6 +7257,8 @@ inlG
 ixF
 inserisci
 inutilizzato
+initASL
+inizializza
 modo
 mentre
 massimo
@@ -8501,6 +8512,7 @@ esterna
 eDk
 eNY
 eJY
+ended
 base
 bit
 basano
@@ -10335,6 +10347,8 @@ slide
 sottoreti
 subnetting
 subnet
+simultaneamente
+semaphore
 otterremmo
 ottenere
 occupare
@@ -10857,6 +10871,7 @@ oYt
 oZKb
 oGZY
 ohl
+oragnizzati
 va
 valore
 viene
@@ -11958,6 +11973,7 @@ tLG
 tYb
 truthy
 tHeb
+tree
 grandi
 gli
 grande
@@ -13382,6 +13398,7 @@ Invoked
 IlNg
 IdjiZ
 IiC
+Implementare
 Rappresentazione
 Registri
 Register
@@ -13840,6 +13857,7 @@ RSI
 RZJM
 RCg
 Rcc
+RISCV
 Si
 Se
 Status
@@ -15214,6 +15232,7 @@ PYf
 PLY
 PgkF
 Point
+Pcb
 Di
 Data
 Dati

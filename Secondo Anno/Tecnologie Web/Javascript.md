@@ -67,8 +67,15 @@ data: "`2024-10-24 17:08`"
 				- ![[Pasted image 20241111170432.png]]
 			- 
 	- ## Classi e prototipi:
+		- Membri: spazi dati.
+		- metodi: funzioni che vanno ad agire sugli oggetti delle classi su cui sono definiti.
+		- 
 	- ## Closure e IIFE:
 		- closure è uno scope delle variabili strano, ma frequente e porta alla IIFE(Immediatly Invoked function expression)
+		- ### Closure:
+			- lo scope dato dalla funzione all’interno della quale la mia funzione viene creata.
+			- le variabili locali della funzione generatrice rimangono anche quando la funzione muore.
+			- 
 	- ## Gestione asincronicità:
 		- algoritmi complessi in cui varie parti non vengono eseguite sequenzialmente ma con interruzioni di durata non prevedibile, 
 		- promesse:
