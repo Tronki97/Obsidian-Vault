@@ -1,0 +1,37 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-11-14 09:18`"
+---
+- # Argomento:
+	- usiamo $\mu$RISCV come architettura.
+	- bisogna implementare i livelli 3,4,5 ognuno per ogni fase del progetto.
+- # listx:
+	- modulo per gestire le liste.
+	- questo modulo ha una struttura per una lista double ended che però non è legata al tipo del contenuto ma sono dei puntatori a [[Strutture]]. 
+- # Obiettivo:
+	- ## Pcb:
+		- una struttura che rappresenta un [[Concorrenza#^68dcd8|processo]] del [[Sistema operativo]]
+		- sono da gestire:
+			- allocazione e deallcoazione del PCB
+			- gestire la coda 
+			- gestire gli alberi. 
+		- ci saranno un massimo di 20 processi simultaneamente.
+		- possono essere oragnizzati in code, chiamate _code dei processi_ gestiti con il campo `list_head` 
+		- `pcbFree_h`: lista di PCB non usati
+		- `pcbTable[MAXPROC]`: array dei PCB
+	- ## Da implementare:
+		- `free pcb(item)`: inserire l’elemento dello scope nella lista pcbFree
+		- `*allocPcb()`: se ci sono pcb liberi prendere il primo dalla lista e restituirlo altrimenti `null`. e ogni volta che viene chiamata associare l’`id` giusto.
+	- ## PCB tree:
+		- il padre punta alla lista dei figli, ogni figlio punta al padre e ai suoi fratelli.
+	- ## ASL:
+		- active semaphore list. 
+		- rappresentare un semaforo come un intero che verrà puntato.
+		- un semaforo è attivo e esiste almeno un processo che è fermato da quel semaforo.
+		- ### Implementare:
+			- initASL: inizializza la lista di tutti i semafori non utilizzati.
+			-  
+- # Link Utili:
+	- 
