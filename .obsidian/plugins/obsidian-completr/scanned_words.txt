@@ -744,6 +744,8 @@ prototipi
 prevedibile
 promesse
 prL
+pregio
+preventivamente
 realizzare
 rappresentare
 risultato
@@ -1498,6 +1500,12 @@ rkL
 rdr
 rdi
 rll
+rubandone
+rubato
+rubare
+regalare
+regalando
+rendendola
 la
 le
 lo
@@ -1989,6 +1997,7 @@ lUU
 lCB
 lHkW
 lwh
+lasciandone
 ALU
 AND
 Address
@@ -2435,6 +2444,7 @@ AwG
 Ahh
 AOx
 AbV
+ACCEPT
 nel
 necessario
 numero
@@ -2906,6 +2916,7 @@ nero
 nArb
 nFW
 nTEYJ
+nabla
 capire
 codifiche
 capacit
@@ -3927,6 +3938,10 @@ coefficiente
 colore
 colori
 combinati
+centro
+convoluzione
+contorni
+contraria
 avendo
 alcune
 arriva
@@ -6471,6 +6486,9 @@ falsi
 filtro
 fdTt
 fcL
+fondendo
+frammentazione
+farsi
 in
 il
 invece
@@ -7228,6 +7246,8 @@ infinity
 indirettamente
 inlG
 ixF
+inserisci
+inutilizzato
 modo
 mentre
 massimo
@@ -7878,6 +7898,10 @@ mJeE
 mYTD
 mpz
 mfjE
+minxf
+minx
+maschera
+mask
 esempio
 eccede
 errori
@@ -10306,6 +10330,11 @@ sequenzialmente
 swtc
 sbU
 sJI
+spread
+slide
+sottoreti
+subnetting
+subnet
 otterremmo
 ottenere
 occupare
@@ -14350,6 +14379,7 @@ SOIE
 SdZ
 SuC
 Soe
+Supernetting
 BINARY
 Bus
 BX
@@ -15183,6 +15213,7 @@ PnN
 PYf
 PLY
 PgkF
+Point
 Di
 Data
 Dati
@@ -16881,6 +16912,7 @@ EdR
 ESp
 EgE
 EqNX
+Esercizio
 Come
 Codifica
 Counter
@@ -17372,6 +17404,7 @@ CeB
 Cqm
 CrY
 CxC
+Classless
 Questa
 Quello
 Qz

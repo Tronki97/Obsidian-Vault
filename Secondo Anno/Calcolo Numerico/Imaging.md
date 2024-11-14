@@ -12,7 +12,7 @@ data: "`2024-11-11 13:40`"
 - # Intro:
 	- un’immagine di $M \times N$ pixel non è altro che una matrice $M \times N$ con un coefficiente applicato che sta a rappresentare il colore. 
 	- Per quanto riguarda il bianco e nero si ha la scala di grigi: 
-		- $0=$ bianco; $255=$ nero
+		- $0=$ nero; $255=$ bianco
 	- invece per i colori ogni pixel è un vettore di 3 valori (rosso, verde, blue) che combinati formano il colore
 - # Matrice estesa:
 	- sia $A$ una matrice $M \times N$ e $k \in \mathbb{N}$ allora $B$ è una matrice $(M+2k)\times(N+2k)$ che _estende_ $A$ $\iff$ :
@@ -63,9 +63,31 @@ data: "`2024-11-11 13:40`"
 		- $$y^{\delta}=Ax+w$$
 			- $A$ è una matrice $M \times N$ che contiene le info sul nucleo di convoluzione ed è tale che:
 				- $$Ax=K*x$$
+	- _ER_: errore relativo.
+	- _SSIM_: mi da un indicazione sulla qualità visiva dell’immagine
+	- _PSNR_: Il rapporto segnale-rumore (Peak to Signal Noise Ratio)
 	- ## Soluzione Naive:
 		- risolvo usando il [[Problema dei minimi quadrati]]:
 			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}$$
 			- ![[Pasted image 20241111152022.png]]
+		- ma questa soluzione non è ottimale in quanto è costosa computazionalmente e quindi impiega molto tempo per risolversi e inoltre non restituisce un risultato ottimale.
+		- SSIM e PSNR sono molto bassi in questa soluzione 
+		- ER invece è abbastanza alto.
+	- ## Regolarizzazione di Tikhonov:
+		- $$minxf(x) = minx||Ax − yδ||^{2}_{2} + λ||x||^ 2$$
+			- $\lambda$ è il parametro di regolarizzazione.
+		- se applico la condizione del primo ordine $\nabla (f)=0$ ottengo:
+			- $$A^{T}A+\lambda I=A^{T}y^{\delta}$$
+			- questo sistema si può risolvere applicando CGLS
+	- ## Variazione totale:
+		- $$T V (x) = ||∇(x)||_{1} =$$
+		- $$=\sum\limits_{i=1}^{M}\sum\limits_{j=1}^{n}\sqrt{(x_{i+1},j − x_{i,j})^ 2 + (x_{i,j+1} − x_{i,j})^ 2}$$
+		- non essendo differenziabile nel punto $(0,0)$ si aggiunge un parametro $\beta>0$  (di solito nell’ordine di $10^{-3}$) diventando quindi: $TV^{\beta}(x)$
+			- $$=\sum\limits_{i=1}^{M}\sum\limits_{j=1}^{n}\sqrt{(x_{i+1},j − x_{i,j})^ 2 + (x_{i,j+1} − x_{i,j})^ 2+\beta^{2}}$$
+		- Quindi il problema di regolarizzazione diventa:
+			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}+\lambda TV^{\beta}(x)$$
+		- come pregio ha che preserva i contorni???????
+		- 
 - # Link Utili:
+	- 
 	- 
