@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - incapsulamento
 data: "`2024-10-09 13:13`"

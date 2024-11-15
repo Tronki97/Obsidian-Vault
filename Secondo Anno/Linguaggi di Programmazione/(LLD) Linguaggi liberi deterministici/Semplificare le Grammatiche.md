@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
   - linguaggi
 aliases:
   - produzione unitaria

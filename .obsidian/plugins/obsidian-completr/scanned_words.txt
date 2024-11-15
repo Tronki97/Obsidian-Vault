@@ -758,6 +758,8 @@ peterson
 put
 pEx
 pxD
+privata
+ping
 realizzare
 rappresentare
 risultato
@@ -3994,6 +3996,7 @@ capibili
 codici
 clienti
 cliente
+classless
 avendo
 alcune
 arriva
@@ -7334,6 +7337,7 @@ inoltra
 iehv
 inviate
 inviato
+interdomain
 modo
 mentre
 massimo
@@ -12095,6 +12099,7 @@ tsW
 tavola
 tiUz
 tzo
+traceroute
 grandi
 gli
 grande
