@@ -7,13 +7,16 @@ aliases:
   - norma 1
   - norma 2
   - norma matriciale
+  - numero di condizionamento
+  - fattorizzazione LU
+  - norma di frobenius
 ---
 
-- Premessa 
+- # Premessa 
 	- DEF: [[Equazioni lineari#^ff8be3||sistema lineare]]
 	- _m_ equazioni 
 	- _n_ incognite 
-- Sistema quadrato:
+- # Sistema quadrato:
 	- $m=n$
 	- $A \underline{x}=\underline{b}$ 
 	- è una matrice $n \times n$ 
@@ -86,7 +89,7 @@ aliases:
 		- $||A||_{2}=\sqrt{36}=6$ 
 	- La soluzione esatta di $Ax=b$ è:
 		- $x=\begin{pmatrix}1\\1\\1\end{pmatrix}$ e quella calcolata sia $x_{0}=\begin{pmatrix}1.01\\0.98\\1\end{pmatrix}$
-		- $E_{A}=||x-x_{0}||$  $E_{R}=\frac{||x-x_{0}||}{||x||}$ [[Numeri finiti#^f6f707||errore assoluto]] e [[Numeri finiti#^db020b||relativo]]
+		- $E_{A}=||x-x_{0}||$  $E_{R}=\frac{||x-x_{0}||}{||x||}$ [[Numeri finiti#^f6f707||errore assoluto]] e [[Numeri finiti#^db020b||relativo]] 
 			- $$E_{A}=||(-0.01,0.02,0)||_{2}=\sqrt{10^{-4}+2*10^{-4}+0}=3*10^{-2}$$ 
 			- $$E_{R}=\frac{E_{A}}{||x||_{2}}=\frac{E_{A}}{\sqrt{3}}=\frac{3*10^{-2}}{\sqrt{3}}$$
 	- ### Definizione:

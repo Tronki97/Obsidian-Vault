@@ -1,8 +1,9 @@
 ---
-tags: []
+tags: 
 aliases:
   - CS
   - critical section
+  - sezioni critiche
 data: "`2024-10-19 18:44`"
 ---
 - # Non-interferenza:

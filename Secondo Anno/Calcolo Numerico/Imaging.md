@@ -7,6 +7,7 @@ aliases:
   - convoluzione
   - Point spread function
   - point spread function
+  - PSF
 data: "`2024-11-11 13:40`"
 ---
 - # Intro:

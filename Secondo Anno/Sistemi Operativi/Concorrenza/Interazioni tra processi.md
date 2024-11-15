@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - memoria condivisa
+  - memoria privata
 data: "`2024-10-19 17:30`"
 ---
 - # Interazioni tra processi:

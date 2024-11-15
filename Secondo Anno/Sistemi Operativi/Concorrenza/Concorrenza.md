@@ -1,7 +1,11 @@
 ---
-tags: []
+tags: 
 aliases:
   - processo
+  - multiprogramming
+  - multiprocessing
+  - distributed processing
+  - race condition
 data: "`2024-10-10 10:56`"
 ---
 - # Processo: ^68dcd8

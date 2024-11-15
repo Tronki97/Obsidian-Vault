@@ -755,6 +755,9 @@ produca
 piatti
 posate
 peterson
+put
+pEx
+pxD
 realizzare
 rappresentare
 risultato
@@ -1522,6 +1525,9 @@ rLiq
 rxs
 relativi
 rotonda
+rispettano
+reazione
+risponde
 la
 le
 lo
@@ -2019,6 +2025,8 @@ list
 lQhy
 lzy
 lascia
+lasciata
+leggibilit
 ALU
 AND
 Address
@@ -2468,6 +2476,7 @@ AbV
 ACCEPT
 ASL
 APb
+AvLJ
 nel
 necessario
 numero
@@ -2945,6 +2954,8 @@ nlK
 nGs
 need
 needq
+nMU
+notifiche
 capire
 codifiche
 capacit
@@ -3974,6 +3985,15 @@ copilot
 cuE
 cru
 cinque
+costantemente
+causate
+czL
+conglomerati
+conosce
+capibili
+codici
+clienti
+cliente
 avendo
 alcune
 arriva
@@ -4806,6 +4826,12 @@ aOk
 aSknN
 account
 alternatamente
+accordi
+amaI
+ake
+aPW
+autonomus
+addormentato
 un
 una
 usato
@@ -6006,6 +6032,7 @@ dfl
 deallcoazione
 direcotry
 die
+djF
 finito
 fanno
 facilmente
@@ -6540,6 +6567,7 @@ fyj
 fyv
 flH
 filosofo
+forti
 in
 il
 invece
@@ -7302,6 +7330,10 @@ inutilizzato
 initASL
 inizializza
 insertBlocked
+inoltra
+iehv
+inviate
+inviato
 modo
 mentre
 massimo
@@ -7961,6 +7993,10 @@ mEr
 mutex
 mangiano
 mangia
+mandato
+matriciale
+mOw
+modificate
 esempio
 eccede
 errori
@@ -8563,6 +8599,7 @@ eJY
 ended
 elgX
 entri
+entrano
 base
 bit
 basano
@@ -9026,6 +9063,8 @@ bjz
 bUg
 bKb
 blQp
+bacchetta
+barbiere
 quindi
 questo
 quelle
@@ -9466,6 +9505,8 @@ qoS
 qLD
 qLMp
 qBp
+qkP
+qualcun
 se
 sarebbe
 si
@@ -10409,6 +10450,14 @@ sPf
 sqp
 szL
 sovrapporre
+semfaori
+sbagliati
+sQc
+sconosciuto
+start
+sem
+siede
+servito
 otterremmo
 ottenere
 occupare
@@ -10934,6 +10983,8 @@ ohl
 oragnizzati
 oZC
 otJ
+omettere
+oxu
 va
 valore
 viene
@@ -11477,6 +11528,7 @@ vNh
 vnT
 vrON
 vGY
+vpE
 troppo
 testimone
 tramite
@@ -12041,6 +12093,8 @@ tHeb
 tree
 tsW
 tavola
+tiUz
+tzo
 grandi
 gli
 grande
@@ -12516,6 +12570,7 @@ gSi
 gyPk
 gHc
 gluj
+gestori
 NOT
 NotePad
 Nu
@@ -12955,6 +13010,7 @@ NkCA
 NUnXo
 NHM
 NqX
+NPQ
 Il
 Instruction
 IR
@@ -13476,6 +13532,7 @@ Implementare
 IUK
 IDJ
 IQT
+Information
 Rappresentazione
 Registri
 Register
@@ -13935,6 +13992,7 @@ RZJM
 RCg
 Rcc
 RISCV
+ROv
 Si
 Se
 Status
@@ -14477,6 +14535,8 @@ Soe
 Supernetting
 SAj
 SJx
+SEf
+Shortest
 BINARY
 Bus
 BX
@@ -14867,6 +14927,9 @@ BwJ
 Bhq
 BgKL
 BkA
+BGP
+Border
+Barbiere
 Per
 Program
 PC
@@ -15315,6 +15378,10 @@ PLY
 PgkF
 Point
 Pcb
+Pdz
+Protocolli
+Path
+Ping
 Di
 Data
 Dati
@@ -15719,6 +15786,7 @@ Dbq
 DQws
 DKf
 DmU
+Difetti
 Le
 La
 Lg
@@ -16135,6 +16203,8 @@ LGo
 LGd
 LDr
 LyK
+LEtw
+LULM
 Modulo
 Massimo
 Memory
@@ -18723,6 +18793,7 @@ Wai
 WVh
 WlIfN
 WLQ
+WHHAR
 zero
 zip
 zL
@@ -19146,6 +19217,7 @@ znh
 zsG
 zUgG
 zEUh
+zmr
 Half
 HACK
 HIT
@@ -19527,6 +19599,7 @@ Hnf
 HIf
 HGUG
 HyP
+HLB
 XOR
 Xm
 Xo
@@ -21072,6 +21145,8 @@ kMn
 kkhE
 kMB
 kgx
+kXPW
+krV
 jmp
 jy
 jwä
@@ -21805,6 +21880,10 @@ wQT
 wiAk
 wxE
 wls
+wSy
+wDz
+wrb
+wDK
 Oltre
 OgSf
 Od
@@ -22265,6 +22344,7 @@ OiB
 OmD
 OLH
 OhIg
+OSPF
 xz
 xX
 xF
@@ -23775,6 +23855,7 @@ Zyv
 ZPm
 ZGw
 ZzP
+ZTk
 YQ
 Yz
 YI
@@ -24984,6 +25065,7 @@ Truthy
 TBB
 Tod
 TOw
+Traceroute
 GY
 GT
 Ghw
@@ -25401,6 +25483,7 @@ GIY
 Gsv
 GyY
 GSV
+Gateway
 Vb
 VD
 VG
@@ -25837,6 +25920,7 @@ ViC
 VOG
 VyUH
 VlXae
+VYZ
 öG
 öH
 özw

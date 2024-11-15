@@ -1,7 +1,13 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - produttore/consmatore
+  - buffer limitato
+  - filosofi a cena
+  - filosofi
+  - lettori e scrittori
+  - R/W
 data: "`2024-11-07 09:19`"
 ---
 - # Problemi classici:
