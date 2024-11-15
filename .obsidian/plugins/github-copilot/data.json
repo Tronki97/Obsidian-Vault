@@ -1,0 +1,22 @@
+{
+  "nodePath": "C:\\Program Files\\nodejs\\node",
+  "enabled": true,
+  "hotkeys": {
+    "accept": "Ctrl-Tab",
+    "cancel": "Escape",
+    "request": "Ctrl-Alt--",
+    "partial": "Cmd-Shift-.",
+    "next": "Cmd-Shift-ArrowDown",
+    "disable": "Cmd-Shift-ArrowRight"
+  },
+  "suggestionDelay": 500,
+  "debug": false,
+  "onlyOnHotkey": false,
+  "onlyInCodeBlock": false,
+  "exclude": [],
+  "deviceSpecificSettings": [
+    "nodePath"
+  ],
+  "useDeviceSpecificSettings": false,
+  "proxy": ""
+}

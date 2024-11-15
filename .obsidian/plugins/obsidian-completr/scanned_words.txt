@@ -748,6 +748,13 @@ pregio
 preventivamente
 pcbFree
 pcb
+pUe
+pBm
+pEs
+produca
+piatti
+posate
+peterson
 realizzare
 rappresentare
 risultato
@@ -1509,6 +1516,12 @@ regalare
 regalando
 rendendola
 restituirlo
+rzaq
+rIF
+rLiq
+rxs
+relativi
+rotonda
 la
 le
 lo
@@ -2003,6 +2016,9 @@ lwh
 lasciandone
 listx
 list
+lQhy
+lzy
+lascia
 ALU
 AND
 Address
@@ -2451,6 +2467,7 @@ AOx
 AbV
 ACCEPT
 ASL
+APb
 nel
 necessario
 numero
@@ -2923,6 +2940,11 @@ nArb
 nFW
 nTEYJ
 nabla
+nNN
+nlK
+nGs
+need
+needq
 capire
 codifiche
 capacit
@@ -3948,6 +3970,10 @@ centro
 convoluzione
 contorni
 contraria
+copilot
+cuE
+cru
+cinque
 avendo
 alcune
 arriva
@@ -4776,6 +4802,10 @@ asincronicit
 async
 await
 active
+aOk
+aSknN
+account
+alternatamente
 un
 una
 usato
@@ -5273,6 +5303,11 @@ uYS
 upC
 uYp
 ubka
+ulnK
+uLz
+uDO
+uujs
+udq
 decremento
 del
 di
@@ -5969,6 +6004,8 @@ dXX
 dJt
 dfl
 deallcoazione
+direcotry
+die
 finito
 fanno
 facilmente
@@ -6498,6 +6535,11 @@ fondendo
 frammentazione
 farsi
 fermato
+forwarding
+fyj
+fyv
+flH
+filosofo
 in
 il
 invece
@@ -7259,6 +7301,7 @@ inserisci
 inutilizzato
 initASL
 inizializza
+insertBlocked
 modo
 mentre
 massimo
@@ -7913,6 +7956,11 @@ minxf
 minx
 maschera
 mask
+mCml
+mEr
+mutex
+mangiano
+mangia
 esempio
 eccede
 errori
@@ -8513,6 +8561,8 @@ eDk
 eNY
 eJY
 ended
+elgX
+entri
 base
 bit
 basano
@@ -8973,6 +9023,9 @@ blue
 bfwr
 bio
 bjz
+bUg
+bKb
+blQp
 quindi
 questo
 quelle
@@ -9410,6 +9463,9 @@ qUP
 qjV
 qvu
 qoS
+qLD
+qLMp
+qBp
 se
 sarebbe
 si
@@ -10349,6 +10405,10 @@ subnetting
 subnet
 simultaneamente
 semaphore
+sPf
+sqp
+szL
+sovrapporre
 otterremmo
 ottenere
 occupare
@@ -10872,6 +10932,8 @@ oZKb
 oGZY
 ohl
 oragnizzati
+oZC
+otJ
 va
 valore
 viene
@@ -11412,6 +11474,9 @@ visualizzato
 vFa
 vKz
 vNh
+vnT
+vrON
+vGY
 troppo
 testimone
 tramite
@@ -11974,6 +12039,8 @@ tYb
 truthy
 tHeb
 tree
+tsW
+tavola
 grandi
 gli
 grande
@@ -12445,6 +12512,10 @@ gak
 gWzy
 gNNW
 glw
+gSi
+gyPk
+gHc
+gluj
 NOT
 NotePad
 Nu
@@ -12881,6 +12952,9 @@ NhdEO
 NaN
 NFx
 NkCA
+NUnXo
+NHM
+NqX
 Il
 Instruction
 IR
@@ -13399,6 +13473,9 @@ IlNg
 IdjiZ
 IiC
 Implementare
+IUK
+IDJ
+IQT
 Rappresentazione
 Registri
 Register
@@ -14398,6 +14475,8 @@ SdZ
 SuC
 Soe
 Supernetting
+SAj
+SJx
 BINARY
 Bus
 BX
@@ -14785,6 +14864,9 @@ BgB
 BZy
 Bcy
 BwJ
+Bhq
+BgKL
+BkA
 Per
 Program
 PC
@@ -15635,6 +15717,8 @@ DLH
 Dpk
 Dbq
 DQws
+DKf
+DmU
 Le
 La
 Lg
@@ -16048,6 +16132,9 @@ Ljj
 Lyr
 LUz
 LGo
+LGd
+LDr
+LyK
 Modulo
 Massimo
 Memory
@@ -16476,6 +16563,9 @@ MTJ
 MoZeq
 MeV
 MzG
+Mrg
+MPV
+MDo
 ES
 Esempi
 Ex
@@ -16932,6 +17022,9 @@ ESp
 EgE
 EqNX
 Esercizio
+EuS
+ETO
+EViG
 Come
 Codifica
 Counter
@@ -17424,6 +17517,8 @@ Cqm
 CrY
 CxC
 Classless
+CJF
+Clg
 Questa
 Quello
 Qz
@@ -17808,6 +17903,7 @@ QzE
 QPM
 QOhp
 Qrv
+QuN
 Formato
 FLIP
 FLOP
@@ -18250,6 +18346,8 @@ FEm
 First
 Follow
 Falsy
+FBm
+Fvi
 Word
 WK
 WB
@@ -19045,6 +19143,9 @@ zqe
 zgq
 zDue
 znh
+zsG
+zUgG
+zEUh
 Half
 HACK
 HIT
@@ -19424,6 +19525,8 @@ HTf
 HUX
 Hnf
 HIf
+HGUG
+HyP
 XOR
 Xm
 Xo
@@ -20184,6 +20287,9 @@ hal
 htM
 hKV
 hKy
+hcG
+hYQ
+hua
 JZ
 JT
 Jd
@@ -20567,6 +20673,7 @@ JqN
 JVG
 JRep
 JBDv
+JVC
 kB
 kW
 kWs
@@ -20962,6 +21069,9 @@ kcs
 koL
 koT
 kMn
+kkhE
+kMB
+kgx
 jmp
 jy
 jwä
@@ -21317,6 +21427,10 @@ jcc
 jmd
 jBJ
 jqJ
+jpU
+jpq
+jCe
+jcs
 word
 wu
 wf
@@ -21689,6 +21803,8 @@ wJL
 wfGlT
 wQT
 wiAk
+wxE
+wls
 Oltre
 OgSf
 Od
@@ -22148,6 +22264,7 @@ Otz
 OiB
 OmD
 OLH
+OhIg
 xz
 xX
 xF
@@ -22549,6 +22666,9 @@ xOqe
 xsa
 xIl
 xrR
+xYv
+xPH
+xaMb
 Kq
 KG
 KR
@@ -23309,6 +23429,7 @@ UTP
 UMc
 UZA
 Ujp
+Ude
 Zx
 ZD
 ZRz
@@ -23652,6 +23773,8 @@ ZyA
 ZBo
 Zyv
 ZPm
+ZGw
+ZzP
 YQ
 Yz
 YI
@@ -24024,6 +24147,7 @@ YTw
 YYU
 YOZ
 YAV
+YBa
 yI
 ys
 yN
@@ -24442,6 +24566,10 @@ yHkg
 yxh
 yVe
 yiN
+yExÖma
+ywB
+yzI
+yYk
 Tp
 Tv
 TBz
@@ -25272,6 +25400,7 @@ Gaf
 GIY
 Gsv
 GyY
+GSV
 Vb
 VD
 VG
@@ -25705,6 +25834,9 @@ VCS
 VrcR
 VcO
 ViC
+VOG
+VyUH
+VlXae
 öG
 öH
 özw

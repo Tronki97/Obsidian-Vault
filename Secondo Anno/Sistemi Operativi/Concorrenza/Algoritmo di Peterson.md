@@ -13,7 +13,7 @@ data: "`2024-10-19 19:14`"
 	- ![[Pasted image 20241019191628.png]]
 - # Dim:
 	- ## Assenza attese inutili:
-		- se Q esegue codice non critico allora needq sarà falso e quindi P eseguirà codice critico.
+		- se Q esegue codice non critico allora `needq` sarà falso e quindi P eseguirà codice critico.
 	- ## Assenza starvation:
 		- come quella del deadlock 
 		- solo che alla fine entrambi possono accedere alle risorse siccome ogni volta che viene chiamato il processo da il turno all'altro che poi può eseguire la sua sezione critica siccome `needq=false` 

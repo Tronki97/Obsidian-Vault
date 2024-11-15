@@ -46,5 +46,9 @@ data: "`2024-11-06 13:11`"
 		- 4) progetto la rete completa IP2:
 			- contiene esattamente 260 host 
 			- necessita di 512 spazi quindi 9 bit di host con una subnet mask di 7 bit rendendola di tipo $/ 23$ 
+		- 5) progetto la rete IP1:
+			- contiene 48 host
+			- necessita di 64 spazi quindi 6 bit di host con una subnet mask di 10 bit rendendola di tipo $/ 26$
+			- 
 - # Link Utili:
 	- 

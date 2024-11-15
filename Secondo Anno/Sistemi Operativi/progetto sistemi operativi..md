@@ -31,7 +31,8 @@ data: "`2024-11-14 09:18`"
 		- rappresentare un semaforo come un intero che verrà puntato.
 		- un semaforo è attivo e esiste almeno un processo che è fermato da quel semaforo.
 		- ### Implementare:
-			- initASL: inizializza la lista di tutti i semafori non utilizzati.
-			-  
+			- initASL: inizializza la lista di tutti i semafori non utilizzati. 
+			- insertBlocked: inserisce un processo bloccato in attesa di un semaforo.
+			- 
 - # Link Utili:
 	- 

@@ -56,13 +56,6 @@
       "key": "M"
     }
   ],
-  "workspace:next-tab": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "Tab"
-    }
-  ],
-  "obsidian-completr:completr-bypass-tab-key": []
+  "obsidian-completr:completr-bypass-tab-key": [],
+  "workspace:next-tab": []
 }

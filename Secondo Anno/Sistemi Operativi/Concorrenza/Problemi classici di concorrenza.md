@@ -17,8 +17,9 @@ data: "`2024-11-07 09:19`"
 			- ![[Pasted image 20241107105920.png]]
 	- ## buffer limitato:
 		- come il problema precedente ma il buffer è un array di valori.
+		- 
 		- ### Proprietà:
-			- il produttore non deve sovrapporre gli elementi nell array.
+			- il produttore non deve sovrapporre gli elementi nell’array.
 			- il consumatore non deve consumare due volte lo stesso valore, ma aspettare che il produttore produca il secondo valore.
 			- niente [[Proprietà di un programma#^2a9ed1|deadlock]]
 			- niente [[Proprietà di un programma#^054a32|starvation]]
@@ -26,10 +27,68 @@ data: "`2024-11-07 09:19`"
 			- ![[Pasted image 20241107112018.png]]
 			- 
 	- ## filosofi a cena:
-		- cinque filosofi _pensano e mangiano_ alternatamente 
-		- sono in una tavola rotonda con 5 posti, piatti e posate 
-		- un filosofo mangia solo con 2 posate 
-		- per pensare lascia le posate dove le ha trovate.
+		- ### Descrizione:
+			- cinque filosofi _pensano e mangiano_ alternatamente 
+			- sono in una tavola rotonda con 5 posti, piatti e posate 
+			- un filosofo mangia solo con 2 posate 
+			- per pensare lascia le posate dove le ha trovate
+		- questo problema mostra come gestire situazioni in cui i processi fanno tutti la stessa cosa e quindi entrano in competizione per le risorse. 
+		- ![[Pasted image 20241115094608.png]]
+		- le posate sono chiamate `chopstick[i]`
+		- il filosofo `i` usa le posate `i` e `(i+1)%5`
+		- ### Def:
+			- `up_i` il numero di volte che la bacchetta `i` è stata presa
+			- `down_i` il numero di volte che la bacchetta `i` è stata lasciata
+			- $\mathbf{down}_{i\le} \mathbf{up}_{i}\le \mathbf{dwon}_{i}+1$
+			- `chopstick[i]` è un semaforo binario`
+		- ![[Pasted image 20241115095146.png]]
+			- errata perché se tutti prendono la bacchetta destra poi nessuno avrà 2 bacchette per mangiare quindi causa _deadlock_ 
+		- ### Soluzione:
+			- basta avere almeno un filosofo mancino che prende prima la bacchetta sinistra e poi la destra 
+			- e tutti gli altri fanno il contrario. 
+			- ![[Pasted image 20241115095409.png]]
+		- ### Altre soluzioni:
+			- al massimo quattro filosofi a tavola.
+			- le bacchette devono essere prese insieme.
+				- necessita di una ulteriore sezione [[Sezioni critiche (critical section)|CS]] e in più causa starvation nel caso che un filosofo non possa prendere le bacchette nel caso gli altri decidano di non farlo mangiare.
 	- ## lettori e scrittori:
+		- ### Descrizione: 
+			- ci sono più lettori e scrittori che accedono a una risorsa condivisa. 
+			- i lettori possono accedere contemporaneamente alla risorsa siccome non interagiscono tra di loro
+			- gli scrittori devono avere la [[Proprietà di un programma#^1acdf8|mutua esclusione]] in quanto devono modificare il database a cui accedono.
+			- un problema è che i lettori possono leggere dati sporchi se un scrittore sta scrivendo.
+		- ### Motivi:
+			- la competizione avviene al livello di _classi dei processi_ e non solo al livello dei processi.
+		- ### Invariante:
+			- $n_{R}$ numero di lettori 
+			- $n_{W}$ numero di scrittori
+				- $$(n_{R} \ge 0 \wedge n_{W}==0) || (n_{R} == 0 \wedge n_{W }== 1)$$
+		- ### Processi:
+			- ![[Pasted image 20241115101028.png]]
+			- `start_read` e `end_read` sono le operazioni per i lettori che permettono a loro di accedere al database
+			- `start_write` e `end_write` sono le operazioni per gli scrittori che permettono a loro di accedere al database
+		- ### Soluzione:
+			- ![[Pasted image 20241115101200.png]]
+			- ![[Pasted image 20241115101211.png]]
+			- questa soluzione crea però starvation agli scrittori nel caso in cui i lettori continuino a leggere i dati.
+	- ## Andrews
+		- `B` è un booleano
+		- `S` è uno statement  che viene esguito in modo atomico
+		- $<\mathbf{await(B)\to S}>$ 
+			- aspetta che la condizione B sia rispettata e poi esegue S
+			- attesa e comando sono operazioni [[Azioni atomiche]]
+		- ### Una soluzione per il problema R/W
+			- ![[Pasted image 20241115105156.png]]
+			- ciò garantisce solo la coerenza con l’invariante
+		- ### Utilizzo dei semafori:
+			- uso un mutex per garantire la mutua esclusione
+			- un array di semafori `sem` dove ogni condizione $B_{j}$ è associata al semaforo `sem[j]` 
+			- un array int `waiting` che indica quanti processi ad indice `j` sono in attesa per ogni condizione `B_j`
+	- ## Barbiere addormentato:
+		- ### Descrizione:
+			- un barbiere ha una certa quantità di posti in cui i clienti possono aspettare
+			- se il barbiere è occupato i clienti aspettano
+			- se il barbiere è libero il cliente si siede e viene servito
+			- 
 - # Link Utili:
 	- 

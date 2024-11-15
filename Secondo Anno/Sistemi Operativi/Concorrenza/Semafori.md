@@ -43,6 +43,13 @@ data: "`2024-10-24 10:42`"
 - # Vantaggi:
 	- Il busy-waiting avviene ma raramente grazie al fatto che viene eseguito solo alle, _molto brevi_, sezioni critiche di $P$ e $V$
 	- la sezione critica non è quasi mai occupata. 
-- 
+- # Difetti:
+	- la mutua esclusione è lasciata al programmatore. che potrebbe mettere errori.
+		- omettere un `P` o `V` 
+		- scambiare l’ordine di `P` e `V`
+		- fare certe operazioni su semfaori sbagliati.
+	- costruito a basso livello.
+	- forti problemi di leggibilità.
+	- 
 - # Link Utili:
 	- 
