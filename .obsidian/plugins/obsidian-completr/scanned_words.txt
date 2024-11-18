@@ -1530,6 +1530,7 @@ rotonda
 rispettano
 reazione
 risponde
+risulter
 la
 le
 lo
@@ -4835,6 +4836,7 @@ ake
 aPW
 autonomus
 addormentato
+andremo
 un
 una
 usato
@@ -6571,6 +6573,7 @@ fyv
 flH
 filosofo
 forti
+frobenius
 in
 il
 invece
@@ -10462,6 +10465,7 @@ start
 sem
 siede
 servito
+sella
 otterremmo
 ottenere
 occupare
@@ -12100,6 +12104,7 @@ tavola
 tiUz
 tzo
 traceroute
+troveremo
 grandi
 gli
 grande
@@ -16641,6 +16646,7 @@ MzG
 Mrg
 MPV
 MDo
+MAXIT
 ES
 Esempi
 Ex
@@ -19605,6 +19611,7 @@ HIf
 HGUG
 HyP
 HLB
+Hessiana
 XOR
 Xm
 Xo
@@ -20368,6 +20375,7 @@ hKy
 hcG
 hYQ
 hua
+hessiana
 JZ
 JT
 Jd

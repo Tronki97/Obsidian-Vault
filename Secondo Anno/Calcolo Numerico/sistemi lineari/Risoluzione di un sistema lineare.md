@@ -44,11 +44,12 @@ aliases:
 	- [[Complessità computazionale]]:
 		- $O\left( \frac{n^{3}}{3} \right)$
 	- ### Caso particolare: 
-		- $A\to$ simmetrica e definita _positiva_ ovvero:
-			- quadrata e se $\forall x \in \mathbb{R}^{n}$ $x^{T}Ax\geq 0$ 
-			- #### Proprietà:
-				- gli [[Autovalore]] di $A$ sono tutti positivi. se la matrice $A$ è definita positiva.
-				- se $A$ è definita semi-positiva, gli autovalori sono positivi o nulli.
+		- #### matrice definita positiva:
+			- $A\to$ simmetrica e definita _positiva_ ovvero:
+				- quadrata e se $\forall x \in \mathbb{R}^{n}$ $x^{T}Ax\geq 0$ 
+				- #### Proprietà:
+					- gli [[Autovalore]] di $A$ sono tutti positivi. se la matrice $A$ è definita positiva.
+					- se $A$ è definita semi-positiva, gli autovalori sono positivi o nulli.
 		- #### Fattorizzazione di Cholesky ^c7c2d7
 			- $A=LL^{T}$ 
 			- $L$ è una matrice triangolare inferiore
@@ -100,3 +101,4 @@ aliases:
 		- $$\frac{||\Delta x||}{||x||}\le K(A)\left( \frac{||\Delta A||}{||A||} +\frac{||\Delta b||}{||b||}\right)$$
 			- $K(A)$ è il _numero di condizione_ della matrice  ^47956e
 				- $K(A)=||A||*||A^{-1}||\ge1$ 
+				- oppure semplicemente l’autovalore più grande diviso per quello più piccolo.

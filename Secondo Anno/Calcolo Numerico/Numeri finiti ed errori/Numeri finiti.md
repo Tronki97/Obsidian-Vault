@@ -32,7 +32,6 @@
 		- #### Il modo generale è:
 			- $n=\pm \beta^{p}\cdot d_{0},d_{1}\dots d_{t}$
 			- $\mathbb{F}=(\beta, t, l, u)=\{\{\emptyset\}\cup n=\pm \beta^{p}\cdot d_{0},d_{1}\dots d_{t}\}$
-			- 
 		- #### ES:
 			- $\beta=10$
 			- $t=4$
