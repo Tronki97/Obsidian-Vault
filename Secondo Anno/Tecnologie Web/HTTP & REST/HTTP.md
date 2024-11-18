@@ -50,6 +50,7 @@ data: "`2024-10-10 15:56`"
 		- il server non riesce a soddisfare la richiesta per un problema interno
 - # Header 
 	- informazioni aggiuntive che caratterizzano le richieste e le risposte e ne descrivono certi aspetti
+	- caratterizzano sia richiesta che risposta
 	- ## Dell'entità:
 		- danno info sul body del messaggio oppure sulla risorsa specificata.
 		- ### Content-type: 

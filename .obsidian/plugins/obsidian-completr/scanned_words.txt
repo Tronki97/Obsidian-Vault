@@ -760,6 +760,7 @@ pEx
 pxD
 privata
 ping
+persistente
 realizzare
 rappresentare
 risultato
@@ -1531,6 +1532,11 @@ rispettano
 reazione
 risponde
 risulter
+rieseguito
+relative
+ricevuto
+redirection
+ripasso
 la
 le
 lo
@@ -2030,6 +2036,9 @@ lzy
 lascia
 lasciata
 leggibilit
+locking
+lenguage
+location
 ALU
 AND
 Address
@@ -2480,6 +2489,7 @@ ACCEPT
 ASL
 APb
 AvLJ
+Autenticazione
 nel
 necessario
 numero
@@ -3998,6 +4008,8 @@ codici
 clienti
 cliente
 classless
+capito
+caratterizzano
 avendo
 alcune
 arriva
@@ -4837,6 +4849,10 @@ aPW
 autonomus
 addormentato
 andremo
+agent
+accessi
+aggiuntive
+aspetti
 un
 una
 usato
@@ -7341,6 +7357,12 @@ iehv
 inviate
 inviato
 interdomain
+intermediario
+idempotenza
+intermediari
+indentificata
+incrementali
+informational
 modo
 mentre
 massimo
@@ -8004,6 +8026,8 @@ mandato
 matriciale
 mOw
 modificate
+manualmente
+messaggio
 esempio
 eccede
 errori
@@ -9072,6 +9096,7 @@ bKb
 blQp
 bacchetta
 barbiere
+body
 quindi
 questo
 quelle
@@ -10466,6 +10491,13 @@ sem
 siede
 servito
 sella
+stateless
+sto
+sicurezza
+sovrascrivere
+successful
+soddisfatta
+soprattutto
 otterremmo
 ottenere
 occupare
@@ -10993,6 +11025,7 @@ oZC
 otJ
 omettere
 oxu
+obbligatorio
 va
 valore
 viene
@@ -11537,6 +11570,7 @@ vnT
 vrON
 vGY
 vpE
+velocizza
 troppo
 testimone
 tramite
@@ -12105,6 +12139,11 @@ tiUz
 tzo
 traceroute
 troveremo
+tenuto
+trasferendo
+trasparente
+temporanea
+type
 grandi
 gli
 grande
@@ -12581,6 +12620,9 @@ gyPk
 gHc
 gluj
 gestori
+google
+gateway
+garanzie
 NOT
 NotePad
 Nu
@@ -14003,6 +14045,7 @@ RCg
 Rcc
 RISCV
 ROv
+Ruoli
 Si
 Se
 Status
@@ -15392,6 +15435,9 @@ Pdz
 Protocolli
 Path
 Ping
+Proxy
+POST
+PATCH
 Di
 Data
 Dati
@@ -15797,6 +15843,7 @@ DQws
 DKf
 DmU
 Difetti
+Dell
 Le
 La
 Lg
@@ -16647,6 +16694,7 @@ Mrg
 MPV
 MDo
 MAXIT
+MIME
 ES
 Esempi
 Ex
@@ -17600,6 +17648,10 @@ CxC
 Classless
 CJF
 Clg
+Content
+Cookies
+Cors
+Caching
 Questa
 Quello
 Qz
@@ -19612,6 +19664,7 @@ HGUG
 HyP
 HLB
 Hessiana
+Header
 XOR
 Xm
 Xo
@@ -22358,6 +22411,8 @@ OmD
 OLH
 OhIg
 OSPF
+Origin
+Obbligatorio
 xz
 xX
 xF
@@ -25497,6 +25552,7 @@ Gsv
 GyY
 GSV
 Gateway
+GET
 Vb
 VD
 VG
