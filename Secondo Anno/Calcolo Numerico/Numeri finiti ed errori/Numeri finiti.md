@@ -1,8 +1,14 @@
 ---
-~
+tags: 
+aliases:
+  - floating point
+  - errore assoluto
+  - errore di arrotondamento
+  - errore di misura
+  - errore di troncamento
+data: "`<% tp.file.creation_date() %>`"
 ---
-- # 16/09/24
-- ## Base-N e binario
+- # Base-N e binario
 	- il calcolatore usa la base binaria e ogni base è una rappresentazione a se: 
 		- $147,3= 1\cdot 10^{2}+4\cdot{1}0^{1}+7\cdot{1}0^{0}+3\cdot 10^{-1}$
 			- che era quindi in base 10.
@@ -11,7 +17,7 @@
 		- $11_{(10)}=8+2+1=1\cdot 2^{3}+0\cdot{2}^{2}+1\cdot 2^{1}+1\cdot 2^{0}=1011_{(2)}$ 
 	- oppure usando le divisioni successive e per trovare il numero convertito prendo i resti ottenuti dalle divisioni nell'ordine opposto in cui li ho trovati.
 		- **TODO foto**.
-	- ### Floating point:
+	- ## Floating point:
 		- faccio moltiplicazioni successive alla parte decimale per la base:
 			- $$0.1_{(10)}= 0.1*2=0.2*2=0.4*2 =0.8*2=1.6*2=1.2*2\dots$$
 			- e poi prendo le parti intere ottenute ad ogni moltiplicazione nell'ordine ottenuto.
@@ -29,10 +35,10 @@
 				- $s$ è il segno del numero
 				- $e-1023$ rappresenta la grandezza del numero e divide tutti i numeri rappresentabili che vanno da $[0,2048]$
 				- $f$ è la mantissa.
-		- #### Il modo generale è:
+		- ### Il modo generale è:
 			- $n=\pm \beta^{p}\cdot d_{0},d_{1}\dots d_{t}$
 			- $\mathbb{F}=(\beta, t, l, u)=\{\{\emptyset\}\cup n=\pm \beta^{p}\cdot d_{0},d_{1}\dots d_{t}\}$
-		- #### ES:
+		- ### ES:
 			- $\beta=10$
 			- $t=4$
 			- $l=3$ 
@@ -47,26 +53,26 @@
 				- perché basta aumentare il numero più piccolo della mantissa. 
 		- quando un numero non può essere convertito esattamente quindi $x\not \in \mathbb{F}(\beta, t, l, u)$ il numero viene _approssimato_ ad un numero appartenente a quell'insieme. 
 		- procedendo quindi a _troncare_ la mantissa.
-		- #### Caratteristica codifiche:
+		- ### Caratteristica codifiche:
 			- numeri _discreti_.
 			- intorno allo 0 non ci sono valori
 			- esiste un _min_ e un _max_
 			- i valori dipendono dall'_esponente_.
-- ## Tipi di errori:
-	- ### Errore di misura:
+- # Tipi di errori:
+	- ## Errore di misura:
 		- dovuto alle imperfezioni dello strumento di misura dei dati del problema
-	- ### Errore di troncamento:
+	- ## Errore di troncamento:
 		- errore generato dal troncamento di un processo di calcolo.
-	- ### Errore di arrotondamento:
+	- ## Errore di arrotondamento:
 		- generato dall'approssimazione di un numero per mancanza di memoria o altro.
 		- una conseguenza è:
 			- in [[Python]] $4.9-4.845==0.055$ risulta _falsa_
 		- infatti se si esegue: 
 			- $4.9-4.845=0.05500000000000604$
 			- ciò è a causa appunto di questo tipo di errore.
-		- #### Errore assoluto : ^f6f707
+		- ### Errore assoluto : ^f6f707
 			- $\mid fl(x)-x\mid<\beta^{1-t}$ 
-		- #### Errore relativo  ^db020b
+		- ### Errore relativo  ^db020b
 			- $\frac{{\mid fl(x)-x\mid}}{\mid x\mid}< \frac{1}{2}\beta^{1-t}$
 			- la parte maggiore ($\frac{1}{2}\beta^{1-t}$)si chiama _precisione macchina_ (_eps_) ed è il più piccolo numero macchina positivo t.c: 
 				- $fl(1+eps)>1$ 

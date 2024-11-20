@@ -9,7 +9,7 @@ data: "`2024-09-30 13:14`"
 - ## Obiettivo:
 	- $\min_{x\in \mathbb{R}^{n}}||Ax-b||^{2}_2$
 	- decomposizioni matriciali: ovvero $A$ scritta come prodotto di 2 o più [[Matrici]]
-- ## dec ad autovalori:
+- ## decomposizione ad autovalori:
 	- $A=VDV^{-1}$ dove $V=\{v_1,...,v_n\}$ 
 		- se $A$ ha una decomposizione di questo tipo si dice [[Diagonalizzabilità||diagonalizzabile]]
 - ## Vettori ortogonali:

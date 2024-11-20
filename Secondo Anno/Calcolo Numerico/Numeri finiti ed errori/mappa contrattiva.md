@@ -1,8 +1,16 @@
-- una mappatura $g: D\to D$ è chiamata contrattiva se $\exists C: |g(x)-g(y)|\leq C|x-y|$
-	- $C$ viene chiamata costante contrattiva
-- la costante C è legata alla velocità con cui l'approssimazione si avvicina alla soluzione.
-- Errore assoluto:
-	- $E_{k}$ errore al passo $k$ 
-	- prop: $|E_{k+1}|\leq C|E_{k}|$ o $\frac{|E_{k+1}|}{|E_{k}|}\leq C$ e quindi $$|E_{k}|\leq C^{k}|x_{0}-p|$$
-		- scrivi dimostrazione: 
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-09-24 10:02`"
+---
+- # Def:
+	- una mappatura $g: D\to D$ è chiamata contrattiva se $\exists C: |g(x)-g(y)|\leq C|x-y|$
+		- $C$ viene chiamata costante contrattiva
+	- la costante C è legata alla velocità con cui l'approssimazione si avvicina alla soluzione.
+	- Errore assoluto: 
+		- $E_{k}$ errore al passo $k$ 
+		- ## prop:
+			-  $|E_{k+1}|\leq C|E_{k}|$ o $\frac{|E_{k+1}|}{|E_{k}|}\leq C$ e quindi $$|E_{k}|\leq C^{k}|x_{0}-p|$$
+				- scrivi dimostrazione: 
 - 

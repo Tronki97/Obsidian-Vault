@@ -1,6 +1,9 @@
 ---
-tags: []
-aliases: 
+tags: 
+aliases:
+  - problema test
+  - matrice di vandermonde
+  - vandermonde
 data: "`2024-10-15 13:54`"
 ---
 - # Set di dati:

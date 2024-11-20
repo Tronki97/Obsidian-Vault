@@ -33,7 +33,7 @@ data: "`2024-10-25 13:24`"
 		- ## Host number:
 			- numero dell’interfaccia di rete.
 - # Classi di rete: ^c84a48
-	- ## Classe A:
+	- ## Classe A: ^90280c
 		- se il _network number_ inizia con $0$ e occupa $1$ byte (8 bit)
 		- ciò implica poter rappresentare 126 reti e $2^{24}$ host $[0.0.1 - 255.255.255]$ 
 		- es:
