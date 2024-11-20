@@ -37,7 +37,8 @@
               "title": "Architettura protocolli di internet"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -219,10 +220,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d8283eb12be56b33",
+  "active": "7febd5f1822e808f",
   "lastOpenFiles": [
-    "Protocollo ARP e RARP.md",
     "DHCP.md",
+    "Protocollo ARP e RARP.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura protocolli di internet.md",
     "Secondo Anno/Tecnologie Web/Approfondimenti su HTTP.md",
     "template/Modello appunti.md",
