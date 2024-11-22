@@ -70,7 +70,7 @@ data: "`2024-11-07 09:19`"
 			- $n_{W}$ numero di scrittori
 				- $$(n_{R} \ge 0 \wedge n_{W}==0) || (n_{R} == 0 \wedge n_{W }== 1)$$
 		- ### Processi:
-			- ![[Pasted image 20241115101028.png]]
+			- ![[Pasted image 20241115101028.png|475]]
 			- `start_read` e `end_read` sono le operazioni per i lettori che permettono a loro di accedere al database
 			- `start_write` e `end_write` sono le operazioni per gli scrittori che permettono a loro di accedere al database
 		- ### Soluzione:
