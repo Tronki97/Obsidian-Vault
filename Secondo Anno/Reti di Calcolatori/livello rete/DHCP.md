@@ -15,8 +15,10 @@ data: "`2024-11-20 15:31`"
 	- è un servizio di assegnazione dell’indirizzo IP agli host che ne fanno richiesta.
 	- questo protocollo associa degli indirizzi IP ai MAC che lo richiedono 
 	- per rilevare il router di un wifi a cui accedere, il dispositivo fa un broadcast assoluto per rilevare le reti:
-		- `255.255.255.255`
-		- poi se è presente nel pacchetto di broadcast il DHCP viene mandata la richiesta al DHCP-server
-	- 
+		- fa un [[Protocollo ICMP#^be5400|ping]] a `255.255.255.255` 
+		- poi se è presente nel pacchetto di broadcast il DHCP, viene mandata la richiesta (_DHCP-request_) al DHCP-server
+	- ogni host connesso al router manda un segnale di _liveness_ per dire che il dispositivo è ancora “vivo” e comunicante.
+	- ogni router concede un tempo di _lease_ nel quale l’host può rimanere connesso alla rete. Scaduto il tempo l’host viene pingato dal router per sapere se il dispositivo è ancora connesso. 
+		- se non arriva nessuna risposta il dispositivo per comunicare di nuovo dovrà rimandare la _DHCP request_
 - # Link Utili:
 	- 

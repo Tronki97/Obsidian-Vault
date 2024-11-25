@@ -774,6 +774,8 @@ pQf
 pYp
 produrre
 politiche
+pKsyS
+peZ
 realizzare
 rappresentare
 risultato
@@ -1562,6 +1564,11 @@ race
 risvegliare
 risveglia
 risvegliato
+rischia
+rimuoverla
+ruX
+rFj
+rilevando
 la
 le
 lo
@@ -2066,6 +2073,10 @@ lenguage
 location
 layer
 login
+lCOo
+lEm
+leEi
+ldy
 ALU
 AND
 Address
@@ -2523,6 +2534,7 @@ Aef
 ApPv
 Aak
 Assegnazione
+ARP
 nel
 necessario
 numero
@@ -4066,6 +4078,11 @@ cqqO
 ccb
 consmatore
 configuration
+cqh
+cgv
+cSNZ
+coZ
+capisce
 avendo
 alcune
 arriva
@@ -4919,6 +4936,10 @@ assunta
 accettarla
 assegnazione
 associandolo
+aBB
+aaf
+ack
+attacco
 un
 una
 usato
@@ -5423,6 +5444,7 @@ uujs
 udq
 uQI
 urgent
+uML
 decremento
 del
 di
@@ -6128,6 +6150,12 @@ dDKh
 distributed
 delegate
 domestiche
+dPS
+dCH
+dLssV
+dinamicit
+destinataria
+destinato
 finito
 fanno
 facilmente
@@ -6669,6 +6697,9 @@ firma
 fresca
 fzy
 fornisco
+fWo
+faK
+fxY
 in
 il
 invece
@@ -7452,6 +7483,8 @@ iBDG
 iUiqx
 ignorata
 implemntare
+iSvO
+inesistente
 modo
 mentre
 massimo
@@ -8128,6 +8161,11 @@ multiprocessing
 mandata
 moitor
 memorizzando
+mdQk
+mkX
+mEh
+mandarlo
+messa
 esempio
 eccede
 errori
@@ -8733,6 +8771,9 @@ entri
 entrano
 expiration
 enti
+eIj
+eCxQ
+elimina
 base
 bit
 basano
@@ -9203,6 +9244,8 @@ based
 bGV
 bIm
 broadcast
+bloccare
+buste
 quindi
 questo
 quelle
@@ -9647,6 +9690,9 @@ qkP
 qualcun
 qKB
 qBj
+qDXs
+qla
+qav
 se
 sarebbe
 si
@@ -10629,6 +10675,12 @@ segnalano
 signaling
 signal
 sincronia
+sgW
+sGTan
+suD
+spoofing
+separando
+spedir
 otterremmo
 ottenere
 occupare
@@ -11163,6 +11215,10 @@ oTS
 oFbP
 oFb
 organizzazioni
+oiN
+oIO
+oka
+occuper
 va
 valore
 viene
@@ -11714,6 +11770,7 @@ vuZ
 vuu
 vuh
 volata
+vzGz
 troppo
 testimone
 tramite
@@ -12291,6 +12348,14 @@ terze
 tnzb
 tOM
 tox
+tKu
+tGwO
+tkyR
+tYZ
+tWw
+twF
+tJP
+tunneling
 grandi
 gli
 grande
@@ -13213,6 +13278,8 @@ NqX
 NPQ
 NVc
 Ndl
+NHF
+Nlf
 Il
 Instruction
 IR
@@ -14204,6 +14271,9 @@ Resource
 Response
 RzCH
 RiB
+RARP
+Reverse
+Resolution
 Si
 Se
 Status
@@ -14757,6 +14827,7 @@ SfD
 Sbj
 Sgh
 SzT
+SHW
 BINARY
 Bus
 BX
@@ -15616,6 +15687,9 @@ Persistenti
 Pgh
 PGl
 PpP
+Pkv
+PGx
+PSF
 Di
 Data
 Dati
@@ -16029,6 +16103,9 @@ DND
 DbX
 DbP
 DHCP
+DYU
+DAv
+DaAW
 Le
 La
 Lg
@@ -16451,6 +16528,7 @@ LHR
 Lvc
 LPC
 Lbc
+LxGy
 Modulo
 Massimo
 Memory
@@ -16885,6 +16963,8 @@ MDo
 MAXIT
 MIME
 MCa
+MYeW
+MYc
 ES
 Esempi
 Ex
@@ -17350,6 +17430,7 @@ EAl
 EDF
 EIb
 EHaA
+EkOP
 Come
 Codifica
 Counter
@@ -17855,6 +17936,8 @@ ClhQ
 CYOM
 CGz
 CyI
+CEX
+CMg
 Questa
 Quello
 Qz
@@ -19070,6 +19153,12 @@ WlIfN
 WLQ
 WHHAR
 WwE
+Wqz
+WNI
+WqzD
+Wuo
+WrI
+WBz
 zero
 zip
 zL
@@ -19497,6 +19586,7 @@ zmr
 zRi
 zHSd
 zAp
+zVH
 Half
 HACK
 HIT
@@ -19884,6 +19974,9 @@ Header
 Heuristic
 HUU
 HDD
+HBZ
+HOJ
+Hwu
 XOR
 Xm
 Xo
@@ -20249,6 +20342,8 @@ XAKf
 XRR
 XoP
 XnQ
+XüW
+XbcP
 ha
 ho
 hack
@@ -20658,6 +20753,8 @@ heuristic
 hNv
 hdL
 hpe
+hGY
+hpvS
 JZ
 JT
 Jd
@@ -21047,6 +21144,7 @@ JVc
 JUk
 JQw
 Jdo
+JHo
 kB
 kW
 kWs
@@ -21451,6 +21549,7 @@ kdJ
 koR
 kqC
 kHy
+kmp
 jmp
 jy
 jwä
@@ -21811,6 +21910,7 @@ jpq
 jCe
 jcs
 jpb
+jxG
 word
 wu
 wf
@@ -22195,6 +22295,8 @@ wnL
 wWI
 wra
 wifi
+wTj
+wcW
 Oltre
 OgSf
 Od
@@ -22661,6 +22763,9 @@ Obbligatorio
 OxT
 Ozl
 Ofg
+Ocmk
+OwNs
+OAy
 xz
 xX
 xF
@@ -23069,6 +23174,8 @@ xyl
 xfn
 xdtW
 xmqD
+xak
+xhM
 Kq
 KG
 KR
@@ -23435,6 +23542,8 @@ KCF
 Kdt
 KbP
 KpX
+KWu
+KsA
 Us
 US
 Ur
@@ -24187,6 +24296,8 @@ ZTk
 ZOM
 ZKDv
 Zgp
+ZLV
+ZmI
 YQ
 Yz
 YI
@@ -24565,6 +24676,7 @@ YAC
 YKe
 YfF
 YDb
+YRF
 yI
 ys
 yN
@@ -24992,6 +25104,7 @@ yDj
 yyybD
 ygr
 yrm
+yuZ
 Tp
 Tv
 TBz
@@ -25411,6 +25524,11 @@ TjJ
 TLC
 TrG
 TYdm
+TDY
+TOmD
+Ttd
+TXFz
+Tunneling
 GY
 GT
 Ghw
@@ -25834,6 +25952,9 @@ GfA
 Gkv
 Gbt
 GWn
+GOZQ
+Gou
+Gak
 Vb
 VD
 VG
@@ -26274,6 +26395,8 @@ VYZ
 VeZ
 VyW
 VzUB
+VyY
+Vcj
 öG
 öH
 özw
@@ -26298,6 +26421,7 @@ VzUB
 Äq
 Äy
 Äat
+ÄtV
 Üw
 Üv
 Üc

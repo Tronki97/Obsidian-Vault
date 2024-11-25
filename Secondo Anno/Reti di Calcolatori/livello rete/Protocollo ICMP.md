@@ -18,7 +18,7 @@ data: "`2024-11-15 13:44`"
 		- host di destinazione sconosciuto. 
 			- si riesce a raggiungere il router a cui dovrebbe appartenere quell’host ma l’host number non corrisponde a nessuno di quelli che sono presenti nella tabella di forwarding. 
 - # Applicazioni:
-	- ## Ping:
+	- ## Ping: ^be5400
 		- è un programma che permette di verificare la connessione tra due host.
 	- ## Traceroute:
 	    - è un programma che permette di verificare il percorso di un pacchetto da un host a un altro.

@@ -1,0 +1,36 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-11-25 16:17`"
+---
+- # Navigazione sul DOM:
+	- il DOM non possiede modi per guardare un nodo specifico dell’albero, quindi deve per forza partire dalla radice e poi procedere normalmente.
+	- XPATH: è una sintassi stringa dove definisco i passi per arrivare ai nodi che mi servono.
+		- ES: `/child::doc/child::chapter/descendant::para`
+		- Equivalente: `/doc/chapter//para` 
+	- ## Assi in XPATH:
+		- si può anche procedere non solo verso il basso nell’albero del DOM ma anche a dx, sx, verso l’alto rispetto al NC(_nodo contesto_).
+		- child, descendant.
+		- sel, namespace.
+		- attribute.
+		- preceding/following-sibling:
+		- preceding, following:
+		- descendant/ancestor-or-self:
+	- `evaluate()`
+		- restituisce un iteratore sui nodi che soddisfano la query
+- # JQuery:
+	- è una libreria
+	- L’oggetto `$`
+		- definisce una funzione che ha come parametro un selettore [[CSS e tipografia|CSS]] che viene cercato su tutto il DOM:
+			- ![[Pasted image 20241125165103.png]]
+			- se esistono più elementi che soddisfano la query allora la funzione ciclerà su tutti quelli e ci farà qualsiasi cosa debba farci 
+- # AJAX:
+	- insieme di tecnologie che regolano l’interazione col web.
+	- richiede al server dei frammenti di informazione che poi andrà ad utilizzare con [[Javascript]] 
+	- è molto veloce, non necessita di ricaricare la pagina, è asincrono.
+	- difetti:
+		- non è accessibile per persone con difficoltà visive:
+			- in caso il documento venga modificato in modo asincrono, lo screen reader non si accorge di nulla. 
+- # Link Utili:
+	- 
