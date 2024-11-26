@@ -776,6 +776,8 @@ produrre
 politiche
 pKsyS
 peZ
+preceding
+pfW
 realizzare
 rappresentare
 risultato
@@ -1569,6 +1571,10 @@ rimuoverla
 ruX
 rFj
 rilevando
+regolano
+ricaricare
+reader
+ryO
 la
 le
 lo
@@ -2535,6 +2541,9 @@ ApPv
 Aak
 Assegnazione
 ARP
+Assi
+AJAX
+Azvp
 nel
 necessario
 numero
@@ -3018,6 +3027,8 @@ novit
 nBl
 nCqM
 nXRr
+namespace
+njII
 capire
 codifiche
 capacit
@@ -4083,6 +4094,10 @@ cgv
 cSNZ
 coZ
 capisce
+child
+cicler
+cGQ
+cCI
 avendo
 alcune
 arriva
@@ -4940,6 +4955,10 @@ aBB
 aaf
 ack
 attacco
+attribute
+ancestor
+asincrono
+accessibile
 un
 una
 usato
@@ -6156,6 +6175,9 @@ dLssV
 dinamicit
 destinataria
 destinato
+descendant
+difetti
+dmL
 finito
 fanno
 facilmente
@@ -6700,6 +6722,9 @@ fornisco
 fWo
 faK
 fxY
+following
+frammenti
+fhg
 in
 il
 invece
@@ -7485,6 +7510,8 @@ ignorata
 implemntare
 iSvO
 inesistente
+iteratore
+igj
 modo
 mentre
 massimo
@@ -8166,6 +8193,7 @@ mkX
 mEh
 mandarlo
 messa
+mpM
 esempio
 eccede
 errori
@@ -9246,6 +9274,7 @@ bIm
 broadcast
 bloccare
 buste
+bQS
 quindi
 questo
 quelle
@@ -10681,6 +10710,11 @@ suD
 spoofing
 separando
 spedir
+sel
+sibling
+self
+selettore
+screen
 otterremmo
 ottenere
 occupare
@@ -11771,6 +11805,8 @@ vuu
 vuh
 volata
 vzGz
+visive
+vVZ
 troppo
 testimone
 tramite
@@ -12356,6 +12392,7 @@ tWw
 twF
 tJP
 tunneling
+tecnologie
 grandi
 gli
 grande
@@ -12836,6 +12873,7 @@ google
 gateway
 garanzie
 gblbo
+grn
 NOT
 NotePad
 Nu
@@ -13280,6 +13318,8 @@ NVc
 Ndl
 NHF
 Nlf
+Navigazione
+NPPTr
 Il
 Instruction
 IR
@@ -14828,6 +14868,7 @@ Sbj
 Sgh
 SzT
 SHW
+SiMj
 BINARY
 Bus
 BX
@@ -15690,6 +15731,7 @@ PpP
 Pkv
 PGx
 PSF
+PHDjE
 Di
 Data
 Dati
@@ -17431,6 +17473,7 @@ EDF
 EIb
 EHaA
 EkOP
+Equivalente
 Come
 Codifica
 Counter
@@ -18330,6 +18373,8 @@ QXT
 QDq
 QAu
 QHR
+QTR
+QTr
 Formato
 FLIP
 FLOP
@@ -20344,6 +20389,7 @@ XoP
 XnQ
 XüW
 XbcP
+XPATH
 ha
 ho
 hack
@@ -21145,6 +21191,8 @@ JUk
 JQw
 Jdo
 JHo
+JQuery
+JlK
 kB
 kW
 kWs
@@ -21550,6 +21598,7 @@ koR
 kqC
 kHy
 kmp
+ksu
 jmp
 jy
 jwä
@@ -21911,6 +21960,7 @@ jCe
 jcs
 jpb
 jxG
+jPl
 word
 wu
 wf
@@ -22766,6 +22816,7 @@ Ofg
 Ocmk
 OwNs
 OAy
+Oks
 xz
 xX
 xF
@@ -23947,6 +23998,7 @@ UYE
 UbbBh
 UFbpo
 UYS
+UWe
 Zx
 ZD
 ZRz
@@ -25105,6 +25157,7 @@ yyybD
 ygr
 yrm
 yuZ
+yoN
 Tp
 Tv
 TBz
@@ -25529,6 +25582,7 @@ TOmD
 Ttd
 TXFz
 Tunneling
+Tcp
 GY
 GT
 Ghw

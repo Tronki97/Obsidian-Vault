@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Temi trasversali di Javascript.md",
+                "file": "grammatiche LR(k).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Temi trasversali di Javascript"
+              "title": "grammatiche LR(k)"
             }
           }
         ]
@@ -205,9 +205,12 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Pasted image 20241125165103.png",
-    "Temi trasversali di Javascript.md",
+    "Pasted image 20241126112722.png",
+    "Pasted image 20241126112447.png",
     "Homepage.md",
+    "grammatiche LR(k).md",
+    "immagini/Pasted image 20241125165103.png",
+    "Secondo Anno/Tecnologie Web/Temi trasversali di Javascript.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Calcolo Numerico/Imaging.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/IPv6 e tunneling IPv4.md",
@@ -239,11 +242,8 @@
     "Secondo Anno/Sistemi Operativi/Laboratorio SO.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Dekker.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Peterson.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Azioni atomiche.md",
     "immagini/Pasted image 20241118163657.png",
     "immagini/Pasted image 20241119112348.png",
-    "immagini/Pasted image 20241119112233.png",
-    "immagini/Pasted image 20241119112217.png",
     "Secondo Anno/Reti di Calcolatori/livello rete",
     "immagini/LaTeX-cheat-sheet 1.pdf",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici",
