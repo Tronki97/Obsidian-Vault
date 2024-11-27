@@ -15,6 +15,6 @@ data: "`2024-11-22 13:51`"
 		- però la frammentazione viene messa ad un altro livello. 
 - # Tunneling:
 	- spedire pacchetti IPv6 in “buste” IPv4 che però risulterà appunto IPv6 e il router rilevando questo fatto lo spedirà nell’internet IPv6
-	- 
+	-  
 - # Link Utili:
 	- 

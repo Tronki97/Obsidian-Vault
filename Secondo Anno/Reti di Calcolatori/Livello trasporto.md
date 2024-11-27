@@ -1,0 +1,42 @@
+---
+tags:
+  - TODO
+aliases:
+  - socket
+  - tcp
+  - TCP
+  - UDP
+data: "`2024-11-27 13:28`"
+---
+- # DEF:
+	- usa i protocolli TCP(_transmission control protocol_) e UDP(_user data protocol_)
+	- si correggono eventuali incertezze per quanto riguarda dei pacchetti che potrebbero andare persi o arrivare disordinati.
+- # UDP:
+	- la rete continua a funzionare in maniera _connectionless_ quindi non affidabile.
+- # TCP:
+	- rende la rete affidabile _End-to-End_ ovvero da qualsiasi punto verso qualsiasi destinazione connessa alla rete 
+	- configura il numero di porta del _socket TCP_
+	- numera sequenzialmente i segmenti per poi ordinarli ed eliminare duplicati quando arrivano a destinazione.
+		- permette di capire anche quando manca un segmento, siccome sono ordinati. 
+	- i pacchetti non ricevuti, ovvero che non hanno ricevuto l’ack entro il _timeout_, vengono ritrasmessi tutto ciò viene ripetuto finche l’ack non ritorna al mittente 
+	- quindi per garantire l’affidabilità, vengono ritrasmessi i pacchetti e ciò potrebbe creare dei duplicati.
+	- questo protocollo fa anche la gestione del flusso e della congestione
+		- ## Gestione flusso:
+			- controllo della dimensione e velocità.
+			- 
+		- ## Gestione congestione:
+			- controllo della velocità di invio dei segmenti.
+	- questi due controlli sono garantiti da un meccanismo chiamato:
+		- _sliding window_
+	- ## Funzionamento:
+		- consente lo smistamento dei pacchetti verso le rispettive applicazioni in ascolto su “porte”
+		- richiede l’attivazione della connessione _punto-a-punto_ tra due _socket_:
+			- ### Socket:
+				- indirizzo [[Indirizzamento IPv4|IP]] + numero di porta dell’applicazione a livello superiore.
+			- ### Three way handshake
+				- quando due macchine comunicano, quella che vuole iniziare la conversazione manda una richiesta _TCP_ all’altra che, se il socket non è occupato, risponde con un _OK_ 
+				- a questo punto la prima macchina invia i _dati di configurazione_ e poi si può procedere con lo scambio dati
+		- quando la comunicazione finisce si fa il _rilascio della connessione_ TCP 
+			- si liberano le porte usate dalla comunicazione appena chiusa.
+- # Link Utili:
+	- 

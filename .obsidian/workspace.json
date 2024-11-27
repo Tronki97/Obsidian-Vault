@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "grammatiche LR(k).md",
+                "file": "Secondo Anno/Reti di Calcolatori/Livello trasporto.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "grammatiche LR(k)"
+              "title": "Livello trasporto"
             }
           }
         ]
@@ -205,22 +205,28 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
+    "Secondo Anno/Reti di Calcolatori/Livello trasporto.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/IPv6 e tunneling IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/Protocollo ARP e RARP.md",
+    "Homepage.md",
     "Pasted image 20241126112722.png",
     "Pasted image 20241126112447.png",
-    "Homepage.md",
-    "grammatiche LR(k).md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/Pseudoinversa.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
+    "Secondo Anno/Calcolo Numerico/Imaging.md",
+    "Secondo Anno/Linguaggi di Programmazione/grammatiche LR(k).md",
     "immagini/Pasted image 20241125165103.png",
     "Secondo Anno/Tecnologie Web/Temi trasversali di Javascript.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
-    "Secondo Anno/Calcolo Numerico/Imaging.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/IPv6 e tunneling IPv4.md",
     "Secondo Anno/Reti di Calcolatori/livello trasporto",
     "Secondo Anno/Reti di Calcolatori/livello rete/livello Rete.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Instradamento dei pacchetti e Routing.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/DHCP.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
-    "Secondo Anno/Reti di Calcolatori/Protocollo ARP e RARP.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
     "immagini/Pasted image 20241122110719.png",
@@ -237,13 +243,7 @@
     "Secondo Anno/Tecnologie Web/Markup.md",
     "Secondo Anno/Tecnologie Web/client-side JS.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
-    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
-    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
-    "Secondo Anno/Sistemi Operativi/Laboratorio SO.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Dekker.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Algoritmo di Peterson.md",
     "immagini/Pasted image 20241118163657.png",
-    "immagini/Pasted image 20241119112348.png",
     "Secondo Anno/Reti di Calcolatori/livello rete",
     "immagini/LaTeX-cheat-sheet 1.pdf",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici",
