@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - wait
+  - signal
 data: "`2024-11-22 10:25`"
 ---
 - # Def:
@@ -16,9 +18,9 @@ data: "`2024-11-22 10:25`"
 - # Variabili  di condizione:
 	- definite dentro al moitor.
 	- ## metodi:
-		- `wait()` 
+		- `wait()`  ^cac4f7
 			- mette in attesa il processo che la chiama in una coda di  attesa di condizione $c$ 
-		- `signal()` 
+		- `signal()`  ^d57dae
 			- risveglia un processo in attesa 
 			- il chiamante viene posto in attesa e risvegliato quando un processo risvegliato rilascia la sua [[Proprietà di un programma#^1acdf8|mutua esclusione]] 
 			- se nessun processo è in attesa della condizione $c$, la chiamata è ignorata.
@@ -41,6 +43,8 @@ data: "`2024-11-22 10:25`"
 	- ![[Pasted image 20241122112328.png]]
 	- tuttavia si rischia la [[Proprietà di un programma#^054a32|starvation]], per rimuoverla:
 		- ![[Pasted image 20241122112847.png]]
-		- 
+- # Considerazioni:
+	- visto che posso implementare i [[Semafori]] con i monitor e i [[Monitor con i semafori]], ciò implica che questi due paradigmi sono equipotenti, quindi ogni programma fatto con i semafori può essere fatto con i monitor e viceversa.
+	- 
 - # Link Utili:
 	- 

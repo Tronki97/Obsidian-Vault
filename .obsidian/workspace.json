@@ -13,16 +13,47 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Livello trasporto.md",
+                "file": "Secondo Anno/Sistemi Operativi/Concorrenza/monitor/Monitor con i semafori.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Livello trasporto"
+              "title": "Monitor con i semafori"
+            }
+          },
+          {
+            "id": "91184e7b1897e57c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MP da asincrono a sincrono.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MP da asincrono a sincrono"
+            }
+          },
+          {
+            "id": "527fa4e45df93c48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MP sincrono.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MP sincrono"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "aja",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -177,12 +208,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 673.5,
-    "collapsed": true
+    "width": 345.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,15 +233,29 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "91184e7b1897e57c",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
+    "MP totalmente asincrono.md",
+    "MP da asincrono a sincrono.md",
+    "Pasted image 20241129102308.png",
+    "MP sincrono.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/Message passing.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/monitor/Monitor.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/monitor/Monitor con i semafori.md",
+    "immagini/Pasted image 20241126112447.png",
+    "immagini/Pasted image 20241129094235.png",
+    "immagini/Pasted image 20241129094211.png",
+    "immagini/Pasted image 20241129094049.png",
+    "immagini/Pasted image 20241129093640.png",
+    "immagini/Pasted image 20241129093629.png",
+    "Homepage.md",
+    "Secondo Anno/Tecnologie Web/Temi trasversali di Javascript.md",
     "Secondo Anno/Reti di Calcolatori/Livello trasporto.md",
+    "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/IPv6 e tunneling IPv4.md",
     "Secondo Anno/Reti di Calcolatori/Protocollo ARP e RARP.md",
-    "Homepage.md",
-    "Pasted image 20241126112722.png",
-    "Pasted image 20241126112447.png",
+    "immagini/Pasted image 20241126112722.png",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Pseudoinversa.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
@@ -219,7 +263,6 @@
     "Secondo Anno/Calcolo Numerico/Imaging.md",
     "Secondo Anno/Linguaggi di Programmazione/grammatiche LR(k).md",
     "immagini/Pasted image 20241125165103.png",
-    "Secondo Anno/Tecnologie Web/Temi trasversali di Javascript.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Reti di Calcolatori/livello trasporto",
     "Secondo Anno/Reti di Calcolatori/livello rete/livello Rete.md",
@@ -228,29 +271,15 @@
     "Secondo Anno/Reti di Calcolatori/livello rete/DHCP.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
     "immagini/Pasted image 20241122110719.png",
     "Secondo Anno/Sistemi Operativi/Concorrenza/semafori",
     "Secondo Anno/Sistemi Operativi/Concorrenza/monitor",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/monitor/Monitor.md",
-    "immagini/Pasted image 20241122112847.png",
-    "immagini/Pasted image 20241122112328.png",
-    "immagini/Pasted image 20241122112314.png",
-    "immagini/Pasted image 20241122111911.png",
-    "immagini/Pasted image 20241122111804.png",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/semafori/Problemi classici di concorrenza.md",
-    "Secondo Anno/Tecnologie Web/Page layout.md",
-    "Secondo Anno/Tecnologie Web/Markup.md",
-    "Secondo Anno/Tecnologie Web/client-side JS.md",
-    "Secondo Anno/Tecnologie Web/HTML.md",
-    "immagini/Pasted image 20241118163657.png",
     "Secondo Anno/Reti di Calcolatori/livello rete",
     "immagini/LaTeX-cheat-sheet 1.pdf",
     "Secondo Anno/Linguaggi di Programmazione/(LLD) Linguaggi liberi deterministici",
     "Secondo Anno/Sistemi Operativi/Concorrenza",
     "Secondo Anno/Linguaggi di Programmazione/Linguaggi liberi",
     "Secondo Anno/Linguaggi di Programmazione/LEX",
-    "Secondo Anno/Calcolo Numerico/Laboratorio",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

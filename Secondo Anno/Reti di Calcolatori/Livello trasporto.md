@@ -6,6 +6,8 @@ aliases:
   - tcp
   - TCP
   - UDP
+  - TWH
+  - three way handshake
 data: "`2024-11-27 13:28`"
 ---
 - # DEF:

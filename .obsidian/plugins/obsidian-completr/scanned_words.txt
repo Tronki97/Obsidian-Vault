@@ -793,6 +793,7 @@ pjjF
 piJX
 pfg
 psQ
+paradigmi
 realizzare
 rappresentare
 risultato
@@ -1597,6 +1598,7 @@ rmL
 rUU
 ricevuti
 ritrasmessi
+ritornando
 la
 le
 lo
@@ -2589,6 +2591,7 @@ AMd
 AxP
 ARw
 AHN
+ANY
 nel
 necessario
 numero
@@ -4174,6 +4177,7 @@ cewq
 correggono
 connectionless
 configura
+cac
 avendo
 alcune
 arriva
@@ -5043,6 +5047,7 @@ agwA
 affidabile
 affidabilit
 ascolto
+alcun
 un
 una
 usato
@@ -14078,6 +14083,7 @@ IOX
 IKH
 ICR
 IDATAf
+Inizializzazione
 Rappresentazione
 Registri
 Register
@@ -17774,6 +17780,8 @@ EkOP
 Equivalente
 Enb
 End
+Entrata
+Esce
 Come
 Codifica
 Counter
@@ -18287,6 +18295,7 @@ CYe
 CyD
 Czm
 CxT
+Considerazioni
 Questa
 Quello
 Qz
@@ -19539,6 +19548,7 @@ WNf
 WxC
 WZQ
 WHQYL
+Wait
 zero
 zip
 zL
@@ -21172,6 +21182,7 @@ hrFc
 hDuE
 hlP
 hIh
+handshake
 JZ
 JT
 Jd
@@ -22749,6 +22760,8 @@ wHh
 wwEK
 wipo
 wPP
+way
+wait
 Oltre
 OgSf
 Od
@@ -26064,6 +26077,8 @@ TFc
 TyK
 TQN
 TJN
+TWH
+Three
 GY
 GT
 Ghw
