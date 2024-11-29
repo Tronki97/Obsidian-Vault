@@ -796,6 +796,8 @@ psQ
 paradigmi
 postale
 potere
+proporzionalmente
+perdite
 realizzare
 rappresentare
 risultato
@@ -1602,6 +1604,10 @@ ricevuti
 ritrasmessi
 ritornando
 receive
+regolarsi
+regolarizzare
+rimedio
+ricordabili
 la
 le
 lo
@@ -2122,6 +2128,7 @@ ldR
 lCa
 lNPv
 liberano
+legate
 ALU
 AND
 Address
@@ -4181,6 +4188,8 @@ correggono
 connectionless
 configura
 cac
+congestionati
+continuando
 avendo
 alcune
 arriva
@@ -5051,6 +5060,8 @@ affidabile
 affidabilit
 ascolto
 alcun
+accumulano
+aprire
 un
 una
 usato
@@ -6295,6 +6306,9 @@ ddi
 dCgR
 dpG
 disordinati
+duplico
+dimezzata
+dente
 finito
 fanno
 facilmente
@@ -7655,6 +7669,8 @@ imX
 iYo
 iPX
 incertezze
+inviabili
+interroga
 modo
 mentre
 massimo
@@ -10907,6 +10923,10 @@ sliding
 smistamento
 send
 smista
+smaltiti
+smaltire
+sonda
+sega
 otterremmo
 ottenere
 occupare
@@ -12615,6 +12635,7 @@ tsqtx
 tcp
 transmission
 timeout
+traffico
 grandi
 gli
 grande
@@ -13102,6 +13123,7 @@ gmg
 gmD
 gjv
 gtnK
+granddezza
 NOT
 NotePad
 Nu

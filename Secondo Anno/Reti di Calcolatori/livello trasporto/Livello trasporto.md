@@ -8,6 +8,9 @@ aliases:
   - UDP
   - TWH
   - three way handshake
+  - flusso
+  - congestione
+  - sliding window
 data: "`2024-11-27 13:28`"
 ---
 - # DEF:
@@ -25,15 +28,22 @@ data: "`2024-11-27 13:28`"
 	- questo protocollo fa anche la gestione del flusso e della congestione
 		- ## Gestione flusso:
 			- controllo della dimensione e velocità.
-			- 
+			- la sliding window viene usata anche per capire quanti segmenti può inviare il mittente che possano essere smaltiti dal destinatario quindi il mittente invia il minimo tra la _sliding window_ per il _flusso_ e per la _congestione_.
 		- ## Gestione congestione:
 			- il non riuscire a smaltire i pacchetti di dati in uscita e in arrivo e quindi si accumulano sul buffer 
 			- controllo della velocità di invio dei segmenti.
 			- quindi il router mittente per prevenire la congestione deve regolarsi per mandare meno pacchetti per regolarizzare il traffico.
-	- questi due controlli sono garantiti da un meccanismo chiamato:
+	- _questi due controlli sono garantiti da un meccanismo chiamato_:
 		- ## _sliding window_
-			- serve per capire la situazione dei router lungo la strada tra mittente e destinatario 
-			- il mittente manda un pacchetto sonda e in base a quanto ci mette per ricevere l’ack manda proporzionalmente una certa quantità di pacchetti  
+			- serve per capire la situazione dei router lungo la strada tra mittente e destinatario quanto siano congestionati.
+			- il mittente manda un pacchetto sonda e in base a quanto ci mette per ricevere l’ack manda proporzionalmente una certa quantità di pacchetti 
+				- la finestra parte da una granddezza di 1 se il pacchetto che invia riceve l’ack duplico la finestra e quindi il numero di pacchetti inviati.
+				- appena manca un ack la dimensione della finestra torna a 1.
+				- invece per quanto riguarda le reti senza fili la grandezza della finestra viene solo dimezzata perché la causa di queste perdite di ack potrebbero non essere legate ad una congestione del router ma, per esempio, ad una interferenza.
+			- facendo un grafico sulla sliding window che rappresenta l’andamento del flusso si ottiene un andamento a _dente di sega_ e il valore medio è il valore medio della derivata del segnale.
+		- ## finestra di congestione:
+			- è un intero che rappresenta il max numero di segmenti inviabili prima di sapere che fine hanno fatto i precedenti
+			- 
 	- ## Funzionamento:
 		- consente lo smistamento dei pacchetti verso le rispettive applicazioni in ascolto su “porte”
 		- richiede l’attivazione della connessione _punto-a-punto_ tra due _socket_:
