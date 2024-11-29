@@ -28,7 +28,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MP da asincrono a sincrono.md",
+                "file": "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP da asincrono a sincrono.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -43,7 +43,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MP sincrono.md",
+                "file": "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP sincrono.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -233,12 +233,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "91184e7b1897e57c",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "MP totalmente asincrono.md",
-    "MP da asincrono a sincrono.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP da sincrono a Asincrono.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP da asincrono a sincrono.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP totalmente asincrono.md",
     "Pasted image 20241129102308.png",
-    "MP sincrono.md",
+    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP sincrono.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/Message passing.md",
     "Secondo Anno/Sistemi Operativi/Concorrenza/message passing",
     "Secondo Anno/Sistemi Operativi/Concorrenza/monitor/Monitor.md",
