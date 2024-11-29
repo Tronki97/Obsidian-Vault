@@ -6,6 +6,7 @@ aliases:
   - multiprocessing
   - distributed processing
   - race condition
+  - potere espressivo
 data: "`2024-10-10 10:56`"
 ---
 - # Processo: ^68dcd8
@@ -63,5 +64,8 @@ data: "`2024-10-10 10:56`"
 		-  
 - # Race condition:
 	- il risultato non dipende dai processi ma dall'evoluzione temporale dei processi.
+- # Potere espressivo:
+	- si dice che il paradigma di programmazione A è espressivo almeno quanto il paradigma di programmazione B (e si scrive A ≥ B) quando è possibile esprimere ogni programma scritto con B mediante A.
+	- quando $A\ge B$ e $B\ge A$ allora A e B hanno lo stesso potere espressivo
 - # Link Utili:
 	- 

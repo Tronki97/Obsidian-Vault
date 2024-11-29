@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - send
+  - receive
 data: "`2024-11-29 10:06`"
 ---
 - # Argomento:
@@ -25,6 +27,6 @@ data: "`2024-11-29 10:06`"
 	- ## Completamente asincrono:
 		- Nessuna delle due operazioni è bloccante
 		- Quando si fa la `receive`, e non ci sono messaggi non si blocca e dice che non ci sono messaggi.
-- 
+	- 
 - # Link Utili:
 	- 

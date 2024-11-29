@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - messagge passing totalmente asincrono
+  - totalmente asincrono
 data: "`2024-11-29 10:19`"
 ---
 - # # Operazioni:

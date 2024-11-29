@@ -794,6 +794,8 @@ piJX
 pfg
 psQ
 paradigmi
+postale
+potere
 realizzare
 rappresentare
 risultato
@@ -1599,6 +1601,7 @@ rUU
 ricevuti
 ritrasmessi
 ritornando
+receive
 la
 le
 lo
@@ -5568,6 +5571,7 @@ uSG
 uXd
 uuP
 ukO
+ufficio
 decremento
 del
 di
@@ -6848,6 +6852,7 @@ fwO
 fyt
 fLs
 flusso
+formattato
 in
 il
 invece
@@ -8346,6 +8351,7 @@ mgx
 meI
 mKo
 manca
+mediante
 esempio
 eccede
 errori
@@ -8965,6 +8971,8 @@ eYYG
 eUIY
 eqcg
 egU
+esserne
+espressivo
 base
 bit
 basano
@@ -9440,6 +9448,8 @@ buste
 bQS
 bWn
 bnc
+bloccanti
+bloccante
 quindi
 questo
 quelle
@@ -10895,6 +10905,8 @@ suB
 sed
 sliding
 smistamento
+send
+smista
 otterremmo
 ottenere
 occupare
@@ -13545,6 +13557,7 @@ Nxe
 NWV
 NRFJGQ
 NdCG
+Nessuna
 Il
 Instruction
 IR
@@ -15125,6 +15138,7 @@ SVg
 SGv
 SdwY
 Socket
+Sincrono
 BINARY
 Bus
 BX
@@ -16006,6 +16020,7 @@ PjJ
 PqsX
 PoD
 PSS
+Potere
 Di
 Data
 Dati
@@ -17311,6 +17326,7 @@ MsY
 MÖ
 MhYw
 Mgr
+Messaggio
 ES
 Esempi
 Ex
@@ -18296,6 +18312,7 @@ CyD
 Czm
 CxT
 Considerazioni
+Completamente
 Questa
 Quello
 Qz

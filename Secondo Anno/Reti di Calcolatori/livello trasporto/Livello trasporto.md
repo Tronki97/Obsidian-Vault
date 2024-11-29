@@ -27,9 +27,13 @@ data: "`2024-11-27 13:28`"
 			- controllo della dimensione e velocità.
 			- 
 		- ## Gestione congestione:
+			- il non riuscire a smaltire i pacchetti di dati in uscita e in arrivo e quindi si accumulano sul buffer 
 			- controllo della velocità di invio dei segmenti.
+			- quindi il router mittente per prevenire la congestione deve regolarsi per mandare meno pacchetti per regolarizzare il traffico.
 	- questi due controlli sono garantiti da un meccanismo chiamato:
-		- _sliding window_
+		- ## _sliding window_
+			- serve per capire la situazione dei router lungo la strada tra mittente e destinatario 
+			- il mittente manda un pacchetto sonda e in base a quanto ci mette per ricevere l’ack manda proporzionalmente una certa quantità di pacchetti  
 	- ## Funzionamento:
 		- consente lo smistamento dei pacchetti verso le rispettive applicazioni in ascolto su “porte”
 		- richiede l’attivazione della connessione _punto-a-punto_ tra due _socket_:
@@ -40,5 +44,8 @@ data: "`2024-11-27 13:28`"
 				- a questo punto la prima macchina invia i _dati di configurazione_ e poi si può procedere con lo scambio dati
 		- quando la comunicazione finisce si fa il _rilascio della connessione_ TCP 
 			- si liberano le porte usate dalla comunicazione appena chiusa.
+		- si possono aprire comunicazioni fintanto che il buffer ha abbastanza memoria libera da poter allocare per creare una nuova comunicazione.
+		- un possibile attacco consiste nello sfruttare la finestra di apertura della sessione quindi continuando a tenere le risorse allocate.
+			- un rimedio potrebbe essere l’implementazione di un garbage collection  
 - # Link Utili:
 	- 

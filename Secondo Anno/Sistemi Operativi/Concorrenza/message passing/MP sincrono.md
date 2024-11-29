@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - message passing sincrono
 data: "`2024-11-29 10:16`"
 ---
 - # Operazioni:
