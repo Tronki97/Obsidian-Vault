@@ -798,6 +798,10 @@ postale
 potere
 proporzionalmente
 perdite
+ppd
+pmaT
+ppj
+pAE
 realizzare
 rappresentare
 risultato
@@ -1608,6 +1612,10 @@ regolarsi
 regolarizzare
 rimedio
 ricordabili
+ricordabile
+rcp
+rFH
+rqX
 la
 le
 lo
@@ -2129,6 +2137,9 @@ lCa
 lNPv
 liberano
 legate
+lLhBBN
+lGI
+llR
 ALU
 AND
 Address
@@ -2602,6 +2613,11 @@ AxP
 ARw
 AHN
 ANY
+AtM
+ASH
+AWa
+ASr
+Axh
 nel
 necessario
 numero
@@ -4190,6 +4206,8 @@ configura
 cac
 congestionati
 continuando
+conoscono
+cJf
 avendo
 alcune
 arriva
@@ -5062,6 +5080,7 @@ ascolto
 alcun
 accumulano
 aprire
+asJ
 un
 una
 usato
@@ -5583,6 +5602,8 @@ uXd
 uuP
 ukO
 ufficio
+usF
+uGO
 decremento
 del
 di
@@ -6309,6 +6330,7 @@ disordinati
 duplico
 dimezzata
 dente
+dFH
 finito
 fanno
 facilmente
@@ -6867,6 +6889,9 @@ fyt
 fLs
 flusso
 formattato
+fFB
+fFq
+fsX
 in
 il
 invece
@@ -7671,6 +7696,10 @@ iPX
 incertezze
 inviabili
 interroga
+intro
+iLOK
+iOJ
+imO
 modo
 mentre
 massimo
@@ -8368,6 +8397,7 @@ meI
 mKo
 manca
 mediante
+maY
 esempio
 eccede
 errori
@@ -8989,6 +9019,7 @@ eqcg
 egU
 esserne
 espressivo
+edxv
 base
 bit
 basano
@@ -9466,6 +9497,7 @@ bWn
 bnc
 bloccanti
 bloccante
+bqTz
 quindi
 questo
 quelle
@@ -10927,6 +10959,9 @@ smaltiti
 smaltire
 sonda
 sega
+scrivono
+sYfL
+sNa
 otterremmo
 ottenere
 occupare
@@ -11473,6 +11508,8 @@ oSc
 oYX
 oPl
 ordinarli
+oNfF
+ogC
 va
 valore
 viene
@@ -12636,6 +12673,7 @@ tcp
 transmission
 timeout
 traffico
+tVk
 grandi
 gli
 grande
@@ -13124,6 +13162,7 @@ gmD
 gjv
 gtnK
 granddezza
+glu
 NOT
 NotePad
 Nu
@@ -13580,6 +13619,7 @@ NWV
 NRFJGQ
 NdCG
 Nessuna
+Ncr
 Il
 Instruction
 IR
@@ -14119,6 +14159,8 @@ IKH
 ICR
 IDATAf
 Inizializzazione
+Ikr
+Isp
 Rappresentazione
 Registri
 Register
@@ -14596,6 +14638,9 @@ RjH
 Rub
 RUw
 RSJ
+RyH
+RFX
+RKc
 Si
 Se
 Status
@@ -15161,6 +15206,8 @@ SGv
 SdwY
 Socket
 Sincrono
+Sgl
+Sgu
 BINARY
 Bus
 BX
@@ -15570,6 +15617,9 @@ BnK
 BET
 BYe
 BOK
+BnX
+Btt
+BAc
 Per
 Program
 PC
@@ -16043,6 +16093,7 @@ PqsX
 PoD
 PSS
 Potere
+PxJ
 Di
 Data
 Dati
@@ -16468,6 +16519,9 @@ DBo
 DYZ
 DJnt
 DxN
+Dzx
+Dbe
+DIG
 Le
 La
 Lg
@@ -16902,6 +16956,8 @@ LOh
 LDM
 LyQ
 LCwAF
+LCE
+LRi
 Modulo
 Massimo
 Memory
@@ -17820,6 +17876,12 @@ Enb
 End
 Entrata
 Esce
+Ear
+EmK
+EaR
+EaW
+Eaw
+ExY
 Come
 Codifica
 Counter
@@ -18335,6 +18397,8 @@ Czm
 CxT
 Considerazioni
 Completamente
+CaeT
+CafS
 Questa
 Quello
 Qz
@@ -18736,6 +18800,7 @@ Qrm
 QNNj
 QaJ
 QCrDJ
+QxU
 Formato
 FLIP
 FLOP
@@ -19194,6 +19259,8 @@ FcGua
 FsB
 FGF
 FuB
+FTJ
+FvW
 Word
 WK
 WB
@@ -20024,6 +20091,9 @@ zwuj
 ziSNH
 zCA
 zUi
+zcR
+zmF
+zKc
 Half
 HACK
 HIT
@@ -20801,6 +20871,8 @@ XCu
 XAS
 XwB
 XxG
+XWx
+Xcb
 ha
 ho
 hack
@@ -21623,6 +21695,8 @@ JMFo
 JQG
 JPC
 JlW
+Jml
+JzM
 kB
 kW
 kWs
@@ -22038,6 +22112,9 @@ kTBP
 kjq
 kHKm
 kwq
+khf
+ksJM
+knTe
 jmp
 jy
 jwä
@@ -22409,6 +22486,9 @@ jcZ
 jLf
 jju
 jYr
+jVb
+jcr
+jXm
 word
 wu
 wf
@@ -22801,6 +22881,8 @@ wipo
 wPP
 way
 wait
+wkL
+whe
 Oltre
 OgSf
 Od
@@ -23288,6 +23370,7 @@ OFQ
 OaT
 Oyh
 OSg
+OBa
 xz
 xX
 xF
@@ -23705,6 +23788,7 @@ xHS
 xBW
 xLJ
 xms
+xPc
 Kq
 KG
 KR
@@ -24089,6 +24173,10 @@ KHZ
 KEC
 KEB
 KYiLbX
+KUA
+KXZhV
+KuKa
+KvN
 Us
 US
 Ur
@@ -24505,6 +24593,8 @@ UQY
 UNfp
 UNFt
 UEV
+Ugg
+UIG
 Zx
 ZD
 ZRz
@@ -24862,6 +24952,8 @@ ZOV
 Zot
 Zlb
 ZUV
+ZLm
+ZCNKK
 YQ
 Yz
 YI
@@ -25250,6 +25342,8 @@ YSg
 YTT
 YRi
 YYp
+YOF
+YSOu
 yI
 ys
 yN
@@ -25687,6 +25781,8 @@ ylF
 yyz
 yxZ
 yZE
+yyd
+yQX
 Tp
 Tv
 TBz
@@ -26552,6 +26648,8 @@ Gpn
 GnC
 GHZL
 Gvv
+Gfi
+Gus
 Vb
 VD
 VG
@@ -27008,6 +27106,8 @@ VLsA
 Vzp
 VRD
 VYnC
+Vcac
+Vrl
 öG
 öH
 özw
