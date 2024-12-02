@@ -1,0 +1,39 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-12-02 16:14`"
+---
+- # Promesse:
+	- permettono di avere, al posto di un callback hell, posso concatenare una sequenza di `.then` che gestisce la richiesta che faccio 
+		- ![[Pasted image 20241202162115.png]]
+		-  
+	- ## Promise.all:
+		- ho delle richieste tutte diverse tra di loro ma riprendo solo quando tutte le richieste sono state restituite, creando un [[Array]] di promesse.
+		- ![[Pasted image 20241202164034.png]]
+		- quando tutte e tre le promise si concludono allora viene eseguito il `.then` 
+- # Generator/yeld:
+	- ## Generatore:
+		- è una funzione che può essere sospesa e ripresa a piacere e riparte dal punto di interruzione
+		- Ha una sintassi particolare con `*` dopo `function`
+		- 
+	- ## Yeld:
+		- comando che mette in attesa la assegnazione di valore fino a che non si chiude l'esecuzione della funzione chiamata.
+		- 
+	- ## Next:
+		- la funzione `next()` fa proseguire l'esecuzione della funzione fino al prossimo `yield`.
+	- questi concetti mantengono il flusso naturale delle funzioni chiamate e delle loro variabili locali.
+	- ![[Pasted image 20241202162542.png]] 
+	- questa funzione viene eseguita a pezzi(num `yeld` +1 volte)  ma non subito.
+	- ogni volta che viene fatto un `.next()` viene eseguito un pezzo della funzione fino allo `yeld` successivo.
+	- ogni `.next()` restituisce il parametro dello `yeld` 
+- # Async/await:
+	- definisco la funzione maestra `async` ed è definita come interrompibile 
+	- questa funzione quindi continua ad eseguirsi finché non incontra un `await` e ripartirà solo quando viene rispettato il parametro dell’`await`
+	- ![[Pasted image 20241202163533.png]]
+- # For await (… of …):
+	- adatto a costanti flussi di dati con dimensione indefinita, 
+	- ogni flusso viene eseguito nell’ordine in cui arriva e appena finisce viene eseguito il contenuto del ciclo.
+	- 
+- # Link Utili:
+	- 
