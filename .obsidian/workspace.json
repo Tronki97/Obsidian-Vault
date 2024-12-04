@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/progetto/Liste.md",
+                "file": "Secondo Anno/Sistemi Operativi/progetto/Process Control Block.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Liste"
+              "title": "Process Control Block"
             }
           }
         ]
@@ -202,24 +202,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi/progetto/Process Control Block.md",
     "Secondo Anno/Sistemi Operativi/progetto/progetto sistemi operativi..md",
     "Secondo Anno/Sistemi Operativi/progetto/Semaphores.md",
-    "Secondo Anno/Sistemi Operativi/progetto",
+    "Homepage.md",
+    "interpolazione (TW).md",
     "Secondo Anno/Sistemi Operativi/progetto/Liste.md",
+    "Secondo Anno/Sistemi Operativi/progetto/Process Control Block.md",
+    "Secondo Anno/Sistemi Operativi/progetto",
     "Secondo Anno/Sistemi Operativi/laboratorio/Laboratorio SO.md",
     "immagini/Pasted image 20241202162115.png",
     "Secondo Anno/Sistemi Operativi/laboratorio",
-    "interpolazione (TW).md",
     "modularizzazione.md",
     "Programmazione asincrona.md",
     "immagini/Pasted image 20241202164034.png",
     "immagini/Pasted image 20241202163533.png",
     "immagini/Pasted image 20241202162542.png",
     "Secondo Anno/Tecnologie Web/Temi trasversali di Javascript.md",
-    "Homepage.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Pseudoinversa.md",

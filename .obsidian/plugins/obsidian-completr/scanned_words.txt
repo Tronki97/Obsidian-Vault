@@ -807,6 +807,7 @@ pWu
 pWm
 project
 prnt
+placeholder
 realizzare
 rappresentare
 risultato
@@ -12786,6 +12787,7 @@ traffico
 tVk
 tnz
 tPY
+template
 grandi
 gli
 grande
@@ -13280,6 +13282,7 @@ gIa
 guU
 gjQ
 generiche
+grafica
 NOT
 NotePad
 Nu
@@ -23085,6 +23088,7 @@ wHW
 wyZ
 wtB
 wrapper
+wikipedia
 Oltre
 OgSf
 Od
