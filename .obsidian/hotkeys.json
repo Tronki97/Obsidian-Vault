@@ -57,5 +57,15 @@
     }
   ],
   "obsidian-completr:completr-bypass-tab-key": [],
-  "workspace:next-tab": []
+  "workspace:next-tab": [],
+  "templater-obsidian:template/Modello appunti.md": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod",
+        "Shift"
+      ],
+      "key": "M"
+    }
+  ]
 }

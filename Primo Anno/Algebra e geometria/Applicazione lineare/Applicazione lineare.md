@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - Fisso uno [[Spazio vettoriale]] V e una sua [[Base]] $\beta = v_1,...,v_n$ ordinata, poi prendo un vettore $v \in V$ t.c le sue [[Coordinate rispetto a una base||coordinate]] rispetto a $\beta$ sono$$v_{\beta}=\lambda_{1},...,\lambda_{n}:\  v=\lambda_1 v_1+...+\lambda_n v_n$$Ora considero la funzione $f_{\beta}: V\rightarrow \mathbb{R}^{n}$ definita come $v \rightarrow v_{\beta}$, ovvero una funzione che preso un vettore ci associa le sue coordinate rispetto ad una determinata base $\beta$, si dimostra che:
 	- $f_\beta$ è [[iniettiva]].
 	- $f_\beta$ è [[Suriettiva]].

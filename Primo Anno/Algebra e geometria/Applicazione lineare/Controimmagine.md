@@ -1,3 +1,9 @@
+---
+tags: []
+aliases:
+  - traslazione
+data: "`2024-08-31 20:05`"
+---
 - Sia $f:A \rightarrow B$ una funzione, e sia $b\in B$ allora la _controimmagine_ di $b$ tramite $f$ è$$f^{-1}(b)=a\in A|f(a)=b$$Ciò però non è l'inversa di $f$ 
 - ## Conseguenze
 	- Si ha che la controimmagine di un certo $b$ tramite $f$ è l'insieme vuoto sse $b$ non è nell'[[Immagine di una funzione||immagine]] di $f$ ovvero $$f^{-1}(b)=\emptyset \Longleftrightarrow b\ne Im(f)$$

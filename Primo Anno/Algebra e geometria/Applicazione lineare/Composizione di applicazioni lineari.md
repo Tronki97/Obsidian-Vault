@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - Una composizione di [[Applicazione lineare]] $f,g$ t.c $f:V \rightarrow W$ e $g:W \rightarrow Z$ è definita dalla funzione composta:$$g \circ f:V \rightarrow Z|(g \circ f)(v)=g(f(v))$$
 - ## Proposizioni:
 	- ### Linearità 

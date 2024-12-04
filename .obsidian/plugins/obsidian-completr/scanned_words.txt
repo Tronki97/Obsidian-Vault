@@ -808,6 +808,8 @@ pWm
 project
 prnt
 placeholder
+promise
+piacere
 realizzare
 rappresentare
 risultato
@@ -1633,6 +1635,10 @@ riallocato
 removeProcQ
 removeChild
 ritornalo
+riprendo
+ripresa
+riparte
+ripartir
 la
 le
 lo
@@ -2647,6 +2653,8 @@ Active
 Assegnare
 Alloca
 Assegna
+Async
+Affidabilit
 nel
 necessario
 numero
@@ -3150,6 +3158,8 @@ nSm
 nhu
 nÄ
 nWY
+naturale
+num
 capire
 codifiche
 capacit
@@ -4252,6 +4262,12 @@ circolari
 circolare
 contenuta
 corrispettivo
+concern
+chiara
+caricate
+concatenare
+concludono
+concetti
 avendo
 alcune
 arriva
@@ -6397,6 +6413,7 @@ doppiamente
 descriptors
 descriptor
 descrittore
+demand
 finito
 fanno
 facilmente
@@ -6964,6 +6981,7 @@ fwy
 fpn
 fifW
 fUB
+flussi
 in
 il
 invece
@@ -7779,6 +7797,10 @@ iuJ
 implementate
 insertProcQ
 insertChild
+intercambiabili
+interne
+interrompibile
+indefinita
 modo
 mentre
 massimo
@@ -8482,6 +8504,7 @@ mVwM
 myD
 memorizzati
 memorizzato
+maestra
 esempio
 eccede
 errori
@@ -9105,6 +9128,7 @@ esserne
 espressivo
 edxv
 emptyChild
+esportabili
 base
 bit
 basano
@@ -11060,6 +11084,9 @@ shp
 sentinella
 semplificare
 sib
+spezzo
+separation
+sospesa
 otterremmo
 ottenere
 occupare
@@ -12788,6 +12815,7 @@ tVk
 tnz
 tPY
 template
+traslazione
 grandi
 gli
 grande
@@ -13745,6 +13773,7 @@ NiuV
 NPf
 NNv
 NMy
+Next
 Il
 Instruction
 IR
@@ -16238,6 +16267,8 @@ PxJ
 PuG
 PCBs
 Procedi
+Promesse
+Promise
 Di
 Data
 Dati
@@ -21488,6 +21519,7 @@ hla
 hYN
 head
 headProcQ
+hell
 JZ
 JT
 Jd
@@ -25561,6 +25593,7 @@ YYp
 YOF
 YSOu
 YPs
+Yeld
 yI
 ys
 yN
@@ -26002,6 +26035,7 @@ yyd
 yQX
 ymC
 yJe
+yeld
 Tp
 Tv
 TBz
@@ -26874,6 +26908,7 @@ Gfi
 Gus
 GvD
 Gwl
+Generator
 Vb
 VD
 VG

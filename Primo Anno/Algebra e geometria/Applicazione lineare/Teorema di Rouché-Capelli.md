@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - Questo teorema, mette in luce il legame tra i sistemi lineari  e le [[Applicazione lineare||applicazioni lineari]], e dice che un sistema lineare $A \underline{x}=\underline{b}$ dove $A\in M_{m\times n}(\mathbb{R})$ ha soluzione $\iff rk(A)=rk(A|\underline{b})$. Se il sistema ha soluzione allora per $rk(A)=rk(A|\underline{b})=r$ e per $n$ come numero di colonne e quindi di incognite si ha:
 	- $r=n\implies$il sistema ha 1 soluzione
 	- $r<n\implies$il sistema ha infinite soluzioni che dipendono da $n-r$ parametri.

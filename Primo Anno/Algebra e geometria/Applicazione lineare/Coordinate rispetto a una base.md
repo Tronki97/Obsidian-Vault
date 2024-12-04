@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - Sia $\beta = v_1,...,v_n$ una [[Base]] ordinata di uno [[Spazio vettoriale]] V, e sia $v \in V$ allora esistono unici $\lambda_{1},...,\lambda_{n} \in \mathbb{R}$ tali che:$$v= \lambda_1 v_1+...+\lambda_n v_n$$ Questi scalari sono definiti come: _coordinate di $v$ rispetto alla base $\beta$_ e si indicano così:$$v_{\beta}=\lambda_{1},...,\lambda_{n}$$
   N.B: il teorema ci assicura che presa una base ordinata esistano sempre coordinate di un vettore appartenente a V. Per cui se la soluzione di un sistema per trovare i valori di $\lambda$ che determinino la [[Combinazione lineare]] di un certo vettore ci viene impossibile o con infinite soluzioni, siamo sicuri di star sbagliando.
 - ## ES:

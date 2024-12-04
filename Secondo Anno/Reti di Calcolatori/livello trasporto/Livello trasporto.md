@@ -19,12 +19,13 @@ data: "`2024-11-27 13:28`"
 - # UDP:
 	- la rete continua a funzionare in maniera _connectionless_ quindi non affidabile.
 - # TCP:
-	- rende la rete affidabile _End-to-End_ ovvero da qualsiasi punto verso qualsiasi destinazione connessa alla rete 
-	- configura il numero di porta del _socket TCP_
-	- numera sequenzialmente i segmenti per poi ordinarli ed eliminare duplicati quando arrivano a destinazione.
-		- permette di capire anche quando manca un segmento, siccome sono ordinati. 
-	- i pacchetti non ricevuti, ovvero che non hanno ricevuto l’ack entro il _timeout_, vengono ritrasmessi tutto ciò viene ripetuto finche l’ack non ritorna al mittente 
-	- quindi per garantire l’affidabilità, vengono ritrasmessi i pacchetti e ciò potrebbe creare dei duplicati.
+	- ## Affidabilità:
+		- rende la rete affidabile _End-to-End_ ovvero da qualsiasi punto verso qualsiasi destinazione connessa alla rete 
+		- configura il numero di porta del _socket TCP_
+		- numera sequenzialmente i segmenti per poi ordinarli ed eliminare duplicati quando arrivano a destinazione.
+			- permette di capire anche quando manca un segmento, siccome sono ordinati. 
+		- i pacchetti non ricevuti, ovvero che non hanno ricevuto l’ack entro il _timeout_, vengono ritrasmessi tutto ciò viene ripetuto finche l’ack non ritorna al mittente 
+		- quindi per garantire l’affidabilità, vengono ritrasmessi i pacchetti e ciò potrebbe creare dei duplicati.
 	- questo protocollo fa anche la gestione del flusso e della congestione
 		- ## Gestione flusso:
 			- controllo della dimensione e velocità.

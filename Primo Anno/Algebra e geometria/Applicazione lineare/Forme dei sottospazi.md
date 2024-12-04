@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - Uno [[Sottospazio generato]] di $\mathbb{R}^{n}$ si può assegnare in 2 modi:
 	- 1) $V=\langle{v_1,...,v_{k}}\rangle$ ovvero fornendo un insieme di generatori;
 	- 2) $V=\underline{x}\in \mathbb{R}^{n}|A \underline{x}=\underline{0}$ ovvero come insieme delle soluzioni di un sistema omogeneo che identifica il [[Kernel]], quindi fornendo delle equazioni che danno queste soluzioni

@@ -1,3 +1,10 @@
+---
+tags: 
+aliases:
+  - restrizione di una funzione alla sua immagine
+  - spazio generato dall'immagine
+data: "`2024-08-31 20:05`"
+---
 - Si definisce _immagine_ di una funzione $f$ il sottoinsieme degli elementi del codominio $C$ per cui esiste un elemento del dominio $D$ mappato su ognuno di essi, ovvero:$$Im(f):=c\in C|\exists d\in D. \ f(d)=c \subseteq C$$Oppure:$$Im(f)=f(d)|d\in D$$
 - ## Restrizione di una funzione alla sua immagine 
 	- Restringendo il codominio di una funzione alla sua immagine, la si rende [[Suriettiva]], o meglio:

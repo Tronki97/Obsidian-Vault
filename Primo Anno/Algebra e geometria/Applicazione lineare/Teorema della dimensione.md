@@ -1,7 +1,14 @@
-- Sia $f:V \rightarrow W$ un'[[Applicazione lineare]] allora si ha che:$$\dim(V)=\dim(\ker(f))+\dim(Im(f))$$Ovvero che la [[Dimensione]] del dominio V è uguale a alla somma di quella del [[Kernel]] di $f$ con quella dell'[[Immagine di una funzione||immagine]] di $f$
-- ### Dimostrazione 
-	- Mi riduco a dimostrare $$dim(V)-dim(ker(f))=dim(Im(f))$$Suppongo di avere una [[Base]] di V t.c $dim(V)=n$ la dimensione del kernel di $f$, supponendo di aver risolto il sistema lineare omogeneo associato alla [[Matrici||matrice]] $A$ che definisce l'[[Applicazione lineare]] $L_{A}=f$ sarà $r\le n$ dove r è il numero di _pivot_ di $A$ ridotta a scala. Quindi una base di $ker(f)$ sarebbe del tipo $v_1,...,v_{r}$ t.c $f(v_1),...,f(v_{r})=\underline{0}$. Sostituendo tali valori nell'equazione ottengo:$$dim(Im(f))=n-r$$Poi per il [[Teorema del completamento]] possiamo completare la base di $ker(f)$ a una base di V, ottenendo $$\beta=v_1,...,v_{r},v_{r+1},...,v_n$$Ora si calcola la base di $Im(f)$ sapendo che vale $$Im(f)=\langle{f(v_1),...,f(v_{r})}\rangle$$Per cui si dimostra che una base di $Im(f)$ è$$f(v_{r+1}),...,f(v_{n})$$genera $Im(f)$ ed è [[Indipendenza lineare||linearmente indipendente]] per cui la base $Im(f)$ $$dim(Im(f))=n-r$$
-- ## Utilità 
+---
+tags: []
+aliases:
+  - corollario sul teorema della dimensione
+data: "`2024-08-31 20:05`"
+---
+- # Def:
+	- Sia $f:V \rightarrow W$ un'[[Applicazione lineare]] allora si ha che:$$\dim(V)=\dim(\ker(f))+\dim(Im(f))$$Ovvero che la [[Dimensione]] del dominio V è uguale a alla somma di quella del [[Kernel]] di $f$ con quella dell'[[Immagine di una funzione||immagine]] di $f$
+	- ### Dimostrazione 
+		- Mi riduco a dimostrare $$dim(V)-dim(ker(f))=dim(Im(f))$$Suppongo di avere una [[Base]] di V t.c $dim(V)=n$ la dimensione del kernel di $f$, supponendo di aver risolto il sistema lineare omogeneo associato alla [[Matrici||matrice]] $A$ che definisce l'[[Applicazione lineare]] $L_{A}=f$ sarà $r\le n$ dove r è il numero di _pivot_ di $A$ ridotta a scala. Quindi una base di $ker(f)$ sarebbe del tipo $v_1,...,v_{r}$ t.c $f(v_1),...,f(v_{r})=\underline{0}$. Sostituendo tali valori nell'equazione ottengo:$$dim(Im(f))=n-r$$Poi per il [[Teorema del completamento]] possiamo completare la base di $ker(f)$ a una base di V, ottenendo $$\beta=v_1,...,v_{r},v_{r+1},...,v_n$$Ora si calcola la base di $Im(f)$ sapendo che vale $$Im(f)=\langle{f(v_1),...,f(v_{r})}\rangle$$Per cui si dimostra che una base di $Im(f)$ è$$f(v_{r+1}),...,f(v_{n})$$genera $Im(f)$ ed è [[Indipendenza lineare||linearmente indipendente]] per cui la base $Im(f)$ $$dim(Im(f))=n-r$$
+- # Utilità 
 	- Questo teorema risulta fondamentale nello sviluppo degli esercizi in cui non viene richiesto di conoscere il [[Sottospazio generato]] dal nucleo né il sottospazio generato dall'immagine, ma magari solo la loro dimensione: calcolando anche solo una delle due dimensioni, per questo teorema ricaviamo immediatamente quella dell'altro.
 	- ad esempio:
 		- per sapere se una certa $f:V \rightarrow W$ è [[Suriettiva]] ci basta avere che $dim(Im(f))=dim(W)$;
