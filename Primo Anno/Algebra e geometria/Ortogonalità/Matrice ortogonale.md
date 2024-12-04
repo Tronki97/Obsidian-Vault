@@ -1,11 +1,17 @@
-- $A\in M_{n}(\mathbb{R})$ è ortogonale se $A\cdot A^{T}=I$ ovvero $$A^{T}=A^{-1}$$
-- ## Proposizione:
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
+- # Def:
+	- $A\in M_{n}(\mathbb{R})$ è ortogonale se $A\cdot A^{T}=I$ ovvero $$A^{T}=A^{-1}$$
+- # Proposizione:
 	- sia $A\in M_{n}(\mathbb{R})$ sono equivalenti:
 		- 1) $<A \underline{x}, A \underline{x}>=<\underline{x},\underline{y}>$   $\forall \underline{x},\underline{y}\in \mathbb{R}^{n}$
 		- 2)$<A \underline{x}, A \underline{x}>=<\underline{x},\underline{x}>$   $\forall \underline{x}\in \mathbb{R}^{n}$
 		- 3) $A\cdot A^{T}=I \iff A^{T}=A^{-1}$
 		- 4) le colonne-righe di $A$ sono una [[Base ortonormale]] di $\mathbb{R}^{n}$ 
-	- ### Dimostrazione:
+	- ## Dimostrazione:
 		- dimostro che $3\iff 4$ 
 			- Sia $A=\begin{pmatrix}c_{1}&\cdots&c_{n}\\ \\\\\\\end{pmatrix}$ dove $c$ sono le colonne 
 			- $$AA^{T}=I\iff A^{T}A=I\iff $$$$\iff \begin{pmatrix}c_{1}&&&&\\c_{2}\\\vdots\\c_{n}\end{pmatrix}\cdot \begin{pmatrix}c_{1}&\cdots&c_{n}\\ \\\\\\\end{pmatrix}=I$$

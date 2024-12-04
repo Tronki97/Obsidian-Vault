@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - composizione di applicazioni lineari
   - inversa di identità

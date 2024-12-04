@@ -1,5 +1,15 @@
-- Data una [[Base]] di uno [[Spazio vettoriale]] $W$, l'algoritmo serve per trovare una [[Base ortogonale]](o [[Base ortonormale||ortonormale]]) di $W$, ossia una base di vettori perpendicolari tra loro (e, se ortonormale, di [[Norma euclidea||norma]] 1) 
-- ## Algoritmo
+---
+tags: []
+aliases:
+  - Gram-schmidt
+  - GS
+  - G-S
+  - g-s
+data: "`2024-08-31 20:05`"
+---
+- # Def:
+	- Data una [[Base]] di uno [[Spazio vettoriale]] $W$, l'algoritmo serve per trovare una [[Base ortogonale]](o [[Base ortonormale||ortonormale]]) di $W$, ossia una base di vettori perpendicolari tra loro (e, se ortonormale, di [[Norma euclidea||norma]] 1) 
+- # Algoritmo
 	- L'algoritmo si appoggia sulle proprietà delle [[Proiezioni ortogonali]] per ottenere una base ortogonale di uno spazio a partire da un'altra.
 	- Sia $w_1,...,w_{k}$ una base di $W$, allora una base ortogonale $u_{1},...,u_{k}$ di $W$ si ottiene ponendo:
 		- $u_{1}=w_{1}$

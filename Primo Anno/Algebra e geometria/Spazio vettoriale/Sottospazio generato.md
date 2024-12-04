@@ -1,18 +1,24 @@
-- Sia V uno [[Spazio vettoriale]] t.c. $v_{1},...,v_{n}\in V$ allora si dice che il sottospazio generato da $v_{1},...,v_{n}$ è l'insieme di tutte le sue [[Combinazione lineare||combinazioni lineari]] e si indica con: $$\langle v_{1},...v_{n}\rangle = \lambda_{1} v_{1}+...+\lambda_{n} v_{n}$$ con $\lambda_{1},...,\lambda_{n} \in \mathbb{R}$  ^5d24e7
-	- se si hanno i vettori $v_{1},...,v_{n} \in V$ il più piccolo sottospazio che li contiene è proprio quello generato da $v_{1},...,v_{n}$ ovvero $\langle v_{1},...v_{n}\rangle$   
-- ## DEF: ^90c15c
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
+- # Def:
+	- Sia V uno [[Spazio vettoriale]] t.c. $v_{1},...,v_{n}\in V$ allora si dice che il sottospazio generato da $v_{1},...,v_{n}$ è l'insieme di tutte le sue [[Combinazione lineare||combinazioni lineari]] e si indica con: $$\langle v_{1},...v_{n}\rangle = \lambda_{1} v_{1}+...+\lambda_{n} v_{n}$$ con $\lambda_{1},...,\lambda_{n} \in \mathbb{R}$  ^5d24e7
+		- se si hanno i vettori $v_{1},...,v_{n} \in V$ il più piccolo sottospazio che li contiene è proprio quello generato da $v_{1},...,v_{n}$ ovvero $\langle v_{1},...v_{n}\rangle$   
+- # DEF: ^90c15c
 	- Sia V uno [[Spazio vettoriale]] t.c. $v_{1},...,v_{n}\in V$ allora si dice che $v_{1},...,v_{n}$ genera V $\Longleftrightarrow V=\langle v_{1},...v_{n}\rangle$.
 	- Uno s.v V si dice _finitamente generato_ se ha un insieme finito di generatori ovvero: $\exists v_{1},...v_{n}\in V : V= \langle v_{1},...v_{n}\rangle$  ^2c0f72
 	- ES: 
 		- $\mathbb{R}^{2}$ è finitamente generato; mentre $\mathbb{R}[x]$ non lo è perché per rappresentare ogni polinomio mi servirebbero infiniti elementi nel generatore, infatti $\mathbb{R}[x]=\langle 1, x, x^{2},...,x^{n}, x^{n+1},...\rangle$ 
-	- #### OSSERVAZIONE
+	- ### OSSERVAZIONE
 		- il sottospazio generato da $v\in V$ è l'insieme dei suoi multipli e quindi, il sottospazio generato dal vettore nullo è: $\langle \underline{0} \rangle=\underline{0}$ 
-- ## Proposizioni
+- # Proposizioni
 	- Preso V come [[Spazio vettoriale]] t.c. $v_{1},...,v_{n}\in V$ allora:
 		- 1)$\langle v_{1},...v_{n}\rangle \leq V$
 		- 2)$Z\leq V:v_{1},...,v_{n}\in Z\implies \langle v_{1},...v_{n}\rangle\subseteq Z$ ovvero: $\langle v_{1},...v_{n}\rangle$ è il più piccolo sottospazio di V che contiene $v_{1},...,v_{n}$
 		- 3)$w\in \langle v_{1},...v_{n}\rangle \Longleftrightarrow \langle v_{1},...v_{n}\rangle=\langle v_{1},...v_{n}, w\rangle$
-	- #### Dimostrazione
+	- ## Dimostrazione
 		- 1)$$\langle v_{1},...v_{n}\rangle \leq V$$
 			- dobbiamo dimostrare che $\langle v_{1},...v_{n}\rangle$ è un sottospazio di generico un V.
 				- per la definizione di sottospazio bisogna avere $(0,...,0)\in \langle v_{1},...v_{n}\rangle$, vero perché la [[Combinazione lineare]] $\lambda_{1}v_{1},...,\lambda_{n}v_{n}$ con $\lambda_{1},...\lambda_{n}=0$ risulta proprio in $(0,...,0)$. Quindi $\langle v_{1},...v_{n}\rangle$ deve essere _chiuso rispetto alla somma_. Per la definizione di [[#^5d24e7||sottospazio generato]], $u$ e $v$ sono combinazioni lineari di $v_{1},...,v_{n}$ e quindi del tipo $u=\lambda_{1}v_{1}+...+\lambda_{n}v_{n}$ e $v=\beta_{1}v_{1}+...+\beta_{n}v_{n}$ .
@@ -29,9 +35,9 @@
 				- Per dimostrare che $\langle v_{1},...v_{n}\rangle=\langle v_{1},...v_{n}, w\rangle$ basta dimostrare $w\in \langle v_{1},...v_{n}\rangle$ ovvio per ipotesi.
 			- $\Longleftarrow$) 
 				- devo dimostrare che $w\in \langle v_{1},...v_{n}\rangle$, ma per ipotesi sappiamo che $\langle v_{1},...v_{n}\rangle=\langle v_{1},...v_{n}, w\rangle$ quindi sfruttando le proprietà dell'uguaglianza mi riduco a dimostrare che: $w\in \langle v_{1},...v_{n}, w\rangle$, ovvio.
-	- ### OSSERVAZIONI
+	- ## OSSERVAZIONI
 		- Verificato che (1,0),(0,1),(1,2) generano $\mathbb{R}^2$, se so che (1,2) è una combinazione lineare degli altri 2 posso scrivere che $\mathbb{R}^{2}=\langle(1,0),(0,1)\rangle$. Quindi per trovare l'insieme di vettori generati più piccolo possibile per un determinato sottospazio è necessario ricorre al concetto di [[Indipendenza lineare]] 
-- ## ESEMPI:
+- # ESEMPI:
 	- $$\mathbb{R}^{3}=\langle (1,0,0),(0,1,0),(0,0,1)\rangle$$
 		- per dimostrarlo espandiamo il sottospazio usando la definizione:$$\langle (1,0,0),(0,1,0),(0,0,1)\rangle= \lambda_{1}(1,0,0)+\lambda_{2}(0,1,0)+\lambda_{3}(0,0,1)$$
 		  $\lambda_{1...3}\in \mathbb{R}$

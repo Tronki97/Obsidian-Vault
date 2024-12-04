@@ -1639,6 +1639,7 @@ riprendo
 ripresa
 riparte
 ripartir
+restrizione
 la
 le
 lo
@@ -4268,6 +4269,7 @@ caricate
 concatenare
 concludono
 concetti
+conserva
 avendo
 alcune
 arriva
@@ -5148,6 +5150,7 @@ acquisire
 attivi
 appropriata
 allocato
+angoli
 un
 una
 usato
@@ -6982,6 +6985,7 @@ fpn
 fifW
 fUB
 flussi
+fad
 in
 il
 invece
@@ -12816,6 +12820,8 @@ tnz
 tPY
 template
 traslazione
+teoremone
+theorem
 grandi
 gli
 grande
@@ -15790,6 +15796,7 @@ BnX
 Btt
 BAc
 BAt
+BIG
 Per
 Program
 PC
@@ -16702,6 +16709,7 @@ DvLw
 DeQN
 Dem
 Deallocazione
+Dunque
 Le
 La
 Lg
