@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "componenti.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "componenti"
             }
           }
         ]
@@ -204,6 +204,15 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Tecnologie Web/Programmazione asincrona.md",
+    "componenti.md",
+    "Secondo Anno/Tecnologie Web/Temi trasversali di Javascript.md",
+    "Secondo Anno/Tecnologie Web/Page layout.md",
+    "Secondo Anno/Tecnologie Web/client-side JS.md",
+    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+    "Secondo Anno/Tecnologie Web/Approfondimenti su HTTP.md",
+    "Secondo Anno/Sistemi Operativi/laboratorio/linguaggio C.md",
+    "Homepage.md",
     "Secondo Anno/Sistemi Operativi/progetto/Liste.md",
     "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
     "Secondo Anno/Reti di Calcolatori/Protocollo ARP e RARP.md",
@@ -221,15 +230,6 @@
     "Primo Anno/Algebra e geometria/Spazio vettoriale/Indipendenza lineare.md",
     "Primo Anno/Algebra e geometria/Spazio vettoriale/Dimensione.md",
     "Primo Anno/Algebra e geometria/Spazio vettoriale/Combinazione lineare.md",
-    "Primo Anno/Algebra e geometria/Spazio vettoriale/Base.md",
-    "Primo Anno/Algebra e geometria/Spazio vettoriale/Base Canonica.md",
-    "Primo Anno/Algebra e geometria/Sistema lineare/Rango righe.md",
-    "Primo Anno/Algebra e geometria/Sistema lineare/Matrici.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Immagine di una funzione.md",
-    "Primo Anno/Algebra e geometria/Sistema lineare/Equazioni lineari.md",
-    "Primo Anno/Algebra e geometria/Sistema lineare/Algoritmo di Gauss.md",
-    "Primo Anno/Algebra e geometria/Ortogonalità/Sottospazio ortogonale.md",
-    "Primo Anno/Algebra e geometria/Ortogonalità/Proiezioni ortogonali.md",
     "Secondo Anno/Sistemi Operativi/progetto",
     "immagini/Pasted image 20241202162115.png",
     "Secondo Anno/Sistemi Operativi/laboratorio",
