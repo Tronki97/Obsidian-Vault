@@ -810,6 +810,8 @@ prnt
 placeholder
 promise
 piacere
+pannello
+peer
 realizzare
 rappresentare
 risultato
@@ -3161,6 +3163,8 @@ nÄ
 nWY
 naturale
 num
+navbar
+nascosta
 capire
 codifiche
 capacit
@@ -4270,6 +4274,11 @@ concatenare
 concludono
 concetti
 conserva
+custom
+carousel
+cambiamento
+completato
+chieder
 avendo
 alcune
 arriva
@@ -6986,6 +6995,7 @@ fifW
 fUB
 flussi
 fad
+frammento
 in
 il
 invece
@@ -7805,6 +7815,7 @@ intercambiabili
 interne
 interrompibile
 indefinita
+inseriscono
 modo
 mentre
 massimo
@@ -8509,6 +8520,8 @@ myD
 memorizzati
 memorizzato
 maestra
+modale
+monodirezionale
 esempio
 eccede
 errori
@@ -9133,6 +9146,9 @@ espressivo
 edxv
 emptyChild
 esportabili
+element
+estensione
+estensioni
 base
 bit
 basano
@@ -9615,6 +9631,8 @@ brV
 bFH
 beO
 bSy
+binding
+bidirezionale
 quindi
 questo
 quelle
@@ -11091,6 +11109,7 @@ sib
 spezzo
 separation
 sospesa
+shadow
 otterremmo
 ottenere
 occupare
@@ -11647,6 +11666,8 @@ oVw
 opportuno
 outProcQ
 outChild
+omogenea
+ottenibili
 va
 valore
 viene
@@ -12211,6 +12232,9 @@ vcs
 vTB
 vEy
 void
+virtual
+vue
+vedr
 troppo
 testimone
 tramite
@@ -13317,6 +13341,7 @@ guU
 gjQ
 generiche
 grafica
+gestite
 NOT
 NotePad
 Nu
@@ -15383,6 +15408,8 @@ Sgu
 SirQe
 Sempre
 Semaphore
+Shadow
+Slot
 BINARY
 Bus
 BX
@@ -15797,6 +15824,7 @@ Btt
 BAc
 BAt
 BIG
+Binding
 Per
 Program
 PC
@@ -16276,6 +16304,7 @@ PCBs
 Procedi
 Promesse
 Promise
+Peer
 Di
 Data
 Dati
@@ -18599,6 +18628,7 @@ CqM
 CYN
 Code
 Cerca
+Custom
 Questa
 Quello
 Qz
@@ -26478,6 +26508,7 @@ Three
 TZt
 TiuVD
 Tzx
+Template
 GY
 GT
 Ghw
