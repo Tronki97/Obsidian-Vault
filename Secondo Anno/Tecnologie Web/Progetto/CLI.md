@@ -4,3 +4,6 @@
 - ## Come usarli:
 	- vengono eseguiti nell'ambiente di sviluppo sul codice sorgente dell'app
 	- In produzione invece viene caricato il codice risultante dall'esecuzione
+- ## MongoDB:
+	- username: site232465.
+	- password: ahB4ha7j

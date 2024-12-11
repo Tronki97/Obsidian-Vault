@@ -51,6 +51,11 @@ data: "`2024-11-04 13:22`"
 			- $$\lambda_{opt}=min_{\lambda}||x_{\lambda}-x_{GT}||_{2}^{2}$$
 			- $x_{\lambda}$ è la soluzione calcolata in corrispondenza di un certo $\lambda$
 			- $x_{GT}$ è la soluzione esatta.
+		- ### Principio di massima discrepanza:
+			- si sceglie il $\lambda$ che minimizza la discrepanza tra i dati e la soluzione:
+				- $$||A x_{tik}- y^{\delta}||_{2}^{2}- \nu ||\delta||_{2}^{2}$$
+				- più basso è questo valore risultante più il $\lambda$ è ottimale.
+		- 
  
 - # Link Utili:
 	- 
