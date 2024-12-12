@@ -812,6 +812,10 @@ promise
 piacere
 pannello
 peer
+prioritizzazione
+packet
+paI
+pWd
 realizzare
 rappresentare
 risultato
@@ -1642,6 +1646,15 @@ ripresa
 riparte
 ripartir
 restrizione
+riusare
+rJQ
+rOh
+rYM
+raggruppati
+rkE
+roe
+rYZr
+rgB
 la
 le
 lo
@@ -2169,6 +2182,8 @@ llR
 lkt
 lnQ
 loG
+lfX
+ldh
 ALU
 AND
 Address
@@ -3165,6 +3180,10 @@ naturale
 num
 navbar
 nascosta
+npm
+node
+nzr
+ntP
 capire
 codifiche
 capacit
@@ -4279,6 +4298,9 @@ carousel
 cambiamento
 completato
 chieder
+cANLZ
+collegarli
+contenimento
 avendo
 alcune
 arriva
@@ -5160,6 +5182,7 @@ attivi
 appropriata
 allocato
 angoli
+ahB
 un
 una
 usato
@@ -5690,6 +5713,8 @@ uXj
 ubu
 uPi
 ugX
+username
+uxi
 decremento
 del
 di
@@ -6426,6 +6451,10 @@ descriptors
 descriptor
 descrittore
 demand
+dKT
+dyR
+dyFF
+dfD
 finito
 fanno
 facilmente
@@ -6996,6 +7025,9 @@ fUB
 flussi
 fad
 frammento
+fTv
+filtrare
+ffh
 in
 il
 invece
@@ -7816,6 +7848,15 @@ interne
 interrompibile
 indefinita
 inseriscono
+interrompere
+includere
+installati
+iATV
+ipc
+iSN
+igm
+irt
+itd
 modo
 mentre
 massimo
@@ -8522,6 +8563,14 @@ memorizzato
 maestra
 modale
 monodirezionale
+manager
+msL
+miX
+mVN
+mzzeN
+mongo
+mongoose
+mNbr
 esempio
 eccede
 errori
@@ -9149,6 +9198,7 @@ esportabili
 element
 estensione
 estensioni
+eterogenei
 base
 bit
 basano
@@ -10091,6 +10141,7 @@ qNPV
 qyP
 qix
 qwBksz
+qme
 se
 sarebbe
 si
@@ -11110,6 +11161,12 @@ spezzo
 separation
 sospesa
 shadow
+site
+string
+sjqR
+sLx
+sXB
+sZW
 otterremmo
 ottenere
 occupare
@@ -11668,6 +11725,8 @@ outProcQ
 outChild
 omogenea
 ottenibili
+omogenei
+omogeneit
 va
 valore
 viene
@@ -12235,6 +12294,7 @@ void
 virtual
 vue
 vedr
+vccb
 troppo
 testimone
 tramite
@@ -12846,6 +12906,8 @@ template
 traslazione
 teoremone
 theorem
+tBCN
+tLg
 grandi
 gli
 grande
@@ -13342,6 +13404,8 @@ gjQ
 generiche
 grafica
 gestite
+gWc
+gdv
 NOT
 NotePad
 Nu
@@ -13805,6 +13869,11 @@ NPf
 NNv
 NMy
 Next
+Node
+NhF
+NwO
+NtJ
+NRvE
 Il
 Instruction
 IR
@@ -14352,6 +14421,9 @@ Inserisce
 Inizializzare
 Inserire
 Inseriscilo
+InDA
+IDATgidn
+IUx
 Rappresentazione
 Registri
 Register
@@ -14838,6 +14910,8 @@ Ritornare
 Rimuovere
 Ritorna
 Rimuovi
+Rwe
+Risposta
 Si
 Se
 Status
@@ -15410,6 +15484,10 @@ Sempre
 Semaphore
 Shadow
 Slot
+Serve
+Sklx
+SunbS
+SoF
 BINARY
 Bus
 BX
@@ -15825,6 +15903,8 @@ BAc
 BAt
 BIG
 Binding
+BvJ
+BCh
 Per
 Program
 PC
@@ -16305,6 +16385,9 @@ Procedi
 Promesse
 Promise
 Peer
+Persistenza
+Processing
+Pgc
 Di
 Data
 Dati
@@ -16739,6 +16822,9 @@ DeQN
 Dem
 Deallocazione
 Dunque
+DRrf
+Documenti
+DnF
 Le
 La
 Lg
@@ -17178,6 +17264,10 @@ LRi
 LmR
 LuR
 List
+Libreria
+Lettura
+Lhl
+LeQ
 Modulo
 Massimo
 Memory
@@ -17629,6 +17719,8 @@ MLge
 MmQV
 MreZ
 Macro
+MHZ
+MaM
 ES
 Esempi
 Ex
@@ -18107,6 +18199,10 @@ EaW
 Eaw
 ExY
 Eliminazione
+Event
+Express
+EWL
+EDX
 Come
 Codifica
 Counter
@@ -18629,6 +18725,12 @@ CYN
 Code
 Cerca
 Custom
+Collections
+CRUD
+Create
+Cercare
+CfMnT
+CJu
 Questa
 Quello
 Qz
@@ -19034,6 +19136,7 @@ QxU
 QcW
 QmA
 Qmy
+Query
 Formato
 FLIP
 FLOP
@@ -19499,6 +19602,9 @@ FWJ
 FWJt
 FDF
 FALSE
+FNY
+Fabio
+FWa
 Word
 WK
 WB
@@ -19896,6 +20002,8 @@ Wait
 WTL
 Wbr
 Wax
+WxG
+WKD
 zero
 zip
 zL
@@ -20744,6 +20852,7 @@ HZBK
 HtL
 Hqc
 Hfiv
+HKRm
 XOR
 Xm
 Xo
@@ -21123,6 +21232,8 @@ Xcb
 Xin
 Xtwp
 XCy
+Xbh
+Xpk
 ha
 ho
 hack
@@ -21558,6 +21669,8 @@ hYN
 head
 headProcQ
 hell
+heP
+hMR
 JZ
 JT
 Jd
@@ -21963,6 +22076,7 @@ Jml
 JzM
 JWl
 JZW
+JzC
 kB
 kW
 kWs
@@ -22383,6 +22497,8 @@ ksJM
 knTe
 kjY
 kny
+kgJ
+kod
 jmp
 jy
 jwä
@@ -23159,6 +23275,7 @@ wyZ
 wtB
 wrapper
 wikipedia
+wmK
 Oltre
 OgSf
 Od
@@ -23650,6 +23767,8 @@ OBa
 Onz
 Oeh
 OfC
+OHhVQ
+OYY
 xz
 xX
 xF
@@ -24069,6 +24188,10 @@ xLJ
 xms
 xPc
 xgZ
+xXR
+xnCM
+xzf
+xda
 Kq
 KG
 KR
@@ -24458,6 +24581,8 @@ KXZhV
 KuKa
 KvN
 KZq
+KdK
+KgS
 Us
 US
 Ur
@@ -24877,6 +25002,7 @@ UEV
 Ugg
 UIG
 Usata
+UxQ
 Zx
 ZD
 ZRz
@@ -25240,6 +25366,7 @@ ZfQc
 ZVFtGivW
 ZeAoX
 ZSK
+ZgVc
 YQ
 Yz
 YI
@@ -25632,6 +25759,8 @@ YOF
 YSOu
 YPs
 Yeld
+YYC
+YkD
 yI
 ys
 yN
@@ -26074,6 +26203,7 @@ yQX
 ymC
 yJe
 yeld
+yJS
 Tp
 Tv
 TBz
@@ -26509,6 +26639,11 @@ TZt
 TiuVD
 Tzx
 Template
+TxQ
+TYH
+TBG
+Ton
+Tje
 GY
 GT
 Ghw
@@ -26948,6 +27083,8 @@ Gus
 GvD
 Gwl
 Generator
+Gmz
+Gro
 Vb
 VD
 VG
@@ -27408,6 +27545,12 @@ Vcac
 Vrl
 Vyd
 VRbe
+VQM
+VSip
+VpZ
+Vitali
+VOe
+VAe
 öG
 öH
 özw

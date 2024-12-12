@@ -57,7 +57,7 @@ data: "`2024-11-07 09:19`"
 			- al massimo quattro filosofi a tavola.
 			- le bacchette devono essere prese insieme.
 				- necessita di una ulteriore sezione [[Sezioni critiche (critical section)|CS]] e in più causa starvation nel caso che un filosofo non possa prendere le bacchette nel caso gli altri decidano di non farlo mangiare.
-	- ## lettori e scrittori:
+	- ## lettori e scrittori: ^ff7055
 		- ### Descrizione: 
 			- ci sono più lettori e scrittori che accedono a una risorsa condivisa. 
 			- i lettori possono accedere contemporaneamente alla risorsa siccome non interagiscono tra di loro

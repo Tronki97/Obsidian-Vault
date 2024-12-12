@@ -1,0 +1,55 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-12-12 13:28`"
+---
+- # Node.js:
+	- ambiente di esecuzione [[Javascript]] per fare applicazioni server-side.
+	- non può interrompere uno script lungo, quindi bisogna crearne tanti piccoli e asincroni
+	- ![[Pasted image 20241212134204.png]]
+	- ## Event loop:
+		- ciclo infinito che guarda nella coda degli eventi le `callback` relative ad un certo evento e gestisce la prioritizzazione di altri eventi che si aggiungono 
+	- ## moduli di Node:
+		- permettono di includere altri file JS nelle applicazioni e di riusare librerie esistenti.
+		- questo modulo viene eseguito solo quando serve.
+	- ## npm:
+		- _node packet manager_, gestisce i moduli di _node_ installati sempre con npm. 
+- # Express.js:
+	- Libreria npm
+	- Serve per creare web app con node tipo:
+		- Lettura richiesta HTTP, parametri e query string
+		- Autenticazione (se richiesta)
+		- Persistenza dati
+		- Processing dati
+		- Generazione risposta HTTP
+	- ![[Pasted image 20241212141417.png]]
+- # MongoDB:
+	- lo si usa quando:
+		-  il database diventa troppo grande per essere contenuto in un file di testo generico,
+		-  voglio cercare quei dati in modo veloce
+		- ho bisogno di gestire accessi concorrenti in scrittura (tipo [[Problemi classici di concorrenza#^ff7055|lettori e scrittori]])  
+	- i documenti sono memorizzati in JSON e raggruppati in `collections` che possono essere eterogenei.
+	- è indipendente da _node_ ma si usa con _node_ tramite il modulo `mongodb` che permette di collegarli.
+	- ## Documenti:
+		- strutture di contenimento di dati omogenei.
+	- ## Collections:
+	    - raggruppamenti di documenti simili.
+	- ## Query:
+	    - permette di cercare e filtrare i dati.
+	- ## Schemi:
+		- mongo non ne ha però si può usare _mongoose_ per definire uno schema e forzare l’omogeneità.
+	- ## CRUD:
+		- _Create Read Update Delete_
+		- ### Per inserire dati:
+			- ![[Pasted image 20241212152450.png]]
+		- ### Risposta del server:
+			- ![[Pasted image 20241212152741.png]]
+	- ## Cercare informazioni:
+		- ![[Pasted image 20241212153018.png]]
+			- cerca tutti i documenti con `name` uguale a _Fabio Vitali_
+		- ![[Pasted image 20241212153142.png]]
+			- cerca tutti i documenti con `name` uguale a _Fabio Vitali_ e `age` $\ge$  _18_
+		- 
+- # Link Utili:
+	- 
