@@ -6426,6 +6426,7 @@ descriptors
 descriptor
 descrittore
 demand
+discrepanza
 finito
 fanno
 facilmente
@@ -8522,6 +8523,9 @@ memorizzato
 maestra
 modale
 monodirezionale
+mascherare
+maping
+mappare
 esempio
 eccede
 errori
@@ -11110,6 +11114,8 @@ spezzo
 separation
 sospesa
 shadow
+sigset
+systemcall
 otterremmo
 ottenere
 occupare
@@ -16739,6 +16745,7 @@ DeQN
 Dem
 Deallocazione
 Dunque
+Descriptor
 Le
 La
 Lg
