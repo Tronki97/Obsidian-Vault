@@ -8,6 +8,9 @@ aliases:
   - Point spread function
   - point spread function
   - PSF
+  - metriche di valutazione
+  - PSNR
+  - SSIM
 data: "`2024-11-11 13:40`"
 ---
 - # Intro:
@@ -75,7 +78,7 @@ data: "`2024-11-11 13:40`"
 		- SSIM e PSNR sono molto bassi in questa soluzione 
 		- ER invece è abbastanza alto.
 	- ## Regolarizzazione di Tikhonov:
-		- $$minxf(x) = minx||Ax − yδ||^{2}_{2} + λ||x||^ 2$$
+		- $$min_{x}f(x) = min_{x}||Ax − y^{δ}||^{2}_{2} + λ||x||^ 2$$
 			- $\lambda$ è il parametro di regolarizzazione.
 		- se applico la condizione del primo ordine $\nabla (f)=0$ ottengo:
 			- $$A^{T}A+\lambda I=A^{T}y^{\delta}$$
@@ -88,7 +91,17 @@ data: "`2024-11-11 13:40`"
 		- Quindi il problema di regolarizzazione diventa:
 			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}+\lambda TV^{\beta}(x)$$
 		- come pregio ha che preserva i contorni???????
-		- 
+- # Metriche di valutazione:
+	- per valutare la ricostruzione dell’immagine si usano:
+	    - _ER_: errore relativo definito come:
+	        - $$ER= \frac{{||x-x_{GT}||_{2}^{2}}}{||{x_{GT}}||^{2}_{2}}$$
+	    - _SSIM_ (structural similarity index): mi da un indicazione sulla qualità visiva dell’immagine:
+	        - ha valori compresi in $[0,1]$ e più è vicino ad 1 più l’immagine è simile all’originale 
+	    - _PSNR_: Il rapporto segnale-rumore (Peak to Signal Noise Ratio) definito come:
+	        - $$PSNR = 10 log_{10} \frac{(max_{i,j}|x_{ij})^{2}}{MSE}$$
+	        - dove MSE è _l’errore quadratico medio_ definito come:
+	            - $$MSE = \frac{||x-x_{GT}||^{2}_{2}}{MN}$$
+	            - _M,N_ sono le dimensioni dell’ immagine.
 - # Link Utili:
 	- 
 	- 

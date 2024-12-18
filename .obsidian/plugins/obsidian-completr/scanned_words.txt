@@ -6455,6 +6455,10 @@ dKT
 dyR
 dyFF
 dfD
+discrepanza
+<<<<<<< HEAD
+=======
+>>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
 finito
 fanno
 facilmente
@@ -8571,6 +8575,9 @@ mzzeN
 mongo
 mongoose
 mNbr
+mascherare
+maping
+mappare
 esempio
 eccede
 errori
@@ -11167,6 +11174,8 @@ sjqR
 sLx
 sXB
 sZW
+sigset
+systemcall
 otterremmo
 ottenere
 occupare
@@ -16825,6 +16834,7 @@ Dunque
 DRrf
 Documenti
 DnF
+Descriptor
 Le
 La
 Lg
@@ -17456,7 +17466,6 @@ Mqyrm
 MNxOVG
 MWD
 MbW
-MongoDB
 Macchina
 Meno
 MBe
