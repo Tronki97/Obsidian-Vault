@@ -13,30 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+                "file": "NAT.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Numeri finiti"
+              "title": "NAT"
             }
           },
           {
-            "id": "9e2a67f874735e23",
+            "id": "dbd7d5066b15d24f",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": "setup del laboratorio.md",
-                "staged": true
+                "file": "Secondo Anno/Reti di Calcolatori/livello rete/Sottoreti.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (setup del laboratorio)"
+              "icon": "lucide-file",
+              "title": "Sottoreti"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -67,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "assoluto",
+                "query": "maschera",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,8 +89,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -217,14 +217,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9e2a67f874735e23",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Homepage.md",
+    "NAT.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Sottoreti.md",
+    "Secondo Anno/Reti di Calcolatori/Protocollo ARP e RARP.md",
+    "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
+    "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura standard dei protocollo.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Protocolli di rete organizzati a livelli.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete/Architettura protocolli di internet.md",
+    "Secondo Anno/Calcolo Numerico/Imaging.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
-    "Secondo Anno/Calcolo Numerico/Imaging.md",
-    "Homepage.md",
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
-    "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
     "Secondo Anno/Tecnologie Web/Javascript server-side.md",
     "Secondo Anno/Sistemi Operativi/laboratorio/lab C 12_12_24.md",
     "immagini/Pasted image 20241212134204.png",
@@ -245,13 +252,6 @@
     "Secondo Anno/Tecnologie Web/Programmazione asincrona.md",
     "Secondo Anno/Tecnologie Web/Temi trasversali di Javascript.md",
     "Secondo Anno/Tecnologie Web/Page layout.md",
-    "Secondo Anno/Tecnologie Web/client-side JS.md",
-    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
-    "Secondo Anno/Tecnologie Web/Approfondimenti su HTTP.md",
-    "Secondo Anno/Sistemi Operativi/laboratorio/linguaggio C.md",
-    "Secondo Anno/Sistemi Operativi/progetto/Liste.md",
-    "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
-    "Secondo Anno/Reti di Calcolatori/Protocollo ARP e RARP.md",
     "Secondo Anno/Sistemi Operativi/progetto",
     "immagini/Pasted image 20241202162115.png",
     "Secondo Anno/Sistemi Operativi/laboratorio",

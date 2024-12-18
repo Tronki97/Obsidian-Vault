@@ -8578,6 +8578,7 @@ mNbr
 mascherare
 maping
 mappare
+metriche
 esempio
 eccede
 errori
@@ -12917,6 +12918,7 @@ teoremone
 theorem
 tBCN
 tLg
+translation
 grandi
 gli
 grande
@@ -15497,6 +15499,7 @@ Serve
 Sklx
 SunbS
 SoF
+SSIM
 BINARY
 Bus
 BX
@@ -16397,6 +16400,7 @@ Peer
 Persistenza
 Processing
 Pgc
+PSNR
 Di
 Data
 Dati
@@ -17730,6 +17734,7 @@ MreZ
 Macro
 MHZ
 MaM
+MSE
 ES
 Esempi
 Ex
