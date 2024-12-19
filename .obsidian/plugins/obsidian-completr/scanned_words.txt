@@ -816,6 +816,7 @@ prioritizzazione
 packet
 paI
 pWd
+proprieta
 realizzare
 rappresentare
 risultato
@@ -1655,6 +1656,7 @@ rkE
 roe
 rYZr
 rgB
+renderli
 la
 le
 lo
@@ -4301,6 +4303,10 @@ chieder
 cANLZ
 collegarli
 contenimento
+caratterizzazione
+cardinale
+cardinalit
+cardinali
 avendo
 alcune
 arriva
@@ -7861,6 +7867,7 @@ iSN
 igm
 irt
 itd
+infinit
 modo
 mentre
 massimo
@@ -9691,6 +9698,7 @@ beO
 bSy
 binding
 bidirezionale
+biiezione
 quindi
 questo
 quelle
@@ -12919,6 +12927,7 @@ theorem
 tBCN
 tLg
 translation
+transitiva
 grandi
 gli
 grande
@@ -18745,6 +18754,7 @@ Create
 Cercare
 CfMnT
 CJu
+Cardinalit
 Questa
 Quello
 Qz
