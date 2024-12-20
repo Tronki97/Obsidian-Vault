@@ -817,6 +817,7 @@ packet
 paI
 pWd
 proprieta
+pronti
 realizzare
 rappresentare
 risultato
@@ -1657,6 +1658,7 @@ roe
 rYZr
 rgB
 renderli
+ricerche
 la
 le
 lo
@@ -3186,6 +3188,7 @@ npm
 node
 nzr
 ntP
+navigare
 capire
 codifiche
 capacit
@@ -4307,6 +4310,9 @@ caratterizzazione
 cardinale
 cardinalit
 cardinali
+caches
+chieste
+canonical
 avendo
 alcune
 arriva
@@ -5189,6 +5195,10 @@ appropriata
 allocato
 angoli
 ahB
+autorizzazione
+accederci
+alias
+alleggerisce
 un
 una
 usato
@@ -7868,6 +7878,8 @@ igm
 irt
 itd
 infinit
+indichi
+immagazzina
 modo
 mentre
 massimo
@@ -8586,6 +8598,7 @@ mascherare
 maping
 mappare
 metriche
+messagge
 esempio
 eccede
 errori
@@ -11185,6 +11198,7 @@ sXB
 sZW
 sigset
 systemcall
+sincrono
 otterremmo
 ottenere
 occupare
@@ -12928,6 +12942,7 @@ tBCN
 tLg
 translation
 transitiva
+totalmente
 grandi
 gli
 grande
@@ -18755,6 +18770,7 @@ Cercare
 CfMnT
 CJu
 Cardinalit
+CNAME
 Questa
 Quello
 Qz

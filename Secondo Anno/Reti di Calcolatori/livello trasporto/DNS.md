@@ -7,12 +7,26 @@ data: "`2024-11-29 15:33`"
 - # intro:
 	- gli utenti invece di andare a scrivere l’indirizzo [[Indirizzamento IPv4|IP]]  scrivono un nome perché più facilmente ricordabile.
 	- però le macchine necessitano di un indirizzo IP e per riuscire a ricavare questo indirizzo dal nome si interroga un server DNS.
+	- ha un protocollo chiamato _DNS_ che in base ad un nome restituisce un indirizzo IP.
+	- Nel DNS si possono anche definire degli alias per un certo nome.
+		- il nome principale si chiama _canonical_ e gli alias sono chiamati _CNAME_.
 - # Def:
 	- è una catena di _DNS server_ organizzati con una gerarchia.
 	- e ogni DNS server conosce almeno uno a livello superiore
 	- i server radice conoscono tutti i _domain name_ e i loro IP associati.
+- # DNS iterativo:
+	- quando il client manda una richiesta che il DNS server non conosce lui manda la richiesta ad un altro server che si trova ad un livello superiore di quello che ha ricevuto la richiesta.
+	- N.B: è sempre il client a mandare la richiesta.
+- # DNS ricorsivo:
+	- il client manda la richiesta al server DNS e il server DNS si occupa di fare tutte le richieste necessarie per trovare l'indirizzo IP.
+	- in questo modo si alleggerisce il carico del client.
+- # Attacchi al DNS:
+	- DNS poisoning: 
+		- _cache poisoning_: si riempie la cache del server con informazioni sbagliate.
+- 
 - # ES:
 	- ![[Pasted image 20241129154611.png]]
-	- 
+- # Importante:
+	- _non è necessario avere il DNS per poter navigare su internet_ ma è molto più comodo.
 - # Link Utili:
 	- 
