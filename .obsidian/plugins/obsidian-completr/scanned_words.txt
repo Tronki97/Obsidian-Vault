@@ -818,6 +818,7 @@ paI
 pWd
 proprieta
 pronti
+poisoning
 realizzare
 rappresentare
 risultato
@@ -1659,6 +1660,7 @@ rYZr
 rgB
 renderli
 ricerche
+riducendosi
 la
 le
 lo
@@ -2677,6 +2679,7 @@ Alloca
 Assegna
 Async
 Affidabilit
+Attacchi
 nel
 necessario
 numero
@@ -11199,6 +11202,7 @@ sZW
 sigset
 systemcall
 sincrono
+sbagliate
 otterremmo
 ottenere
 occupare

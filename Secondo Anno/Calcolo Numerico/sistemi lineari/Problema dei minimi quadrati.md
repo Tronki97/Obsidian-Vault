@@ -24,9 +24,8 @@ data: "`2024-10-07 14:03`"
 		- $$(Ax-b)^{T}(Ax-b)=$$
 		- $$=(-b^{T}+x^{T}A^{T})(Ax-b)=$$
 		- $$=-b^{T}Ax+b^{T}b+x^{T}A^{T}Ax-x^{T}A^{T}b=$$
-		- $$=x^{T}A^{T}Ax-2x^{T}Ab+b^{T}b$$
-		- che pongo poi come $f(x)$ 
-		- per minimizzare la norma devo imporre che la derivata prima sia nulla e visto che le incognite sono più di 1 devo fare il gradiente:
+		- $$=x^{T}A^{T}Ax-2x^{T}Ab+b^{T}b= f(x)$$
+		- Per minimizzare la norma devo imporre che la derivata prima sia nulla e visto che le incognite sono più di 1 devo fare il gradiente:
 			- $\nabla (x^{T}A^{T}Ax)=2A^{T}Ax$
 			- $\nabla(2x^{T}Ab)=2A^{T}b$
 			- $\nabla(b^{T}b)=0$ 
@@ -34,10 +33,12 @@ data: "`2024-10-07 14:03`"
 			- $\nabla f(x)=2A^{T}Ax-2A^{T}b$ e devo trovare il punto in cui questo gradiente è uguale a 0.
 			- e posso riscrivere $A^{T}Ax = A^{T}b\in \mathbb{R}^{n}$ 
 		- $A^{T}Ax = A^{T}b$ è quindi un sistema lineare con matrice simmetrica e definita positiva e quindi si può usare [[Risoluzione di un sistema lineare#^c7c2d7||cholesky]]
+		- riducendosi quindi a risolvere il sistema:
+			- $$\begin{cases} Ly = A^{T}b \\ L^{T}x=y\end{cases}$$
 	- ## Decomposizione in valori singolari (SVD):  ^3e0cd7
 		- se $rk(A)<min(m,n)$ ci sono infinite soluzioni e tra tutte queste c'è una $x'=min\| y\|_{2}^{2}$ che appunto ha norma minima e per calcolarla si usa la _singular value decomposition_  
 		- $$||Ax-b||^{2}_{2}=||U^{T}Ax-U^{T}b||^{2}_2=$$ 
-			- fattibile grazie alle proprietà delle matrici ortogonali
+			- fattibile grazie alle proprietà delle [[Matrice ortogonale||matrici ortogonali]] 
 		- $$=||U^{T}AVV^{T}x-U^{T}b||^{2}_2$$
 			- risulta anche che $U^{T}AV=\Sigma$ [[autovalori e autovettori#^30ec44||matrice sigma]] 
 			- ponendo anche $y=V^{T}x$ e $U^{T}b=g$ risulta infine che:

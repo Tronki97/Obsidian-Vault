@@ -32,7 +32,7 @@ data: "`2024-09-30 13:14`"
 		- $U$ è una matrice $m \times m$ ortogonale
 		- $V$ è una matrice $n \times n$ ortogonale
 		- $\Sigma$ è una matrice diagonale $m \times n$ 
-		- gli elementi $\sigma_{1}\ge \sigma_{2}\ge...\ge \sigma_{n} \ge 0$ sono i valori singolari di $A$. $k=rk(A)\iff \sigma_{1}\ge \sigma_{2}\ge...\ge \sigma_{n} > 0 \wedge \sigma_{k+1}=... \sigma_{n}=0$ 
+			- gli elementi $\sigma_{1}\ge \sigma_{2}\ge...\ge \sigma_{n} \ge 0$ sono i valori singolari di $A$. $k=rk(A)\iff \sigma_{1}\ge \sigma_{2}\ge...\ge \sigma_{n} > 0 \wedge \sigma_{k+1}=... \sigma_{n}=0$ 
 	- ### Proprietà:
 		- $$A^{T}A=(U \Sigma V^{T})^{T}(U \Sigma V^{T})=(V^{T})^{T}\Sigma^{T}U^{T} U \Sigma V^{T}= $$
 		- $$=(V^{T})^{T}\Sigma^{T}\Sigma V^{T}= $$
