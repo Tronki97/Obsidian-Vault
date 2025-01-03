@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - sarrus
 data: "`2024-08-31 20:05`"

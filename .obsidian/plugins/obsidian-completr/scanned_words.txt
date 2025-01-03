@@ -4316,6 +4316,7 @@ cardinali
 caches
 chieste
 canonical
+capisco
 avendo
 alcune
 arriva
@@ -5202,6 +5203,7 @@ autorizzazione
 accederci
 alias
 alleggerisce
+asse
 un
 una
 usato
@@ -6475,6 +6477,7 @@ dyR
 dyFF
 dfD
 discrepanza
+destri
 <<<<<<< HEAD
 =======
 >>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
@@ -11203,6 +11206,9 @@ sigset
 systemcall
 sincrono
 sbagliate
+sarrus
+segna
+sinistri
 otterremmo
 ottenere
 occupare
@@ -12331,6 +12337,7 @@ virtual
 vue
 vedr
 vccb
+vandermonde
 troppo
 testimone
 tramite
@@ -12947,6 +12954,7 @@ tLg
 translation
 transitiva
 totalmente
+troppe
 grandi
 gli
 grande
@@ -13913,6 +13921,7 @@ NhF
 NwO
 NtJ
 NRvE
+Normali
 Il
 Instruction
 IR
@@ -14951,6 +14960,7 @@ Ritorna
 Rimuovi
 Rwe
 Risposta
+Ricordare
 Si
 Se
 Status

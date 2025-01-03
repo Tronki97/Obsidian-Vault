@@ -30,6 +30,8 @@ data: "`2024-10-15 13:54`"
 	- Si usa un modello di approssimazione _polinomiale_ ovvero dove $f(x)$ si assume essere un polinomio nella variabile $x$ di grado $d$ ovvero:
 		- $$f(x)=a_{0}+a_{1}x+a_{2}x^{2}+...+a_{d}x^{d}=\sum_{k=0}^{d}a_{k}x^{k}$$
 		- Questa funzione dipende in maniera _unica_ dai coefficienti $a$.
+	- l’output risultante sarà poi:
+		- $$y_{i}=f(x_{i},\alpha)+e_{i}= \sum_{k=0}^{d}a_{k}x^{k} + e_{i}$$ 
 - # Approssimazione ai minimi quadrati: ^9b2ae0
 	- come modello per l'approssimazione uso:
 		- $$f_{\theta}(x,\alpha)=\sum\limits_{k=0}^{d}a_{k}x^{k}$$
@@ -41,6 +43,7 @@ data: "`2024-10-15 13:54`"
 	- e quindi devo trovare quei parametri che approssimino $f_{\theta}(x,\alpha)$ a $y$ (a meno del _rumore_). Per farlo è possibile minimizzare l'errore medio di predizione del modello $f_{\theta}(x,\alpha)$:
 		- $$min_{\alpha} \sum\limits_{i=1}^{n} (f_{\theta}(x_{i},\alpha)-y_{i})^{2}=$$
 		- $$=min_{\alpha}\sum\limits_{i=1}^{n}(\alpha^{T}x_{i}^{(d)}-y_{i})^{2}$$
+		- Quindi in questo modo trovo l’$\alpha$ che minimizza questa equazione.
 	- ## Matrice di Vandermonde:
 		- $$X=\begin{pmatrix}x_{1}^{(d)^{T}}\\ x_{2}^{(d)^{T}}\\ \vdots \\ x_{n}^{(d)^{T}}\end{pmatrix}=\begin{pmatrix}x_{1}^{0}& x_{1}^{1} & ... & x_{1}^{d}\\ x_{2}^{0}& x_{2}^{1} & ... & x_{2}^{d}\\ \vdots & \vdots & & \vdots \\ x_{n}^{0}& x_{n}^{1} & ... & x_{n}^{d}\end{pmatrix} \in \mathbb{R}^{n \times d}$$
 		- questa [[Matrici||matrice]] ha per righe i dati, è di grado $d$, è associata ad $\{ x_1,...,x_n\}$ e la formula del minimo è equivalente a:
@@ -55,7 +58,7 @@ data: "`2024-10-15 13:54`"
 			- decomposizione di [[Risoluzione di un sistema lineare#^c7c2d7||Cholesky]]
 			- [[autovalori e autovettori#^30ec44||SVD]]  
 		- ### Risoluzione tramite Cholesky:
-			- la matrice associata al problema è [[Simmetria#^f22f7f||simmetrica]] e definita positiva e ciò basta per applicare Cholesky.
+			- la matrice associata al problema è [[Simmetria#^f22f7f||simmetrica]] e [[Risoluzione di un sistema lineare#^bc9cac|definita positiva]] e ciò basta per applicare [[Risoluzione di un sistema lineare#^c7c2d7|Cholesky]].
 			- Siccome $dim(X)=(n,d+1)$ il rango di $X$ è massimo $\iff$ è uguale a $d+1$ verifico con python:
 				- ![[Screenshot (4).png]] 
 			- Si può quindi applicare Cholesky che trova la matrice triangolare inferiore $L$:

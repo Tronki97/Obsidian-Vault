@@ -11,6 +11,7 @@ data: "`2024-09-24 10:34`"
 		- usabile anche per equazioni non lineari.
 	- è un tipo di metodo di [[algoritmo di iterazione di punto fisso||punto fisso]] 
 	- prendo una funzione $g(x)$ che nella radice abbia la derivata prima nulla. 
+		- __Ricordare__ che $f(x)=0$ 
 		- $g(x)=x-w(x)f(x)$ e quindi scelgo $w(x)$ che rispetti la condizione
 		- $$g'(r)=1-w'(r)f(r)-w(r)f'(r)=$$
 		- $$=1-w(r)f'(r)=g'(r)$$

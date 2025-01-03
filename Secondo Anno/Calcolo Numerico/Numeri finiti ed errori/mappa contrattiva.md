@@ -12,5 +12,10 @@ data: "`2024-09-24 10:02`"
 		- $E_{k}$ errore al passo $k$ 
 		- ## prop:
 			-  $|E_{k+1}|\leq C|E_{k}|$ o $\frac{|E_{k+1}|}{|E_{k}|}\leq C$ e quindi $$|E_{k}|\leq C^{k}|x_{0}-p|$$
-				- scrivi dimostrazione: 
+		- ## dimostrazione:
+			-  $$|E_{k+1}| = |g(x_{k})-g(p)|\leq C|x_{k}-p|=C|E_{k}|$$
+			- e ciò quindi porta a: $$|E_{k}|\le C|E_{k-1}|\le C*C|E_{k-2}|=$$
+			- $$= C^{2}|E_{k-2}|$$
+			- ripetuto $k-2$ volte ciò porta a: $$|E_{k}|\leq C^{k}|E_{k-k}|=C^{k}|x_{k-k} -p| = $$
+			- $$=C^{k}|x_{0}-p|$$ 
 - 

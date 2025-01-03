@@ -9,17 +9,22 @@ data: "`2024-10-07 14:03`"
 ---
 - # Problema:
 	- $Ax=b$ con A di tipo $m \times n$ con $m>n$ 
-		- $x\in \mathbb{R}^{n}$, $y\in \mathbb{R}^{m}$ 
-	- questo problema non ha soluzione. 
+		- $x\in \mathbb{R}^{n}$, $b\in \mathbb{R}^{m}$ 
+	- questo sistema non ammette soluzioni in quanto il problema ha troppe equazioni rispetto alle incognite. 
 - # Soluzione:
 	- devo trovare una $x$ tale che:
 		- $\min_{x\in \mathbb{R}^{n}}||Ax-b||^{2}_2$=F
 		- $Ax-b$ è detta _residuo_ $r$  
-	- _quindi tra tutte le x di $\mathbb{R}^{n}$ quella che rende il residuo $r$ minimo. _
+	- _quindi tra tutte le x di $\mathbb{R}^{n}$ quella che rende il residuo $r= Ax-b$  minimo. _
 		- $F:\mathbb{R}^{n} \to \mathbb{R^{+}}$ 
+- # Proposizione:
+	- Sia $A$ una matrice $m \times n$ con $m>n$ e $rk(A)=k$ allora il problema dei minimi quadrati: $$\min_{x\in \mathbb{R}^{n}}||Ax-b||^{2}_2$$
+		- __ammette sempre una soluzione__ ed inoltre:
+			- se $k=n$ allora la soluzione è unica
+			- se $k<n$ allora ci sono infinite soluzioni e tra queste c'è una $x'$ che ha norma minima.
 - # Procedimento:
 	- ## Equazioni normali: ^51204a
-		- normali perché guardano la norma.
+		- _Normali perché guardano la norma_.
 		- minimizzare $||Ax-b||^{2}_2$ quindi:
 		- $$(Ax-b)^{T}(Ax-b)=$$
 		- $$=(-b^{T}+x^{T}A^{T})(Ax-b)=$$
@@ -32,7 +37,7 @@ data: "`2024-10-07 14:03`"
 		- risulta quindi : 
 			- $\nabla f(x)=2A^{T}Ax-2A^{T}b$ e devo trovare il punto in cui questo gradiente è uguale a 0.
 			- e posso riscrivere $A^{T}Ax = A^{T}b\in \mathbb{R}^{n}$ 
-		- $A^{T}Ax = A^{T}b$ è quindi un sistema lineare con matrice simmetrica e definita positiva e quindi si può usare [[Risoluzione di un sistema lineare#^c7c2d7||cholesky]]
+		- $A^{T}Ax = A^{T}b$ è quindi un sistema lineare con matrice simmetrica e [[Risoluzione di un sistema lineare#^bc9cac|definita positiva]] e quindi si può usare [[Risoluzione di un sistema lineare#^c7c2d7||cholesky]]
 		- riducendosi quindi a risolvere il sistema:
 			- $$\begin{cases} Ly = A^{T}b \\ L^{T}x=y\end{cases}$$
 	- ## Decomposizione in valori singolari (SVD):  ^3e0cd7

@@ -27,10 +27,10 @@ data: "`2024-09-30 13:14`"
 		- $V^{T}=V^{-1}$
 		- $\forall x \in \mathbb{R}^{n}; \|x\|_{2}=\|Vx\|_{2}$ quindi non modificano la lunghezza del vettore x
 - ## Fattorizzazione in valori singolari(SVD): ^30ec44
-	- data una matrice $m \times n$ la SVD costruisce le basi ortogonali di $\mathbb{R}^{m}$ e $\mathbb{R}^{n}$ che permettono di rappresentare A come una matrice diagonale; $A=U \Sigma V^{T}$ 
+	- data una matrice $m \times n$ di rango $k\le n \le m$, la SVD costruisce le basi ortogonali di $\mathbb{R}^{m}$ e $\mathbb{R}^{n}$ che permettono di rappresentare A come una matrice diagonale; $A=U \Sigma V^{T}$ 
 	- $$\Sigma=\begin{pmatrix}\sigma_{1}& 0& 0\\ 0&\sigma_{2}&0\\ \cdots&\cdots&\cdots\\0&0 & \sigma_{n}\\&0&\end{pmatrix}$$
-		- $U$ è una matrice $m \times m$ ortogonale
-		- $V$ è una matrice $n \times n$ ortogonale
+		- $U$ è una matrice $m \times m$ ortogonale le cui colonne sono i _vettori singolari sinistri di A_
+		- $V$ è una matrice $n \times n$ ortogonale le cui colonne sono i _vettori singolari destri di A_ 
 		- $\Sigma$ è una matrice diagonale $m \times n$ 
 			- gli elementi $\sigma_{1}\ge \sigma_{2}\ge...\ge \sigma_{n} \ge 0$ sono i valori singolari di $A$. $k=rk(A)\iff \sigma_{1}\ge \sigma_{2}\ge...\ge \sigma_{n} > 0 \wedge \sigma_{k+1}=... \sigma_{n}=0$ 
 	- ### Proprietà:

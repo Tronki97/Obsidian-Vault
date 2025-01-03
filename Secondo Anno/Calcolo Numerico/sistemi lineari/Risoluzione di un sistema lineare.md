@@ -10,6 +10,7 @@ aliases:
   - numero di condizionamento
   - fattorizzazione LU
   - norma di frobenius
+  - definita positiva
 ---
 
 - # Premessa 
@@ -34,7 +35,7 @@ aliases:
 		- fattorizzare la [[Matrici||matrice]] $A$ equivale a scrivere $A$ come [[Matrici#^f58df4||prodotto tra matrici]] 
 	- 2) metodi iterativi:
 		- meno accurati ma sono più efficienti computazionalmente.
-- ## Fattorizzazione LU
+- # Fattorizzazione LU
 	- chiamata così perché rappresenti $A=L*U$ che sono due matrici _triangolari_ 
 		- _U_ inferiore(0 sotto la diagonale principale),
 		- _L_ superiore(0 sopra la diagonale principale) 
@@ -44,7 +45,7 @@ aliases:
 	- [[Complessità computazionale]]:
 		- $O\left( \frac{n^{3}}{3} \right)$
 	- ### Caso particolare: 
-		- #### matrice definita positiva:
+		- #### matrice definita positiva: ^bc9cac
 			- $A\to$ simmetrica e definita _positiva_ ovvero:
 				- quadrata e se $\forall x \in \mathbb{R}^{n}$ $x^{T}Ax\geq 0$ 
 				- #### Proprietà:
@@ -94,7 +95,7 @@ aliases:
 			- $$E_{A}=||(-0.01,0.02,0)||_{2}=\sqrt{10^{-4}+2*10^{-4}+0}=3*10^{-2}$$ 
 			- $$E_{R}=\frac{E_{A}}{||x||_{2}}=\frac{E_{A}}{\sqrt{3}}=\frac{3*10^{-2}}{\sqrt{3}}$$
 	- ### Definizione:
-		- dovuto alla rappresentazione con i [[Numeri finiti]] quello chiamato chiamato "errore di rappresentazione" 
+		- dovuto alla rappresentazione con i [[Numeri finiti]] quello chiamato chiamato "_errore di rappresentazione_" 
 		- si suppone che ci sia un errore nella rappresentazione dei dati ma le operazioni vengono fatti in aritmetica reale.
 		- ![[Drawing 2024-09-30 14.45.43.excalidraw]]
 		- $||x-(x-\Delta x)||=||\Delta x||$
