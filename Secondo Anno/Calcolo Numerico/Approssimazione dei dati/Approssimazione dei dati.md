@@ -67,6 +67,13 @@ data: "`2024-10-15 13:54`"
 				- $$\begin{cases}Lz=X^{T}y\\L^{T}\alpha=z\end{cases}$$
 		- ### Risoluzione con SVD:
 			- considerando la decomposizione della matrice X:
-				- $$X=U \Sigma V^{T}$$ 
+				- $$X=U \Sigma V^{T}$$
+			- rendendo le equazioni normali:
+				- $$V \Sigma^{2}V^{T}\alpha= V \Sigma U^{T}y$$ 
+			- che semplificato risulta:
+				- $$\Sigma^{2}V^{T} \alpha= \Sigma U^{T}y$$
+			- la cui soluzione esplicita è:
+				- $$\alpha= \sum_{i=0}^{d+1}\frac{{u_{i}^{T}y}}{\sigma_{i}}v_{i}$$
+					- dove $u_{i}$ e $v_{i}$ sono le colonne di $U$ e $V$ rispettivamente e $\sigma_{i}$ è l'autovalore associato alla $i$-esima colonna di $\Sigma$ 
 - # Link Utili:
 	- https://devangelista2.github.io/calcolo-numerico/approssimazione/modelli_approssimazione.html 

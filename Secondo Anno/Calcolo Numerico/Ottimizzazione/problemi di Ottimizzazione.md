@@ -11,7 +11,7 @@ data: "`2024-10-15 18:30`"
 		- $f:\Omega\to \mathbb{R}$ detta _funzione obiettivo_ che descrive la quantità da ottimizzare in funzione dei _parametri_ indicati con $x$ 
 		- $\Omega$ è l'_insieme dei valori accettabili_ o dei _vincoli_ deve dichiarare sotto quale ipotesi la soluzione del problema deve sottostare per essere _accettabile_
 - # Classificazione:
-	- Se $\Omega=\mathbb{R}^{n}$ allora il problema è _svincolato_ 
+	- Se $\Omega=\mathbb{R}^{n}$ allora il problema è _svincolato_  ^d124c1
 	- Se $\Omega \subset \mathbb{R}^{n}$ allora il problema è _vincolato_. 
 		- se usano numeri interi questi problemi sono detti discreti. 
 - # Proprietà:

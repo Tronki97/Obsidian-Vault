@@ -18,9 +18,9 @@ data: "`2024-10-15 16:36`"
 	- Per evitare l'_underfit_ basta guardare il valore residuo che quando molto grande implica un valore dell'iperparametro troppo lontano da quello giusto. 
 		- ![[Pasted image 20241015173240.png]]
 		- infatti più ci si avvicina al valore giusto di $d$ più il residuo diminuisce.
-	- Per evitare l'_overfit_  si può utilizzare la _Regolarizzazione_.
+	- Per evitare l'_Overfit_  si può utilizzare la _Regolarizzazione_.
 - # Regolarizzazione:
-	- Suppongo che $d=3$ sia giusto ma scelgo $d=5$ così faccio scattare l'_overfit_
+	- Suppongo che $d=3$ sia giusto ma scelgo $d=5$ così faccio scattare l'_Overfit_
 	- Faccio poi richiesta al modello elaborato precedentemente di porre più valori possibili a $0$ riducendo al minimo l'impatto sull'approssimazione
 	- Ciò si riduce a:
 		- $$min_{\alpha} \frac{1}{2} ||X \alpha-y||_{2}^{2}+\frac{\lambda}{2} ||\alpha||^{2}_{2}$$

@@ -1,0 +1,72 @@
+---
+tags: 
+aliases:
+  - condizione del primo ordine
+  - condizione del secondo ordine
+  - funzioni convesse
+  - coercività
+data: "`2025-01-04 15:48`"
+---
+- # Introduzione:
+	- Spesso le funzioni possono avere più punti di _minimo/massimo_ quando si sviluppa un algoritmo di ottimizzazione si punta a trovare il miglio punto di minimo/massimo.
+		- ![[99a742d9c381b9a1835450f01f4dbe480d7b506f693c3420790296faab207e87.png]]
+		- in questo caso è quello vicino a $x=1.5$ anche se a volte ci si accontenta di quello intorno a $x=-1.0$ 
+- # Def:
+	- sia $f: \mathbb{R}^{n} \to \mathbb{R}$
+		- $x^{*}$ è un punto di _minimo globale_ se $\forall x \in \mathbb{R}^{n}$ vale: $f(x^{*})\leq f(x)$
+		- $x^{*}$ è un punto di _massimo globale_ se $\forall x \in \mathbb{R}^{n}$ vale: $f(x^{*})\geq f(x)$ 
+		- $x^{*}$ è un punto di _minimo locale_ se $\exists \epsilon >0$ tale che $f(x^{*})\leq f(x)$ con $x\in (x^{*}-\epsilon, x^{*}+\epsilon)$
+		- $x^{*}$ è un punto di _massimo locale_ se $\exists \epsilon >0$ tale che $f(x^{*})\geq f(x)$ con $x\in (x^{*}-\epsilon, x^{*}+\epsilon)$
+	- nell’immagine precedente nell’intervallo $[-2,2]$ si ha che:
+		- $x\approx1.5$ è un punto di minimo globale.
+		- $x=-1.0$ è un punto di minimo locale.
+		- $x=-2.0$ è un punto di massimo globale.
+		- $x=0$ e $x=2$ è un punto di massimo locale.
+- # Funzioni convesse:
+	- se si vincolasse la tipologia di funzioni a quelle _Convesse_ sarebbe più facile trovare il punto di minimo globale. 
+	- ## Def:
+		- una funzione si dice convessa quando $\forall x,y \in \mathbb{R}^{n}$ e $\forall \lambda \in [0,1]$ vale:
+	        - $$f(\lambda x+(1-\lambda)y)\leq \lambda f(x)+(1-\lambda)f(y)$$
+	        - ovvero il grafico della funzione si trova sopra la retta che congiunge i punti $x$ e $y$.
+		    - ![[convessa 1.png]]
+	- ## Caratterizzazione:
+		- una funzione è convessa $\iff \forall x_{0} \in \mathbb{R}^{n}$ la sua matrice hessiana:
+			- $$H_{f}(x_{0})= (\nabla^{2} f(x_{0}))_{i,j}$$
+			- è una matrice _semidefinita positiva_ ovvero:
+        - $$\forall x \in \mathbb{R}^{n} \ \ \ x^{T}H_{f}(x_{0})x\geq 0$$
+        - Queste funzioni convesse sono importanti per le loro _Proprietà_
+    - ## Proprietà:
+	    - Sia $f: \mathbb{R}^{n} \to \mathbb{R}$ una funzione convessa. se $x^{*}$ è un minimo locale allora è anche un minimo globale.
+	    - oltre ad essere convesse le funzioni in ottimizzazione sono anche _coercive_ ovvero:
+		    - $$\lim_{\|x\|\to \infty} f(x)=+\infty$$
+		    - questo garantisce che la funzione $f$ abbia almeno un punto di minimo che per via della convessità sarà anche un minimo globale.
+	- ## Calcolo convessità e coercività:
+		- prendo $f(x)= (x-1)^{2}+e^{x}$
+		- la derivata seconda è:
+			- $$f''(x)=2+e^{x}$$
+			- e vale che $f''(x)\geq 0 \ \ \ \forall x\in \mathbb{R}$ quindi è convessa. 
+		- per la coercività:
+			- $$\lim_{x\to \infty} f(x)=\lim_{x\to -\infty} f(x)=+\infty$$
+ - # Estremi relativi e punti stazionari.
+	 - ## Condizione necessaria del primo ordine: ^273a33
+		 - un punto $x^{*}$ si dice _stazionario_ se $\nabla f(x^{*})=0$ 
+		 - questo metodo però dice solo che è stazionario (massimo, minimo e flesso) e non se sia esattamente un minimo.
+			 - però questa è sicuramente la strada da seguire in quanto se si trovano tutti i punti stazionari si può fare un confronto tra di loro e trovare il _minimo_.
+			 - in particolare se la funzione è sia _convessa_ che _coerciva_ allora ogni punto stazionario sarà anche un _minimo globale_.  
+	 - ## Condizione necessaria del secondo ordine:
+		 - sia $f$ una funzione derivabile 2 volte se $x^{*}$ è un punto di minimo allora:
+       - $$\nabla f(x^{*})=0$$
+       - $$x^{T}H_{f}(x^{*})x\ge 0 \ \ \ \forall x\in \mathbb{R}^{n}$$   
+	       - ovvero la matrice hessiana è _semidefinita positiva_.
+	       - 
+	 - ## Condizione sufficiente del secondo ordine:
+	 - è il viceversa della precedente quindi se:
+     - $$\nabla f(x^{*})=0$$
+     - $$x^{T}H_{f}(x^{*})x> 0 \ \ \ \forall x\in \mathbb{R}^{n}$$
+	     - ovvero la matrice hessiana è _definita positiva_.
+     - allora $x^{*}$ è un punto di minimo.
+		 - ciò permette di identificare un punto di minimo di una funzione generale:
+			 - ___1)___ risolvendo il sistema $\nabla f(x)=0$ con un algoritmo per trovare gli zeri di una funzione.
+			 - ___2)___ calcolando la matrice hessiana e verificando che sia definita positiva in ogni punto stazionario trovato nella soluzione precedente, e se questo $x^{*}$ fa si che la matrice sia definita positiva allora è un _punto di minimo_.
+- # Link Utili:
+	- 
