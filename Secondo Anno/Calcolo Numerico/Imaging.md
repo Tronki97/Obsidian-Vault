@@ -14,7 +14,7 @@ aliases:
 data: "`2024-11-11 13:40`"
 ---
 - # Intro:
-	- un’immagine di $M \times N$ pixel non è altro che una matrice $M \times N$ con un coefficiente applicato che sta a rappresentare il colore. 
+	- un’immagine di $M \times N$ pixel non è altro che una  [[Matrici|matrice]]  $M \times N$ con un coefficiente applicato che sta a rappresentare il colore. 
 	- Per quanto riguarda il bianco e nero si ha la scala di grigi: 
 		- $0=$ nero; $255=$ bianco
 	- invece per i colori ogni pixel è un vettore di 3 valori (rosso, verde, blue) che combinati formano il colore
@@ -37,7 +37,7 @@ data: "`2024-11-11 13:40`"
         - $$W=\begin{pmatrix}3&4&5\\8&9&10\\13&14&15\end{pmatrix}$$
         - il cui centro è $B_{(2,4)}$ 
 - # Convoluzione:
-	- operazione fra una matrice $A:M \times N$ (_l’immagine_) e una di dimensione $D \times D$ con $D$ dispari (_kernel_).
+	- operazione fra una matrice $A:M \times N$ (_l’immagine_) e una di [[Dimensione]] $D \times D$ con $D$ dispari (_kernel_).
 	- il risultato ha le stesse dimensioni di $A$ si chiama $C$ 
 		- $$C=[K*A|B]$$
 		- $$C_{(i,j)}=\sum\limits_{m=1}^{(D-1)/2}\sum\limits_{n=1}^\frac{(D-1)}{2}K(m,n)W_{(i,j)}(m,n)$$
@@ -52,7 +52,13 @@ data: "`2024-11-11 13:40`"
 - # Applicare un filtro:
 	- applicare un filtro ad un immagine è semplicemente fare la media dei valori ai punti cardinali di quell’indice:
 		- ![[Pasted image 20241111142554.png]]
-- # allargamento e Point spread function 
+	- Se ora considero il filtro:
+		- $$\begin{pmatrix}0&1&0 \\ 1&-4&1 \\ 0&1&0\end{pmatrix}$$
+		- visto che la somma dei coefficienti fa $0$  e sapendo che un pixel ha approssimativamente lo stesso colore dei 4 che lo circondano allora con questo filtro applicato quel pixel verrà rimpiazzato da uno 0. 
+		- Quindi gli unici pixel che avranno valore non nullo saranno quelli in mezzo a due regioni con colori contrastanti ovvero i _bordi dell’immagine_:
+			- ![[Pasted image 20250106181345.png]]
+		- 
+- # Allargamento e Point spread function 
 	- per allargare un oggetto posso approssimarlo ad una funzione $A$ che però non funziona quasi mai perfettamente ma genera una _distorsione_.
 		- ![[Pasted image 20241111144932.png]]
 	- questa funzione $A$ si chiama _point-spread function_ (_PSF_)
@@ -80,10 +86,10 @@ data: "`2024-11-11 13:40`"
 		- risolvo usando il [[Problema dei minimi quadrati]]:
 			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}$$
 			- ![[Pasted image 20241111152022.png]]
-		- ma questa soluzione non è ottimale in quanto è costosa computazionalmente e quindi impiega molto tempo per risolversi e inoltre non restituisce un risultato ottimale.
+		- ma questa soluzione non è ottimale in quanto è _costosa computazionalmente_ e quindi impiega molto tempo per risolversi e inoltre _non restituisce un risultato ottimale_.
 		- SSIM e PSNR sono molto bassi in questa soluzione 
 		- ER invece è abbastanza alto.
-	- ## Regolarizzazione di Tikhonov:
+	- ## Regolarizzazione di [[Problemi inversi]]:
 		- $$min_{x}f(x) = min_{x}||Ax − y^{δ}||^{2}_{2} + λ||x||^ 2$$
 			- $\lambda$ è il parametro di regolarizzazione.
 		- se applico la condizione del primo ordine $\nabla (f)=0$ ottengo:
@@ -91,9 +97,9 @@ data: "`2024-11-11 13:40`"
 			- questo sistema si può risolvere applicando CGLS
 	- ## Variazione totale:
 		- $$T V (x) = ||∇(x)||_{1} =$$
-		- $$=\sum\limits_{i=1}^{M}\sum\limits_{j=1}^{n}\sqrt{(x_{i+1},j − x_{i,j})^ 2 + (x_{i,j+1} − x_{i,j})^ 2}$$
+		- $$=\sum\limits_{i=1}^{M}\sum\limits_{j=1}^{n}\sqrt{(x_{i+1,j}− x_{i,j})^ 2 + (x_{i,j+1} − x_{i,j})^ 2}$$
 		- non essendo differenziabile nel punto $(0,0)$ si aggiunge un parametro $\beta>0$  (di solito nell’ordine di $10^{-3}$) diventando quindi: $TV^{\beta}(x)$
-			- $$=\sum\limits_{i=1}^{M}\sum\limits_{j=1}^{n}\sqrt{(x_{i+1},j − x_{i,j})^ 2 + (x_{i,j+1} − x_{i,j})^ 2+\beta^{2}}$$
+			- $$=\sum\limits_{i=1}^{M}\sum\limits_{j=1}^{n}\sqrt{(x_{i+1,j} − x_{i,j})^ 2 + (x_{i,j+1} − x_{i,j})^ 2+\beta^{2}}$$
 		- Quindi il problema di regolarizzazione diventa:
 			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}+\lambda TV^{\beta}(x)$$
 		- come pregio ha che preserva i contorni???????

@@ -1,5 +1,4 @@
 [
-  "obsidian-outliner",
   "calendar",
   "darlal-switcher-plus",
   "various-complements",
@@ -11,8 +10,6 @@
   "obsidian-annotator",
   "obsidian-completr",
   "obsidian-mind-map",
-  "obsidian-excalidraw-plugin",
-  "table-editor-obsidian",
   "cmenu-plugin",
   "obsidian-zoom",
   "homepage",
@@ -26,7 +23,5 @@
   "oz-clear-unused-images",
   "obsidian-reading-time",
   "github-copilot",
-  "multi-column-markdown",
-  "obsidian-auto-link-title",
-  "obisidian-note-linker"
+  "multi-column-markdown"
 ]
