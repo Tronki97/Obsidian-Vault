@@ -1,8 +1,9 @@
 ---
-tags: []
+tags: 
 aliases:
   - Tikhonov
   - tikhonov
+  - TSVD
 data: "`2024-11-04 13:22`"
 ---
 - # Argomento:
@@ -23,14 +24,25 @@ data: "`2024-11-04 13:22`"
 	- ## Creazione:
 		- si considera prima una soluzione di riferimento “vera” definita come _ground truth_ $x_{GA}$ alla quale applico il modello definito dalla matrice $A$ 
 			- ![[Pasted image 20241104144329.png]]
+				- blu = $x_{GA}$ è la soluzione esatta
+				- rosso = $y$ sono i dati affetti da rumore.
 		- in presenza di errori sui dati la soluzione:
 			- $$min_{x}||Ax-y^{\delta}||^{2}_{2}=min_{x}||Ax-y-\delta||^{2}_{2}$$
 			- $$x^{*}=\sum_{i=1}^{n} \frac{u^{T}_{i}y}{\sigma_{i}}v_{i}+\sum_{i=1}^{n} \frac{u^{T}_{i}\delta}{\sigma_{i}}v_{i}$$
 			- la seconda sommatoria produce le oscillazioni nella soluzione.
 			- i valori ${u^{T}_{i}y^\delta}$ sono detti _coefficienti di Fourier_
 		- ![[Pasted image 20241104145356.png]]
-			- la condizione discreta di Picard viene rispettata quando i coefficienti di Fourier decrescono più velocemente dei valori singolari $\sigma$ in questo caso fino ad $i=15$ in assenza di rumore e fino ad $i=5$ col rumore.
+			- la condizione discreta di Picard viene rispettata quando i coefficienti di Fourier decrescono più velocemente dei valori singolari $\sigma$ in questo caso ad $i=5$ col rumore.
 			- quando la condizione non è rispettata i coefficienti cominciano a crescere e il $\delta$ viene amplificato 
+- # TSVD (Truncated SVD):
+    - la soluzione del problema dei minimi quadrati è approssimata a:
+	    - $$x_{TSVD}=\sum_{i=1}^{K} \frac{u^{T}_{i}y^{\delta}}{\sigma_{i}}v_{i}$$
+    - con $K<n$:
+	    - $$x_{TSVD}=\sum_{i=1}^{K} f_{i}\frac{u^{T}_{i}y^{\delta}}{\sigma_{i}}v_{i}$$
+	    - $f_{i}$ è detto _fattore di filtro_. $f_{i}=1| k\ge i$ oppure $f_{i}=0| k<i$
+	- ## Scegliere K:
+		- Un buon valore per è proprio quello dopo il quale non sono più soddisfatte le condizioni di Picard.
+		- nell’esempio precedente sarebbe $K=6$. 
 - # Regolarizzazione di Tikhonov: ^071864
 	- uso dei filtri che considerano di più le prime componenti andando a scendere con l’avanzare delle componenti.
 		- che hanno un range: $[0,1]$ 

@@ -1,0 +1,33 @@
+---
+tags: []
+aliases:
+  - interpolante
+data: "`2025-01-06 16:16`"
+---
+- # Intro:
+	- dati $n+1$ punti distinti $(x_{0},y_{0}),...,(x_{n},y_{n})$ con $x_{0}<x_{1}<...<x_{n}$ chiamati _nodi_
+	- il _Problema dell’interpolazione_ consiste nel: trovare una funzione polinomiale $p(x)$ detta _interpolante_ tale che:
+		- $$p(x_{k})=y_{k} \ \ \forall k=0,...,n$$
+	- per identificare il polinomio si devono calcolare i coefficienti:
+		- $$p(x)=c_{0}+c_{1}x+c_{2}x^{2}+...+c_{n}x^{n}$$
+- # Teorema:
+	- Per ogni insieme di coppie $x_{i},y_{i}=0,...,n$ con i nodi $x_{i}$ distanti fra loro, _esiste ed è unico_ un polinomio di grado $\leq n$ indicato con:
+		- $$p_{n}(x)$$ 
+	- Viene chiamato _polinomio interpolatore_ dei vari valori $y_{i}$ nei nodi $x_{i}$ tale che:
+		- $$p_{n}(x_{i})=y_{i}, i=0,...,n$$
+	- ![[Pasted image 20250106164059.png]]
+- # Calcolare il polinomio:
+	- per calcolare i coefficienti di questo polinomio si può risolvere un sistema lineare di $n+1$ equazioni e incognite $c_{0},...,c_{n}$
+	- la matrice dei coefficienti di questo sistema è detta di [[Approssimazione dei dati#^74edf5|matrice di Vandermonde]], è molto mal condizionata e la risoluzione del sistema lineare richiede $O\left( \frac{n^{3}}{3} \right)$ operazioni.
+	- definisco quindi vari polinomi di grado $n$
+		- $$\phi_{k}(x_{j})=\delta_{k,j}$$
+		- dove $\delta_{k,j}$ è la delta di Kronecker:
+			- $$\delta_{k,j}=\begin{cases} 1 & \text{se } k=j \\ 0 & \text{se } k\neq j \end{cases}$$
+		- quindi posso scrivere il polinomio come:
+			- $$\phi_{n}(x)=\prod_{j=0, j\ne k}^{n}\frac{x-x_{j}}{x_{k}-x_{j}},\ \  j,k=0,...,n$$
+			- $$p_{n}(x)=\sum_{k=0}^{n}y_{k}\phi_{k}(x)$$
+	- Si può trovare l’errore che si commette sostituendo ad una funzione $f$ il suo polinomio interpolatore $p_{n}$:
+    - $$E(x)=f(x)-p_{n}(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}\prod_{k=0}^{n}(x-x_{k})$$
+    - con $\xi$ compreso tra il minimo e il massimo dei nodi.
+- # Link Utili:
+	- 

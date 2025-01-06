@@ -17,6 +17,8 @@ aliases:
 	- DEF: [[Equazioni lineari#^ff8be3||sistema lineare]]
 	- _m_ equazioni 
 	- _n_ incognite 
+	- ## Matrice singolare:
+		- matrice quadrata il cui [[Determinante|det]] = 0
 - # Sistema quadrato:
 	- $m=n$
 	- $A \underline{x}=\underline{b}$ 
@@ -30,6 +32,7 @@ aliases:
 - Stima dell'_errore inerente_:
 	- $$A \underline{x}= \underline{b}\iff A^{-1}Ax=A^{-1}b\iff x=A^{-1}b$$
 	- [[Complessità computazionale]] del calcolo di $A^{-1}$ è $O(n^{3})$ 
+	- per calcolare la soluzione di un sistema triangolare la complessità computazionale è $O\left( \frac{n^{2}}{2} \right)$
 	- 1) metodi diretti:
 		- sono più accurati, non hanno errori di troncamento ma sono poco efficienti computazionalmente
 		- fattorizzare la [[Matrici||matrice]] $A$ equivale a scrivere $A$ come [[Matrici#^f58df4||prodotto tra matrici]] 
@@ -41,7 +44,7 @@ aliases:
 		- _L_ superiore(0 sopra la diagonale principale) 
 	- tra L e M fai il prodotto righe per colonne.
 	- questo metodo funziona solo se A è una matrice singolare.
-	- per farlo funzionare su tutte le matrici si aggiunge una matrice _P_ tale che $PA=LU$  
+	- per farlo funzionare su tutte le matrici (ovvero quelle _non singolari_) si aggiunge una matrice _P_ tale che $PA=LU$  
 	- [[Complessità computazionale]]:
 		- $O\left( \frac{n^{3}}{3} \right)$
 	- ### Caso particolare: 
@@ -68,6 +71,7 @@ aliases:
 			- 3) $\forall x,y \in \mathbb{R}^{n}$
 				- $\| x+y\|\leq \|x\|+\|y\|$
 			- ##### 2:
+				- $$||x||_{2}=\sqrt{x_{1}^{2}+x_{2}^{2}+...+x_{n}^{2}}=\sqrt{x^{T}x}$$
 				- 
 		- #### Matriciale:
 			- è una funzione che si indica con $\| A \| : \mathbb{R}^{m \times n} \to \mathbb{R}$ 
@@ -78,7 +82,7 @@ aliases:
 				- $P(M)\to$ massimo autovalore in modulo
 			- $||A||_{1}$ valore massimo della somma aritmetica di ogni riga. 
 	- ### Norma di Frobenius:
-		- $||A||_{F} =\sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}}$ 
+		- $||A||_{F} =\sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij}^{2}}$ 
 		- $A=\begin{pmatrix}0&-1&2\\3&4&-5\end{pmatrix}$
 		- $||A||_{F}=\sqrt{55}$ 
 		- $||I||=\sqrt{3}$

@@ -58,6 +58,9 @@ data: "`<% tp.file.creation_date() %>`"
 			- intorno allo 0 non ci sono valori
 			- esiste un _min_ e un _max_
 			- i valori dipendono dall'_esponente_.
+	- ## IEEE:
+		- è uno standard per la rappresentazione dei numeri floating point.
+		- _doppia precisione_: 64 bit, 1 per il segno 11 per l'esponente e 52 per la mantissa.
 - # Tipi di errori:
 	- ## Errore di misura:
 		- dovuto alle imperfezioni dello strumento di misura dei dati del problema

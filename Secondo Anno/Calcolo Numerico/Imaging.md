@@ -27,9 +27,15 @@ data: "`2024-11-11 13:40`"
 			- $$B=\begin{pmatrix}1&2&3&4&5\\6&7& 8 & 9 & 10\\ 11&12& 13& 14 &15\\ 16&17&18 & 19& 20\end{pmatrix}$$
 			- in questo caso $k=1$ 
 - # Centro di una matrice:
-	- elemento di coordinate $\frac{{D+1}}{2},\frac{{D+1}}{2}$ dove $D$ è il numero di colonne e righe della matrice. ($D$ è dispari)
+	- elemento di coordinate $(\frac{{D+1}}{2},\frac{{D+1}}{2})$ dove $D$ è il numero di colonne e righe della matrice. ($D$ è dispari)
 		- $$M=\begin{pmatrix}1&2&3&4&5\\6&7& 8 & 9 & 10\\ 11&12& 13& 14 &15\\ 16&17&18 & 19& 20\\ 21&22&23&24&25\end{pmatrix}$$
 		- in questo caso è 13.
+- # Sotto-matrice:
+	- è una matrice $D \times D$ che ha come centro $B_{(i+\frac{D-1}{2}, j+\frac{D-1}{2})}$.
+    - $$B=\begin{pmatrix}1&2&3&4&5\\6&7& 8 & 9 & 10\\ 11&12& 13& 14 &15\\ 16&17&18 & 19& 20\\ 21&22&23&24&25\end{pmatrix}$$
+    - ne segue che la sotto matrice $W_{(1,3)}$ è:
+        - $$W=\begin{pmatrix}3&4&5\\8&9&10\\13&14&15\end{pmatrix}$$
+        - il cui centro è $B_{(2,4)}$ 
 - # Convoluzione:
 	- operazione fra una matrice $A:M \times N$ (_l’immagine_) e una di dimensione $D \times D$ con $D$ dispari (_kernel_).
 	- il risultato ha le stesse dimensioni di $A$ si chiama $C$ 

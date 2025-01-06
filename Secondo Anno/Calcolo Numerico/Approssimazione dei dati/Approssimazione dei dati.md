@@ -44,7 +44,7 @@ data: "`2024-10-15 13:54`"
 		- $$min_{\alpha} \sum\limits_{i=1}^{n} (f_{\theta}(x_{i},\alpha)-y_{i})^{2}=$$
 		- $$=min_{\alpha}\sum\limits_{i=1}^{n}(\alpha^{T}x_{i}^{(d)}-y_{i})^{2}$$
 		- Quindi in questo modo trovo l’$\alpha$ che minimizza questa equazione.
-	- ## Matrice di Vandermonde:
+	- ## Matrice di Vandermonde: ^74edf5
 		- $$X=\begin{pmatrix}x_{1}^{(d)^{T}}\\ x_{2}^{(d)^{T}}\\ \vdots \\ x_{n}^{(d)^{T}}\end{pmatrix}=\begin{pmatrix}x_{1}^{0}& x_{1}^{1} & ... & x_{1}^{d}\\ x_{2}^{0}& x_{2}^{1} & ... & x_{2}^{d}\\ \vdots & \vdots & & \vdots \\ x_{n}^{0}& x_{n}^{1} & ... & x_{n}^{d}\end{pmatrix} \in \mathbb{R}^{n \times d}$$
 		- questa [[Matrici||matrice]] ha per righe i dati, è di grado $d$, è associata ad $\{ x_1,...,x_n\}$ e la formula del minimo è equivalente a:
 			- $$min_{\alpha}||X \alpha -y||_{2}^{2}$$ 

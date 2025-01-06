@@ -8,75 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "31e7d5e23514b93d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo gradienti coniugati (CGLS).md",
+                "file": "Secondo Anno/Calcolo Numerico/Imaging.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Metodo gradienti coniugati (CGLS)"
+              "title": "Imaging"
             }
           },
           {
-            "id": "7005851a0764fc0d",
+            "id": "61582b8b081d2d27",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
+                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "algoritmo di iterazione di punto fisso"
-            }
-          },
-          {
-            "id": "aebed40cfe461bd3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "mappa contrattiva"
-            }
-          },
-          {
-            "id": "a5ef127ac1542044",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Anno/Logica/Teoria degli insiemi/Funzioni.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Funzioni"
-            }
-          },
-          {
-            "id": "a805404193221649",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "latexsheet-a4.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "latexsheet-a4"
+              "title": "polinomio caratteristico"
             }
           }
         ]
@@ -110,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "singolari",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -260,46 +218,46 @@
       "obisidian-note-linker:Note Linker": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "31e7d5e23514b93d",
   "lastOpenFiles": [
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Interpolazione.md",
+    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Underfit, Overfit e Regolarizzazione.md",
+    "immagini/99a742d9c381b9a1835450f01f4dbe480d7b506f693c3420790296faab207e87.png",
+    "immagini/convessa.png",
+    "immagini/Pasted image 20250106164059.png",
+    "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
+    "Secondo Anno/Calcolo Numerico/Imaging.md",
+    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Approssimazione dei dati.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
+    "Secondo Anno/Calcolo Numerico/Intro.md",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo di discesa del gradiente.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
-    "step_size.png",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/Classificazione punti di minimo.md",
+    "Secondo Anno/Calcolo Numerico/Interpolazione.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
+    "Primo Anno/Algebra e geometria/Sistema lineare/Algoritmo di Gauss.md",
+    "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
+    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo gradienti coniugati (CGLS).md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
+    "immagini/step_size.png",
     "Primo Anno/Logica/Teoria degli insiemi/Funzioni.md",
-    "convessa 1.png",
-    "convessa.png",
+    "immagini/convessa 1.png",
     "latexsheet-a4.pdf",
     "immagini/Pasted image 20250102165919.png",
     "immagini/Pasted image 20250102171533.png",
-    "99a742d9c381b9a1835450f01f4dbe480d7b506f693c3420790296faab207e87.png",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione.md",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/Untitled.md",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione",
     "Homepage.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Underfit, Overfit e Regolarizzazione.md",
-    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Approssimazione dei dati.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo gradienti coniugati (CGLS).md",
     "Secondo Anno/Calcolo Numerico/Approssimazione dei dati",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Pseudoinversa.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
-    "Primo Anno/Analisi/modulo2/Norma euclidea.md",
-    "Primo Anno/Algebra e geometria/Ortogonalità/Base ortonormale.md",
-    "Primo Anno/Analisi/modulo2/Prodotto scalare Euclideo.md",
-    "Primo Anno/Algebra e geometria/Determinante/Regola di Sarrus.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
-    "Primo Anno/Algebra e geometria/Ortogonalità/Matrice ortogonale.md",
-    "Secondo Anno/Reti di Calcolatori/livello trasporto/DNS.md",
-    "Secondo Anno/Reti di Calcolatori/Caching.md",
     "immagini/Pasted image 20241212134204.png",
     "immagini/Pasted image 20241212153142.png",
     "immagini/Pasted image 20241212153056.png",
-    "immagini/Pasted image 20241212153018.png",
     "Secondo Anno/Sistemi Operativi/progetto",
     "Secondo Anno/Sistemi Operativi/laboratorio",
     "Secondo Anno/Sistemi Operativi/Concorrenza/message passing",
