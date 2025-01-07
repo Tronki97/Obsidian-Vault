@@ -106,4 +106,4 @@ aliases:
 		- $$\frac{||\Delta x||}{||x||}\le K(A)\left( \frac{||\Delta A||}{||A||} +\frac{||\Delta b||}{||b||}\right)$$
 			- $K(A)$ è il _numero di condizione_ della matrice  ^47956e
 				- $K(A)=||A||*||A^{-1}||\ge1$ 
-				- _oppure semplicemente l’autovalore più grande diviso per quello più piccolo_.
+				- _oppure semplicemente l’autovalore più grande diviso per quello più piccolo in modulo_.
