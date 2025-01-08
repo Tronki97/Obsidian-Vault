@@ -13,47 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo di discesa del gradiente.md",
+                "file": "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Metodo di discesa del gradiente"
-            }
-          },
-          {
-            "id": "9d385e05a8ce57da",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Interpolazione.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Interpolazione"
-            }
-          },
-          {
-            "id": "cbdff80813647351",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Risoluzione di un sistema lineare"
+              "title": "Problemi inversi"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -222,38 +191,38 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9d385e05a8ce57da",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Classificazione punti di minimo.md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo di discesa del gradiente.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+    "Primo Anno/Analisi/modulo2/Ortogonalità.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
+    "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
+    "Secondo Anno/Calcolo Numerico/Imaging.md",
+    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo di discesa del gradiente.md",
+    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo gradienti coniugati (CGLS).md",
+    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Interpolazione.md",
+    "Homepage.md",
+    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Classificazione punti di minimo.md",
     "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Approssimazione dei dati.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Pseudoinversa.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
-    "Secondo Anno/Calcolo Numerico/Imaging.md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo gradienti coniugati (CGLS).md",
     "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Underfit, Overfit e Regolarizzazione.md",
-    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Interpolazione.md",
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
     "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
     "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
-    "Homepage.md",
     "Pasted image 20250106181345.png",
     "Primo Anno/Algebra e geometria/Spazio vettoriale/Dimensione.md",
     "immagini/99a742d9c381b9a1835450f01f4dbe480d7b506f693c3420790296faab207e87.png",
     "immagini/convessa.png",
     "immagini/Pasted image 20250106164059.png",
-    "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
     "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
     "Secondo Anno/Calcolo Numerico/Intro.md",
     "Secondo Anno/Calcolo Numerico/Interpolazione.md",
-    "Primo Anno/Algebra e geometria/Sistema lineare/Algoritmo di Gauss.md",
     "immagini/step_size.png",
     "immagini/convessa 1.png",
     "latexsheet-a4.pdf",
