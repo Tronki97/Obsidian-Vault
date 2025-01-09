@@ -13,16 +13,62 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
+                "file": "Primo Anno/Algebra e geometria/Applicazione lineare/Immagine di una funzione.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Problemi inversi"
+              "title": "Immagine di una funzione"
+            }
+          },
+          {
+            "id": "ba5993eadd8c8c2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovettore.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Autovettore"
+            }
+          },
+          {
+            "id": "62e37971c5aab418",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algebra e geometria/Applicazione lineare/Kernel.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kernel"
+            }
+          },
+          {
+            "id": "dc3f36a68a87883a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Applicazioni lineari definite da una matrice"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,38 +237,38 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "ba5993eadd8c8c2c",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-    "Primo Anno/Analisi/modulo2/Ortogonalità.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
+    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/Autovalore.md",
+    "Primo Anno/Algebra e geometria/Cambio di base.md",
+    "Primo Anno/Algebra e geometria/Determinante/Matrice invertibile.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Coordinate rispetto a una base.md",
+    "Primo Anno/Algebra e geometria/Spazio vettoriale/Sottospazio generato.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Immagine di una funzione.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Teorema della dimensione.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Kernel.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Composizione di applicazioni lineari.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/iniettiva.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
+    "Homepage.md",
+    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo gradienti coniugati (CGLS).md",
     "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Numeri finiti.md",
     "Secondo Anno/Calcolo Numerico/Problemi inversi.md",
     "Secondo Anno/Calcolo Numerico/Imaging.md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo di discesa del gradiente.md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo gradienti coniugati (CGLS).md",
-    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Interpolazione.md",
-    "Homepage.md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Classificazione punti di minimo.md",
-    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Approssimazione dei dati.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/Pseudoinversa.md",
     "Secondo Anno/Calcolo Numerico/sistemi lineari/Problema dei minimi quadrati.md",
-    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Underfit, Overfit e Regolarizzazione.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
-    "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
-    "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
+    "Primo Anno/Algebra e geometria/Teorema spettrale.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
+    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Interpolazione.md",
+    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
+    "Secondo Anno/Calcolo Numerico/Intro.md",
+    "Secondo Anno/Calcolo Numerico/Laboratorio/Python.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
+    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Approssimazione dei dati.md",
     "Pasted image 20250106181345.png",
-    "Primo Anno/Algebra e geometria/Spazio vettoriale/Dimensione.md",
     "immagini/99a742d9c381b9a1835450f01f4dbe480d7b506f693c3420790296faab207e87.png",
     "immagini/convessa.png",
     "immagini/Pasted image 20250106164059.png",
-    "Primo Anno/Algebra e geometria/Autovalore e Autovettore/polinomio caratteristico.md",
-    "Secondo Anno/Calcolo Numerico/Intro.md",
-    "Secondo Anno/Calcolo Numerico/Interpolazione.md",
     "immagini/step_size.png",
     "immagini/convessa 1.png",
     "latexsheet-a4.pdf",
