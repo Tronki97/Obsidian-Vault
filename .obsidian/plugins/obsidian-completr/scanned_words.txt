@@ -1701,6 +1701,7 @@ rmds
 raggiungimento
 rNl
 rZS
+ruffini
 la
 le
 lo
@@ -11511,6 +11512,7 @@ sdOV
 sEh
 seK
 sPb
+scomponendo
 otterremmo
 ottenere
 occupare
