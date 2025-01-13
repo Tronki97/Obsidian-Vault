@@ -2249,6 +2249,7 @@ learning
 lqSSu
 lrC
 lxN
+laplace
 ALU
 AND
 Address
@@ -6663,6 +6664,7 @@ decresca
 distanti
 dse
 dEj
+denotata
 <<<<<<< HEAD
 =======
 >>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
@@ -9987,6 +9989,7 @@ beg
 bddE
 bay
 bZyI
+binet
 quindi
 questo
 quelle
@@ -11513,6 +11516,7 @@ sEh
 seK
 sPb
 scomponendo
+schmidt
 otterremmo
 ottenere
 occupare
@@ -16398,6 +16402,7 @@ BzT
 Bxx
 BXm
 BOz
+Binet
 Per
 Program
 PC
@@ -16899,6 +16904,7 @@ POe
 Pyyy
 PXV
 PXy
+Proiezione
 Di
 Data
 Dati
@@ -19348,6 +19354,7 @@ Criteri
 CwNd
 CuE
 CwZ
+Comand
 Questa
 Quello
 Qz
@@ -27579,6 +27586,7 @@ Tvp
 TSVD
 Truncated
 TYYi
+Trovo
 GY
 GT
 Ghw
@@ -28038,6 +28046,7 @@ GUCb
 GBM
 GRs
 Gii
+Gram
 Vb
 VD
 VG

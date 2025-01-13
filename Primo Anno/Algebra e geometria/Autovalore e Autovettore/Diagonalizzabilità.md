@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases: 
 data: "`2024-08-31 20:05`"
 ---
@@ -12,3 +11,8 @@ data: "`2024-08-31 20:05`"
 			- $v_{1}=(1,1)\to (1,1)$ con [[Autovalore]] 1
 			- $v_{2}=(1,-1)\to(-1,1)=-1(1,-1)$ con autovalore $-1$
 		- Osservo ora che $\beta=v_{1},v_{2}$ è base di $\mathbb{R}^{2}$(dal [[Teorema GEL]]). Allora trovo $A_{\beta \beta}$:
+- # Verificare che sia diagonalizzabile:
+	- ## Metodo 1:
+	    - Trovo gli [[Autovalore]] di $A$ e gli [[Autovettore]] associati
+	    - se trovo $n$ autovalori distinti allora $A$ è diagonalizzabile
+	    - 

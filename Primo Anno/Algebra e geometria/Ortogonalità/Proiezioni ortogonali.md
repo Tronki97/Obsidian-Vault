@@ -14,3 +14,20 @@ data: "`2024-08-31 20:05`"
 - # Dimostrazione di ortogonalità
 	- Dimostro che vale in generale che $v-proj_{u}(v)\bot u$ ovvero $$<v-proj_{u}(v), u>=0\ \ \ \forall u,v\in \mathbb{R}^{n}$$Sviluppo $v-proj_{u}(v)$ ottenendo$$v-proj_{u}(v)=v-\frac{<v,u>}{<u,v>}u$$Passo di nuovo al prodotto scalare:$$<v-\frac{<v,u>}{<u,v>}u,u>=0$$Per le sue proprietà diventa:$$<v,u>-<\frac{<v,u>}{<u,v>}u,u>=0$$E procedendo $$<v,u>-\frac{<v,u>}{<u,v>}<u,u>=0$$Ed infine $$<v,u>-<v,u>=0$$
 	- Qed.
+- # Proiezione ortogonale su un sottospazio:
+	- La proiezione ortogonale di $v$ su $W$, denotata $proj_{W}(v)$, è il vettore $p\in W$ che minimizza la distanza tra $v$ e $p$, ed è dato dalla combinazione lineare dei vettori che generano $W$.
+	- Se $p=proj_{W}(v)$ allora $p$ si può scrivere come:
+		- $$p=\lambda_{1}v_{1}+\lambda_{2}v_{2}+...+\lambda_{n}v_{n}$$
+		- Dove $v_{1},...,v_{n}$ sono una base di $W$ e $\lambda_{1},...,\lambda_{n}$ sono i coefficienti della combinazione lineare.
+	- La proiezione ortogonale deve soddisfare la condizione che il vettore $v−p$  sia ortogonale a tutti i vettori in $W$. Quindi, dobbiamo avere:
+		- $$<v-p,v_{i}>=0\ \ \ \forall i=1,...,n$$
+			- equivalente a:
+		- $$<v,v_{i}>=<p,v_{i}> \forall i=1,...,n$$
+	- ## Procedimento:
+		- calcolo i [[Prodotto scalare Euclideo||prodotti scalari]]: $<v,v_{i}>$ e $<p,v_{i}>$ per ogni $i$.
+		- calcolo i prodotti scalari tra i vettori di $W$:
+			- $$<v_{i},v_{j}> \forall i,j=1,...,n$$
+		- risolvo il sistema di equazioni lineari ottenuto:
+			- $$\begin{cases}<v,v_{1}>=\lambda_{1}<v_{1},v_{1}>+...+\lambda_{n}<v_{1},v_{n}>\\ \vdots \\ <v,v_{n}>=\lambda_{1}<v_{n},v_{1}>+...+\lambda_{n}<v_{n},v_{n}>\end{cases}$$
+		- Trovati i coefficienti $\lambda$ posso calcolare la soluzione:
+			- $$p= \lambda_{1}v_{1}+...+\lambda_{n}v_{n}$$

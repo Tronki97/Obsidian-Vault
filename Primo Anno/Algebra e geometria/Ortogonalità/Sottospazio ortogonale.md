@@ -1,7 +1,8 @@
 ---
-tags: []
+tags: 
 aliases:
   - dimensione sottospazio ortogonale
+  - equazioni cartesiane
 data: "`2024-08-31 20:05`"
 ---
 - # Def:
