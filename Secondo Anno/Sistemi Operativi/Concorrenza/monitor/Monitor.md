@@ -15,13 +15,17 @@ data: "`2024-11-22 10:25`"
 		- permettono di mettere in attesa un processo
 		- permettono di risvegliare un processo
 	- solo un processo può essere messo dentro ad un monitor
+- # Sintassi:
+	- ![[Pasted image 20250118155959.png]]
 - # Variabili  di condizione:
-	- definite dentro al moitor.
+	- definite dentro al _monitor_.
+		- `conndition c`
 	- ## metodi:
-		- `wait()`  ^cac4f7
-			- mette in attesa il processo che la chiama in una coda di  attesa di condizione $c$ 
-		- `signal()`  ^d57dae
-			- risveglia un processo in attesa 
+		- che vengono eseguiti sulle condizioni `c`
+		- `c.wait()`  ^cac4f7
+			- mette in attesa il processo che la chiama in una coda di attesa di condizione $c$ 
+		- `c.signal()`  ^d57dae
+			- risveglia un processo in attesa di quella condizione `c`
 			- il chiamante viene posto in attesa e risvegliato quando un processo risvegliato rilascia la sua [[Proprietà di un programma#^1acdf8|mutua esclusione]] 
 			- se nessun processo è in attesa della condizione $c$, la chiamata è ignorata.
 		- ### Differenze con i semafori:
@@ -32,7 +36,6 @@ data: "`2024-11-22 10:25`"
 	- ## SU (signal urgent):
 		- la politica usata all’esame
 		- il processo che esce dalla sezione critica risveglia il processo in attesa con la priorità più alta.
-		- 
 - # Implementazione dei semafori:
 	- ![[Pasted image 20241122110719.png]]
 		- non c’è il problema del mutex e basta implementare la sincronia tra i vari processi.

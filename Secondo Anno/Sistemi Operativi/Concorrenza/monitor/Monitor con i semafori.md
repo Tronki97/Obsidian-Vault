@@ -13,12 +13,13 @@ data: "`2024-11-29 09:34`"
 	- ## Inizializzazione:
 		- [[Semafori|semaforo]] `mutex` a 1
 		- uno `stack urgent`
-		- una coda `waiting[NCOND]` dove `NCOND` è il numero di condizioni
+		- una coda `waiting[NCOND]` dove `NCOND` è il numero di condizioni questo è un array di code.
 			- dentro alle strutture dati inserisco dei semafori
 	- ## Entrata nel monitor:
 		- `mutex.P()`
 	- ## [[Monitor#^cac4f7|wait]] su $cond_i$
 		- ![[Pasted image 20241129094049.png]]
+		- `waiting[i].equeue(ws)` alla condizione `i` si mette in coda il processo `ws`
 	- ## [[Monitor#^d57dae|signal]] su $cond_i$
 		- ![[Pasted image 20241129094211.png]]
 	- ## Esce dal monitor:

@@ -4,12 +4,13 @@ tags:
 aliases:
   - send
   - receive
+  - messaggio
 data: "`2024-11-29 10:06`"
 ---
 - # Argomento:
 	- meccanismi per condividere informazioni tra [[Concorrenza#^68dcd8|processi]] riguardo la memoria privata di ogni processo.
 - # Messaggio: 
-	- informazione formattato da un processo mittente e interpretato dal destinatario.
+	- informazione formattata da un processo mittente e interpretato dal destinatario.
 - # Operazioni:
 	- `send`:
 		- spedisce il messaggio, e bisogna specificare la destinazione 

@@ -18,7 +18,7 @@ data: "`2024-10-24 11:17`"
 			- ![[Pasted image 20241024112848.png]]
 			- ![[Pasted image 20241107093912.png||600]]
 			- ## OSS:
-				- quando mutex esegue le sue operazioni non sta facendo ricorsione die queste due $P$ e $V$ ma sta usando i metodi relativi alla sua classe (_binaria_)  
+				- quando `mutex` esegue le sue operazioni non sta facendo ricorsione di queste due $P$ e $V$ ma sta usando i metodi relativi alla sua classe (_binaria_)  
 				- ma purtroppo questa soluzione non garantisce la coda FIFO siccome ogni processo ha diversi tempi di esecuzione.
 				- 
 - # Link Utili:

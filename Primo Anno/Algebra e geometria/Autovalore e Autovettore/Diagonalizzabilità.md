@@ -15,4 +15,4 @@ data: "`2024-08-31 20:05`"
 	- ## Metodo 1:
 	    - Trovo gli [[Autovalore]] di $A$ e gli [[Autovettore]] associati
 	    - se trovo $n$ autovalori distinti allora $A$ è diagonalizzabile
-	    - 
+	- se gli autovalori non sono distinti allora posso trovare una base di autovettori e verificare che sia una base di $\mathbb{R}^{n}$ 

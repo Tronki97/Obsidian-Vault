@@ -1702,6 +1702,8 @@ raggiungimento
 rNl
 rZS
 ruffini
+riceva
+restituendone
 la
 le
 lo
@@ -5340,6 +5342,8 @@ affetti
 approssimata
 aED
 aGx
+asend
+areceive
 un
 una
 usato
@@ -11517,6 +11521,7 @@ seK
 sPb
 scomponendo
 schmidt
+semafaori
 otterremmo
 ottenere
 occupare
@@ -12088,6 +12093,7 @@ oCw
 oWz
 ofn
 oxC
+operativi
 va
 valore
 viene
@@ -17830,6 +17836,7 @@ LaTeX
 Live
 LGEh
 LLTh
+LIFO
 Modulo
 Massimo
 Memory
@@ -27587,6 +27594,7 @@ TSVD
 Truncated
 TYYi
 Trovo
+Trovati
 GY
 GT
 Ghw

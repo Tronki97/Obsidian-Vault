@@ -47,7 +47,7 @@ data: "`2024-10-24 10:42`"
 	- la mutua esclusione è lasciata al programmatore. che potrebbe mettere errori.
 		- omettere un `P` o `V` 
 		- scambiare l’ordine di `P` e `V`
-		- fare certe operazioni su semfaori sbagliati.
+		- fare certe operazioni su semafaori sbagliati.
 	- costruito a basso livello.
 	- forti problemi di leggibilità.
 	- 

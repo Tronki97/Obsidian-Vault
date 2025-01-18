@@ -38,7 +38,7 @@ data: "`2024-08-31 20:05`"
 				- $A_{\beta c}$
 				- $A_{\beta \beta}$
 				- $A_{c\beta}$
-				In particolare prendo l'esempio per $n=2$ e $\beta=e_{1}-e_{2}, 2e_{1}+3e_{2}$
+				In particolare prendo l'esempio per $n=2$ e $\beta=\{e_{1}-e_{2}, 2e_{1}+3e_{2}\}$ 
 			- $A_{\beta c}$
 				- Questa matrice è facile da ottenere. Infatti se so che $A$ è della forma $$A=f(v_{1})_{c},...,f(v_{n})_{c}$$Allora essendo esattamente le coordinate di un qualunque vettore rispetto alla base canonica esattamente quel vettore, ottengo che$$A_{\beta c}=(f(v_{1}),f(v_{2}))$$ed essendo $f=id$ ho che $$A_{\beta c}=(v_{1},v_{2})$$Per cui $$\begin{pmatrix}1&2\\-1&3  \end{pmatrix}$$
 			- $A_{\beta \beta}$

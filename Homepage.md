@@ -5,15 +5,14 @@ cssclasses:
 # Vault Info
 
 
-- ## Da fare/finire: 
+- ## Da fare/finire:
 ```dataview
 LIST
 FROM #TODO
 SORT data
 ```
 
-- ## Ultimi modificati
-  
+- ## Ultimi modificati:
 ```dataview
 LIST 
 FROM ""
