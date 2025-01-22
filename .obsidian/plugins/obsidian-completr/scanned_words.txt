@@ -2252,6 +2252,7 @@ lqSSu
 lrC
 lxN
 laplace
+limitati
 ALU
 AND
 Address
@@ -5344,6 +5345,7 @@ aED
 aGx
 asend
 areceive
+addb
 un
 una
 usato
@@ -7260,6 +7262,7 @@ fiT
 fCh
 flesso
 fuyg
+formattata
 in
 il
 invece
@@ -9494,6 +9497,7 @@ ekb
 edf
 eie
 eMXO
+entry
 base
 bit
 basano
@@ -10465,6 +10469,7 @@ qNh
 qxa
 qyp
 qrM
+quattro
 se
 sarebbe
 si
@@ -11522,6 +11527,8 @@ sPb
 scomponendo
 schmidt
 semafaori
+ssend
+sreceive
 otterremmo
 ottenere
 occupare
@@ -12678,6 +12685,7 @@ voE
 vKC
 vJc
 veM
+vogliono
 troppo
 testimone
 tramite
@@ -13312,6 +13320,8 @@ tipologia
 tantissimo
 tEXtdate
 tQBB
+tipob
+tipoa
 grandi
 gli
 grande
@@ -13827,6 +13837,9 @@ gpz
 gwa
 gdd
 gBF
+getone
+getab
+get
 NOT
 NotePad
 Nu
@@ -18806,6 +18819,7 @@ Efv
 Estremi
 EXw
 ESx
+Entrambi
 Come
 Codifica
 Counter
@@ -27595,6 +27609,7 @@ Truncated
 TYYi
 Trovo
 Trovati
+Tute
 GY
 GT
 Ghw

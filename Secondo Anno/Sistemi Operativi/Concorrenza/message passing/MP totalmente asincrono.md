@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - messagge passing totalmente asincrono
   - totalmente asincrono

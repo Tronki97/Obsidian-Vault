@@ -19,7 +19,7 @@ data: "`2024-11-22 10:25`"
 	- ![[Pasted image 20250118155959.png]]
 - # Variabili  di condizione:
 	- definite dentro al _monitor_.
-		- `conndition c`
+		- `condition c`
 	- ## metodi:
 		- che vengono eseguiti sulle condizioni `c`
 		- `c.wait()`  ^cac4f7

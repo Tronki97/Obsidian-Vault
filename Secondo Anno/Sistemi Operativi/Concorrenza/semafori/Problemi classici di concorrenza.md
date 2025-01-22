@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - produttore/consmatore
   - buffer limitato
@@ -52,7 +51,7 @@ data: "`2024-11-07 09:19`"
 		- ### Soluzione:
 			- basta avere almeno un filosofo mancino che prende prima la bacchetta sinistra e poi la destra 
 			- e tutti gli altri fanno il contrario. 
-			- ![[Pasted image 20241115095409.png]]
+			- ![[Pasted image 20241115095409.png|700]]
 		- ### Altre soluzioni:
 			- al massimo quattro filosofi a tavola.
 			- le bacchette devono essere prese insieme.
