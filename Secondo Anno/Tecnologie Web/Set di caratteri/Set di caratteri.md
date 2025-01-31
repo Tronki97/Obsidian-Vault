@@ -1,24 +1,53 @@
-- digitalizzazione
+---
+tags: 
+aliases:
+  - ASCII
+  - ISO 646
+  - EBCDIC
+  - ISO Latin 1
+data: "`2024-09-24 10:01`"
+---
+- # Digitalizzazione ^e0dc57
 	- trasformare dati anche enormi in codifica binaria quindi in presenza o mancanza di un qualche tipo di segnale.
 	- un problema è rendere digitale qualsiasi tipo di alfabeto.
 		- per i protocolli non è un problema visto che sono serie di byte
 	- per rappresentare del testo serve creare uno standard condiviso che possano usare tutti per poter comunicare tra tutti.
-- ## Caratteri:
-	- l'entità atomica della lingua
-	- ogni lingua usa diverse rappresentazioni visive per descrivere i suoni. 
-	- in lingue diverse come latino e cirillico è presente la stessa lettera $\mathbf{P}$ che in quello cirillico rappresenta invece una $\mathbf{R}$ 
-		- in base ad una tabella di rappresentazione od un'altra avremo un differente risultato
-		- Quindi il contesto determina il significato di una parola o frase. 
-		- 
-		-  
-	- _Ordine_: mapping tra valori e caratteristiche, quindi i valori in cui i caratteri vengono mappati seguono l'ordine alfabetico. 
-	- _Contiguità_: il successore alfabetico di una lettera avrà il valore successivo anche nella codifica digitale.
-	- ### Shift:
-		- un codice riservato che cambia la mappatura di un carattere che viene deciso arbitrariamente.
-	- ### Codici liberi:
-		- codici non associati a nessun carattere. servono a rilevare un errore nella trasmissione dei dati.
-	- ### Codice controllo:
-		- codice associato alla trasmissione e non al messaggio.
-- ## ISO 646
-	- questa codifica permette di rappresentare in ASCII i caratteri Europei 
+	- ## Caratteri:
+		- l'entità atomica della lingua
+		- ogni lingua usa diverse rappresentazioni visive per descrivere i suoni. 
+		- in lingue diverse come latino e cirillico è presente la stessa lettera $\mathbf{P}$ che in quello cirillico rappresenta invece una $\mathbf{R}$ 
+			- in base ad una tabella di rappresentazione od un'altra avremo un differente risultato
+			- Quindi il contesto determina il significato di una parola o frase. 
+		- quindi per associare ad ogni tipo di carattere un valore _numerico_ si hanno delle regole:
+			- _Ordine_: mapping tra valori e caratteristiche, quindi i valori in cui i caratteri vengono mappati seguono l'ordine alfabetico. 
+			- _Contiguità_: il successore alfabetico di una lettera avrà il valore successivo anche nella codifica digitale.
+			- _raggruppamento_: i caratteri simili vengono raggruppati insieme.
+			- _ES_: in ASCII i caratteri di controllo hanno forma: $00xx \ xxxx$, i caratteri maiuscoli hanno forma: $10xx \ xxxx$ e quelli minuscoli $11xx \ xxxx$.  
+		- ### Shift:
+			- un codice riservato che cambia la mappatura di un carattere che viene deciso arbitrariamente.
+		- ### Codici liberi:
+			- codici non associati a nessun carattere. servono a rilevare un errore nella trasmissione dei dati.
+		- ### Codice controllo:
+			- codice associato alla trasmissione e non al messaggio. 
+- # Codifiche:
+	- ## ASCII:
+		- American Standard Code for Information Interchange
+		- definisce valori per _128_ caratteri, 7 su 8 bit perché il bit più significativo è usato per la parità.  
+		- possiede 33 caratteri di controllo con anche alcune ripetizioni inutili
+		- i restanti 95 caratteri sono dell’alfabeto latino, maiuscole, punteggiatura e numeri.
+		- _non possiede codici liberi_.
+	- ## EBCDIC:
+		- Extended Binary Coded Decimal Interchange code
+		- usata da [IBM](https://it.wikipedia.org/wiki/IBM) per i suoi mainframe. 
+		- utilizza tutti e 8 i bit per rappresentare i caratteri.
+		- 56 codici di controllo , molte locazioni vuote e le lettere dell'alfabeto NON sono contigue, ma organizzate in modo da avere il secondo semibyte che varia da 0 a 9.
+	- ## ISO 646:
+		- questa codifica permette di rappresentare in ASCII i caratteri Europei
+		- lascia 12 codici liberi per le versioni nazionali dei vari linguaggi europei.
+		- non ci sono i caratteri: `{} [] \ | ^ ~ @ $ # ` 
+- # ISO 8859/1 (ISO Latin 1):
+	- unica estensione della codifica ASCII riconosciuta come standard.
+	- accede a tutti i 256 caratteri, comprende un certo numero di caratteri degli alfabeti europei come accenti, ecc.
+	- è usato automaticamente da HTTP e alcuni sistemi operativi.
+- # Link utili:
 	- 
