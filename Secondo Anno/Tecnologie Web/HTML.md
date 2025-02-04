@@ -7,24 +7,24 @@ aliases:
   - html
 ---
 
-- ## Storia:
-	- ### prima guerra dei browser(anni '90):
+- # Storia:
+	- ## prima guerra dei browser(anni '90):
 		- _Netscape navigator_: primo browser commerciale.
 		- _Microsoft_ è in competizione con loro e procede a sviluppare _ISP_ e _Internet Explorer_. in seguito al fallimento Netscape rilascia al pubblico la _Navigator v5_ (che diventa base di _Firefox_). 
 		- e questa differenziazione si trascina fino al giorno d'oggi e in quel periodo HTML cresce esponenzialmente. La guerra si conclude con la vittoria di Microsoft
 		- W3C viene stabilito come tavolo neutrale per settare le basi per il _Web_ e lavorare su HTML
-	- ### Seconda guerra(2005-2019):
+	- ## Seconda guerra(2005-2019):
 		- Microsoft contro _Google_: _Firefox_ Vs _Chrome_
 		- In quel periodo viene inventato il primo _iPhone_ ovvero il primo telefono cn una struttura Hardware comparabile con un calcolatore con _Safari_ come motore di ricerca pre-installato.
 		- Per il W3C lo sviluppo web per cellulari si conclude con HTML 4.5 però altri sviluppatori pensano di continuare a modernizzare HTML e si crea _WHAT WG_(che è formato da persone entrate su invito) che andrà in conflitto con W3C.  
-	- ### Terza guerra(in corso):
+	- ## Terza guerra(in corso):
 		- Viene creato, da Google, _AngularJS_ che è formato da componenti adatte comuni a tutti, poi abbandonato per creare _Angular_
 		- In risposta Facebook crea _React_ e _React native_
 		- La comunità procede a sviluppare _VueJS_ che rappresenta la parte di AngularJS abbandonata da Google  
 		- Quindi l'obiettivo di questa guerra è portare sempre più developer verso un particolare Framework
-	- ### HTML oggi:
+	- ## HTML oggi:
 		- rispetto a tempo fa è diventato un vero e proprio linguaggio per applicazioni 
-	- ### HTML 4
+	- ## HTML 4
 		- per documenti ipertestuale ed è possibile fare documenti con una struttura semplice.
 		- ed era un insieme di elementi non conformi allo standard e quindi i browser non si sono preoccupati del [[Analisi sintattica||parsing]] dei documenti HTML
 			- ciò vuol dire che ci sono differenze sostanziali tra un documento corretto e uno leggibile da un Browser.
@@ -33,29 +33,43 @@ aliases:
 				- compatibile col passato e più permissivo
 			- #### Strict mode:
 				- Compatibile con le specifiche attuali.
-	- ### XHTML 1.0
+	- ## XHTML 1.0
 		- creato dal W3C che riformula HTML4 basata su XML
 		- La semantica è uguale a quella di HTML 4 
 		- i documenti devono essere ben formati e l'annidamento deve essere corretto
 		- Gli editor non riescono ad adattarsi
-		- #### Differenze con HTML4:
+		- ### Differenze con HTML4:
 			- scrivile!!!!
-	- ### HTML 5
+	- ## HTML 5
 		- viene creato per ovviare ai problemi sorti con XHTML da WHATWG grazie alla concessione del gruppo W3C creando anche il DOM(_document object model_) 
 		- 
-- ## Concetti base:
-	- ### Struttura di un documento:
+- # Concetti base:
+	- ## Struttura di un documento:
 		- `html` è la radice dell'albero:
 		- `head`: informazioni generali sul documento che non dovrebbero essere visualizzabili detti _metadati_
 		- `body`: il contenuto del documento.
 		- ![[albero html.png]]
-	- ### ES:
+	- ## ES:
 		- ![[Pasted image 20240930171033.png]]
 		- che corrisponde a:
 			- ![[Pasted image 20240930171056.png]]
-	- ### Elementi inline:
+	- ## Elementi inline:
 		- non spezzano il blocco quindi non vanno a capoe possono essere inseriti all'interno di ogni blocco senza un ordine preciso 
 		- si suggerisce di non usare i _tag_ di tipo _fontstyle_ perché sono compresi dentro agli stili da usare in CSS.
-	- ### Form:
+	- ## Form:
 		- si utilizzano per far inserire agli utenti valori poi elaborati dal server e sono legati ad applicazioni server-side 
-		- il browser raccoglie dati dall'utente, crea una connessione HTTP con il server specificando una ACTION(ovvero una app che funga da destinatario) a cui far arrivare i dati che poi li elabora e genera un documento di risposta specifico per i dati forniti dall'utente  
+		- il browser raccoglie dati dall'utente, crea una connessione HTTP con il server specificando una ACTION(ovvero una app che funga da destinatario) a cui far arrivare i dati che poi li elabora e genera un documento di risposta specifico per i dati forniti dall'utente.
+		- ### Elementi:
+			- `<form>` è l'elemento principale.
+				- con attributi: `method` ovvero il metodo [[HTTP]] da usare; `action`: l'URI dell’app server-side da chiamare 
+			- `<input> , <select>, <textarea>` sono gli elementi che raccolgono i dati.
+				- 
+- # Altri aspetti:
+	- ## Link:
+		- si possono mettere dei link utilizzando i tag `<a>` (ancore del documento) e `href` ([[URI (Uniform Resource Identifier)||URI]] a cui si vuole collegare) 
+	- ## Immagini:
+		- Si inseriscono con i tag `<img>` con i classici formati.
+		- ### Attributi:
+			- `src`: per specificare il percorso dell'immagine
+			- `alt`: per specificare il testo alternativo in caso l'immagine non venga visualizzata
+			- `width` e `height`: per specificare le dimensioni dell'immagine.

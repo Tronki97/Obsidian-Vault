@@ -1761,6 +1761,7 @@ ruV
 rHO
 restrizioni
 ripetizioni
+ridefinisce
 la
 le
 lo
@@ -2327,6 +2328,7 @@ lingua
 lingue
 latino
 latini
+limiti
 ALU
 AND
 Address
@@ -4606,6 +4608,7 @@ codepoint
 convertibile
 coreano
 cinesi
+corpo
 avendo
 alcune
 arriva
@@ -5543,6 +5546,7 @@ arabo
 antichi
 antiche
 accentate
+accettati
 un
 una
 usato
@@ -7516,6 +7520,7 @@ frj
 fMa
 frju
 fvm
+felicit
 in
 il
 invece
@@ -8383,6 +8388,7 @@ interpretazioni
 inventate
 ideografici
 ideografico
+impediscono
 modo
 mentre
 massimo
@@ -9137,6 +9143,8 @@ maiuscoli
 minuscoli
 mainframe
 moderni
+mail
+multi
 esempio
 eccede
 errori
@@ -9813,6 +9821,7 @@ enormi
 europei
 ebraico
 elfico
+estensibile
 base
 bit
 basano
@@ -11915,6 +11924,7 @@ successore
 semibyte
 sottosequenze
 surrogati
+simple
 otterremmo
 ottenere
 occupare
@@ -13769,6 +13779,8 @@ tuh
 tLao
 tedesca
 tipografiche
+text
+testuali
 grandi
 gli
 grande
@@ -15961,6 +15973,7 @@ RGh
 ReE
 ROk
 Repertorio
+RFC
 Si
 Se
 Status
@@ -16583,6 +16596,8 @@ Supplementary
 SIP
 SSP
 Special
+String
+SMTP
 BINARY
 Bus
 BX
@@ -18559,6 +18574,7 @@ LJj
 LUu
 Lbb
 Latino
+Limiti
 Modulo
 Massimo
 Memory
@@ -19053,6 +19069,9 @@ MnN
 MaA
 Mlike
 Multilingual
+Multipurpose
+Mail
+Messaggi
 ES
 Esempi
 Ex
@@ -19093,7 +19112,6 @@ Ea
 EeB
 Er
 Eq
-EBC
 EM
 Egl
 Ej
@@ -19587,6 +19605,7 @@ EBCIC
 Extended
 Esigenza
 Efficienza
+Extensions
 Come
 Codifica
 Counter
@@ -20184,6 +20203,7 @@ Codifiche
 Coded
 Convertibilit
 CJK
+CRLF
 Questa
 Quello
 Qz

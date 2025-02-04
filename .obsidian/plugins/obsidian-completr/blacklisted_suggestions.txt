@@ -1,2 +1,11 @@
 MongoDB
 EBC
+Hea
+heap
+head
+Heap
+header
+Header
+heapify
+heapsize
+Heapsort
