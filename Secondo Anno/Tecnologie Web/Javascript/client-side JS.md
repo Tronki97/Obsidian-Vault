@@ -1,0 +1,59 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2024-11-07 15:19`"
+---
+- # Oggetti principali :
+	- ## window:
+		- finestra principale in cui si eseguono le pagine web.
+		- due finestre separate non possono comunicare.
+		- ### Frame:
+			- divide l’area della finestra in aree indipendenti con [[HTML]] separati
+		- ### Location:
+			- L’URL del documento attuale, se modificato crea un _redirect_.
+			- `window.location = "http://www.cs.unibo.it/";`
+			- `window.location.href = "http://www.cs.unibo.it/";``
+		- ### History:
+			- array di URL che sono stati visitati durante la navigazione, di una specifica finestra.
+				- _proprietà_: `length, current, next`
+				- _metodi_: `back(), forward(), go(int)` 
+		- ### Document☻:
+			- rappresenta il contenuto del documento visualizzato correntemente all’interno della window 
+- # DOM:
+	- _document object model_.
+	- è una API per documenti [[HTML]], definisce la struttura logica dei documenti ed il modo in cui si accede e si manipola un documento
+	- identico in tutti i browser 
+	- ad ogni componente può essere applicata qualsiasi tipo di operazione  
+	- ## ES:
+		- ![[Pasted image 20250206155335.png|700]]
+	- ## Oggetti del DOM:
+		- basata sulla classe principale (_astratta_) DOM-NODE, da cui discendono altre classi. 
+			- _DOMDocument_:
+				- il documento di cui si sta parlando e specifica i metodi per accederci, equivalente alla radice dell’albero.
+				- ![[Pasted image 20250206155801.png]]
+			- _DOMElement_:
+				- ogni singolo elemento del documento e specifica i metodi per accedere a ognuno di quegli elementi.  
+				- ![[Pasted image 20250206155900.png]]
+			- _DOMAttr_:
+				- ogni singolo attributo del documento
+			- _DOMText_:
+				- ogni singolo nodo di testo del documento
+			- _DOMComment, DOMProcessingInstruction, DOMCDATASection, DOMDocumentType_, ecc.
+		- ### DOM Node:
+			- pecifica i metodi per accedere a tutti gli elementi di un nodo di un documento, inclusi il nodo radice, il nodo documento, i nodi elemento, i nodi attributo, i nodi testo, ecc.
+			- ![[Pasted image 20250206155648.png|600]]
+	- ## InnerHTML:
+		- permette di accedere al contenuto di un sottoalbero (escluso il tag dell’elemento radice).
+	- ## OuterHTML:
+		- permette di accedere al contenuto di un sottoalbero (compreso il tag dell’elemento radice).
+	- ## ES dei precedenti:
+		- ![[Pasted image 20250206160126.png]]
+			- dato questo HTML.
+		- ![[Pasted image 20250206160142.png]]
+		- b vale: `"<p>paragrafo!</p>"`
+		- c vale: `"<div id="d"><p>Paragrafo!</p></div>"`
+	- ## navigator:
+		- permette di sapere informazioni riguardanti varie cose del PC come : dimensione finestra, sistema operativo, browser, ecc…
+- # Link Utili:
+	- 

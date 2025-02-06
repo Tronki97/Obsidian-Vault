@@ -867,6 +867,7 @@ proibito
 progettato
 parlanti
 precisato
+pecifica
 realizzare
 rappresentare
 risultato
@@ -1762,6 +1763,9 @@ rHO
 restrizioni
 ripetizioni
 ridefinisce
+raccolgono
+reagisce
+rappresentandolo
 la
 le
 lo
@@ -2878,6 +2882,8 @@ ANr
 American
 Area
 Areas
+Attributi
+Adatto
 nel
 necessario
 numero
@@ -3425,6 +3431,7 @@ nVm
 ntt
 nMr
 numericamente
+novembre
 capire
 codifiche
 capacit
@@ -4609,6 +4616,8 @@ convertibile
 coreano
 cinesi
 corpo
+chiamare
+costruttore
 avendo
 alcune
 arriva
@@ -5547,6 +5556,11 @@ antichi
 antiche
 accentate
 accettati
+agire
+ancore
+accedo
+asincrona
+associando
 un
 una
 usato
@@ -8389,6 +8403,9 @@ inventate
 ideografici
 ideografico
 impediscono
+inizializzare
+interattivit
+inclusi
 modo
 mentre
 massimo
@@ -9145,6 +9162,9 @@ mainframe
 moderni
 mail
 multi
+muore
+millisecondi
+mezzanotte
 esempio
 eccede
 errori
@@ -9822,6 +9842,7 @@ europei
 ebraico
 elfico
 estensibile
+escluso
 base
 bit
 basano
@@ -10344,6 +10365,7 @@ bkn
 bKu
 bdC
 bsXp
+bottone
 quindi
 questo
 quelle
@@ -11925,6 +11947,8 @@ semibyte
 sottosequenze
 surrogati
 simple
+sincrona
+settimana
 otterremmo
 ottenere
 occupare
@@ -12513,6 +12537,7 @@ oXM
 ogi
 organizzate
 orientali
+orario
 va
 valore
 viene
@@ -13120,6 +13145,7 @@ vyy
 vhiy
 vuote
 varia
+visualizzata
 troppo
 testimone
 tramite
@@ -13781,6 +13807,8 @@ tedesca
 tipografiche
 text
 testuali
+tardi
+trascorsi
 grandi
 gli
 grande
@@ -14334,6 +14362,8 @@ geroglifici
 glifi
 greca
 grasseto
+generatrice
+gennaio
 NOT
 NotePad
 Nu
@@ -15452,6 +15482,8 @@ IFw
 Interchange
 IEC
 Ideographic
+Immagini
+InnerHTML
 Rappresentazione
 Registri
 Register
@@ -18073,6 +18105,15 @@ DcI
 Digitalizzazione
 Decimal
 Diviso
+Durante
+DOMDocument
+DOMElement
+DOMAttr
+DOMText
+DOMComment
+DOMProcessingInstruction
+DOMCDATASection
+DOMDocumentType
 Le
 La
 Lg
@@ -19072,6 +19113,7 @@ Multilingual
 Multipurpose
 Mail
 Messaggi
+Membri
 ES
 Esempi
 Ex
@@ -22217,14 +22259,11 @@ Hqy
 HNNV
 Hhq
 HqqqL
-Hea
 Hxq
 HEE
 HAJ
 HHmgH
 Hanoi
-Heap
-Heapsort
 HlX
 HAS
 HPj
@@ -22457,7 +22496,6 @@ HGUG
 HyP
 HLB
 Hessiana
-Header
 Heuristic
 HUU
 HDD
@@ -23091,9 +23129,6 @@ hnnN
 hzy
 hqq
 hHf
-heap
-heapsize
-heapify
 hro
 htf
 hCCbI
@@ -23253,7 +23288,6 @@ huaW
 hXy
 hDT
 hlAW
-header
 hzE
 hyz
 hYg
@@ -23381,7 +23415,6 @@ hYH
 hxq
 hla
 hYN
-head
 headProcQ
 hell
 heP
@@ -25706,6 +25739,8 @@ OLA
 OKMM
 OLf
 Ordine
+Oggetti
+OuterHTML
 xz
 xX
 xF

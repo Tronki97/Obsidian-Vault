@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Tecnologie Web/Javascript/Funzioni javascript.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
-            }
-          },
-          {
-            "id": "3b26f11c83d30fe7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Tecnologie Web/HTTP & REST/API REST.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "API REST"
+              "title": "Funzioni javascript"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -226,44 +201,45 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3b26f11c83d30fe7",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Pasted image 20250206160752.png",
+    "Secondo Anno/Tecnologie Web/Javascript/client-side JS.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Funzioni javascript.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Javascript.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Javascript server-side.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Programmazione asincrona.md",
+    "Secondo Anno/Tecnologie Web/componenti.md",
+    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
+    "Secondo Anno/Tecnologie Web/HTML.md",
+    "Secondo Anno/Tecnologie Web/intro.md",
+    "Secondo Anno/Tecnologie Web/Markup.md",
+    "Secondo Anno/Tecnologie Web/modularizzazione.md",
+    "Secondo Anno/Tecnologie Web/Page layout.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Temi trasversali di Javascript.md",
+    "Pasted image 20250206160142.png",
+    "Pasted image 20250206160126.png",
+    "Pasted image 20250206155900.png",
+    "Pasted image 20250206155801.png",
+    "Pasted image 20250206155648.png",
+    "Pasted image 20250206155335.png",
+    "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
+    "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
+    "Secondo Anno/Tecnologie Web/Progetto/Credenziali mongoDB.md",
+    "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
+    "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
+    "Secondo Anno/Tecnologie Web/Javascript",
+    "Homepage.md",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/API REST.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/Computer network.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/HTTP.md",
     "Screenshot (12).png",
     "Screenshot (9).png",
-    "Secondo Anno/Tecnologie Web/HTML.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Credenziali mongoDB.md",
-    "Homepage.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri/Standard unico.md",
     "Pasted image 20250131130413.png",
     "Pasted image 20250131130323.png",
-    "Pasted image 20250131130238.png",
-    "Pasted image 20250131125907.png",
-    "Pasted image 20250131125840.png",
-    "Pasted image 20250131125759.png",
-    "Pasted image 20250131125711.png",
-    "Pasted image 20250131125636.png",
-    "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
-    "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
-    "Secondo Anno/Tecnologie Web/client-side JS.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Untitled.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP da sincrono a Asincrono.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP asincrono.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP da asincrono a sincrono.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/MP totalmente asincrono.md",
-    "Secondo Anno/Calcolo Numerico/Imaging.md",
-    "Secondo Anno/Sistemi Operativi/progetto/progetto sistemi operativi..md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo gradienti coniugati (CGLS).md",
-    "Secondo Anno/Sistemi Operativi/laboratorio/Laboratorio SO.md",
-    "Secondo Anno/Sistemi Operativi/laboratorio/linguaggio C.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/Esercizi concorrenza.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing/Message passing.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/semafori/Semafori Binari.md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/Metodo di discesa del gradiente.md",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/monitor/Monitor con i semafori.md",
     "latexsheet-a4.pdf",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione",
     "Secondo Anno/Calcolo Numerico/Approssimazione dei dati",
@@ -273,7 +249,6 @@
     "Secondo Anno/Reti di Calcolatori/livello trasporto",
     "Secondo Anno/Sistemi Operativi/Concorrenza/semafori",
     "Secondo Anno/Sistemi Operativi/Concorrenza/monitor",
-    "Secondo Anno/Reti di Calcolatori/livello rete",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

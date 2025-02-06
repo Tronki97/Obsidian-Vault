@@ -10,5 +10,7 @@ data: "`2025-01-13 19:17`"
 	- `ssh gocker` ci accedo, 
 	- `restart site232465`
 	- site232465.tw.cs.unibo.it
+- # Test in locale:
+	- per il back-end dopo una modifica faccio `npm run build` e poi avvio con node il file del back-end:  `node index.js`
 - # Link Utili:
 	- 

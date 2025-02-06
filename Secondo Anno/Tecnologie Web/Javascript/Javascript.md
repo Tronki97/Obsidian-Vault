@@ -18,7 +18,15 @@ data: "`2024-10-24 17:08`"
 		- ### Server-side: routing
 			- questi servizi son associati a [[URI (Uniform Resource Identifier)|URI]]. Creare servizi diversi  e inserirli in file separati ciascuno con un URI proprio. Aprendo una connessione all'URI, viene invocato lo script associato ed eseguito il servizio.
 			- _Nodejs_ associa una funzione _javascript_ ad ogni tipo di URI aprendo una connessione verso esso, lo script centrale esegue la funzione corrispondente. 
-	-  
+	- ## Eseguire uno script sul browser:
+		- _in maniera asincrona_:  appena lo script viene letto, in un tag `<script>` o in un file.
+			- Adatto per inizializzare oggetti e variabili da usare più tardi.
+		- _in maniera sincrona_: associando il codice ad un evento (tipo un click di un bottone). 
+		- _in maniera asincrona_: associando il codice ad completamento di un'operazione di rete.
+			- funzioni eseguite appena la richiesta [[HTTP]] asincrona è completata e i dati sono stati ricevuti.
+		- _in maniera asincrona_: associando il codice ad un _timeout_
+		- Durante l’esecuzione di uno script il _browser_ è bloccato e non reagisce agli input dell’utente. 
+			- per questo motivo gli script devono essere veloci per garantire l’interattività del sito. 
 - # Similitudini con altri linguaggi:
 	- ## Tipi di dati:  
 		- _numeri_.
@@ -52,10 +60,8 @@ data: "`2024-10-24 17:08`"
 		- questo concetto può essere usato come controllo negli `if`:
 			- `if(value) //agisci`
 			- per controllare che la variabile non sia vuota e nulla.
-		- 
 	- ## funzioni come entità di prima classe:
 		- una funzione è un oggetto che ha un valore (_di tipo object_) e con metodo _exec_ 
-		- 
 		- ### funzione filtro:
 			- permette di fare certe operazioni (sugli array) molto efficientemente
 			- per esempio basandosi su un certo campo di un array.
@@ -65,7 +71,18 @@ data: "`2024-10-24 17:08`"
 		- ### funzione bind(obj, args):
 			- associa dei parametri a funzioni anonime o chiamate indirettamente:
 				- ![[Pasted image 20241111170432.png]]
-			- 
+	- ## Date:
+		- Una data è un oggetto che esprime un giorno e un orario rappresentandolo come il numero di millisecondi trascorsi dalla mezzanotte del 1 gennaio 1970.
+		- ### costruttore:
+			- `new Date()` restituisce la data e l’ora corrente.
+			- `new Date(2019, 10, 1)` restituisce la data 1 novembre 2019.
+		- ### Metodi: 
+			- `getDay()`: 
+				- restituisce il giorno della settimana in formato numerico.
+			- `toDateString()`:
+				- restituisce la data in formato stringa.
+			- `toLocaleDateString()`:
+				- restituisce la data in formato stringa numerico (_Es. 06/02/2025_) in base alla lingua del browser.
 	- ## Classi e prototipi:
 		- Membri: spazi dati.
 		- metodi: funzioni che vanno ad agire sugli oggetti delle classi su cui sono definiti.
