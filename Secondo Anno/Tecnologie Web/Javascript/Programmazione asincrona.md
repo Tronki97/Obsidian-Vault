@@ -1,10 +1,14 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: []
+aliases:
+  - promesse
+  - generator
+  - yeld
+  - async
+  - await
 data: "`2024-12-02 16:14`"
 ---
-- # Promesse:
+- # Promesse: ^0fbeb4
 	- permettono di avere, al posto di un callback hell, posso concatenare una sequenza di `.then` che gestisce la richiesta che faccio 
 		- ![[Pasted image 20241202162115.png]]
 		-  

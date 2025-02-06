@@ -1,7 +1,14 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: 
+aliases:
+  - frame
+  - window
+  - location
+  - history
+  - DOM
+  - DOM node
+  - innerHTML
+  - outerHTML
 data: "`2024-11-07 15:19`"
 ---
 - # Oggetti principali :
@@ -20,7 +27,7 @@ data: "`2024-11-07 15:19`"
 				- _metodi_: `back(), forward(), go(int)` 
 		- ### Document☻:
 			- rappresenta il contenuto del documento visualizzato correntemente all’interno della window 
-- # DOM:
+- # DOM: ^21e6a2
 	- _document object model_.
 	- è una API per documenti [[HTML]], definisce la struttura logica dei documenti ed il modo in cui si accede e si manipola un documento
 	- identico in tutti i browser 

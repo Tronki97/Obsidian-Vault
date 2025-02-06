@@ -868,6 +868,8 @@ progettato
 parlanti
 precisato
 pecifica
+permettendo
+programmaticamente
 realizzare
 rappresentare
 risultato
@@ -1766,6 +1768,7 @@ ridefinisce
 raccolgono
 reagisce
 rappresentandolo
+ricezione
 la
 le
 lo
@@ -2884,6 +2887,9 @@ Area
 Areas
 Attributi
 Adatto
+Asynchronous
+And
+Axios
 nel
 necessario
 numero
@@ -3432,6 +3438,7 @@ ntt
 nMr
 numericamente
 novembre
+nativa
 capire
 codifiche
 capacit
@@ -5561,6 +5568,10 @@ ancore
 accedo
 asincrona
 associando
+arrow
+ajax
+annidiate
+annidate
 un
 una
 usato
@@ -6922,6 +6933,7 @@ dozzine
 dentici
 descrizioni
 disuso
+delimitatori
 <<<<<<< HEAD
 =======
 >>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
@@ -7535,6 +7547,9 @@ fMa
 frju
 fvm
 felicit
+freccia
+frequentemente
+fbeb
 in
 il
 invece
@@ -8406,6 +8421,9 @@ impediscono
 inizializzare
 interattivit
 inclusi
+inverti
+innerHTML
+illeggibile
 modo
 mentre
 massimo
@@ -9165,6 +9183,7 @@ multi
 muore
 millisecondi
 mezzanotte
+modula
 esempio
 eccede
 errori
@@ -9843,6 +9862,8 @@ ebraico
 elfico
 estensibile
 escluso
+every
+esportare
 base
 bit
 basano
@@ -11949,6 +11970,10 @@ surrogati
 simple
 sincrona
 settimana
+selezionati
+some
+spalmare
+sconsigliato
 otterremmo
 ottenere
 occupare
@@ -12538,6 +12563,8 @@ ogi
 organizzate
 orientali
 orario
+outerHTML
+open
 va
 valore
 viene
@@ -13146,6 +13173,7 @@ vhiy
 vuote
 varia
 visualizzata
+virgolette
 troppo
 testimone
 tramite
@@ -14364,6 +14392,7 @@ greca
 grasseto
 generatrice
 gennaio
+generator
 NOT
 NotePad
 Nu
@@ -23449,6 +23478,7 @@ hzz
 hAc
 hno
 hRZ
+history
 JZ
 JT
 Jd
@@ -23895,6 +23925,7 @@ JKU
 JbTb
 JrP
 JKKoPY
+JavaScript
 kB
 kW
 kWs
@@ -24765,6 +24796,7 @@ jtv
 jqb
 jSeDGK
 jaM
+jquery
 word
 wu
 wf
@@ -25741,6 +25773,7 @@ OLf
 Ordine
 Oggetti
 OuterHTML
+Operatore
 xz
 xX
 xF
@@ -29889,6 +29922,7 @@ Vhr
 VWLT
 VBL
 Vtv
+Virgolette
 öG
 öH
 özw

@@ -1,7 +1,12 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: 
+aliases:
+  - spread
+  - falsy
+  - truthy
+  - closure
+  - date
+  - data
 data: "`2024-10-24 17:08`"
 ---
 - # Sintassi:
@@ -45,6 +50,9 @@ data: "`2024-10-24 17:08`"
 			- `5==='5'` è falso siccome non avviene il casting di `5` in `'5'` 
 		- `!==` disuguaglianza senza casting:
 			- `5!=='5'` è vero siccome non avviene il casting di `5` in `'5'` 
+		- ### Operatore spread:
+			- `...` permette di spalmare i singoli elementi di un elemento strutturato:
+				- ![[Pasted image 20250206162041.png||700]]
 	- ## Dati strutturati:
 		- lista di coppie, `nome: "valore"` 
 		- `"valore"` può anche essere un altro dato strutturato.   
@@ -62,10 +70,6 @@ data: "`2024-10-24 17:08`"
 			- per controllare che la variabile non sia vuota e nulla.
 	- ## funzioni come entità di prima classe:
 		- una funzione è un oggetto che ha un valore (_di tipo object_) e con metodo _exec_ 
-		- ### funzione filtro:
-			- permette di fare certe operazioni (sugli array) molto efficientemente
-			- per esempio basandosi su un certo campo di un array.
-			- []()
 		- ### funzione anonima:
 			- funzione esterna che ha come parametro una funzione interna.
 		- ### funzione bind(obj, args):
@@ -95,7 +99,7 @@ data: "`2024-10-24 17:08`"
 			- 
 	- ## Gestione asincronicità:
 		- algoritmi complessi in cui varie parti non vengono eseguite sequenzialmente ma con interruzioni di durata non prevedibile, 
-		- promesse:
+		- [[Programmazione asincrona#^0fbeb4|promesse]]:
 		- funzioni di callback:
 		- async e await:
 		- 

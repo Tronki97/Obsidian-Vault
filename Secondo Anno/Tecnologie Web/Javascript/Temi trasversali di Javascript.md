@@ -1,11 +1,14 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: []
+aliases:
+  - JQuery
+  - jquery
+  - AJAX
+  - ajax
 data: "`2024-11-25 16:17`"
 ---
 - # Navigazione sul DOM:
-	- il DOM non possiede modi per guardare un nodo specifico dell’albero, quindi deve per forza partire dalla radice e poi procedere normalmente.
+	- il [[client-side JS#^21e6a2|DOM]] non possiede modi per guardare un nodo specifico dell’albero, quindi deve per forza partire dalla radice e poi procedere normalmente.
 	- XPATH: è una sintassi stringa dove definisco i passi per arrivare ai nodi che mi servono.
 		- ES: `/child::doc/child::chapter/descendant::para`
 		- Equivalente: `/doc/chapter//para` 
@@ -20,17 +23,24 @@ data: "`2024-11-25 16:17`"
 	- `evaluate()`
 		- restituisce un iteratore sui nodi che soddisfano la query
 - # JQuery:
-	- è una libreria
+	- è una libreria che fornisce supporto per la navigazione e la modifica del DOM
 	- L’oggetto `$`
 		- definisce una funzione che ha come parametro un selettore [[CSS e tipografia|CSS]] che viene cercato su tutto il DOM:
 			- ![[Pasted image 20241125165103.png]]
 			- se esistono più elementi che soddisfano la query allora la funzione ciclerà su tutti quelli e ci farà qualsiasi cosa debba farci 
 - # AJAX:
+	- _Asynchronous JavaScript And XML _
 	- insieme di tecnologie che regolano l’interazione col web.
 	- richiede al server dei frammenti di informazione che poi andrà ad utilizzare con [[Javascript]] 
-	- è molto veloce, non necessita di ricaricare la pagina, è asincrono.
-	- difetti:
+	- _è molto veloce, non necessita di ricaricare la pagina, è asincrono._
+	- ## difetti:
 		- non è accessibile per persone con difficoltà visive:
 			- in caso il documento venga modificato in modo asincrono, lo screen reader non si accorge di nulla. 
+- # Axios:
+	- Una libreria open source del 2015 basata su [[Programmazione asincrona#^0fbeb4|promesse]], usata frequentemente su React e Vue 
+	- ![[Pasted image 20250206163208.png|700]]
+- # Fetch: 
+	- Una funzione nativa di Javascript che permette di fare richieste HTTP basato sulle promesse, infatti ogni singolo passaggio lo è inclusa la ricezione e decodifica della risposta.
+	- ![[Pasted image 20250206163343.png|700]]
 - # Link Utili:
 	- 
