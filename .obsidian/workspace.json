@@ -11,24 +11,12 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "immagini/Pasted image 20250131124951.png"
               },
-              "icon": "lucide-file",
-              "title": "interpolazione (TW)"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250131124951"
             }
           }
         ]
@@ -201,28 +189,31 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Secondo Anno/Tecnologie Web/Javascript/server-side JS.md",
-    "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
-    "Secondo Anno/Tecnologie Web/Javascript/modularizzazione.md",
-    "Pasted image 20250206165413.png",
-    "Pasted image 20250206165358.png",
-    "Pasted image 20250206165217.png",
-    "Pasted image 20250206165207.png",
+    "Secondo Anno/Tecnologie Web/CSS/CSS.md",
+    "Secondo Anno/Tecnologie Web/CSS/Tipografia.md",
+    "Secondo Anno/Tecnologie Web/CSS",
+    "immagini/Pasted image 20250207162035.png",
     "Secondo Anno/Tecnologie Web/Javascript/Programmazione asincrona.md",
+    "Homepage.md",
+    "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
+    "Secondo Anno/Tecnologie Web/Javascript/server-side JS.md",
+    "Secondo Anno/Tecnologie Web/Javascript/modularizzazione.md",
+    "immagini/Pasted image 20250206165413.png",
+    "immagini/Pasted image 20250206165358.png",
+    "immagini/Pasted image 20250206165217.png",
+    "immagini/Pasted image 20250206165207.png",
     "Secondo Anno/Tecnologie Web/Javascript/Temi trasversali di Javascript.md",
     "Secondo Anno/Tecnologie Web/Javascript/client-side JS.md",
     "Secondo Anno/Tecnologie Web/Javascript/Funzioni javascript.md",
     "Secondo Anno/Tecnologie Web/Javascript/Javascript.md",
-    "Pasted image 20250206163343.png",
-    "Pasted image 20250206163208.png",
-    "Pasted image 20250206162041.png",
-    "Pasted image 20250206161446.png",
-    "Pasted image 20250206161027.png",
-    "Pasted image 20250206160752.png",
+    "immagini/Pasted image 20250206163343.png",
+    "immagini/Pasted image 20250206163208.png",
+    "immagini/Pasted image 20250206162041.png",
+    "immagini/Pasted image 20250206161446.png",
+    "immagini/Pasted image 20250206161027.png",
     "Secondo Anno/Tecnologie Web/componenti.md",
-    "Secondo Anno/Tecnologie Web/CSS e tipografia.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
     "Secondo Anno/Tecnologie Web/intro.md",
     "Secondo Anno/Tecnologie Web/Markup.md",
@@ -233,7 +224,6 @@
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
     "Secondo Anno/Tecnologie Web/Javascript",
-    "Homepage.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/API REST.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/Computer network.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/HTTP.md",
@@ -247,7 +237,6 @@
     "Secondo Anno/Sistemi Operativi/Concorrenza/message passing",
     "Secondo Anno/Reti di Calcolatori/livello trasporto",
     "Secondo Anno/Sistemi Operativi/Concorrenza/semafori",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/monitor",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

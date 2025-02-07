@@ -870,6 +870,9 @@ precisato
 pecifica
 permettendo
 programmaticamente
+progetti
+phWmdTnU
+pLA
 realizzare
 rappresentare
 risultato
@@ -1769,6 +1772,7 @@ raccolgono
 reagisce
 rappresentandolo
 ricezione
+rci
 la
 le
 lo
@@ -2336,6 +2340,7 @@ lingue
 latino
 latini
 limiti
+lBP
 ALU
 AND
 Address
@@ -2890,6 +2895,7 @@ Adatto
 Asynchronous
 And
 Axios
+AYA
 nel
 necessario
 numero
@@ -4625,6 +4631,11 @@ cinesi
 corpo
 chiamare
 costruttore
+caricarlo
+cZyI
+cav
+cvC
+cblq
 avendo
 alcune
 arriva
@@ -5572,6 +5583,7 @@ arrow
 ajax
 annidiate
 annidate
+aUL
 un
 una
 usato
@@ -6145,6 +6157,7 @@ uze
 utilizzabili
 universale
 unifica
+uKA
 decremento
 del
 di
@@ -6934,6 +6947,8 @@ dentici
 descrizioni
 disuso
 delimitatori
+dQe
+dAbl
 <<<<<<< HEAD
 =======
 >>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
@@ -7550,6 +7565,7 @@ felicit
 freccia
 frequentemente
 fbeb
+fMD
 in
 il
 invece
@@ -8424,6 +8440,9 @@ inclusi
 inverti
 innerHTML
 illeggibile
+interpolare
+iXBg
+iai
 modo
 mentre
 massimo
@@ -10387,6 +10406,7 @@ bKu
 bdC
 bsXp
 bottone
+buP
 quindi
 questo
 quelle
@@ -10874,6 +10894,7 @@ qvs
 qYh
 qfmT
 qVjT
+qlD
 se
 sarebbe
 si
@@ -11974,6 +11995,7 @@ selezionati
 some
 spalmare
 sconsigliato
+sPP
 otterremmo
 ottenere
 occupare
@@ -13174,6 +13196,8 @@ vuote
 varia
 visualizzata
 virgolette
+vQQ
+vFFR
 troppo
 testimone
 tramite
@@ -13837,6 +13861,9 @@ text
 testuali
 tardi
 trascorsi
+tvJG
+tgl
+tom
 grandi
 gli
 grande
@@ -14393,6 +14420,8 @@ grasseto
 generatrice
 gennaio
 generator
+gEj
+gBi
 NOT
 NotePad
 Nu
@@ -14896,6 +14925,8 @@ NcU
 NsN
 NCqq
 Nlm
+Nascondere
+Nbl
 Il
 Instruction
 IR
@@ -16035,6 +16066,8 @@ ReE
 ROk
 Repertorio
 RFC
+RGt
+RJb
 Si
 Se
 Status
@@ -16659,6 +16692,9 @@ SSP
 Special
 String
 SMTP
+SwT
+Sns
+Sgn
 BINARY
 Bus
 BX
@@ -17124,6 +17160,8 @@ BPY
 BiDR
 BvH
 BVXG
+BSJb
+But
 Per
 Program
 PC
@@ -17644,6 +17682,8 @@ PTT
 Private
 Principi
 Plane
+PBr
+Pew
 Di
 Data
 Dati
@@ -18143,6 +18183,9 @@ DOMComment
 DOMProcessingInstruction
 DOMCDATASection
 DOMDocumentType
+Dio
+Dis
+Diw
 Le
 La
 Lg
@@ -18645,6 +18688,7 @@ LUu
 Lbb
 Latino
 Limiti
+LzH
 Modulo
 Massimo
 Memory
@@ -19143,6 +19187,9 @@ Multipurpose
 Mail
 Messaggi
 Membri
+Mald
+MXW
+MYLZ
 ES
 Esempi
 Ex
@@ -19677,6 +19724,8 @@ Extended
 Esigenza
 Efficienza
 Extensions
+EOo
+ETP
 Come
 Codifica
 Counter
@@ -20716,6 +20765,7 @@ QRT
 QBW
 QUF
 QnW
+QzQm
 Formato
 FLIP
 FLOP
@@ -21235,6 +21285,9 @@ FcF
 FMU
 FyI
 FDy
+FgD
+FCJ
+FpI
 Word
 WK
 WB
@@ -21669,6 +21722,7 @@ WBq
 WTp
 WrM
 Wet
+WSo
 zero
 zip
 zL
@@ -22145,6 +22199,9 @@ zUb
 zÖ
 zUIJ
 zFW
+zdsL
+zUXJ
+zty
 Half
 HACK
 HIT
@@ -22598,6 +22655,7 @@ HovH
 HvN
 HZY
 HRe
+HgY
 XOR
 Xm
 Xo
@@ -23016,6 +23074,12 @@ XySO
 Xpt
 XAqQ
 XGp
+XYR
+XYt
+Xbls
+XNN
+XeF
+XCWo
 ha
 ho
 hack
@@ -23926,6 +23990,7 @@ JbTb
 JrP
 JKKoPY
 JavaScript
+JTUU
 kB
 kW
 kWs
@@ -24381,6 +24446,10 @@ kHO
 kbM
 khl
 klingon
+kmmECC
+kfF
+kwc
+kLpyB
 jmp
 jy
 jwä
@@ -24797,6 +24866,7 @@ jqb
 jSeDGK
 jaM
 jquery
+jmmM
 word
 wu
 wf
@@ -25232,6 +25302,8 @@ wSVR
 wPQ
 whx
 wxU
+wTQ
+wcQ
 Oltre
 OgSf
 Od
@@ -25774,6 +25846,8 @@ Ordine
 Oggetti
 OuterHTML
 Operatore
+OOc
+Onx
 xz
 xX
 xF
@@ -26238,6 +26312,10 @@ xDHQ
 xDU
 xYN
 xII
+xME
+xwJ
+xbL
+xZb
 Kq
 KG
 KR
@@ -27146,6 +27224,7 @@ UCS
 UTF
 Use
 Unificazione
+UbhcD
 Zx
 ZD
 ZRz
@@ -27530,6 +27609,7 @@ ZEn
 Zzo
 ZWS
 ZaR
+ZRc
 YQ
 Yz
 YI
@@ -27957,6 +28037,8 @@ YrAo
 Ydf
 YdK
 Yyc
+Yrh
+YlCo
 yI
 ys
 yN
@@ -28929,6 +29011,7 @@ Tbo
 Tot
 TIP
 Tertiary
+TBO
 GY
 GT
 Ghw
@@ -29923,6 +30006,7 @@ VWLT
 VBL
 Vtv
 Virgolette
+VUE
 öG
 öH
 özw
@@ -29982,3 +30066,4 @@ Virgolette
 ünNq
 üz
 üB
+üK

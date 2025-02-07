@@ -14,7 +14,7 @@ data: "`2024-12-05 13:32`"
 - # Intro:
 	- certe parti di una pagina web come: 
 		- carousel, navbar, pannello modale.
-	- queste componenti non sono presenti in [[HTML]] ma vengono costruite ogni volta e gestite con [[CSS e tipografia|CSS]] + [[Javascript]] + [[Markup]] ma sono complessi da fare e leggere.
+	- queste componenti non sono presenti in [[HTML]] ma vengono costruite ogni volta e gestite con [[Tipografia|CSS]] + [[Javascript]] + [[Markup]] ma sono complessi da fare e leggere.
 - # Def:
 	- un componente è un estensione dell’HTML che permette di creare comportamenti, in maniera efficiente e omogenea, ottenibili comunque con una combinazione dei 3 big ma in maniera lunga e inefficiente. 
 - # Custom element:

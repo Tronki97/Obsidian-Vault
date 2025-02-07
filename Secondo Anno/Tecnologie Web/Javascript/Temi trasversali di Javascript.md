@@ -25,7 +25,7 @@ data: "`2024-11-25 16:17`"
 - # JQuery:
 	- è una libreria che fornisce supporto per la navigazione e la modifica del DOM
 	- L’oggetto `$`
-		- definisce una funzione che ha come parametro un selettore [[CSS e tipografia|CSS]] che viene cercato su tutto il DOM:
+		- definisce una funzione che ha come parametro un selettore [[Tipografia|CSS]] che viene cercato su tutto il DOM:
 			- ![[Pasted image 20241125165103.png]]
 			- se esistono più elementi che soddisfano la query allora la funzione ciclerà su tutti quelli e ci farà qualsiasi cosa debba farci 
 - # AJAX:

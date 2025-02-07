@@ -38,6 +38,10 @@ data: "`2024-12-02 16:14`"
 - # For await (… of …):
 	- adatto a costanti flussi di dati con dimensione indefinita, 
 	- ogni flusso viene eseguito nell’ordine in cui arriva e appena finisce viene eseguito il contenuto del ciclo.
-	- 
+- # Vantaggi:
+	- la programmazione asincrona permette di eseguire più istruzioni senza dover aspettare che quella precedente finisca utile quindi quando vengono eseguite certe operazioni che richiedono molto tempo,
+		- come delle chiamate a database o a server esterni.
+	- inoltre da un sensazione di fluidità e velocità al sito web.
+	- gestendo poi le operazioni di I/O senza far attendere il programma. 
 - # Link Utili:
 	- 
