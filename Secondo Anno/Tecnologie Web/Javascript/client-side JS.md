@@ -48,7 +48,7 @@ data: "`2024-11-07 15:19`"
 				- ogni singolo nodo di testo del documento
 			- _DOMComment, DOMProcessingInstruction, DOMCDATASection, DOMDocumentType_, ecc.
 		- ### DOM Node:
-			- pecifica i metodi per accedere a tutti gli elementi di un nodo di un documento, inclusi il nodo radice, il nodo documento, i nodi elemento, i nodi attributo, i nodi testo, ecc.
+			- specifica i metodi per accedere a tutti gli elementi di un nodo di un documento, inclusi il nodo radice, il nodo documento, i nodi elemento, i nodi attributo, i nodi testo, ecc.
 			- ![[Pasted image 20250206155648.png|600]]
 	- ## InnerHTML:
 		- permette di accedere al contenuto di un sottoalbero (escluso il tag dell’elemento radice).

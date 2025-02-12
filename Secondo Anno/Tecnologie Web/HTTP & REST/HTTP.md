@@ -72,7 +72,7 @@ data: "`2024-10-10 15:56`"
 	- 3xx redirection:
 		- la richiesta è corretta ma servono altre azioni da parte del client per terminare la richiesta 
 	- 4xx: client-error:
-		- ra richiesta del client non può essere soddisfatta
+		- la richiesta del client non può essere soddisfatta
 	- 5xx: Server error: 
 		- il server non riesce a soddisfare la richiesta per un problema interno
 - # Header 

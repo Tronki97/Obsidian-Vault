@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases: 
 data: "`2024-10-21 16:14`"
 ---
@@ -20,6 +19,12 @@ data: "`2024-10-21 16:14`"
 - # Selettore
 	- `.q::before{...}`, `.q::before{...}`: rappresentano le aree che si trovano prima e dopo il contenuto del blocco `q`  
 	- `a:hover{...}` caratteristiche della classe quando ci passi sopra col cursore senza cliccare. `active` invece quando lo si clicca 
+- # Proprietà:
+	- ## Canvas:
+		- Il canvas è l'area virtuale di posizionamento degli elementi del [[client-side JS#^21e6a2|DOM]] via [[CSS]]. E' un piano cartesiano infinito in larghezza e altezza, con l'asse delle x da sinistra a destra e l'asse delle y dall'alto in basso
+	- ## Viewport:
+		- è la parte della _canvas_ attualmente visibile all'utente. 
+		- l’utente può muoversi sul canvas attraverso lo scrolling.
 - # Layout:
 	- `content: grid`: 
 	- `content: flex`: 

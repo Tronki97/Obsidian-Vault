@@ -1,10 +1,111 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: 
+aliases:
+  - selettori
+  - statement
+  - box
+  - proprietà tipografiche
 data: "`2025-02-07 16:28`"
 ---
 - # Argomento:
-	- 
+	- _cascading style sheet_
+	- all’inizio non c’era presentazione per i siti web e al massimo l’utente poteva cambiare dimensione e font che erano visualizzati.
+	- cascading perché: 
+	    - si sovrappongono più fogli di stile e vengono applicati in ordine di priorità.
+	    - per esempio se avessi tre fogli di stile:
+		    - ![[Pasted image 20250207163742.png]]
+		- l’elemento p avrà i seguenti attributi:
+			- ![[Pasted image 20250207163827.png]]
+- # Come usare CSS:
+	- ## Inline:
+	    - si applica direttamente all’elemento [[HTML]] dentro al tag.
+	    - `style="color:red;"`
+		    - ![[Pasted image 20250207163536.png]]
+	- ## Internal:
+		- si applica all’interno del tag `<style>`. 
+		- `<style> h1{color:red;} </style>`
+			- ![[Pasted image 20250207163607.png|700]]
+	- ## External:
+	    - si crea un file `.css` e si collega al file HTML con il tag `<link>`.
+	    - `<link rel="stylesheet" href="style.css">`
+		    - ![[Pasted image 20250207163636.png|700]]
+	- inoltre si possono assegnare gli stili a più elementi con le classi e gli id.
+- # Statement:
+	- è l’indicazione di una proprietà:
+		- `color:red;`
+- # Selettori:
+	- permette di specificare un elemento o una classe di elementi:
+		- `h1` : indica tutti gli elementi con questo tag 
+		- `#p1` : tutti gli elementi con questo id 
+		- `.codice` : tutti gli elementi con questa classe
+		- `p.codice` : tutti gli elementi con tag p e classe codice
+		- `img[alt]` : tutti gli elementi `img` con attributo alt 
+	- ## pseudo-elementi:
+		- `::before` : inserisce contenuto prima dell’elemento
+		- `::after` : inserisce contenuto dopo l’elemento
+		- `::first-line` : seleziona la prima riga del testo
+		- `::first-letter` : seleziona la prima lettera del testo
+	- ## Prossimità:
+		- `div p` : tutti i paragrafi dentro a un div
+		- `div > p` : tutti i paragrafi figli diretti di un div
+		- `div + p` : il paragrafo che segue direttamente un div
+		- `div ~ p` : tutti i paragrafi che seguono un div
+- # regole:
+	- le regole sono dei blocchi di _statement_ associati ad un elemento tramite l’uso di un selettore.
+		- ![[Pasted image 20250207164309.png]]
+- # Tipi di dato:
+	- _Lunghezze assolute_:
+		- `cm, mm, in`: centimetri, millimetri, pollici
+		- `pt`: punto, 1/72 di pollice
+		- `pc`: pica, 12 punti
+		- `px`: pixel pari ad un pixel del display in uso, non è una misura standard
+	- _Lunghezze relative_: 
+		- `%`: percentuale
+		- `em`: multiplo della dimensione del carattere del font
+		- `rem`: multiplo della dimensione del carattere del font della radice
+		- `vh, vw`: percentuale dell'altezza o larghezza della _viewport_
+		- `lh`: altezza della linea
+		- `ch`: larghezza di un carattere
+		- `ex`: altezza di una x minuscola
+- # Proprietà: 
+	- sono le caratteristiche degli elementi che si possono modificare.
+		 - `color, font-family, margin` ecc…
+	- ## Box:
+		- ![[Pasted image 20250210161555.png]]
+		- La visualizzazione di un documento con CSS avviene identificando lo spazio di visualizzazione di ciascun elemento.
+		- Ogni elemento è presentato da una box che ne contiene il contenuto.
+		- Le scatole sono in relazione alle altre, e sono caratterizzate da flusso e posizione.
+		- ### Elementi:
+			- `margin`: spazio che separa una box da un’altra
+			- `border`: bordo della box a cui si può assegnare colore, spessore e stile
+			- `padding`: spazio tra il contenuto e il bordo
+				- ha il colore dello sfondo del contenuto.
+			- `content`: spazio dove si trova il contenuto della box
+		- ### Proprietà della box:
+			- `color`: colore
+			- `background-color`: colore di sfondo
+			- `box-shadow`: ombra della box
+				- `h-distance, v-distance, color`
+			- ![[Pasted image 20250207170325.png]]
+	- ## Proprietà tipografiche:
+		- `font-family`: tipo di carattere da utilizzare
+			- ![[Pasted image 20250207165750.png]]
+		- `font-size`: dimensione del carattere
+		- `font-style`: stile del carattere
+			- `italic, oblique, normal`
+		- `font-weight`: spessore del carattere
+			- `bold, normal, 100, 200, ...`
+		- `font-variant`: variante del carattere
+			- `small-caps, normal`
+		- ![[Pasted image 20250207165921.png]]
+		- `text-align`: allineamento del testo
+			- `left, right, center, justify`
+		- `text-decoration`: decorazione del testo
+			- `underline, overline, line-through, none`
+		- `text-indent`: rientro della prima riga
+		- `line-height`: altezza della linea
+		- ![[Pasted image 20250207170108.png]]
+		- 
+
 - # Link Utili:
 	- 
