@@ -1,6 +1,10 @@
 ---
-tags: []
-aliases: 
+tags: 
+aliases:
+  - digest
+  - cookies
+  - autenticazione
+  - HTTP caching
 data: "`2024-11-18 16:11`"
 ---
 - # HTTP/2  HTTP/3:
@@ -76,12 +80,12 @@ data: "`2024-11-18 16:11`"
 	    - è un header che il server invia al client per richiedere l’autenticazione tramite uno status code 401.
 	    - il client risponde con un header `Authorization` con le credenziali
 	    - ### Schemi comuni:
-		    - Basic: 
+		    - #### Basic: 
 			    - il client manda le credenziali in chiaro 
 			    - il server risponde con un token
 			    - poco sicuro siccome la password passa in chiaro
 			    - 
-			- Digest:
+			- #### Digest:
 				- il client manda un hash della password
 				- il server decifra i dati e autentica se corretti 
 				- ![[Pasted image 20241118165453.png]]
