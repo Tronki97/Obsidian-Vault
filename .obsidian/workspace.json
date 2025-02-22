@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Sicurezza Di Rete.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Sicurezza Di Rete"
-            }
-          },
-          {
-            "id": "1e63f67e99f192aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Sicurezza Di Rete.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Sicurezza Di Rete"
+              "title": "Richiami Di Architettura"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -88,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "TTL",
+                "query": "fetch",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -226,14 +202,19 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1e63f67e99f192aa",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/NAT.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Pipeline.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2",
+    "Secondo Anno/Sistemi Operativi/Modulo 1",
+    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza Di Rete.md",
+    "Secondo Anno/Reti di Calcolatori/NAT.md",
     "-. Ripasso.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
     "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
-    "Homepage.md",
     "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
     "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Tecnologie Web/URI/URI (Uniform Resource Identifier).md",
@@ -251,9 +232,6 @@
     "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "Secondo Anno/Tecnologie Web/CSS/Page layout.md",
     "Secondo Anno/Tecnologie Web/CSS/Tipografia.md",
-    "Secondo Anno/Tecnologie Web/CSS/CSS.md",
-    "Secondo Anno/Tecnologie Web/Set di caratteri/Standard unico.md",
-    "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
     "immagini/Pasted image 20250207163536.png",
     "immagini/Pasted image 20250210161555.png",
     "immagini/Pasted image 20250207170325.png",
@@ -270,10 +248,8 @@
     "Secondo Anno/Calcolo Numerico/Ottimizzazione",
     "Secondo Anno/Calcolo Numerico/Approssimazione dei dati",
     "Secondo Anno/Sistemi Operativi/progetto",
-    "Secondo Anno/Sistemi Operativi/laboratorio",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/message passing",
-    "Secondo Anno/Reti di Calcolatori/livello trasporto",
-    "Secondo Anno/Sistemi Operativi/Concorrenza/semafori",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/message passing",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
