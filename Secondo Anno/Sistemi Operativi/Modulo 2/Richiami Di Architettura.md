@@ -83,7 +83,7 @@ data: "`2025-02-22 18:15`"
 			+ Se l'interrupt è mascherato si salta questo passaggio e si continua l'esecuzione.
 		4. Preparazione al trasferimento di controllo dal programma all'interrupt handler.
 			+ Il primo metodo è quello di salvare i registri critici.
-				+ Viene salvato il minimo indispensabile, quindi oltre al program counter viene salvato anche il registro di stato.
+				+ Viene salvato il minimo indispensabile, quindi oltre al [[Registri#^b1a012||program counter]] viene salvato anche il registro di stato.
 			+ Il secondo è quello dello scambio di stato.
 				+ Viene fatto il salvataggio completo dello stato del processore.
 				+ Si fa la fotografia di tutti i processori e la si mette in un buffer insieme a quelle degli altri processori.
@@ -93,14 +93,14 @@ data: "`2025-02-22 18:15`"
 			+ Interrupt handler per ogni livello degli interrupt.
 		6. Caricamento del program counter con l'indirizzo iniziale dell'interrupt handler assegnato.
 			+ Insieme al caricamento del device driver, viene settato anche il modo kernel.
-			+ Mentre i processi utente sono in modo user, quindi accedono solo alla memoria assegnata, quando viene incaricato il device driver il sistema passa in kernel mode e quindi può usufruire di tutta la memoria presente all'interno del sistema.
+			+ Mentre i processi utente sono in modo _user_, quindi accedono solo alla memoria assegnata, quando viene incaricato il device driver il sistema passa in kernel mode e quindi può usufruire di tutta la memoria presente all'interno del sistema.
 			+ In questa modalità viene eseguito solamente codice presente nel SO.
 		7. Salvataggio dello stato del processore.
 		8. Gestione dell'interrupt.
 		9. Ripristino dello stato del processore.
 			+ Operazione inversa alla numero 7.
 		10. Ritorno del controllo al processo in esecuzione, o ad un altro processo se necessario.
-	+ I sistemi operativi moderni vengono chiamati interrupt driven, in quanto sono guidati dagli interrupt.
+	+ I sistemi operativi moderni vengono chiamati _interrupt driven_, in quanto sono guidati dagli interrupt.
 		+ Hanno quindi un ruolo centrale.
 + # Interrupt Multipli
 	+ Quello di prima riguardava la gestione di un solo interrupt.
@@ -108,7 +108,7 @@ data: "`2025-02-22 18:15`"
 		+ Si possono sequenzializzare gli interrupt (disabilitazione degli interrupt).
 			+ Quindi prima finisco uno e poi inizio l'altro.
 			+ L'ultimo ad arrivare viene sospeso per essere gestito in seguito.
-				+ Quindi quando viene eseguita l'istruzione successiva alla risoluzione del primo interrupt, si esegue l'altro interrupt, quindi punto 4.
+				+ Quindi quando viene eseguita l'istruzione successiva alla risoluzione del primo interrupt, si esegue l'altro interrupt, quindi _punto 4_.
 			+ Questo approccio e semplice ma non tiene conto della priorità degli interrupt.
 		+ Oppure si possono annidare l'esecuzioni degli interrupt.
 			+ Si gestiscono prima quelli con priorità maggiori e poi quelli con priorità minori.
@@ -178,7 +178,7 @@ data: "`2025-02-22 18:15`"
 				+ La cache è relativa al processore, quindi se ci sono più processori bisogna capire a chi appartiene cosa.
 + # Protezione Hardware
 	+ Bisogna evitare che i processi generino interferenze non previste, ma soprattutto che i processi utente non interferiscano con il sistema operativo.
-	+ Modo utente/Modo kernel:
+	+ ## Modo utente/Modo kernel:
 		+ Si tratta di un bit --> acceso = kernel, spento = user.
 		+ In modalità kernel i processi hanno accesso a tutte le istruzioni, incluse quelle privilegiate, che permettono di gestire totalmente il sistema.
 			+ Ad esempio disabilitare gli interrupt

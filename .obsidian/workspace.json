@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fetch",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -105,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Javascript.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Javascript"
+              "title": "Backlinks for Richiami Di Architettura"
             }
           },
           {
@@ -124,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Javascript.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Javascript"
+              "title": "Outgoing links from Richiami Di Architettura"
             }
           },
           {
@@ -139,7 +138,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -151,10 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Javascript.md"
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Javascript"
+              "title": "Outline of Richiami Di Architettura"
             }
           },
           {
@@ -202,10 +206,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Pipeline.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Spazi di probabilità.md",
+    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Pipeline.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Secondo Anno/Sistemi Operativi/Modulo 1",
@@ -213,8 +223,6 @@
     "Secondo Anno/Reti di Calcolatori/Sicurezza Di Rete.md",
     "Secondo Anno/Reti di Calcolatori/NAT.md",
     "-. Ripasso.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
     "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Tecnologie Web/URI/URI (Uniform Resource Identifier).md",
@@ -228,10 +236,6 @@
     "Secondo Anno/Tecnologie Web/Javascript/Javascript.md",
     "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
     "Secondo Anno/Tecnologie Web/Javascript/Funzioni javascript.md",
-    "Secondo Anno/Tecnologie Web/Javascript/client-side JS.md",
-    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
-    "Secondo Anno/Tecnologie Web/CSS/Page layout.md",
-    "Secondo Anno/Tecnologie Web/CSS/Tipografia.md",
     "immagini/Pasted image 20250207163536.png",
     "immagini/Pasted image 20250210161555.png",
     "immagini/Pasted image 20250207170325.png",
