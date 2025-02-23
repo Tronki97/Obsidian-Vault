@@ -8648,6 +8648,8 @@ intoccato
 integrato
 interferiscano
 intel
+impropri
+insiemistiche
 modo
 mentre
 massimo
@@ -12269,6 +12271,7 @@ segnala
 sector
 spento
 supervisore
+sottintende
 otterremmo
 ottenere
 occupare
@@ -17071,6 +17074,7 @@ Semplicemente
 SPEGNIMENTO
 SEEK
 SSD
+Sottoinsiemi
 BINARY
 Bus
 BX
@@ -18598,6 +18602,7 @@ Decode
 DMA
 Dischi
 Dispositivo
+Dimostrazioni
 Le
 La
 Lg

@@ -1,0 +1,56 @@
+---
+tags: []
+aliases: 
+data: "`2025-02-23 12:12`"
+---
+- # Argomento:
+	- $\Omega$ : _insieme di riferimento_
+	- $w \in \Omega$ : elemento dell’insieme $\Omega$
+	- ## Sottoinsiemi:
+		- $A \subseteq \Omega$ sottintende anche i _sottoinsiemi impropri_ di $\Omega$ 
+			- ($\Omega, \emptyset$)
+	- $\scr{P}\mathbf{(\Omega)}$ insieme delle parti
+	- $\scr{P}\mathbf{(\Omega)}$=$\{A \subset \Omega \}$
+	- ## Cardinalità di A:
+		- $|A|$: numero di elementi di A
+		- $\#A$ : A insieme finito.
+- # ES:
+	- $\Omega = \{a,b,c\}$, $\scr{P}\mathbf{(\Omega)}$?
+	- $$\scr{P}\mathbf{(\Omega)}\mathbf{=\{\Omega, \emptyset, \{a\}, \{b\},\{c\}, \{a,b\}, \{a,c\}, \{b,c\}\}}$$
+	- $$|\scr{P}\mathbf{(\Omega)}\mathbf{| = 2^{|\Omega|}=2^{3}=8}$$
+- # Operazioni insiemistiche:
+	- dati $A, B \subset \Omega$
+	- $A\cup B= \{w\in \Omega: w\in A \vee w\in B\}$
+	- $A\cap B=\{w\in \Omega: w\in A \wedge w\in B\}$
+	- $B \ \textbackslash  \ A= \{w\in \Omega: w\not \in A\}$
+		- Se $B=\Omega$ $\Omega \ \textbackslash  \ A=\{w\in \Omega: w\not \in A\}=: A^{C}$
+		- ![[Pasted image 20250223122830.png|400]]
+- # De Morgan:
+	- $(A\cap B)^{C}= A^{C}\cup B^{C}$
+	- $(A\cup B)^{C}= A^{C}\cap B^{C}$
+	- ## Dimostrazioni:
+		- $$w\in (A\cap B)^{C}\iff w\not\in A\cap B$$
+		- $$\iff w\notin A \vee w\notin B$$
+		- $$\iff w\in A^{C} \vee \in B^{C}$$
+			- ![[Pasted image 20250223123321.png]]
+		- $$\iff w\in (A^{C}\cup B^{C})$$
+- # Proprietà distributiva:
+	- $$A\cup (B\cap C)= (A\cup B)\cap (A\cup C)$$
+	- $$A\cup (\bigcap_{i=1}^{n}B_{i})=\bigcap_{i=1}^{n}(A\cup B_{i})$$
+	- $$A\cap (B\cup C)= (A\cap B)\cup (A\cap C)$$
+	- $$A\cap (\bigcup_{i=1}^{n}B_{i})=\bigcup_{i=1}^{n}(A\cap B_{i})$$
+- # Intersezione e unione numerabile:
+	- $(A_{i})_{i\in \mathbb{N}}$ successione di insiemi 
+	- $$\bigcup_{i=1}^{+\infty}A_{i}=\{ w\in \Omega: w\in A_{i} \mathbf{\ per \ qualche \ i}\}$$
+	- $$\bigcap_{i=1}^{+\infty}A_{i}=\{ w\in \Omega: w\in A_{i} \ \forall i\}$$
+	- ## ES:
+		- 1) $\Omega = \mathbb{R}$ , $A_{n}=\{n\}$ , $n\in \mathbb{N}$
+			- $\bigcup_{n=1}^{+\infty}A_{n}= \mathbb{N}$ 
+				- ![[Pasted image 20250223124304.png]]
+			- $\bigcap_{n=1}^{+\infty}A_{n}= \emptyset$
+		- 2) $\Omega= \mathbb{R}$ , $A_{n}=\left[ 0, \frac{1}{n} \right]$ , $n\in \mathbb{N}$
+			- $\bigcup_{n=1}^{+\infty}A_{n}= [0,1]$
+				- ![[Pasted image 20250223124515.png]]
+			- $\bigcap_{n=1}^{+\infty}A_{n}={0}$
+- # Link Utili:
+	- 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Richiami Di Architettura"
+              "title": "Problemi E Modelli"
             }
           }
         ]
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Richiami Di Architettura"
+              "title": "Backlinks for Problemi E Modelli"
             }
           },
           {
@@ -123,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Richiami Di Architettura"
+              "title": "Outgoing links from Problemi E Modelli"
             }
           },
           {
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Richiami Di Architettura"
+              "title": "Outline of Problemi E Modelli"
             }
           },
           {
@@ -206,13 +206,19 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Richiami di teoria degli insiemi.md",
+    "Pasted image 20250223124515.png",
+    "Pasted image 20250223124304.png",
+    "Pasted image 20250223123321.png",
+    "Pasted image 20250223122830.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Spazi di probabilità.md",
     "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Pipeline.md",
@@ -233,19 +239,12 @@
     "Secondo Anno/Tecnologie Web/HTTP & REST/HTTP.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/API REST.md",
-    "Secondo Anno/Tecnologie Web/Javascript/Javascript.md",
-    "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
-    "Secondo Anno/Tecnologie Web/Javascript/Funzioni javascript.md",
     "immagini/Pasted image 20250207163536.png",
     "immagini/Pasted image 20250210161555.png",
     "immagini/Pasted image 20250207170325.png",
     "immagini/Pasted image 20250207170108.png",
     "immagini/Pasted image 20250207165921.png",
     "immagini/Pasted image 20250207165750.png",
-    "immagini/Pasted image 20250207164309.png",
-    "immagini/Pasted image 20250207163827.png",
-    "immagini/Pasted image 20250207163742.png",
-    "immagini/Pasted image 20250207163636.png",
     "Secondo Anno/Tecnologie Web/CSS",
     "Secondo Anno/Tecnologie Web/Javascript",
     "latexsheet-a4.pdf",
