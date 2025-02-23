@@ -1,6 +1,11 @@
 ---
-tags: []
-aliases: 
+tags: 
+aliases:
+  - esperimento aleatorio
+  - esito
+  - evento
+  - spazio campionario
+  - esiti favorevoli
 data: "`2025-02-23 12:45`"
 ---
 - # Concetti primitivi:

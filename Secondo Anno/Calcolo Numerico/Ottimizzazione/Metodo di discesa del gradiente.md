@@ -4,7 +4,7 @@ aliases:
 data: "`2025-01-04 16:45`"
 ---
 - # Metodi di ricerca in linea:
-	- Sono un tipo di algoritmi che si basano sulla [[Classificazione punti di minimo#^273a33|condizione del primo ordine]] per calcolare soluzioni al problema di ottimizzazione [[problemi di Ottimizzazione#^d124c1|svincolato]]:
+	- Sono un tipo di algoritmi che si basano sulla [[Classificazione punti di minimo#^273a33|condizione del primo ordine]] per calcolare soluzioni al problema di ottimizzazione [[Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione#^d124c1|svincolato]]:
 		- $$min_{x} f(x)$$ 
 	- l’idea è di calcolare la soluzione attraverso un procedimento iterativo, scegliendo un termine $x_{0} \in \mathbb{R}^{n}$ si considera:
 		- $$x_{k+1}=x_{k}+\alpha_{k}p_{k}$$

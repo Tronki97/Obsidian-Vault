@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
+                "file": "Nomi, ambiente, blocchi, regole di scope.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Problemi E Modelli"
+              "title": "Nomi, ambiente, blocchi, regole di scope"
             }
           }
         ]
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
+                "file": "Nomi, ambiente, blocchi, regole di scope.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Problemi E Modelli"
+              "title": "Backlinks for Nomi, ambiente, blocchi, regole di scope"
             }
           },
           {
@@ -123,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
+                "file": "Nomi, ambiente, blocchi, regole di scope.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Problemi E Modelli"
+              "title": "Outgoing links from Nomi, ambiente, blocchi, regole di scope"
             }
           },
           {
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
+                "file": "Nomi, ambiente, blocchi, regole di scope.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Problemi E Modelli"
+              "title": "Outline of Nomi, ambiente, blocchi, regole di scope"
             }
           },
           {
@@ -208,37 +208,42 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
+    "Pasted image 20250223180416.png",
+    "immagini/Pasted image 20250223122830.png",
+    "Nomi, ambiente, blocchi, regole di scope.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/grammatiche LR(k).md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1",
+    "Secondo Anno/Reti di Calcolatori/NAT.md",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete",
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Richiami di teoria degli insiemi.md",
-    "Pasted image 20250223124515.png",
-    "Pasted image 20250223124304.png",
-    "Pasted image 20250223123321.png",
-    "Pasted image 20250223122830.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Spazi di probabilità.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli",
+    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+    "immagini/Pasted image 20250223124515.png",
+    "immagini/Pasted image 20250223124304.png",
+    "immagini/Pasted image 20250223123321.png",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi E Modelli.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Spazi di probabilità.md",
     "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Pipeline.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Secondo Anno/Sistemi Operativi/Modulo 1",
     "Homepage.md",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza Di Rete.md",
-    "Secondo Anno/Reti di Calcolatori/NAT.md",
     "-. Ripasso.md",
     "Secondo Anno/Tecnologie Web/URI/Operazioni su URI.md",
     "Secondo Anno/Tecnologie Web/URI/Route.md",
     "Secondo Anno/Tecnologie Web/URI/URI (Uniform Resource Identifier).md",
     "Secondo Anno/Tecnologie Web/URI/URI ref.md",
     "Secondo Anno/Tecnologie Web/Javascript/Programmazione asincrona.md",
-    "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
-    "Secondo Anno/Tecnologie Web/HTTP & REST/Computer network.md",
-    "Secondo Anno/Tecnologie Web/HTTP & REST/HTTP.md",
-    "Secondo Anno/Tecnologie Web/Set di caratteri/Set di caratteri.md",
-    "Secondo Anno/Tecnologie Web/HTTP & REST/API REST.md",
     "immagini/Pasted image 20250207163536.png",
     "immagini/Pasted image 20250210161555.png",
     "immagini/Pasted image 20250207170325.png",
@@ -249,10 +254,6 @@
     "Secondo Anno/Tecnologie Web/Javascript",
     "latexsheet-a4.pdf",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione",
-    "Secondo Anno/Calcolo Numerico/Approssimazione dei dati",
-    "Secondo Anno/Sistemi Operativi/progetto",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/message passing",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

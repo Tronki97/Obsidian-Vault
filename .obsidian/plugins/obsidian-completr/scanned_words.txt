@@ -900,6 +900,9 @@ prevedono
 pettine
 previste
 privilegiate
+problematico
+prm
+pEg
 realizzare
 rappresentare
 risultato
@@ -1814,6 +1817,12 @@ ruolo
 riguardava
 rimanere
 ricevimento
+rilevarlo
+rilassamenti
+rLq
+rzP
+rXeP
+rrv
 la
 le
 lo
@@ -2396,6 +2405,9 @@ lock
 lento
 leciti
 leggono
+lancio
+lanci
+lGPP
 ALU
 AND
 Address
@@ -3523,6 +3535,9 @@ normale
 notifica
 nidificano
 numerosi
+nqu
+neF
+nvZ
 capire
 codifiche
 capacit
@@ -4755,6 +4770,10 @@ configurata
 cylinder
 cilindro
 coerenza
+classificarlo
+campionario
+cFG
+cHXA
 avendo
 alcune
 arriva
@@ -5731,6 +5750,11 @@ annidare
 apposito
 acceduto
 accederemmo
+adatti
+aleatorio
+aleatori
+affermazione
+agB
 un
 una
 usato
@@ -6310,6 +6334,7 @@ uHX
 utcj
 uscire
 universit
+ujYm
 decremento
 del
 di
@@ -7121,6 +7146,11 @@ disabilitazione
 dialogare
 definirlo
 disabilitare
+decisionale
+duale
+dado
+dXnp
+daEf
 <<<<<<< HEAD
 =======
 >>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
@@ -7749,6 +7779,8 @@ fornito
 filo
 fotografia
 finisco
+favorevoli
+fvE
 in
 il
 invece
@@ -8650,6 +8682,17 @@ interferiscano
 intel
 impropri
 insiemistiche
+illimitato
+implicitamente
+ipotetico
+iIkg
+ikI
+iRN
+iEUYV
+ibT
+idvd
+iXC
+iyVuvZ
 modo
 mentre
 massimo
@@ -9430,6 +9473,8 @@ momenti
 multiprocessore
 monopolio
 mascherato
+moneta
+mDD
 esempio
 eccede
 errori
@@ -10114,6 +10159,17 @@ effetti
 eVs
 eserciziario
 emettendo
+evitati
+euristico
+esperimento
+esp
+esperimenti
+esito
+esiti
+eJC
+euz
+ekV
+epF
 base
 bit
 basano
@@ -10644,6 +10700,10 @@ baseline
 basate
 banchi
 bootstrap
+beneficio
+bHCs
+bUeb
+bCT
 quindi
 questo
 quelle
@@ -11135,6 +11195,10 @@ qlD
 qKI
 qualitativa
 quantitativa
+qMB
+qEMs
+qUZ
+qIv
 se
 sarebbe
 si
@@ -12272,6 +12336,9 @@ sector
 spento
 supervisore
 sottintende
+scy
+sNgCvw
+sGV
 otterremmo
 ottenere
 occupare
@@ -12874,6 +12941,7 @@ ottime
 obsoleto
 ordini
 ospita
+opR
 va
 valore
 viene
@@ -13499,6 +13567,8 @@ volere
 vada
 volatile
 velocizzano
+vederlo
+vistop
 troppo
 testimone
 tramite
@@ -14181,6 +14251,8 @@ teorica
 terminata
 terminazione
 testine
+triviale
+tWJ
 grandi
 gli
 grande
@@ -14748,6 +14820,12 @@ girerebbe
 gioco
 governano
 governa
+geG
+gAd
+gGI
+gvH
+gXp
+gMVO
 NOT
 NotePad
 Nu
@@ -15256,6 +15334,8 @@ Nbl
 NAT
 Neumann
 Nomenclatura
+Nah
+NfM
 Il
 Instruction
 IR
@@ -16415,6 +16495,10 @@ Raccolta
 RENZO
 Ripristino
 READ
+Rilassamenti
+Rde
+REH
+RcBo
 Si
 Se
 Status
@@ -17075,6 +17159,9 @@ SPEGNIMENTO
 SEEK
 SSD
 Sottoinsiemi
+SZK
+ScS
+SqU
 BINARY
 Bus
 BX
@@ -17544,6 +17631,9 @@ BSJb
 But
 Box
 Basati
+Blr
+BVp
+ByE
 Per
 Program
 PC
@@ -18078,6 +18168,8 @@ Parametri
 Preparazione
 Programmed
 Protezione
+PdE
+PgG
 Di
 Data
 Dati
@@ -18603,6 +18695,8 @@ DMA
 Dischi
 Dispositivo
 Dimostrazioni
+Dualmente
+DVhf
 Le
 La
 Lg
@@ -19114,6 +19208,7 @@ LrO
 Local
 Leave
 LOAD
+LwN
 Modulo
 Massimo
 Memory
@@ -19628,6 +19723,8 @@ Mentre
 Multipli
 MMU
 Mapped
+MfT
+MvQ
 ES
 Esempi
 Ex
@@ -20175,6 +20272,12 @@ Eventi
 Execute
 Essa
 Esegue
+Esperimento
+Esito
+Esp
+Esiti
+Evento
+EVJ
 Come
 Codifica
 Counter
@@ -20786,6 +20889,7 @@ Cosa
 Caricamento
 Centrale
 Corrisponde
+CLq
 Questa
 Quello
 Qz
@@ -21233,6 +21337,8 @@ QYu
 Quanto
 Quale
 Quelli
+Qualit
+QvX
 Formato
 FLIP
 FLOP
@@ -21758,6 +21864,12 @@ FpI
 Fuc
 Fatto
 Fra
+Finito
+Finita
+FXr
+Fea
+FGbZ
+FUYf
 Word
 WK
 WB
@@ -22197,6 +22309,8 @@ WOg
 WTl
 Wide
 WRITE
+WTb
+WPe
 zero
 zip
 zL
@@ -23137,6 +23251,9 @@ HbF
 Hso
 Hijacking
 Handler
+HGt
+HdEBV
+Hjp
 XOR
 Xm
 Xo
@@ -24027,6 +24144,8 @@ history
 hJXNIT
 heA
 handler
+hQi
+heJk
 JZ
 JT
 Jd
@@ -24478,6 +24597,8 @@ JTUU
 JjP
 JfQ
 JTg
+JEBVx
+JWXyk
 kB
 kW
 kWs
@@ -24941,6 +25062,7 @@ kuD
 kOU
 kMl
 kqF
+kLmcd
 jmp
 jy
 jwä
@@ -25362,6 +25484,7 @@ jpeg
 jÖ
 jKQ
 jbEX
+jnK
 word
 wu
 wf
@@ -25802,6 +25925,7 @@ wcQ
 wdQ
 wEEa
 wQZ
+wnhj
 Oltre
 OgSf
 Od
@@ -26350,6 +26474,9 @@ OTO
 OxR
 OrM
 Occorre
+Ottima
+OdE
+Oyr
 xz
 xX
 xF
@@ -26818,6 +26945,9 @@ xME
 xwJ
 xbL
 xZb
+xyJg
+xHmh
+xsIv
 Kq
 KG
 KR
@@ -27263,6 +27393,7 @@ Krg
 KoZQ
 KQm
 KAa
+KcX
 Us
 US
 Ur
@@ -27735,6 +27866,10 @@ Unificazione
 UbhcD
 UEyT
 Utenti
+UyA
+Uwp
+UeQ
+UnZ
 Zx
 ZD
 ZRz
@@ -28551,6 +28686,10 @@ Yrh
 YlCo
 Ywe
 YGm
+YbLa
+YaD
+YYI
+YAA
 yI
 ys
 yN
@@ -29530,6 +29669,9 @@ TDC
 Time
 TTL
 Talvolta
+TFhzWp
+Thq
+TyI
 GY
 GT
 Ghw
@@ -30019,6 +30161,11 @@ GyO
 Goc
 GJe
 Giochi
+GaX
+GHZ
+GUw
+GEC
+GIXD
 Vb
 VD
 VG
@@ -30535,6 +30682,10 @@ VnN
 Vkh
 Von
 Volatile
+VYy
+VXwq
+ViV
+VpVI
 öG
 öH
 özw
@@ -30548,6 +30699,7 @@ Volatile
 Öj
 Öu
 Ön
+Öe
 Äeg
 Äe
 Äa
