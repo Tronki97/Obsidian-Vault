@@ -38,7 +38,7 @@ data: "`2025-02-23 17:03`"
 		+ ### Problema vuoto:
 			+ $\mathbb{F_\mathcal{P}}=\emptyset$ e si assume per convenzione che $Z_\mathcal{P}=\infty$
 			+ Non è detto sia triviale rilevarlo.
-		+ ### Problema illimitato:
+		+ ### Problema illimitato: ^1429ac
 		    + nel caso di problema di massimo, $\forall x\in \mathbb{R}\ \ \exists g\in \mathbb{F}_\mathcal{P}$ con $c_\mathcal{P}(g)\geq x$. in questo caso $Z_\mathcal{P}=\infty$ 
 		    + Dualmente nel caso di problema di minimo.
 		+ ### Valore Ottimo Finito, ma non Soluzione Ottima Finita.

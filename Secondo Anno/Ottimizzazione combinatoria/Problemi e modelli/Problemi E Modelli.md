@@ -49,7 +49,7 @@ data: "`2025-02-17 20:26`"
 		+ Di solito _$\mathbb{F}_{\mathcal{p}}$ viene specificato dando $\mathbb{G}\supseteq\mathbb{F}_{\mathcal{p}}$ e descrivendo dei vincoli che un generico $g\in\mathbb{G}$ deve soddisfare per far parte di $\mathbb{F}_{\mathcal{p}}$_.
 		+ Gli _elementi che appartengono a $\mathbb{G}-\mathbb{F}_{\mathcal{p}}$ sono detti soluzioni non ammissibili_.
 	+ Talvolta, il problema consiste nel trovare una sola soluzione ammissibile, talvolta occorre andare oltre.
-	+ Un esempio di descrizione di un'istanza di un problema e' il seguente: $$5x^{2}-6x+1=0 \implies \begin{array}{align} \mathbb{G}=\mathbb{R} \\ \mathbb{F}_{\mathcal{p}} = \{x\in\mathbb{R}\ | \ 5x^{2}-6x+1=0\}\end{array}$$
+	+ Un esempio di descrizione di un'istanza di un problema è il seguente: $$5x^{2}-6x+1=0 \implies \begin{array}{align} \mathbb{G}=\mathbb{R} \\ \mathbb{F}_{\mathcal{p}} = \{x\in\mathbb{R}\ | \ 5x^{2}-6x+1=0\}\end{array}$$
 + # Dai problemi ai modelli:
 	- individuato il problema occorre _classificarlo_ in modo da poterlo riconoscere come problema di un certo tipo e di conseguenza utilizzare algoritmi adatti per risolverlo efficientemente.
 	- una categoria di problemi dello stesso tipo è detta _modelli_.

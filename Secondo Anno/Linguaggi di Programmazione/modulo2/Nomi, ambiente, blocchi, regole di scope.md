@@ -25,6 +25,6 @@ data: "`2025-02-23 18:02`"
 		- ### Compilazione:
 			- 
 	- ## Dinamico:
-		- esecuzione: legame definitivo di tutti i nomi non ancora legati ()
+		- esecuzione: legame definitivo di tutti i nomi non ancora legati
 - # Link Utili:
 	- 

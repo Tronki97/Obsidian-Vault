@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - Guerra dei browser
   - guerra dei browser

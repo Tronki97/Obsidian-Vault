@@ -21,6 +21,36 @@ data: "`2025-02-23 16:53`"
 			- Ogni vincolo $ax=b$ diventa la coppia di vincoli $ax\le b$ e $ax\ge b$
 			- ogni vincolo $ax\ge b$ è equivalente a $(-a)x\le (-b)$
 - # ES:
-	- 
+	- ## Problema della fabbrica:
+		- una società ha 2 processori
+			- 1 destinato ai server potenti (pintium)
+			- 1 destinato ai consumer meno potenti (coloron)
+		- la fabbrica realizza 3000 wafer a settimana ogni wafer ha spazio per 500 coloron o 300 pintium
+		- i coloron hanno una resa del 60% si vendono a 200 al pezzo e possono esserne messi max $400.000$ unità a settimana sul mercato  
+		- i pintium hanno una resa del 50% si vendono a 500 al pezzo e possono esserne messi max $700.000$ unità a settimana sul mercato
+		- determinare la quantità di processori da stampare per massimizzare i guadagni.
+		- ### Definisco le variabili:
+			- $x_{p}$ numero di pintium prodotti
+			- $x_{c}$ numero di coloron prodotti
+		- ### Funzione obiettivo:
+			- $$f(x)=500x_{p}*0.5+200x_{c}*0.6=$$
+			- $$= 250x_{p}+120x_{c}$$
+		- ### Vincoli:
+			- da mettere altrimenti si rischia di avere un [[Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione#^1429ac|problema illimitato]]
+			- $0\le x_{p}*0.5\le 400.000$ 
+			- $0\le x_{c}*0.6\le 700.000$
+			- $\frac{x_{p}}{300}+\frac{x_{c}}{500}\le 3000$ 
+			- se definisco delle nuove variabili che dipendono da quelle già esistenti è importante legarle a quelle già esistenti 
+				- $w_{c}=\frac{x_{c}}{500}$ 
+				- $w_{p}=\frac{x_{p}}{300}$
+			- bisognerebbe inserire un vincolo di interezza per le variabili $x_{p}$ e $x_{c}$ 
+- # Programmazione lineare intera (PLI):
+	- ## Variabili:
+		- possono essere delle quantità.
+		- possono essere _logiche_: delle scelte, valori booleani, binari.
+			- $x\in \mathbb{N}$    $0\le x \le 1$  queste sono variabili logiche
+			- si possono usare per modellare:
+				- assegnamento di una risorsa ad un _task_
+				- lo svolgimento o meno di una attività.
 - # Link Utili:
 	- 

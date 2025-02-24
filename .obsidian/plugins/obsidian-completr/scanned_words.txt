@@ -903,6 +903,9 @@ privilegiate
 problematico
 prm
 pEg
+predefinite
+potenti
+pintium
 realizzare
 rappresentare
 risultato
@@ -1823,6 +1826,7 @@ rLq
 rzP
 rXeP
 rrv
+resa
 la
 le
 lo
@@ -2408,6 +2412,7 @@ leggono
 lancio
 lanci
 lGPP
+legarle
 ALU
 AND
 Address
@@ -3538,6 +3543,7 @@ numerosi
 nqu
 neF
 nvZ
+numerici
 capire
 codifiche
 capacit
@@ -4774,6 +4780,7 @@ classificarlo
 campionario
 cFG
 cHXA
+coloron
 avendo
 alcune
 arriva
@@ -5755,6 +5762,9 @@ aleatorio
 aleatori
 affermazione
 agB
+alfa
+associargli
+analitici
 un
 una
 usato
@@ -7151,6 +7161,10 @@ duale
 dado
 dXnp
 daEf
+denotare
+denotabili
+denotabile
+definitivo
 <<<<<<< HEAD
 =======
 >>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
@@ -7781,6 +7795,9 @@ fotografia
 finisco
 favorevoli
 fvE
+formali
+forme
+fabbrica
 in
 il
 invece
@@ -8693,6 +8710,7 @@ ibT
 idvd
 iXC
 iyVuvZ
+interezza
 modo
 mentre
 massimo
@@ -9475,6 +9493,8 @@ monopolio
 mascherato
 moneta
 mDD
+mercato
+modellare
 esempio
 eccede
 errori
@@ -10170,6 +10190,7 @@ eJC
 euz
 ekV
 epF
+eccezioni
 base
 bit
 basano
@@ -12339,6 +12360,8 @@ sottintende
 scy
 sNgCvw
 sGV
+societ
+stampare
 otterremmo
 ottenere
 occupare
@@ -13569,6 +13592,7 @@ volatile
 velocizzano
 vederlo
 vistop
+vendono
 troppo
 testimone
 tramite
@@ -14826,6 +14850,7 @@ gGI
 gvH
 gXp
 gMVO
+guadagni
 NOT
 NotePad
 Nu
@@ -15336,6 +15361,7 @@ Neumann
 Nomenclatura
 Nah
 NfM
+Nomi
 Il
 Instruction
 IR
@@ -17162,6 +17188,7 @@ Sottoinsiemi
 SZK
 ScS
 SqU
+Scrittura
 BINARY
 Bus
 BX
@@ -18170,6 +18197,8 @@ Programmed
 Protezione
 PdE
 PgG
+Progettazione
+PLI
 Di
 Data
 Dati
@@ -25926,6 +25955,7 @@ wdQ
 wEEa
 wQZ
 wnhj
+wafer
 Oltre
 OgSf
 Od
