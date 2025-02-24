@@ -3,5 +3,11 @@
   "showLineNumber": false,
   "tabSize": 3,
   "readableLineLength": true,
-  "rightToLeft": false
+  "rightToLeft": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

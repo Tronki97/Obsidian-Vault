@@ -30,81 +30,8 @@
               "icon": "lucide-file",
               "title": "Homepage"
             }
-          },
-          {
-            "id": "d0f2902609d4e473",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Programmazione lineare"
-            }
-          },
-          {
-            "id": "1902322e349c3e3e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Problemi E Modelli"
-            }
-          },
-          {
-            "id": "f7fd3902c048eae4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Problemi E Modelli"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -279,11 +206,17 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d0f2902609d4e473",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secure e-mail.md",
+    "Pasted image 20250224134554.png",
+    "Pasted image 20250224134316.png",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/autenticazione.md",
+    "Pasted image 20250224123617.png",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare.md",
     "Homepage.md",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
@@ -297,7 +230,6 @@
     "immagini/Pasted image 20250223122830.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/grammatiche LR(k).md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1",
     "Secondo Anno/Reti di Calcolatori/NAT.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete",
@@ -313,16 +245,10 @@
     "immagini/Pasted image 20250223123321.png",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
-    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Pipeline.md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Secondo Anno/Sistemi Operativi/Modulo 1",
     "immagini/Pasted image 20250207163536.png",
     "immagini/Pasted image 20250210161555.png",
-    "immagini/Pasted image 20250207170325.png",
-    "immagini/Pasted image 20250207170108.png",
-    "immagini/Pasted image 20250207165921.png",
     "Secondo Anno/Tecnologie Web/CSS",
     "Secondo Anno/Tecnologie Web/Javascript",
     "latexsheet-a4.pdf",

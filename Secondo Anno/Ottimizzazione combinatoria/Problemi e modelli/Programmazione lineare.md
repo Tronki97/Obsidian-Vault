@@ -1,7 +1,10 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - problema della fabbrica
+  - relazioni logiche
+  - vincoli di assegnamento
 data: "`2025-02-23 16:53`"
 ---
 - # Programmazione lineare.
@@ -46,11 +49,59 @@ data: "`2025-02-23 16:53`"
 			- bisognerebbe inserire un vincolo di interezza per le variabili $x_{p}$ e $x_{c}$ 
 - # Programmazione lineare intera (PLI):
 	- ## Variabili:
-		- possono essere delle quantità.
+		- possono essere delle quantità intere.
 		- possono essere _logiche_: delle scelte, valori booleani, binari.
 			- $x\in \mathbb{N}$    $0\le x \le 1$  queste sono variabili logiche
 			- si possono usare per modellare:
 				- assegnamento di una risorsa ad un _task_
 				- lo svolgimento o meno di una attività.
+	- ## ES:
+		- ### Problema dello zaino.
+			- $a_{i}$ peso dell’oggetto i
+			- $c_{i}$ valore dell’oggetto i
+			- $b$ peso massimo.
+		- ### Variabili:
+			- $x_{i}\in \{0,1\}$ se l’oggetto i è preso o meno.
+		- ### Vincoli:
+			- $(\sum\limits_{i=1}^{n} x_{i}*a_{i})\le b$ 
+		- ### Funzione obiettivo:
+			- $$max\{\sum\limits_{i=1}^{n}x_{i}*c_{i}\}$$
+	- ## Relazioni logiche:
+		- tutte le _relazioni logiche_ possono essere modellate tramite i vincoli lineari:
+			- _negazione_ $(y=\neg x)$
+				- $x=1-y$
+			- _disgiunzione_ $(z=x \lor y)$
+		        - $z\le x+y$
+		        - $z\ge x$
+		        - $z\ge y$
+			- _congiunzione_ $(z=x \land y)$
+		        - $z\le x$
+		        - $z\le y$
+		        - $z\ge x+y-1$ 
+		    - _implicazione_ $(z=x\implies y)$
+			    - $x+ z\ge 1$
+			    - $z\ge y$
+	            - $z\le 1-x+y$
+	- ## Vincoli di assegnamento:
+		- se si ha una variabile logica che deve assumere un valore in un insieme di valori possibili si possono usare i vincoli di assegnamento.
+		- parto da:
+			- un insieme di $N=\{1,...,n\}$ oggetti.
+			- un insieme di $V=\{1,...,m\}$ luoghi.
+		- l’idea è di assegnare ogni oggetto ad un luogo per rappresentare le varie _condizioni_.
+		- ### Variabili: 
+			- $x_{ij}\in \{0,1\}$ modella il fatto che _l’oggetto i_ è assegnato al _luogo j_.
+		- ### Vincoli di semi-assegnamento:
+			- $$\sum\limits_{j=1}^{m}x_{ij}=1$$
+		- ### Insiemi ammissibili:
+			- a volte ogni oggetto può essere assegnato ad un insieme specifico $B(i)\subseteq V$ di luoghi.
+			- in questo caso $\exists x_{ij}\iff j\in B(j)$
+			- i vincoli di semi-assegnamento diventano:
+		        - $$\sum\limits_{j\in B(i)}x_{ij}=1$$
+		- ogni luogo è assegnato ad un oggetto e ogni oggetto è assegnato ad un luogo:
+			- $$\sum\limits_{j=1}^{m}x_{ij}=1 \ \ \ \ \ \sum\limits_{i=1}^{n}x_{ij}=1$$
+		- ### Ordinamento:
+			- questi vincoli permettono di imporre che gli $n$ lavori siano eseguiti in un certo ordine.
+			- $x_{ij}$ indicherà quindi se l’i-esimo lavoro è effettuato come j-esimo(se vale 1) o meno.
+	- 
 - # Link Utili:
 	- 
