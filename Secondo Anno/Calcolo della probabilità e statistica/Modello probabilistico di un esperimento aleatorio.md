@@ -19,8 +19,8 @@ data: "`2025-02-23 12:45`"
 		- Esiti: _1, 2, 3, 4, 5, 6_
 		- ### OSS: 
 			- _sotto-esperimenti aleatori_: 10 lanci del dado
-- # Evento:
-	- Un _evento_ è un’affermazione che riguarda l’ipotetico risultato dell’esp aleatorio, di cui posso dire con certezza se è vero o falso _solo_ una volta vistop l’esito
+- # Evento: ^18c7b9
+	- Un _evento_ è un’affermazione che riguarda l’ipotetico risultato dell’esp aleatorio, di cui posso dire con certezza se è vero o falso _solo_ una volta visto l’esito
 	- ## ES:
 		- Esp aleatorio: _lancio di un dado_
 		- $A=$ “esce un numero pari”

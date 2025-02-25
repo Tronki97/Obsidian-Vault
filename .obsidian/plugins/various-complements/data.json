@@ -7,9 +7,9 @@
   "matchingWithoutEmoji": true,
   "treatAccentDiacriticsAsAlphabeticCharacters": false,
   "treatUnderscoreAsPartOfWord": false,
-  "maxNumberOfSuggestions": 255,
+  "maxNumberOfSuggestions": 5,
   "maxNumberOfWordsAsPhrase": 3,
-  "minNumberOfCharactersTriggered": 1,
+  "minNumberOfCharactersTriggered": 0,
   "minNumberOfWordsTriggeredPhrase": 1,
   "complementAutomatically": true,
   "delayMilliSeconds": 0,
@@ -23,9 +23,9 @@
   ],
   "phrasePatternsToSuppressTrigger": [],
   "noAutoFocusUntilCycle": false,
-  "showMatchStrategy": true,
-  "showComplementAutomatically": true,
-  "showIndexingStatus": true,
+  "showMatchStrategy": false,
+  "showComplementAutomatically": false,
+  "showIndexingStatus": false,
   "descriptionOnSuggestion": "Short",
   "hotkeys": {
     "select": [
@@ -65,7 +65,7 @@
   "currentFileMinNumberOfCharacters": 0,
   "onlyComplementEnglishOnCurrentFileComplement": false,
   "excludeCurrentFileWordPatterns": [],
-  "enableCurrentVaultComplement": false,
+  "enableCurrentVaultComplement": true,
   "currentVaultMinNumberOfCharacters": 0,
   "includeCurrentVaultPathPrefixPatterns": "",
   "excludeCurrentVaultPathPrefixPatterns": "",
@@ -80,7 +80,7 @@
   "caretLocationSymbolAfterComplement": "",
   "displayedTextSuffix": " => ...",
   "enableInternalLinkComplement": true,
-  "suggestInternalLinkWithAlias": false,
+  "suggestInternalLinkWithAlias": true,
   "excludeInternalLinkPathPrefixPatterns": "",
   "updateInternalLinksOnSave": true,
   "insertAliasTransformedFromDisplayedInternalLink": {
@@ -99,7 +99,5 @@
     "maxNumberOfHistoryToKeep": 0
   },
   "disableOnMobile": false,
-  "showLogAboutPerformanceInConsole": false,
-  "insertAfterCompletion": true,
-  "selectionHistoryTree": {}
+  "showLogAboutPerformanceInConsole": false
 }

@@ -1,14 +1,12 @@
 [
   "calendar",
   "darlal-switcher-plus",
-  "various-complements",
   "quick-latex",
   "obsidian-latex-suite",
   "obsidian-autocomplete-plugin",
   "obsidian-git",
   "obsidian-icon-folder",
   "obsidian-annotator",
-  "obsidian-completr",
   "obsidian-mind-map",
   "cmenu-plugin",
   "obsidian-zoom",
@@ -26,5 +24,7 @@
   "multi-column-markdown",
   "obsidian-excalidraw-plugin",
   "file-explorer-note-count",
-  "quickadd"
+  "quickadd",
+  "various-complements",
+  "auto-card-link"
 ]

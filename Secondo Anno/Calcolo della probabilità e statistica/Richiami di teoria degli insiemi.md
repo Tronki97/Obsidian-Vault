@@ -51,6 +51,6 @@ data: "`2025-02-23 12:12`"
 		- 2) $\Omega= \mathbb{R}$ , $A_{n}=\left[ 0, \frac{1}{n} \right]$ , $n\in \mathbb{N}$
 			- $\bigcup_{n=1}^{+\infty}A_{n}= [0,1]$
 				- ![[Pasted image 20250223124515.png]]
-			- $\bigcap_{n=1}^{+\infty}A_{n}={0}$
+			- $\bigcap_{n=1}^{+\infty}A_{n}={0}$ 
 - # Link Utili:
 	- 

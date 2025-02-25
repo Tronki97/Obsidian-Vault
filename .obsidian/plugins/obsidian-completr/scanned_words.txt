@@ -911,6 +911,7 @@ pkz
 pJup
 peg
 pNL
+piazzandosi
 realizzare
 rappresentare
 risultato
@@ -1833,6 +1834,13 @@ rXeP
 rrv
 resa
 rlY
+replay
+registrare
+ripeterlo
+riuscirci
+rispedisce
+ricevuta
+risalire
 la
 le
 lo
@@ -2421,6 +2429,8 @@ lGPP
 legarle
 lTW
 lDj
+lei
+leggendolo
 ALU
 AND
 Address
@@ -4800,6 +4810,8 @@ cmM
 cö
 cer
 cjb
+convinti
+certificano
 avendo
 alcune
 arriva
@@ -5786,6 +5798,8 @@ associargli
 analitici
 aggiunta
 asIV
+additivit
+attack
 un
 una
 usato
@@ -7193,6 +7207,8 @@ dIO
 daI
 dHE
 dkTP
+decriptandolo
+digestioni
 <<<<<<< HEAD
 =======
 >>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
@@ -7828,6 +7844,7 @@ forme
 fabbrica
 ftX
 fZO
+finge
 in
 il
 invece
@@ -8743,6 +8760,9 @@ iyVuvZ
 interezza
 iAC
 ioA
+intercettato
+interlocutore
+infattibile
 modo
 mentre
 massimo
@@ -9528,6 +9548,8 @@ mDD
 mercato
 modellare
 mxq
+middle
+mander
 esempio
 eccede
 errori
@@ -10764,6 +10786,7 @@ bPS
 bTWQ
 bJJ
 bon
+biettiva
 quindi
 questo
 quelle
@@ -14903,6 +14926,7 @@ gvH
 gXp
 gMVO
 guadagni
+garanzia
 NOT
 NotePad
 Nu
@@ -19825,6 +19849,8 @@ Mapped
 MfT
 MvQ
 MUP
+Man
+Message
 ES
 Esempi
 Ex
@@ -24265,6 +24291,8 @@ hoka
 hVd
 hHk
 hST
+hashato
+hashati
 JZ
 JT
 Jd
@@ -29813,6 +29841,7 @@ Thq
 TyI
 TLA
 TUf
+Trudy
 GY
 GT
 Ghw

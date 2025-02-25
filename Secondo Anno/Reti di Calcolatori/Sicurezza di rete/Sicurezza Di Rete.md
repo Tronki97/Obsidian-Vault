@@ -1,17 +1,20 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - confidenzialità
+  - integrità
+  - accesso e disponibilità
 data: "`2025-02-17 20:26`"
 ---
 - # Principi Della Sicurezza Di Rete
-	+ ## Confidenzialità
+	+ ## Confidenzialità ^92bd4c
 		+ _Solamente il mittente e il destinatario sono capaci di interpretare il contenuto della loro comunicazione_.
 			+ Il mittente cifra il messaggio e il destinatario lo decifra.
 	+ ## Autenticazione
 		+ _Il mittente e il destinatario devono confermare le loro corrispettive identità, ognuno nei confronti dell'altro_.
 			+ Io sono veramente io e tu sei veramente tu.
-	+ ## Integrità Del Messaggio
+	+ ## Integrità Del Messaggio ^cb41ce
 		+ _Il contenuto della comunicazione non deve essere trasformato durante, o anche dopo, il transito di esso_.
 			+ Se il messaggio viene modificato senza alcun tipo di controllo o senza il volere del mittente, allora c'è qualcosa che non va.
 	+ ## Accesso E Disponibilità

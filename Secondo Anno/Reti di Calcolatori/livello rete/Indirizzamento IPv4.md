@@ -24,7 +24,7 @@ data: "`2024-10-25 13:24`"
 		- ### Conseguenze:
 			- utile per macchine che non stanno sempre collegate alla rete. Come i Portatili
 	- per quanto riguarda la privacy non cambia il tipo di IP usato 
-- # IPv4
+- # IPv4 ^afb979
 	- è composto da $32$ bit = sequenza di 4 valori decimali a _8 bit l’uno_ separati da un punto ed ogni valore è compreso tra $[0-255]$ come:
 		- $130.136.25.1$
 	- ed è composto da:

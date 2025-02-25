@@ -18,7 +18,7 @@ data: "`2024-11-27 13:28`"
 	- si correggono eventuali incertezze per quanto riguarda dei pacchetti che potrebbero andare persi o arrivare disordinati.
 - # UDP:
 	- la rete continua a funzionare in maniera _connectionless_ quindi non affidabile.
-- # TCP:
+- # TCP: ^157bc5
 	- ## Affidabilità:
 		- rende la rete affidabile _End-to-End_ ovvero da qualsiasi punto verso qualsiasi destinazione connessa alla rete 
 		- configura il numero di porta del _socket TCP_
@@ -50,7 +50,7 @@ data: "`2024-11-27 13:28`"
 		- richiede l’attivazione della connessione _punto-a-punto_ tra due _socket_:
 			- ### Socket:
 				- indirizzo [[Indirizzamento IPv4|IP]] + numero di porta dell’applicazione a livello superiore.
-			- ### Three way handshake
+			- ### Three way handshake ^75a5d7
 				- quando due macchine comunicano, quella che vuole iniziare la conversazione manda una richiesta _TCP_ all’altra che, se il socket non è occupato, risponde con un _OK_ 
 				- a questo punto la prima macchina invia i _dati di configurazione_ e poi si può procedere con lo scambio dati
 		- quando la comunicazione finisce si fa il _rilascio della connessione_ TCP 
