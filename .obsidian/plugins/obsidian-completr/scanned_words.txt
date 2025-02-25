@@ -906,6 +906,11 @@ pEg
 predefinite
 potenti
 pintium
+pmQ
+pkz
+pJup
+peg
+pNL
 realizzare
 rappresentare
 risultato
@@ -1827,6 +1832,7 @@ rzP
 rXeP
 rrv
 resa
+rlY
 la
 le
 lo
@@ -2413,6 +2419,8 @@ lancio
 lanci
 lGPP
 legarle
+lTW
+lDj
 ALU
 AND
 Address
@@ -2984,6 +2992,8 @@ Assieme
 ACCENSIONE
 Alla
 Alice
+APE
+ABf
 nel
 necessario
 numero
@@ -3545,6 +3555,7 @@ nqu
 neF
 nvZ
 numerici
+nxh
 capire
 codifiche
 capacit
@@ -4784,6 +4795,11 @@ cHXA
 coloron
 certification
 criptato
+cLTO
+cmM
+cö
+cer
+cjb
 avendo
 alcune
 arriva
@@ -5769,6 +5785,7 @@ alfa
 associargli
 analitici
 aggiunta
+asIV
 un
 una
 usato
@@ -6349,6 +6366,9 @@ utcj
 uscire
 universit
 ujYm
+ucR
+uJl
+uwd
 decremento
 del
 di
@@ -7169,6 +7189,10 @@ denotare
 denotabili
 denotabile
 definitivo
+dIO
+daI
+dHE
+dkTP
 <<<<<<< HEAD
 =======
 >>>>>>> db498a8946c21e9474546f14b7ef555f4894acbb
@@ -7802,6 +7826,8 @@ fvE
 formali
 forme
 fabbrica
+ftX
+fZO
 in
 il
 invece
@@ -8715,6 +8741,8 @@ idvd
 iXC
 iyVuvZ
 interezza
+iAC
+ioA
 modo
 mentre
 massimo
@@ -9499,6 +9527,7 @@ moneta
 mDD
 mercato
 modellare
+mxq
 esempio
 eccede
 errori
@@ -10195,6 +10224,8 @@ euz
 ekV
 epF
 eccezioni
+eQE
+eVD
 base
 bit
 basano
@@ -10729,6 +10760,10 @@ beneficio
 bHCs
 bUeb
 bCT
+bPS
+bTWQ
+bJJ
+bon
 quindi
 questo
 quelle
@@ -11224,6 +11259,7 @@ qMB
 qEMs
 qUZ
 qIv
+qmZ
 se
 sarebbe
 si
@@ -12366,6 +12402,9 @@ sNgCvw
 sGV
 societ
 stampare
+sPl
+skP
+sYN
 otterremmo
 ottenere
 occupare
@@ -12969,6 +13008,11 @@ obsoleto
 ordini
 ospita
 opR
+oQL
+oYa
+oKyA
+oVR
+oRqO
 va
 valore
 viene
@@ -13597,6 +13641,9 @@ velocizzano
 vederlo
 vistop
 vendono
+vpOw
+vbm
+veV
 troppo
 testimone
 tramite
@@ -14281,6 +14328,7 @@ terminazione
 testine
 triviale
 tWJ
+tbX
 grandi
 gli
 grande
@@ -15366,6 +15414,8 @@ Nomenclatura
 Nah
 NfM
 Nomi
+NVZMq
+NdF
 Il
 Instruction
 IR
@@ -15994,6 +16044,8 @@ Integrit
 Informatici
 Intercettazione
 Impersonation
+IWfaJ
+IDATVE
 Rappresentazione
 Registri
 Register
@@ -16529,6 +16581,9 @@ Rilassamenti
 Rde
 REH
 RcBo
+RczA
+RCv
+RMKL
 Si
 Se
 Status
@@ -17193,6 +17248,7 @@ SZK
 ScS
 SqU
 Scrittura
+SuR
 BINARY
 Bus
 BX
@@ -17666,6 +17722,8 @@ Blr
 BVp
 ByE
 Bob
+BNf
+BHyH
 Per
 Program
 PC
@@ -18204,6 +18262,9 @@ PdE
 PgG
 Progettazione
 PLI
+PSmh
+PkU
+PSa
 Di
 Data
 Dati
@@ -19243,6 +19304,10 @@ Local
 Leave
 LOAD
 LwN
+LTq
+Lzz
+LGj
+LFhb
 Modulo
 Massimo
 Memory
@@ -19759,6 +19824,7 @@ MMU
 Mapped
 MfT
 MvQ
+MUP
 ES
 Esempi
 Ex
@@ -20312,6 +20378,8 @@ Esp
 Esiti
 Evento
 EVJ
+Eoy
+Ets
 Come
 Codifica
 Counter
@@ -20924,6 +20992,8 @@ Caricamento
 Centrale
 Corrisponde
 CLq
+COo
+Crb
 Questa
 Quello
 Qz
@@ -21373,6 +21443,8 @@ Quale
 Quelli
 Qualit
 QvX
+QVc
+QBN
 Formato
 FLIP
 FLOP
@@ -21904,6 +21976,7 @@ FXr
 Fea
 FGbZ
 FUYf
+FUG
 Word
 WK
 WB
@@ -22825,6 +22898,7 @@ zdsL
 zUXJ
 zty
 zsl
+zkW
 Half
 HACK
 HIT
@@ -23288,6 +23362,7 @@ Handler
 HGt
 HdEBV
 Hjp
+HEbh
 XOR
 Xm
 Xo
@@ -23712,6 +23787,12 @@ Xbls
 XNN
 XeF
 XCWo
+Xyo
+XaJ
+XfB
+Xpo
+XFYjc
+XnX
 ha
 ho
 hack
@@ -24180,6 +24261,10 @@ heA
 handler
 hQi
 heJk
+hoka
+hVd
+hHk
+hST
 JZ
 JT
 Jd
@@ -24633,6 +24718,7 @@ JfQ
 JTg
 JEBVx
 JWXyk
+JLY
 kB
 kW
 kWs
@@ -25097,6 +25183,8 @@ kOU
 kMl
 kqF
 kLmcd
+kbx
+kFC
 jmp
 jy
 jwä
@@ -25519,6 +25607,7 @@ jÖ
 jKQ
 jbEX
 jnK
+jYK
 word
 wu
 wf
@@ -26512,6 +26601,7 @@ Occorre
 Ottima
 OdE
 Oyr
+Opj
 xz
 xX
 xF
@@ -26983,6 +27073,12 @@ xZb
 xyJg
 xHmh
 xsIv
+xsZ
+xFL
+xqg
+xbe
+xge
+xTQg
 Kq
 KG
 KR
@@ -27429,6 +27525,7 @@ KoZQ
 KQm
 KAa
 KcX
+Kvl
 Us
 US
 Ur
@@ -27905,6 +28002,9 @@ UyA
 Uwp
 UeQ
 UnZ
+Uqr
+UQq
+UNzfF
 Zx
 ZD
 ZRz
@@ -28290,6 +28390,7 @@ Zzo
 ZWS
 ZaR
 ZRc
+ZHo
 YQ
 Yz
 YI
@@ -28725,6 +28826,7 @@ YbLa
 YaD
 YYI
 YAA
+YGA
 yI
 ys
 yN
@@ -29209,6 +29311,8 @@ ydw
 yln
 yyA
 yNYr
+yrQ
+yIN
 Tp
 Tv
 TBz
@@ -29707,6 +29811,8 @@ Talvolta
 TFhzWp
 Thq
 TyI
+TLA
+TUf
 GY
 GT
 Ghw
@@ -30201,6 +30307,7 @@ GHZ
 GUw
 GEC
 GIXD
+GzQs
 Vb
 VD
 VG
@@ -30721,6 +30828,10 @@ VYy
 VXwq
 ViV
 VpVI
+VrA
+VbS
+Vaj
+VRuL
 öG
 öH
 özw

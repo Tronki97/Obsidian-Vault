@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "3bee8eb63445fd43",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "9d2621a53eb20bda",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Lezione 25-02-2025.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Lezione 25-02-2025"
             }
           }
         ]
@@ -206,27 +206,28 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Secure e-mail.md",
-    "Pasted image 20250224134554.png",
-    "Pasted image 20250224134316.png",
+    "immagini/Pasted image 20250223180416.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Lezione 25-02-2025.md",
+    "Secondo Anno/Reti di Calcolatori/Caching.md",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure e-mail.md",
+    "immagini/Pasted image 20250224134554.png",
+    "immagini/Pasted image 20250224134316.png",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/autenticazione.md",
-    "Pasted image 20250224123617.png",
+    "immagini/Pasted image 20250224123617.png",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
-    "Homepage.md",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
-    "Secondo Anno/Reti di Calcolatori/Caching.md",
     "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
     "Secondo Anno/Tecnologie Web/URI/URI ref.md",
     "Secondo Anno/Tecnologie Web/HTTP & REST/API REST.md",
     "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
     "Secondo Anno/Tecnologie Web/HTML.md",
-    "Pasted image 20250223180416.png",
     "immagini/Pasted image 20250223122830.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/grammatiche LR(k).md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
@@ -244,7 +245,6 @@
     "immagini/Pasted image 20250223124304.png",
     "immagini/Pasted image 20250223123321.png",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
-    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Secondo Anno/Sistemi Operativi/Modulo 1",
     "immagini/Pasted image 20250207163536.png",
