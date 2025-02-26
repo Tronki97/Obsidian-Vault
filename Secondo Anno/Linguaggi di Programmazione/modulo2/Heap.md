@@ -1,10 +1,51 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases: 
 data: "`2025-02-26 11:01`"
 ---
-- # Argomento:
-	- 
+- # Heap:
+	- regione di memoria in cui i blocchi possono essere allocati e deallocati quando si vuole.
+	- permette anche di prendere un elemento che si trovi in mezzo quindi non per forza in cima o in fondo.
+	- è necessario quando il linguaggio permette:
+		- allocazione di memoria a run-time(puntatori, strutture dati dinamiche, liste)
+		- oggetti di dimensione variabile(stringhe, insiemi)
+		- oggetti la cui vita non ha un regime definito a priori(non con vita LIFO).
+	- ## Gestione:
+		- gestione efficiente dello spazio: frammentazione
+		- velocità di accesso.
+- # Implementazione:
+	- suddiviso in blocchi di dimensione fissa, collegati tutti in una _lista libera_:
+		- ![[Pasted image 20250226112618.png|400]]
+	- allocazione di uno o più blocchi contigui:
+		- ![[Pasted image 20250226112718.png|400]]
+- # Frammentazione:
+	- ## Interna:
+		- un blocco di dimensione $X$ viene allocato in uno spazio di dimensione $Y>X$ e quindi risulta dello spazio sprecato.
+	- ## Esterna:
+		- lo spazio necessario c’è ma è diviso in blocchi troppo piccoli quindi non utilizzabili.
+		- non si può allocare quelle due zone $x,y$ perché discontinue quindi causerebbe un problema non garantendo un accesso ai dati in maniera costante, non efficiente.
+	- ![[Pasted image 20250226112924.png]]
+	- ## Risoluzione:
+		- si considerano blocchi di dimensione variabile.
+		- ad ogni allocazione si cerca un blocco di dimensione adeguata:
+			- ### Best fit:
+				- Prende il blocco di dimensione più piccola
+				- Più lento, occupazione memoria migliore
+			- ### First fit:
+				- Prende il primo blocco abbastanza grande
+				- Più veloce, occupazione memoria peggiore
+			- Se il blocco scelto è troppo grande viene spezzato in due e la parte inutilizzata viene aggiunta alla LL.
+			- Il costo di allocazione è lineare, per migliorarlo serve usare più LL
+		- alla de-allocazione il blocco viene restituito alla _lista libera_, se un blocco adiacente è libero i due blocchi separati vengono fusi insieme.
+		- ### Liste libere multiple:
+			- la ripartizione dei blocchi può essere:
+				- _statica_
+				- _dinamica_ :
+					- _Buddy system_: $k$ liste con blocchi di dimensione $2^{k}$ 
+						- se richiesta allocazione per blocco di dimensione $2^{k}$ e tale dimensione non è disponibile, prendo un blocco di dimensione $2^{k+1}$ e divido in 2 e quello inutilizzato viene inserito nella lista di quello $2^{n}$
+						- se un blocco $2^{k}$ è de-allocato è riunito alla sua altra metà (_buddy_), se libera.
+					- _Fibonacci_:
+						- simile al _buddy_ ma si usano i numeri di Fibonacci invece di potenze di $2$ (crescendo più lentamente).
+				- 
 - # Link Utili:
 	- 
