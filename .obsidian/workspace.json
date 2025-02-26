@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3895407190f9656f",
+        "id": "b51e680e8f404ca7",
         "type": "tabs",
         "children": [
           {
-            "id": "d3d1216269aacb9c",
+            "id": "240d60893f101191",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure socket layer (SSL).md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Secure socket layer (SSL)"
+              "title": "Heap"
             }
           },
           {
-            "id": "74c5472b2bd9a7ec",
+            "id": "58b634c61b2621c5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
+                "file": "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Sicurezza Di Rete"
+              "title": "Minimum Spanning Tree"
             }
           }
         ]
@@ -87,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "confiden",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -210,8 +210,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.5,
-    "collapsed": true
+    "width": 345.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -231,17 +230,28 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "240d60893f101191",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Variabili e valori discreti.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
+    "immagini/PseudoCode Dijkstra.png",
+    "immagini/BellmanFord algoritmo.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
+    "Homepage.md",
+    "immagini/Pasted image 20250225172031.png",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure socket layer (SSL).md",
-    "Pasted image 20250225173051.png",
-    "Pasted image 20250225172924.png",
-    "Pasted image 20250225172452.png",
-    "Pasted image 20250225172031.png",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
+    "immagini/Pasted image 20250225173051.png",
+    "immagini/Pasted image 20250225172924.png",
+    "immagini/Pasted image 20250225172452.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
-    "Homepage.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Proprietà delle probabilità.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/autenticazione.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure E-mail.md",
@@ -257,27 +267,17 @@
     "immagini/Pasted image 20250224134554.png",
     "immagini/Pasted image 20250224134316.png",
     "immagini/Pasted image 20250224123617.png",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
-    "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
-    "Secondo Anno/Tecnologie Web/URI/URI ref.md",
-    "Secondo Anno/Tecnologie Web/HTTP & REST/API REST.md",
-    "Secondo Anno/Tecnologie Web/Set di caratteri/Content encoding.md",
-    "immagini/Pasted image 20250223122830.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
     "Secondo Anno/Linguaggi di Programmazione/modulo1",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli",
-    "immagini/Pasted image 20250223124515.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Secondo Anno/Sistemi Operativi/Modulo 1",
     "Secondo Anno/Tecnologie Web/CSS",
     "Secondo Anno/Tecnologie Web/Javascript",
     "latexsheet-a4.pdf",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

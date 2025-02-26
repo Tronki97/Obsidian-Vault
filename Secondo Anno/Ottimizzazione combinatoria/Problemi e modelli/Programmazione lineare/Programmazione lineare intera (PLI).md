@@ -1,0 +1,150 @@
+---
+tags:
+  - TODO
+aliases:
+  - PLI
+  - problema dello zaino
+  - relazioni logiche
+  - vincoli di assegnamento
+  - insiemi ammissibili
+  - selezione di sottoinsiemi
+  - problema di copertura
+  - problema di partizione
+  - problema di riempimento
+data: "`2025-02-26 10:18`"
+---
+- # # Programmazione lineare intera (PLI):
+	- ## Variabili:
+		- possono essere delle quantità intere.
+		- possono essere _logiche_: delle scelte, valori booleani, binari.
+			- $x\in \mathbb{N}$    $0\le x \le 1$  queste sono variabili logiche
+			- si possono usare per modellare:
+				- assegnamento di una risorsa ad un _task_
+				- lo svolgimento o meno di una attività.
+	- ## ES:
+		- ### Problema dello zaino.
+			- $a_{i}$ peso dell’oggetto i
+			- $c_{i}$ valore dell’oggetto i
+			- $b$ peso massimo.
+		- ### Variabili:
+			- $x_{i}\in \{0,1\}$ se l’oggetto i è preso o meno.
+		- ### Vincoli:
+			- $(\sum\limits_{i=1}^{n} x_{i}*a_{i})\le b$ 
+		- ### Funzione obiettivo:
+			- $$max\{\sum\limits_{i=1}^{n}x_{i}*c_{i}\}$$
+	- ## Relazioni logiche:
+		- tutte le _relazioni logiche_ possono essere modellate tramite i vincoli lineari:
+			- _negazione_ $(y=\neg x)$
+				- $x=1-y$
+			- _disgiunzione_ $(z=x \lor y)$
+		        - $z\le x+y$
+		        - $z\ge x$
+		        - $z\ge y$
+			- _congiunzione_ $(z=x \land y)$
+		        - $z\le x$
+		        - $z\le y$
+		        - $z\ge x+y-1$ 
+		    - _implicazione_ $(z=x\implies y)$
+			    - $x+ z\ge 1$
+			    - $z\ge y$
+	            - $z\le 1-x+y$
+	- ## Vincoli di assegnamento:
+		- se si ha una variabile logica che deve assumere un valore in un insieme di valori possibili si possono usare i vincoli di assegnamento.
+		- parto da:
+			- un insieme di $N=\{1,...,n\}$ oggetti.
+			- un insieme di $V=\{1,...,m\}$ luoghi.
+		- l’idea è di assegnare ogni oggetto ad un luogo per rappresentare le varie _condizioni_.
+		- ### Variabili: 
+			- $x_{ij}\in \{0,1\}$ modella il fatto che _l’oggetto i_ è assegnato al _luogo j_.
+		- ### Vincoli di semi-assegnamento:
+			- $$\sum\limits_{j=1}^{m}x_{ij}=1$$
+		- ### Insiemi ammissibili:
+			- a volte ogni oggetto può essere assegnato ad un insieme specifico $B(i)\subseteq V$ di luoghi.
+			- in questo caso $\exists x_{ij}\iff j\in B(j)$
+			- i vincoli di semi-assegnamento diventano:
+		        - $$\sum\limits_{j\in B(i)}x_{ij}=1$$
+		- ogni luogo è assegnato ad un oggetto e ogni oggetto è assegnato ad un luogo:
+			- $$\sum\limits_{j=1}^{m}x_{ij}=1 \ \ \ \ \ \sum\limits_{i=1}^{n}x_{ij}=1$$
+		- ### Ordinamento:
+			- questi vincoli permettono di imporre che gli $n$ lavori siano eseguiti in un certo ordine.
+			- $x_{ij}$ indicherà quindi se l’i-esimo lavoro è effettuato come j-esimo(se vale 1) o meno.
+	- ## Problema del Data center:
+		- ho $n$ server 
+		- ogni server $i$ può lavorare in $m_{i}\in \mathbb{N}$ modi diversi 
+		- nella modalità $j\in \{1,...,m_{i}\}$ il server $i$ esegue $S_{ij}\in \mathbb{N}$ task al secondo
+			- consumo di $w_{ij}$ Watt 
+		- si vuole minimizzare il costo in termini di elettricità (il numero di Watt complessivi) garantendo che il data center esegua almeno $k$ task al secondo.
+		- ### Risoluzione:
+			- #### Variabili:
+				- $x_{ij}= \begin{cases}1 & \text{server "i"  usato in modalità operativa j}\in\{1, ...,m_{i}\}\\ 0 & \text{altrimenti}\end{cases}$
+				- $x_{ij} \in \mathbb{N} \ \ \ \forall i,j$
+			- #### Vincoli:
+				- $\forall 1\le i \le n$     $\sum\limits_{j=1}^{m_{i}} x_{ij}=1$
+				- $$\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{m_{i}}x_{ij}S_{ij}\ge k$$
+					- la sommatoria interna si poteva definire come un’altra variabile $p_{i}$ 
+				- $\forall 1\le i \le n   \ \ \ \forall j \in \{1,...,m_{i}\}$    $0\le x_{ij}\le 1$
+			- #### Funzione obiettivo:
+				- $$min(\sum\limits_{i=1}^{n}\sum\limits_{j=1}^{m_{i}}x_{ij}w_{ij})$$
+	- ## Problema del docente di informatica:
+		- ci sono $n$ progetti $\{t_{1},...,t_{n}\}$ 
+			- gli indici rappresentano i tempi di compilazione 
+		- $m$ pc $\{p_{1},...,p_{m}\}$ 
+			- ogni pc può compilare un qualunque in maniera _sequenziale_ 
+			- le prestazioni sono identiche.
+		- si vuole assegnare i progetti ai pc in modo da minimizzare il tempo complessivo (parallelo) di compilazione.
+		- ### Variabili:
+			- $$\begin{cases}1 & \text{il progetto i è compilato tramite il pc}\\ 0 & \text{altrimenti}\end{cases}$$
+			- $x_{ij}\in \mathbb{N} \ \ \ \forall i \in \{1,...,n\} \ \ \ \forall j \in \{2,...,m\}$
+			- $y=$ _limitazione superiore ai tempi di calcolo dei vari pc_
+		- ### Vincoli:
+			- $$\forall i \ \ \sum\limits_{j=1}^{m}x_{ij}=1$$
+			- $$y\ge \sum\limits_{i=1}^{n}x_{ij} *t_{i} \ \ \ \forall j$$
+		- ### Funzione obiettivo:
+			- $$\min(\max_{j}(\sum\limits_{i=1}^{n}x_{ij}t_{ij}))$$
+				- la funzione $max$ non è una funzione lineare quindi non va bene per la PLI.
+			- $$\min (y)$$ 
+	- ## Selezione di sottoinsiemi:
+		- sia $N=\{1,...,n\}$ un insieme finito di elementi 
+		- sia $F=\{F_{1},...,F_{m}\}$ una famiglia di sottoinsiemi di $N$ tc:
+			- $$F_{i}\subseteq N$$
+		- ad ogni $F_{j}$ ($1\le j\le m$) si associa un costo $c_{j}$
+		- voglio determinare $D \subseteq F$ di _costo minimo_ tra tutti i sottoinsiemi di $F$ che soddisfano certi vincoli.
+		- si può rappresentare la situazione con una matrice :
+			- $$A=(a_{ij})\in \{0,1\}^{n \times m}$$
+			- $$a_{ij}=\begin{cases} 1 & \ i\in F_{j}\\ 0 & altrimenti \end{cases}$$
+		- ### variabili:
+			- $$x_{ij}=\begin{cases} 1 & \ F_{j}\in D\\ 0 & altrimenti \end{cases}$$
+		- ### Funzione obiettivo:
+			- sarà sempre del tipo:
+				- $$\sum\limits_{j=1}^{m} c_{j}*x_{j}$$
+		- ### Problema di copertura:
+			- ogni elemento di $N$ sta in _almeno uno_ degli elementi di $D$
+			- $$\sum\limits_{j=1}^{m} a_{ij}*x_{j}\ge1\ \ \ (1\le i\le n)$$
+		- ### Problema di partizione:
+			- ogni elemento di $N$ sta in _esattamente_ uno degli elementi di $D$
+				- $$\sum\limits_{j=1}^{m}a_{ij}*x_{j}=1 \ \ \ (1\le i\le n)$$
+		- ### Problema di riempimento:
+			- ogni elemento di $N$ sta in _al più_ uno degli elementi di $D$ 
+				- $$\sum\limits_{j=1}^{m}a_{ij}*x_{j}\le 1 \ \ \ (1\le i\le n)$$
+		- ### Problema delle commesse:
+			- impiegare $n$ dipendenti $1,...,n$
+			- l’azienda nel intervallo di tempo considerato deve svolgere $m$ commesse $1,...,m$
+			- ogni commessa $j$ _deve_ essere svolta dal sottoinsieme $F_{j} \subseteq \{ 1,...,n\}$ dei dipendenti dell’azienda.
+			- ogni commessa svolta da un ricavo pari a $r_{j}$ 
+			- ogni dipendente lavora ad una singola commessa nell’unità di tempo.
+			- #### Svolgimento:
+				- $N=\{1,...,n\}$ dipendenti
+				- $F=\{F_{1},...,F_{n}\}$ commesse
+				- $$a_{ij}=\begin{cases} 1 & \text{il dipendente i è assegnato alla commessa j}\\ 0 & \text{altrimenti}\end{cases}$$
+				- ##### Variabili:
+					- $x_{ij}=\begin{cases} 1 & \text{commessa j è tra quelle eseguite}\\ 0 & \text{altrimenti}\end{cases}$
+					- $x_{j}\in \mathbb{N}$
+				- ##### Vincoli:
+					- $0\le x_{j}\le 1 \ \ \ \forall j$
+					- $$\forall i \ \ \sum\limits_{j=1}^{m}x_{ij}a_{ij}\le1$$
+				- ##### Funzione obiettivo:
+					- $$\max \sum\limits_{j=1}^{m}x_{j}r_{j}$$
+					- 
+	- 
+- # Link Utili:
+	- 
