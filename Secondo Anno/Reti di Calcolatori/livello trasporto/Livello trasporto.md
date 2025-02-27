@@ -13,10 +13,10 @@ aliases:
   - sliding window
 data: "`2024-11-27 13:28`"
 ---
-- # DEF:
+- # DEF: ^3671f0
 	- usa i protocolli TCP(_transmission control protocol_) e UDP(_user data protocol_)
 	- si correggono eventuali incertezze per quanto riguarda dei pacchetti che potrebbero andare persi o arrivare disordinati.
-- # UDP:
+- # UDP: ^bd8258
 	- la rete continua a funzionare in maniera _connectionless_ quindi non affidabile.
 - # TCP: ^157bc5
 	- ## Affidabilità:

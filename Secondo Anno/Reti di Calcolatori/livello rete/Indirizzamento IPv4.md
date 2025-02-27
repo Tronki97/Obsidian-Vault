@@ -8,7 +8,7 @@ aliases:
   - classe di rete
 data: "`2024-10-25 13:24`"
 ---
-- # Indirizzo:
+- # Indirizzo: ^789112
 	- un indirizzo IP viene associato ad una sola [[Scheda di rete]] 
 	- è possibile che però che una scheda di rete possa cambiare indirizzo IP, quando vengono scollegate e ricollegate alla rete. 
 	- ## Statico:

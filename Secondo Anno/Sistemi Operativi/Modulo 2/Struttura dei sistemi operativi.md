@@ -1,0 +1,80 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-02-27 15:19`"
+---
+- # Componenti 
+	- ## Gestione dei processi:
+		- creazione e terminazione di un [[Concorrenza#^68dcd8|processo]]
+			- fork, 
+		- sospensione e attivazione di processi:
+			- segnali
+		- comunicazione:
+			- pipe
+		- sincronizzazione:
+	- ## Gestione memoria principale:
+		- tenere traccia di quali parti della memoria utilizzate e da chi.
+		- tenerne traccia tramite un array,
+		- esegue operazioni non visibili:
+			- quali processi hanno accesso a quale spazio di memoria 
+			- decidere quali processi attivare successivamente.
+		- allocare e de-allocare spazi di memoria.
+		- utilizzare quando necessario la _virtual memory_
+	- ## Gestione memoria secondaria:
+		- parte del sistema che trascrive quella memoria di grandi dimensioni e [[Memorie#^103da2||memorie non volativi]]
+		- la gestisce nel modo più efficiente e meno danneggiante possibile.
+		- ## RAID:
+			- Usa array di dischi e li fa vedere come unico spazio di memorizzazione.
+			- facendo cosi si divide la memoria in più dischi parallelizzando la scrittura e la lettura  velocizzandola.
+			- inoltre si può avere una ridondanza dei dati per evitare la perdita di informazioni in caso di rottura di un disco.
+	- ## Gestione I/O:
+		- interfaccia per la gestione dei _Device Driver_
+		- insieme di driver per ogni dispositivo hardware
+		- sistema di gestione di buffer e caching delle info.
+	- ## File system:
+		- _è una astrazione_ dove ogni file è inserito in diverse cartelle
+		- _creare, cancellare e manipolare_, file e cartelle.
+		- ### FAT:
+			- file system ad accesso sequenziale quindi lento.
+		- ### EXT:
+			- efficienti per l’accesso diretto.
+		- ### ISO:
+			- usato per sola lettura, come i CD.
+	- ## Supporto multiuser - Protezione:
+		- Gestisce l’identità del proprietario del processo: _uid gid_
+		- Gestisce chi può fare cosa e riguardo ogni cosa, dalle risorse memorizzabili a quelle eseguibili.
+		- Da un meccanismo di attuazione della protezione.
+	- ## Networking:
+		- Servizi che fanno comunicare processi su computer diversi e quindi condividere risorse.
+		- implementa lo stack [[Livello trasporto#^157bc5|TCP]], [[Livello trasporto#^bd8258|UDP]] e [[Indirizzamento IPv4#^789112|IP]] 
+- # Struttura:
+	- tiene conto di:
+		- _efficienza_
+		- _manutenibilità_:
+		- _espansibilità_
+		- _modularità_:
+		- tutte queste cose si devono bilanciare tra di loro perché si influenzano
+	- ## UNIX:
+		- ### Kernel:
+			- si trova tra l’hardware e le SYSCALL
+		- ![[Pasted image 20250227160803.png]]
+	- ## Tipi di kernel:
+		- ### Monolitico:
+			- tutto il sistema operativo è un unico blocco
+			- esempio: UNIX
+			- ![[Pasted image 20250227164344.png]]
+			- ci può essere modularità, lo spazio di memoria per l’esecuzione è unico.
+			- sono efficienti e modulari prendendo e caricando moduli esterni eseguibili a runtime.
+		- ### Microkernel:
+			- il kernel è diviso in più parti
+			- esempio: MINIX
+			- comunicazione basata su [[Message passing]] 
+				- i messaggi vengono smistati tra i vari processi
+				- ![[Pasted image 20250227165204.png]]
+			- #### Vantaggi:
+				- espandibile e modificabile, completamente modulare, è montabile da altre architetture, è più sicuro e robusto, le SYSCALL da re-implementare sono poche
+			- #### Svantaggi:
+				- è molto inefficiente, la comunicazione tra processi è lenta, la gestione della memoria è lenta. 
+- # Link Utili:
+	- 

@@ -4,7 +4,7 @@
 			- [[Registri]]
 			- [[Cache]]
 			- RAM
-	- ### persistenti
+	- ### persistenti ^103da2
 		- mantengono i dati salvati in caso di spegnimento
 			- ROM ^ff2552
 			- dischi magnetici e a stato solido (_on-line_ perché sempre accessibili)
