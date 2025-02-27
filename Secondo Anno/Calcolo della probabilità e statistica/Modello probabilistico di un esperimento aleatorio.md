@@ -24,7 +24,7 @@ data: "`2025-02-23 12:45`"
 	- ## ES:
 		- Esp aleatorio: _lancio di un dado_
 		- $A=$ “esce un numero pari”
-- # Spazio campionario:
+- # Spazio campionario: ^521af6
 	- Si chiama _spazio campionario_ indicato con $\Omega$ , un qualunque insieme che contiene tutti gli esiti dell’esp aleatorio, rappresentati con un _opportuno codice_.
 	- ## ES:
 		- lancio una moneta.

@@ -4,14 +4,104 @@ tags:
 aliases: 
 data: "`2025-02-25 13:13`"
 ---
+- # Linguaggio:
+	- $\Omega$ : _Evento certo_
+	- $\emptyset$: _Evento impossibile_
+	- $A=\{w\}$ : _evento elementare_ 
+	- un evento _quasi certo_ è un evento $A$ tale che $\mathbb{P}(A)=1$
+	- un evento _quasi impossibile_ è un evento $A$ tale che $\mathbb{P}(A)=0$
 - # Assioma 1:
 	- ad ogni sottoinsieme $A$ di $\Omega$ è assegnato un numero $\mathbb{P}(A)$ che verifica che appartenga a $[0,1]$ questo numero è chiamato _probabilità di A_
 - # Assioma 2:
 	- $\mathbb{P}(\Omega)=1$
-- # Assioma 3:
+- # Assioma 3: ^b7a07a
 	- _proprietà di $\sigma$-additività_:
 		- $$(a_{n})_{n\in \mathbb{N}}  \ \ A_{i}\cap A_{j}=\emptyset  \ \ \ \forall i\ne j$$
 		- $$\mathbb{P}(\bigcup_{n=1}^{\infty} A_{n})=\sum\limits_{n=1}^{\infty} \mathbb{P}(A_{n})$$
-- 
+	- ## OSS:
+		- con l’assioma 1 ho una funzione:
+			- $\mathbb{P}: \mathbb{P(\Omega)}\to [0,1]$
+			- $A\to \mathbb{P}(A)$ 
+		- chiamo _probabilità discreta_ una funzione $\mathbb{P}(.)$ come sopra a _valori discreti_ (numero finito o al più numerabile).
+		- ### ES:
+			- delta di Dirac centrato in un valore $n_{0}$:
+			- $\Omega=\mathbb{R}, \ n_{0}\in \mathbb{R}$
+			- $\delta_{n_{0}}:\mathbb{P(R)}\to [0,1]$
+			- $$A\to \delta_{n_{0}}(A):=\begin{cases}1&n_{0}\in A \\ 0 &altrimenti\end{cases}$$
+			- grazie al delta di Dirac costruisco tutte le probabilità discrete:
+				- $$\Omega=\mathbb{R},\ \ \ n_{1},...,n_{n},\ \ \ \ p_{1},...,p_{n}:p_{i}\in [0,1]$$
+				- $$\sum\limits_{i=1}^{n} p_{i}=1$$
+		- ### ES:
+			- lancio un D6 
+			- $$\mathbb{P}(A):= \sum\limits_{i=1}^{6} \frac{1}{6}\delta_{i}(A), \ \ \ \forall A \subset \Omega$$
+				- $\frac{1}{6}=p_{i}$
+- # Conseguenze degli assiomi:
+	- ## Teorema:
+		- Sia $\Omega$ lo [[Modello probabilistico di un esperimento aleatorio#^521af6|spazio campionario]] e $\mathbb{P}$ la probabilità su $\Omega$ dagli assiomi precedenti si deduce che:
+			- ### 4 
+				- $\mathbb{P}(\emptyset)=0$ 
+				- #### Dim:
+					- dall’assioma 3 $(A_{i})_{i\in \mathbb{N}}\ \ \  A_{i}\cap A_{j}=\emptyset  \ \ \ \forall i\ne j$ e $\mathbb{P}(\bigcup_{n=1}^{\infty} A_{n})=\sum\limits_{n=1}^{\infty} \mathbb{P}(A_{n})$
+					- scelgo $A_{i}=\emptyset$ $\forall i\in \mathbb{N}$ _successione di eventi disgiunti_
+					- quindi l’unione di tutti quegli eventi è $\emptyset$
+					- $$\mathbb{P}(\emptyset)=\mathbb{P}(\bigcup_{i=1}^{\infty} A_{i})=\sum\limits_{i=1}^{\infty} \mathbb{P}(A_{i})=\sum\limits_{i=1}^{\infty} \mathbb{P}(\emptyset)$$
+					- $P: \mathbb{P(\emptyset)}$
+					- $$\sum\limits_{i=1}^{\infty} P = \begin{cases} 0 &P=0 \\ \infty& P\in (0,1]\end{cases}\iff \mathbb{P}(\emptyset)=0$$
+			- ### 5 additività finita:
+				- $$\mathbb{P}(\bigcup_{i=1}^{n}A_{i})= \sum\limits_{i=1}^{n}\mathbb{P}(A_{i})$$
+				- #### Dim:
+					- $(A_{i})_{i=1,...,n}$ disgiunti, definisco $(B_{i})_{i=\mathbb{N}}: B_{i}=A_{i}$  $\forall i = 1,...,n$
+					- quindi $B_{i}=\emptyset \ \ \forall i> n$ 
+					- suppongo $n=2$ e principalmente quello che devo dimostrare è: 
+						- $$\mathbb{P}(A_{1}\cup A_{2})=\mathbb{P}(A_{1})+\mathbb{P}(A_{2})$$
+						- $$\mathbb{P}(A_{1}\cup A_{2})=\mathbb{P}(\bigcup_{i=1}^{\infty}B_{i})=\sum\limits_{i=1}^{\infty}=\mathbb{P}(A_{1})+\mathbb{P}(A_{2})+\mathbb{P(\emptyset)}+\mathbb{P}(\emptyset)+...=$$
+						- $$\mathbb{P}(A_{1})+\mathbb{P}(A_{2})$$
+			- ### 6:
+				- $$\mathbb{P}(A^{C})=1-\mathbb{P}(A)$$
+				- #### Dim:
+					- $\Omega= A \cup A^{C}$
+					- dall’assioma 2 ho che $\mathbb{P}(\Omega)=1$
+					- $$1=\mathbb{P}(\Omega)=\mathbb{P}(A \cup A^{C})=\mathbb{P}(A)+\mathbb{P}(A^{C})$$
+						- grazie anche alla proprietà 5.
+					- quindi risulta che $\mathbb{P}(A)+\mathbb{P}(A^{C}) =1 \implies \mathbb{P}(A^{C})=1-\mathbb{P}(A)$
+					- 
+			- ### 7 Monotonia:
+				- $$A,B\ \ \ A\subset B \implies \mathbb{P}(A)\le \mathbb{P}(B)$$
+				- #### Dim:
+					- $B=A\cup (B  \textbackslash A)$ 
+					- ![[Pasted image 20250227193118.png|400]]
+					- $$\mathbb{P}(B)=\mathbb{P}(A\cup (B  \textbackslash A))=$$
+						- per la proprietà 5:
+					- $$\mathbb{P}(A)+\mathbb{P}(B  \textbackslash A)\ge \mathbb{P}(A)$$
+						- la parte del $\ge$ è così per l’assioma 1 perché quindi $\mathbb{P}(A)$ non può essere un numero negativo.
+- # Probabilità di unione non disgiunta di insiemi:
+	- siano $A,B$ eventi
+	- $$\mathbb{P}(A\cup B)=\mathbb{P}(A)+\mathbb{P}(B)-\mathbb{P}(A\cap B)$$
+	- ![[Pasted image 20250227193741.png]]
+	- si toglie l’intersezione degli insiemi perché altrimenti si conterebbe 2 volte la probabilità degli eventi in comune.
+	- ## Dim:
+		- per l’additività
+			- $$\mathbb{P}(A\cup B)= \mathbb{P}(A \textbackslash B) + \mathbb{P}(B \textbackslash A)+ \mathbb{P}(A\cap B)=$$
+			- riscrivibile in 
+		- $$=\pm 2\mathbb{P}(A\cap B)+\mathbb{P}(A\cap B)$$
+			- e poiché: $(A \textbackslash B) \cup (A\cap B)=A$ e $(B \textbackslash A) \cup (A\cap B)=B$
+		- $$\mathbb{P}(A)+\mathbb{P}(B)- 2\mathbb{P}(A\cap B)+ \mathbb{P}(A\cap B)=$$
+		- $$=\mathbb{P}(A)+\mathbb{P}(B)-\mathbb{P}(A\cap B)$$
+	- ## OSS:
+		- quando si ha più di 2 eventi 
+		- $n=3$
+		- $$\mathbb{P}(A\cup B\cup C)=\mathbb{P}(A)+\mathbb{P}(B)+\mathbb{P}(C)-\mathbb{P}(A\cap B)-\mathbb{P}(B\cap C)-\mathbb{P}(A\cap C)+\mathbb{P}(A\cap B\cap C)$$
+- # ES:
+	- C ed M prendono 1 dei 50 biglietti per una lotteria con 50 premi  a C piacciono 7 premi, ad M 5 e solo 1 ad entrambi:
+		- $C=\{1,2,3,4,5,6,7\}$
+		- $M=\{7,8,9,10,11\}$
+	- a) il premio piacerà ad entrambi:
+		- $$C\cap M=\{7\}$$
+	- b) il premio piacerà ad almeno 1 dei 2:
+		- $$C\cup M=\{1,2,3,4,5,6,7,8,9,10,11\}$$
+	- c) a nessuno dei 2 piacerà il premio:
+		- $$C^{C}\cap M^{C}$$
+	- d) il premio piacerà solo a 1 dei 2:
+		- $$(C \cup M) \textbackslash (C\cap M)$$
 - # Link Utili:
 	- 

@@ -34,5 +34,19 @@ data: "`2025-02-25 13:11`"
 		- $$A=\Omega \implies \mathbb{P}(A|B)=\frac{\mathbb{P}(\Omega\cap B)}{\mathbb{P}(B)}=\frac{\mathbb{P}(B)}{\mathbb{P}(B)}=1$$
 		- $\forall B \subseteq \Omega$, $\mathbb{P}(.|B): \mathbb{P}(\Omega)\to [0,1]$    : $A \to \mathbb{P}(A|B)$   
 	- Ciò verifica tutte le [[Proprietà delle probabilità]] 
-			
+	- ### 1:
+		- $$\forall B \subseteq \Omega,\ \ \  [0,1]\ni \mathbb{P}(A|B)=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}\ \ \ \forall A\subseteq \Omega$$
+	- ### 2:
+		- $$\mathbb{P}(\Omega|B)=1 \implies \frac{\mathbb{P}(\Omega\cap B)}{\mathbb{P}(B)}= \frac{\mathbb{P}(B)}{\mathbb{P}(B)}=1$$
+	- ### 3:
+		- riprendendo l’[[Proprietà delle probabilità#^b7a07a||assioma 3]] $(a_{n})_{n\in \mathbb{N}}  \ \ A_{i}\cap A_{j}=\emptyset  \ \ \ \forall i\ne j$
+		- $$\mathbb{P}\left( \bigcup_{i=1}^{\infty} A_{i}|B \right)=\sum\limits_{i=1}^{\infty} \mathbb{P}(A_{i}|B) \implies \frac{\mathbb{P}\left( \left( \bigcup_{i=1}^{\infty} A_{i} \right)\cap B \right)}{\mathbb{P}(B)}=\sum\limits_{i=1}^{\infty} \frac{\mathbb{P}(A_{i}\cap B)}{\mathbb{P}(B)}$$
+- # N.B:
+	- la _probabilità condizionata_ spesso è nota e si usa per trovare la _probabilità dell’intersezione_:
+		- $$\mathbb{P}(A|B)=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)} \implies \mathbb{P}(A\cap B)= \mathbb{P}(A|B)*\mathbb{P}(B)$$
+		- questo è noto come _Regola della catena_
+- # Proposizione:
+	- $$(A_{i})_{i=1,...,n},\ \ \ \ \mathbb{P}(A_{1}\cap A_{2}\cap ... \cap A_n)>0$$
+	- Qui vale la regola della catena, 
+		- $$\mathbb{P}(A_{1}\cap A_{2}\cap ... \cap A_n)=\mathbb{P}(A_{1})*\mathbb{P}(A_{1}|A_{2})*\mathbb{P}(A_{1}|A_{2}\cap A_{1})*...* \mathbb{P}(A_{n}|A_{n-1}\cap A_{n-2}\cap...\cap A_{1})$$ 
 - # Link Utili:
