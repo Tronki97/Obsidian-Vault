@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b51e680e8f404ca7",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "240d60893f101191",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Controllo.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Controllo"
             }
           },
           {
-            "id": "58b634c61b2621c5",
+            "id": "db39bc88ae3e93c5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Minimum Spanning Tree.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica dei comandi.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Minimum Spanning Tree"
+              "title": "Semantica dei comandi"
             }
           }
         ]
@@ -230,16 +230,26 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "240d60893f101191",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica dei comandi.md",
+    "Excalidraw/notazione polacca.excalidraw.md",
+    "Controllo.md",
+    "Pasted image 20250227140405.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
+    "Pasted image 20250227133800.png",
+    "Pasted image 20250227133110.png",
+    "Pasted image 20250227132621.png",
+    "Pasted image 20250227131931.png",
     "Homepage.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
+    "Secondo Anno/Sistemi Operativi/progetto/Interrupt routing.md",
+    "Secondo Anno/Sistemi Operativi/progetto/Process Control Block.md",
     "Secondo Anno/Sistemi Operativi/progetto/progetto sistemi operativi..md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
+    "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/monitor/Monitor.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
     "Primo Anno/programmazione/python/Face detection.md",
     "Primo Anno/programmazione/c++/Alberi.md",
     "Primo Anno/programmazione/c++/Algoritmi di sorting.md",
@@ -259,16 +269,6 @@
     "immagini/PseudoCode Dijkstra.png",
     "immagini/BellmanFord algoritmo.png",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
-    "immagini/Pasted image 20250225172031.png",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure socket layer (SSL).md",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
-    "immagini/Pasted image 20250225173051.png",
-    "immagini/Pasted image 20250225172924.png",
-    "immagini/Pasted image 20250225172452.png",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
-    "immagini/Pasted image 20250223180416.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
     "Secondo Anno/Linguaggi di Programmazione/modulo1",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete",

@@ -2,6 +2,7 @@
 tags: 
 aliases:
   - comandi
+  - store
 date: 2024-10-02
 ---
 - # Semantica dei comandi:

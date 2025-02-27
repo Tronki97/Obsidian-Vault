@@ -4,7 +4,31 @@ tags:
 aliases: 
 data: "`2025-02-26 12:00`"
 ---
-- # Argomento:
-	- 
+- #  Scope dinamico:
+	- risalire la pila dei _record di attivazione_ finche non si trova una dichiarazione per quello che stiamo cercando
+	- i nomi delle variabili vengono salvati nei RdA, 
+	- ## Prima Implementazione:
+		- ![[Pasted image 20250227131931.png]]
+		- gli spazi grigi sono associazioni non attive.
+		- da dentro $D$ non mi è possibile vedere le variabili $x,v$ presenti dentro a $B$ ma posso vedere $B$ stessa 
+	- ## A-list:
+		- Lista di associazioni
+		- associazioni sono memorizzazte in una struttura a parte gestita come una pila.
+			- ![[Pasted image 20250227132621.png]]
+		- ### Svantaggio:
+			- il tempo di accesso nel caso pessimo è lineare $O(n)$ 
+			- nomi memorizzati esplicitamente
+	- ## CRT:
+		- central reference table.
+		- si memorizzano le info sui vari nomi nell’ordine inverso al quale sono introdotti nel programma
+		- una riga per ogni variabile dichiarata nel programma ed in ogni riga si ha un puntatore ad una lista di associazioni che indica il blocco in cui è stata dichiarata.
+			- mantenendo sempre l’ordine inverso(_guardare l’immagine_)
+		- se non tutti i nomi sono noti, si fa l’accesso con una funzione hash.
+			- ![[Pasted image 20250227133110.png]]
+		- ### Svantaggio:
+			- per ogni inserimento e eliminazione bisogna gestire delle liste complicando quindi la tabella.
+	- ## CRT con pila nascosta:
+		- invece di memorizzare tutte le associazioni, memorizziamo solo quelle al primo livello.
+			- ![[Pasted image 20250227133800.png]]
 - # Link Utili:
 	- 

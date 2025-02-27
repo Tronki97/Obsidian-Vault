@@ -1,0 +1,55 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-02-27 13:39`"
+---
+- # Espressione:
+	- _è una sintassi la cui valutazione produce un valore se termina_
+		- $a+b$ infissa  
+		- $ab+$ notazione polacca inversa 
+		- $+ab$ notazione polacca
+	- le ultime due sono più semplici da interpretare per la macchina
+	- ## Precedenza tra operatori:
+		- `a+ b * c ** d ** e / f` 
+		- Di solito operatori aritmetici hanno precedenza su quelli di confronto che hanno precedenza su quelli logici
+	- ## Associatività:
+		- l’ordine in cui vengono messe le parentesi per eseguire un’espressione.
+		- `15-4-3` → `(15-4)-3=8` oppure `15-4-3` → `15-(4-3)=14` 
+	- ## Notazione postfissa:
+		- non necessita di regole per la precedenza tra operatori o per l’associatività.
+			- `15 4 - 3 *` corrisponde a fare `15-4=11` e poi fare `11*3=33`
+			- ![[notazione polacca.excalidraw]]
+		- ### Valutazione espressioni:
+			- le espressioni interne sono rappresentate da alberi 
+			- ed a seconda della visita di questo albero si hanno le diverse sintassi per le espressioni.
+				- ![[Pasted image 20250227140405.png||400]]
+			- il modo in cui viene letto questo albero è importante per vari motivi:
+			- #### Aritmetica finita:
+				- `MAXINT` è il massimo numero rappresentabile
+				- se faccio `MAXINT+1` ottengo un overflow 
+					- per sapere se un espressione da overflow è importante sapere l’associatività degli operatori.
+					- `MAXINT+1-2` potrebbe non dare overflow se letto con l’associatività a destra.
+			- #### Effetti collaterali:
+				- `(a + f(b) ) * (c + f(b) )` il risultato potrebbe cambiare in base alla lettura nel caso in cui `f(b)` abbia _effetti collaterali_ ovvero cambiasse il valore di `b`.
+			- #### Operandi non definiti:
+				- `a == 0 ? b : b/a` questa scrittura presuppone una valutazione _lazy_ ovvero solo degli operandi strettamente necessari.
+					- nelle espressioni booleane questa valutazione è detta _corto circuito_
+				- altrimenti ci sarebbe la valutazione _eager_ che valuterebbe tutti gli operandi causando degli errori (guardando l’espressione precedente) se per esempio `a` fosse 0. 
+				- ##### ES:
+					- nell’espressione: $a == 0 || b/a > 2$
+					- se `a` è 0, e si usa una valutazione _eager_ dell’espressione, darebbe errore.
+					- altrimenti non darebbe errore però sussiste comunque e si rischia di non sapere appunto se ci fosse qualche errore in agguato. (_corto circuito_).
+- # Comandi:
+	- è il costrutto principale di un linguaggio imperativo.
+	- la valutazione di un comando di solo non produce nessun valore, ma può avere degli _effetti collaterali_.
+		- `x=15` non produce nessun valore ma ha l’effetto di assegnare 15 a `x` cambiando quindi lo stato del programma, o [[Semantica dei comandi|store]] (l’insieme di tutte le variabili presenti nel programma).
+	- ## Variabili:
+		- la variabile è un contenitore alla quale posso dare un nome e associare un valore.
+		- per modificarne il contenuto si usa l’assegnamento `x=1`
+		- in `x=x+1` io sto dicendo:
+			- prendi il valore di `x` e sommalo a 1 e poi assegnalo a `x` la prima `x` quindi è l’indirizzo di memoria della variabile. 
+		- ### Operatori di assegnamento:
+			- 
+- # Link Utili:
+	- 
