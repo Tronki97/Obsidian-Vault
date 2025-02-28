@@ -9,7 +9,7 @@ aliases:
 data: "`2025-02-23 12:45`"
 ---
 - # Concetti primitivi:
-	- ## 1) Esperimento aleatorio:
+	- ## 1) Esperimento aleatorio: ^58d2bd
 		- è un esperimento di cui non si conosce il risultato con certezza
 	- ## 2) Esito:
 		- è un ipotetico risultato dell’esp aleatorio
