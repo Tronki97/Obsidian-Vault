@@ -66,6 +66,8 @@ data: "`2025-02-27 15:19`"
 			- ![[Pasted image 20250227164344.png]]
 			- ci può essere modularità, lo spazio di memoria per l’esecuzione è unico.
 			- sono efficienti e modulari prendendo e caricando moduli esterni eseguibili a runtime.
+			- Il _problema_ è che se si rompe qualcosa in mezzo non funziona più niente.
+			- 
 		- ### Microkernel:
 			- il kernel è diviso in più parti
 			- esempio: MINIX
@@ -76,5 +78,12 @@ data: "`2025-02-27 15:19`"
 				- espandibile e modificabile, completamente modulare, è montabile da altre architetture, è più sicuro e robusto, le SYSCALL da re-implementare sono poche
 			- #### Svantaggi:
 				- è molto inefficiente, la comunicazione tra processi è lenta, la gestione della memoria è lenta. 
+	- ## Macchine virtuali:
+		- Emula il funzionamento dell’hardware per far girare un sistema operativo diverso da quello di base della macchina.
+- # Progettazione del sistema:
+	- ## Portabilità:
+		- deve essere in grado di girare su diversi tipi di hardware.
+		- deve essere in grado di riconoscere diverse periferiche e diverse architetture di _CPU_ e _BUS_.
+		- 
 - # Link Utili:
 	- 

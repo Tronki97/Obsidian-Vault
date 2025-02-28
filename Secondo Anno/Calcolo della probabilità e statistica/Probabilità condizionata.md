@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - regola della catena
+  - diagramma ad albero
 data: "`2025-02-25 13:11`"
 ---
 - # Intro:
@@ -48,5 +50,42 @@ data: "`2025-02-25 13:11`"
 - # Proposizione:
 	- $$(A_{i})_{i=1,...,n},\ \ \ \ \mathbb{P}(A_{1}\cap A_{2}\cap ... \cap A_n)>0$$
 	- Qui vale la regola della catena, 
-		- $$\mathbb{P}(A_{1}\cap A_{2}\cap ... \cap A_n)=\mathbb{P}(A_{1})*\mathbb{P}(A_{1}|A_{2})*\mathbb{P}(A_{1}|A_{2}\cap A_{1})*...* \mathbb{P}(A_{n}|A_{n-1}\cap A_{n-2}\cap...\cap A_{1})$$ 
+		- $$\mathbb{P}(A_{1}\cap A_{2}\cap ... \cap A_n)=\mathbb{P}(A_{1})*\mathbb{P}(A_{1}|A_{2})*\mathbb{P}(A_{1}|A_{2}\cap A_{1})*...* \mathbb{P}(A_{n}|A_{n-1}\cap A_{n-2}\cap...\cap A_{1})$$
+- # ES:
+	- ho 3 palline bianche, 2 nere e 1 rossa,
+	- $\mathbb{P}(A)=$probabilità di pescare 1 bianca poi 1 rossa poi 1 nera.
+	- $$\mathbb{P}(A)=\mathbb{P}(B_{1}\cap R_{2}\cap N_{3})=$$
+		- usando la regola della catena:
+	- $$= \mathbb{P}(B_{1})*\mathbb{P}(R_{2}|B_{1}) * \mathbb{P}(N_{3}|B_{1}\cap R_{2})$$
+	- infine $$\mathbb{P}(A)=\frac{1}{2}* \frac{1}{5} * \frac{1}{2} =\frac{1}{20}$$
+- # Diagramma ad albero:
+	- Nodo: un evento (il primo è $\Omega$)
+	- Ramo: probabilità di quel evento (la prima prob non è condizionata tutte le altre si)
+	- i rami formano una partizione di $\Omega$:
+		- $$(B_{i})_{i=1,...,n}: B_{i}\cap B_{j}=\emptyset \ \ \ \forall i\ne j$$
+		- ![[Pasted image 20250228135945.png]]
+		- questo è l’albero relativo all’esempio precedente.
+		- ogni livello rappresenta un’altra estrazione (_sotto-esperimento_).
+		- la _regola della catena_ si può leggere sul diagramma ad albero
+			- $\Omega\to B_{1}\to R_{2}\to N_{3}$ 
+	- ## ES:
+		- due urne 
+			- la prima ha 2 rosse e 1 bianca 
+			- la seconda 3 rosse e 2 bianche 
+		- si lancia una moneta se esce $T$ si estrae dalla prima urna altrimenti dalla seconda 
+		- calcolare $\mathbb{P}(A)=$ probabilità che esca testa e la pallina estratta sia bianca 
+		- ### Sotto-esperimenti:
+			- lancio della moneta 
+			- estrazione della pallina.
+		- $B$: estraggo una pallina bianca; $B^{C}$ : estraggo una pallina rossa.
+		- ### Diagramma ad albero:
+			- inseriscilo!!!!!!!!!!!
+			- $A=T\cap B$
+			- $$\mathbb{P}(A)=\mathbb{P}(T\cap B)=\mathbb{P}(B|T)*\mathbb{P}(T)=\frac{1}{3}* \frac{1}{2}=\frac{1}{6}$$
+- # indipendenza di eventi:
+	- se $\mathbb{P}(B)$ non altera la probabilità di $A$ e si scrive $A\perp B$
+		- $$\mathbb{P}(A|B)=\mathbb{P}(A),\ \ \mathbb{P}(B)>0$$
+	- ## Def:
+		- $\mathbb{P}(A\cap B)=\mathbb{P}(A)\mathbb{P}(B) \implies A\perp B$
+		- 
 - # Link Utili:
