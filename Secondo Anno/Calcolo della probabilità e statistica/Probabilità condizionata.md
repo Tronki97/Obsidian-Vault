@@ -10,11 +10,11 @@ aliases:
 data: "`2025-02-25 13:11`"
 ---
 - # Intro:
-	- conosco $\mathbb{P}(A)$ si verifica $B$ e mi chiedo come condizioni $A$ 
+	- Conosco $\mathbb{P}(A)$ si verifica $B$ e mi chiedo come condizioni $A$ 
 - # Notazione:
 	- $P(A|B)$ ($P(.|B), B\subseteq \Omega$) probabilità di $A$ condizionato a $B$ 
 - # ES:
-	- lancio del dado $\Omega=\{1,2,3,4,5,6\}$
+	- Lancio del dado $\Omega=\{1,2,3,4,5,6\}$
 	- $\mathbb{P}(\{w\})=\frac{1}{|\Omega|} \ \forall w \in \Omega$ ovvero:
 		- $$\mathbb{P}(A)= \frac{\text{\# casi favorevoli}}{\text{\# casi possibili}}$$
 	- $A=$ numero $\ge 3= \{3,4,5,6\}\to \mathbb{P}(A)=\frac{4}{6}=\frac{2}{3}$
@@ -24,14 +24,14 @@ data: "`2025-02-25 13:11`"
 - # ES:
 	- D4 truccato
 	- $$\mathbb{P}(\{4\})=\frac{1}{15}, \mathbb{P}(\{3\})=\frac{2}{15} ,  \mathbb{P}(\{2\})=\frac{4}{15}, \mathbb{P}(\{1\})=\frac{8}{15} $$
-	- $\Omega = \{ 1,2,3,4\}$ , $A=\{3,4\}=n^{°}\ge 3$,  $B=\{2,4\}$= numero pari
+	- $\Omega = \{ 1,2,3,4\}$ , $A=\{3,4\}=n^{°}\ge 3$,  $B=\{2,4\}$ = numero pari
 	- $$P(A|B)=\frac{\text{P(casi favorevoli di A)}}{\text{P(veri casi possibili)}}=\frac{\mathbb{P}(\{4\})}{\mathbb{P}(\{2\})+\mathbb{P}(\{4\})}=\frac{1}{5}$$
 - # Def:
 	- $A,B$ sono eventi sullo spazio $(\Omega, \mathbb{P})$ con:
 		- $\mathbb{P}(B)>0$ viene definita quindi condizionata a $B$ la funzione:
 			- $$\mathbb{P}(A|B)=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}$$
 	- ## OSS:
-		- se $\mathbb{P}(.)$ è la probabilità uniforme:
+		- Se $\mathbb{P}(.)$ è la probabilità uniforme:
 			- $$\mathbb{P}(A)=\frac{|A|}{|\Omega|}; \ \ \mathbb{P}(A|B)=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)}=\frac{|A\cap B|}{|\Omega|}* \frac{|\Omega|}{|B|}=\frac{|A \cap B|}{|B|}$$
 	- ## OSS:
 		- $$\mathbb{P}(A|B)\ne \mathbb{P}(B|A)$$
@@ -44,74 +44,83 @@ data: "`2025-02-25 13:11`"
 	- ### 2:
 		- $$\mathbb{P}(\Omega|B)=1 \implies \frac{\mathbb{P}(\Omega\cap B)}{\mathbb{P}(B)}= \frac{\mathbb{P}(B)}{\mathbb{P}(B)}=1$$
 	- ### 3:
-		- riprendendo l’[[Proprietà delle probabilità#^b7a07a||assioma 3]] $(a_{n})_{n\in \mathbb{N}}  \ \ A_{i}\cap A_{j}=\emptyset  \ \ \ \forall i\ne j$
+		- riprendendo l’ [[Proprietà delle probabilità#^b7a07a||assioma 3]] $(a_{n})_{n\in \mathbb{N}}  \ \ A_{i}\cap A_{j}=\emptyset  \ \ \ \forall i\ne j$
 		- $$\mathbb{P}\left( \bigcup_{i=1}^{\infty} A_{i}|B \right)=\sum\limits_{i=1}^{\infty} \mathbb{P}(A_{i}|B) \implies \frac{\mathbb{P}\left( \left( \bigcup_{i=1}^{\infty} A_{i} \right)\cap B \right)}{\mathbb{P}(B)}=\sum\limits_{i=1}^{\infty} \frac{\mathbb{P}(A_{i}\cap B)}{\mathbb{P}(B)}$$
-- # N.B:
-	- la _probabilità condizionata_ spesso è nota e si usa per trovare la _probabilità dell’intersezione_:
+- # N.B (Regola della catena):
+	- La _probabilità condizionata_ spesso è nota e si usa per trovare la _probabilità dell’intersezione_:
 		- $$\mathbb{P}(A|B)=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)} \implies \mathbb{P}(A\cap B)= \mathbb{P}(A|B)*\mathbb{P}(B)$$
-		- questo è noto come _Regola della catena_
+		- Questo è noto come _Regola della catena_
 - # Proposizione:
 	- $$(A_{i})_{i=1,...,n},\ \ \ \ \mathbb{P}(A_{1}\cap A_{2}\cap ... \cap A_n)>0$$
 	- Qui vale la regola della catena, 
 		- $$\mathbb{P}(A_{1}\cap A_{2}\cap ... \cap A_n)=\mathbb{P}(A_{1})*\mathbb{P}(A_{1}|A_{2})*\mathbb{P}(A_{1}|A_{2}\cap A_{1})*...* \mathbb{P}(A_{n}|A_{n-1}\cap A_{n-2}\cap...\cap A_{1})$$
 - # ES:
-	- ho 3 palline bianche, 2 nere e 1 rossa,
-	- $\mathbb{P}(A)=$probabilità di pescare 1 bianca poi 1 rossa poi 1 nera.
+	- Ho 3 palline bianche, 2 nere e 1 rossa,
+	- $\mathbb{P}(A)=$ probabilità di pescare 1 bianca poi 1 rossa poi 1 nera.
+	- Si hanno quindi 3 famiglie di eventi:
+		- $$(B_{i})_{i=1,...,k}\ \ \ , (R_{i})_{i=1,...,k}\ \ \ , (N_{i})_{i=1,...,k}$$
 	- $$\mathbb{P}(A)=\mathbb{P}(B_{1}\cap R_{2}\cap N_{3})=$$
-		- usando la regola della catena:
+		- Usando la _regola della catena_:
 	- $$= \mathbb{P}(B_{1})*\mathbb{P}(R_{2}|B_{1}) * \mathbb{P}(N_{3}|B_{1}\cap R_{2})$$
-	- infine $$\mathbb{P}(A)=\frac{1}{2}* \frac{1}{5} * \frac{1}{2} =\frac{1}{20}$$
+	- Infine grazie anche alla probabilità uniforme: 
+		- $$\mathbb{P}(A)=\frac{1}{2}* \frac{1}{5} * \frac{1}{2} =\frac{1}{20}$$
 - # Diagramma ad albero:
 	- Nodo: un evento (il primo è $\Omega$)
 	- Ramo: probabilità di quel evento (la prima prob non è condizionata tutte le altre si)
 	- i rami formano una partizione di $\Omega$:
 		- $$(B_{i})_{i=1,...,n}: B_{i}\cap B_{j}=\emptyset \ \ \ \forall i\ne j$$
 		- ![[Pasted image 20250228135945.png]]
-		- questo è l’albero relativo all’esempio precedente.
-		- ogni livello rappresenta un’altra estrazione (_sotto-esperimento_).
-		- la _regola della catena_ si può leggere sul diagramma ad albero
+		- Questo è l’albero relativo all’esempio precedente.
+		- Ogni livello rappresenta un’altra estrazione (_sotto-esperimento_).
+		- La _regola della catena_ si può leggere sul diagramma ad albero
 			- $\Omega\to B_{1}\to R_{2}\to N_{3}$ 
 	- ## ES:
-		- due urne 
-			- la prima ha 2 rosse e 1 bianca 
-			- la seconda 3 rosse e 2 bianche 
+		- 2 urne 
+			- La prima ha 2 rosse e 1 bianca 
+			- La seconda 3 rosse e 2 bianche 
 		- si lancia una moneta se esce $T$ si estrae dalla prima urna altrimenti dalla seconda 
 		- calcolare $\mathbb{P}(A)=$ probabilità che esca testa e la pallina estratta sia bianca 
 		- ### Sotto-esperimenti:
-			- lancio della moneta 
-			- estrazione della pallina.
-		- $B$: estraggo una pallina bianca; $B^{C}$ : estraggo una pallina rossa.
+			- _Lancio della moneta_ 
+			- _Estrazione della pallina_.
+		- $B$: estraggo una pallina bianca; 
+		- $B^{C}$ : estraggo una pallina rossa.
 		- ### Diagramma ad albero:
-			- inseriscilo!!!!!!!!!!!
+			- ![[Pasted image 20250302182310.png| 400]]
 			- $A=T\cap B$
 			- $$\mathbb{P}(A)=\mathbb{P}(T\cap B)=\mathbb{P}(B|T)*\mathbb{P}(T)=\frac{1}{3}* \frac{1}{2}=\frac{1}{6}$$
-- # indipendenza di eventi:
-	- se $\mathbb{P}(B)$ non altera la probabilità di $A$ e si scrive $A\perp B$ quindi i due eventi non si influenzano.
+- # Indipendenza di eventi: 
+	- Se $\mathbb{P}(B)$ non altera la probabilità di $A$ e si scrive $A\perp B$ quindi i due eventi non si influenzano.
 		- $$\mathbb{P}(A|B)=\mathbb{P}(A),\ \ \mathbb{P}(B)>0$$
 	- ## Def
 		- $\mathbb{P}(A\cap B)=\mathbb{P}(A)\mathbb{P}(B) \implies A\perp B$
 	- ## OSS:
-		- $\mathbb{P}(A)>0$
-		- $A\bot B \iff \mathbb{P}(B|A)=\mathbb{P}(B)$
+		- $\mathbb{P}(A)>0$ per la _regola della catena_
+		- $A\bot B \iff \mathbb{P}(B|A)=\mathbb{P}(B)$ 
 		- $\mathbb{P}(B)>0$
-		- $A\bot B \iff \mathbb{P}(A|B)=\mathbb{P}(A)$
-		- inoltre l’_indipendenza_ è diversa dalla _disgiunzione_:
+		- $A\bot B \iff \mathbb{P}(A|B)=\mathbb{P}(A)$ per la _regola della catena_ 
+		- Inoltre l’_indipendenza_ è diversa dalla _disgiunzione_:
 			- $$A\bot B \ \ \ \ne \ \ \ A\cap B=\emptyset$$
-		- infatti:
+		- Infatti:
 			- se $A\bot B \ \wedge\ A\cap B=\emptyset$
 			- $$0=\mathbb{P}(\emptyset)=\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$$
 				- ciò implica che $\mathbb{P}(A)=0$  _e/o_  $\mathbb{P}(B)=0$
 	- ## Teorema:
 		- $A\bot B \implies A^{C}\bot B, \ A\bot B^{C} ,\  A^{C}\bot B^C$
 		- ### DIM:
-			- dimostro che $A\bot B \implies A^{C}\bot B$ 
-			- quindi che $\mathbb{P}(A^{C}\cap B)=\mathbb{P}(A^{C})*\mathbb{P}(B)$
-			- so intanto che: $B=(A\cap B)\cup (A^{C}\cap B)$
+			- Dimostro che $A\bot B \implies A^{C}\bot B$ 
+				- Ho come _ipotesi_ che: $\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$
+			- Quindi che $\mathbb{P}(A^{C}\cap B)=\mathbb{P}(A^{C})*\mathbb{P}(B)$
+			- So intanto che: $B=(A\cap B)\cup (A^{C}\cap B)$
+				- Aiutandosi con un disegno:
+				- ![[Pasted image 20250302183351.png]]
 			- $$\mathbb{P}(B)=\mathbb{P}(A\cap B)+\mathbb{P}(A^{C}\cap B)=$$
-			- per l’ipotesi posso dire che:
-			- $$\mathbb{P}(A)*\mathbb{P}(B)+\mathbb{P}(A^{C}\cap B)$$
+			- Per l’ipotesi posso dire che:
+			- $$\mathbb{P}(B)=\mathbb{P}(A)*\mathbb{P}(B)+\mathbb{P}(A^{C}\cap B)\implies$$
+			- $$\mathbb{P}(A^{C}\cap B)=\mathbb{P}(B)-(\mathbb{P}(A)*\mathbb{P}(B))=\mathbb{P}(B)*(1-\mathbb{P}(A))=\mathbb{P}(B)*\mathbb{P}(A^{C})$$
+				- Ricordare infatti che $\mathbb{P}(A^{C})=1-\mathbb{P}(A)$
 	- ## Indipendenza tra più di 2 elementi:
-		- l’indipendenza si complica con più eventi e vale la cosa seguente:
+		- L’indipendenza si complica con più eventi e vale la cosa seguente:
 		- ### Def:
 			- ho 3 eventi $A,B,C$ eventi indipendenti tra di loro
 			- 1) $\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$
@@ -121,22 +130,23 @@ data: "`2025-02-25 13:11`"
 			- in generale con $A_{1},...,A_{n}$ eventi indipendenti:
 				- $$\mathbb{P}(A_{i_{1}}\cap ...\cap A_{i_{k}})=\mathbb{P}(A_{i_{1}})*\mathbb{P}(A_{i_{1}})$$
 	- ## ES:
-		- lancio una moneta ed  un D4 normali.
-		- determino la spazio di probabilità che descriva l’[[Modello probabilistico di un esperimento aleatorio#^58d2bd|esperimento aleatorio]] ovvero $(\Omega, \mathbb{P})$
+		- Lancio una moneta ed un D4 normali.
+		- determino la spazio di probabilità che descriva l’ [[Modello probabilistico di un esperimento aleatorio#^58d2bd|esperimento aleatorio]] ovvero $(\Omega, \mathbb{P})$
 		- $\Omega= \{T,C\}\times\{1,2,3,4\}=\{(T,1),(T,2),(T,3),(T,4),(C,1),(C,2),(C,3),(C,4)\}$
 		- $\mathbb{P}(.)$
 			- mi chiedo quale sia la probabilità di un evento a caso dentro lo [[Modello probabilistico di un esperimento aleatorio|spazio campionario]]
 			- $\mathbb{P}(\{(T,1)\})= ?$
 			- $\mathbb{P}(.)$ uniforme nei 2 sotto-esperimenti.
-			- i due eventi sono indipendenti.
+			- I due eventi sono indipendenti.
 			- Dimostro che su $\Omega$ ho la probabilità uniforme 
 				- ovvero: $\mathbb{P}({w})=\frac{1}{|\Omega|}=\frac{1}{8}$
 			- T: esce testa.
 			- $A_{i}$: esce un numero $i$ dal D4.
 			- $$\mathbb{P}(\{(T,1)\})= \mathbb{P}(T\cap1)=\mathbb{P}(A_{i})*\mathbb{P}(T)=$$
-				- grazie all’indipendenza.
+				- Grazie all’indipendenza.
 			- $$=\frac{1}{4}* \frac{1}{2}=\frac{1}{8}$$
-				- grazie alla probabilità uniforme sui due sotto-esperimenti.
+				- Grazie alla probabilità uniforme sui due sotto-esperimenti.
 		- ### Diagramma ad albero:
-			- inserisci!!!!!!!!
+			- ![[Pasted image 20250302192135.png]]
+	- 
 - # Link Utili:

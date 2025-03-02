@@ -1,7 +1,9 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: []
+aliases:
+  - additività finita
+  - monotonia
+  - unione non disgiunta di insiemi
 data: "`2025-02-25 13:13`"
 ---
 - # Linguaggio:
@@ -47,7 +49,7 @@ data: "`2025-02-25 13:13`"
 					- $$\mathbb{P}(\emptyset)=\mathbb{P}(\bigcup_{i=1}^{\infty} A_{i})=\sum\limits_{i=1}^{\infty} \mathbb{P}(A_{i})=\sum\limits_{i=1}^{\infty} \mathbb{P}(\emptyset)$$
 					- $P: \mathbb{P(\emptyset)}$
 					- $$\sum\limits_{i=1}^{\infty} P = \begin{cases} 0 &P=0 \\ \infty& P\in (0,1]\end{cases}\iff \mathbb{P}(\emptyset)=0$$
-			- ### 5 additività finita:
+			- ### 5 additività finita: ^2502af
 				- $$\mathbb{P}(\bigcup_{i=1}^{n}A_{i})= \sum\limits_{i=1}^{n}\mathbb{P}(A_{i})$$
 				- #### Dim:
 					- $(A_{i})_{i=1,...,n}$ disgiunti, definisco $(B_{i})_{i=\mathbb{N}}: B_{i}=A_{i}$  $\forall i = 1,...,n$
@@ -74,23 +76,6 @@ data: "`2025-02-25 13:13`"
 						- per la proprietà 5:
 					- $$\mathbb{P}(A)+\mathbb{P}(B  \textbackslash A)\ge \mathbb{P}(A)$$
 						- la parte del $\ge$ è così per l’assioma 1 perché quindi $\mathbb{P}(A)$ non può essere un numero negativo.
-- # Probabilità di unione non disgiunta di insiemi:
-	- siano $A,B$ eventi
-	- $$\mathbb{P}(A\cup B)=\mathbb{P}(A)+\mathbb{P}(B)-\mathbb{P}(A\cap B)$$
-	- ![[Pasted image 20250227193741.png]]
-	- si toglie l’intersezione degli insiemi perché altrimenti si conterebbe 2 volte la probabilità degli eventi in comune.
-	- ## Dim:
-		- per l’additività
-			- $$\mathbb{P}(A\cup B)= \mathbb{P}(A \textbackslash B) + \mathbb{P}(B \textbackslash A)+ \mathbb{P}(A\cap B)=$$
-			- riscrivibile in 
-		- $$=\pm 2\mathbb{P}(A\cap B)+\mathbb{P}(A\cap B)$$
-			- e poiché: $(A \textbackslash B) \cup (A\cap B)=A$ e $(B \textbackslash A) \cup (A\cap B)=B$
-		- $$\mathbb{P}(A)+\mathbb{P}(B)- 2\mathbb{P}(A\cap B)+ \mathbb{P}(A\cap B)=$$
-		- $$=\mathbb{P}(A)+\mathbb{P}(B)-\mathbb{P}(A\cap B)$$
-	- ## OSS:
-		- quando si ha più di 2 eventi 
-		- $n=3$
-		- $$\mathbb{P}(A\cup B\cup C)=\mathbb{P}(A)+\mathbb{P}(B)+\mathbb{P}(C)-\mathbb{P}(A\cap B)-\mathbb{P}(B\cap C)-\mathbb{P}(A\cap C)+\mathbb{P}(A\cap B\cap C)$$
 - # ES:
 	- C ed M prendono 1 dei 50 biglietti per una lotteria con 50 premi  a C piacciono 7 premi, ad M 5 e solo 1 ad entrambi:
 		- $C=\{1,2,3,4,5,6,7\}$
