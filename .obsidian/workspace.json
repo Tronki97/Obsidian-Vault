@@ -199,7 +199,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.5
+    "width": 345.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -221,6 +222,7 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Pasted image 20250305102744.png",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
@@ -251,7 +253,6 @@
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
     "immagini/Pasted image 20250303110052.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
     "immagini/Pasted image 20250303111739.png",
     "immagini/Pasted image 20250303111633.png",
     "immagini/Pasted image 20250303111438.png",

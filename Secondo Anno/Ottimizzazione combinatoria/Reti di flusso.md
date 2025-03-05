@@ -69,5 +69,47 @@ data: "`2025-03-05 09:13`"
 			- Si aggiunge la seguente quantità alla [[Programmazione lineare intera (PLI)#^fbc927|funzione obiettivo]]:
 				- $$\sum\limits_{(i,j)\in A}c_{ij}*l_{ij}$$
 			- Quindi il flusso $x_{ij}$ in $G$ corrisponde a $x_{ij}+l_{ij}$ in $H$
+- # Problema di flusso di costo minimo (MCF):
+	- _Minimum cost flow_:
+	- Il costo del flusso è la funzione obiettivo.
+	- $l_{ij}=0 \ \ \ \forall (i,j)\in A$
+	- Esprimibile come problema di [[Programmazione lineare]]:
+		- $$\min cx$$
+		- $$0\le x\le u\ \ \ \ Ex=b$$
+		- Dove:
+			- $c\in \mathbb{R}^{|A|}$ è il vettore dei costi.
+			- $u\in \mathbb{R}^{|A|}$ vettore delle capacità superiori.
+			- $E in \mathbb{R}^{|N|\times|A|}$ matrice di incidenza tra nodi ed archi.
+			- $b$ vettore di sbilanciamenti
+	- Spesso si assume che ci sia una sola _sorgente_ e un solo _pozzo_
+		- Si aggiungono 2 nodi finti corrispondenti a 1 sorgente e 1 pozzo rispettivamente.
+		- Si aggiungono archi finti dalla sorgente ad ogni sorgente di partenza. Ogni arco aggiunto avrà _costo nullo_, e capacità superiore pari all’_inverso dello sbilanciamento della sorgente_
+			- Cosa analoga si fa con il nodo _pozzo_
+		- Lo sbilanciamento della nuova _sorgente_ è la somma degli sbilanciamenti delle sorgenti di partenza. Cosa simile per i pozzi.
+	- Si assume spesso anche che ogni nodo abbia una _capacità_, ovvero che solo una quantità $\in [l_{ij},u_{ij}]$ possa passare per il nodo $i$
+		- Modellabile grazie allo _sdoppiamento_ di ciascun nodo $i$ in $i',i''$:
+			- Tutti gli archi $(k,i)$ entreranno in $i'$
+			- Tutti gli archi $(i,k)$ partiranno invece da $i''$
+			- Si crea un arco fittizio $(i′, i′′)$ con costo nullo, capacità Inferiore $l_{i}$ e capacità superiore $u_{i}$
+- # problema di flusso massimo (MF):
+	- Maximum flow. 
+	- Cambia la funzione obiettivo, nella quale si vogliono massimizzare i flussi.
+	- Può essere inteso come un particolare MCF in quanto i parametri sono diventati variabili.
+		- I costi sono nulli.
+		- Gli sbilanciamenti sono nulli
+		- Si aggiunge però un arco fittizio da ($t,  s$) con costo $−1$ e Capacità $\infty$.
+		- ![[Pasted image 20250305102744.png|450]]
+	- ## Algoritmi:
+		- ### Tagli:
+			- Data una rete $G=(N,A)$ e una coppia $(N',N'')$ di sottoinsiemi di $N$ tali che $N' \cap N''=\emptyset$ e $N' \cup N''=N$
+			- Un $(s,t)$ _-taglio_ è un tipo di taglio $(N_{s},N_{t})$ dove $s\in N_{s}\wedge t\in N_{t}$ 
+			- Dato un $(s,t)$ -taglio di un grafo $G$ si indica con $A^{+}(N_{s},N_{t})$ e $A^{-}(N_{s},N_{t})$ i seguenti sottoinsiemi:
+				- $$A^{+}(N_{s},N_{t})=\{(i,j)\in A|i\in N_{s}\wedge j\in N_{t}\}$$
+				- $$A^{-}(N_{s},N_{t})=\{(i,j)\in A|j\in N_{s}\wedge i\in N_{t}\}$$
+			- #### Lemma:
+				- $\forall(s,t)$ -taglio e ogni flusso ammissibile $x$ con valore $v$:
+					- 1) $$v=\sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}x_{ij} - \sum\limits_{(i,j)\in A^{-}(N_{s},N_{t})}x_{ij}$$
+					- 2) $$v\le \sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}u_{ij} $$
+				- 
 - # Link Utili:
 	- 
