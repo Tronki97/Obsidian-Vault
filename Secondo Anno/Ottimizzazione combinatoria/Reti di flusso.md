@@ -110,6 +110,6 @@ data: "`2025-03-05 09:13`"
 				- $\forall(s,t)$ -taglio e ogni flusso ammissibile $x$ con valore $v$:
 					- 1) $$v=\sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}x_{ij} - \sum\limits_{(i,j)\in A^{-}(N_{s},N_{t})}x_{ij}$$
 					- 2) $$v\le \sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}u_{ij} $$
-				- 
+			- 
 - # Link Utili:
 	- 

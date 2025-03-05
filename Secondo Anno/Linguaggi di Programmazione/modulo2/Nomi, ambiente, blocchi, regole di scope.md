@@ -48,7 +48,8 @@ data: "`2025-02-23 18:02`"
 	- ## Dinamico:
 		- esecuzione: legame definitivo di tutti i nomi non ancora legati
 - # Ambiente:
-	- insieme di tutti i nomi definiti e dei relativi oggetti denotati
+	- _Insieme delle associazioni_ di tutti i nomi definiti e dei relativi oggetti denotati
+	- Utilizzato dai linguaggi funzionali.
 	- ## Dichiarazione:
 		- Meccanismo col quale si crea un’associazione in ambiente
 			- ![[Pasted image 20250303110052.png|200]]

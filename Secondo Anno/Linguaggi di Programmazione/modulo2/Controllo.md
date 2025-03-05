@@ -37,7 +37,7 @@ data: "`2025-02-27 13:39`"
 					- nelle espressioni booleane questa valutazione è detta _corto circuito_
 				- altrimenti ci sarebbe la valutazione _eager_ che valuterebbe tutti gli operandi causando degli errori (guardando l’espressione precedente) se per esempio `a` fosse 0. 
 				- ##### ES:
-					- nell’espressione: $a == 0 || b/a > 2$
+					- nell’espressione: $a == 0\  ||\  b/a > 2$
 					- se `a` è 0, e si usa una valutazione _eager_ dell’espressione, darebbe errore.
 					- altrimenti non darebbe errore però sussiste comunque e si rischia di non sapere appunto se ci fosse qualche errore in agguato. (_corto circuito_).
 - # Comandi:
@@ -50,6 +50,19 @@ data: "`2025-02-27 13:39`"
 		- in `x=x+1` io sto dicendo:
 			- prendi il valore di `x` e sommalo a 1 e poi assegnalo a `x` la prima `x` quindi è l’indirizzo di memoria della variabile. 
 		- ### Operatori di assegnamento:
+	- ## GOTO:
+		- Permette di saltare ad un determinato punto del programma determinato da un etichetta:
+			- Utile per gestire delle eccezioni
+			- Utile per uscire dal corpo di un loop.
+		- Utilizzare invece di questo dei blocchi strutturati come `for, if, while` permette di avere un codice più chiaro e leggibile.
+	- ## Costrutti di iterazione:
+		- ### Indeterminata:
+			- Cicli controllati logicamente: `while, repeat`
+		- ### Determinata:
+			- Cicli controllati numericamente: `for` dove il numero di iterazioni è noto al momento dell’inizio del ciclo.
+			- è meno espressiva dell’iterazione indeterminata visto che non si possono fare cicli infiniti.
 			- 
+		- 
+- 
 - # Link Utili:
 	- 
