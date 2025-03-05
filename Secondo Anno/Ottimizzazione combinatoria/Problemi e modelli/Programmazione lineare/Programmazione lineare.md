@@ -1,11 +1,7 @@
 ---
-tags:
-  - TODO
+tags: 
 aliases:
   - problema della fabbrica
-  - relazioni logiche
-  - vincoli di assegnamento
-  - insiemi ammissibili
   - PLI
 data: "`2025-02-23 16:53`"
 ---

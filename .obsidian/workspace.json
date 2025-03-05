@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,55 +28,19 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Probabilità condizionata"
+              "title": "Reti di flusso"
             }
           },
           {
-            "id": "9012a26a33562c45",
+            "id": "35999f3e6243bc45",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Probabilità di unione non disgiunta di insiemi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "Excalidraw/problema dei router.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "Probabilità di unione non disgiunta di insiemi"
-            }
-          },
-          {
-            "id": "94dd14da58192b55",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Proprietà delle probabilità.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Proprietà delle probabilità"
+              "icon": "excalidraw-icon",
+              "title": "problema dei router.excalidraw"
             }
           }
         ]
@@ -111,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Virtuale",
+                "query": "funzione obiettivo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -132,7 +96,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -256,42 +221,44 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
+    "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
+    "Excalidraw/problema dei router.excalidraw.md",
+    "Excalidraw/notazione polacca.excalidraw.md",
+    "immagini/Pasted image 20250305094554.png",
+    "Pasted image 20250305093437.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
+    "Homepage.md",
+    "template/Modello appunti.md",
+    "Esercizi di ottimizzazione.md",
+    "template/Tabella 2x3.md",
+    "template/Matrice completa 4x4.md",
+    "latexsheet-a4.pdf",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula delle probabilità totali.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Paradossi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Formula delle probabilità totali.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Proprietà delle probabilità.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Richiami di teoria degli insiemi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità di unione non disgiunta di insiemi.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata.md",
-    "Pasted image 20250302192135.png",
-    "Homepage.md",
-    "immagini/Pasted image 20250228135945.png",
-    "immagini/Pasted image 20250302191052.png",
-    "immagini/Pasted image 20250302183351.png",
-    "immagini/Pasted image 20250302182310.png",
-    "latexsheet-a4.pdf",
-    "immagini/Pasted image 20250227160803.png",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Struttura dei sistemi operativi.md",
-    "immagini/Pasted image 20250227193741.png",
-    "immagini/Pasted image 20250227193118.png",
-    "immagini/Pasted image 20250227165204.png",
-    "immagini/Pasted image 20250227164344.png",
-    "Secondo Anno/Reti di Calcolatori/Caching.md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Memorie.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica dei comandi.md",
-    "Excalidraw/notazione polacca.excalidraw.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
+    "template/Modello appunti 1.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
-    "Secondo Anno/Sistemi Operativi/progetto/Interrupt routing.md",
-    "Secondo Anno/Sistemi Operativi/progetto/Process Control Block.md",
-    "Secondo Anno/Sistemi Operativi/progetto/progetto sistemi operativi..md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
+    "immagini/Pasted image 20250303110052.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/monitor/Monitor.md",
-    "Primo Anno/programmazione/python/Face detection.md",
-    "Primo Anno/programmazione/c++/Alberi.md",
-    "Primo Anno/programmazione/c++/Algoritmi di sorting.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
+    "immagini/Pasted image 20250303111739.png",
+    "immagini/Pasted image 20250303111633.png",
+    "immagini/Pasted image 20250303111438.png",
+    "immagini/Pasted image 20250303110202.png",
+    "immagini/Pasted image 20250302192135.png",
+    "immagini/Pasted image 20250303101612.png",
+    "immagini/Pasted image 20250303092424.png",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
     "Secondo Anno/Linguaggi di Programmazione/modulo1",
@@ -300,7 +267,6 @@
     "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Secondo Anno/Sistemi Operativi/Modulo 1",
     "Secondo Anno/Tecnologie Web/CSS",
-    "Secondo Anno/Tecnologie Web/Javascript",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

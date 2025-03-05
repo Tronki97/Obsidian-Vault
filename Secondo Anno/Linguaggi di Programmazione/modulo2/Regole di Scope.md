@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - CRT
+  - A-list
 data: "`2025-02-26 12:00`"
 ---
 - #  Scope dinamico:
@@ -30,5 +32,8 @@ data: "`2025-02-26 12:00`"
 	- ## CRT con pila nascosta:
 		- invece di memorizzare tutte le associazioni, memorizziamo solo quelle al primo livello.
 			- ![[Pasted image 20250227133800.png]]
+		- ## Costi:
+			- Ha una gestione più complessa della A-list, ma occupa meno memoria in quanto ogni nome viene memorizzato una sola volta.
+			- Ha un costo d’accesso costante $O(1)$
 - # Link Utili:
 	- 

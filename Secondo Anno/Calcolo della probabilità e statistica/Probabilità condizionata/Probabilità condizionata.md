@@ -46,7 +46,7 @@ data: "`2025-02-25 13:11`"
 	- ### 3:
 		- riprendendo l’ [[Proprietà delle probabilità#^b7a07a||assioma 3]] $(a_{n})_{n\in \mathbb{N}}  \ \ A_{i}\cap A_{j}=\emptyset  \ \ \ \forall i\ne j$
 		- $$\mathbb{P}\left( \bigcup_{i=1}^{\infty} A_{i}|B \right)=\sum\limits_{i=1}^{\infty} \mathbb{P}(A_{i}|B) \implies \frac{\mathbb{P}\left( \left( \bigcup_{i=1}^{\infty} A_{i} \right)\cap B \right)}{\mathbb{P}(B)}=\sum\limits_{i=1}^{\infty} \frac{\mathbb{P}(A_{i}\cap B)}{\mathbb{P}(B)}$$
-- # N.B (Regola della catena):
+- # N.B (Regola della catena): ^2857d0
 	- La _probabilità condizionata_ spesso è nota e si usa per trovare la _probabilità dell’intersezione_:
 		- $$\mathbb{P}(A|B)=\frac{\mathbb{P}(A\cap B)}{\mathbb{P}(B)} \implies \mathbb{P}(A\cap B)= \mathbb{P}(A|B)*\mathbb{P}(B)$$
 		- Questo è noto come _Regola della catena_

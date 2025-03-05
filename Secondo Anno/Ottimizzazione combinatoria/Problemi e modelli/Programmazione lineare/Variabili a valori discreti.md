@@ -1,0 +1,69 @@
+---
+tags:
+  - TODO
+aliases:
+  - minima quantità definita positiva
+  - funzione con carico fisso
+  - funzione lineare a tratti
+  - rappresentazione valore assoluto
+data: "`2025-02-26 10:38`"
+---
+- # Intro:
+	- a volte le variabili sono vincolate a prendere il loro valore da un insieme che:
+		- non è $\{0,1\}$
+		- non è $\mathbb{N}$
+		- non è un _intervallo_
+	- per esempio vincolare $x$ a stare nell’insieme $\{v_1,...,v_n\}$ dove $v_{i}$ sono valori _reali_
+	- si possono quindi usare $n$ variabili logiche:
+		- $$y_{i}\in \{0,1\}\ \ \ \sum_{i=1}^{n}y_{i}=1 \ \ \ \ \  x=\sum_{i=1}^{n}v_{i}*y_{i}$$
+- # Minima quantità definita positiva:
+	- Spesso il valore di una variabile $x$ si trovi in un insieme:
+		- $$\{0\}\cup [l,u]$$
+		- Lo $0$ è _l’assenza_ di produzione, mentre l’intervallo rappresenta i diversi _livelli_ di produzione.
+		- Serve per gestire vari livelli di produzione presenti in quell’intervallo.
+	- Per modellare si introduce una variabile logica $y\in \{0,1\}$ che indica presenza o assenza di produzione.
+	- I vincoli saranno:
+		- $$ly\le x\le uy$$
+		- Quindi $y=0 \implies x=0$ altrimenti: $l\le x \le u$
+- # Funzione con carico fisso:
+	- Si suppone di lavorare con la seguente funzione da minimizzare:
+		- $$f(x)\begin{cases} 0 & x=0 \\ b+cx & x\in (0,u] \end{cases}$$
+			- $(b,c >0)$
+		- Il grafico risultante è:
+			- ![[Pasted image 20250303092424.png]]
+			- Questa non è una funzione lineare in quanto presenta un punto di discontinuità
+	- Si introduce quindi una variabile logica $y$ rappresentante la _presenza di produzione_ con i seguenti vincoli:
+		- $$0\le x\le yu$$
+	- La nuova funzione risultante è:
+		- $$g(x,y)=by+cx$$
+		- Infatti $g(0,0)=0$; $g(x,1)=b+cx$
+	- ## OSS:
+		- Se $y=0$ allora $x=0$ ma non vale il viceversa infatti $g(0,0)$ e $g(0,1)$ sono valori diversi ma sono entrambe soluzioni ammissibili. 
+		- La funzione va però minimizzata quindi si sceglie $g(0,0)=0$ e non $g(0,1)=b$ che per definizione è $>0$.
+- # Rappresentazione valore assoluto:
+	- ## Nei vincoli:
+		- Il vincolo $|g(x)|\le b$ si può esprimere come congiunzione di due vincoli:
+			- $$-b\le g(x)\le b$$
+			- Se $b\in \mathbb{R}^{+}$ 
+			- _nei casi più complessi non è sempre possibile sbarazzarsi del valore assoluto_
+- # Funzioni lineari a tratti:
+	- Rappresentabili grazie all’ausilio di variabili logiche.
+	- ## ES:
+		- $$f(x)=\begin{cases} b_{1}+c_{1}x & x\in[a_{1},a_{2}] \\ b_{2}+c_{2}x & x\in (a_{2},a_{3}] \end{cases}$$ 
+		- ![[Pasted image 20250303101612.png]]
+		- Si necessitano quindi variabili logiche ausiliarie $y_{1},y_{2}$ che rappresentano la _presenza_ di un certo tratto di retta.
+			- $$y_{1}=\begin{cases}1 &x\in [a_{1},a_{2}] \\ 0 & altrimenti\end{cases}\ \ \ \ \ y_{2}=\begin{cases}1 &x\in (a_{2},a_{3}] \\ 0 & altrimenti\end{cases}$$
+		- Inoltre si necessita anche di _variabili quantitative ausiliarie_ $z_{1},z_{2}$
+			- $$z_{1}=\begin{cases}x-a_{1} & x\in [a_{1},a_{2}]\\ 0 & altrimenti\end{cases}\ \ \ \ \ z_{2}=\begin{cases}x-a_{2} & x\in (a_{2},a_{3}]\\ 0 & altrimenti\end{cases}$$
+		- Con i seguenti vincoli:
+			- $0 ≤z_{1} ≤ (a_{2} − a_{1})y_{1}$        $y_{1}+y_{2}=1$
+			- $0 ≤z_{2} ≤ (a_{3} − a_{2})y_{2}$        $y_{1},y_{2}\in \{0,1\}$
+		- La funzione obiettivo sarà:
+			- $$g(z_{1},z_{2},y_{1},y_{2})=b_{1}y_{1}+c_{1}(a_{1}y_{1} + z_{1})+b_{2}y_{2}+c_{2}(a_{2}y_{2} + z_{2})$$
+				- Definita: $\mathbb{R}^{4}\to \mathbb{R}$
+			- Di conseguenza il valore di  $f$ in ogni punto è definito dalla quadrupla: $(z_{1},z_{2},y_{1},y_{2})$
+				- L’unica eccezione è $x=a_{2}$ che corrisponde a queste due quadruple:
+					- $(a_{2}-a_{1}, 0,1,0)$ solo questo è _accettabile_
+					- $(0,0,0,1)$
+- # Link Utili:
+	- 

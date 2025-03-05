@@ -11,6 +11,7 @@ aliases:
   - problema di copertura
   - problema di partizione
   - problema di riempimento
+  - funzione obiettivo
 data: "`2025-02-26 10:18`"
 ---
 - # # Programmazione lineare intera (PLI):
@@ -30,7 +31,7 @@ data: "`2025-02-26 10:18`"
 			- $x_{i}\in \{0,1\}$ se l’oggetto i è preso o meno.
 		- ### Vincoli:
 			- $(\sum\limits_{i=1}^{n} x_{i}*a_{i})\le b$ 
-		- ### Funzione obiettivo:
+		- ### Funzione obiettivo: ^fbc927
 			- $$max\{\sum\limits_{i=1}^{n}x_{i}*c_{i}\}$$
 	- ## Relazioni logiche:
 		- tutte le _relazioni logiche_ possono essere modellate tramite i vincoli lineari:

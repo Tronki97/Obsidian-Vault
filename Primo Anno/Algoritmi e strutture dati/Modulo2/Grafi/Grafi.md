@@ -73,7 +73,7 @@
 			- ##### NOTA: 
 				- m= |E| -> (numero di archi).
 				  $\delta (v)$= grado del nodo x.
-- ## Grafi pesati
+- ## Grafi pesati ^792110
 	- in alcuni casi ogni arco ha un peso associato, 
 	- il costo è definito da una funzione $c: E\rightarrow \mathbb{R}$
 	- quando non esiste un arco tra due vertici vuol dire che il costo sarà infinito
