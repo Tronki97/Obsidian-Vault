@@ -62,7 +62,11 @@ data: "`2025-02-27 13:39`"
 			- Cicli controllati numericamente: `for` dove il numero di iterazioni è noto al momento dell’inizio del ciclo.
 			- è meno espressiva dell’iterazione indeterminata visto che non si possono fare cicli infiniti.
 			- 
-		- 
+	- ## Ricorsione:
+		- Permette di avere lo stesso potere espressivo di una macchina di turing senza usare l’iterazione.
+		- ### Tail recursion:
+			- Quando una funzione ha solo chiamate ricorsive in coda ovvero:
+				- Se `f` chiama `g` e restituisce il valore restituito da `g` senza fare altre computazioni.
 - 
 - # Link Utili:
 	- 

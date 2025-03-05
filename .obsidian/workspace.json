@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "525025912b256a78",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "ae5e554c4c374fd5",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Controllo"
+              "title": "Homepage"
             }
           }
         ]
@@ -206,13 +206,17 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ae5e554c4c374fd5",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Sicurezza in rete.md",
+    "Secondo Anno/Tecnologie Web/componenti.md",
+    "Secondo Anno/Tecnologie Web/Javascript/server-side JS.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
     "latexsheet-a4.pdf",
     "immagini/Pasted image 20250305102744.png",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "Excalidraw/problema dei router.excalidraw.md",
@@ -234,10 +238,7 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Proprietà delle probabilità.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Richiami di teoria degli insiemi.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità di unione non disgiunta di insiemi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
     "immagini/Pasted image 20250303110052.png",
     "immagini/Pasted image 20250303111739.png",
     "immagini/Pasted image 20250303111633.png",
