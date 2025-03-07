@@ -1,0 +1,32 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-03-06 13:28`"
+---
+- # EZ 2:
+	-  ![[Pasted image 20250306133210.png]]
+	- ## Con scoping statico:
+		- La `x` dentro `next` si riferisce a quello esterno e Scrive $1$
+		- poi esce da `next` e scrive $3$ riferendosi a quella interna a `exec` 
+		- infine esce da `exec` e scrive $0$ riferendosi a quella globale.
+	- ## Con scoping dinamico:
+		- Entra in `exec` legge `x=3` entra in `next` che quindi si riferisce alla x precedente e Scrive $4$ 
+		- poi scrive $4$ riferendosi all’ultimo ambiente visitato 
+		- Infine esce da `exec` e scrive $4$ che è l’ultimo valore salvato.
+- # EZ 3:
+	- ![[Pasted image 20250306134139.png]]
+	- ## Con scoping statico:
+		- Viene chiamato `pippo(1,2)` perché il `++` aumenta il valore dell’ambiente in cui si trova `x` che poi porta a fare:
+			- `z=0+1+2=3` e siccome `z` è un riferimento da ad `x` il valore $3$
+		- Chiamo poi `pippo(3,4)`  per lo stesso motivo di prima che porta a fare:
+			- `z=0+3+4=4` per lo stesso motivo di prima `x=7`  
+		- Procedendo a stampare $7$ ed infine stampa $0$ siccome si riferisce a quella globale.
+- # EZ 4:
+	- ![[Pasted image 20250306135855.png]]
+	- ## Con scoping dinamico:
+		- Chiama `pippo(100,101)` che esegue `x=100+101=201` che poi assegna al valore locale di `x=201`.
+		- Viene chiamato `pippo(201,202)` che fa la stessa cosa di prima risultando in `x=403` e quindi stampa $403$.
+- 
+- # Link Utili: 
+	- 

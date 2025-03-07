@@ -8,7 +8,7 @@ data: "`2024-11-29 10:06`"
 ---
 - # Argomento:
 	- meccanismi per condividere informazioni tra [[Concorrenza#^68dcd8|processi]] riguardo la memoria privata di ogni processo.
-- # Messaggio: 
+- # Messaggio:  ^d2687a
 	- informazione formattata da un processo mittente e interpretato dal destinatario.
 - # Operazioni:
 	- `send`:

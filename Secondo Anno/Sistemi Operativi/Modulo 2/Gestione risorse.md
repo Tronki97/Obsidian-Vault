@@ -1,0 +1,90 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-03-07 10:52`"
+---
+- # Risorse:
+	- Sono un insieme di elementi a cui i [[Concorrenza#^68dcd8|processi]] accedono
+	- Possono essere fisiche o logiche:
+		- Fisiche: Memoria, dischi, interfacce di rete…
+		- Logiche: Descrittori di processo, classi, [[Sezioni critiche (critical section)|sezioni critiche]] … 
+	- Possono essere suddivise in _classi_:
+		- Ogni risorsa viene detta _istanza di una classe_
+		- Il numero di risorse viene detto _molteplicità_.
+	- Un processo può richiedere solo una risorsa di una specifica classe, ma non una specifica risorsa.
+	- ## Ad assegnazione statica:
+		- Una volta assegnate non vengono più tolte
+	- ## Ad assegnazione dinamica:
+		- Una volta che un processo ha finito di usare una risorsa la rilascia
+		- Per esempio le richieste a dispositivi I/O
+	- ## Richieste:
+		- _singola_
+		- _Multipla_
+		- _bloccante_: un processo si blocca finche non riceve le risorse che richiede
+		- _non bloccante_: se la risorsa non è disponibile il processo non si blocca.
+	- ## Risorse condivisibili:
+		- Più processi possono accederci contemporaneamente
+		- Come un file di sola lettura
+	- ## Risorse non condivisibili:
+		- Una volta che un processo ci accede nessun altro ci può accedere finche non viene rilasciata la risorsa.
+		- Come le sezioni critiche.
+	- ## Prerilasciabile:
+		- Si dice prerilasciabile se la funzione di gestione può sottrarla ad un processo prima che questo l'abbia effettivamente rilasciata.
+		- Il processo a cui viene tolta la risorsa deve bloccarsi
+		- Successivamente la risorsa viene restituita al processo a cui era stata sottratta.
+		- Come dei blocchi o partizioni di memoria.
+- # Condizioni di verifica di [[Proprietà di un programma#^2a9ed1|deadlock]]:
+	- Le seguenti condizioni sono sufficienti e necessarie
+	- ## Non condivisibilità:
+		- Se la risorsa non è condivisibile
+	- ## Assenza di prerilascio:
+		- Le risorse vengono rilasciate solo per volontà del processo che ci ha acceduto per primo.
+	- ## Richieste bloccanti:
+		- Le richieste sono bloccanti ed un processo che ha ottenuto una risorsa ne può richiedere un’altra.
+	- ## Richiesta circolare:
+		- Il processo $P_{0}$ attende $P_{1}$ che attende $P_{2}$ che a sua volta aspetta $P_{0}$ 
+- # Grafo di Holt:
+	- è un grafo orientato
+	- è un grafo bipartito:
+		- I nodi sono suddivisi in 2 sottoinsiemi e gli archi collegano solo i nodi di 2 sottoinsiemi diversi.
+		- I sottoinsiemi sono _risorse e processi_
+	- L’arco risorsa→processo indica che la risorsa è assegnata al processo.
+	- L’opposto invene indica che un processo ha fatto richiesta di una risorsa.
+	- ![[Pasted image 20250307112155.png]]
+	- ## Variante generale:
+		- L'insieme delle risorse è partizionato in classi e gli archi di richiesta sono diretti alla classe e non alla singola risorsa
+		- Gli archi di richiesta per delle risorse devono rappresentare solo richieste che non sono soddisfacibili. 
+		- ![[Pasted image 20250307112435.png]]
+	- ## Implementazione:
+		- Si rappresenta come un grafo pesato:
+			- Sugli archi (P→C) la molteplicità della richiesta.
+			- Sugli archi (C→P) la molteplicità dell’assegnazione.
+			- Dentro alla classe si scrive il numero di risorse non ancora assegnate.
+		- ![[Pasted image 20250307112838.png]]
+	- ## Riducibilità:
+		- Un grafo di Holt si può ridurre se esiste almeno un nodo processo con solo archi entranti.
+		- E consiste nell’eliminare tutti gli archi di tale nodo e riassegnare le risorse ad altri processi
+		- ![[Pasted image 20250307113843.png]]
+- # Gestione dei deadlock:
+	- ## Detection and recovery:
+		- Si mantiene aggiornato il grafo di Holt con tutti gli assegnamenti e le kill dei processi.
+		- ### Teorema:
+			- Se le risorse rispettano le condizioni di deadlock esso avviene sse il grafo di Holt contiene un ciclo.
+		- ### Dim:
+			- ![[Pasted image 20250307113501.png|500]]
+		- Tuttavia se in una classe è presente più di una risorsa allora la presenza di un ciclo non è condizione sufficiente per avere deadlock.
+		- ### Teorema:
+			- Se le risorse rispettano le condizioni di deadlock, lo stato _non è di deadlock_ sse il grafo di Holt è completamente riducibile.
+			- Ovvero esiste una sequenza di passi di riduzione che elimina tutti gli archi del grafo
+		- ### Knot:
+			- Dato un nodo $n$ l’insieme dei nodi raggiungibili da $n$ viene detto _insieme di raggiungibilità_ di $n$ scritto ($R(n)$)
+			- Un _knot_ del grafo $G$ è un sottoinsieme di nodi $M$ tali che $\forall n \in M| R(n)=M$ 
+		- ### Teorema:
+			- Dato un grafo di Holt con una sola richiesta sospesa per processo, le risorse rispettano le condizioni allora si verifica deadlock sse esiste un _Knot_ nel grafo
+	- ## Prevention/ avoidance:
+		- 
+	- ## Ostrich algorithm:
+		- 
+- # Link Utili:
+	- 
