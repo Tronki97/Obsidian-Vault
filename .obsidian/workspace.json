@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
-            }
-          },
-          {
-            "id": "a0708fe098c3ada1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Gestione risorse"
+              "title": "Calcolo combinatorio"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -231,17 +206,17 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a0708fe098c3ada1",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
     "Pasted image 20250307113843.png",
     "Pasted image 20250307113501.png",
     "Pasted image 20250307112838.png",
     "Pasted image 20250307112435.png",
     "Pasted image 20250307112155.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
     "Excalidraw/Drawing 2025-03-07 10.38.25.excalidraw.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/esercizi di linguaggi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
@@ -264,7 +239,6 @@
     "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
     "Excalidraw/notazione polacca.excalidraw.md",
     "immagini/Pasted image 20250305094554.png",
-    "Pasted image 20250305093437.png",
     "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "template/Modello appunti.md",
     "Esercizi di ottimizzazione.md",

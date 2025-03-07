@@ -11,6 +11,112 @@ data: "`2025-03-04 13:37`"
 	- $$\mathbb{P}(E_{1, n_{1}} \cap E_{2, n_{2}} \cap E_{3, n_{3}}\cap E_{4, n_{4}}\cap E_{5, n_{5}})=$$
 	- $$=\mathbb{P}(E_{1},n_{1})*\mathbb{P}(E_{2},n_{2}|E_{1},n_{1})*\mathbb{P}(E_{3},n_{3}|E_{1},n_{1}\cap E_{2},n_{2})*...*\mathbb{P}(E_{5},n_{5}|E_{1},n_{1}\cap E_{2},n_{2}\cap E_{3},n_{3}\cap E_{4},n_{4})$$
 	- $$=\frac{1}{90}* \frac{1}{89}* \frac{1}{88}* \frac{1}{87}* \frac{1}{86}=\frac{1}{|\Omega|}$$
-	- 
+- # Intro:
+	- Esistono spazi di probabilità dove i singoletti che compongono uno [[Modello probabilistico di un esperimento aleatorio#^521af6|spazio campionario]] hanno la stessa probabilità.
+	- Esiste una tecnica che consiste nel trovare una partizione di  uno spazio campionario i cui eventi elementari hanno la stessa probabilità.
+- # Teorema (formula di laplace):
+	- Se  $\Omega=\{w_{1},...,w_{n}\}$ e $\mathbb{P}(\{w_{n}\})=\frac{1}{n}$ (quindi siamo nel setting della probabilità uniforme) allora $\mathbb{P}(A)=\frac{\text{\# elementi di A}}{n}=\frac{|A|}{n}$ con $A\subseteq \Omega$ 
+		- _formula di laplace_
+- # Fattoriali:
+	- $$n!=n*(n-1)*...*1$$
+	- Con la convenzione che:  $$0!=1$$
+- # Coefficienti binomiali:
+	- $$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
+	- Consiste nella scelta di $k$ elementi da un insieme di $n$ elementi.
+	- ## Casi particolari:
+		- $$\binom{n}{0}=\binom{n}{n}=1$$
+		- $$\binom{n}{1}=\binom{n}{n-1}=n$$
+	- ## formula di newton:
+		- $$(a+b)^{n}=\sum\limits_{k=0}^{n}\binom{n}{k}a^{k}b^{n-k}$$
+		- ### ES:
+			- $$(a+b)^{3}=\sum\limits_{k=0}^{3}\binom{3}{k}a^{k}b^{3-k}$$
+			- Continuo.
+- # Metodo delle scelte successive:
+	- ## ES:
+		- Alfabeto di 36 caratteri $\Omega=\{a,b,...,z,0,1,...,9\}=\{1,2,...,26,...,36\}$
+		- Quante password di 8 caratteri sono possibili? Sarebbe $36^{8}$ ma perché?:
+			- Scelte: 
+				- 1°) 1 carattere dei 36 totali
+				- 2°) 1 caratteri dei 36 totali.
+				- E cosi via fino ad 8 scelte.
+			- Quindi la $|\Omega|=\text{\# possibili scelte}^ \text{\# di scelte fatte}=36^{8}$
+		- E se non si potessero ripetere i caratteri:
+			- 1°) 1 carattere dei 36 possibili.
+			- 2°) 1 carattere dei 35 possibili
+			- $\vdots$
+			- 8°) 1 carattere dei 29 possibili.
+			- Quindi $$|\Omega|=36*35*34*...*29=\frac{36!}{28!}$$
+	- ## Principio:
+		- Se ogni elemento di $A$ può essere determinato da una sola sequenza di $k$ scelte, dove per ogni scelta ci sono $n_{1},...,n_{k}$ possibilità allora:
+			- $$|A|=n_{1}*...*n_{k}$$
+		- ### ES:
+			- 52 carte da gioco. 13 numeri $\times$ 4 semi
+				- 1) A:= insieme dei _full_ (3 carte dello stesso numero e 2 di un altro)
+					- Per esempio un full potrebbe essere (1 c, 1 q, 1 p, 9 c, 9 f)
+					- 4 scelte:
+						- Tipo di carta nel tris: 13 possibilità
+						- Tipo di carta nella coppia: 12 possibilità.
+						- Semi nel tris: 4 possibilità 
+						- Semi nella coppia: 6 possibilità perché si guardano le coppie di semi formabili e visto che non c’è ripetizione sono 6.
+					- $$|A|=13*12*4*6=3744$$
+				- 2) $A$ = insieme delle doppie coppie: (2 coppie diverse ed 1 carta libera).
+					- Per esempio (1♥, 1♦, 4♠, 4♣, 7♥).
+					- Scelte:
+						- Tipo nella 1° coppia 13 possibilità
+						- Tipo nella 2° coppia 12 possibilità 
+						- Semi nella 1° coppia 6 possibilità
+						- Semi nella 2° coppia 6 possibilità
+						- Tipo carta singola 11 possibilità 
+						- Seme carta singola 4 possibilità
+					- $$|A|=13*12*11*6*6*4$$
+						- Soluzione sbagliata perché vengono contate anche le doppie coppie invertite.
+					- Scelte giuste:
+						- Condenso le prime 2 scelte precedenti in: 
+							- Combinazione di tipi che formano 2 coppie ($\frac{13\times12}{2}$)
+					- $$|A|=\frac{13*12}{2}*6*6*11*4=123552$$
+- # Disposizioni e combinazioni:
+	- ## Disposizioni con ripetizione:
+		- Dato un insieme non vuoto $E$ di $n$ elementi, indico con $DR_{n,k}$ le sequenze ordinate di $k$ elementi di $E$:
+			- $$DR_{n,k}=\prod^{k}_{i=1}E=E^{k}$$
+			- $|DR_{n,k}|=n^{k}$ 
+		- ### ES:
+			- Urna con $n$ palline numerate; $E:=\{1,...,n\}$
+			- Estraggo $k$ palline con reimmissione.
+			- $\Omega=DR_{n,k}$ e $|\Omega|=n^{k}$ 
+			- Probabilità uniforme data da $\mathbb{P}(\{w\})=\frac{1}{|\Omega|}=\frac{1}{n^{k}}=n^{-k}$
+		- ### ES:
+			- Determinare gli spazi campionari per i seguenti esperimenti:
+				- Scelta casuale di una parola di 8 lettere dell'alfabeto italiano di 21 lettere.
+					- $\Omega= DR_{21,8}$ e $|\Omega|=21^{8}$
+				- Scelta di colonne del totocalcio:
+					- $\Omega= DR_{3,13}$ e $|\Omega|=3^{13}$ 
+				- 10 lanci di un D6 :
+					- $\Omega= DR_{6,10}$ e $|\Omega|=6^{10}$ 
+	- ## Disposizioni semplici (senza ripetizione):
+		- Dato un insieme $E$ di $n$ elementi, l’insieme delle disposizioni semplici (senza ripetizioni) di $k$ elementi dell’insieme $E$ è l’insieme delle sequenze ordinate di $k$ elementi distinti ovvero:
+			- $$D_{n,k}=\{(x_{1},...,x_{k}): x_{i}\in E\wedge x_{i}\ne x_{j} \ | \  i\ne j\}$$
+				- $D_{n,k}\subsetneq DR_{n,k}$
+			- $$|D_{n,k}|=n*(n-1)*(n-2)*...*(n-k+1)=\frac{n!}{(n-k)!}$$
+		- ### ES:
+			- Urna con 90 numeri. Estrazione di 5 numeri senza ripetizione.
+			- $\Omega=D_{90,5}$ e $|\Omega|=\frac{90!}{85!}=90*89*88*87*86=$ numero di combinazioni possibili.
+			- $$\mathbb{P}(\{w\})=\frac{1}{|\Omega|}=\frac{85!}{90!}$$
+	- ## Permutazioni:
+		- $P_{n}:=D_{n,n}$ e $|P_{n}|=n!$
+	- ## Combinazioni:
+		- Dato un insieme $E$ di $n$ elementi, si indica con $C_{n,k}$ la classe dei sottoinsiemi di $E$ contenenti $k$ elementi ovvero:
+			- $$C_{n,k}=\{A\subset E: |A|=k\} $$
+			- E può anche essere vista come _l’insieme delle sequenze non ordinate sena ripetizione_.
+		- ### Proposizione:
+			- $$|C_{n,k}|=\binom{n}{k}$$
+		- ### Dim:
+		- ### ES:
+			- In quanti modi si possono scegliere i semi di una coppia di carte?
+				- $\Omega=C_{4,2}$ e $|\Omega|=\binom{4}{2}=\frac{4!}{2!*2!}=6$
+		- ### ES:
+			- In quanti modi si possono scegliere i 2 tipi di carte che formano 2 coppie:
+				- $E=\{1,...,13\},\ \  n=13$
+				- $\Omega=C_{13,2}$ e $|\Omega|=\binom{13}{2}=\frac{13*12}{2}$ 
+- 
 - # Link Utili:
 	- 
