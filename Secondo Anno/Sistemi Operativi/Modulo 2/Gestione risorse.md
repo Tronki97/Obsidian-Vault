@@ -1,7 +1,13 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - assegnazione statica
+  - assegnazione dinamica
+  - prerilasciabile
+  - grafo di holt
+  - detection and recovery
+  - knot
 data: "`2025-03-07 10:52`"
 ---
 - # Risorse:

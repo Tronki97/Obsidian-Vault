@@ -59,12 +59,24 @@
             "id": "a9e65bf78c5a0c1e",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "immagini/Pasted image 20250308163255.png"
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250308163255"
+              "icon": "lucide-file",
+              "title": "Gestione risorse"
             }
           },
           {
@@ -267,8 +279,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "a9e65bf78c5a0c1e",
   "lastOpenFiles": [
+    "immagini/Pasted image 20250308163255.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Threads.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Scheduling.md",
@@ -277,7 +290,6 @@
     "immagini/Pasted image 20250308172238.png",
     "immagini/Pasted image 20250308172056.png",
     "immagini/Pasted image 20250308163516.png",
-    "immagini/Pasted image 20250308163255.png",
     "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Concorrenza.md",
     "immagini/Pasted image 20250308155740.png",
     "immagini/Pasted image 20250308162338.png",
@@ -306,7 +318,6 @@
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
     "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
-    "Excalidraw/notazione polacca.excalidraw.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
