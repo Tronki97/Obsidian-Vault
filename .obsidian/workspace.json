@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Threads.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Calcolo combinatorio"
+              "title": "Threads"
+            }
+          },
+          {
+            "id": "daa29d878d0e7d99",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Scheduling.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Scheduling"
+            }
+          },
+          {
+            "id": "a9e65bf78c5a0c1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmi di scheduling"
+            }
+          },
+          {
+            "id": "6dabf2906ee5ba68",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Concorrenza.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Concorrenza"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -63,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "funzione obiettivo",
+                "query": "program counter",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -206,31 +279,39 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "a9e65bf78c5a0c1e",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Threads.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Scheduling.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
+    "Pasted image 20250308173545.png",
+    "Pasted image 20250308172631.png",
+    "Pasted image 20250308172238.png",
+    "Pasted image 20250308172056.png",
+    "Pasted image 20250308163516.png",
+    "Pasted image 20250308163255.png",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Concorrenza.md",
+    "immagini/Pasted image 20250308155740.png",
+    "immagini/Pasted image 20250308162338.png",
+    "immagini/Pasted image 20250308162238.png",
+    "immagini/Pasted image 20250308162141.png",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
+    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
     "Homepage.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
-    "Pasted image 20250307113843.png",
-    "Pasted image 20250307113501.png",
-    "Pasted image 20250307112838.png",
-    "Pasted image 20250307112435.png",
-    "Pasted image 20250307112155.png",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling.md",
     "Excalidraw/Drawing 2025-03-07 10.38.25.excalidraw.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/esercizi di linguaggi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "immagini/Pasted image 20250306133210.png",
-    "immagini/Pasted image 20250306135855.png",
-    "immagini/Pasted image 20250306134139.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Sicurezza in rete.md",
     "Secondo Anno/Tecnologie Web/componenti.md",
     "Secondo Anno/Tecnologie Web/Javascript/server-side JS.md",
     "latexsheet-a4.pdf",
-    "immagini/Pasted image 20250305102744.png",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "Excalidraw/problema dei router.excalidraw.md",
     "Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione.md",
@@ -238,12 +319,6 @@
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
     "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
     "Excalidraw/notazione polacca.excalidraw.md",
-    "immagini/Pasted image 20250305094554.png",
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
-    "template/Modello appunti.md",
-    "Esercizi di ottimizzazione.md",
-    "template/Tabella 2x3.md",
-    "template/Matrice completa 4x4.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
@@ -252,7 +327,6 @@
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli",
     "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Secondo Anno/Sistemi Operativi/Modulo 1",
-    "Secondo Anno/Tecnologie Web/CSS",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

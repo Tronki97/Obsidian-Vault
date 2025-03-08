@@ -7,6 +7,8 @@ aliases:
   - distributed processing
   - race condition
   - potere espressivo
+  - vita dei processi
+  - gerarchia dei processi
 data: "`2024-10-10 10:56`"
 ---
 - # Processo: ^68dcd8
@@ -27,13 +29,19 @@ data: "`2024-10-10 10:56`"
 	- _Ogni istanza viene considerata un processo separato_
 		- possono condividere lo stesso codice
 		- i dati, le immagini e lo stato di avanzamento sono separati
-- # Stati dei processi:
-	- running:
-		- che stanno venendo eseguiti
-	- waiting:
-		- aspettano o i dati o che vengano completati altri processi prima di entrare nello stato _running_
-	- ready:
-		-  pronto per entrare nello stato _running_
+	- ## Vita dei processi:
+		- _running_
+			- Il processo è in esecuzione entra in questo stato quando viene scelto dallo [[Scheduling#^de7898|scheduler]] preso dalla _ready queue_.
+		- _waiting_:
+			- Non può procedere fino a quando non si verifica un certo evento, ed inoltre non può essere caricato da nessuno finche non finisce.
+		- _ready_
+			- Il processo è pronto ad essere eseguito ma il processore è impegnato in un’altra attività
+			- La struttura dati usata per gestire i processi in questo stato è la _ready queue_
+	- ## Gerarichia dei processi:
+		- Il processo padre può creare altri processi figli.
+		- I processi figli possono creare altri processi figli a loro volta.
+		- Si crea così un albero dei processi.
+			- ![[Pasted image 20250308160054.png|500]]
 - # Concorrenza:
 	- nel [[Sistema operativo]] tante attività vengono eseguite più o meno contemporaneamente dal processore
 	- serve il _modello di riferimento_ che è basato sul concetto di _processo_ 

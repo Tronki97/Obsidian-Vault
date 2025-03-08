@@ -1,0 +1,112 @@
+---
+tags:
+  - TODO
+aliases:
+  - First come first served
+  - FCFS
+  - SJF
+  - shortest job first
+  - round robin
+  - scheduling a priorità
+  - scheduling a classi di priorità
+  - scheduling multilivello
+  - scheduling real-time
+  - hard real-time
+  - soft real-time
+  - rate monotonic
+  - earliest deadline first
+  - EDF
+  - interval timer
+  - priorità
+data: "`2025-03-08 17:39`"
+---
+- # Algoritmi di scheduling:
+	- ## First Come First Served (FCFS):
+		- Il processo che arriva per primo viene servito per primo.
+		- Si implementa con una coda FIFO
+		- Ha [[Scheduling#^914e04|tempi di attesa]] medi e di [[Scheduling#^88bd62|turnaround]] alti inoltre i processi [[Scheduling#^a14d11|CPU bound]] ritardano quelli [[Scheduling#^70c0ca|I/O bound]]
+		- ### ES:
+			- Ordine di arrivo $P_{1},P_{2},P_{3}$
+			- [[Scheduling#^c336d7|CPU burst]]: $P_{1}=22, P_{2}=2, P_{3}=2$
+			- Tempo medio turnaround: $(32+34+36)/3=34ms$
+			- Tempo medio di attesa: $(0+32+34)/3=22ms$
+			- ![[Pasted image 20250308172056.png]]
+			- Suppongo di avere:
+				- Un processo CPU bound
+				- Un certo numero di processi I/O bound
+				- I processi I/O bound si mettono in coda dietro al processo CPU bound, e in alcuni casi la ready queue si può svuotare:
+					- ![[Pasted image 20250308172238.png]]
+	- ## Shortest Job First (SJF):
+		- La CPU viene assegnata al processo ready che ha la minima durata del CPU burst successivo
+		- Senza [[Scheduling#^cc7eb1|preemption]].
+		- ### ES:
+			- Tempo medio turnaround: $(0+2+4+36)/3=7ms$
+			- Tempo medio di attesa: $(0+2+4)/3=2ms$ 
+			- ![[Pasted image 20250308172631.png]]
+		- # DA FINIRE
+			- 
+	- ## Scheduling Round-robin:
+		- Basato sul concetto di _quanto di tempo (time slice)_
+			- Ogni processo ha un certo tempo di CPU, se non termina entro questo tempo viene messo in coda alla _ready queue_ e si passa al prossimo.
+			- Oppure può decidere di lasciare volontariamente il processore in seguito ad un’operazione I/O.
+		- In entrambi i casi precedenti il primo processo ad essere eseguito è il primo della ready queue.
+		- _La durata del quanto di tempo è un parametro importante_:
+			- Se è troppo breve il sistema sarà meno efficiente perché ci sarà un overhead dovuto ai [[Scheduling#^635de2|context switch]].
+			- Se è troppo lungo i processi _ready_ rimarranno inattivi per lunghi periodi di tempo il che può essere fastidioso per gli utenti.
+		- ### Interval Timer
+			- Si necessita di un _interval timer_ che faccia da “sveglia” per il processore
+				- Questo timer fornisce un interrupt allo scadere di un tempo prefissato
+				- Viene interfacciato come se fosse un’unità I/O.
+		- ### ES:
+			- Tre processi: $P_{1},P_{2},P_{3}$
+			- PCU burst: $P_{1}=10+14, P_{2}=6+4, P_{3}=6$
+			- Time slice: $4$
+			- Tempo medio di turnaround: $(40+26+20)/3=28.66ms$
+			- Tempo medio di attesa: $(16+16+16)/3=15.33ms$
+				- Si suppongono attese di I/O brevi $(<2ms)$
+			- [[Scheduling#^b38b86|tempo di risposta]] medio: $4ms$
+			- ![[Pasted image 20250308173545.png]]
+	- ## Scheduling a priorità:
+		- Non tutti i processi sono uguali tra loro e quindi alcuni devono essere eseguiti prima di altri in quanto potrebbero causare problemi.
+			- Ogni processo ha quindi una priorità associata.
+				- Definita o dal sistema operativo come nel shortest job first
+				- Definita esternamente dall’utente con una syscall per esempio.
+		- Si implementa con una coda [[Code con Priorità||coda con priorità]] 
+		- ### Priorità:
+			- _Statica_: uguale durante tutta la vita del processo.
+				- Può avvenire [[Proprietà di un programma#^054a32|starvation]]
+			- _Dinamica_: varia durante l’esecuzione del processo, per esempio nel shortest job next. 
+				- Utile per esvitare starvation, usando una tecnica chiamata _aging_ che consiste nel:
+					- Aumentare la priorità di un processo in attesa gradualmente.
+					- Se un processo è in attesa da molto tempo, la sua priorità aumenta.
+					- Continuando ad aumentare la priorità e lui a rimanere in attesa prima o poi raggiungerà la priorità massima e verrà eseguito.
+	- ## Scheduling a classi di priorità:
+		- Si creano diverse classi di priorità dove si raggruppano diversi processi per una qualche somiglianza tra loro.
+		- La coda _ready_ quindi è divisa in varie sotto-code, una per ogni classe di priorità.
+		- Si sceglie la sotto-coda con priorità più alta che non sia vuota.
+	- ## Scheduling multilivello:
+		- Ha delle classi di priorità ed ognuna di queste ha un algoritmo di scheduling diverso per esempio:
+			- Per i processi server uso la priorità statica.
+			- Per quelli utente interattivi uso il round-robin
+			- Per i processi batch uso il shortest job next.
+	- ## Scheduling real-time:
+		- La correttezza dell’esecuzione dipende sia dalla correttezza del risultato che dal tempo in cui viene prodotto.
+			- ### Hard real-time:
+				- Se il risultato non viene prodotto entro un certo tempo può provocare dei danni quindi non supererà mai la sua deadline
+			- ### Soft real-time:
+				- Ritardi occasionali sono tollerati.
+		- ### Processi periodici:
+			- Processi riattivati con una cadenza periodica.
+		- ### processi aperiodici:
+			- Processi scatenati da un evento casuale, tipo l’allarme antiincendio. 
+		- ### Rate monotonic:
+			- La priorità è assegnata _staticamente_ in base alla frequenza di attivazione del processo.
+				- Ogni processo periodico deve completare entro il suo periodo.
+				- Tutti i processi sono indipendenti
+			- Ad ogni istante viene eseguito il processo con maggiore priorità.
+		- ### Earliest deadline first:
+			- La priorità dei processi è dinamica.
+			- Ad ogni istante viene eseguito il processo con deadline più vicina.
+			- Ed è appunto dinamica perché varia continuamente la priorità relativa di due processi. 
+- # Link Utili:
+	- 
