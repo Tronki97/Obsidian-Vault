@@ -48,7 +48,7 @@ data: "`2024-11-27 13:28`"
 	- ## Funzionamento:
 		- consente lo smistamento dei pacchetti verso le rispettive applicazioni in ascolto su “porte”
 		- richiede l’attivazione della connessione _punto-a-punto_ tra due _socket_:
-			- ### Socket:
+			- ### Socket: ^297138
 				- indirizzo [[Indirizzamento IPv4|IP]] + numero di porta dell’applicazione a livello superiore.
 			- ### Three way handshake ^75a5d7
 				- quando due macchine comunicano, quella che vuole iniziare la conversazione manda una richiesta _TCP_ all’altra che, se il socket non è occupato, risponde con un _OK_ 

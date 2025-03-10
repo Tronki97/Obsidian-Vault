@@ -30,7 +30,7 @@ data: "`2024-12-18 14:39`"
 			+ #### Detour
 				+ Prima di poter comunicare il _router fa degli ulteriori accertamenti per assicurarsi che la macchina non sia un eventuale attaccante_.
 		+ Oppure vengono usati dei _sistemi di intelligenza artificiale che decidono arbitrariamente le politiche di filtraggio dei pacchetti_ all'interno del router.
-	+ Per capire come e' fatta una rete NAT al suo interno si esegue un _port scanning_.
+	+ Per capire come e' fatta una rete NAT al suo interno si esegue un _port scanning_. ^100d60
 		+ Una macchina dall'esterno prova ogni porta del NAT finche' non ha completamente capito come è fatta l'architettura della rete e quali sono le potenziali debolezze di essa.
 		+ Per evitare questo fenomeno, il router controlla se una macchina sta controllando tutte le porte in maniera sequenziale. Una volta individuato il comportamento sospetto, il router filtra la macchina in modo che non possa più comunicare con la rete.
 - # Link Utili:

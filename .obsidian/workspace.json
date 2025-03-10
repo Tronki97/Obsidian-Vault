@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "e98bbbcf1e849f43",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "7bc8caf0c1cf0223",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Threads.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Firewall.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Threads"
+              "title": "Firewall"
             }
           },
           {
-            "id": "daa29d878d0e7d99",
+            "id": "671b41bdd60fa377",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Scheduling.md",
+                "file": "Secondo Anno/Reti di Calcolatori/livello trasporto/Livello trasporto.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,59 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Scheduling"
-            }
-          },
-          {
-            "id": "a9e65bf78c5a0c1e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Gestione risorse"
-            }
-          },
-          {
-            "id": "6dabf2906ee5ba68",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Concorrenza.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Concorrenza"
+              "title": "Livello trasporto"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -136,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "program counter",
+                "query": "VPN",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -279,12 +230,31 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a9e65bf78c5a0c1e",
+  "active": "7bc8caf0c1cf0223",
   "lastOpenFiles": [
+    "Secondo Anno/Reti di Calcolatori/livello trasporto/Livello trasporto.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Firewall.md",
+    "Pasted image 20250310120658.png",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure socket layer (SSL).md",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure E-mail.md",
+    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/autenticazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Variabili a valori discreti.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
+    "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Scheduling.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Teorema di Rouché-Capelli.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
     "immagini/Pasted image 20250308163255.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Threads.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Scheduling.md",
     "immagini/Pasted image 20250308173545.png",
     "immagini/Pasted image 20250308172631.png",
     "immagini/Pasted image 20250308172238.png",
@@ -294,30 +264,11 @@
     "immagini/Pasted image 20250308155740.png",
     "immagini/Pasted image 20250308162338.png",
     "immagini/Pasted image 20250308162238.png",
-    "immagini/Pasted image 20250308162141.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
-    "Homepage.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
     "Excalidraw/Drawing 2025-03-07 10.38.25.excalidraw.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/esercizi di linguaggi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/Sicurezza in rete.md",
-    "Secondo Anno/Tecnologie Web/componenti.md",
-    "Secondo Anno/Tecnologie Web/Javascript/server-side JS.md",
     "latexsheet-a4.pdf",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
-    "Excalidraw/problema dei router.excalidraw.md",
-    "Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
-    "Excalidraw/Drawing 2024-09-30 14.45.43.excalidraw.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",

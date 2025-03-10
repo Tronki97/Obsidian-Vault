@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - minima quantità definita positiva
   - funzione con carico fisso

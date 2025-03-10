@@ -1,0 +1,56 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-03-10 11:17`"
+---
+- # Firewall:
+	- Di solito visto a livello di router 
+	- Isola la rete interna di un’organizzazione da reti più grandi come l’internet, permettendo solo ad alcuni pacchetti di passare.
+	- Analizza gli header dei pacchetti e con certe regole che vengono definite in modo diverso per ogni firewall.
+		- Queste regole hanno effetto finché gli attaccanti non si trovano all’interno della rete locale.
+	- Per bucare il firewall si può:
+		- Trovare un modo per convincere il firewall a lasciare passare i pacchetti che si vuole mandare.
+		- Accedere alla rete locale da un pc con accesso consentito e poi fare quello che si vuole.
+	- Può essere organizzato ad albero in modo che siano più livelli di firewall con regole diverse.
+	- Servono per prevenire molte comunicazioni TCP con brutte intenzioni, modifiche “illegali” a dati interni  permette a solo chi è autorizzato di accedere
+- # ACL:
+	- Tabella di regole che definiscono cosa può passare e cosa no. 
+	- ![[Pasted image 20250310120658.png||600]]
+- # Tipi di firewall:
+	- ## Stateless packet filter:
+		- Regole che si applicano senza considerare nessun tipo di stato.
+		- Regole che si basano solo sugli:
+			- [[Indirizzamento IPv4#^789112||indirizzi IP]] sorgente e e destinazione;
+			- Numeri di porta sorgente e destinazione per [[Livello trasporto#^157bc5|TCP]] e [[Livello trasporto#^bd8258|UDP]]
+			- Tipo di messaggio ICMP 
+		- ### ES:
+			- Blocco di datagrammi in ingresso e uscita con campo di protocollo IP = 17 e con porta di ingresso e destinazione = 23
+			- Succede che tutti i flussi UDP in ingresso e uscita sono bloccati
+		- 
+	- ## Stateful packet filter:
+		- Tengono traccia dello stato delle connessioni TCP e permettono di fare regole più complesse.
+			- Se ho già un [[Livello trasporto#^297138|socket]] aperto con un certo ip allora posso aprire un altro socket con lo stesso ip.
+			- Se una connessione ha raggiunto il timeout allora non viene permesso nessun pacchetto in arrivo da quella connessione. 
+		- Si usa una ACL con un campo in più che indica lo stato della connessione. 
+		- 
+	- ## application gateways:
+		- Filtrano il traffico in base al tipo di applicazione.
+			- Come il sistema antispam che filtra le mail.
+		- Richiede ad ogni utente di istanziare una connessione telnet solo attraverso il gateway
+		- Per utenti autorizzati il gateway apre una connessione telnet con l’host di destinazione
+		- Il Router filtra bloccando tutte le connessioni telnet che non originano per il gateway
+- # Limitazioni:
+	- _ip spoofing_: Il router non riesce a controllare che il mandante di un pacchetto dati sia effettivamente chi dice di essere 
+	- Ogni applicazione necessita del proprio gateway
+	- _tradeoff_: tra sicurezza e flessibilità 
+	- Il sistemista deve quindi continuare ad aggiornare le ACL per mantenere la sicurezza
+- # Intrusion detection systems (IDS):
+	- A differenza dei packet filtering che lavorano sugli header TCP/IP, non guarda la correlazione tra diverse sessioni
+	- Gli IDS guardano il contenuto dei pacchetti e cercano di capire se sono pericolosi o meno.
+	- Guardano la correlazione tra diversi pacchetti:
+		- [[NAT#^100d60|port scanning]] 
+		- Network mapping
+		- Attacchi DoS 
+- # Link Utili:
+	- 

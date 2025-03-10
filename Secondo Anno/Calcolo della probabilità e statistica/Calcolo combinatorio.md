@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - metodo dei coefficienti binomiali
 data: "`2025-03-04 13:37`"
 ---
 - # ES (da mettere in un altro file):
@@ -20,9 +21,9 @@ data: "`2025-03-04 13:37`"
 - # Fattoriali:
 	- $$n!=n*(n-1)*...*1$$
 	- Con la convenzione che:  $$0!=1$$
-- # Coefficienti binomiali:
+- # Metodo dei coefficienti binomiali:
 	- $$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
-	- Consiste nella scelta di $k$ elementi da un insieme di $n$ elementi.
+	- _Consiste nella scelta di $k$ elementi da un insieme di $n$ elementi._
 	- ## Casi particolari:
 		- $$\binom{n}{0}=\binom{n}{n}=1$$
 		- $$\binom{n}{1}=\binom{n}{n-1}=n$$
