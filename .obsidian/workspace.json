@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
+                "file": "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Variabili aleatorie"
+              "title": "Data Plane e Control Plane"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "VPN",
+                "query": "tabelle di forwar",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -206,10 +206,17 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Pasted image 20250311161940.png",
+    "Pasted image 20250311154347.png",
+    "Pasted image 20250311154330.png",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Instradamento dei pacchetti e Routing.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/livello Rete.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
     "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Firewall.md",
@@ -231,20 +238,13 @@
     "Primo Anno/Algebra e geometria/Applicazione lineare/Teorema di Rouché-Capelli.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
     "immagini/Pasted image 20250308163255.png",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Threads.md",
     "immagini/Pasted image 20250308173545.png",
     "immagini/Pasted image 20250308172631.png",
     "immagini/Pasted image 20250308172238.png",
     "immagini/Pasted image 20250308172056.png",
     "immagini/Pasted image 20250308163516.png",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Concorrenza.md",
     "immagini/Pasted image 20250308155740.png",
-    "immagini/Pasted image 20250308162338.png",
-    "immagini/Pasted image 20250308162238.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
-    "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
     "latexsheet-a4.pdf",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",

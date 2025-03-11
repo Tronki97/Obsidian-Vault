@@ -6,7 +6,7 @@ aliases:
   - routing
 data: "`2024-11-14 17:31`"
 ---
-- # Argomento:
+- # Instradamento:
 	- avviene grazie a delle strutture dati dette _tabelle di forwarding_ nelle quali sono presenti le informazioni necessarie per inoltrare i pacchetti.
 	- ![[Pasted image 20241115132647.png|800]]
 		- in questo caso se la sottorete $Y.2$ deve inviare un pacchetto a $K.2$ deve passare per il router $Ry2$ che poi guarda le sue sottoreti e controlla che ci sia il destinatario.

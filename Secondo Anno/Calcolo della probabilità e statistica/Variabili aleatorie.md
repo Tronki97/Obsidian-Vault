@@ -52,5 +52,43 @@ data: "`2025-03-11 13:23`"
 			- $\sigma(X)=$ eventi generati o associati alla V.A $X$
 			- Si dice che $E \subset \Omega$ è un evento generato da $X$ se $\exists B \subset \mathbb{R}:$
 				- $$E=\{w\subseteq \Omega: X(w)\in B\}=\{X\in B\}=\{X^{-1}(B)\}$$
+- ### ES:
+	- $X=$ “risultato della somma dei lanci”
+	- $A=$ “la somma è 3” = $\{X\in \{3\}\}$
+	- $B=$ “la somma è $\le 5$”= $\{X\in (- \infty, 5]\}$
+	- #### OSS:
+		- $\Omega = \{X\in \mathbb{R}\}$
+		- $\emptyset = \{X\in \emptyset\}$ 
+- ### ES:
+	- $X$ V.A. costante; $X(w)=a\ \ \forall w\in \Omega$   $a\in \mathbb{R}$ fissato.
+	- $\sigma(X)?$   $E=\{X\in B\}$ elemento di $\sigma(X), \forall B\subset \mathbb{R}$
+	- Sia $B\subset \mathbb{R}$ fissato.
+	- $$\Omega \supset \{X\in B\} =\{w\in \Omega : X(w)\in B\}=\begin{cases}\Omega&a\in B\\ \emptyset& altrimenti\end{cases}$$
+	- $$\sigma(X)=\{\Omega, \emptyset\}$$
+	-  X V.A indicatrice:
+	- $\sigma(X)?$
+	- Fisso $$\{X\in B\}=\{w\in \Omega:X(w)\in B\}=\begin{cases}A&1\in B,0\notin B\\ A^{C}&1\notin B,0\in B\\ \Omega&1\in B,0\in B\\ \emptyset&1\notin B,0\notin B\end{cases}$$
+	- Quindi $\sigma(X)=\{A,A^{C},\Omega, \emptyset\}$
+	- ### OSS:
+		- $(\Omega, \mathbb{P}), X:\Omega\to \mathbb{R}$ V.A
+		- 1) $\mathbb{P}(X\le x)=\mathbb{P}(X<x)+\mathbb{P}(X=x), \ x\in \mathbb{R}$
+		- 2) $\mathbb{P}(X\le x)=1-\mathbb{P}(X>x), \ x\in \mathbb{R}$
+	- ### Dim:
+		- 1) $\{X\le x\}=\{X< x\}$
+- # Distribuzione (o legge) di una variabile aleatoria:
+	- $(\Omega, \mathbb{P})$ spazio di probabilità, $X: \Omega\to \mathbb{R}$ V.A
+	- ## Def:
+		- Legge di probabilità d i $X$ la probabilità:
+			- $\mathbb{P}_{X}:P(\mathbb{R})\to[0,1]$
+			- $B\longrightarrow \mathbb{P}_{X}(B):=\mathbb{P}(X\in B)$
+		- Si scrive:
+			- $$X\sim \mathbb{P}_{X}$$
+				- Significa che $X$ ha la legge $\mathbb{P}_{X}$
+		- ### OSS:
+			- Conoscere $\mathbb{P}_{X}(B ),\ \ \forall B \subset \mathbb{R}$ equivale a conoscere:
+				- $$\mathbb{P}_{X}((- \infty,x]),\ \ x\in \mathbb{R}$$
+			- Si dimostra che la legge $\mathbb{P}_{X}$ di una V.A $X$ è caratterizzabile dalla funzione $F_{X}(x):=\mathbb{P}_{X}((- \infty, x])$
+			- Definita come : $F_{X}: \mathbb{R}\to [0,1]$
+			- $$x \to F_{X}(x):=\mathbb{P}_{X}((- \infty, x]) = \mathbb{P}(X\le x)$$
 - # Link Utili:
 	- 

@@ -1,0 +1,52 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-03-11 15:26`"
+---
+- # Data Plane:
+	-  tutta la gestione dell’informazione fatta dai router determina come questi datagrammi vengono inoltrati quindi scegliendo quale porta del router debba far uscire i dati.
+	- Hanno delle funzioni di instradamento.
+	- ## Interno di un router:
+		- Il routing processor decide l’instradamento attraverso la tabella di forwarding.
+		- Questo instradamento viene eseguito all’interno della switching fabric che riceve i pacchetti in ingresso, nella _porta di input_, organizzandoli in delle code per poi inoltrarle 
+		- ### Porta di input:
+		- ### Tabella di routing (forwarding table):
+			- è una tabella con le colonne aventi: 
+				- Range dell’indirizzo di destinazione.
+				- Interfaccia di uscita. Con le porte di uscita 
+		- ### Longest prefix matching:
+			- è un algoritmo che permette di trovare il match più lungo tra l’indirizzo di destinazione e la tabella di forwarding.
+			- ![[Pasted image 20250311161940.png]]
+			- #### ES:
+				- 11001000 00010111 00010 _110 10100001_ verrebbe mandato fuori dall’interfaccia 0
+				- 11001000 00010111 00011 _000 10101010_ vanno bene entrambe le interfacce 1 e 2 in questo caso si sceglie la 1 visto che il prefisso (ovvero la parte esplicita) è più lunga.
+	- ## Regola del pollice:
+		- Avendo un RTT (round trip time) e una capacità di collegamento C con N flussi si calcola che la grandezza del buffer si ottiene:
+			- $$\frac{\text{RTT}*C}{\sqrt{N}}$$
+	- ## Politiche di scheduling:
+		- Quando si hanno dei pacchetti in coda sia in ingresso che in uscita si deve decidere quale pacchetto far passare per primo.
+		- ### FIFO:
+			- I pacchetti vengono smaltiti nell’ordine di arrivo
+		- ### Politiche di scarto:
+			- _tail drop_: se il buffer è pieno il pacchetto viene scartato. 
+			- _priority drop_: si scartano i pacchetti con priorità più bassa
+			- _random drop_: si scelgono casualmente i pacchetti da scartare.
+				- Questo metodo implementa la fairness.
+		- ### Priorità:
+			- Si fanno uscire prima i pacchetti con priorità più alta.
+			- Classi con priorità diverse.
+			- Di solito si implementa con due buffer uno per le classi con priorità alta e uno per quelle con priorità bassa e ogni pacchetto ha la priorità scritta nell’header. 
+- # Control Plane:
+	- ## Per-router 
+		- Per realizzarlo ogni router sceglie quale sia il prossimo router a cui inoltrare i dati.
+			- Quindi ogni router scrive la propria tabella di instradamento.
+		- è utile nelle reti fatte da sistemi dinamici, come una rete Bluetooth
+		- ![[Pasted image 20250311154347.png|650]]
+	- ## Logicamente centralizzato
+		- Oppure c’è un livello superiore con un algoritmo che calcola le tabelle di instradamento per poi inviarle ad ogni router.   
+		- Con questo metodo si garantisce l’efficienza dell’instradamento in quanto il controllo remoto conosce tutta la strada.
+		- Però se per caso un collegamento ai router fallisce allora la tabella non verrà aggiornata creando dei problemi nell’instradamento.
+		- ![[Pasted image 20250311154330.png||650]]
+- # Link Utili:
+	- 
