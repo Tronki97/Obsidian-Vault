@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e98bbbcf1e849f43",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "7bc8caf0c1cf0223",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Firewall.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Firewall"
-            }
-          },
-          {
-            "id": "671b41bdd60fa377",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/livello trasporto/Livello trasporto.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Livello trasporto"
+              "title": "Variabili aleatorie"
             }
           }
         ]
@@ -230,11 +206,14 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "7bc8caf0c1cf0223",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/livello trasporto/Livello trasporto.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
+    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Firewall.md",
+    "Secondo Anno/Reti di Calcolatori/livello trasporto/Livello trasporto.md",
     "Pasted image 20250310120658.png",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure socket layer (SSL).md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
@@ -248,7 +227,6 @@
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
-    "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Scheduling.md",
     "Primo Anno/Algebra e geometria/Applicazione lineare/Teorema di Rouché-Capelli.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
@@ -267,7 +245,6 @@
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Registri.md",
     "Primo Anno/architettura degli elaboratori/ISA/ISA.md",
-    "Excalidraw/Drawing 2025-03-07 10.38.25.excalidraw.md",
     "latexsheet-a4.pdf",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",

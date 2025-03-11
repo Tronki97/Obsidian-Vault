@@ -11,7 +11,7 @@ data: "`2025-02-23 12:45`"
 - # Concetti primitivi:
 	- ## 1) Esperimento aleatorio: ^58d2bd
 		- è un esperimento di cui non si conosce il risultato con certezza
-	- ## 2) Esito:
+	- ## 2) Esito: ^5ebd00
 		- è un ipotetico risultato dell’esp aleatorio
 	- ## 3) probabilità
 	- ## ES:

@@ -1,0 +1,56 @@
+---
+tags:
+  - TODO
+aliases:
+  - V.A
+  - variabili aleatorie costanti
+  - variabili aleatorie indicatrici
+  - variabili aleatorie di bernoulli
+data: "`2025-03-11 13:23`"
+---
+- # Variabili aleatorie (V.A.):
+	- Una quantità numerica aleatoria che mi va a dire se un evento è vero o no.
+	- Espressa come un’affermazione.
+	- ## Affermazione:
+		- è un’_affermazione_ che riguarda il risultato dell’[[Modello probabilistico di un esperimento aleatorio#^58d2bd|esperimento aleatorio]] ed identifica un solo numero una volta noto l’[[Modello probabilistico di un esperimento aleatorio#^5ebd00|esito]] quindi si risponde alla domanda: _quanto vale?_
+		- Spesso si usano le ultime lettere dell’alfabeto 
+		- ### ES:
+			- Lancio 2 dadi. Chiamo X un’affermazione 
+				- $X$ = “la somma dei dadi”
+				- $\{X=3\}$ è un evento 
+	- ## In termini matematici:
+		- Una V.A è rappresentata come una funzione $X: \Omega \to \mathbb{R}$
+		- Qualunque funzione $\Omega\to \mathbb{R}$ è una V.A. 
+		- ### ES:
+			- Lancio di 2 dadi
+			- $X=$ “somma dei risultati” $X: \Omega\to \mathbb{R}$
+			- $Y=$ “prodotto dei risultati” $Y: \Omega\to \mathbb{R}$
+			- $Z=$ “risultato primo lancio” $Z: \Omega\to \mathbb{R}$
+			- $\Omega= DR_{6,2}=\{(1,1),(1,2),...,(6,6)\}=\{(w_{1},w_{2}), w_{i}\in \{1,...,6\}\}$
+			- $$X((w_{1},w_{2}))=w_{1}+w_{2}$$
+			- $$Y((w_{1},w_{2}))=w_{1}*w_{2}$$
+			- $$Z((w_{1},w_{2}))=w_{1}$$
+- # Variabili aleatorie costanti:
+	- $a\in \mathbb{R}$ fissato
+	- $X(w)=a\ \ \ \forall w\in \Omega$  V.A. costante
+	- $X$ è una V.A quasi certamente (_q.c_) costante se $\mathbb{P}(X(w)=a)=1$
+	- ## ES: 
+		- Lancio un dado 
+		- $\Omega=\mathbb{R}$
+		- $$\mathbb{P}: \begin{cases} \mathbb{P}(\{1\})=...=\mathbb{P}(\{6\})=\frac{1}{6} \\ \mathbb{P}(\{n\})=0 & \forall n\ne \{1,...,6\}\end{cases}$$
+		- Fisso  $a\in \mathbb{R}$
+		- Costruisco $X$ V.A $(X: \Omega \to \mathbb{R}): \mathbb{P}(X=a)=1$
+		- $$X(w)=\begin{cases} a &w\in \{1,...,6\}\\ w & altrimenti\end{cases}$$
+		- $$\mathbb{P}(X=a)=\mathbb{P}(\{w\in \Omega: X(w)=a\})=\mathbb{P}(\{1,...,6\})=1$$
+- # V.A indicatrici (o di Bernoulli):
+	- Fisso un evento $A\subset \Omega$ costruisco una variabile aleatoria.
+	- $$X(w)=\mathbb{1}_{A}(w):=\begin{cases} 1 &w\in A \\ 0 &altriemnti\end{cases}$$
+	- Tutta l’info dell’evento $A$ è contenuta in questa variabile aleatoria indicatrice.
+	- Da una variabile aleatoria è possibile risalire ad un evento???
+		- Visto che le V.A sono la generalizzazione del concetto di [[Modello probabilistico di un esperimento aleatorio#^18c7b9|evento]] 
+		- Eventi associati alle V.A 
+			- $\sigma(X)=$ eventi generati o associati alla V.A $X$
+			- Si dice che $E \subset \Omega$ è un evento generato da $X$ se $\exists B \subset \mathbb{R}:$
+				- $$E=\{w\subseteq \Omega: X(w)\in B\}=\{X\in B\}=\{X^{-1}(B)\}$$
+- # Link Utili:
+	- 

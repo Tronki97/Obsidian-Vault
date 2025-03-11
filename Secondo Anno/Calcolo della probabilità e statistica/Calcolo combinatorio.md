@@ -118,6 +118,24 @@ data: "`2025-03-04 13:37`"
 			- In quanti modi si possono scegliere i 2 tipi di carte che formano 2 coppie:
 				- $E=\{1,...,13\},\ \  n=13$
 				- $\Omega=C_{13,2}$ e $|\Omega|=\binom{13}{2}=\frac{13*12}{2}$ 
+	- ## Template per risoluzione esercizi:
+		- Ho un urna con 3R e 7B 
+		- ### Estrazioni con reimmissione:
+			- A = ne estraggo 4 e ne ottengo 2 rosse 
+			- $$\mathbb{P}(A)=\frac{\binom{4}{2}*3^{2}*7^{2}}{10^{4}}$$
+			- $\binom{4}{2}$ Perché se ne estraggono 4 e ne voglio 2 rosse
+			- $3^{2}$ Perché ci sono 3 rosse in totale e ne voglio 2 
+			- $7^{2}$ perché ci sono 7 palline bianche in totale e solo 2 slot rimanenti nella pescata siccome ne servono 2 rosse 
+			- $10^{4}$ perché ci sono 10 palline in totale e ne estraggo 4
+		- ### Estrazioni senza reimmissione:
+			- B= // senza reimmissione.
+			- $$\mathbb{P}(B)=\frac{\binom{4}{2}*3*2*7*6}{10*9*8*7}$$
+			- Uguale al caso precedente ma in questo caso il numero di palline cambia ad ogni estrazione che diminuisce.
+		- ### Estrazioni simultanee:
+			- C= // estrazioni simultanee
+			- $$\mathbb{P}(C)=\frac{\binom{3}{2}*\binom{7}{2}}{\binom{10}{4}}$$
+			- In questo caso non si lavora considerando l’ordine di pescata quindi questi sono tutti i possibili modi per pescarle simultaneamente.
+			- 
 - 
 - # Link Utili:
 	- 
