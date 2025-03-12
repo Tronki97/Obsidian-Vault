@@ -1,3 +1,10 @@
+---
+tags: []
+aliases:
+  - BFS sui grafi
+  - DFS sui grafi
+data: "`2024-08-31 20:05`"
+---
 - ## Attraversamento grafi:
 	- ### Def:
 		- Dato un [[Grafi||grafo]] $G=<V,E>$ ed un vertice _$s$_ di $V$ _visitare ogni vertice raggiungibile nel grafo dal vertice s_ 

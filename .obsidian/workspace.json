@@ -11,12 +11,24 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "immagini/Pasted image 20250310120658.png"
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250310120658"
+              "icon": "lucide-file",
+              "title": "Reti di flusso"
             }
           }
         ]
@@ -51,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tabelle di forwar",
+                "query": "BFS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -196,7 +208,11 @@
   },
   "active": "db79be7258f0f00b",
   "lastOpenFiles": [
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
+    "immagini/Pasted image 20250310120658.png",
     "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
     "immagini/Pasted image 20250311161940.png",
@@ -210,7 +226,6 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Firewall.md",
     "Secondo Anno/Reti di Calcolatori/livello trasporto/Livello trasporto.md",
-    "immagini/Pasted image 20250310120658.png",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure socket layer (SSL).md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure E-mail.md",
@@ -223,8 +238,6 @@
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Scheduling.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Teorema di Rouché-Capelli.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse.md",
     "immagini/Pasted image 20250308163255.png",
     "immagini/Pasted image 20250308173545.png",
     "immagini/Pasted image 20250308172631.png",

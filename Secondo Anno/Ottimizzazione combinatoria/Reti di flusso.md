@@ -7,6 +7,10 @@ aliases:
   - ammissibilità del flusso
   - sbilanciamento
   - flusso
+  - grafi residui
+  - cammini aumentanti
+  - ford fulkerson
+  - edmonds karp
 data: "`2025-03-05 09:13`"
 ---
 - # Problema dei router:
@@ -99,6 +103,7 @@ data: "`2025-03-05 09:13`"
 		- Gli sbilanciamenti sono nulli
 		- Si aggiunge però un arco fittizio da ($t,  s$) con costo $−1$ e Capacità $\infty$.
 		- ![[Pasted image 20250305102744.png|450]]
+	- 
 	- ## Algoritmi:
 		- ### Tagli:
 			- Data una rete $G=(N,A)$ e una coppia $(N',N'')$ di sottoinsiemi di $N$ tali che $N' \cap N''=\emptyset$ e $N' \cup N''=N$
@@ -109,7 +114,69 @@ data: "`2025-03-05 09:13`"
 			- #### Lemma:
 				- $\forall(s,t)$ -taglio e ogni flusso ammissibile $x$ con valore $v$:
 					- 1) $$v=\sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}x_{ij} - \sum\limits_{(i,j)\in A^{-}(N_{s},N_{t})}x_{ij}$$
+						- Questo è il flusso del taglio
 					- 2) $$v\le \sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}u_{ij} $$
+						- Vuol dire che il flusso del taglio deve essere $\le$ della capacità del taglio.
+				- _Esiste un taglio con flusso ammissibile uguale al flusso massimo?_
+			- #### ES:
+				- Si vuole trasportare il massimo flusso dal nodo $s$ a $t$ avendo in mezzo altri 4 nodi di trasferimento
+					- #inserire_immagine
+				- Calcolo della capacità massima del taglio fatto:
+					- _Da fare _
+				- Calcolo del flusso del taglio fatto:
+					- $$x(N_{s},N_{t})=3+2+1+1-1=6$$
+					- Basta guardare il lemma 1 per questo.
+		- ### Grafi residui:
+			- Data una rete $G=(N_{G}, A_{G})$ supponendo di avere un flusso ammissibile $x$ si prova a creare un altro grafo detto _grafo residuo_ $G_{x}=(N_{G_{x}}, A_{G_{x}})$ che può essere migliorato.
+			- $N_{G_{x}}=N_{G}$
+			- Gli archi $A_{G_{x}}$ sono di 2 tipi:
+				- _arco concorde_: $(i,j)\in A_{G}: x_{ij}<u_{ij}$  esiste un arco da $i$ a $j$ in $G_{x}$ 
+				- _arco discorde_: $(i,j)\in A_{G}: x_{ij}>0$  esiste un arco da $j$ a $i$ in $G_{x}$
+			- Ci possono essere più nodi che partono dallo stesso nodo e arrivano allo stesso nodo rispetto a $G$ per questo è detto _multi-grafo_
+			- Quindi si aumentano in modo uniforme i flussi senza sbilanciare i nodi
+			- #### ES:
+		- ### Cammini aumentanti:
+			- Un cammino semplice (_senza cicli_) e orientato da $s$ a $t$ nel grafo residuo $G_{x}$ questo cammino è identificato da un insieme di archi concordi $P^{+}$ e di archi discordi $P^{-}$.
+			- Dato un cammino aumentante si calcola di quanto può aumentare il flusso 
+				- $$\theta(P,x)=\min \{\min\{u_{ij}-x_{ij}| (i,j)\in P^{+} \}, \min\{x_{ij}|(j,i)\in P^{-}\}\}$$
+			- Dato un flusso $x$ un cammino $P\in G_{x}$ e un $\theta$ si definisce $x(P,\theta)$ il flusso:
+				- $$(x(P,\theta))_{i,j}=\begin{cases} x_{i,j}+\theta&(i,j)\in P^{+}\\ x_{i,j}-\theta&(j,i)\in P^{-}\\ x_{ij}&altrimenti\end{cases}$$
+		- ### Algoritmo di Ford-Fulkerson:
+			- 1)  $x=0$
+			- 2) Si costruisce $G_{x}$ e si cerca un cammino aumentante $P$ in caso $P$ non esista termina e restituisce $x$
+			- 3)  $x=x(P,\theta(P,x))$
+			- 4) ritorna al secondo punto
+			- #### Correttezza:
+				- 1) Se $x$ è un flusso ammissibile allora anche $x(P,\theta(P,x))$ lo è.
+				- 2) Se $x$ è un flusso massimo allora non esiste alcun cammino aumentante.
+					- Infatti se ci fosse un cammino aumentante in $G_{x}$ allora $x$ non sarebbe un flusso massimo perché si potrebbe aumentare il flusso.
+				- 3) se $G_{x}$ non ha cammini aumentanti allora esiste un taglio di capacità pari a $v$:
+					- Basta considerare il taglio $(N_{s},N_{t})$ dove $N_{s}$ contiene tutti i nodi raggiungibili da $s$ in $G_{x}$ e $N_{t}$ è il suo complementare:
+						- $$v= x(N_{s},N_{t})=\sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}x_{ij} - \sum\limits_{(i,j)\in A^{-}(N_{s},N_{t})}x_{ij}=$$
+						- $$\sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}u_{ij} - \sum\limits_{(i,j)\in A^{-}(N_{s},N_{t})}u= u(N_{s},N_{t})$$
+				- ##### Teorema:
+					- Se l’algoritmo termina allora il flusso $x$ restituito è massimo.
+				- ##### Dim:
+					- Se l’algoritmo termina allora $G_{x}$ non ha cammini aumentanti.
+					- Per il punto 3 allora esiste un taglio $(N_{s},N_{t})$ di capacità $v$.
+					- Quindi $v$ deve essere massimo perché se non lo fosse avremmo un taglio di capacità inferiore al valore di un flusso ammissibile.
+			- #### Max flow min cut:
+				- Il valore del massimo flusso è uguale alla minima capacità dei tagli:
+					- 
+					- Se $x$ è ammissibile e massimo allora $G_{x}$ non ha cammini aumentanti e quindi esiste un taglio con capacità pari a $v$ per il punto 3.
+			- #### Complessità:
+				- Se le capacità di $G$ sono numeri interi allora esiste un flusso intero massimo.
+				- Dim:
+					- Se le capacità sono intere allora il flusso massimo sarà al più:
+						- $$nU$$
+						- Dove $n$ è il numero di nodi e  $U$ è il massimo valore di capacità
+					- Si parte da un flusso intero e l’interezza è preservata perché per ogni cammino aumentante $P,\theta(P,x)$ è un numero intero.
+					- Quindi ad ogni iterata il flusso aumenta di almeno 1.
+					- L’algoritmo termina quindi dopo al più $nU$ iterazioni.
+				- Il problema dell’algoritmo sta nell’assenza di vincoli sulla scelta dei cammini da aumentare.
+		- ### Algoritmo di Edmonds-Karp:
+			- è una modifica dell’algoritmo di Ford-Fulkerson ma si mette un criterio sulla scelta dei cammini da aumentare.
+			- Utilizzando quindi una visita [[Visite sui Grafi#^3c4eb5|BFS]] sul grafo $G_{x}$ in questo modo si nota come verranno scelti sempre i cammini con meno archi quindi più corti.
 			- 
-- # Link Utili:
+- # Link Utili: 
 	- 
