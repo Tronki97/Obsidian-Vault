@@ -6,8 +6,6 @@ aliases:
   - assegnazione dinamica
   - prerilasciabile
   - grafo di holt
-  - detection and recovery
-  - knot
 data: "`2025-03-07 10:52`"
 ---
 - # Risorse:
@@ -15,7 +13,7 @@ data: "`2025-03-07 10:52`"
 	- Possono essere fisiche o logiche:
 		- Fisiche: Memoria, dischi, interfacce di rete…
 		- Logiche: Descrittori di processo, classi, [[Sezioni critiche (critical section)|sezioni critiche]] … 
-	- Possono essere suddivise in _classi_:
+	- Possono essere suddivise in _classi_: ^e7531f
 		- Ogni risorsa viene detta _istanza di una classe_
 		- Il numero di risorse viene detto _molteplicità_.
 	- Un processo può richiedere solo una risorsa di una specifica classe, ma non una specifica risorsa.
@@ -50,7 +48,7 @@ data: "`2025-03-07 10:52`"
 		- Le richieste sono bloccanti ed un processo che ha ottenuto una risorsa ne può richiedere un’altra.
 	- ## Richiesta circolare:
 		- Il processo $P_{0}$ attende $P_{1}$ che attende $P_{2}$ che a sua volta aspetta $P_{0}$ 
-- # Grafo di Holt:
+- # Grafo di Holt: ^6ffbfd
 	- è un grafo orientato
 	- è un grafo bipartito:
 		- I nodi sono suddivisi in 2 sottoinsiemi e gli archi collegano solo i nodi di 2 sottoinsiemi diversi.
@@ -72,25 +70,6 @@ data: "`2025-03-07 10:52`"
 		- Un grafo di Holt si può ridurre se esiste almeno un nodo processo con solo archi entranti.
 		- E consiste nell’eliminare tutti gli archi di tale nodo e riassegnare le risorse ad altri processi
 		- ![[Pasted image 20250307113843.png]]
-- # Gestione dei deadlock:
-	- ## Detection and recovery:
-		- Si mantiene aggiornato il grafo di Holt con tutti gli assegnamenti e le kill dei processi.
-		- ### Teorema:
-			- Se le risorse rispettano le condizioni di deadlock esso avviene sse il grafo di Holt contiene un ciclo.
-		- ### Dim:
-			- ![[Pasted image 20250307113501.png|500]]
-		- Tuttavia se in una classe è presente più di una risorsa allora la presenza di un ciclo non è condizione sufficiente per avere deadlock.
-		- ### Teorema:
-			- Se le risorse rispettano le condizioni di deadlock, lo stato _non è di deadlock_ sse il grafo di Holt è completamente riducibile.
-			- Ovvero esiste una sequenza di passi di riduzione che elimina tutti gli archi del grafo
-		- ### Knot:
-			- Dato un nodo $n$ l’insieme dei nodi raggiungibili da $n$ viene detto _insieme di raggiungibilità_ di $n$ scritto ($R(n)$)
-			- Un _knot_ del grafo $G$ è un sottoinsieme di nodi $M$ tali che $\forall n \in M| R(n)=M$ 
-		- ### Teorema:
-			- Dato un grafo di Holt con una sola richiesta sospesa per processo, le risorse rispettano le condizioni allora si verifica deadlock sse esiste un _Knot_ nel grafo
-	- ## Prevention/ avoidance:
-		- 
-	- ## Ostrich algorithm:
-		- 
+- 
 - # Link Utili:
 	- 

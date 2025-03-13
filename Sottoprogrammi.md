@@ -1,0 +1,37 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-03-12 11:14`"
+---
+- # Astrazione sul controllo:
+	- La definizione di funzioni; Ne specifico il tipo, la scrivo e infine la uso senza conoscere il contesto di utilizzo della funzione.
+	- La comunicazione attraverso la funzione e il codice avviene grazie ai _parametri_ o all’ambiente globale.
+	- Un altro tipo di astrazione sul controllo possono essere gli oggetti.
+	- ## Parametri:
+		- Parametro formale: quello definito all’interno dello scope della funzione
+		- Parametro attuale: quello all’interno dello scope quando chiamiamo la funzione.
+		- ### Passaggio:
+			- #### per valore:
+				- Il valore dell’attuale è assegnato al formale comportandosi come una variabile locale 
+				- Va da `main` al `processo`
+				- Le modifiche al formale non si applicano all’attuale.
+				- ![[Pasted image 20250312114047.png]]
+				- Viene eseguito `y+1` e il valore risultante è assegnato al parametro formale
+				- Al ritorno da `foo` la variabile `x` viene distrutta e di conseguenza non c’è legame tra il `main` e il corpo della funzione.
+				- Se si hanno dati di grandi dimensioni risulta costoso in quanto si necessita di copiare i dati nel parametro formale. 
+			- #### per riferimento:
+				- ![[Pasted image 20250312114812.png]]
+				- Viene passato un riferimento che può essere un puntatore o l’indirizzo di memoria.
+				- Il valore passato deve essere una variabile a se stante 
+				- C’è una trasmissione in entrambe le direzioni di informazioni
+				- Efficiente nel passaggio, però ha come svantaggio che i side-effect sono più presenti.
+			- #### Per risultato:
+				- ![[Pasted image 20250312115942.png]]
+				- Il formale $x$ è una variabile locale sulla pila 
+				- Alla fine della funzione il valore di $x$ è assegnato al valore del chiamante
+			- 
+- # Astrazione sui dati:
+- 
+- # Link Utili:
+	- 
