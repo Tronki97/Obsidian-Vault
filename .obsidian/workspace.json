@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gestione della memoria.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,30 +29,6 @@
               },
               "icon": "lucide-file",
               "title": "Gestione della memoria"
-            }
-          },
-          {
-            "id": "88b13f2fdb3b29b0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse/Gestione risorse.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Gestione risorse"
             }
           }
         ]
@@ -112,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -233,43 +208,43 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Pasted image 20250313172935.png",
-    "Pasted image 20250313172457.png",
+    "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse/Gestione dei deadlock.md",
-    "Gestione della memoria.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "immagini/Pasted image 20250312114047.png",
+    "immagini/Screenshot (15).png",
+    "immagini/Pasted image 20250313172935.png",
+    "immagini/Pasted image 20250313172457.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse/Gestione risorse.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
-    "Pasted image 20250313152008.png",
+    "immagini/Pasted image 20250313152008.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Threads.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Struttura dei sistemi operativi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
-    "Sottoprogrammi.md",
-    "Pasted image 20250312115942.png",
-    "Pasted image 20250312114812.png",
-    "Pasted image 20250312114047.png",
+    "immagini/Pasted image 20250312115942.png",
+    "immagini/Pasted image 20250312114812.png",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
     "immagini/Pasted image 20250310120658.png",
-    "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
     "immagini/Pasted image 20250311161940.png",
     "immagini/Pasted image 20250311154347.png",
-    "immagini/Pasted image 20250311154330.png",
     "Secondo Anno/Reti di Calcolatori/livello rete/Instradamento dei pacchetti e Routing.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/livello Rete.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Firewall.md",
     "Secondo Anno/Reti di Calcolatori/livello trasporto/Livello trasporto.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure socket layer (SSL).md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure E-mail.md",
-    "immagini/Pasted image 20250308163255.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "latexsheet-a4.pdf",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",

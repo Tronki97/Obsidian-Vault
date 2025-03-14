@@ -5,7 +5,7 @@ aliases:
 data: "`2025-03-13 17:18`"
 ---
 - # Memory manager:
-	-  gestisce la memoria principale, assegna e dealloca la memoria ai processi.
+	-  gestisce la memoria principale, assegna e de-alloca la memoria ai processi.
 	- Tiene traccia della memoria libera e occupata
 	- è un componente software a differenza dell’MMU.
 - # Binding:

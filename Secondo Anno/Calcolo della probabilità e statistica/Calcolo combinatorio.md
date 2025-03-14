@@ -110,6 +110,7 @@ data: "`2025-03-04 13:37`"
 			- E può anche essere vista come _l’insieme delle sequenze non ordinate sena ripetizione_.
 		- ### Proposizione:
 			- $$|C_{n,k}|=\binom{n}{k}$$
+			- Che è il numero di modi di scegliere $k$ elementi da n totali.
 		- ### Dim:
 		- ### ES:
 			- In quanti modi si possono scegliere i semi di una coppia di carte?
@@ -118,6 +119,43 @@ data: "`2025-03-04 13:37`"
 			- In quanti modi si possono scegliere i 2 tipi di carte che formano 2 coppie:
 				- $E=\{1,...,13\},\ \  n=13$
 				- $\Omega=C_{13,2}$ e $|\Omega|=\binom{13}{2}=\frac{13*12}{2}$ 
+		- ### ES:
+			- Urna con $n$ palline numerate delle quali se ne estraggono $k$ simultaneamente.
+			- Scrivo lo spazio di probabilità:
+				- $\Omega=C_{n,k}$ 
+				- $\mathbb{P}$ uniforme
+					- $$\mathbb{P}(\{w\})=\frac{1}{|C_{n,k}|}=\frac{1}{\binom{n}{k}}=\frac{k!(n-k)!}{n!}$$
+		- ### Formula di Stifel:
+			- $$\binom{n}{k}=\binom{n-1}{n-1}+\binom{n-1}{k}$$
+				- $$\binom{n-1}{n-1}$$
+					- è il numero di combinazioni di $k$ elementi che contengono l’elemento che ho selezionato $\overline{e}$.
+			- $$\binom{n-1}{k}$$
+				- è il numero di combinazioni di $k$ elementi _non_ che contengono l’elemento $\overline{e}$.
+		- ![[Screenshot (15).png]]
+		- Anche se in realtà si potrebbe usare $D_{n,k}$ anche per estrazioni che non considerano l’ordine.
+			- $$\frac{\text{casi favorevoli in}\ C_{n,k}}{\text{casi possibili in }C_{n,k}}=\frac{k!(...)}{k!(...)}=\frac{\text{casi favorevoli in}\ D_{n,k}}{\text{casi possibili in }D_{n,k}}$$
+	- ## Probabilità bionomiale:
+		- Urna con $b$ palline $B$ e $r$  palline $R$, si fanno $n$ estrazioni e si vuole calcolare $\mathbb{P}(A_{k})$ dove:
+			- $A_{k}$ = “si estraggono $k$ palline bianche” = “si estraggono $n-k$ palline rosse”
+		- Fisso lo spazio campionario delle estrazioni:
+			- $\Omega=DR_{b+r,n}$
+			- $\mathbb{P}$ uniforme, $$\mathbb{P}\left( \{w\}\right)==\frac{1}{(b+r)^{n}} $$
+		- $E=\{B_{1},...,B_{b},R_{1},...,R_{r}\}$
+		- Per trovare $\mathbb{P}(A_{k})$ devo trovarne la cardinalità uso quindi il _metodo delle scelte successive_
+			- 1) scelgo la sequenza di $k$ palline bianche estratte considerando l’ordine:
+				- $$|DR_{b,k}|$$
+			- 2) faccio la stessa cosa per le rosse che sono $n-k$:
+				- $$|DR_{r,n-k}|$$
+			- 3) scelta delle $k$ estrazioni in escono palline bianche:
+				- $$|C_{n,k}|$$
+		- Quindi $$\mathbb{P}(A_{k})=\frac{|A_{k}|}{|\Omega|}=\frac{|DR_{b,k}|*|DR_{r,n-k}|*|C_{n,k}|}{|DR_{b+r,n}|}=$$
+		- $$=\binom{n}{k}*\frac{b^{k}*r^{n-k}}{(b+r)^{n}}=\binom{n}{k}*p^{k}(1-p)^{n-k}$$
+			- $$\text{con } p:=\frac{b}{b+r}$$
+				- _Probabilità di estrarre una bianca in un’unica estrazione_ 
+		- $k$ varia tra 0 e $n$ quindi 
+			- $\tilde\Omega=\{0,...,n\}$
+			- $$\mathbb{P}(\{k\})=\binom{n}{k}p^{k}(1-p)^{n-k}$$
+			- Questo viene detto probabilità binomiale.
 	- ## Template per risoluzione esercizi:
 		- Ho un urna con 3R e 7B 
 		- ### Estrazioni con reimmissione:

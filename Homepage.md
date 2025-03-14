@@ -5,19 +5,29 @@ cssclasses:
 # Vault Info
 
 
+- ## Ultimi modificati:
+```dataview
+TABLE
+FROM ""
+SORT file.mtime DESC
+LIMIT 10
+```
+
+- ## Ultime lezioni da finire:
+  
+```dataview
+TABLE 
+FROM #TODO
+SORT file.ctime DESC
+LIMIT 15
+```
+
+
 - ## Da fare/finire:
 ```dataview
 LIST
 FROM #TODO
 SORT data
-```
-
-- ## Ultimi modificati:
-```dataview
-LIST 
-FROM ""
-SORT file.mtime DESC
-LIMIT 10
 ```
 # Primo anno
 
