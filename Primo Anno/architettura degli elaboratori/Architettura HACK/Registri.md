@@ -1,11 +1,11 @@
 ---
 
 ---
-- ## Registri generali
+- # Registri generali:
 	- dedicati solo alla memorizzazione di calcoli temporanei della [[ALU]] 
 	- ES:
-		- ax, bx, cx, dx ecc..
-- ## Registri speciali
+		- Ax, bx, cx, dx ecc..
+- # Registri speciali
 	- specializzati a memorizzare determinati valori per contribuire al corretto funzionamento della CPU 
 		- _PC_ (_program counter_) contiene l'indirizzo della prossima istruzione da eseguire ^b1a012
 		- _IR_ (_instruction register_) contiene il valore della prossima istruzione da eseguire

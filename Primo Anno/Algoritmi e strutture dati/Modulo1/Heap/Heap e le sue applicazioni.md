@@ -1,3 +1,11 @@
+---
+tags: []
+aliases:
+  - heap binari
+  - array heap
+  - heapsort
+data: "`2024-08-31 20:05`"
+---
 - ## Heap Binari
 	- un albero binario [[Alberi e Alberi binari#^36b3d9||quasi perfetto]] (perfetto fino al livello h-1) è un albero max-heap sse: 
 		- ad ogni nodo i viene associato un valore$A[i]$ 

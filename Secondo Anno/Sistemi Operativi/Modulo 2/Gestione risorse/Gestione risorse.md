@@ -6,19 +6,22 @@ aliases:
   - assegnazione dinamica
   - prerilasciabile
   - grafo di holt
+  - risorse
+  - condizioni di deadlock
+  - classi di risorse
 data: "`2025-03-07 10:52`"
 ---
-- # Risorse:
+- # Risorse: ^d3013b
 	- Sono un insieme di elementi a cui i [[Concorrenza#^68dcd8|processi]] accedono
 	- Possono essere fisiche o logiche:
-		- Fisiche: Memoria, dischi, interfacce di rete…
-		- Logiche: Descrittori di processo, classi, [[Sezioni critiche (critical section)|sezioni critiche]] … 
+		- _Fisiche_: [[Memorie]], dischi, interfacce di rete…
+		- _Logiche_: Descrittori di processo, classi, [[Sezioni critiche (critical section)|sezioni critiche]] … 
 	- Possono essere suddivise in _classi_: ^e7531f
 		- Ogni risorsa viene detta _istanza di una classe_
 		- Il numero di risorse viene detto _molteplicità_.
 	- Un processo può richiedere solo una risorsa di una specifica classe, ma non una specifica risorsa.
 	- ## Ad assegnazione statica:
-		- Una volta assegnate non vengono più tolte
+		- Una volta assegnate non vengono più tolte fino alla terminazione del processo.
 	- ## Ad assegnazione dinamica:
 		- Una volta che un processo ha finito di usare una risorsa la rilascia
 		- Per esempio le richieste a dispositivi I/O
@@ -38,7 +41,7 @@ data: "`2025-03-07 10:52`"
 		- Il processo a cui viene tolta la risorsa deve bloccarsi
 		- Successivamente la risorsa viene restituita al processo a cui era stata sottratta.
 		- Come dei blocchi o partizioni di memoria.
-- # Condizioni di verifica di [[Proprietà di un programma#^2a9ed1|deadlock]]:
+- # Condizioni di verifica di [[Proprietà di un programma#^2a9ed1|deadlock]]: ^c336f6
 	- Le seguenti condizioni sono sufficienti e necessarie
 	- ## Non condivisibilità:
 		- Se la risorsa non è condivisibile
@@ -53,8 +56,8 @@ data: "`2025-03-07 10:52`"
 	- è un grafo bipartito:
 		- I nodi sono suddivisi in 2 sottoinsiemi e gli archi collegano solo i nodi di 2 sottoinsiemi diversi.
 		- I sottoinsiemi sono _risorse e processi_
-	- L’arco risorsa→processo indica che la risorsa è assegnata al processo.
-	- L’opposto invene indica che un processo ha fatto richiesta di una risorsa.
+	- _L’arco risorsa → processo_ indica che la risorsa è assegnata al processo.
+	- _L’opposto invece_ indica che un processo ha fatto richiesta di una risorsa.
 	- ![[Pasted image 20250307112155.png]]
 	- ## Variante generale:
 		- L'insieme delle risorse è partizionato in classi e gli archi di richiesta sono diretti alla classe e non alla singola risorsa
@@ -68,7 +71,7 @@ data: "`2025-03-07 10:52`"
 		- ![[Pasted image 20250307112838.png]]
 	- ## Riducibilità:
 		- Un grafo di Holt si può ridurre se esiste almeno un nodo processo con solo archi entranti.
-		- E consiste nell’eliminare tutti gli archi di tale nodo e riassegnare le risorse ad altri processi
+		- Ridurre un grafo consiste nell’eliminare tutti gli archi di tale nodo e riassegnare le risorse ad altri processi
 		- ![[Pasted image 20250307113843.png]]
 - 
 - # Link Utili:

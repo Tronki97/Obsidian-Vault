@@ -1,3 +1,11 @@
+---
+tags: 
+aliases:
+  - SRAM
+  - DRAM
+  - SDRAM
+data: "`2024-08-31 20:05`"
+---
 - è il livello di architettura che realizza il linguaggio macchina(ovvero l'[[ISA]], che poi viene usato dal linguaggio Assembly)
 - Schema Processore hack 
 	- ![[Pasted image 20240529164001.png]]

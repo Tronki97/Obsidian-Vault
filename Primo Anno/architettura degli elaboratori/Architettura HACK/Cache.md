@@ -1,3 +1,13 @@
+---
+tags: 
+aliases:
+  - località temporale
+  - località spaziale
+  - direct mapped cache
+  - cache miss
+  - paginazione
+data: "`2024-08-31 20:05`"
+---
 - #### Località temporale o spaziale ^2e4ff7
 	- ##### Località temporale 
 		- l'alta probabilità che si acceda ad una determinata cella di memoria in un determinato lasso di tempo, se la probabilità che la CPU acceda ad una determinata cella di memoria allora quella cella verrà mantenuta nella cache, così da velocizzarne l'accesso

@@ -1,3 +1,15 @@
+---
+tags: 
+aliases:
+  - funzione hash
+  - metodo della divisione
+  - metodo della moltiplicazione
+  - metodo della codifica algebrica
+  - regola di horner
+  - indirizzamento aperto
+  - funzioni hash
+data: "`2024-08-31 20:05`"
+---
 - ## vantaggi:
 	offre prestazioni medie ottimali: 
 		insert, search, delete hanno costo $O$(1).
@@ -11,7 +23,7 @@
 				- _Problema_: evitare e/o gestire le collisioni hash
 					- non possiamo evitarle, almeno possiamo minimizzarle.
 		- K: insieme di tutte le chiavi utilizzate
-- ## Funzione Hash
+- ## Funzione Hash ^01153a
 	- ### deve:
 		- poter essere calcolata velocemente
 		- garantire una buona distribuzione delle chiavi su T

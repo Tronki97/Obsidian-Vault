@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - ## DEF
 	- applicabile anche a grafi con costi negativi ma senza cicli negativi.
 		- basato su programmazione dinamica

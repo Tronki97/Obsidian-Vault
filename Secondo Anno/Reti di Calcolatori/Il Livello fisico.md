@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags: 
+aliases:
+  - throughput
 data: "`2024-10-11 13:48`"
 ---
 - # codifica dei segnali:

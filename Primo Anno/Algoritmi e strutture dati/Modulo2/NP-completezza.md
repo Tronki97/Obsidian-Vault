@@ -1,3 +1,10 @@
+---
+tags: 
+aliases:
+  - classe P
+  - classe NP
+data: "`2024-08-31 20:05`"
+---
 - Trattabilità:
 	- se un problema ha una soluzione di costo polinomiale appartiene a questa categoria.
 - ### Problemi computazionali
@@ -18,9 +25,6 @@
 - ### Problemi di ottimizzazione:
 	- Tra tutte le soluzione trovare quella ottima in base all'istanza x.
 - con problemi decisionali riusciamo a caratterizzare dei lower bound per gli altri problemi.
-  
-  
-  
 - ### Complessità
 	- chiamiamo $TIME(f(n))$ l'insieme dei problemi decisionali che possono essere risolti in tempo $O(f(n))$ dove n è l'input mentre $SPACE(f(n))$ riguarda lo spazio necessario per una soluzione
 	- ## classe P:

@@ -1,7 +1,12 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - handshake
+  - key derivation
+  - data records
+  - VPN
+  - IPsec
 data: "`2025-02-25 17:00`"
 ---
 - # Intro:

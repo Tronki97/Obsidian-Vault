@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - man in the middle
+  - message digest
 data: "`2025-02-24 11:48`"
 ---
 - # Argomento:
@@ -16,7 +18,7 @@ data: "`2025-02-24 11:48`"
 	- ## Soluzione:
 		- si usa una certification authority. composta da un numero di “persone” che tra di loro si certificano i messaggi.
 - # Message Digest:
-	- rappresentare delle digestioni di un messaggio attraverso delle funzioni _Hash_, 
+	- rappresentare delle digestioni di un messaggio attraverso delle [[Tabelle Hash#^01153a|funzioni hash]], 
 		- ![[Pasted image 20250224123617.png]]
 		- ha dimensione compatta, e costante.
 		- ed è infattibile risalire al messaggio originale da quello _hashato_ senza la chiave appropriata.

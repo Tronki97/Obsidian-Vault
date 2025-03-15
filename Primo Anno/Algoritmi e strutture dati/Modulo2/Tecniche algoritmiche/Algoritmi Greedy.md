@@ -1,3 +1,12 @@
+---
+tags: 
+aliases:
+  - problema del resto
+  - problema shortest-job first
+  - problema della compressione
+  - huffman
+data: "`2024-08-31 20:05`"
+---
 - ## Introduzione:
 	- ### Quando applicare:
 		- fra le molte scelte possibili, si può trovarne facilmente una che porti alla soluzione ottima.

@@ -5,7 +5,6 @@ aliases:
   - minimamente connesso
   - partizione di rete
 ---
-
 - ## Collegamenti: 
 	- mezzo di trasmissione di rete tra due calcolatori:
 	- supporta fisicamente la trasmissione di segnali

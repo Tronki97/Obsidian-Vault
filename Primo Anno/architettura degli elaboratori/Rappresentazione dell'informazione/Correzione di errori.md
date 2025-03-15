@@ -1,3 +1,10 @@
+---
+tags: []
+aliases:
+  - distanza di Hamming
+  - Bit di parità
+data: "`2024-08-31 20:05`"
+---
 - Ad una parola di _n_ bit si aggiungono _r bit di controllo_ in modo da ottenere una word di n+r bit e in base a tipo di codice scelto cambiano il numero di _r bit_ usati
 - ## Distanza di Hamming
 	- la distanza di hamming tra due sequenza di bit è il numero di bit per cui queste due sequenze differiscono

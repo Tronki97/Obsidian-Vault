@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - ### Funzionamento
 	- memorizzare nella radice il numero di elementi dell'insieme; la dimensione può essere mantenuta con costo costante 
 		- appendere l'insieme con meno elementi a quello con più elementi   

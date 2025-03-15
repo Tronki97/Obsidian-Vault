@@ -1,3 +1,12 @@
+---
+tags: []
+aliases:
+  - memorie volatili
+  - gerarchia di memoria
+  - memorie persistenti
+  - memorie permanenti
+data: "`2024-08-31 20:05`"
+---
 - ## Classificazione
 	- ### Volatili:
 		- ovvero non mantengono i dati salvati in caso di spegnimento

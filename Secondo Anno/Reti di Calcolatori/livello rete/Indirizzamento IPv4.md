@@ -1,11 +1,13 @@
 ---
-tags: []
+tags: 
 aliases:
   - IPv4
   - ipv4
   - network number
   - host number
   - classe di rete
+  - indirizzo statico
+  - indirizzo dinamico
 data: "`2024-10-25 13:24`"
 ---
 - # Indirizzo: ^789112

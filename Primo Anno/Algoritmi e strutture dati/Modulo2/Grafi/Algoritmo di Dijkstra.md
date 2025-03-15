@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - assunzione:
 	- tutti gli archi hanno costo $\geq$ 0
 - ## Lemma

@@ -1,3 +1,11 @@
+---
+tags: []
+aliases:
+  - metodo dell'iterazione
+  - master theorem
+  - master theorem semplificato
+data: "`2024-08-31 20:05`"
+---
 - un'_equazione di ricorrenza_ descrive ogni elemento di una sequenza in termini degli elementi precedenti 
 	- Per esempio quella di Fibonacci:$$T(n)\begin{cases}1&n\leq 2\\ T(n-1)+T(n-2)+1&n>2\end{cases}$$
 	- Voglio determinare la crescita asintotica degli [[Ricorsione||algoritmi ricorsivi]]

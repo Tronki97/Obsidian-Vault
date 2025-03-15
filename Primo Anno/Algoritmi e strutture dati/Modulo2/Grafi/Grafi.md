@@ -1,5 +1,20 @@
-- ### LINK UTILI: 
-	- https://csacademy.com/app/graph_editor/
+---
+tags: 
+aliases:
+  - grafo orientato
+  - grafo non orientato
+  - incidenza
+  - adiacenza
+  - matrice di adiacenza
+  - lista di adiacenza
+  - grafo pesato
+  - grado di un vertice
+  - cammini
+  - grafo aciclico
+  - grafo completo
+  - DAG
+data: "`2024-08-31 20:05`"
+---
 - ## Definizione ^2eb164
 	- ### Orientato 
 		- è una coppia _(V, E)_ dove:
@@ -20,14 +35,6 @@
 				- coppie non ordinate
 			- non ci sono cappi
 		- ![[Grafo non orientato.png]]
-- ## Visite
-	- In ampiezza
-		- 
-	- In profondità
-- ## Alberi di copertura minimi 
-- ## Cammini minimi
-	- da singola sorgente
-	- fra tutte le coppie di vertici
 - ## Operazioni:
 	- ### NumVertici() → intero 
 	- ### NumArchi() → intero 
@@ -129,3 +136,5 @@
 - ## Alberi
 	- Un _albero libero_ è un grafo non orientato connesso aciclico 
 	- se un vertice è detto radice, otteniamo un _albero radicato_
+- # LINK UTILI: 
+	- https://csacademy.com/app/graph_editor/

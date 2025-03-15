@@ -1,3 +1,11 @@
+---
+tags: 
+aliases:
+  - torre di hanoi
+  - sotto-vettore non vuoto di valore massimo
+  - Moltiplicazione di interi di grandezza arbitraria
+data: "`2024-08-31 20:05`"
+---
 - ## Introduzione:
 	- ==Divide==: il problema in sotto-problemi più semplici
 	- ==Impera==: risolve i sotto-problemi ricorsivamente 

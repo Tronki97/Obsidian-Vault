@@ -1,3 +1,9 @@
+---
+tags: []
+aliases:
+  - flip flop
+data: "`2024-08-31 20:05`"
+---
 - a differenza di quelli combinatori permettono di memorizzare dei valori
 - un tipico circuito sequenziale è il _latch SR_: 
 	- ![[Pasted image 20240528190603.png]]

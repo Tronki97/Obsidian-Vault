@@ -1,7 +1,11 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - stateless packet filter
+  - application gateways
+  - IDS
+  - ACL
 data: "`2025-03-10 11:17`"
 ---
 - # Firewall:

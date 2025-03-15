@@ -1,3 +1,14 @@
+---
+tags: 
+aliases:
+  - programmazione dinamica
+  - algoritmo dinamico
+  - Sottovettore di valore massimo
+  - problema dello zaino
+  - Seam Carving
+  - Distanza di Levenshtein
+data: "`2024-08-31 20:05`"
+---
 - ## Quando applicare:
 	- ### Sotto-struttura ottima:
 		- deve essere possibile combinare le soluzioni dei sotto-problemi per trovare la soluzione di un problema più grande

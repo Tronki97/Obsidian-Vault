@@ -1,3 +1,13 @@
+---
+tags:
+  - TODO
+aliases:
+  - fibra ottica
+  - wireless
+  - cavi
+  - fili metallici
+data: "`2024-09-25 13:12`"
+---
 - ## Cavi o fili metallici
 	- basso costo, metodo più usato.
 	- un problema è la dispersione di potenza quindi _Effetto Joule_

@@ -1,3 +1,13 @@
+---
+tags: 
+aliases:
+  - sotto-struttura ottima
+  - single source shortest path
+  - all-pair shortest paths
+  - belmann-ford
+  - condizione di belmann
+data: "`2024-08-31 20:05`"
+---
 - ## Definizione del problema
 	- considero un DAG G(V, E) dove ogni arco ha un peso.
 	- il costo di un cammino $\pi=(v_{0},v_{1},...,v_k)$ che collega il nodo $v_{0} \ con\  v_k$ è definito come:

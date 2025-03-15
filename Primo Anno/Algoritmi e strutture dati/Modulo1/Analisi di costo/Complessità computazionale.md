@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 un algoritmo A ha una cc(complessità computazionale) _O_(f(n)) rispetto ad una risorsa di calcolo se le risorse necessarie usando un input di dimensione n è _O_(f(n))
 
 Un problema P ha cc _O_(f(n)) rispetto ad una risorsa di calcolo se il miglior algoritmo che risolve P ha un cc di  _O_(f(n)) rispetto a tale risorsa. 

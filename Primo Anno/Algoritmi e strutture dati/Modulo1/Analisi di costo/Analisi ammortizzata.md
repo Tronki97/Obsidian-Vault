@@ -1,3 +1,10 @@
+---
+tags: 
+aliases:
+  - metodo aggregazione
+  - metodo accantonamenti
+data: "`2024-08-31 20:05`"
+---
 - Metodo per valutare il costo medio di una sequenza di operazioni
 - Utilizzato per catturare la complessità media
 - Differenza
@@ -170,8 +177,6 @@ $$
 
 a = 1, b =2
 $\alpha = log_2 1 \beta = 0$, quindi, $\Theta(logn)$ 
-
------
 
 ## Theta di Fibonacci
 

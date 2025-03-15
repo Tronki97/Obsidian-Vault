@@ -1,3 +1,12 @@
+---
+tags: 
+aliases:
+  - quickfind
+  - quick find
+  - quickunion
+  - quick union
+data: "`2024-08-31 20:05`"
+---
 - è una collezione di insiemi $S=\{S_{1},...,S_k\}$ dinamici disgiunti
 - Gli insiemi contengono n$\geq$ k elementi
 - Ogni insieme ha un _rappresentante_ 
@@ -55,7 +64,7 @@
 	- ### ES:
 		- ![[Pasted image 20240806183242.png]]
 	- il problema degli alberi QuickUnion è che possono diventare troppo alti e quindi rendere inefficienti le operazioni `find()` una soluzione è usare:
-		- [[Euristica "union by rank"]] 
+		- [[Euristica union by rank]] 
 - #### Utilizzo 
 	- Usare QuickFind quando le `union()` sono rare e le `find()` frequenti 
 	- Usare QuickUnion quando le `find()` sono rare e le `union()` frequenti 

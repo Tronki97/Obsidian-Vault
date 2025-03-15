@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - ## Grafo non orientato: ^f240bd
 	- due vertici _"u"_ e "_v_" appartengono alla stessa componente connessa se _u_ è raggiungibile da _v_ 
 		- questa relazione "raggiungibile" è di equivalenza:

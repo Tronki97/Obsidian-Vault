@@ -5,6 +5,7 @@ aliases:
   - confidenzialità
   - integrità
   - accesso e disponibilità
+  - autenticazione
 data: "`2025-02-17 20:26`"
 ---
 - # Principi Della Sicurezza Di Rete

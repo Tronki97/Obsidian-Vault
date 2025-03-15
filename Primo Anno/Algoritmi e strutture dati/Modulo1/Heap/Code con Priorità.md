@@ -1,3 +1,9 @@
+---
+tags: []
+aliases:
+  - D-heap
+data: "`2024-08-31 20:05`"
+---
 - Strutture dati che restituisce il minimo in un insieme dinamico di coppie(chiave, elemento) ordinate secondo una relazione d'ordine definita sulle chiavi (ha più priorità la chiave con valore minore).
 - ## Esempio di applicazione
 	- Nel routing dei pacchetti in reti di comunicazione vengono processati i dati con priorità più alta(ad esempio i pacchetti audio nelle videoconferenze a discapito dei pacchetti video)

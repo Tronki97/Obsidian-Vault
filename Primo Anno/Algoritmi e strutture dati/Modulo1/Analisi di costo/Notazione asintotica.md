@@ -1,4 +1,10 @@
-20/02/24
+---
+tags: []
+aliases:
+  - O-grande
+  - o-piccolo
+data: "`2024-08-31 20:05`"
+---
 analizza il tempo di calcolo e la memoria occupata da un algoritmo in base alla dimensione di un input.
 
 tempo(sec); memoria(MB) 

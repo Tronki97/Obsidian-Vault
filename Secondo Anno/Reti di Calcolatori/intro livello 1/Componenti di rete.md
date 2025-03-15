@@ -1,3 +1,8 @@
+---
+tags: 
+aliases: []
+data: "`2024-09-20 15:07`"
+---
 - ## dispositivi o schede di rete:
 	- _codificano, trasmettono, ricevono, decodificano dati_ dal calcolatore alla rete e vice versa. Vengono gestiti dal Sistema operativo.
 		- ogni volta che si installa una nuova scheda di rete per far si che il sistema operativo la riconosca bisogna installare i driver appositi.

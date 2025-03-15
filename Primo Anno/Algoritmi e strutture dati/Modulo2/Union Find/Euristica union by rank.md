@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - ## Funzionamento:
 	- rendere la radice dell'albero più basso figlia della radice dell'albero più alto
 		- ogni radice mantiene informazioni sul proprio rango

@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - DNS iterativo
+  - DNS riscorsivo
 data: "`2024-11-29 15:33`"
 ---
 - # intro:

@@ -1,3 +1,11 @@
+---
+tags: 
+aliases:
+  - ispezione lineare
+  - ispezione quadratica
+  - doppio hashing
+data: "`2024-08-31 20:05`"
+---
 - ## lineare: ^408d06
 	-  funzione di ispezione($m=$ dimensione tabella): 
 		-  $h(k,i)=(h'(k)+i)$ mod $m$

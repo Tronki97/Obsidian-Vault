@@ -1,3 +1,8 @@
+---
+tags: []
+aliases: 
+data: "`2024-08-31 20:05`"
+---
 - Gli alberi binari di ricerca (_BST_) sono alberi binari con vincoli sull'organizzazione delle chiavi. Come caratteristica più importante hanno che: _permettono una ricerca binaria sulla struttura [[Alberi e Alberi binari||albero binario]]_ 
 - le operazioni di: _search, insert e delete_ hanno costo proporzionale all'altezza del'albero.
 - ## DEF:

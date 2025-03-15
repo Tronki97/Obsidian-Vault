@@ -1,3 +1,12 @@
+---
+tags: 
+aliases:
+  - albero di copertura
+  - MST
+  - kruskal
+  - prim
+data: "`2024-08-31 20:05`"
+---
 - ## Input:
 	- G = (V, E) un grafo [[Grafi#^b29537||non orientato]] e  [[Grafi#^fc32f8||connesso]] 
 	- w: $V \times V \rightarrow \mathbb{R}$ una funzione peso

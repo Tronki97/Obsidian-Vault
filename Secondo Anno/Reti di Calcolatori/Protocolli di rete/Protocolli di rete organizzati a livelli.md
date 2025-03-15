@@ -1,3 +1,9 @@
+---
+tags: 
+aliases:
+  - protocollo
+data: "`2024-09-27 15:38`"
+---
 - ## Protocollo:
 	- regole e procedure di gestione dei processi di  comunicazione
 	- regole e formati per definire lo scambio di dati senza ambiguità
