@@ -7,7 +7,7 @@ cssclasses:
 
 - ## Ultimi modificati:
 ```dataview
-TABLE
+TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia
 FROM ""
 SORT file.mtime DESC
 LIMIT 10
@@ -16,7 +16,7 @@ LIMIT 10
 - ## Ultime lezioni da finire:
   
 ```dataview
-TABLE 
+TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia 
 FROM #TODO
 SORT file.ctime DESC
 LIMIT 15
@@ -25,7 +25,7 @@ LIMIT 15
 
 - ## Da fare/finire:
 ```dataview
-LIST
+TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia
 FROM #TODO
 SORT data
 ```

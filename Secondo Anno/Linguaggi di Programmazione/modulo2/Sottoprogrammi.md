@@ -1,7 +1,12 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - parametro attuale
+  - parametro formale
+  - passaggio per valore
+  - passaggio per riferimento
+  - passaggio per risultato
 data: "`2025-03-12 11:14`"
 ---
 - # Astrazione sul controllo:
@@ -9,8 +14,8 @@ data: "`2025-03-12 11:14`"
 	- La comunicazione attraverso la funzione e il codice avviene grazie ai _parametri_ o all’ambiente globale.
 	- Un altro tipo di astrazione sul controllo possono essere gli oggetti.
 	- ## Parametri:
-		- Parametro formale: quello definito all’interno dello scope della funzione
-		- Parametro attuale: quello all’interno dello scope quando chiamiamo la funzione.
+		- _Parametro formale_: quello definito all’interno dello scope della funzione
+		- _Parametro attuale_: quello all’interno dello scope quando chiamiamo la funzione.
 		- ### Passaggio:
 			- #### per valore:
 				- Il valore dell’attuale è assegnato al formale comportandosi come una variabile locale 
@@ -30,7 +35,7 @@ data: "`2025-03-12 11:14`"
 				- ![[Pasted image 20250312115942.png]]
 				- Il formale $x$ è una variabile locale sulla pila 
 				- Alla fine della funzione il valore di $x$ è assegnato al valore del chiamante
-			- 
+				- Quindi il valore viene cambiato solo una volta che la funzione ha finito di eseguirsi.
 - # Astrazione sui dati:
 - 
 - # Link Utili:

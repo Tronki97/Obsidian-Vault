@@ -1,7 +1,12 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: []
+aliases:
+  - espressione
+  - comandi
+  - tail recursion
+  - effetti collaterali
+  - side effect
+  - valutazione cort-circuito
 data: "`2025-02-27 13:39`"
 ---
 - # Espressione:
@@ -21,8 +26,8 @@ data: "`2025-02-27 13:39`"
 			- `15 4 - 3 *` corrisponde a fare `15-4=11` e poi fare `11*3=33`
 			- ![[notazione polacca.excalidraw]]
 		- ### Valutazione espressioni:
-			- le espressioni interne sono rappresentate da alberi 
-			- ed a seconda della visita di questo albero si hanno le diverse sintassi per le espressioni.
+			- Le espressioni interne sono rappresentate da alberi 
+			- Ed a seconda della visita di questo albero si hanno le diverse sintassi per le espressioni.
 				- ![[Pasted image 20250227140405.png||400]]
 			- il modo in cui viene letto questo albero è importante per vari motivi:
 			- #### Aritmetica finita:
@@ -30,7 +35,7 @@ data: "`2025-02-27 13:39`"
 				- se faccio `MAXINT+1` ottengo un overflow 
 					- per sapere se un espressione da overflow è importante sapere l’associatività degli operatori.
 					- `MAXINT+1-2` potrebbe non dare overflow se letto con l’associatività a destra.
-			- #### Effetti collaterali:
+			- #### Effetti collaterali (side effect):
 				- `(a + f(b) ) * (c + f(b) )` il risultato potrebbe cambiare in base alla lettura nel caso in cui `f(b)` abbia _effetti collaterali_ ovvero cambiasse il valore di `b`.
 			- #### Operandi non definiti:
 				- `a == 0 ? b : b/a` questa scrittura presuppone una valutazione _lazy_ ovvero solo degli operandi strettamente necessari.
@@ -46,10 +51,10 @@ data: "`2025-02-27 13:39`"
 		- `x=15` non produce nessun valore ma ha l’effetto di assegnare 15 a `x` cambiando quindi lo stato del programma, o [[Semantica dei comandi|store]] (l’insieme di tutte le variabili presenti nel programma).
 	- ## Variabili:
 		- la variabile è un contenitore alla quale posso dare un nome e associare un valore.
+		- La variabile quindi è un riferimento ad un valore che ha un nome.
 		- per modificarne il contenuto si usa l’assegnamento `x=1`
 		- in `x=x+1` io sto dicendo:
 			- prendi il valore di `x` e sommalo a 1 e poi assegnalo a `x` la prima `x` quindi è l’indirizzo di memoria della variabile. 
-		- ### Operatori di assegnamento:
 	- ## GOTO:
 		- Permette di saltare ad un determinato punto del programma determinato da un etichetta:
 			- Utile per gestire delle eccezioni

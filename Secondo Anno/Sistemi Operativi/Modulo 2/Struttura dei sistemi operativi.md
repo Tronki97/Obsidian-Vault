@@ -1,7 +1,12 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: 
+aliases:
+  - FAT
+  - EXT
+  - ISO
+  - kernel monolitico
+  - microkernel
+  - macchina virtuale
 data: "`2025-02-27 15:19`"
 ---
 - # Componenti 
