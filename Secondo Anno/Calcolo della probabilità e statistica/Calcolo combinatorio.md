@@ -126,7 +126,7 @@ data: "`2025-03-04 13:37`"
 				- $\mathbb{P}$ uniforme
 					- $$\mathbb{P}(\{w\})=\frac{1}{|C_{n,k}|}=\frac{1}{\binom{n}{k}}=\frac{k!(n-k)!}{n!}$$
 		- ### Formula di Stifel:
-			- $$\binom{n}{k}=\binom{n-1}{n-1}+\binom{n-1}{k}$$
+			- $$\binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}$$
 				- $$\binom{n-1}{n-1}$$
 					- è il numero di combinazioni di $k$ elementi che contengono l’elemento che ho selezionato $\overline{e}$.
 			- $$\binom{n-1}{k}$$

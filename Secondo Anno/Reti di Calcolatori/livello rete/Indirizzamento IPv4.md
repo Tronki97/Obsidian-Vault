@@ -45,8 +45,6 @@ data: "`2024-10-25 13:24`"
 		- se inizia con $10$ e il _Network number_ è composto da 2 byte (16 bit)
 		- $2^{14}$ reti rappresentabili a partire da $128.0$ a $191.255$
 		- _host number_ rappresentabili: $2^{16}$ ed è sempre rappresentato dagli ultimi due byte dell’indirizzo.
-		- ### Corollario:
-			- 
 	- ## Classe C:
 		- se Inizia con $110$ e occupa $3$ byte 
 		- $2^{21}$ reti rappresentabili.

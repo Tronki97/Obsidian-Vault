@@ -4,7 +4,6 @@ cssclasses:
 ---
 # Vault Info
 
-
 - ## Ultimi modificati:
 ```dataview
 TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia

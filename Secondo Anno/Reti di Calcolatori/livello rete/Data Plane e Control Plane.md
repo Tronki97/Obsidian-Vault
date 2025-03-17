@@ -18,6 +18,7 @@ data: "`2025-03-11 15:26`"
 		- ### Longest prefix matching:
 			- è un algoritmo che permette di trovare il match più lungo tra l’indirizzo di destinazione e la tabella di forwarding.
 			- ![[Pasted image 20250311161940.png]]
+			- Quell’altrimenti spesso rappresenta il _deafult gateway_
 			- #### ES:
 				- 11001000 00010111 00010 _110 10100001_ verrebbe mandato fuori dall’interfaccia 0
 				- 11001000 00010111 00011 _000 10101010_ vanno bene entrambe le interfacce 1 e 2 in questo caso si sceglie la 1 visto che il prefisso (ovvero la parte esplicita) è più lunga.
@@ -38,6 +39,7 @@ data: "`2025-03-11 15:26`"
 			- Classi con priorità diverse.
 			- Di solito si implementa con due buffer uno per le classi con priorità alta e uno per quelle con priorità bassa e ogni pacchetto ha la priorità scritta nell’header. 
 - # Control Plane:
+	- Definisce alogritmi distribuiti, determinare lo stato della rete e calcolare le strade migliori per collegare ogni router e poi tradurlo in comandi da mandare ad ogni router per far andare i pacchetti. 
 	- ## Per-router 
 		- Per realizzarlo ogni router sceglie quale sia il prossimo router a cui inoltrare i dati.
 			- Quindi ogni router scrive la propria tabella di instradamento.

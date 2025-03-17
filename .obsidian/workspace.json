@@ -13,30 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Sottoprogrammi"
-            }
-          },
-          {
-            "id": "5d1ed54cbb61b3b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
@@ -54,33 +30,8 @@
               "icon": "lucide-file",
               "title": "Homepage"
             }
-          },
-          {
-            "id": "99aa36db02b7e7c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Struttura dei sistemi operativi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Struttura dei sistemi operativi"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -112,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:TODO",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -133,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -255,10 +207,23 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "5d1ed54cbb61b3b2",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
+    "IP internet protocol.md",
+    "SDN.md",
+    "Pasted image 20250317113943.png",
+    "Pasted image 20250317113739.png",
+    "Secondo Anno/Reti di Calcolatori/livello rete/DHCP.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/NAT.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Sottoreti.md",
+    "Pasted image 20250317102806.png",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
     "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Struttura dei sistemi operativi.md",
@@ -274,27 +239,13 @@
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
-    "Secondo Anno/Reti di Calcolatori/Protocollo ARP e RARP.md",
-    "Secondo Anno/Reti di Calcolatori/NAT.md",
-    "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
-    "Secondo Anno/Reti di Calcolatori/Caching.md",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Sicurezza Di Rete.md",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure socket layer (SSL).md",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Secure E-mail.md",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete/Firewall.md",
     "immagini/Pasted image 20250315112651.png",
     "immagini/Pasted image 20250315112544.png",
     "immagini/Pasted image 20250315112325.png",
     "immagini/Pasted image 20250315111442.png",
     "immagini/Pasted image 20250312114047.png",
     "immagini/Screenshot (15).png",
-    "immagini/Pasted image 20250313172935.png",
-    "immagini/Pasted image 20250313172457.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
-    "immagini/Pasted image 20250313152008.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
