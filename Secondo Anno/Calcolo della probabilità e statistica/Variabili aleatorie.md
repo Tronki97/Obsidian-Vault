@@ -44,7 +44,7 @@ data: "`2025-03-11 13:23`"
 		- $$\mathbb{P}(X=a)=\mathbb{P}(\{w\in \Omega: X(w)=a\})=\mathbb{P}(\{1,...,6\})=1$$
 - # V.A indicatrici (o di Bernoulli):
 	- Fisso un evento $A\subset \Omega$ costruisco una variabile aleatoria.
-	- $$X(w)=\mathbb{1}_{A}(w):=\begin{cases} 1 &w\in A \\ 0 &altriemnti\end{cases}$$
+	- $$X(w)=\mathbb{1}_{A}(w):=\begin{cases} 1 &w\in A \\ 0 &altriementi\end{cases}$$
 	- Tutta l’info dell’evento $A$ è contenuta in questa variabile aleatoria indicatrice.
 	- Da una variabile aleatoria è possibile risalire ad un evento???
 		- Visto che le V.A sono la generalizzazione del concetto di [[Modello probabilistico di un esperimento aleatorio#^18c7b9|evento]] 
@@ -69,6 +69,10 @@ data: "`2025-03-11 13:23`"
 	- $\sigma(X)?$
 	- Fisso $$\{X\in B\}=\{w\in \Omega:X(w)\in B\}=\begin{cases}A&1\in B,0\notin B\\ A^{C}&1\notin B,0\in B\\ \Omega&1\in B,0\in B\\ \emptyset&1\notin B,0\notin B\end{cases}$$
 	- Quindi $\sigma(X)=\{A,A^{C},\Omega, \emptyset\}$
+	- $$\mathbb{P}_{X}(B)=\mathbb{P}(X\in B)=\begin{cases}\mathbb{P}(A)&1\in B,0\notin B\\ 1-\mathbb{P}(A)&1\notin B,0\in B\\ 1&1\in B,0\in B\\ 0&1\notin B,0\notin B\end{cases}=$$
+	- $$=\mathbb{P}(A)\delta_{1}(B)+(1-\mathbb{P}(A))\delta_{0}(B)$$
+	- Ovvero: $$\mathbb{P}_{X}(.)=\mathbb{P}(A)\delta_{1}(.)+(1-\mathbb{P}(A))\delta_{0}(.)$$
+		- _Questa è chiamata distribuzione o legge di Bernoulli_
 	- ### OSS:
 		- $(\Omega, \mathbb{P}), X:\Omega\to \mathbb{R}$ V.A
 		- 1) $\mathbb{P}(X\le x)=\mathbb{P}(X<x)+\mathbb{P}(X=x), \ x\in \mathbb{R}$
@@ -78,7 +82,7 @@ data: "`2025-03-11 13:23`"
 - # Distribuzione (o legge) di una variabile aleatoria:
 	- $(\Omega, \mathbb{P})$ spazio di probabilità, $X: \Omega\to \mathbb{R}$ V.A
 	- ## Def:
-		- Legge di probabilità d i $X$ la probabilità:
+		- Si dice legge di probabilità di $X$ la probabilità:
 			- $\mathbb{P}_{X}:P(\mathbb{R})\to[0,1]$
 			- $B\longrightarrow \mathbb{P}_{X}(B):=\mathbb{P}(X\in B)$
 		- Si scrive:
@@ -90,5 +94,55 @@ data: "`2025-03-11 13:23`"
 			- Si dimostra che la legge $\mathbb{P}_{X}$ di una V.A $X$ è caratterizzabile dalla funzione $F_{X}(x):=\mathbb{P}_{X}((- \infty, x])$
 			- Definita come : $F_{X}: \mathbb{R}\to [0,1]$
 			- $$x \to F_{X}(x):=\mathbb{P}_{X}((- \infty, x]) = \mathbb{P}(X\le x)$$
+- # Funzione di ripartizione:
+	- $\mathbb{P}_{X}$ contiene tutte le informazioni di $X$, ma è una funzione di 
+	- ## OSS:
+		- $B\subset \mathbb{R}$
+		- Conoscere $\mathbb{P}_{X}(B)\ \ \forall B\subset \mathbb{R} \iff \mathbb{P}_{X}(I)\ \ \forall I$
+			- $I$ intervallo reale.
+		- Definita come : $F_{X}: \mathbb{R}\to [0,1]$
+			- $$x \to F_{X}(x):=\mathbb{P}_{X}((- \infty, x]) = \mathbb{P}(X\le x)$$
+	- ## V costanti:
+		- $\mathbb{P}_{X}(B)=\delta_{0}(B)$
+		- $$F_{X}(x)=\mathbb{P}_{X}((-\infty,x])=\delta_{0}((-\infty,x])=\begin{cases} 1&x\ge a\\0&x<0 \end{cases}$$
+	- ## Lemma:
+		- “$A_{n}\uparrow A$": $$A_{n}\subset A_{n+1}, \ \ \bigcup_{n=1}^{\infty}A_{n}=A \implies \lim_{n\to \infty}\mathbb{P}(A_{n})=\mathbb{P}(A)$$
+		- “$A_{n}\downarrow A$": $$A_{n}\supset A_{n+1}, \ \ \bigcap_{n=1}^{\infty}A_{n}=A \implies \lim_{n\to \infty}\mathbb{P}(A_{n})=\mathbb{P}(A)$$ 
+	- ## Teorema:
+		- $(\Omega, \mathbb{P})$
+		- 1) $F_{X}$ è monotona crescente
+		- 2) $F_{X}$ è continua a destra.: ($\lim_{y\to x^{+}} F_{X}(y)=F_{X}(x)\ \ \ \forall x\in \mathbb{R}$)
+		- 3) $$\lim_{x\to \infty}F_{X}(x)=1$$
+		- 4) $$\lim_{x\to -\infty}F_{X}(x)=0$$
+		- Vale anche il viceversa: se $G: \mathbb{R}\to [0,1]$ verifica i 4 punti $\implies \exists(\Omega,\mathbb{P})$ 
+	- ## Dim:
+		- 1) prendo due insiemi $(-\infty,x)\subset (-\infty,y) \implies \mathbb{P_{X}}((-\infty, x])\le \mathbb{P_{X}}((-\infty, y])$
+			- Ciò vale perché $\mathbb{P}_{X}(.)$ verifica la monotonia perché è una probabilità.
+		- 2) 3) 4) serve la stabilità della probabilità per limiti monotoni: 
+		- 3) $$\lim_{x\to \infty}F_{X}(x)=1\iff \lim_{x\to \infty}\mathbb{P}_{X}((-\infty,x])=\mathbb{P}_{X}(\mathbb{R})$$
+			- Applico il lemma e cerco $(B_{n})_{n}: B_{n}\uparrow \mathbb{R}$ ovvero $B_{n}\subset B_{n+1}, \ \ \bigcup_{n=1}^{\infty}B_{n}=\mathbb{R}$
+			- Scelgo quindi $B_{n}$ come $(-\infty, n], \ n\in \mathbb{N}$ 
+				- $$\lim_{n\to \infty}\mathbb{P}_{X}((-\infty,n])= \lim_{n\to \infty}\mathbb{P}_{X}(B_{n})=\mathbb{P}_{X}(\mathbb{R})=1$$
+			- Concludo osservando che $F_{X}(.)$ è monotona crescente e quindi ammette limite unico.
+			- Quindi:
+				- $$\lim_{x\to \infty}F_{X}(x)=1$$
+- # V.A discreta:
+	- Variabili aleatorie che assumono un numero finito numerabile di valori.
+	- L’immagine è finita.
+	- $X: \Omega \to \mathbb{R}$ è una V.A discreta se:
+		- $\Omega$ discreto:  $Im(X)$ finita numerabile.
+		- $\Omega$ non discreto: $\exists s_{X}\subset Im(X), s_{X}$ finito o numerabile, tale che: $\mathbb{P}(X\in s_{x})=1$ quasi certamente.
+	- ## ES:
+		- $$X(w)=\begin{cases} a &w\in \{1,...,6\}\\ w & altrimenti\end{cases}$$
+			- $\Omega=\mathbb{R}$, $\mathbb{P}: \begin{cases} \mathbb{P}(\{1\})=...=\mathbb{P}(\{6\})=\frac{1}{6} \\ \mathbb{P}(\{n\})=0 & \forall n\ne \{1,...,6\}\end{cases}$
+		- Cerco  $s_{X}\subset Im(X)$ che risulta essere $\{a\}$ 
+		- $\{X\in s_{X}\}=\{1,2,3,4,5,6\}$ evento quasi certo 
+	- ## Def:
+		- $(\Omega, \mathbb{P})$
+		- La funzione :
+			- $\mathbb{P}_{X}: \mathbb{R}\to [0,1]$ M
+			- $x\to \mathbb{P}_{X}(x):=\mathbb{P}(X=x)$
+		- Si chiama _funzione di distribuzione di probabilità di $X$ _
+- # V.A continua:
 - # Link Utili:
 	- 

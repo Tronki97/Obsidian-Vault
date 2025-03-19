@@ -139,7 +139,7 @@ data: "`2025-03-04 13:37`"
 			- $A_{k}$ = “si estraggono $k$ palline bianche” = “si estraggono $n-k$ palline rosse”
 		- Fisso lo spazio campionario delle estrazioni:
 			- $\Omega=DR_{b+r,n}$
-			- $\mathbb{P}$ uniforme, $$\mathbb{P}\left( \{w\}\right)==\frac{1}{(b+r)^{n}} $$
+			- $\mathbb{P}$ uniforme, $$\mathbb{P}\left( \{w\}\right)=\frac{1}{(b+r)^{n}} $$
 		- $E=\{B_{1},...,B_{b},R_{1},...,R_{r}\}$
 		- Per trovare $\mathbb{P}(A_{k})$ devo trovarne la cardinalità uso quindi il _metodo delle scelte successive_
 			- 1) scelgo la sequenza di $k$ palline bianche estratte considerando l’ordine:

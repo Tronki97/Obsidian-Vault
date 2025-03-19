@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Reti di flusso"
+            }
+          },
+          {
+            "id": "3cb295f518e35078",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Visite sui Grafi"
             }
           }
         ]
@@ -54,7 +78,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Esplora risorse"
             }
           },
           {
@@ -84,8 +108,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -191,14 +214,14 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "audio-recorder:Start/stop recording": false,
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "markdown-importer:Apri importazione Markdown": false,
+      "audio-recorder:Avvia/ferma registrazione": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "homepage:Open homepage": false,
@@ -209,8 +232,22 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "IP internet protocol.md",
-    "SDN.md",
+    "Pasted image 20250319104138.png",
+    "Pasted image 20250319101053.png",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
+    "Homepage.md",
+    "Wireless.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
+    "template/Modello appunti.md",
+    "template/Matrice completa 4x4.md",
+    "template/Tabella 2x3.md",
+    "template/Matrice 4x4.md",
+    "latexsheet-a4.pdf",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/IP internet protocol.md",
+    "Secondo Anno/Reti di Calcolatori/livello rete/SDN.md",
     "Pasted image 20250317113943.png",
     "Pasted image 20250317113739.png",
     "Secondo Anno/Reti di Calcolatori/livello rete/DHCP.md",
@@ -219,32 +256,19 @@
     "Secondo Anno/Reti di Calcolatori/livello rete/Sottoreti.md",
     "Pasted image 20250317102806.png",
     "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
-    "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Struttura dei sistemi operativi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
     "Secondo Anno/Sistemi Operativi/progetto/Interrupt routing.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/esercizi di linguaggi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
-    "latexsheet-a4.pdf",
     "immagini/Pasted image 20250315111414.png",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
     "immagini/Pasted image 20250315112651.png",
     "immagini/Pasted image 20250315112544.png",
     "immagini/Pasted image 20250315112325.png",
     "immagini/Pasted image 20250315111442.png",
     "immagini/Pasted image 20250312114047.png",
-    "immagini/Screenshot (15).png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",

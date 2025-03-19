@@ -166,7 +166,7 @@ data: "`2025-03-05 09:13`"
 					- Se $x$ è ammissibile e massimo allora $G_{x}$ non ha cammini aumentanti e quindi esiste un taglio con capacità pari a $v$ per il punto 3.
 			- #### Complessità:
 				- Se le capacità di $G$ sono numeri interi allora esiste un flusso intero massimo.
-				- Dim:
+				- ##### Dim :
 					- Se le capacità sono intere allora il flusso massimo sarà al più:
 						- $$nU$$
 						- Dove $n$ è il numero di nodi e  $U$ è il massimo valore di capacità
@@ -176,7 +176,86 @@ data: "`2025-03-05 09:13`"
 				- Il problema dell’algoritmo sta nell’assenza di vincoli sulla scelta dei cammini da aumentare.
 		- ### Algoritmo di Edmonds-Karp:
 			- è una modifica dell’algoritmo di Ford-Fulkerson ma si mette un criterio sulla scelta dei cammini da aumentare.
-			- Utilizzando quindi una visita [[Visite sui Grafi#^3c4eb5|BFS]] sul grafo $G_{x}$ in questo modo si nota come verranno scelti sempre i cammini con meno archi quindi più corti.
-			- 
+				- Si modifica il punto 2 di quell’algoritmo Utilizzando una visita [[Visite sui Grafi#^3c4eb5|BFS]] sul grafo $G_{x}$ in questo modo si nota come verranno scelti sempre i cammini con meno archi quindi più corti.
+			- #### Proprietà:
+				- L’algoritmo è corretto siccome è solo una istanza particolare di Ford-fulkerson.
+				- Si indica con $\delta_{x}(i,j)$ la distanza tra $i$ e $j$ nel grafo residuo $G_{x}$ 
+				- ##### lemma:
+					- Se durante EK il flusso $y$ è ottenuto da $x$ con un aumento di flusso in un cammino aumentante, allora $\forall i\in N$ vale che:
+						- $$\delta_{x}(s,i)\le \delta_{y}(s,i)$$
+			- #### Complessità:
+				- Si osserva che in FF i cammini aumentanti sono di _lunghezza minima_ allora la distanza di un nodo dalla sorgente $s$ in $G_{x}$ _non può diminuire_.
+				- Da ciò si deduce come il numero di iterazioni in questo algoritmo non può essere maggiore di $N*A$ 
+			- #### Teorema :
+				- Le iterazioni di EK è $O(N*A)$ quindi la complessità sarà $O(N*A^{2})$ 
+			- #### Dim:
+				- ##### Arco critico:
+					- Un arco critico è un arco che dice quale sia la capacità residua dell’arco quindi la sua capacità è uguale a $\theta(P,x)$ dove $P$ è il cammino aumentante.
+						- Dopo l’aumento del flusso in $P$ l’arco critico _sparisce_ dal grafo residuo.
+						- In ogni cammino aumentante esiste almeno un _arco critico_
+				- Quante volte è possibile che dati $i$ e $j$ connessi da un arco esso sia critico?
+					- Si dimostra che quel numero è $O(N)$ e visto che tali coppie sono al più $O(A)$ in totale si avranno al più $O(N*A)$ iterazioni.
+				- Quando $(i,j)$ diventa critico per la prima volta deve valere che:
+					- $$\delta_{x}(s,j)=\delta_{x}(s,i)+1$$
+					- Ciò vale perché il cammino da $s$ a $i$ è già minimo allora per arrivare da $s$ a $j$ sarà uguale a quello prima più un altro passo.
+					- Il flusso $x$ a quel punto sparisce dal grafo residuo.
+				- Se si vuole far ricomparire l’arco critico si deve fare in modo che il flusso da $i$ a $j$ diminuisca ovvero:
+					- $$\delta_{y}(s,i)=\delta_{y}(s,j)+1$$
+				- E quindi :
+					- $$\delta_{y}(s,i)=\delta_{y}(s,j)+1 \ge \delta_{x}(s,j)+1 = \delta_{x}(s,i)+2$$
+				- Di conseguenza da quando $(i,j)$ diventa critico al successivo la sua distanza da $s$ aumenta di almeno 2 e siccome la distanza non può essere $\ge$ al numero di nodi $|N|$ quindi quell’arco può diventare critico al massimo $|N|$ volte 
+				- _tutto ciò vale solo perché si sta usando una BFS avendo quindi i cammini di lunghezza minima_.
+		- ### Goldberg-Tarjan:
+			- Costruisce il flusso massimo locale, a differenza dei due precedenti. 
+			- Si decide quindi di cambiare il flusso solo in certe porzioni del grafo.
+			- Non si lavora solo con flussi ammissibili, ma anche con dei _preflussi_
+				- Che sono più generali, sono dei vettori $x$ tali che:
+					- $$\sum\limits_{(j,i)\in BS(i)} x_{ij}-\sum\limits_{(j,i)\in FS(i)} x_{ij}\ge 0\ \ \ \ i\in  N-\{s,t\}$$
+			- Un nodo si dice _attivo_ se il suo _eccesso_:
+				- $$e_{i}=\sum\limits_{(j,i)\in BS(i)} x_{ij}-\sum\limits_{(j,i)\in FS(i)} x_{ij}$$
+					- è bilanciato 
+			- L’idea quindi è di eliminare gli sbilanciamenti e di “disattivare” i nodi attivi
+			- Per eliminare lo sbilanciamento di un nodo $i$ si sposta parte del flusso in eccesso:
+				- In avanti attraverso $(i,j)$ se
+				- Indietro attraverso $(j,i)$ se $x_{ij}>0$
+				- Chiamate operazioni di _push forward_ e _push backwards_
+			- Per capire se quste operazioni sono possibili si usano delle “etichette”
+			- ![[Pasted image 20250319101053.png|400]]
+			- #### EtichettaturaVALIDA (G):
+				- $d_{i}=$ lunghezza del cammino minimo da $i$ a $t$ 
+			- #### PushForward(v, j):
+				- Aumento il flusso da $i$ a $j$ di 
+				- $x_{ij}=x_{ij}+\min\{u_{vj}-x_{vj},e_{v}\}$
+			- #### PushBackward(i, v):
+				- $x_{iv}=$
+			- #### Relabel(v):
+				- Cambia l’altezza del nodo $v$ per rendere possibile almeno una delle due operazioni di _push_.
+- # Problema di flusso di costo minimo:
+	- ## Pseudoflusso:
+		- Vettore che soddisfa i vincoli:
+			- $$0\le x_{ij}\le u_{ij}\ \ \ (i,j)\in A$$
+	- ## Sbilanciamento:
+		- Se $x$ è uno pseudoflusso lo sbilanciamento di un nodo $i$ rispetto al flusso $x$ è:
+			- $$e_{x}(i)=\sum\limits_{(j,i)\in BS(i)} x_{ij} \ -\sum\limits_{(i,j)\in FS(i)} x_{ij}-b_{i}$$
+			- $e_{x}$ è anche detto vettore degli sbilanciamenti.
+			- E l’obiettivo è eliminare i valori diversi da 0 in questo vettore.
+	- ## Nodi offerta e domanda:
+		- Dato uno pseudoflusso $x$ :
+			- $$O_{x}=\{i\in N|e_{x}(i)>0\}$$
+				- Detti nodi con _eccesso di flusso_
+			- $$D_{x}=\{i\in N|e_{x}(i)<0\}$$
+				- Nodi con _difetto di flusso_
+			- Se $O_{x}=D_{x}=\emptyset$ allora tutti i nodi hanno $e_{x}(i)=0$ quindi $x$ è un flusso.
+	- ## Sbilanciamento complessivo:
+		- $$g(x)=\sum\limits_{i\in O_{x}}e_{x}(i)= -\sum\limits_{j\in D_{x}}e_{x}(j)$$
+	- ## Cammini aumentanti:
+		- Questa definizione diventa più generale con questo problema.
+		- In più gli archi concordi e discordi avranno un costo.
+		- Quindi ogni cammino aumentante avrà un costo che è dato dalla somma dei costi degli archi che lo compongono:
+			- $$c(P)=\sum\limits_{(i,j)\in P^{+}} c_{ij} -\sum\limits_{(i,j)\in P^{-}} c_{ij}$$
+				- Dove $c_{ij}$ è il costo dell’ arco $(i,j)$
+	- ## Cammini minimi successivi:
+		- ![[Pasted image 20250319104138.png|625]]
+		- 
 - # Link Utili: 
 	- 
