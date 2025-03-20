@@ -87,6 +87,17 @@ data: "`2025-03-13 17:18`"
 					- L’operazione si può fare in un tempo $O(1)$:
 						- Usando liste doppiamente concatenate.
 					- ![[Pasted image 20250320164158.png]]
+				- ##### Selezione di un blocco libero:
+					- ###### First fit:
+						- Scorre la lista dei blocchi liberi fino a quando non trova il primo segmento vuoto grande abbastanza da contenere il processo
+					- ###### Next fit:
+						- Come First Fit, ma invece di ripartire sempre dall'inizio, parte dal punto dove si era fermato all'ultima allocazione.
+					- ###### Best fit:
+						- Sceglie il blocco libero più piccolo che può contenere il processo.
+						- Ma questo crea un sacco di blocchi piccoli e quindi frammentazione.
+					- ###### Worst fit:
+						- Sceglie il blocco libero più grande.
+						- Questa strategia è quella che crea meno frammentazione ma crea problemi quando si vogliono allocare processi di grandi dimensioni.
 	- ## Allocazione a partizioni fisse:
 		- La memoria è divisa in partizioni di dimensioni fisse.
 		- Ogni processo viene caricato in una delle partizioni libere che ha dimensione sufficiente a contenerlo
@@ -106,6 +117,27 @@ data: "`2025-03-13 17:18`"
 			- Consiste nello spostare in memoria tutti i processi in modo tale da colmare tutti gli spazi non occupati.
 			- Il problema è che è un operazione onerosa perché serve copiare nella memoria fisica un sacco di dati, inoltre i processi devono essere fermi durante la compattazione.
 			- ![[Pasted image 20250320162932.png|650]]
-		- 
+- # Paginazione:
+	- Riduce il fenomeno di frammentazione interna e elimina la frammentazione esterna.
+	- _Lo spazio di indirizzi logici_ viene diviso in _pagine_ di dimensione fissa.
+	- _La memoria fisica_ viene divisa in _frame_ di dimensione uguale a quella delle pagine.
+	- Quando si allocano dei processi si cerca ovunque in memoria dei frame sufficienti per contenere le pagine del processo.
+	- ## ES:
+		- ![[Pasted image 20250320165231.png]]
+		- ![[Pasted image 20250320165551.png]]
+	- ## Scegliere dimensione delle pagine:
+		- Deve essere una potenza di 2 per facilitare la traduzione degli indirizzi.
+		- Questa scelta deriva da un trade-off:
+			- Se le pagine sono piccole la tabella delle pagine cresce di dimensione.
+			- Se le pagine sono grandi si ha frammentazione interna che farà perdere grandi quantità di memoria.
+	- ## Implementazione della tabella delle pagine:
+		- Si pitrebbe inserire in un insieme di reistri ad alta velocità per facilitarne l’accesso, però sarebbe troppo costoso.
+- # Translation lookaside buffer (TLB):
+	- Insieme di registri associativi ad alta velocità.
+	- Ogni registro ha 2 parti:
+		- Chiave
+		- Dato 
+	- Esistono tante coppie fatte in questo modo e quando viene fatta la richiesta di un dato con una chiave viene confrontata con tutte le chiavi presenti contemporaneamente e se c’è una corrispondenza si restituisce il dato(TLB hit), altrimenti (TLB miss) si usa la tabella in memoria.
+	- ![[Pasted image 20250320171358.png]]
 - # Link Utili:
 	- 

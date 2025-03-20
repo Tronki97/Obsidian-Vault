@@ -30,6 +30,54 @@
               "icon": "lucide-file",
               "title": "Gestione della memoria"
             }
+          },
+          {
+            "id": "78e2d632d4f64ae9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/architettura degli elaboratori/SO/Compiti/paginazione(SO).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "paginazione(SO)"
+            }
+          },
+          {
+            "id": "e2179d0a6cea98b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/architettura degli elaboratori/Architettura HACK/Cache.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Cache"
+            }
           }
         ]
       }
@@ -84,8 +132,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -209,20 +256,23 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Pasted image 20250320171358.png",
+    "Pasted image 20250320165551.png",
+    "Primo Anno/architettura degli elaboratori/SO/Compiti/paginazione(SO).md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Cache.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
+    "Pasted image 20250320165231.png",
     "Pasted image 20250320164158.png",
     "Pasted image 20250320164035.png",
     "Pasted image 20250320163825.png",
     "Pasted image 20250320163159.png",
     "Pasted image 20250320162932.png",
     "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
     "Pasted image 20250320161357.png",
     "Pasted image 20250320160531.png",
     "Wireless.md",
     "Pasted image 20250320153710.png",
-    "Pasted image 20250320152956.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
-    "Pasted image 20250320151314.png",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "latexsheet-a4.pdf",
     "Homepage.md",
@@ -230,7 +280,6 @@
     "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "Pasted image 20250319104138.png",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
@@ -244,8 +293,6 @@
     "Secondo Anno/Reti di Calcolatori/livello rete/DHCP.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/NAT.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/Sottoreti.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
