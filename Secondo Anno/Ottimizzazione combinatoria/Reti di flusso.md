@@ -256,6 +256,17 @@ data: "`2025-03-05 09:13`"
 				- Dove $c_{ij}$ è il costo dell’ arco $(i,j)$
 	- ## Cammini minimi successivi:
 		- ![[Pasted image 20250319104138.png|625]]
-		- 
-- # Link Utili: 
+		- ### Pseudoflusso minimale:
+			- è _minimale_ se ha costo minimo tra tutti gli pseudoflussi che danno luogo allo stesso vettore di sbilanciamento $e(x)$.
+			- #### Lemma:
+				- Uno pseudoflusso è minimale $\iff$ non esistono cicli aumentanti di valore negativo.
+				- $\implies$)
+					- Se esistesse un ciclo aumentante di valore negativo allora si potrebbe diminuire il costo dello pseudoflusso senza alterare lo sbilanciamento, in contraddizione con la minimalità di $x$
+				- $\Longleftarrow$) 
+					- Suppongo che $x$ non sia minimale che quindi esista $y: c_{y}<c_{x}$ e $e_{y}=e_{x}$ allora per il teorema degli pseudoflussi che permette di scrivere y come:
+						- $$y=x ⊕ θ_{1}P_{1} ⊕ . . . ⊕ θ_{n}P_{n}$$
+						- $\theta_{i}>0$ e ogni $P_{i}$ è un ciclo
+						- 
+				- 
+- # Link Utili:  
 	- 

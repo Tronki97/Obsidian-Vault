@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MathProg"
+              "title": "Gestione della memoria"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "RSA",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,7 +71,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Ricerca"
             }
           },
           {
@@ -84,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -208,43 +209,43 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
+    "Pasted image 20250320164158.png",
+    "Pasted image 20250320164035.png",
+    "Pasted image 20250320163825.png",
+    "Pasted image 20250320163159.png",
+    "Pasted image 20250320162932.png",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
+    "Pasted image 20250320161357.png",
+    "Pasted image 20250320160531.png",
+    "Wireless.md",
+    "Pasted image 20250320153710.png",
+    "Pasted image 20250320152956.png",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+    "Pasted image 20250320151314.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
+    "latexsheet-a4.pdf",
     "Homepage.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "Pasted image 20250319104138.png",
-    "Pasted image 20250319101053.png",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
-    "Wireless.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
     "template/Modello appunti.md",
     "template/Matrice completa 4x4.md",
     "template/Tabella 2x3.md",
     "template/Matrice 4x4.md",
-    "latexsheet-a4.pdf",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/IP internet protocol.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/SDN.md",
-    "Pasted image 20250317113943.png",
-    "Pasted image 20250317113739.png",
     "Secondo Anno/Reti di Calcolatori/livello rete/DHCP.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/NAT.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Sottoreti.md",
-    "Pasted image 20250317102806.png",
     "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Struttura dei sistemi operativi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
-    "immagini/Pasted image 20250315111414.png",
-    "immagini/Pasted image 20250315112651.png",
-    "immagini/Pasted image 20250315112544.png",
-    "immagini/Pasted image 20250315112325.png",
-    "immagini/Pasted image 20250315111442.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",

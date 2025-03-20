@@ -9,7 +9,7 @@ data: "`2025-03-13 17:18`"
 	- Tiene traccia della memoria libera e occupata
 	- è un componente software a differenza dell’MMU.
 - # Binding:
-	- Lo fa il compilatore.
+	- Lo fa il compilatore ed è l’associazione degli indirizzi logici con quelli fisici.
 	- Può avvenire durante:
 		- ## Compilazione :
 			- Indirizzi calcolati al momento della compilazione e saranno gli stessi durante tutto il programma 
@@ -17,14 +17,95 @@ data: "`2025-03-13 17:18`"
 				- Un esempio può essere il _kernel_
 			- ![[Pasted image 20250313172457.png]]
 			- Non richiede hardware speciale, veloce e semplice ma non funziona con la _multiprogrammazione_ perché 2 processi che eseguono lo stesso programma necessiterebbero di allocare la stessa cella di memoria.
-		- caricamento:
-			- Il codice generato dal compilatore non ha indirizzi assoliti ma relativi.
+		- ## caricamento :
+			- Il codice generato dal compilatore non ha indirizzi assoluti ma relativi.
 			- Codice detto _rilocabile_:
 			- Il loader si occupa dei riferimenti ad indirizzi di memoria coerentemente al punto iniziale di caricamento
 			- ![[Pasted image 20250313172935.png]]
 			- Permette la multiprogrammazione non richiede hardware speciale, però gli serve una traduzione degli indirizzi da parte del loader e quindi di particolari file eseguibili
 			- 
-		- esecuzione.
-			- Individuazione degli indirizzi effettuata durante l’esecuzione dalla _MMU_
+		- ## esecuzione .
+			- Individuazione degli indirizzi effettuata durante l’esecuzione dalla _MMU_ che trasforma gli indirizzi logici in quelli fisici.
+			- ![[Pasted image 20250320151314.png]]
+			- Il problema è che la MMU è un componente complesso.
+			- Questo binding permette il multitasking,
+	- ## Indirizzi logici:
+		- Ogni processo è associato ad uno spazio di indirizzamento logico.
+		- Gli indirizzi usati in un processo sono Indirizzi logici, ovvero riferimenti a Questo spazio di indirizzamento
+	- ## Fisici :
+		- Sono gli indirizzi reali della memoria principale che sono associati agli indirizzi logici.
+		- L’MMU traduce da indirizzi logici a fisici
+- # MMU:
+	- ## ES:
+		- ![[Pasted image 20250320152956.png]]
+		- Si prende un registro di rilocazione $R$ che permette alla MMU di trasformare gli indirizzi logici $[0,MAX]$ in indirizzi fisici $[R,R+MAX]$. 
+	- L’MMU può fare anche attività di controllo:
+		- Il registro limite viene usato per proteggere la memoria.
+		- ![[Pasted image 20250320153710.png]]
+		- Se un processo tenta di accedere ad un indirizzo fuori dal suo spazio di indirizzamento logico, la MMU lo rileva e genera una [[Trap e interrupt#^ca5cf6|Trap]].
+- # Loading dinamico:
+	- Consente di caricare certi moduli di libreria solo quando vengono richiamati.
+	- Implementato avendo le routine su un disco che vengono caricate quando servono senza caricare tutte quelle che non servono.
+	- Però sta al programmatore conoscere e utilizzare queste cose, il [[Sistema operativo]] fornisce solo la possibilità.
+- # Linking dinamico:
+	- Unisce il codice scritto con le librerie usate generando l’eseguibile.
+	- Posticipa il linking alle librerie al momento del primo riferimento durante l’esecuzione.
+	- Ciò permette di avere eseguibili più compatti, risparmiare di conseguenza la memoria e aggiornare automaticamente delle versioni delle librerie che verranno caricate all’attivazione successiva dei programmi 
+	- `Dlopen` consente di caricare librerie dinamiche a runtime.
+		- Ed è il metodo con cui vengono caricati i _plug-In_
+- # Allocazione:
+	- Reperisce ed assegna uno spazio di memoria fisica ad un programma che viene attivato oppure ad altri programmi che durante l’esecuzione richiedono memoria aggiuntiva.
+	- ## Allocazione contigua:
+		- Si assegna uno spazio di memoria formato da celle consecutive
+	- ## Allocazione statica:
+		- Un processo mantiene la propria area di memoria fino alla sua terminazione.
+		- Non può essere riallocato un processo durante l’esecuzione.
+	- ## Allocazione dinamica:
+		- Durante l'esecuzione, un processo può essere spostato all'interno della memoria.
+		- ### Strutture dati:
+			- Si necessitano di strutture dati per tenere traccia della memoria libera e occupata.
+			- #### mappa di bit:
+				- La memoria è suddivisa in un’unica allocazione.
+				- Ad ongi unità di allocazione è associato un bit nella bitmap 
+				- Ogni bit a 0 indica che la cella è libera, 1 che è occupata.
+				- ![[Pasted image 20250320163159.png]]
+				- Questa struttura dati ha il vantaggio di avere una dimensione fissa calcolabile all’inizio; ma per individuare uno spazio di memoria di dimensione $k$ unità, è necessario cercare una sequenza di $k$ bit 0 consecutivi e questa operazione è $O(m)$ costosa dove $m$ è il numero di celle di memoria.
+			- #### Lista con puntatori:
+				- Ogni nodo della lista sono i blocchi di memoria allocati e liberi
+				- Ogni nodo specifica:
+					- Se si tratta di un [[Concorrenza#^68dcd8|processo]] (P) o di un elemento libero (hole, H)
+					- La dimensione (inizio/fine) del segmento.
+				- ![[Pasted image 20250320163825.png]]
+				- ##### Allocazione:
+					- Viene selezionato un blocco libero suddiviso in due parti:
+						- Un blocco processo di dimensione necessaria
+						- Un blocco libero di dimensione rimanente da quella iniziale.
+					- Se la dimensione del processo è uguale a quella del blocco scelto, si crea solo un nuovo blocco processo.
+					- ![[Pasted image 20250320164035.png]]
+				- ##### Deallocazione:
+					- A seconda dei blocchi vicini si può unire il blocco deallocato con un blocco libero adiacente oppure si crea un nuovo blocco libero.
+					- L’operazione si può fare in un tempo $O(1)$:
+						- Usando liste doppiamente concatenate.
+					- ![[Pasted image 20250320164158.png]]
+	- ## Allocazione a partizioni fisse:
+		- La memoria è divisa in partizioni di dimensioni fisse.
+		- Ogni processo viene caricato in una delle partizioni libere che ha dimensione sufficiente a contenerlo
+		- è una allocazione statica e contigua.
+		- Spreca della memoria perché se un processo richiede più memoria di quella che è disponibile in una partizione, non può essere caricato quindi necessita di allocarne altra.
+			- Si ha quindi un problema di _frammentazione interna_.
+		- ![[Pasted image 20250320160531.png]]
+		- è possibile usare una coda per ogni partizione per gestire i processi in attesa di essere caricati.
+	- ## Allocazione a partizioni dinamiche:
+		- La memoria è divisa in partizioni di dimensioni variabili.
+		- Ogni processo viene caricato in una partizione libera che ha dimensione sufficiente a contenerlo.
+		- è una allocazione statica e contigua.
+		- Si ha un problema di [[frammentazione esterna]].
+			- ![[Pasted image 20250320161357.png|600]]
+		- Per risolvere il problema della frammentazione esterna si può usare la _compattazione_ della memoria.
+		- ## Compattazione della memoria:
+			- Consiste nello spostare in memoria tutti i processi in modo tale da colmare tutti gli spazi non occupati.
+			- Il problema è che è un operazione onerosa perché serve copiare nella memoria fisica un sacco di dati, inoltre i processi devono essere fermi durante la compattazione.
+			- ![[Pasted image 20250320162932.png|650]]
+		- 
 - # Link Utili:
 	- 

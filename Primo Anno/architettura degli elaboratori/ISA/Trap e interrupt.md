@@ -1,4 +1,4 @@
-- ### Trap
+- ### Trap ^ca5cf6
 	- chiamata di procedura effettuata quando si verificano condizioni rilevanti, come : 
 		- [[Istruzioni ISA#^5b1cef||opcode]] non definito
 		- accesso ad aree di memoria non consentito.
