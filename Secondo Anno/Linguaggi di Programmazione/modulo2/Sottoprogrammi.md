@@ -36,7 +36,12 @@ data: "`2025-03-12 11:14`"
 				- Il formale $x$ è una variabile locale sulla pila 
 				- Alla fine della funzione il valore di $x$ è assegnato al valore del chiamante
 				- Quindi il valore viene cambiato solo una volta che la funzione ha finito di eseguirsi.
-- # Astrazione sui dati:
-- 
+- # Deep binding:
+	- Si tiene conto dell’ambiente al momento della creazione del legame tra due funzioni h→f.
+- # Shallow binding:
+	- Si tiene conto dell’ambiente al momento della chiamata di $f$ via $h$
+- # Chiusure:
+	- Utile per implementare il deep binding.
+	- 
 - # Link Utili:
 	- 

@@ -21,7 +21,6 @@ data: "`2025-03-03 10:24`"
 	display x1, x2, y1, y2, y3;
 	end;
 ```
-- 
-``
+
 - # Link Utili:
-	- 
+	- https://www.strandmark.net/wasm/glpk.html sito web per fare esercizi in mathprog.

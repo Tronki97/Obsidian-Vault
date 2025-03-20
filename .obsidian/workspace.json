@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Reti di flusso"
-            }
-          },
-          {
-            "id": "3cb295f518e35078",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Visite sui Grafi"
+              "title": "MathProg"
             }
           }
         ]
@@ -232,11 +208,14 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
+    "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "Pasted image 20250319104138.png",
     "Pasted image 20250319101053.png",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
-    "Homepage.md",
     "Wireless.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
@@ -261,14 +240,11 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Struttura dei sistemi operativi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
-    "Secondo Anno/Sistemi Operativi/progetto/Interrupt routing.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
     "immagini/Pasted image 20250315111414.png",
     "immagini/Pasted image 20250315112651.png",
     "immagini/Pasted image 20250315112544.png",
     "immagini/Pasted image 20250315112325.png",
     "immagini/Pasted image 20250315111442.png",
-    "immagini/Pasted image 20250312114047.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
