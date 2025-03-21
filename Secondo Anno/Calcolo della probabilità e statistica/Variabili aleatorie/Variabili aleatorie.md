@@ -6,6 +6,11 @@ aliases:
   - variabili aleatorie costanti
   - variabili aleatorie indicatrici
   - variabili aleatorie di bernoulli
+  - V.A discreta
+  - variabile aleatoria discreta
+  - V.A indicatrici
+  - V.A costanti
+  - V.A di bernoulli
 data: "`2025-03-11 13:23`"
 ---
 - # Variabili aleatorie (V.A.):
@@ -42,7 +47,7 @@ data: "`2025-03-11 13:23`"
 		- Costruisco $X$ V.A $(X: \Omega \to \mathbb{R}): \mathbb{P}(X=a)=1$
 		- $$X(w)=\begin{cases} a &w\in \{1,...,6\}\\ w & altrimenti\end{cases}$$
 		- $$\mathbb{P}(X=a)=\mathbb{P}(\{w\in \Omega: X(w)=a\})=\mathbb{P}(\{1,...,6\})=1$$
-- # V.A indicatrici (o di Bernoulli):
+- # V.A indicatrici (o di Bernoulli): ^a7a7e4
 	- Fisso un evento $A\subset \Omega$ costruisco una variabile aleatoria.
 	- $$X(w)=\mathbb{1}_{A}(w):=\begin{cases} 1 &w\in A \\ 0 &altriementi\end{cases}$$
 	- Tutta l’info dell’evento $A$ è contenuta in questa variabile aleatoria indicatrice.
@@ -79,70 +84,44 @@ data: "`2025-03-11 13:23`"
 		- 2) $\mathbb{P}(X\le x)=1-\mathbb{P}(X>x), \ x\in \mathbb{R}$
 	- ### Dim:
 		- 1) $\{X\le x\}=\{X< x\}$
-- # Distribuzione (o legge) di una variabile aleatoria:
-	- $(\Omega, \mathbb{P})$ spazio di probabilità, $X: \Omega\to \mathbb{R}$ V.A
-	- ## Def:
-		- Si dice legge di probabilità di $X$ la probabilità:
-			- $\mathbb{P}_{X}:P(\mathbb{R})\to[0,1]$
-			- $B\longrightarrow \mathbb{P}_{X}(B):=\mathbb{P}(X\in B)$
-		- Si scrive:
-			- $$X\sim \mathbb{P}_{X}$$
-				- Significa che $X$ ha la legge $\mathbb{P}_{X}$
-		- ### OSS:
-			- Conoscere $\mathbb{P}_{X}(B ),\ \ \forall B \subset \mathbb{R}$ equivale a conoscere:
-				- $$\mathbb{P}_{X}((- \infty,x]),\ \ x\in \mathbb{R}$$
-			- Si dimostra che la legge $\mathbb{P}_{X}$ di una V.A $X$ è caratterizzabile dalla funzione $F_{X}(x):=\mathbb{P}_{X}((- \infty, x])$
-			- Definita come : $F_{X}: \mathbb{R}\to [0,1]$
-			- $$x \to F_{X}(x):=\mathbb{P}_{X}((- \infty, x]) = \mathbb{P}(X\le x)$$
-- # Funzione di ripartizione:
-	- $\mathbb{P}_{X}$ contiene tutte le informazioni di $X$, ma è una funzione di 
-	- ## OSS:
-		- $B\subset \mathbb{R}$
-		- Conoscere $\mathbb{P}_{X}(B)\ \ \forall B\subset \mathbb{R} \iff \mathbb{P}_{X}(I)\ \ \forall I$
-			- $I$ intervallo reale.
-		- Definita come : $F_{X}: \mathbb{R}\to [0,1]$
-			- $$x \to F_{X}(x):=\mathbb{P}_{X}((- \infty, x]) = \mathbb{P}(X\le x)$$
-	- ## V costanti:
-		- $\mathbb{P}_{X}(B)=\delta_{0}(B)$
-		- $$F_{X}(x)=\mathbb{P}_{X}((-\infty,x])=\delta_{0}((-\infty,x])=\begin{cases} 1&x\ge a\\0&x<0 \end{cases}$$
-	- ## Lemma:
-		- “$A_{n}\uparrow A$": $$A_{n}\subset A_{n+1}, \ \ \bigcup_{n=1}^{\infty}A_{n}=A \implies \lim_{n\to \infty}\mathbb{P}(A_{n})=\mathbb{P}(A)$$
-		- “$A_{n}\downarrow A$": $$A_{n}\supset A_{n+1}, \ \ \bigcap_{n=1}^{\infty}A_{n}=A \implies \lim_{n\to \infty}\mathbb{P}(A_{n})=\mathbb{P}(A)$$ 
-	- ## Teorema:
-		- $(\Omega, \mathbb{P})$
-		- 1) $F_{X}$ è monotona crescente
-		- 2) $F_{X}$ è continua a destra.: ($\lim_{y\to x^{+}} F_{X}(y)=F_{X}(x)\ \ \ \forall x\in \mathbb{R}$)
-		- 3) $$\lim_{x\to \infty}F_{X}(x)=1$$
-		- 4) $$\lim_{x\to -\infty}F_{X}(x)=0$$
-		- Vale anche il viceversa: se $G: \mathbb{R}\to [0,1]$ verifica i 4 punti $\implies \exists(\Omega,\mathbb{P})$ 
-	- ## Dim:
-		- 1) prendo due insiemi $(-\infty,x)\subset (-\infty,y) \implies \mathbb{P_{X}}((-\infty, x])\le \mathbb{P_{X}}((-\infty, y])$
-			- Ciò vale perché $\mathbb{P}_{X}(.)$ verifica la monotonia perché è una probabilità.
-		- 2) 3) 4) serve la stabilità della probabilità per limiti monotoni: 
-		- 3) $$\lim_{x\to \infty}F_{X}(x)=1\iff \lim_{x\to \infty}\mathbb{P}_{X}((-\infty,x])=\mathbb{P}_{X}(\mathbb{R})$$
-			- Applico il lemma e cerco $(B_{n})_{n}: B_{n}\uparrow \mathbb{R}$ ovvero $B_{n}\subset B_{n+1}, \ \ \bigcup_{n=1}^{\infty}B_{n}=\mathbb{R}$
-			- Scelgo quindi $B_{n}$ come $(-\infty, n], \ n\in \mathbb{N}$ 
-				- $$\lim_{n\to \infty}\mathbb{P}_{X}((-\infty,n])= \lim_{n\to \infty}\mathbb{P}_{X}(B_{n})=\mathbb{P}_{X}(\mathbb{R})=1$$
-			- Concludo osservando che $F_{X}(.)$ è monotona crescente e quindi ammette limite unico.
-			- Quindi:
-				- $$\lim_{x\to \infty}F_{X}(x)=1$$
-- # V.A discreta:
+- # V.A discreta: ^62da4f
 	- Variabili aleatorie che assumono un numero finito numerabile di valori.
 	- L’immagine è finita.
 	- $X: \Omega \to \mathbb{R}$ è una V.A discreta se:
 		- $\Omega$ discreto:  $Im(X)$ finita numerabile.
-		- $\Omega$ non discreto: $\exists s_{X}\subset Im(X), s_{X}$ finito o numerabile, tale che: $\mathbb{P}(X\in s_{x})=1$ quasi certamente.
+		- $\Omega$ non discreto: $\exists S_{X}\subset Im(X), S_{X}$ finito o numerabile, tale che: $\mathbb{P}(X\in S_{x})=1$ quasi certamente ed è detto _insieme di supporto_ e rappresenta tutti i valori possibili della V.A con $\mathbb{P}(.)>0=\{x\in \mathbb{R}: \mathbb{P}(X=x)>0\}$ 
 	- ## ES:
 		- $$X(w)=\begin{cases} a &w\in \{1,...,6\}\\ w & altrimenti\end{cases}$$
 			- $\Omega=\mathbb{R}$, $\mathbb{P}: \begin{cases} \mathbb{P}(\{1\})=...=\mathbb{P}(\{6\})=\frac{1}{6} \\ \mathbb{P}(\{n\})=0 & \forall n\ne \{1,...,6\}\end{cases}$
-		- Cerco  $s_{X}\subset Im(X)$ che risulta essere $\{a\}$ 
-		- $\{X\in s_{X}\}=\{1,2,3,4,5,6\}$ evento quasi certo 
+		- Cerco  $S_{X}\subset Im(X)$ che risulta essere $\{a\}$ 
+		- $\{X\in S_{X}\}=\{1,2,3,4,5,6\}$ evento quasi certo 
 	- ## Def:
 		- $(\Omega, \mathbb{P})$
 		- La funzione :
 			- $\mathbb{P}_{X}: \mathbb{R}\to [0,1]$ M
 			- $x\to \mathbb{P}_{X}(x):=\mathbb{P}(X=x)$
 		- Si chiama _funzione di distribuzione di probabilità di $X$ _
-- # V.A continua:
-- # Link Utili:
+		- 
+	- ## Teorema:
+		- Le seguenti affermazioni sono equivalenti:
+		- 1) $X$ è una V.A discreta
+		- 2) $F_{X}$ è _costante a tratti_: $(\forall x\in S_{X},\ p(x)=F_{X}(x)-F_{X}(x^{-}))$
+			- Dove $p(x)=\mathbb{P}(X=x)$ e $F_{X}(x^{-})=\lim_{y=x^-}F(y)$
+		- 3) $\mathbb{P}(X\in B)=\sum\limits_{x\in S_{x}\cap B} p_{X}(x)$
+		- ### OSS:
+			- Dal punto 2 si capisce come l’ampiezza degli scalini di $F_{X}$ sia la probabilità di quell’ [[Modello probabilistico di un esperimento aleatorio#^18c7b9|evento]] 
+			- ![[funzione di ripartizione.excalidraw]]
+			- Il salto $J$ è: $$F_{X}(x)-F_{X}(x^{-})=\mathbb{P}(X\le x)- \lim_{y=x_{n}^{-}}F_{X}(y)=\mathbb{P}(X\le x_{n})-\lim_{y=x_{n}^{-}}\mathbb{P}(X\le y)=$$
+			- $$=\mathbb{P}(X\le x_{n})-\mathbb{P}(X< x_{n})=\mathbb{P}(X=x)$$
+		- ### ES: ^6daafd
+			- $\Omega= \{1,..,6\}$ e $\mathbb{P}(\{w\})=\frac{1}{|\Omega|}$
+			- $$X(w)=\begin{cases} 1 & w\in \{2,4,6\}\\ -1 & w\in \{1,3,5\}\end{cases}$$
+				- è discreta perché può assumere 2 valori.
+			- Si costruisce la tabella della densità di probabilità:
+				- $$\begin{array}{|c|c|c|c|c|c|c|} \hline x & -1 & 1\\ \hline \mathbb{P}(X=x) & \frac{1}{2} & \frac{1}{2} \\ \hline \end{array}$$
+			- E la [[Funzione di ripartizione]] facendone il grafico.
+				- ![[funzione esempio.excalidraw|900]]
+				- Quindi $F_{X}(1)=F_{X}(X\le 1)=F_{X}(\Omega)=1$
+				- Se prendessi un punto $-1<y<1$ avrei $F_{X}(y)=\mathbb{P}(X\le y)=F_{X}(X\le 1)=F_{X}(-1)=\frac{1}{2}$
+- # Link Utili: 
 	- 

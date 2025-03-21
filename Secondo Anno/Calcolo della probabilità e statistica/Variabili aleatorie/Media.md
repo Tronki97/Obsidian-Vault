@@ -1,0 +1,36 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-03-21 19:01`"
+---
+- # Media:
+	- Si può vedere come una media ponderata dove i pesi sono le probabilità di uscita dei valori.
+	- Sia $X: \Omega\to \mathbb{R}$ [[Variabili aleatorie#^62da4f|V.A discreta]]; la sua (_media, valore atteso, speranza_) è definita come:
+		- $$\mathbb{E}[X]:=\sum\limits_{x\in S_{X}} x* \mathbb{P}_{X}(x)$$
+	- ## ES:
+		- Sempre con [[Variabili aleatorie#^6daafd||l’esempio del D6]] 
+			- $$\mathbb{E}[X]=(-1)* \frac{1}{2}+(1)* \frac{1}{2}=0$$
+	- ## ES:
+		- Prendo $X$ a valori equiprobabili
+		- $p_{X}(X)=p\in [0,1]$ che esiste solo se $S_{X}=\{x_{1},...,x_{n}\}$ e $\mathbb{P}_{X}(x_{k})=\frac{1}{n}$
+			- Quindi avrà valore costante.
+		- $$\mathbb{E}[X]=\sum\limits_{k=1}^{n}\mathbb{P}_{X}(x_{k})*x_{n}= \frac{1}{n}\sum\limits_{k=1}^{n} x_{k}$$
+	- ## ES:
+		- Avendo $X=\mathbb{1}_{A}$ [[Variabili aleatorie#^a7a7e4|V.A indicatrice]] con $A\subset \Omega$
+			- $$\mathbb{1}_{A}=\begin{cases}1 & su \ A \\ 0 & su\ A^{C}\end{cases}$$
+			- Avendo quindi il valore atteso: $$\mathbb{E}[X]=1*\mathbb{P}(A)+0*(1-\mathbb{P}(A))$$
+	- ## Proprietà:
+		- ### Linearità: ^a94484
+			- Ho $X,Y$ [[Variabili aleatorie#^62da4f|V.A discrete]]:
+				- $$\mathbb{E}[\alpha X+\beta Y]=\alpha \mathbb{E}[X]+ \beta \mathbb{E}[Y]$$
+			- #### Dim:
+				- Prendo il caso in cui $Y=g(X)$ si osserva che:
+					- $$S_{Y}=\{g(x_{1}),...,g(x_{n}),...\}=g(S_{X})$$
+				- Quindi:
+					- $$\mathbb{E}[\alpha X+\beta Y]= \sum\limits_{x\in S_{X}}[\alpha X+ \beta *g(X)]*\mathbb{P}_{X}(x)=$$
+					- $$=\sum\limits_{x\in S_{X}}\alpha x*\mathbb{P}_{X}(x)+\beta*g(x)*\mathbb{P}_{X}(x)=\alpha\sum\limits_{x\in S_{X}} x*\mathbb{P}_{X}(x)+\beta\sum\limits_{x\in S_{X}} g(x)*\mathbb{P}_{X}(x)=$$
+					- $$=\mathbb{E}[X]+\mathbb{E}[g(x)]$$
+					- 
+- # Link Utili:
+	- 

@@ -1,0 +1,45 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-03-21 20:33`"
+---
+- # Def :
+	-  Sia $X:\Omega \to \mathbb{R}$ [[Variabili aleatorie#^62da4f|V.A discreta]] con $S_{X}$ la _varianza_ di $X$ è:
+		- $$var(X)= \mathbb{E}[(X-\mathbb{E}[X])^{2}]=\sigma^{2}_{X}$$
+			- Dove $X$ è una [[Variabili aleatorie|V.A]] e $\mathbb{E}[X]$ è un numero.
+	- Ed è di fatto quanto discosta un valore dalla sua [[Media]].
+	- ## OSS:
+		- $$var(X)=\sum\limits_{x\in S_{X}}(X-\mathbb{E[X]})^{2}*\mathbb{P}_{X}(x)$$
+	- ## ES:
+		- $X \equiv 0$, $S_{X}=\{0\}$, $\mathbb{E}[X]=0*1=0$
+			- $$var(X)=(0-0)^{2}=0$$
+	- ## ES:
+		- Riprendo l’ [[Variabili aleatorie#^6daafd||esempio del D6]] $p_{X}(X)=\frac{1}{2}$ $\mathbb{E}[X]=0$
+		- $$var(X)= (-1-0)^{2}* \frac{1}{2}+(1-0)^{2}* \frac{1}{2}=1$$
+		- Suppongo di avere $Y=2X$ di conseguenza $\mathbb{E}[Y]=\mathbb{E}[2X]$ e per la [[Media#^a94484||linearità]] risulta $2\mathbb{E}[X]=0$
+		- Quindi: $$var(Y)=(-2-0)^{2}* \frac{1}{2}+(2-0)^{2}* \frac{1}{2}=4$$
+	- ## OSS:
+		- $$\mathbb{E}[X-\mathbb{E}[X]]=\mathbb{E[X]-\mathbb{E}[\mathbb{E}[X]]}=0$$
+		- Inoltre non si usa il modulo perché la funzione modulo non è derivabile in 0:
+	- ## Deviazione standard:
+		- $\sigma_{X}=\sqrt{var(X)}$
+	- ## Prop:
+		- $$var(X)=\mathbb{E}[X^{2}]-(\mathbb{E}[X])^{2}$$
+		- ### Dim:
+			- $$var(X)=\mathbb{E}[(X-\mathbb{E}[X])^{2}]=\mathbb{E}[X^{2}+\mathbb{E}[X]^{2}- 2X \mathbb{E}[X]]=$$
+			- $$=\mathbb{E}[X^{2}]-\mathbb{E}[2\mathbb{E}[X]*X]+\mathbb{E}[\mathbb{E}[X]^{2}]=$$
+				- Dove $2\mathbb{E}[X]$ e $\mathbb{E}[X]^{2}$ sono costanti e quindi si possono portare fuori:
+			- $$=\mathbb{E}[X^{2}]-2\mathbb{E}[X]\mathbb{E}[X]+\mathbb{E}[X]^{2}=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}$$
+	- ## Teorema:
+		- Sia $X:\Omega\to \mathbb{R}$ V.A discreta valgono le seguenti affermazioni:
+			- 1) $var(X)\ge 0$
+			- 2) $var(X)=0\iff X\equiv$ costante
+			- 3) $var(aX+b)=a^{2}var(X)$
+		- ### Dim:
+			- 3) $$var(aX+b)= \mathbb{E}[(aX+b)^{2}]-(\mathbb{E}[aX+b])^{2}=$$
+			- $$=\mathbb{E}[a^{2}X^{2}+b^{2}+2abX]-(\mathbb{E}[aX])^{2}-(\mathbb{E}[b])^{2}-2\mathbb{E}[aX]-\mathbb{E}[b]=$$
+			- $$=a^{2}\mathbb{E}[X^{2}]+b^{2}+2ab \mathbb{E}[X]-a^{2}(\mathbb{E}[X])^{2}-b^{2}-2ab \mathbb{E}[X]=$$
+			- $$=a^{2}\mathbb{E}[X^{2}]-a^{2} \mathbb{E}[X]^{2}=a^{2}(\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2})=a^{2}*var(X)$$
+- # Link Utili:
+	- 

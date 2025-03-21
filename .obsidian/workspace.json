@@ -11,9 +11,21 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "immagini/Pasted image 20250321102727.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250321102727"
+            }
+          },
+          {
+            "id": "ec2fabf3bbdfd4a9",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +40,79 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Gestione della memoria"
+              "title": "Media"
+            }
+          },
+          {
+            "id": "104b339a46725d49",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Variabili aleatorie"
+            }
+          },
+          {
+            "id": "a775ad69b96be8fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Funzione di ripartizione"
+            }
+          },
+          {
+            "id": "831a044272b7e533",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Distribuzione (o legge) di una variabile aleatoria"
             }
           }
         ]
@@ -206,23 +290,31 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Pasted image 20250321112249.png",
-    "Pasted image 20250321111935.png",
-    "Pasted image 20250321111403.png",
-    "Pasted image 20250321102727.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/desktop.ini",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie",
+    "Excalidraw/funzione esempio.excalidraw.md",
+    "immagini/Screenshot (21).png",
+    "Excalidraw/funzione di ripartizione.excalidraw.md",
+    "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
+    "immagini/Pasted image 20250321112249.png",
+    "immagini/Pasted image 20250321111935.png",
+    "immagini/Pasted image 20250321111403.png",
+    "immagini/Pasted image 20250321102727.png",
     "Pasted image 20250321102905.png",
     "immagini/Pasted image 20250317113739.png",
     "immagini/Pasted image 20250317102806.png",
     "immagini/Pasted image 20250321094522.png",
-    "Homepage.md",
     "immagini/Pasted image 20250320171358.png",
-    "immagini/Pasted image 20250320165551.png",
     "Primo Anno/architettura degli elaboratori/SO/Compiti/paginazione(SO).md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Cache.md",
-    "immagini/Pasted image 20250320165231.png",
     "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
     "Wireless.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
@@ -234,17 +326,11 @@
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
     "Secondo Anno/Reti di Calcolatori/livello rete/Protocollo ICMP.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie.md",
     "template/Modello appunti.md",
     "template/Matrice completa 4x4.md",
     "template/Tabella 2x3.md",
     "template/Matrice 4x4.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/IP internet protocol.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/SDN.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/DHCP.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/NAT.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/Indirizzamento IPv4.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
@@ -252,8 +338,6 @@
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
     "Secondo Anno/Linguaggi di Programmazione/modulo1",
     "Secondo Anno/Reti di Calcolatori/Sicurezza di rete",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli",
-    "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
