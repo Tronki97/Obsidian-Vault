@@ -118,7 +118,7 @@ data: "`2025-03-13 17:18`"
 			- Il problema è che è un operazione onerosa perché serve copiare nella memoria fisica un sacco di dati, inoltre i processi devono essere fermi durante la compattazione.
 			- ![[Pasted image 20250320162932.png|650]]
 - # Paginazione:
-	- Riduce il fenomeno di frammentazione interna e elimina la frammentazione esterna.
+	- _Riduce il fenomeno di frammentazione interna e elimina la frammentazione esterna._
 	- _Lo spazio di indirizzi logici_ viene diviso in _pagine_ di dimensione fissa.
 	- _La memoria fisica_ viene divisa in _frame_ di dimensione uguale a quella delle pagine.
 	- Quando si allocano dei processi si cerca ovunque in memoria dei frame sufficienti per contenere le pagine del processo.
@@ -130,14 +130,33 @@ data: "`2025-03-13 17:18`"
 		- Questa scelta deriva da un trade-off:
 			- Se le pagine sono piccole la tabella delle pagine cresce di dimensione.
 			- Se le pagine sono grandi si ha frammentazione interna che farà perdere grandi quantità di memoria.
+		- _E si suppone che i frame della pagina inizino da un indirizzo multiplo di 4096_.
 	- ## Implementazione della tabella delle pagine:
-		- Si pitrebbe inserire in un insieme di reistri ad alta velocità per facilitarne l’accesso, però sarebbe troppo costoso.
+		- Si potrebbe inserire in un insieme di registri ad alta velocità per facilitarne l’accesso, però sarebbe troppo costoso.
 - # Translation lookaside buffer (TLB):
-	- Insieme di registri associativi ad alta velocità.
+	- Insieme di registri associativi ad alta velocità $O(1)$ 
 	- Ogni registro ha 2 parti:
-		- Chiave
-		- Dato 
-	- Esistono tante coppie fatte in questo modo e quando viene fatta la richiesta di un dato con una chiave viene confrontata con tutte le chiavi presenti contemporaneamente e se c’è una corrispondenza si restituisce il dato(TLB hit), altrimenti (TLB miss) si usa la tabella in memoria.
+		- _Chiave_: che di solito è il numero di pagina
+		- _Dato_  
+	- Esistono tante coppie fatte in questo modo e quando viene fatta la richiesta di un dato con una chiave viene confrontata con tutte le chiavi presenti contemporaneamente e se c’è una corrispondenza si restituisce il dato(TLB hit), altrimenti (TLB miss) si usa la tabella in memoria, quest’ultima azione è una trap e viene gestita dal [[Sistema operativo]]. 
 	- ![[Pasted image 20250320171358.png]]
+	- Agisce come memoria cache per le tabelle delle pagine
+	- L’hardware per implementarla è costoso, con dimensioni dell’ordine di $8 -2048$ registri
+- # Segmentazione:
+	- Concetto di organizzazione della memoria.
+	- Si basa sul fatto che un processo ha bisogno della memoria per vari motivi:
+		- Codice
+		- Dati
+		- Stack
+		- Magari anche aree di memoria condivise con altri processi.
+	- Quindi separa le aree di memoria in base ai loro scopi.
+		- Codice per esempio sarebbe meglio fosse un area di memoria di sola lettura, chiamata _area text_
+		- Le aree _dati_ possono essere condivise.
+		- L’area _stack_ non deve essere condivisa tra processi e deve essere read/write
+	- Lo spazio di indirizzamento logico deve essere diviso in segmenti contigui di dimensione variabile, ogni segmento ha _nome_ e _lunghezza_ definiti.
+	- Ogni riferimento di memoria è una coppia `<nome, offset>`
+	- Questa suddivisione spetta al _compilatore_ o al _programmatore_
+	- ![[Pasted image 20250321094522.png]]
+	- 
 - # Link Utili:
 	- 
