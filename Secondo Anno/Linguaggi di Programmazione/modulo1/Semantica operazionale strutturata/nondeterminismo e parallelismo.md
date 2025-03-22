@@ -4,7 +4,7 @@ aliases:
   - parallelismo
 date: 2024-10-02
 ---
-- # nondeterminismo e parallelismo:
+- # nondeterminismo e parallelismo: ^b48c19
 	- $$c::=skip\ |\ v:=e \ |\ ...\ |\ c\ or\ c \ |\ c\ par\ c$$
 	- ![[Pasted image 20241002220320.png]]
 	- ![[Pasted image 20241002220332.png]]

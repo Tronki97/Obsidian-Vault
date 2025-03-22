@@ -21,7 +21,7 @@ data: "`2024-09-24 11:24`"
 	- ### Forma grammatica:
 		- $P\to \epsilon\ |\ a\ |\ b\ |\ aPa\ |\ bPb$
 			- P è detto _simbolo non terminale_
-			- _a_ e _b_ sono _simboli terminali_
+			- _a_ e _b_ sono _simboli terminali_ ^24b447
 	- 2) espressioni aritmetiche formate da variabili a e b.
 		- $<E>::= a|b|<E>*<E>|<E>+<E>|(<E>)$
 	- ### Come derivare una stringa:
