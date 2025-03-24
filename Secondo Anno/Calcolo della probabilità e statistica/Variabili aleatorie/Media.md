@@ -1,6 +1,9 @@
 ---
-tags: []
-aliases: 
+tags: 
+aliases:
+  - valore atteso
+  - speranza
+  - linearità della media
 data: "`2025-03-21 19:01`"
 ---
 - # Media:

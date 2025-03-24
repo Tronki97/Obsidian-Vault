@@ -11,18 +11,22 @@ data: "`2025-03-04 14:38`"
 		- $H_{2}=BB$
 		- $B_{i}$ estraggo una pallina bianca alla i-esima estrazione
 		- $B_{i}^{C}$ estraggo una rossa alla i-esima estrazione.
-	- La probabilità che si estragga una pallina bianca:
-		- $$\mathbb{P}(B)=\frac{1}{3}* \frac{1}{2}+\frac{1}{3}*1=\frac{1}{6}+\frac{1}{3}=\frac{1}{2}$$
-	- 2) calcolare la probabilità di pescare 3 palline bianche di fila:
+	- La probabilità che si estragga una pallina bianca alla i-esima estrazione:
+		- $$\mathbb{P}(B_{i})=\mathbb{P}(B_{1}\cap H_{1})+\mathbb{P}(B_{1}\cap H_{2})=\frac{1}{3}* \frac{1}{2}+\frac{1}{3}*1=\frac{1}{6}+\frac{1}{3}=\frac{1}{2}$$
+	- ![[Pasted image 20250324170801.png|500]]
+	- 2) calcolare la probabilità di pescare 3 palline bianche di fila (quindi c’è reimmissione):
 		- $$\mathbb{P}(B_{3}|B_{2}\cap B_{1})=\frac{\mathbb{P}(B_{1}\cap B_{2}\cap B_{3})}{\mathbb{P}(B_{1}\cap B_{2})}$$
 		- Uso la [[Formula delle probabilità totali]]:
 			- $$\mathbb{P}(B_{1}\cap B_{2}\cap B_{3})=\mathbb{P}(H_{1}\cap B_{1}\cap B_{2}\cap B_{3})+\mathbb{P}(H_{2}\cap B_{1}\cap B_{2}\cap B_{3})=$$
 				- Le partizioni di $\Omega$ sono: $(H_{0},H_{1},H_{2})$
-			- $$=\frac{1}{3}*1*1*1+ \frac{1}{3}* \frac{1}{2}* \frac{1}{2}* \frac{1}{2}=\frac{3}{8}$$
+			- $$= \frac{1}{3}* \frac{1}{2}* \frac{1}{2}* \frac{1}{2}+ \frac{1}{3}*1*1*1+=\frac{3}{8}$$
 			- $$\mathbb{P}(B_{1}\cap B_{2})=\mathbb{P}(H_{1}\cap B_{1}\cap B_{2})+\mathbb{P}(H_{2}\cap B_{1}\cap B_{2})=$$
 			- $$=\frac{1}{3}*1*1+ \frac{1}{3}* \frac{1}{2}* \frac{1}{2} =\frac{5}{12}$$
 			- Infine $$\mathbb{P}(B_{3}|B_{2}\cap B_{1})=\frac{3}{8}* \frac{12}{5}=\frac{9}{10}$$
-		- 
-	- 
+	- 3) sapendo che la terza pallina estratta è $B$ qual è la probabilità che le prime due fossero $B$:
+		- $$\mathbb{P}(B_{1}\cap B_{2} | B_{3})=\frac{\mathbb{P}(B_{3}|B_{2}\cap B_{1})*\mathbb{P}(B_{1}\cap B_{2})}{\mathbb{P}(B_{3})}=\frac{\frac{9}{10}* \frac{5}{12}}{\mathbb{P}(B_{3})}=\frac{\frac{3}{8}}{\mathbb{P}(B_{3})}=\frac{3}{8} * \frac{9}{5}=\frac{27}{40}$$
+		- $$\mathbb{P}(B_{3})=4(\frac{1}{3}* \frac{1}{2}* \frac{1}{2}* \frac{1}{2})+\frac{1}{3}=\frac{5}{9}$$
+	- 4) calcolare lo [[Modello probabilistico di un esperimento aleatorio#^521af6|spazio campionario]]:
+		- $$\Omega=\{0,1,2\}\times \{b,r\}^{3}$$
 - # Link Utili:
 	- 

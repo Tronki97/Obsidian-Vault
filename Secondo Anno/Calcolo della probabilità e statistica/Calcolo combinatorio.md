@@ -3,6 +3,13 @@ tags:
   - TODO
 aliases:
   - metodo dei coefficienti binomiali
+  - metodo delle scelte successive
+  - principio delle scelte successive
+  - disposizioni senza ripetizioni
+  - combinazioni
+  - formula di stifel
+  - probabilità binomiale
+  - mss
 data: "`2025-03-04 13:37`"
 ---
 - # ES (da mettere in un altro file):
@@ -112,6 +119,15 @@ data: "`2025-03-04 13:37`"
 			- $$|C_{n,k}|=\binom{n}{k}$$
 			- Che è il numero di modi di scegliere $k$ elementi da n totali.
 		- ### Dim:
+			- Verifico che: 
+				- $$\frac{n!}{(n-k)!}=|C_{n,k}|*k!=$$
+				- $$=|D_{n,k}|=|C_{n,k}|*|P_{k}|$$
+					- Quest’ultima uguaglianza vale perché:
+						- $$\binom{n}{k}=\frac{n!}{k!*(n-k)!}$$
+					- E per il principio delle scelte successive:
+						- 1) scelta dei $k$ elementi selezionati: $|C_{n,k}|$
+						- 2) scelta dell’ordinamento dei $k$ elementi selezionati: $|P_{k}|$ 
+				- 
 		- ### ES:
 			- In quanti modi si possono scegliere i semi di una coppia di carte?
 				- $\Omega=C_{4,2}$ e $|\Omega|=\binom{4}{2}=\frac{4!}{2!*2!}=6$

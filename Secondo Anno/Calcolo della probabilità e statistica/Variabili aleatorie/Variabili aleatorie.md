@@ -98,16 +98,15 @@ data: "`2025-03-11 13:23`"
 	- ## Def:
 		- $(\Omega, \mathbb{P})$
 		- La funzione :
-			- $\mathbb{P}_{X}: \mathbb{R}\to [0,1]$ M
-			- $x\to \mathbb{P}_{X}(x):=\mathbb{P}(X=x)$
+			- $p_{X}: \mathbb{R}\to [0,1]$ M
+			- $x\to p_{X}(x):=\mathbb{P}(X=x)$
 		- Si chiama _funzione di distribuzione di probabilità di $X$ _
-		- 
 	- ## Teorema:
 		- Le seguenti affermazioni sono equivalenti:
 		- 1) $X$ è una V.A discreta
 		- 2) $F_{X}$ è _costante a tratti_: $(\forall x\in S_{X},\ p(x)=F_{X}(x)-F_{X}(x^{-}))$
 			- Dove $p(x)=\mathbb{P}(X=x)$ e $F_{X}(x^{-})=\lim_{y=x^-}F(y)$
-		- 3) $\mathbb{P}(X\in B)=\sum\limits_{x\in S_{x}\cap B} p_{X}(x)$
+		- 3) $\mathbb{P}(X\in B)=\sum\limits_{x\in S_{x}\cap B} p_{X}(x)=1$
 		- ### OSS:
 			- Dal punto 2 si capisce come l’ampiezza degli scalini di $F_{X}$ sia la probabilità di quell’ [[Modello probabilistico di un esperimento aleatorio#^18c7b9|evento]] 
 			- ![[funzione di ripartizione.excalidraw]]

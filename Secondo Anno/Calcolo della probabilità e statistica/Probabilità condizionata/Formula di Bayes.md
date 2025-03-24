@@ -16,6 +16,7 @@ data: "`2025-03-04 14:21`"
 	- $B$ = estratta una pallina bianca
 	- Devo calcolare quindi $\mathbb{P}(T|B)$ :
 		- $\mathbb{P}(B)$ è data dalla [[Formula delle probabilità totali]] 
+			- ![[Pasted image 20250324165436.png]]
 			- $$\mathbb{P}(B)=\mathbb{P}(B\cap T)+\mathbb{P}(B\cap T^{C})$$
 		- $$\frac{\mathbb{P}(B|T)\mathbb{P}(T)}{\mathbb{P}(A)}=\frac{\mathbb{P}(B\cap T)}{\mathbb{P}(B\cap T)+\mathbb{P}(B\cap T^{C})}=\frac{1}{2}* \frac{1}{3}: \left( \frac{1}{3}* \frac{1}{2}+\frac{2}{7}* \frac{1}{2} \right)=\frac{7}{13}$$
 		- 
