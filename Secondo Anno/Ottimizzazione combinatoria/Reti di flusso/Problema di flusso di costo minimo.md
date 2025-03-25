@@ -1,0 +1,85 @@
+---
+tags: []
+aliases:
+  - MCF
+  - pseudoflusso
+  - sbilanciamento pseudoflusso
+  - domanda
+  - offerta
+  - sbilanciamento complessivo
+  - cammini aumentanti con pseudoflussi
+  - psudoflusso minimale
+data: "`2025-03-25 17:25`"
+---
+- # Problema di flusso di costo minimo (MCF):
+	- _Minimum cost flow_:
+	- Il [[Reti di flusso#^c6ffdf|costo]] del flusso è la [[Programmazione lineare intera (PLI)#^fbc927|funzione obiettivo]].
+	- $l_{ij}=0 \ \ \ \forall (i,j)\in A$
+	- Esprimibile come problema di [[Programmazione lineare]]:
+		- $$\min cx$$
+		- $$0\le x\le u\ \ \ \ Ex=b$$
+		- Dove:
+			- $c\in \mathbb{R}^{|A|}$ è il vettore dei costi.
+			- $u\in \mathbb{R}^{|A|}$ vettore delle [[Reti di flusso#^566956||capacità superiori]].
+			- $E \in \mathbb{R}^{|N|\times|A|}$ matrice di incidenza tra nodi ed archi.
+			- $b$ vettore di [[Reti di flusso#^129aaa|sbilanciamenti]]
+	- Spesso si assume che ci sia una sola _sorgente_ e un solo _pozzo_
+		- Si aggiungono 2 nodi finti corrispondenti a 1 sorgente e 1 pozzo rispettivamente.
+		- Si aggiungono archi finti dalla sorgente ad ogni sorgente di partenza. Ogni arco aggiunto avrà _costo nullo_, e capacità superiore pari all’_inverso dello sbilanciamento della sorgente_
+			- Cosa analoga si fa con il nodo _pozzo_
+		- Lo sbilanciamento della nuova _sorgente_ è la somma degli sbilanciamenti delle sorgenti di partenza. Cosa simile per i pozzi.
+	- Si assume spesso anche che ogni nodo abbia una _capacità_, ovvero che solo una quantità $\in [l_{ij},u_{ij}]$ possa passare per il nodo $i$
+		- Modellabile grazie allo _sdoppiamento_ di ciascun nodo $i$ in $i',i''$:
+			- Tutti gli archi $(k,i)$ entreranno in $i'$
+			- Tutti gli archi $(i,k)$ partiranno invece da $i''$
+			- Si crea un arco fittizio $(i′, i′′)$ con costo nullo, capacità Inferiore $l_{i}$ e capacità superiore $u_{i}$
+	- ![[Pasted image 20250325174349.png|400]]
+		- Si parte da questo grafo per poi aggiungere i 2 nodi con i relativi archi.
+	- ![[Pasted image 20250325174433.png|600]]
+	- ## Pseudoflusso:
+		- Vettore che soddisfa i vincoli:
+			- $$0\le x_{ij}\le u_{ij}\ \ \ (i,j)\in A$$
+	- ## Sbilanciamento:
+		- Se $x$ è uno _pseudoflusso_ lo sbilanciamento di un nodo $i$ rispetto al flusso $x$ è:
+			- $$e_{x}(i)=\sum\limits_{(j,i)\in BS(i)} x_{ij} \ -\sum\limits_{(i,j)\in FS(i)} x_{ij}-b_{i}$$
+			- $e_{x}$ è anche detto vettore degli sbilanciamenti.
+			- E l’obiettivo è eliminare i valori diversi da 0 in questo vettore.
+	- ## Nodi offerta e domanda:
+		- Dato uno _pseudoflusso_ $x$ :
+			- $$O_{x}=\{i\in N|e_{x}(i)>0\}$$
+				- Detti nodi con _eccesso di flusso_
+			- $$D_{x}=\{i\in N|e_{x}(i)<0\}$$
+				- Nodi con _difetto di flusso_
+			- Se $O_{x}=D_{x}=\emptyset$ allora tutti i nodi hanno $e_{x}(i)=0$ quindi $x$ è un flusso.
+	- ## Sbilanciamento complessivo:
+		- $$g(x)=\sum\limits_{i\in O_{x}}e_{x}(i)= -\sum\limits_{j\in D_{x}}e_{x}(j)$$
+	- ## Cammini aumentanti:
+		- Questa definizione diventa più generale con questo problema.
+		- In più gli [[problema di flusso massimo#^89f9d7|archi concordi]] e [[problema di flusso massimo#^e52ed1|discordi]] avranno un costo.
+			- $c_{ij}$ per i primi e $-c_{ij}$ per i secondi.
+		- Quindi ogni cammino aumentante avrà un costo che è dato dalla somma dei costi degli archi che lo compongono:
+			- $$c(P)=\sum\limits_{(i,j)\in P^{+}} c_{ij} -\sum\limits_{(i,j)\in P^{-}} c_{ij}$$
+				- Dove $c_{ij}$ è il costo dell’ arco $(i,j)$
+	- ## Teorema di struttura degli pseudoflussi:
+		- Siano $x,y$ pseudoflussi, allora esistono $k\le n+m$ [[problema di flusso massimo#^2c4dad|cammini aumentanti]] $P_{1},...,P_{k}$ tutti quanti per $x$ di cui al massimo $m$ sono cicli tali che:
+			- $$z_{1}=x$$
+			- $$z_{i+1}=z_{i} \ \oplus\  \theta_{i}P_{i}\ \ \ 1\le i \le k$$
+			- $$z_{k+1}=y$$
+				- $$0\le \theta_{i}\le \theta(P_{i},z_{i})$$
+		- 
+	- ## Cammini minimi successivi:
+		- ![[Pasted image 20250319104138.png|625]]
+		- ### Pseudoflusso minimale:
+			- è _minimale_ se ha costo minimo tra tutti gli pseudoflussi che danno luogo allo stesso vettore di sbilanciamento $e(x)$.
+			- #### Lemma:
+				- Uno pseudoflusso è minimale $\iff$ non esistono cicli aumentanti di valore negativo.
+				- $\implies$)
+					- Se esistesse un ciclo aumentante di valore negativo allora si potrebbe diminuire il costo dello pseudoflusso senza alterare lo sbilanciamento, in contraddizione con la minimalità di $x$
+				- $\Longleftarrow$) 
+					- Suppongo che $x$ non sia minimale che quindi esista $y: c_{y}<c_{x}$ e $e_{y}=e_{x}$ allora per il teorema degli pseudoflussi che permette di scrivere y come:
+						- $$y=x ⊕ θ_{1}P_{1} ⊕ . . . ⊕ θ_{n}P_{n}$$
+						- $\theta_{i}>0$ e ogni $P_{i}$ è un ciclo da $c_{y}<c_{x}$ però risulta che:
+							- $$c_{x}>c_{x}+\theta_{1}c(P_{1})+...+\theta_{n}c(P_{n})$$
+								- E quindi che $c(P_{i})<0$ per qualche $i$ 
+- # Link Utili:
+	- 

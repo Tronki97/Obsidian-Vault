@@ -1,0 +1,169 @@
+---
+tags: 
+aliases:
+  - MF
+  - tagli
+  - grafi residui
+  - arco concorde
+  - arco discorde
+  - ford-fulkerson
+  - ford fulkerson
+  - edmonds-karp
+  - edmonds karp
+  - arco critico
+  - goldberg-tarjan
+  - goldberg tarjan
+  - preflusso
+  - archi concordi
+  - archi discordi
+  - cammini aumentanti
+data: "`2025-03-25 18:21`"
+---
+- # problema di flusso massimo (MF):
+	- Maximum flow. 
+	- Cambia la [[Programmazione lineare intera (PLI)#^fbc927|funzione obiettivo]], nella quale si vogliono _massimizzare i_ [[Reti di flusso#^784224|flussi]].
+		- In pratica si fissano due nodi $s,t$ e si vuole trovare il _massimo_ valore $v$ tale che se $b_{s}=-v,\ \ b_{t}=v$ e $b_{i}=0$ in tutti gli altri nodi allora esiste un _flusso ammissibile_. 
+			- _un valore $v$ ammissibile si dice valore del flusso $x$ _
+	- Può essere inteso come un particolare [[Problema di flusso di costo minimo|MCF]] in quanto i parametri sono diventati variabili.
+		- I [[Reti di flusso#^c6ffdf|costi]] sono nulli.
+		- Gli [[Reti di flusso#^129aaa|sbilanciamenti]] sono nulli
+		- Si aggiunge però un arco fittizio da ($t,  s$) con costo $−1$ e Capacità $\infty$.
+		- ![[Pasted image 20250305102744.png|450]]
+	- 
+	- ## Algoritmi:
+		- ### Tagli:
+			- Data una rete $G=(N,A)$ e una coppia $(N',N'')$ di sottoinsiemi di $N$ tali che $N' \cap N''=\emptyset$ e $N' \cup N''=N$
+			- Un $(s,t)$ _-taglio_ è un tipo di taglio $(N_{s},N_{t})$ dove $s\in N_{s}\wedge t\in N_{t}$ 
+			- Dato un $(s,t)$ -taglio di un grafo $G$ si indica con $A^{+}(N_{s},N_{t})$ e $A^{-}(N_{s},N_{t})$ i seguenti sottoinsiemi:
+				- $$A^{+}(N_{s},N_{t})=\{(i,j)\in A|i\in N_{s}\wedge j\in N_{t}\}$$
+					- _Insieme degli archi che partono da $N_{s}$ e arrivano in $N_{t}$_ 
+				- $$A^{-}(N_{s},N_{t})=\{(i,j)\in A|j\in N_{s}\wedge i\in N_{t}\}$$
+					- _Insieme degli archi che partono da $N_{t}$ e arrivano in $N_{s}$ _ 
+			- ![[Pasted image 20250325185556.png]]
+			- #### Lemma:
+				- $\forall(s,t)$ -taglio e ogni flusso ammissibile $x$ con valore $v$:
+					- 1) $$v=\sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}x_{ij} - \sum\limits_{(i,j)\in A^{-}(N_{s},N_{t})}x_{ij}$$
+						- Questo è il flusso del taglio
+					- 2) $$v\le \sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}u_{ij} $$
+						- Vuol dire che il flusso del taglio deve essere $\le$ della capacità del taglio.
+				- _Esiste un taglio con flusso ammissibile uguale al flusso massimo?_
+			- #### ES:
+				- Si vuole trasportare il massimo flusso dal nodo $s$ a $t$ avendo in mezzo altri 4 nodi di trasferimento
+					- ![[Pasted image 20250325185756.png|700]]
+				- Calcolo della capacità massima del taglio fatto:
+					- $$u(N_{s},N_{t})=u_{(s,1)}+u_{(s,2)}+u_{(3,t)}+u_{(3,4)}=5+7+5+5=22$$
+				- Calcolo del flusso del taglio fatto:
+					- $$x(N_{s},N_{t})=3+2+1+1-1=6$$
+					- Basta guardare il lemma 1 per questo infatti si sommano i flussi uscenti e si sottraggono quelli entranti.
+		- ### Grafi residui:
+			- Data una rete $G=(N_{G}, A_{G})$ supponendo di avere un flusso ammissibile $x$ si prova a creare un altro grafo detto _grafo residuo_ $G_{x}=(N_{G_{x}}, A_{G_{x}})$ che può essere migliorato.
+			- $N_{G_{x}}=N_{G}$
+			- Gli archi $A_{G_{x}}$ sono di 2 tipi:
+				- #### arco concorde: ^89f9d7
+					- $\forall(i,j)\in A_{G}: x_{ij}<u_{ij}$  esiste un arco da $i$ a $j$ in $G_{x}$ 
+				- #### arco discorde: ^e52ed1
+					- $\forall(i,j)\in A_{G}: x_{ij}>0$  esiste un arco da $j$ a $i$ in $G_{x}$
+			- Ci possono essere più nodi che partono dallo stesso nodo e arrivano allo stesso nodo rispetto a $G$ per questo è detto _multi-grafo_
+			- Quindi si aumentano in modo uniforme i flussi senza sbilanciare i nodi
+			- #### ES:
+		- ### Cammini aumentanti: ^2c4dad
+			- Un cammino semplice (_senza cicli_) e orientato da $s$ a $t$ nel grafo residuo $G_{x}$ questo cammino è identificato da un insieme di archi concordi $P^{+}$ e di archi discordi $P^{-}$.
+			- Dato un cammino aumentante $P$ rispetto a $x$ si calcola di quanto può aumentare il flusso 
+				- $$\theta(P,x)=\min \{\min\{u_{ij}-x_{ij}| (i,j)\in P^{+} \}, \min\{x_{ij}|(j,i)\in P^{-}\}\}$$
+					- Questa è la capacità del cammino $P$ rispetto al flusso $x$ 
+			- Dato un flusso $x$ un cammino $P\in G_{x}$ e un $\theta$ si definisce $x(P,\theta)$ il flusso:
+				- $$(x(P,\theta))_{i,j}=\begin{cases} x_{i,j}+\theta&(i,j)\in P^{+}\\ x_{i,j}-\theta&(j,i)\in P^{-}\\ x_{ij}&altrimenti\end{cases}$$
+		- ### Algoritmo di Ford-Fulkerson:
+			- 1) $x=0$
+			- 2) Si costruisce $G_{x}$ e si cerca un cammino aumentante $P$, in caso $P$ non esista termina e restituisce $x$
+			- 3)  $x=x(P,\theta(P,x))$
+			- 4) ritorna al secondo punto
+			- #### Correttezza:
+				- 1) Se $x$ è un flusso ammissibile allora anche $x(P,\theta(P,x))$ lo è.
+				- 2) Se $x$ è un flusso massimo allora non esiste alcun cammino aumentante.
+					- Infatti se ci fosse un cammino aumentante in $G_{x}$ allora $x$ non sarebbe un flusso massimo perché si potrebbe aumentare il flusso.
+				- 3) se $G_{x}$ non ha cammini aumentanti allora esiste un taglio di capacità pari a $v$:
+					- Basta considerare il taglio $(N_{s},N_{t})$ dove $N_{s}$ contiene tutti i nodi raggiungibili da $s$ in $G_{x}$ e $N_{t}$ è il suo complementare:
+						- $$v= x(N_{s},N_{t})=\sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}x_{ij} - \sum\limits_{(i,j)\in A^{-}(N_{s},N_{t})}x_{ij}=$$
+						- $$\sum\limits_{(i,j)\in A^{+}(N_{s},N_{t})}u_{ij} - \sum\limits_{(i,j)\in A^{-}(N_{s},N_{t})}u= u(N_{s},N_{t})$$
+				- ##### Teorema:
+					- Se l’algoritmo termina allora il flusso $x$ restituito è massimo.
+				- ##### Dim:
+					- Se l’algoritmo termina vuol dire che $G_{x}$ non ha cammini aumentanti.
+					- Per il punto 3 allora esiste un taglio $(N_{s},N_{t})$ di capacità $v$.
+					- Quindi $v$ deve essere massimo perché se non lo fosse avremmo un taglio di capacità inferiore al valore di un flusso ammissibile.
+			- #### Max flow min cut:
+				- Il valore del massimo flusso è uguale alla minima capacità dei tagli:
+			- #### Dim:
+				- Se $x$ è ammissibile e massimo allora (per il punto 2)  $G_{x}$ non ha cammini aumentanti e quindi esiste un taglio con capacità pari a $v$ per il punto 3.
+			- #### Complessità:
+				- Se le capacità di $G$ sono numeri interi allora esiste un flusso intero massimo.
+				- ##### Dim :
+					- Se le capacità sono intere allora il flusso massimo sarà al più:
+						- $$nU$$
+						- Dove $n$ _è il numero di nodi_ e  $U$ _è il massimo valore di capacità_
+					- Si parte da un flusso intero e l’interezza è preservata perché per ogni cammino aumentante P
+						- $\theta(P,x)$ è un numero intero.
+					- Quindi ad ogni iterata il flusso aumenta di almeno 1.
+					- L’algoritmo termina quindi dopo al più $nU$ iterazioni.
+				- _Il problema dell’algoritmo sta nell’assenza di vincoli sulla scelta dei cammini da aumentare._
+		- ### Algoritmo di Edmonds-Karp:
+			- è una modifica dell’algoritmo di Ford-Fulkerson ma si mette un criterio sulla scelta dei cammini da aumentare.
+				- Si modifica il punto 2 di quell’algoritmo Utilizzando una visita [[Visite sui Grafi#^3c4eb5|BFS]] sul grafo $G_{x}$ in questo modo si nota come verranno scelti sempre i cammini con meno archi quindi più corti.
+			- #### Proprietà:
+				- _L’algoritmo è corretto siccome è solo una istanza particolare di Ford-fulkerson_.
+				- Si indica con $\delta_{x}(i,j)$ la distanza tra $i$ e $j$ nel grafo residuo $G_{x}$ 
+				- ##### lemma:
+					- Se durante EK il flusso $y$ è ottenuto da $x$ con un aumento di flusso in un cammino aumentante, allora $\forall i\in N$ vale che:
+						- $$\delta_{x}(s,i)\le \delta_{y}(s,i)$$
+			- #### Complessità:
+				- Si osserva che in FF i cammini aumentanti sono di _lunghezza minima_ allora la distanza di un nodo dalla sorgente $s$ in $G_{x}$ _non può diminuire_.
+				- Da ciò si deduce come il numero di iterazioni in questo algoritmo non può essere maggiore di $N*A$ 
+			- #### Teorema :
+				- Le iterazioni di EK sono $O(N*A)$ quindi la complessità sarà $O(N*A^{2})$  
+					- _ovvero il numero di iterazioni moltiplicato per il numero di archi_
+			- #### Dim:
+				- ##### Arco critico:
+					- Un arco critico è un arco che dice quale sia la capacità residua dell’arco quindi la sua capacità è uguale a $\theta(P,x)$ dove $P$ è il cammino aumentante.
+						- Dopo l’aumento del flusso in $P$ l’arco critico _sparisce_ dal grafo residuo.
+						- In ogni cammino aumentante esiste almeno un _arco critico_
+				- Quante volte è possibile che dati $i$ e $j$ connessi da un arco esso sia critico?
+					- Si dimostra che quel numero è $O(N)$ e visto che tali coppie sono al più $O(A)$ in totale si avranno al più $O(N*A)$ iterazioni.
+				- Quando $(i,j)$ diventa critico per la prima volta deve valere che:
+					- $$\delta_{x}(s,j)=\delta_{x}(s,i)+1$$
+					- Ciò vale perché il cammino da $s$ a $i$ è già minimo allora per arrivare da $s$ a $j$ _sarà uguale a quello prima + un altro passo_.
+					- Il flusso $x$ a quel punto sparisce dal grafo residuo.
+				- Se si vuole far ricomparire l’arco critico si deve fare in modo che il flusso da $i$ a $j$ diminuisca ovvero:
+					- $$\delta_{y}(s,i)=\delta_{y}(s,j)+1$$
+				- E quindi :
+					- $$\delta_{y}(s,i)=\delta_{y}(s,j)+1 \ge \delta_{x}(s,j)+1 = \delta_{x}(s,i)+2$$
+				- Di conseguenza da quando $(i,j)$ diventa critico al successivo la sua distanza da $s$ aumenta di almeno 2 e siccome la distanza non può essere $\ge$ al numero di nodi $|N|$ quindi quell’arco può diventare critico al massimo $|N|$ volte 
+				- _tutto ciò vale solo perché si sta usando una BFS avendo quindi i cammini di lunghezza minima_.
+		- ### Goldberg-Tarjan:
+			- Costruisce il flusso massimo locale, a differenza dei due precedenti. 
+			- Si decide quindi di cambiare il flusso solo in certe porzioni del grafo.
+			- Non si lavora solo con flussi ammissibili, ma anche con dei _preflussi_
+			- #### Preflussi:
+				- Sono più generali, dei vettori $x$ tali che:
+					- $$\sum\limits_{(j,i)\in BS(i)} x_{ij}-\sum\limits_{(j,i)\in FS(i)} x_{ij}\ge 0\ \ \ \ i\in  N-\{s,t\}$$
+			- Un nodo si dice _attivo_ se il suo _eccesso_:
+				- $$e_{i}=\sum\limits_{(j,i)\in BS(i)} x_{ij}-\sum\limits_{(j,i)\in FS(i)} x_{ij}$$
+					- è positivo, altrimenti si dice _bilanciato_ 
+			- L’idea quindi è di eliminare gli sbilanciamenti e di “disattivare” i nodi attivi
+			- Per eliminare lo sbilanciamento di un nodo $i$ si sposta parte del flusso in eccesso:
+				- In avanti attraverso $(i,j)$ se $x_{ij}<u_{ij}$
+				- Indietro attraverso $(j,i)$ se $x_{ij}>0$
+				- Chiamate operazioni di _push forward_ e _push backwards_
+			- Per capire se quste operazioni sono possibili si usano delle “etichette”
+			- ![[Pasted image 20250319101053.png|400]]
+			- #### EtichettaturaVALIDA (G):
+				- $d_{i}=$ lunghezza del cammino minimo da $i$ a $t$ 
+			- #### PushForward (v, j):
+				- Aumento il flusso da $i$ a $j$ di 
+				- $x_{ij}=x_{ij}+\min\{u_{vj}-x_{vj},e_{v}\}$
+			- #### PushBackward (i, v):
+				- $x_{iv}=$
+			- #### Relabel (v):
+				- Cambia l’altezza del nodo $v$ per rendere possibile almeno una delle due operazioni di _push_.
+- # Link Utili:
+	- 

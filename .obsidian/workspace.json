@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Funzione di ripartizione"
+              "title": "Problema di flusso di costo minimo"
             }
           },
           {
-            "id": "838a5b6936d11b19",
+            "id": "9b45cdb00b185405",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Variabili aleatorie"
+              "title": "Reti di flusso"
             }
           },
           {
-            "id": "4a05df0474ac18d3",
+            "id": "583b8c919f2c4a20",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,59 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Media"
-            }
-          },
-          {
-            "id": "1fd10059fbe9cebe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Varianza"
-            }
-          },
-          {
-            "id": "a3444fbd502bb8e8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Formula di Bayes"
+              "title": "problema di flusso massimo"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -300,32 +252,43 @@
       "homepage:Open homepage": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "publish:Pubblica modifiche": false
     }
   },
-  "active": "1fd10059fbe9cebe",
+  "active": "583b8c919f2c4a20",
   "lastOpenFiles": [
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
+    "immagini/Pasted image 20250322170726.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Variabili a valori discreti.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
+    "immagini/Pasted image 20250325185756.png",
+    "immagini/Pasted image 20250325185556.png",
+    "immagini/Pasted image 20250325174433.png",
+    "immagini/Pasted image 20250325174349.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso",
+    "Homepage.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Paradossi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
-    "Pasted image 20250324170801.png",
-    "Pasted image 20250324165436.png",
+    "immagini/Pasted image 20250324170801.png",
+    "immagini/Pasted image 20250324165436.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser Top-down.md",
-    "Pasted image 20250322171533.png",
-    "Pasted image 20250322170726.png",
+    "immagini/Pasted image 20250322171533.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/grammatiche LR(k).md",
     "immagini/Pasted image 20250322155825.png",
     "immagini/Pasted image 20250322164421.png",
-    "immagini/Pasted image 20250322163926.png",
-    "immagini/Pasted image 20250322160054.png",
-    "immagini/Pasted image 20250322160356.png",
-    "immagini/Pasted image 20250322160711.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Grammatiche.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
@@ -333,23 +296,13 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie",
     "Excalidraw/funzione esempio.excalidraw.md",
     "Excalidraw/funzione di ripartizione.excalidraw.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria.md",
-    "Primo Anno/architettura degli elaboratori/SO/Compiti/paginazione(SO).md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Cache.md",
-    "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
-    "Wireless.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso.md",
     "latexsheet-a4.pdf",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
     "Secondo Anno/Linguaggi di Programmazione/modulo1",
-    "Secondo Anno/Reti di Calcolatori/Sicurezza di rete",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",
