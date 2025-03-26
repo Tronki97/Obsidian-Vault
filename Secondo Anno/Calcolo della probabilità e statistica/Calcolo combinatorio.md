@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - metodo dei coefficienti binomiali
   - metodo delle scelte successive
