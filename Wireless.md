@@ -1,0 +1,48 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-03-31 11:14`"
+---
+- # Argomento:
+	-  tutti i classici protocolli spesso ricevono dei side-effect da queste reti e quindi necessitano di aggiustamenti.
+	- Un onda radio si ottiene facendo passare della corrente alternata in un filo conduttore ottenendo un campo elettromagnetico. Quest onda è definita da un’onda sinusoidale
+		- L’energia è proporzionale alla carica elettrica che si sposta nel filo.
+	- ## Ampiezza :
+		- Segnali con ampiezza più alta tendono ad andare più lontano in quanto più tempo vengono trasmessi più perdono potenza infatti i segnali radio hanno un determinato raggio.
+			- La potenza è data dalla quantità di energia investita diviso per il tempo 
+			- Ma più spesso si indica come prodotto tra _corrente_ e _tensione_.
+	- ## Frequenza :
+		- Correlata alla lunghezza d’onda.
+			- Calcolabile come: $\frac{c}{f}$ dove $c$ è la velocità della luce.
+		- L’insieme delle frequenze utilizzabili da un dispositivo è la _banda o canale di trasmissione_ 
+		- Si misura in _Hertz (Hz)_
+		- La resa massimo di trasformazione da corrente a onda radio (e viceversa) è determinata dalla dimensione dell’antenna stessa che deve essere circa $1, \frac{1}{2}, \frac{1}{4}$ della lunghezza d’onda.
+	- ## Area di copertura della propagazione radio:
+		- Rappresenta il raggio di copertura di un’antenna quindi fino a quando quell’antenna riesce a trasmettere e ricevere il segnale.
+		- Presenta una legge di decadimento del segnale radio che è proporzionale al quadrato della distanza. Anche se a volte a causa delle condizioni ambientali varia fino al cubo della distanza o anche di più.
+			- #immagine
+		- ### Raggio di trasmissione:
+			- Dove il segnale è ancora leggibile.
+			- Dove c’è un basso errore nella lettura del segnale.
+		- ### Raggio di ricezione:
+			- Dove l’antenna riesce a ricevere il segnale.
+			- Non c’è possibilità di comunicazione bidirezionale.
+		- ### Raggio di interferenza:
+			- Dove il segnale potrebbe non essere rilevato.
+			- Dove il segnale potrebbe essere disturbato dal rumore di fondo. 
+	- ## Shadowing :
+		- Avere un ostacolo che impedisce all’energia di passare come fosse nel vuoto, come un muro, il segnale appena si imbatte in quell’ostacolo viene riflesso e quindi perde energia siccome l’ostacolo ne ha assorbita un po’ che di solito diventa calore.
+		- Alte frequenze sono adatte per le trasmissioni a breve distanza e vengono influenzate dagli ostacoli, ma permettono di trasmette più bit al secondo 
+		- le onde a bassa frequenza sono adatte alle lunghe distanze e subiscono pochi effetti e di basso grado di interferenza dagli ostacoli.
+	- ## Fase:
+		- Rappresenta uno spostamento nel tempo misurato in periodi di onda.
+		- Usando la rotazione della trigonometria (gradi e radianti)
+		- Deve sempre avere un riferimento, quando non viene espresso si assume che sia 0.
+		-  
+- # Link Utili:
+	- 
+- # BOH:
+	- Provate a leccare il volume della sfera lo sentite il sapore di nutella????
+	- Ah prof quella volta della nutella.
+	- 
