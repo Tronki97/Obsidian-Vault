@@ -1,0 +1,35 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-02 11:17`"
+---
+- # Argomento:
+	- Servono per normare un qualcosa che il programma fa, e descrive dei vincoli, cosa ci si aspetta.
+	- Si guarda solo la sintassi di linguaggio per descrivere i vari comportamenti del programma, interessa sapere solo l’interpretazione del programma in base alla sintassi.
+		- Per dimostrare L'assenza di determinati comportamenti del Programma, fatto classificando le unità sintattiche in Base ai tipi di valore che assumono.
+	- I _tipi_ quindi identificano dei valori del linguaggio che sono caratterizzati da:
+		- Valori omogenei per poteri eseguire le stesse operazioni sopra siccome condividono certe proprietà strutturali.
+		- Valori rappresentabili, da poterci computare sopra
+	- L’uso dei tipi aiuta a separare dei concettualmente e logicamente degli elementi diversi (come: _clienti, camere, prezzi_ ecc…)
+	- ## Supporto all’astrazione:
+		- Interfacce che servono per definire diverse operazioni che operano solo su certi tipi, inoltre servono per dare dei menu a quelli che usano certe funzioni senza che debbano vedere esattamente l’implementazione di quella funzione.
+	- ## Supporto alla correttezza:
+		- Facendo il _type-checking_ quindi trovando gli errori usando i tipi prima ancora di far girare il programma. Più facile rispetto all’analizzare lo stack trace degli errori.
+		- ### Safety:
+			- Garantire l’integrità delle sue astrazioni, e di quelle di livello superiore i linguaggi con questa caratteristica sono anche detti: _strongly typed_.
+			- Es: se un linguaggio mi fa definire un [[Array]] e quanto è grande quindi quando vado fuori dal limite dell’array mi dovrebbe arrivare un errore.
+		- ## Supporto implementazione:
+			- Nei linguaggi safe: Utile anche per velocizzare un programma siccome si aggiungono controlli a compile time invece di farli a run-time.
+			- Inoltre sapendo i valori limite di questi tipi so già dall’inizio quanta memoria allocare per ogni variabile di un determinato tipo.
+	- ## Tipaggio statico e dinamico:
+		- ### Statico :
+			- Se è possibile controllare i tipi sul testo del programma senza eseguirlo quindi eliminando dal codice generato le annotazioni di tipo.
+		- ### Dinamico :
+			- Il controllo viene effettuato durante l’esecuzione del programma e ciò  richiede che ogni valore abbia un descrittore di Esecuzione che ne specifichi il tipo e che, a ogni operazione, il _runtime_ verifichi Che il programma esegua operazioni solo su operandi del tipo corretto e ciò rallenta di molto l’esecuzione del programma.
+			- 
+	- ## Inferred typing:
+		- Non serve annotare il tipo di ogni variabile in quanto il linguaggio dispone di algoritmi che deducono il tipo dal contesto.
+	- 
+- # Link Utili:
+	- 

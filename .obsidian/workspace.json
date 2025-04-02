@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "f6160ac52d534c07",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wireless.md",
+                "file": "Tipi base e algebra dei tipi.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Wireless"
+              "title": "Tipi base e algebra dei tipi"
             }
           }
         ]
@@ -81,14 +81,15 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "Segnalibri"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -207,13 +208,18 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "f6160ac52d534c07",
   "lastOpenFiles": [
+    "tipi nei linguaggi di programmazione.md",
+    "Tipi base e algebra dei tipi.md",
+    "Secondo Anno/Reti di Calcolatori/Wireless.md",
+    "Lectures 2025-03-23-104403.md",
+    "Pasted image 20250402101341.png",
+    "Pasted image 20250402101053.png",
+    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
-    "Wireless.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
-    "Homepage.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
@@ -232,9 +238,6 @@
     "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
     "Secondo Anno/Sistemi Operativi/progetto/progetto sistemi operativi..md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi e Alberi binari.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
     "immagini/Pasted image 20250322170726.png",
     "immagini/Pasted image 20250325185756.png",
     "immagini/Pasted image 20250325185556.png",
@@ -244,8 +247,6 @@
     "immagini/Pasted image 20250324170801.png",
     "immagini/Pasted image 20250324165436.png",
     "immagini/Pasted image 20250322171533.png",
-    "immagini/Pasted image 20250322155825.png",
-    "immagini/Pasted image 20250322164421.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/desktop.ini",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie",
     "latexsheet-a4.pdf",

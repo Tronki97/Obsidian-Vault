@@ -1,0 +1,39 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-02 12:55`"
+---
+- # Tipi base:
+	- Sono valori denotabili semplici, possono essere chiamati `int, float, char` ed hanno una diversa definizione a differenza del linguaggio.
+- # Tipo Unit:
+	- Contiene una sola unità un singoletto, simile al tipo `void` che però non contiene nulla, quello che li accomuna è che rappresenta un ritorno che non influenza nulla in quanto ha una sola unità utile per eseguire una funzione del tipo: `f(g(5))` dove `f` richiede un qualcosa e `g` ritorna Unit che quindi non influenzerà il valore finale che però non si potrebbe fare se `g` ritornasse `void`.
+- # Tipi booleani:
+	- Comprendono i valori `true, false`
+	- Hanno le operazioni logiche classiche.
+- # Tipi carattere:
+	- Insieme di codici di caratteri
+	- Operazioni che dipendono dal linguaggio
+	- Valori denotabili, esprimibili e memorizzabili.
+	- La rappresentazione in memoria dipende dal modello hardware del linguaggio.
+- # Tipi interi:
+	- Come valori hanno un sottoinsieme finito di numeri interi fissato al momento della definizione del linguaggio
+	- Operazioni aritmetiche
+	- Valori denotabili, esprimibili e memorizzabili.
+- # Tipi reali:
+	- Come gli interi ma cambia la rappresentazione,
+		- Virgola fissa o mobile, più ci si avvicina allo 0 più aumenta la precisione.
+- # Enumerazione:
+	- Insieme finito di costanti ciascuna con un proprio nome 
+	- Serve per verificare che una variabile di tipo enumerazione assuma esattamente dei valori specifici che ritengo come corretti.
+- # definire nuovi tipi:
+- # metodi di computazione sui tipi:
+	- Regole di equivalenza:
+		- Controllo se due tipi corrispondono allo stesso tipo.
+	- Regole di compatibilità:
+		- Specificano quando un tipo può essere usato al posto di un altro.
+	- Regole di inferenza:
+		- Permette di abbassare il peso riguardo il manifest typing togliendo quindi delle annotazioni di tipo al programma.
+	- 
+- # Link Utili:
+	- 
