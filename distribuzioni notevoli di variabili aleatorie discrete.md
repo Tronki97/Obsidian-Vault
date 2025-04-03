@@ -1,0 +1,67 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-03 16:09`"
+---
+- # Distribuzione uniforme (Discreta):
+	- Avendo una struttura di supporto $S_{X}=\{x_{1},...,x_{n}\}$ finito con relativa tabella di densità:
+		- $$\begin{array}{|c|c|c|c|c|c|c|} \hline x & x_{1} & ... & x_{n}&{///}\\ \hline \mathbb{P}(X=x) & \frac{1}{n} & ... & \frac{1}{n}&1 \\ \hline \end{array}$$
+	- $\mathbb{P}(x_{i})=\frac{1}{n}\ \ \ \forall x_{i} \in S_{X}$
+	- $X\sim Unif(\{x_{1},...,x_{n}\})$ ovvero ha legge uniforme.
+	- $$\mathbb{E}[X]=\frac{1}{n}\sum\limits_{i=1}^{n}x_{i}$$
+	- $$var(X)=\sum\limits_{x_{i}\in S_{X}}(x_{i}-\mathbb{E}[X])^{2}p_{X}(x_{i})=\frac{1}{n}\sum\limits_{i=1}^{n}(x_{i}-\mathbb{E}[X])^{2}$$
+- # Distribuzione di Bernoulli di parametro:
+	- Con parametro $p\in [0,1]$
+	- $S_{X}=\{0,1\}$
+	- $$\begin{array}{|c|c|c|c|c|c|c|} \hline x & 0&1&{///}\\ \hline \mathbb{P}(X=x) &1-p &p&1 \\ \hline \end{array}$$
+	- Sono considerate le [[Variabili aleatorie#^a7a7e4|V.A di bernoulli]] 
+	- $$\mathbb{E}[X]=\sum\limits_{i=1}^{n} x_{i}*p_{X}(x_{i})=0*(1-p)+1*p=p$$
+	- $$var(X)=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}=p-p^{2}=p*(1-p)$$
+	- $$\mathbb{E}[X^{2}]=\sum\limits_{i}x_{i}^{2}*p_{X}(x_{i})=0-(1-p)+1*p=p$$
+- # Distribuzione binomiale:
+	- _Con parametro_ $p\in [0,1]$ e $n\in \mathbb{N}$
+	- _Si fanno $n$ prove indipendenti con probabilità di successo $p$_.
+		- $$X_{i}=\mathbb{1}_{E_{i}} =\begin{cases} 1 & \text{successo all i-esima prova}\\ 0 & \text{altrimenti} \end{cases}$$
+		- $E_{i}$ = successo alla i-esima prova di Bernoulli. $i=1,...,n$
+	- $$Y:=\sum\limits_{i=1}^{n}X_{i}\sim \text{Bin}(n,p)$$
+	- $S_{Y}=\{0,1,...,n\}$ finito.
+		- $$\begin{array}{|c|c|c|c|c|} \hline y & 0&1&...&n&{///}\\ \hline p_{Y} & &&&&1 \\ \hline \end{array}$$
+	- $p_{Y}(y_{i})=\mathbb{P}(Y=y_{i})$ ?
+		- $p_{Y}(k)=\binom{n}{k}*p^{k}(1-p)^{n-k}$ 
+		- Grazie a questa definizione si può riempire la tabella:
+			- $$\begin{array}{|c|c|c|c|c|} \hline y & 0&1&...&n-1&n&{///}\\ \hline p_{Y} & (1-p)^{n}&n*(1-p)^{n-1}*p&...&n(1-p)*p^{n-1}&p^{n}&1 \\ \hline \end{array}$$
+	- Il [[Media|valore atteso]] si calcola poi:
+		- $$\mathbb{E}[Y]=\sum\limits_{i}y_{i}*p_{Y}(y_{i})=\sum\limits_{k=0}^{n}k\binom{n}{k}*p^{k}*(1-p)^{n-k}=$$
+		- $$=\sum\limits_{k=1}^{n} k* \frac{n!}{k!(n-k)!}*p^{k}*(1-p)^{n-k}=$$
+			- Dove $k!= k*(k-1)!$ e vale la stessa cosa per $n!$ inoltre $p^{k}=p*p^{k-1}$
+		- $$=np\sum\limits_{k=1}^{n} \frac{(n-1)!}{(k-1)!*(n-k)!}* p^{k-1}(1-p)^{n-k}$$
+			- Dove $\frac{(n-1)!}{(k-1)!*(n-k)!}$ è il coefficiente binomiale di $n-1$ e $k-1$.
+			- _Inoltre definisco_ $k-1=h$ 
+		- $$=np\sum\limits_{h=0}^{n-1} \binom{n-1}{h}*p^{h}*(1-p)^{n-1-h}=np$$
+			- Ciò vale perché tutta la parte sotto la somma è uguale a 1 siccome può essere semplificata come $(p+(1-p))^{n-1}=1$. 
+	- Per calcolare la [[Varianza]]:
+		- $$var(Y)=\mathbb{E}[Y^{2}]-\mathbb{E}[Y]^{2}=\mathbb{E}[Y(Y-1)+Y]-\mathbb{E}[Y]^{2}=$$
+		- $$=\mathbb{E}[Y(Y-1)]+\mathbb{E}[Y]-\mathbb{E}[Y]^{2}=$$
+		- $$=\mathbb{E}[Y(Y-1)]+np-n^{2}p^{2}$$
+		- $$\mathbb{E}[Y(Y-1)]=\sum\limits_{k=0}^{n} k(k-1)\binom{n}{k}*p^{k}*(1-p)^{n-k}=$$
+		- $$=\sum\limits_{k=0}^{n} k(k-1)* \frac{n!}{k!*(n-k)!} *p^{k}*(1-p)^{n-k}$$
+			- Dove $k!= k*(k-1)*(k-2)!$ uguale per $n!$ e $p^{k}=p^{2}*p^{k-2}$ ottenendo poi semplificando:
+		- $$=n(n-1)p^{2}\sum\limits_{k=2}^{n} \frac{(n-2)!}{(k-2)!*(n-k)!}* p^{k-2}*(1-p)^{n-k}$$
+			- E ancora una volta la parte nella sommatoria è uguale ad 1 ottenendo:
+		- $$=n(n-1)p^{2}$$
+		- Quindi:
+			- $$var(Y)=n(n-1)*p^{2}+np-n^{2}p^{2}=np-np^{2}=np*(1-p)$$
+- # Distribuzione di Poisson:
+	- è un caso limite della _distribuzione binomiale_ 
+		- $n\to \infty,\ \ p\to 0,\ \ \ np\to \lambda>0$
+	- $X\sim Poi(\lambda), \ \ \lambda>0$
+	- $S_{X}=\{0,1,...\}=\mathbb{N}_{0}$ 
+	- $$p_{X}(k)=e^{-\lambda} \frac{\lambda^{k}}{k!}\ \ \ k\in \mathbb{N}_{0}$$
+	- $$\sum\limits_{k=0}^{\infty} \frac{x^{k}}{k!}=e^{x}$$
+		- Sviluppo in serie di [[Taylor per le funzioni elementari||Taylor]] senza considerare l’errore siccome si esegue la sommatoria con grado infinito.
+	- $$\mathbb{E}[X]=\sum\limits_{k=0}^{\infty} k*e^{-\lambda} \frac{\lambda^{k}}{k!}=$$
+		- Dove $k!=k(k-1)!$ e $\lambda^{k}=\lambda*\lambda^{k-1}$
+	- $$=\lambda \sum\limits_{k=1}^{\infty} \frac{\lambda^{k-1}}{(k-1)!}*e^{-\lambda}$$
+- # Link Utili:
+	- 

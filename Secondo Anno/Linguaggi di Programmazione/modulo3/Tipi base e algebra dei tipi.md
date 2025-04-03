@@ -1,0 +1,52 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-02 12:55`"
+---
+- # Tipi base:
+	- Sono valori denotabili semplici, possono essere chiamati `int, float, char` ed hanno una diversa definizione a differenza del linguaggio.
+	- ## Tipo Unit:
+		- Contiene una sola unità un singoletto, simile al tipo `void` che però non contiene nulla, quello che li accomuna è che rappresenta un ritorno che non influenza nulla in quanto ha una sola unità utile per eseguire una funzione del tipo: `f(g(5))` dove `f` richiede un qualcosa e `g` ritorna Unit che quindi non influenzerà il valore finale che però non si potrebbe fare se `g` ritornasse `void`.
+	- ## Tipi booleani:
+		- Comprendono i valori `true, false`
+		- Hanno le operazioni logiche classiche.
+	- ## Tipi carattere:
+		- Insieme di codici di caratteri
+		- Operazioni che dipendono dal linguaggio
+		- Valori denotabili, esprimibili e memorizzabili.
+		- La rappresentazione in memoria dipende dal modello hardware del linguaggio.
+	- ## Tipi interi:
+		- Come valori hanno un sottoinsieme finito di numeri interi fissato al momento della definizione del linguaggio
+		- Operazioni aritmetiche
+		- Valori denotabili, esprimibili e memorizzabili.
+	- ## Tipi reali:
+		- Come gli interi ma cambia la rappresentazione,
+			- Virgola fissa o mobile, più ci si avvicina allo 0 più aumenta la precisione.
+	- ## Enumerazione:
+		- Insieme finito di costanti ciascuna con un proprio nome 
+		- Serve per verificare che una variabile di tipo enumerazione assuma esattamente dei valori specifici che ritengo come corretti.
+- # Tipi composti:
+	- Insiemi di elementi denominati in modo particolare che sono composti da elementi dello stesso tipo base.
+	- ## Tipi array:
+		- Insieme di elementi dello stesso tipo, contigui in memoria, ognuno indicizzato da una chiave indicativa (come l’indice della posizione di un elemento).
+		- Un altro tipo di array sono quelli associativi che al posto di usare delle chiavi di indice numerico usano delle chiavi di qualche altro tipo. 
+			- Come le [[Tabelle Hash]]
+		- Inoltre si posso fare anche array multidimensionali con quindi più di una chiave di indice.
+		- ### Operazioni:
+			- Quella più semplice è quella di selezionare un elemento attraverso l’indice dell’array.
+				- I linguaggi safe si assicurano che quando si accede ad uno o più elementi di quell’array non si esca dai confini delimitati dalla dimensione effettiva. 
+			- Poi ci sono, in alcuni linguaggi, operazioni di assegnazione, confronto e aritmetiche che però necessitano che tutti gli array confrontati abbiano la stessa dimensione.
+		- In alcuni linguaggi come [[Java]] gli array sono inizializzati a run-time e messi sull’ [[Heap]] vengono definiti _dinamici_ e hanno dimensione “variabile”.
+		- Stride: permette di fare i calcoli in base al rank degli array su cui va ad agire.
+- # definire nuovi tipi:
+- # metodi di computazione sui tipi:
+	- ## Regole di equivalenza:
+		- Controllo se due tipi corrispondono allo stesso tipo.
+	- ## Regole di compatibilità:
+		- Specificano quando un tipo può essere usato al posto di un altro.
+	- ## Regole di inferenza:
+		- Permette di abbassare il peso riguardo il manifest typing togliendo quindi delle annotazioni di tipo al programma.
+	- 
+- # Link Utili:
+	- 

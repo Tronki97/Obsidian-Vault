@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f6160ac52d534c07",
+            "id": "203421dc033961d9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tipi base e algebra dei tipi.md",
+                "file": "distribuzioni notevoli di variabili aleatorie discrete.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,79 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Tipi base e algebra dei tipi"
+              "title": "distribuzioni notevoli di variabili aleatorie discrete"
+            }
+          },
+          {
+            "id": "e3cb471b91a68505",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Analisi/modulo1/Taylor per le funzioni elementari.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Taylor per le funzioni elementari"
+            }
+          },
+          {
+            "id": "7fbbe6de526ed971",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Variabili aleatorie"
+            }
+          },
+          {
+            "id": "22a406338a09d702",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sicurezza nei sistemi operativi.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Sicurezza nei sistemi operativi"
             }
           }
         ]
@@ -208,19 +280,23 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "f6160ac52d534c07",
+  "active": "203421dc033961d9",
   "lastOpenFiles": [
-    "tipi nei linguaggi di programmazione.md",
-    "Tipi base e algebra dei tipi.md",
+    "Primo Anno/Analisi/modulo1/Taylor per le funzioni elementari.md",
+    "distribuzioni notevoli di variabili aleatorie discrete.md",
+    "Sicurezza nei sistemi operativi.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+    "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
     "Secondo Anno/Reti di Calcolatori/Wireless.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3",
     "Lectures 2025-03-23-104403.md",
     "Pasted image 20250402101341.png",
     "Pasted image 20250402101053.png",
-    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula delle probabilità totali.md",
@@ -235,9 +311,6 @@
     "Secondo Anno/Reti di Calcolatori/intro livello 1/reti a commutazione di circuito.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Componenti di rete.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Canali di comunicazione della rete.md",
-    "Secondo Anno/Reti di Calcolatori/livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
-    "Secondo Anno/Sistemi Operativi/progetto/progetto sistemi operativi..md",
     "immagini/Pasted image 20250322170726.png",
     "immagini/Pasted image 20250325185756.png",
     "immagini/Pasted image 20250325185556.png",
@@ -255,7 +328,6 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
     "Secondo Anno/Linguaggi di Programmazione/modulo2",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

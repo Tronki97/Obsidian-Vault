@@ -89,7 +89,7 @@ data: "`2025-03-11 13:23`"
 	- L’immagine è finita.
 	- $X: \Omega \to \mathbb{R}$ è una V.A discreta se:
 		- $\Omega$ discreto:  $Im(X)$ finita numerabile.
-		- $\Omega$ non discreto: $\exists S_{X}\subset Im(X), S_{X}$ finito o numerabile, tale che: $\mathbb{P}(X\in S_{x})=1$ quasi certamente ed è detto _insieme di supporto_ e rappresenta tutti i valori possibili della V.A con $\mathbb{P}(.)>0=\{x\in \mathbb{R}: \mathbb{P}(X=x)>0\}$ 
+		- $\exists S_{X}\subset Im(X), S_{X}$ finito o infinito numerabile, tale che: $\mathbb{P}(X\in S_{x})=1$ quasi certamente ed è detto _insieme di supporto_ e rappresenta tutti i valori possibili della V.A con $\mathbb{P}(.)>0=\{x\in \mathbb{R}: \mathbb{P}(X=x)>0\}$.
 	- ## ES:
 		- $$X(w)=\begin{cases} a &w\in \{1,...,6\}\\ w & altrimenti\end{cases}$$
 			- $\Omega=\mathbb{R}$, $\mathbb{P}: \begin{cases} \mathbb{P}(\{1\})=...=\mathbb{P}(\{6\})=\frac{1}{6} \\ \mathbb{P}(\{n\})=0 & \forall n\ne \{1,...,6\}\end{cases}$
@@ -121,6 +121,7 @@ data: "`2025-03-11 13:23`"
 			- E la [[Funzione di ripartizione]] facendone il grafico.
 				- ![[funzione esempio.excalidraw|900]]
 				- Quindi $F_{X}(1)=F_{X}(X\le 1)=F_{X}(\Omega)=1$
-				- Se prendessi un punto $-1<y<1$ avrei $F_{X}(y)=\mathbb{P}(X\le y)=F_{X}(X\le 1)=F_{X}(-1)=\frac{1}{2}$
+				- Se prendessi un punto $-1<y<1$ avrei $F_{X}(y)=\mathbb{P}(X\le y)=F_{X}(X\le 1)=F_{X}(-1)=\frac{1}{2}$.
+	- 
 - # Link Utili: 
 	- 

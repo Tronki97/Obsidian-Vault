@@ -25,11 +25,12 @@ data: "`2025-04-02 11:17`"
 	- ## Tipaggio statico e dinamico:
 		- ### Statico :
 			- Se è possibile controllare i tipi sul testo del programma senza eseguirlo quindi eliminando dal codice generato le annotazioni di tipo.
+			- Inoltre elimina tutti i controlli a run-time.
 		- ### Dinamico :
 			- Il controllo viene effettuato durante l’esecuzione del programma e ciò  richiede che ogni valore abbia un descrittore di Esecuzione che ne specifichi il tipo e che, a ogni operazione, il _runtime_ verifichi Che il programma esegua operazioni solo su operandi del tipo corretto e ciò rallenta di molto l’esecuzione del programma.
 			- 
 	- ## Inferred typing:
-		- Non serve annotare il tipo di ogni variabile in quanto il linguaggio dispone di algoritmi che deducono il tipo dal contesto.
+		- Non serve annotare il tipo di ogni variabile in quanto il linguaggio dispone di algoritmi che deducono il _tipo_ dal contesto. 
 	- 
 - # Link Utili:
 	- 
