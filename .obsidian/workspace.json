@@ -8,55 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "203421dc033961d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "distribuzioni notevoli di variabili aleatorie discrete.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "distribuzioni notevoli di variabili aleatorie discrete"
-            }
-          },
-          {
-            "id": "e3cb471b91a68505",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Anno/Analisi/modulo1/Taylor per le funzioni elementari.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Taylor per le funzioni elementari"
-            }
-          },
-          {
-            "id": "7fbbe6de526ed971",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -80,12 +32,12 @@
             }
           },
           {
-            "id": "22a406338a09d702",
+            "id": "b046e1b3bae6b31e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sicurezza nei sistemi operativi.md",
+                "file": "Primo Anno/Analisi/modulo2/Integrali.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Sicurezza nei sistemi operativi"
+              "title": "Integrali"
             }
           }
         ]
@@ -160,8 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -280,13 +231,14 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "203421dc033961d9",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Primo Anno/Analisi/modulo1/Taylor per le funzioni elementari.md",
-    "distribuzioni notevoli di variabili aleatorie discrete.md",
-    "Sicurezza nei sistemi operativi.md",
+    "Primo Anno/Analisi/modulo2/Integrali.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "Homepage.md",
+    "distribuzioni notevoli di variabili aleatorie discrete.md",
+    "Primo Anno/Analisi/modulo1/Taylor per le funzioni elementari.md",
+    "Sicurezza nei sistemi operativi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
     "Secondo Anno/Reti di Calcolatori/Wireless.md",
@@ -310,7 +262,6 @@
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Scheda di rete.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/reti a commutazione di circuito.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Componenti di rete.md",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Canali di comunicazione della rete.md",
     "immagini/Pasted image 20250322170726.png",
     "immagini/Pasted image 20250325185756.png",
     "immagini/Pasted image 20250325185556.png",

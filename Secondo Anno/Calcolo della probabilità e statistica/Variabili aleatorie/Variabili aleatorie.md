@@ -122,6 +122,100 @@ data: "`2025-03-11 13:23`"
 				- ![[funzione esempio.excalidraw|900]]
 				- Quindi $F_{X}(1)=F_{X}(X\le 1)=F_{X}(\Omega)=1$
 				- Se prendessi un punto $-1<y<1$ avrei $F_{X}(y)=\mathbb{P}(X\le y)=F_{X}(X\le 1)=F_{X}(-1)=\frac{1}{2}$.
-	- 
+- # V.A continue:
+	- Variabile aleatoria: $X: \Omega \to \mathbb{R}$.
+	- ## ES:
+		- $X=$ “tempo di vita di un componente”.
+			- Suppongo che $X$ assuma valori in $[0, \infty)$
+			- E ciò impone che $p_{X}(x)=0 \ \ \ \ \forall x$ 
+		- Ora serve costruire la distribuzione di $X$:
+			- Lo si fa mediante una densità: $f_{X}$
+			- Si definiscono le probabilità degli intervalli invece che delle probabilità di valori.
+				- $X\in [a,b]$ con $a<b \in \mathbb{R}$
+			- $$\mathbb{P}(a\le X\le b)=\int_{a}^{b} f_{X}(x) \ dx$$
+				- Con $f_{X}$ tale che:
+					- 1) $f_{X}(x)\ge 0 \ \ \ \forall x\in \mathbb{R}$ 
+					- 2) $\int_{-\infty}^{+\infty} f_{X}(x) \ dx=1$ 
+	- ## ES:
+		- $$f_{X}=\begin{cases}0 &x<0 \\ e^{-x} & x\ge 0\end{cases}$$
+		- #grafico .
+		- $$\int_{-\infty}^{\infty} f_{X}(x)\  dx=\int_{0}^{\infty}e^{-x}\ dx= $$
+			- Ciò grazie alle proprietà degli [[Integrali]] 
+		- $$= \lim_{k\to \infty} \int _{0}^{k}e^{-x} \ dx=\lim_{k\to \infty} [-e^{-x}]_{0}^{k}=$$
+		- $$=\lim_{k\to \infty} (-e^{-k}+e^{0})=0+1=1$$
+	- ## Formalizzazione;
+		- Una $f: \mathbb{R}\to \mathbb{R}$ si dice _densità di probabilità_ se:
+			- 1) $f(x)\ge 0 \ \ \ \forall x\in \mathbb{R}$
+			- 2) $\int_{-\infty}^{+\infty} f(x) \ dx=1$
+	- ## OSS:
+		- La densità non è necessariamente $\le 1$ 
+			- Per esempio si può prendere la funzione:
+				- $$f_{X}=\begin{cases}0 &x<0 \\ \lambda e^{-\lambda x} & x\ge 0\end{cases}$$
+					- Con $\lambda>0$
+				- Se si facesse l’integrale risulterebbe lo stesso uguale ad 1
+		- $f_{X}$ può anche essere illimitata.
+	- ## Def:
+		- Sia $(\Omega, \mathbb{P})$ uno spazio di probabilità e $X$ una V.A allora si dice che:
+			- $X$ è _continua_ se 
+				- $$\exists f_{X}: \mathbb{P}(a\le X\le b)=\int_{a}^{b}f_{X}(x)\ dx$$
+		- E appunto si dice continua perché assume valori su un insieme continuo e la sua funzione di ripartizione è definita continua _non a scalini_.
+	- ## Richiamo:
+		- $F_{X}$ è sempre continua a dx.
+		- $F_{X}(x)=F_{X}(x^{-})=p_{X}(x)=0$ e ciò vuol dire che $F(x)$ è continua se $X$ è una V.A continua.
+	- ## OSS:
+		- Se $a=b$ vuol dire che $\mathbb{P}(X=a)$ quindi $\int_{a}^{a}f_{X}=0$
+		- $$F_{X}(x):= \mathbb{P}(X\le x)= \lim_{a\to-\infty} \mathbb{P}(a\le X\le b)= \lim_{a\to -\infty}\int_{a}^{b} f_{X}(x)\  dx=$$
+		- $$=\int_{- \infty}^{b} f_{X}(x)\ dx$$
+	- ## Casi particolari:
+		- $\mathbb{P}(a< X \le b)= \mathbb{P}(a\le X \le b)=\int_{a}^{b}f_{X}(x)=F_{X}(b)-F_{X}(a)$ (sono compresi tutti gli intervalli di inclusione) siccome la funzione è continua in tutti i punti quindi non cambierebbe includere o meno $a$ o $b$ nell’intervallo di integrazione.
+		- $\mathbb{P}(X\le x)=\mathbb{P}(X<x)=F_{X}(x)$ e di conseguenza:
+			- $$\mathbb{P}(X\ge x)=1-\mathbb{P}(X\le x)=1-F_{X}(x)=1-\int_{-\infty}^{x}f_{X}(x)=$$
+			- $$=\int_{-\infty}^{\infty}f_{X}(x)-\int_{-\infty}^{x}f_{X}(x)=\int_{x}^{\infty}f_{X}(x)$$
+	- ## ES:
+		- $$B=[-1,0]\cup (2,3]\cup [5,\infty)$$
+			- Dove $B\subset \mathbb{R}$
+		- $$\mathbb{P}(X\in B)=\int_{-1}^{0} f_{X}(x)+\int_{2}^{3} f_{X}(x)+\int_{5}^{\infty} f_{X}(x) \ \ dx$$
+	- ## ES:
+		- $$f(x)=\begin{cases}1& x\in [0,1] \\ 0& altrimenti\end{cases}$$
+		- #grafico
+		- Definisco poi una funzione $\tilde{f}(x)$ come:
+			- $$\tilde{f}(x)=\begin{cases}f(x) & x\ne \frac{1}{2 } \\ 0 & x=\frac{1}{2 } \end{cases}$$
+			- Il grafico è uguale a quello precedente tranne nel punto $x=\frac{1}{2 }$ dove sarà uguale a $0$
+		- $$\int_{-\infty}^{\infty} \tilde{f}(x)= \int_{-\infty}^{\frac{1}{2}} \tilde{f}(x)\ + \int_{\frac{1}{2 }}^{\infty} \tilde{f}(x)=1$$
+		- Da ciò risulta che avere queste due densità diverse non cambia il risultato.
+		- Se prendessi per esempio: $0\le a< \frac{1}{2}<b\le 1$
+			- $$\int_{a}^{b} f(x)=\int_{a}^{b} \tilde{f}(x)=$$
+	- ## OSS:
+		- Data una V.A continua _la sua densità non è unica_, in particolare:
+			- Se $g$ è una funzione uguale ad $f_{X}$ a meno di un insieme finito di valori, allora anche $g$ è una densità
+	- ## ES:
+		- Si riprende l’esempio inziale di $X=$ tempo di vita di un componente.
+		- $$f_{X}(x)=\begin{cases}0 &x<0 \\ e^{-x} & x\ge 0\end{cases}$$
+		- #Grafico
+		- $$x\le0: F_{X}(x)=\int_{-\infty}^{x}f_{X}(y)\ dy=0$$
+		- $$x>0: F_{X}(x)=\int_{-\infty}^{x}f_{X}(y)\ dy= \int_{-\infty}^{0}f_{X}(y)\ dy+\int_{0}^{x}f_{X}(y)\ dy=$$
+		- $$=\int_{0}^{x}e^{-y}\ dy=[-e^{-x}]_{0}^{x}=1-e^{-x}$$
+		- Risulta quindi che:
+			- $$F_{X}(x)=\begin{cases}0 & x\le 0\\ 1-e^{-x}& x>0\end{cases}$$
+		- ### Variante:
+			- Far si che la componente possa avere un difetto di fabbrica con $\mathbb{P}>0$
+				- $$p_{X}(x)=\mathbb{P}(X=0)=p>0$$
+			- $$\mathbb{P}(X\in [a,b])=\begin{cases} \int_{a}^{b} f_{X}(x)\ dx &0\notin [a,b]\\ \int_{a}^{b} f_{X}(x)\ dx  + p& 0\in [a,b]\end{cases}$$
+			- #grafico 
+			- Per far si che questa cosa rispetti le proprietà ho la necessità che 
+				- $$\int_{-\infty}^{\infty} f_{X}(x)\ dx + p=1$$
+				- Quindi: $$\int_{-\infty}^{\infty} f_{X}(x)\ dx\ne 1$$
+			- Si potrebbe quindi porre:
+				- $$f_{X}(x)=\begin{cases}0 & x<0 \\(1-p)e^{-x}  & x\ge 0\end{cases}$$
+				- Se $x<0: F_{X}(x)=\mathbb{P}(X\le 1)=\int_{-\infty}^{x}f_{X}(x)\ dx=0$
+				- Se  $x=0: F_{X}(0)=\mathbb{P}(X\le 0)=\mathbb{P}(X=0)+\mathbb{P}(X\le 0)=p$
+					- Per l’ipotesi iniziale.
+				- Se 
+					- $$x>0: F_{X}(0)=\mathbb{P}(X\le x)=\mathbb{P}(X<0)+\mathbb{P}(0\le X\le x)=p+\int_{0}^{x}=$$
+					- $$=p+(1-p)\int_{0}^{x}e^{-y}=$$
+					- $$=p+(1-p)*(1-e^{-x})$$
+					- #grafico
+				- Quindi la [[Funzione di ripartizione]] risulta essere:
+					- $$F_{X}(x)=\begin{cases}0 & x<0  \\ p+(1-p)(1-e^{-x}) & x\ge0\end{cases}$$
 - # Link Utili: 
 	- 
