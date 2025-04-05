@@ -1,0 +1,76 @@
+---
+tags:
+  - TODO
+aliases:
+  - allocazione contigua
+  - allocazione statica
+  - allocazione dinamica
+  - allocazione a partizioni fisse
+data: "`2025-04-05 18:52`"
+---
+- # Def:
+	- Reperisce ed assegna uno spazio di memoria fisica ad un programma che viene attivato oppure ad altri programmi che durante l’esecuzione richiedono memoria aggiuntiva.
+- # Allocazione contigua:
+	- Si assegna uno spazio di memoria formato da celle consecutive
+- # Allocazione statica:
+	- Un processo mantiene la propria area di memoria fino alla sua terminazione.
+	- Non può essere riallocato un processo durante l’esecuzione.
+- # Allocazione dinamica:
+	- Durante l'esecuzione, un processo può essere spostato all'interno della memoria.
+	- ## Strutture dati:
+		- Si necessitano di strutture dati per tenere traccia della memoria libera e occupata.
+		- ### mappa di bit:
+			- La memoria è suddivisa in un’unica allocazione.
+			- Ad ongi unità di allocazione è associato un bit nella bitmap 
+			- Ogni bit a 0 indica che la cella è libera, 1 che è occupata.
+			- ![[Pasted image 20250320163159.png]]
+			- Questa struttura dati ha il vantaggio di avere una dimensione fissa calcolabile all’inizio; ma per individuare uno spazio di memoria di dimensione $k$ unità, è necessario cercare una sequenza di $k$ bit 0 consecutivi e questa operazione è $O(m)$ costosa dove $m$ è il numero di celle di memoria.
+		- ### Lista con puntatori:
+			- Ogni nodo della lista sono i blocchi di memoria allocati e liberi
+			- Ogni nodo specifica:
+				- Se si tratta di un [[Concorrenza#^68dcd8|processo]] (P) o di un elemento libero (hole, H)
+				- La dimensione (inizio/fine) del segmento.
+			- ![[Pasted image 20250320163825.png]]
+			- #### Allocazione:
+				- Viene selezionato un blocco libero suddiviso in due parti:
+					- Un blocco processo di dimensione necessaria
+					- Un blocco libero di dimensione rimanente da quella iniziale.
+				- Se la dimensione del processo è uguale a quella del blocco scelto, si crea solo un nuovo blocco processo.
+				- ![[Pasted image 20250320164035.png]]
+			- #### Deallocazione:
+				- A seconda dei blocchi vicini si può unire il blocco deallocato con un blocco libero adiacente oppure si crea un nuovo blocco libero.
+				- L’operazione si può fare in un tempo $O(1)$:
+					- Usando liste doppiamente concatenate.
+				- ![[Pasted image 20250320164158.png]]
+			- #### Selezione di un blocco libero:
+				- ##### First fit:
+					- Scorre la lista dei blocchi liberi fino a quando non trova il primo segmento vuoto grande abbastanza da contenere il processo
+				- ##### Next fit:
+					- Come First Fit, ma invece di ripartire sempre dall'inizio, parte dal punto dove si era fermato all'ultima allocazione.
+				- ##### Best fit:
+					- Sceglie il blocco libero più piccolo che può contenere il processo.
+					- Ma questo crea un sacco di blocchi piccoli e quindi frammentazione.
+				- ##### Worst fit:
+					- Sceglie il blocco libero più grande.
+					- Questa strategia è quella che crea meno frammentazione ma crea problemi quando si vogliono allocare processi di grandi dimensioni.
+- # Allocazione a partizioni fisse:
+	- La memoria è divisa in partizioni di dimensioni fisse.
+	- Ogni processo viene caricato in una delle partizioni libere che ha dimensione sufficiente a contenerlo
+	- è una allocazione statica e contigua.
+	- Spreca della memoria perché se un processo richiede più memoria di quella che è disponibile in una partizione, non può essere caricato quindi necessita di allocarne altra.
+		- Si ha quindi un problema di _frammentazione interna_.
+	- ![[Pasted image 20250320160531.png]]
+	- è possibile usare una coda per ogni partizione per gestire i processi in attesa di essere caricati.
+- # Allocazione a partizioni dinamiche:
+	- La memoria è divisa in partizioni di dimensioni variabili.
+	- Ogni processo viene caricato in una partizione libera che ha dimensione sufficiente a contenerlo.
+	- è una allocazione statica e contigua.
+	- Si ha un problema di [[frammentazione esterna]].
+		- ![[Pasted image 20250320161357.png|600]]
+	- Per risolvere il problema della frammentazione esterna si può usare la _compattazione_ della memoria.
+	- # Compattazione della memoria:
+		- Consiste nello spostare in memoria tutti i processi in modo tale da colmare tutti gli spazi non occupati.
+		- Il problema è che è un operazione onerosa perché serve copiare nella memoria fisica un sacco di dati, inoltre i processi devono essere fermi durante la compattazione.
+		- ![[Pasted image 20250320162932.png|650]]
+- # Link Utili:
+	- 

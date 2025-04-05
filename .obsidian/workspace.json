@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria/Gestione della memoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Variabili aleatorie"
+              "title": "Gestione della memoria"
             }
           },
           {
-            "id": "b046e1b3bae6b31e",
+            "id": "725f38a83cb5837d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Analisi/modulo2/Integrali.md",
+                "file": "Allocazione della memoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,10 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Integrali"
+              "title": "Allocazione della memoria"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -87,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "LL(1)",
+                "query": "reference",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -231,14 +232,22 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "725f38a83cb5837d",
   "lastOpenFiles": [
-    "Primo Anno/Analisi/modulo2/Integrali.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria/Gestione della memoria.md",
+    "Allocazione della memoria.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria",
+    "Pasted image 20250405184019.png",
+    "Pasted image 20250405183343.png",
+    "Pasted image 20250405182355.png",
     "Homepage.md",
-    "distribuzioni notevoli di variabili aleatorie discrete.md",
+    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi.md",
+    "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/distribuzioni notevoli di variabili aleatorie discrete.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+    "Primo Anno/Analisi/modulo2/Integrali.md",
     "Primo Anno/Analisi/modulo1/Taylor per le funzioni elementari.md",
-    "Sicurezza nei sistemi operativi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
     "Secondo Anno/Reti di Calcolatori/Wireless.md",
@@ -258,19 +267,12 @@
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Mezzo fisico di trasmissione.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Rete a commutazione di pacchetto.md",
     "Secondo Anno/Reti di Calcolatori/intro livello 1/Topologia di rete.md",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Servizi orientati alla comunicazione e non.md",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Scheda di rete.md",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/reti a commutazione di circuito.md",
-    "Secondo Anno/Reti di Calcolatori/intro livello 1/Componenti di rete.md",
     "immagini/Pasted image 20250322170726.png",
     "immagini/Pasted image 20250325185756.png",
     "immagini/Pasted image 20250325185556.png",
     "immagini/Pasted image 20250325174433.png",
     "immagini/Pasted image 20250325174349.png",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso",
-    "immagini/Pasted image 20250324170801.png",
-    "immagini/Pasted image 20250324165436.png",
-    "immagini/Pasted image 20250322171533.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/desktop.ini",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie",
     "latexsheet-a4.pdf",
@@ -278,7 +280,6 @@
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

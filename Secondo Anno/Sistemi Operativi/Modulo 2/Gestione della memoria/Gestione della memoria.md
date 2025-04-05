@@ -53,70 +53,7 @@ data: "`2025-03-13 17:18`"
 	- Ciò permette di avere eseguibili più compatti, risparmiare di conseguenza la memoria e aggiornare automaticamente delle versioni delle librerie che verranno caricate all’attivazione successiva dei programmi 
 	- `Dlopen` consente di caricare librerie dinamiche a runtime.
 		- Ed è il metodo con cui vengono caricati i _plug-In_
-- # Allocazione:
-	- Reperisce ed assegna uno spazio di memoria fisica ad un programma che viene attivato oppure ad altri programmi che durante l’esecuzione richiedono memoria aggiuntiva.
-	- ## Allocazione contigua:
-		- Si assegna uno spazio di memoria formato da celle consecutive
-	- ## Allocazione statica:
-		- Un processo mantiene la propria area di memoria fino alla sua terminazione.
-		- Non può essere riallocato un processo durante l’esecuzione.
-	- ## Allocazione dinamica:
-		- Durante l'esecuzione, un processo può essere spostato all'interno della memoria.
-		- ### Strutture dati:
-			- Si necessitano di strutture dati per tenere traccia della memoria libera e occupata.
-			- #### mappa di bit:
-				- La memoria è suddivisa in un’unica allocazione.
-				- Ad ongi unità di allocazione è associato un bit nella bitmap 
-				- Ogni bit a 0 indica che la cella è libera, 1 che è occupata.
-				- ![[Pasted image 20250320163159.png]]
-				- Questa struttura dati ha il vantaggio di avere una dimensione fissa calcolabile all’inizio; ma per individuare uno spazio di memoria di dimensione $k$ unità, è necessario cercare una sequenza di $k$ bit 0 consecutivi e questa operazione è $O(m)$ costosa dove $m$ è il numero di celle di memoria.
-			- #### Lista con puntatori:
-				- Ogni nodo della lista sono i blocchi di memoria allocati e liberi
-				- Ogni nodo specifica:
-					- Se si tratta di un [[Concorrenza#^68dcd8|processo]] (P) o di un elemento libero (hole, H)
-					- La dimensione (inizio/fine) del segmento.
-				- ![[Pasted image 20250320163825.png]]
-				- ##### Allocazione:
-					- Viene selezionato un blocco libero suddiviso in due parti:
-						- Un blocco processo di dimensione necessaria
-						- Un blocco libero di dimensione rimanente da quella iniziale.
-					- Se la dimensione del processo è uguale a quella del blocco scelto, si crea solo un nuovo blocco processo.
-					- ![[Pasted image 20250320164035.png]]
-				- ##### Deallocazione:
-					- A seconda dei blocchi vicini si può unire il blocco deallocato con un blocco libero adiacente oppure si crea un nuovo blocco libero.
-					- L’operazione si può fare in un tempo $O(1)$:
-						- Usando liste doppiamente concatenate.
-					- ![[Pasted image 20250320164158.png]]
-				- ##### Selezione di un blocco libero:
-					- ###### First fit:
-						- Scorre la lista dei blocchi liberi fino a quando non trova il primo segmento vuoto grande abbastanza da contenere il processo
-					- ###### Next fit:
-						- Come First Fit, ma invece di ripartire sempre dall'inizio, parte dal punto dove si era fermato all'ultima allocazione.
-					- ###### Best fit:
-						- Sceglie il blocco libero più piccolo che può contenere il processo.
-						- Ma questo crea un sacco di blocchi piccoli e quindi frammentazione.
-					- ###### Worst fit:
-						- Sceglie il blocco libero più grande.
-						- Questa strategia è quella che crea meno frammentazione ma crea problemi quando si vogliono allocare processi di grandi dimensioni.
-	- ## Allocazione a partizioni fisse:
-		- La memoria è divisa in partizioni di dimensioni fisse.
-		- Ogni processo viene caricato in una delle partizioni libere che ha dimensione sufficiente a contenerlo
-		- è una allocazione statica e contigua.
-		- Spreca della memoria perché se un processo richiede più memoria di quella che è disponibile in una partizione, non può essere caricato quindi necessita di allocarne altra.
-			- Si ha quindi un problema di _frammentazione interna_.
-		- ![[Pasted image 20250320160531.png]]
-		- è possibile usare una coda per ogni partizione per gestire i processi in attesa di essere caricati.
-	- ## Allocazione a partizioni dinamiche:
-		- La memoria è divisa in partizioni di dimensioni variabili.
-		- Ogni processo viene caricato in una partizione libera che ha dimensione sufficiente a contenerlo.
-		- è una allocazione statica e contigua.
-		- Si ha un problema di [[frammentazione esterna]].
-			- ![[Pasted image 20250320161357.png|600]]
-		- Per risolvere il problema della frammentazione esterna si può usare la _compattazione_ della memoria.
-		- ## Compattazione della memoria:
-			- Consiste nello spostare in memoria tutti i processi in modo tale da colmare tutti gli spazi non occupati.
-			- Il problema è che è un operazione onerosa perché serve copiare nella memoria fisica un sacco di dati, inoltre i processi devono essere fermi durante la compattazione.
-			- ![[Pasted image 20250320162932.png|650]]
+- 
 - # Paginazione:
 	- _Riduce il fenomeno di frammentazione interna e elimina la frammentazione esterna._
 	- _Lo spazio di indirizzi logici_ viene diviso in _pagine_ di dimensione fissa.
@@ -193,34 +130,17 @@ data: "`2025-03-13 17:18`"
 		- Nella paginazione su richiesta si fa swap solo delle pagine che servono.
 	- ## Gestione page fault:
 		- Quando non ci sono frame liberi serve liberarne uno e si sceglie di eliminare la pagina _meno utile_ usando un algoritmo di rimpiazzamento:
+		- ### Stringa di riferimenti:
+			- Una sequenza di riferimenti in memoria che poi sono i tutti i numeri di pagina.
+		- ### Anomalia di Belady:
+			- Non è detto che aumentando il numero di frame allora diminuisca il numero di page fault.
 		- ### Algoritmi di sostituzione/rimpiazzamento:
 			- Si invalida la pagina da togliere facendo in modo che non venga più considerata in memoria e se un processo tenta di accedervi è come se non la vedesse.
 			- Poi si aggiorna la frame table con il frame libero.
 			- L’algoritmo minimizza il numero di _page fault_ trovando quindi la pagina meno utile in questo momento.
 			- #### Valutazione:
 				- Gli algoritmi vengono valutati esaminando come si comportano quando applicati ad una _stringa di riferimenti_ in memoria.
-			- #### Stringa di riferimenti:
-				- Una sequenza di riferimenti in memoria che poi sono i tutti i numeri di pagina.
-			- #### FIFO:
-				- Butta via la pagina che è stata caricata per prima in memoria.
-				- Però il fatto che una pagina sia stata caricata per prima non significa che non sarà più usata.
-				- ![[Pasted image 20250321111403.png|700]]
-			- #### Anomalia di Belady:
-				- Non è detto che aumentando il numero di frame allora diminuisca il numero di page fault.
-			- #### MIN:
-				- Si sceglie la pagina che verrà acceduta nel futuro più lontano.
-				- Questo algoritmo garantisce il minimo numero di page fault.
-				- ![[Pasted image 20250321111935.png]]
-			- #### LRU (least recently used):
-				- Si sceglie la pagina che è stata acceduta meno recentemente.
-				- è basato sul presupposto che la distanza tra due riferimenti successivi alla stessa pagina non vari eccessivamente.
-				- ![[Pasted image 20250321112249.png]]
-				- Per fare si che funzioni l’MMU dovrebbe tenere traccia di tutti i riferimenti fatti ad ogni pagina usando un contatore che viene incrementato ad ogni accesso in memoria. 
-				- Questo però è molto costoso perché si necessiterebbe di controllare l’overflow del contatore o averne uno molto alto. 
-				- ##### Approssimare l’algoritmo
-					- Per approssimare questo algoritmo si tiene conto se una pagina è stata acceduta impostandone i reference bit a 1 e poi periodicamente si controlla quali siano state accedute e si resetta il bit.
-					- 
-			- #### A Stack:
+			- #### algoritmi a Stack:
 				- Data la stringa di riferimenti $s$ 
 				- Indico con $S_{t}(s,A,m)$ l’insieme delle pagine nella memoria centrale al tempo $t$ dell’algoritmo $A$ data una memoria di  $m$ frame
 				- Quindi un algoritmo è detto _a stack_ se per ogni stringa $s$ e tempo $t$ si ha che:
@@ -233,6 +153,52 @@ data: "`2025-03-13 17:18`"
 						- Se $p$ appartiene al secondo e non al primo allora c’è page fault in entrambi.
 						- Se $p$ non appartiene a nessuno dei due allora non c’è page fault in entrambi.
 							- Quindi aumentando il numero di frame non si ha un aumento di _page fault_.
-					- 
+			- #### FIFO:
+				- Butta via la pagina che è stata caricata per prima in memoria.
+				- Però il fatto che una pagina sia stata caricata per prima non significa che non sarà più usata.
+				- ![[Pasted image 20250321111403.png|700]]
+			- #### MIN:
+				- Si sceglie la pagina che verrà acceduta nel futuro più lontano.
+				- Questo algoritmo garantisce il minimo numero di page fault.
+				- ![[Pasted image 20250321111935.png|650]]
+			- #### LRU (least recently used):
+				- Si sceglie la pagina che è stata acceduta meno recentemente.
+				- è basato sul presupposto che la distanza tra due riferimenti successivi alla stessa pagina non vari eccessivamente.
+				- ![[Pasted image 20250321112249.png|650]]
+				- Per fare si che funzioni l’MMU dovrebbe tenere traccia di tutti i riferimenti fatti ad ogni pagina usando un contatore che viene incrementato ad ogni accesso in memoria. 
+				- Questo però è molto costoso perché si necessiterebbe di controllare l’overflow del contatore o averne uno molto alto. 
+				- ##### Approssimare l’algoritmo
+					- ###### Additional-Reference-Bit-Algorithm
+						- Per approssimare questo algoritmo si tiene conto se una pagina è stata acceduta impostandone i reference bit a 1 e poi periodicamente si controlla quali siano state accedute e si resetta il bit.
+						- ![[Pasted image 20250405183343.png|650]]
+					- ###### Second chance algorithm:
+						- Corrisponde ad un caso particolare dell’algoritmo precedente dove la dimensione della “storia” è 1
+						- Le pagine in memoria vengono gestite come una lista circolare,
+						- Partendo dalla posizione successiva all’ultima pagina caricata, la lista viene scandita secondo la seguente regola:
+							- Se la pagina _è stata acceduta_ il reference bit viene messo a 0  
+							- Altrimenti la pagina selezionata diventa la “vittima”.
+						- ![[Pasted image 20250405184019.png|700]]
+				- ##### Teorema: 
+					- L’algoritmo _LRU_ è a stack.
+				- ##### Dim:
+					- Ogni riferimento alla stringa dei riferimenti sposta la pagina in cima allo stack, facendo scorrere le successive
+						- ![[Pasted image 20250405182355.png|300]]
+					- Poi l’algoritmo tiene in memoria le prime $m$ pagine dello stack
+					- Quindi l’algoritmo _è a stack_ siccome l’insieme delle $m$ pagine in cima è un sottoinsieme delle $m+1$ pagine in cima allo stack.
+			- #### LFU (least frequently used):
+				- Mantengo un contatore del numero di accessi ad una pagina 
+				- La frequenza è il valore del contatore diviso il tempo di permanenza in memoria
+				- La pagina con valore minore viene eliminata.
+	- ## Allocazione:
+		- Un algoritmo di allocazione sceglie quanti frame assegnare ad ogni singolo [[Concorrenza#^68dcd8|processo]]
+		- _locale_: ogni processo ha un insieme proprio di frame è ciò è poco flessibile.
+		- _globale_: tutti i processi possono allocare tutti i frame presenti nel sistema, può portare a _trashing_.
+- # Trashing:
+	- Un processo o un sistema si dice che è in _trashing_ quando spende più tempo per la paginazione che per l’esecuzione.
+	- ## Cause:
+		- In un sistema con allocazione globale, avviene perché i processi provano continuamente a rubarsi i frame a vicenda.
+			- Ovvero non riescono a tenersi in memoria i frame utili a breve termine e quindi generano dei _page fault_ frequentemente.
+	- ## ES:
+		- 
 - # Link Utili:
 	- 
