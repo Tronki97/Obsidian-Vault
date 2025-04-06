@@ -1,11 +1,11 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - allocazione contigua
   - allocazione statica
   - allocazione dinamica
   - allocazione a partizioni fisse
+  - compattazione della memoria
 data: "`2025-04-05 18:52`"
 ---
 - # Def:

@@ -1,0 +1,62 @@
+---
+tags: []
+aliases:
+  - first come first served
+  - SSTF
+  - shortest seek time first
+  - LOOK
+  - C-LOOK
+data: "`2025-04-06 22:52`"
+---
+- ## Gestione software dei dischi:
+	- Il gestore potrebbe avere numerose richieste pendenti da parte di vari processi del sistema.
+	- Il sistema sarà più efficiente se le richieste pendenti verranno evase con un ordine che minimizza il numero di operazioni lunghe (come la _seek_).
+- ## First come, first served (FIFO):
+	- Politica fair, non minimizza le _seek_, non genererà mai [[Proprietà di un programma#^054a32|starvation]].
+	- ### ES:
+		- Coda richieste: 98,184, 39, 121, 14, 125, 65, 68
+		- Posizione iniziale: 54.
+		- ![[Pasted image 20250406221257.png]]
+		- Lunghezza totale di seek: 639
+		- Lunghezza media: 79.88
+- ## Shortest Seek Time First (SSTF):
+	- Selezione prima la richiesta che prevede il minor spostamento della testina dalla posizione attuale.
+	- Nel caso di equidistanze la direzione scelta è casuale.
+	- Potrebbe provocare [[Proprietà di un programma#^054a32|starvation]]
+	- ### ES:
+		- Coda delle richieste: 98, 184, 39, 121, 14, 125, 65, 68
+		- Posizione iniziale: 54
+		- ![[Pasted image 20250406221610.png]]
+		- Lunghezza totale di seek: 238
+		- Lunghezza media: 29.75
+- ## LOOK:
+	- Detto anche _algoritmo dell’ascensore_
+	- Ad ogni istante la testina è associata ad una direzione.
+	- La testina si sposta ad ogni richiesta in quella direzione.
+	- Finite le richieste con quella direzione essa viene invertita e si eseguono quelle richiete.
+	- ### Caratteristiche:
+		- Efficiente
+		- Tempo medio di accesso non omogeneo in quanto vengono privilegiate le tracce centrali.
+		- Parzialmente esente da [[Proprietà di un programma#^054a32|starvation]]
+	- ### ES:
+		- Coda delle richieste: 98, 184, 39, 121, 14, 125, 65, 68
+		- Posizione iniziale: 54
+		- ![[Pasted image 20250406222219.png]]
+		- Lunghezza totale di seek: 210
+		- Lunghezza media: 26.25
+- ## C-LOOK:
+	- Funziona come i _LOOK_ ma la scansione avviene in una sola direzione.
+	- Quando si raggiunge l’ultima richiesta in una direzione, la testina si sposta direttamente sulla prima richiesta.
+	- ### ES:
+		- Coda delle richieste: 98, 184, 39, 121, 14, 125, 65, 68
+		- Posizione iniziale: 54
+		- ![[Pasted image 20250406222510.png]]
+		- Lunghezza totale di seek: 325
+		- Lunghezza media: 40.63
+- ## Problemi:
+	- Nelle ultime 2 si rischia che la testina non si muova per un bel po’ di tempo, per esempio nel caso in cui un processo continui a leggere sullo stesso cilindro.
+	- ### Soluzione:
+		- La coda delle richieste viene suddivisa in 2 sotto-code
+		- Mentre lo scheduler sta soddisfacendo le richieste di una coda, le richieste che arrivano vengono inserite nell’altra ed appena una coda si esaurisce si inverte con l’altra.
+- # Link Utili:
+	- 

@@ -1,0 +1,44 @@
+---
+tags: []
+aliases:
+  - SSD
+  - parametri dei dischi
+  - velocità di rotazione
+  - tempo di seek
+  - velocità di trasferimento
+  - ritardo rotazionale
+  - tempo di trasferimento
+  - tempo di accesso
+data: "`2025-04-06 21:57`"
+---
+- # SSD (solid state disk):
+	- Non sono soggetti a problemi meccanici.
+	- Consumano meno energia rispetto ai dischi rotazionali
+	- Hanno un numero massimo di cicli di scrittura
+	- La velocità di lettura è maggiore rispetto a quella di scrittura.
+	- Legge a blocchi e scrive a _banchi_(molti blocchi insieme).
+	- Accesso uniforme su tutto lo spazio di memoria
+- # Caratteristiche dei dischi:
+	- ## Struttura di un disco:
+		- Un disco è composto da _piatti_ che sono suddivisi in _tracce_ che a loro volta sono divise in _settori_
+	- ## Parametri:
+		- ### Velocità di rotazione:
+			- $r$ e viene espressa in $rpm$ (_revolutions per minute_)
+			- Di solito: 5400, 7200, 10000 _rpm_
+		- ### Tempo di seek:
+			- $T_{s}$ rappresenta il tempo medio affinché la testina si sposti sulla traccia desiderata.
+			- Di solito nell’ordine di 8-10 ms
+		- ### Velocità di trasferimento:
+			- $V_{r}$ espressa in _byte al secondo_.
+		- ### Ritardo rotazionale:
+			- Tempo necessario affinché il _settore_ desiderato arrivi sotto la testina di lettura.
+			- Di solito è:
+				- $$\frac{1}{2}r$$
+		- ### Tempo di trasferimento:
+			- Dipende dalla quantità di dati $b$ da leggere (supponendo siano tutti sulla stessa traccia)
+			- Uguale a: 
+				- $$\frac{b}{V_{r}}$$
+		- ### Tempo di accesso:
+			- Tempo necessario per leggere un settore del disco, composto da _tempo di seek_, _ritardo rotazionale_ e _tempo di trasferimento_
+- # Link Utili:
+	- 

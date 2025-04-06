@@ -46,7 +46,7 @@ data: "`2024-10-10 10:56`"
 	- nel [[Sistema operativo]] tante attività vengono eseguite più o meno contemporaneamente dal processore
 	- serve il _modello di riferimento_ che è basato sul concetto di _processo_ 
 	- ## gestire _processi multipli_:
-		- ### multiprogramming:
+		- ### multiprogramming: ^ecbe27
 			- più processi su un solo processori
 			- parallelismo apparente
 		- ### Multiprocessing:

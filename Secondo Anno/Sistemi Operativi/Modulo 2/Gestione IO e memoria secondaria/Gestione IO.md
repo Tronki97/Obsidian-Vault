@@ -1,0 +1,41 @@
+---
+tags: []
+aliases:
+  - SAN
+data: "`2025-04-06 21:26`"
+---
+- # Interfacce:
+	- ![[Pasted image 20250406212736.png]]
+- # Interfaccia di comunicazione a blocchi:
+	- I dati sono scritti/letti a blocchi tipicamente da $512-1024B$ 
+	- ## raw I/O:
+		- Operazioni di `read, write, seek` per blochi.
+	- ## accesso tramite file system:
+		- Operazioni di `read, write, seek` su file.
+		- Il driver per questi dispositivi però fornisce solo accesso raw.
+	- ## Accesso tramite memory-mapped I/O:
+		- Il contenuto di un file viene mappato in memoria
+		- Accesso tramite istruzioni di load/store del processore
+- # Interfaccia di comunicazione a caratteri:
+	- I dati vengono letti/scritti un carattere alla volta
+	- ## raw I/O
+		- operazioni di `get/put` di un singolo carattere.
+	- ## bufferizzazione:
+		- Lettura/scrittura di “una linea alla volta”
+- # Progettazione del sistema I/O:
+	- Esistono varie tecniche per gestire i dispositivi di I/O 
+	- ## Buffering:
+		- Utile per gestire una differenza di velocità tra [[Problemi classici di concorrenza#^1ff6a7|produttore/consumatore]] di un certo flusso di dati.
+		- Per gestire la differenza di dimensioni nell’unità di trasferimento.
+		- 
+	- ## Caching:
+		- Mantiene nella memoria primaria una copia dei dati che si trovano nella memoria secondaria.
+		- Differisce dal buffering perché mantiene una _copia_ dell’informazione e non un’_istanza_ come nel buffering
+	- ## Spooling:
+		- è un buffer che mantiene output per un dispositivo che non può accettare flussi di dati distinti
+		- Come le stampanti.
+	- ## I/O scheduling:
+- # SAN (storage area network):
+	- ![[Pasted image 20250406214255.png|700]]
+- # Link Utili:
+	- 

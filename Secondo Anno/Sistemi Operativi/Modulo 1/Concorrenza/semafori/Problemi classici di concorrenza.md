@@ -1,7 +1,7 @@
 ---
-tags: []
+tags: 
 aliases:
-  - produttore/consmatore
+  - produttore/consumatore
   - buffer limitato
   - filosofi a cena
   - filosofi
@@ -11,7 +11,7 @@ data: "`2024-11-07 09:19`"
 ---
 - # Problemi classici:
 	- questi problemi rappresentano le interazioni tipiche dei processi.
-	- ## produttore/consumatore:
+	- ## produttore/consumatore: ^1ff6a7
 		- __producer__: genera _valori_
 		- __consumer__: consuma i _valori_
 		- __valori__: è una variabile condivisa dai due soggetti. 
