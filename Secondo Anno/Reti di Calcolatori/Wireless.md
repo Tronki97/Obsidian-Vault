@@ -5,82 +5,70 @@ aliases:
 data: "`2025-03-31 11:14`"
 ---
 - # Argomento:
-	-  tutti i classici protocolli spesso ricevono dei side-effect da queste reti e quindi necessitano di aggiustamenti.
-	- Un onda radio si ottiene facendo passare della corrente alternata in un filo conduttore ottenendo un campo elettromagnetico. Quest onda è definita da un’onda sinusoidale
-		- L’energia è proporzionale alla carica elettrica che si sposta nel filo.
-	- ## Ampiezza :
-		- Segnali con ampiezza più alta tendono ad andare più lontano in quanto più tempo vengono trasmessi più perdono potenza infatti i segnali radio hanno un determinato raggio.
-			- La potenza è data dalla quantità di energia investita diviso per il tempo 
-			- Ma più spesso si indica come prodotto tra _corrente_ e _tensione_.
-	- ## Frequenza :
-		- Correlata alla lunghezza d’onda.
-			- Calcolabile come: $\frac{c}{f}$ dove $c$ è la velocità della luce.
-		- L’insieme delle frequenze utilizzabili da un dispositivo è la _banda o canale di trasmissione_ 
-		- Si misura in _Hertz (Hz)_
-		- La resa massimo di trasformazione da corrente a onda radio (e viceversa) è determinata dalla dimensione dell’antenna stessa che deve essere circa $1, \frac{1}{2}, \frac{1}{4}$ della lunghezza d’onda.
-	- ## Area di copertura della propagazione radio:
-		- Rappresenta il raggio di copertura di un’antenna quindi fino a quando quell’antenna riesce a trasmettere e ricevere il segnale.
-		- Presenta una legge di decadimento del segnale radio che è proporzionale al quadrato della distanza. Anche se a volte a causa delle condizioni ambientali varia fino al cubo della distanza o anche di più.
-			- ![[Pasted image 20250402101053.png|400]]
-		- ### Raggio di trasmissione:
-			- Dove il segnale è ancora leggibile.
-			- Dove c’è un basso errore nella lettura del segnale.
-		- ### Raggio di ricezione:
-			- Dove l’antenna riesce a ricevere il segnale.
-			- Non c’è possibilità di comunicazione bidirezionale.
-		- ### Raggio di interferenza:
-			- Dove il segnale potrebbe non essere rilevato.
-			- Dove il segnale potrebbe essere disturbato dal rumore di fondo. 
-		- ![[Pasted image 20250402101341.png|450]]
-	- ## Shadowing:
-		- Avere un ostacolo che impedisce all’energia di passare come fosse nel vuoto, come un muro, il segnale appena si imbatte in quell’ostacolo viene riflesso e quindi perde energia siccome l’ostacolo ne ha assorbita un po’ che di solito diventa calore.
-		- Alte frequenze sono adatte per le trasmissioni a breve distanza e vengono influenzate dagli ostacoli, ma permettono di trasmette più bit al secondo 
-		- le onde a bassa frequenza sono adatte alle lunghe distanze e subiscono pochi effetti e di basso grado di interferenza dagli ostacoli.
-	- ## Fase:
-		- Rappresenta uno spostamento nel tempo misurato in periodi di onda.
-		- Usando la rotazione della trigonometria (gradi e radianti)
-		- Deve sempre avere un riferimento, quando non viene espresso si assume che sia 0.
-	- ## Singal gain
-		- ### Amplificazione del segnale
-			- _Attivo_: aggiungendo energia da fuori
-			- _Passivo_: Antenna per ottenere tutta l'energia e accumulare nel fuoco tutta l'energia, ottenendo amplificazione
-				- Antenna dei condomini
-					- Utilizzato anche amplificatore
-		- ### Perdita di segnale
-			- Utilizzata intenzionalmente con resistenza e diodi (Unica direzione, per protezione), nel wired
-			- Nel wireless abbiamo una perdita si segnale in modo naturale
-	- Voluta propagazione in linea retta di base
-		- Shadowing
-			- Rimbalza poco segnale e lo assorbe l'ostacolo
-		- Riflessione
-			- Rimbalza completamente nell'ostacolo
-			- 4 satelliti per il GPS per capire posizione nello spazio
-		- Rifrazione
-			- Modifica del segnale in vase alla densita del mezzo
-				- POssibile in acqua e in atmosfera
-		- Scattering
-		- Diffrazione
-		- Fading
-			- Dovuto al rimabalzo
-			- Segnale che c'e e che non c'e
-	- Multipath propagation
-		- Le strade piu lunghe attenuano di piu il segnale
-			- POssibile che si disturbino a vicenda le comunicazioni di uno stesso segnale
-	- VSWR
-		- Voltage standing wave radio
-			- Al cambio di impedenza abbiamo un ritorno di segnale
-		- Non tutto arriva all'antenna per essere trasmesso
-		- Rischi di bruciare il trasmettitore
-		- Distorsore delle chitarre si basa su questo
-	- EIRP
-		- Intentional radiator e Equivalent Isotropically Radiated Power
-		- Quanto effettivamente si perde arrivando all'antenna
-		- Quindi si parla piu forte ma si disturba l'ambiente circostante
-			- Si suppone che un antenna sia isotropica e si definisce un massimo essendo l'ampiezza dell'onda dell'isotropica minima rispetto alle altre antenne
-	- Se passiamo ai dB dai Watt possiamo calcolare più facilmente
-		- Decibels si basano su un segnale di riferimento
-			- E una differenza.
-- 
+    - Tutti i classici protocolli spesso ricevono dei side-effect da queste reti e quindi necessitano di aggiustamenti. Side
+    - Un'onda radio si ottiene facendo passare della corrente alternata in un filo conduttore, ottenendo così un campo elettromagnetico. Questa onda è definita da una sinusoidale onde.
+        - L'energia è proporzionale alla carica elettrica che si sposta nel filo.
+    - ## Ampiezza:
+        - Segnali con ampiezza più alta tendono ad andare più lontano, poiché trasmessi per più tempo perdono meno potenza. Questo significa che i segnali radio hanno un determinato raggio di copertura.
+            - La **potenza** è data dalla quantità di energia investita divisa per il tempo.
+            - Spesso si indica come prodotto tra corrente e tensione.
+    - ## Frequenza:
+        - Correlata alla lunghezza d'onda, calcolabile come $\frac{c}{f}$ dove $c$ è la velocità della luce.
+        - L'insieme delle frequenze utilizzabili da un dispositivo è chiamato **canale di trasmissione** o **banda**.
+        - Si misura in **Hertz (Hz)**.
+        - La resa massima di trasformazione da corrente a onda radio (e viceversa) è determinata dalla dimensione dell'antenna, che deve essere circa $1$, $\frac{1}{2}$ o $\frac{1}{4}$ della lunghezza d'onda.
+    - ## Area di copertura della propagazione radio:
+        - Rappresenta il raggio di copertura di un'antenna, cioè fino a quando quell'antenna riesce a trasmettere e ricevere il segnale.
+        - Presenta una legge di decadimento del segnale radio che è proporzionale al quadrato della distanza. A volte, a causa delle condizioni ambientali, questo decadimento può variare fino al cubo della distanza o anche di più.
+            - ![[Pasted image 20250402101053.png|400]]
+        - ### Raggio di trasmissione:
+            - Dove il segnale è ancora leggibile.
+            - Dove c'è un basso errore nella lettura del segnale.
+        - ### Raggio di ricezione:
+            - Dove l'antenna riesce a ricevere il segnale.
+            - Non c'è possibilità di comunicazione bidirezionale.
+        - ### Raggio di interferenza:
+            - Dove il segnale potrebbe non essere rilevato.
+            - Dove il segnale potrebbe essere disturbato dal rumore di fondo.
+        - ![[Pasted image 20250402101341.png|450]]
+    - ## Shadowing:
+        - Quando un ostacolo impedisce all'energia di passare come fosse nel vuoto, come un muro. Il segnale appena si imbatte in quell'ostacolo viene riflesso e quindi perde energia, che di solito diventa calore.
+        - Alte frequenze sono adatte per le trasmissioni a breve distanza e vengono influenzate dagli ostacoli. Tuttavia, permettono di trasmettere più bit al secondo.
+        - Le onde a bassa frequenza sono adatte alle lunghe distanze e subiscono pochi effetti e di basso grado di interferenza dagli ostacoli.
+    - ## Fase:
+        - Rappresenta uno spostamento nel tempo misurato in periodi di onda.
+        - Usando la rotazione della trigonometria (gradi e radianti).
+        - Deve sempre avere un riferimento, quando non viene espresso si assume che sia 0.
+    - ## Signal Gain:
+        - ### Amplificazione del segnale:
+            - **Attivo**: aggiungendo energia da fuori.
+            - **Passivo**: utilizzato per ottenere tutta l'energia e accumulare nel fuoco, ottenendo amplificazione. Ad esempio, antenne di condomini e amplificatori.
+        - ### Perdita di segnale:
+            - Utilizzata intenzionalmente con resistenze e diodi (protezione unica direzione) in connessioni wired.
+            - Nel wireless, abbiamo una perdita naturale del segnale.
+    - ## Voluta propagazione in linea retta:
+        - **Shadowing**: il segnale rimbalza poco e viene assorbito dall'ostacolo.
+        - **Riflessione**: il segnale rimbalza completamente nell'ostacolo. Ad esempio, 4 satelliti per il GPS per capire la posizione nello spazio.
+        - **Rifrazione**: modifica del segnale in base alla densità del mezzo. Possibile in acqua e in atmosfera.
+	    - **Scattering**:
+	    - **Diffrazione**:
+	    - **Fading**: dovuto al rimbalzo, il segnale che c'è e che non c'è.
+	    - **Multipath propagation**: le strade più lunghe attenuano di più il segnale. Possibile che si disturbino a vicenda le comunicazioni di uno stesso segnale.
+    - ##  VSWR:
+        - Voltage Standing Wave Ratio (Rapporto di Volo della Corrente Stazionario).
+        - Al cambiamento di impedenza, abbiamo un ritorno di segnale.
+        - Non tutto arriva all'antenna per essere trasmesso.
+        - Rischi di bruciare il trasmettitore.
+        - Distorsione delle chitarre si basa su questo principio.
+    - ## EIRP:
+        - Equivalent Isotropically Radiated Power (Potenza Elettromagnetica Radiata Isotropa).
+        - Quanto effettivamente si perde arrivando all'antenna.
+        - Si parla più forte ma si disturba l'ambiente circostante.
+            - Si suppone che un antenna sia isotropica e si definisce un massimo essendo l'ampiezza dell'onda dell'isotropica minima rispetto alle altre antenne.
+    - Se passiamo ai **dB dai Watt**, possiamo calcolare più facilmente:
+        - Decibels si basano su un segnale di riferimento. E una differenza.
+----------------------------------------------------------–
+
 - # Link Utili:
 	- 
 - # BOH:

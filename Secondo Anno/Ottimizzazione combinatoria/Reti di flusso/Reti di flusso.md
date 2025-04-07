@@ -14,7 +14,7 @@ data: "`2025-03-05 09:13`"
 	- Classico problema di minimizzazione del costo di flusso.
 - # Intro:
 	- Tutti i problemi sulle reti possono essere considerati come problemi di [[Programmazione lineare]].
-	- Si lavora con dei [[Grafi#^792110| Grafi pesati]] $G=(N,A)$, di solito diretti, che rappresentano le _Reti_. 
+	- Si lavora con dei [[Grafi#^792110|Grafi pesati]] $G=(N,A)$, di solito diretti, che rappresentano le _Reti_. 
 	- Gli _archi_ sono interpretabili come i _canali_ in cui fluiscono gli oggetti, rappresentati con grandezze:
 		- Discrete: come passeggeri o veicoli
 		- Continue: fluidi
@@ -38,7 +38,7 @@ data: "`2025-03-05 09:13`"
 				- limite inferiore ($l_{ij}$) di quantità di oggetti che possono passare per un canale
 			- _Capacità superiore_:  ^566956
 				- limite superiore ($u_ij$) di quantità di oggetti che possono passare per un canale
-		- ![[Pasted image 20250305094554.png|400]]
+		- ![[Pasted image 20250305094554.png|400]] 
 	- ## Flusso: ^784224
 		- Assegnamento di valori reali agli archi di una certa rete $G=(N,A)$
 		- Formalizzato tramite una sequenza di variabili $x_{ij}$ ed ognuno corrisponde ad un arco della rete.
@@ -69,5 +69,66 @@ data: "`2025-03-05 09:13`"
 			- Si aggiunge la seguente quantità alla [[Programmazione lineare intera (PLI)#^fbc927|funzione obiettivo]]:
 				- $$\sum\limits_{(i,j)\in A}c_{ij}*l_{ij}$$
 			- Quindi il flusso $x_{ij}$ in $H$ corrisponde a $x_{ij}+l_{ij}$ in $G$
+------------------------------------------------------------–Parte riscritta----------------------------------------------------—
+- # Problema dei router:
+    - ![[problema dei router.excalidraw]]
+    - Questo è un problema classico di minimizzazione del costo di flusso, che si occupa di trovare il modo migliore per trasportare oggetti da nodi di origine a destinazione attraverso una rete di canali con costi variabili.
+- # Intro:
+    - Tutti i problemi sulle reti possono essere considerati come problemi di [[Programmazione lineare]].
+    - Si lavora con dei [[Grafi#^792110|Grafi pesati]] $G=(N,A)$, di solito diretti, che rappresentano le _Reti_. 
+    - Gli _archi_ sono interpretabili come i _canali_ in cui fluiscono gli oggetti, che possono essere:
+        - **Discrete**: come passeggeri o veicoli
+        - **Continue**: fluidi
+    - I _Nodi_ rappresentano i punti di ingresso e uscita dei suddetti oggetti.
+- # Terminologia:
+    - ## Sbilanciamento: ^129 aaa
+        - Ad ogni nodo $i\in N$ si associa un $b_{i}$ detto _sbilanciamento_ che può essere:
+            - **Positivo**:
+                - Il nodo $i$ è di uscita ed è detto di _destinazione/pozzo_
+                - $b_i$ rappresenta la _domanda_ di $i$
+            - **Negativo**:
+                - Il nodo $i$ è di entrata ed è detto di _origine/sorgente_
+                - $-b_{i}$ rappresenta l’_offerta_ di $i$
+            - **Nullo**:
+                - Il nodo $i$ è detto di _trasferimento_.
+    - ## Archi:
+        - Ad ogni arco $(i,j)\in A$ sono associati:
+            - **Costo**: ^c 6 ffdf
+                - il costo ($c_{ij}$) per un’oggetto per l’attraversamento del canale 
+            - **Capacità inferiore**:
+                - limite inferiore ($l_{ij}$) di quantità di oggetti che possono passare per un canale
+            - **Capacità superiore**:  ^566956
+                - limite superiore ($u_{ij}$) di quantità di oggetti che possono passare per un canale
+        - ![[Pasted image 20250305094554.png|400]]
+    - ## Flusso: ^784224
+        - Assegnamento di valori reali agli archi di una certa rete $G=(N,A)$.
+        - Formalizzato tramite una sequenza di variabili $x_{ij}$, che corrispondono ad un arco della rete.
+        - **Costo**: costo complessivo di tutti i flussi presenti nella rete.
+- # Vincoli:
+    - ## Domanda e offerta globale si equivalgono:
+        - $$\sum\limits_{i\in D}b_{i}= -\sum\limits_{i\in O}b_{i}\iff \sum\limits_{i\in N}b_{i}=0$$
+            - $D=\{i \in N | b_{i} >0\}$ e $O=\{i \in N| b_{i}<0\}$
+    - ## Conservazione del flusso:
+        - $$\sum\limits_{(i,j)\in BS(i)}x_{ij}-\sum\limits_{(i,j)\in FS(i)}x_{ij}=b_{i}\ \ \ \ \ \forall i \in N$$
+            - Ovvero ciò che entra in un nodo è uguale a ciò che esce meno lo sbilanciamento.
+            - $BS(i)=\{(k,i)|(k,i)\in A\}$ insieme degli archi entranti in $i$
+            - $FS(i)= \{(i,k)|(i,k)\in A\}$ insieme degli archi uscenti da $i$
+    - ## Ammissibilità del flusso:
+        - $$l_{ij}\le x_{ij} \le u_{ij}\ \ \ (i,j)\in A$$
+- # Problemi di flusso:
+    - Rappresentano un compromesso tra:
+        - ___Complessità___:
+            - Visto che esistono vari algoritmi efficienti per risolverli anche per i più generali.
+        - ___Espressività___: 
+            - Molti problemi generici si possono esprimere come istanze di problemi di flusso.
+    - Spesso si fanno ipotesi semplificative, come imporre $l_{ij}=0$ per ogni arco, quindi le _capacità inferiori_ sono sempre nulle.
+        - Spesso fare questa ipotesi non cambia l’espressività del problema 
+        - ## Esempio (ES):
+            - Trasformare una rete $G$ in una equivalente $H$ con le capacità inferiori nulle:
+                - Si sottrae $l_{ij}$ a $b_{j}$ e a $u_{ij}$
+                - Si aggiunge $l_{ij}$ a $b_{j}$ 
+                - Si aggiunge la seguente quantità alla [[Programmazione lineare intera (PLI)#^fbc927|funzione obiettivo]]:
+                    - $$\sum\limits_{(i,j)\in A}c_{ij}*l_{ij}$$
+            - Quindi il flusso $x_{ij}$ in $H$ corrisponde a $x_{ij}+l_{ij}$ in $G$.
 - # Link Utili:  
 	- 
