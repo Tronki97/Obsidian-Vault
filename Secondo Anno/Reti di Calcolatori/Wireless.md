@@ -65,10 +65,64 @@ data: "`2025-03-31 11:14`"
         - Quanto effettivamente si perde arrivando all'antenna.
         - Si parla più forte ma si disturba l'ambiente circostante.
             - Si suppone che un antenna sia isotropica e si definisce un massimo essendo l'ampiezza dell'onda dell'isotropica minima rispetto alle altre antenne.
-    - Se passiamo ai **dB dai Watt**, possiamo calcolare più facilmente:
-        - Decibels si basano su un segnale di riferimento. E una differenza.
-----------------------------------------------------------–
-
+- # Conversione tra dBm e milliwatt:
+    - **dBi**: è il db-isotropic, la misura del guadagno passivo dell'antenna.
+        - Per avere un'antenna isotropica, questa dovrebbe avere un dipolo pari a 0. In realtà, le antenne reali concentrano l'energia in modo non isotropico, generando un guadagno passivo in una certa direzione.
+            - Il rapporto tra la potenza dell'antenna ideale isotropica e quella reale non-isotropica si esprime come il rapporto di potenze, e quindi in decibel (dB).
+                - Se un'antenna è 16 dBi, significa che concentra la potenza del segnale in modo tale che la sua energia è equivalente a $10^{(3+3)/10} = 2^2 = 4$ volte più della potenza isotropica. In termini di milliwatt (mW), ciò equivale a:
+                    - $1 \text{ mW} * 4 = 4 \text{ mW}$.
+                - Guardando il guadagno in dBi nella direzione preferenziale, si può sapere l’_EIRP_ (_Effective Isotropic Radiated Power_) dell'antenna e capire se è in regola con i limiti di potenza.
+                    - Ad esempio, se un'intential radiator trasmette 1 mW e l'antenna ha un guadagno passivo di 10 dBi, allora l'EIRP sarà $1 \text{ mW} * 10 = 10 \text{ mW}$.
+- # Potenza Monitoraggio:
+    - La sensibilità nei dispositivi moderni si trova nel range $[-90, ..., +10]$ dBm. A seconda della potenza in questo intervallo, si ha:
+        - **Signal Detection**: la capacità di capire ciò che ricevo.
+            - **Signal Detection Power (SDP)**: con quale tecnica trasmetto.
+            - **Channel Status Detection (CSD)**: capire se il canale è occupato o meno e quindi se posso trasmettere o no.
+        - **RSSI**: le tacchette del Wi-Fi su ogni dispositivo.
+            - Se due dispositivi hanno un RSSI massimo, a fondo scala, si confronta quanto ricevono con tale valore di RSSI. Questo è il tetto massimo ricevibile (pienamente sufficiente per ricevere bene). Non confrontare gli RSSI direttamente perché ogni dispositivo ha una scala diversa.
+- # Antenne:
+    - Esistono tre categorie principali di antenne:
+        - ## Omni-direzionali :
+	        - vanno in tutte le direzioni, ma non in modo omogeneo (altrimenti sarebbero isotropiche).
+		- ## Semplice dipolo:
+			 - Il guadagno passivo è causato dalla forma della radiazione, che assume la forma di una ciambella.
+				  - Esistono due tipi possibili di dipoli:
+					- A basso guadagno
+					- Ad alto guadagno
+			 - Bisogna capire quante e quali antenne usare in ogni situazione.
+			 - C'è anche il fattore del **tilt**, ossia dell'inclinazione.
+        - ## Semi-direzionali :
+	        - forma conica, utilizzate per ricevere segnali TV. Si punta verso il trasmettitore (in una posizione nota).
+        - ## Altamente-direzionali :
+	        - antenne che concentrano la radiazione in un'unica direzione.
+- # Line Of Sight (LOS):
+    - Rappresenta la linea retta che congiunge il trasmettitore e il ricevitore. Non dovrebbe esserci alcuna ostruzione lungo questa linea.
+- # Fresnel Zone:
+    - I segnali vengono diffratti, ma parte di quella diffrazione ri-converge nella direzione originale.
+        - A seconda del percorso di diffrazione, la fase dell'onda che torna e arriva all'antenna ricevente sarà additiva o inversa.
+    - Il blocco della Fresnel Zone può interrompere il link!
+        - Formule per calcolare il raggio massimo della zona di Fresnel:
+            - Non richiedono né potenza né tipo di antenna, perché la diffrazione è un fenomeno che vale sempre. La formula è sempre la stessa.
+    - Chiaramente, la zona di Fresnel non si applica in ambienti chiusi, dove c'è il rimbalzo da cui si ricava l'energia.
+    - **Curiosità**: La stessa curvatura terrestre può dimezzare la zona di Fresnel.
+- # Grafici Importanti:
+    - ## Grafico di Azimuth: 
+	    - rappresenta il segnale in dB attorno all'antenna, misurato nelle 4 direzioni cardinali. Un dipolo avrà un grafico di _Azimuth_ quasi circolare perché è omni-direzionale.
+    - ## Grafico di Elevazione: 
+	    - uguale al grafico di Azimuth, ma parte da sopra l'antenna e ci gira intorno, quindi a destra, sotto e a sinistra.
+- # Array Di Antenne:
+    - Vantaggi della ricezione usando più antenne:
+        - Migliore capacità di ricezione in condizioni difficili.
+        - Miglioramento del rapporto segnale-suono (SNR).
+    - Vantaggi della trasmissione usando più antenne:
+        - Migliore copertura della rete.
+        - Possibilità di aumentare la velocità della trasmissione.
+- # Path Loss:
+    - È espresso in dB e rappresenta una stima pessimistica della dispersione sulla base della distanza e della frequenza. La formula da ricordare è:
+    - $$ PL = 36.6 + 10 \log_{10}(F) + 20 \log_{10}(D) $$
+		- Dove:
+			 - $F$ è la frequenza in MHz.
+			 - $D$ è la distanza tra il trasmettitore e il ricevitore in km.
 - # Link Utili:
 	- 
 - # BOH:
