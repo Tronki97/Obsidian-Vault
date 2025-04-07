@@ -32,30 +32,6 @@
             }
           },
           {
-            "id": "2bc78152659e7dde",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/Wireless.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Wireless"
-            }
-          },
-          {
             "id": "39d46cb588998f1e",
             "type": "leaf",
             "state": {
@@ -85,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Wireless.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,11 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Grafi"
+              "title": "Wireless"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -280,14 +256,15 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "2bc78152659e7dde",
+  "active": "2af2586f5be6b983",
   "lastOpenFiles": [
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
+    "Homepage.md",
+    "Primo Anno/architettura degli elaboratori/Architettura HACK/Microarchitettura.md",
+    "Secondo Anno/Reti di Calcolatori/Wireless.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
     "suca.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
-    "Secondo Anno/Reti di Calcolatori/Wireless.md",
-    "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/RAID.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
@@ -320,7 +297,6 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/distribuzioni notevoli di variabili aleatorie discrete.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "Primo Anno/Analisi/modulo2/Integrali.md",
-    "Primo Anno/Analisi/modulo1/Taylor per le funzioni elementari.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/desktop.ini",
