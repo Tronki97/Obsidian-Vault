@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "98ae048090fb148d",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "5ec38602159fd4f1",
+            "id": "2bc78152659e7dde",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/Disk scheduling.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Wireless.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Disk scheduling"
+              "title": "Wireless"
             }
           },
           {
-            "id": "16c8d1b8ea01aad9",
+            "id": "39d46cb588998f1e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/RAID.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "RAID"
+              "title": "Reti di flusso"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -256,11 +255,17 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "16c8d1b8ea01aad9",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "immagini/Pasted image 20250406212736.png",
+    "Secondo Anno/Reti di Calcolatori/Wireless.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/RAID.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/Memoria secondaria.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/Gestione IO.md",
+    "Homepage.md",
+    "immagini/Pasted image 20250406212736.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/Disk scheduling.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria/Gestione della memoria.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria/Working set.md",
@@ -269,7 +274,6 @@
     "immagini/Pasted image 20250406222219.png",
     "immagini/Pasted image 20250406221610.png",
     "immagini/Pasted image 20250406221257.png",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/Gestione IO.md",
     "immagini/Pasted image 20250406214255.png",
     "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/semafori/Problemi classici di concorrenza.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Memoria secondaria",
@@ -281,7 +285,6 @@
     "immagini/Pasted image 20250402101053.png",
     "immagini/Pasted image 20250406200105.png",
     "immagini/Pasted image 20250406195805.png",
-    "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi.md",
@@ -292,11 +295,8 @@
     "Primo Anno/Analisi/modulo1/Taylor per le funzioni elementari.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
-    "Secondo Anno/Reti di Calcolatori/Wireless.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3",
     "Lectures 2025-03-23-104403.md",
-    "Secondo Anno/Reti di Calcolatori/Il Livello fisico.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/desktop.ini",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie",

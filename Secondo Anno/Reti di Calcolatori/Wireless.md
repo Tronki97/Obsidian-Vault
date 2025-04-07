@@ -80,6 +80,7 @@ data: "`2025-03-31 11:14`"
 	- Se passiamo ai dB dai Watt possiamo calcolare più facilmente
 		- Decibels si basano su un segnale di riferimento
 			- E una differenza.
+- 
 - # Link Utili:
 	- 
 - # BOH:
