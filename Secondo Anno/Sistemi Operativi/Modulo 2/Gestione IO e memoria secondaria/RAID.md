@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - RAID 0
   - RAID 1
@@ -54,10 +53,29 @@ data: "`2025-04-06 22:49`"
 	- ## ridondanza:
 		- Il recovery è molto semplice, quando un disco si guasta basta guardare l’altro disco con gli stessi dati da recuperare, ma serve sostituire il disco guasto e fare copia del disco funzionante.
 - # RAID 4:
-	- 
+	- Si usano sempre gli _strip_ ma con dimensioni relativamente grandi.
+	- Utilizza degli strip di parità:
+		- Ne viene calcolato uno, a partire dagli strip di dati corrispondenti, bit-per-bit.
+		- Questo strip viene posto sul _disco di parità_.
+	- ![[Pasted image 20250408153351.png]]
+	- ## Lettura senza guasti:
+		- Si individua lo strip corrispondente ai dati da leggere e lo si legge.
+	- ## Lettura con guasti:
+		- Si individua lo strip corrispondente ai dati da leggere, se il disco su cui si trova è guasto, si leggono tutti gli strip rimasti e tramite lo strip di parità e si ottiene lo strip mancante.
+	- ## Scrittura senza guasti:
+		- Vengono coinvolti 3 strip perché:
+			- Suppongo di voler cambiare lo strip 1; effettuo il seguente calcolo:
+				- $$S'_{4}(i)=S_{0}(i) \oplus S'_{1}(i)\oplus S_{2}(i)\oplus S_{3}(i)$$
+					- Dove $S'_{1}(i)$ è il nuovo valore dello strip da scrivere e $S_{4}'$ è il suo relativo di parità da scrivere.
+				- Si può quindi scrivere:
+					- $$S'_{4}(i)=S_{0}(i) \oplus S'_{1}(i) \oplus S_{1}(i) \oplus S_{1}(i)\oplus S_{2}(i)\oplus S_{3}(i)$$
+					- $$S'_{4}(i)=S_{4}(i)\oplus S'_{1}(i)\oplus S_{1}(i)$$
 - # RAID 5:
-	- 
+	- Come il RAID 4 ma i blocchi di parità sono sparsi fra vari dischi.
+	- Questo permette di evitare il collo di bottiglia che si ha nel RAID 4 in quanto la parità si può trovare in vari dischi diversi.
+	- ![[Pasted image 20250408154501.png]]
 - # RAID 6:
-	- 
+	- Come il RAID 5 ma con due strip di parità.
+	- Aumenta l’affidabilità visto che si necessita il guasto di  3 dischi diversi perché i dati non siano più recuperabili.
 - # Link Utili:
 	- 

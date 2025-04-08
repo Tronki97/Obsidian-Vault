@@ -1,6 +1,8 @@
 ---
-tags: []
-aliases: 
+tags: 
+aliases:
+  - fdr
+  - f.d.r
 data: "`2025-03-21 19:07`"
 ---
 - # # Funzione di ripartizione:

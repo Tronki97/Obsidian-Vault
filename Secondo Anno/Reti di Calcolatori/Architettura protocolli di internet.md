@@ -5,7 +5,7 @@ aliases:
 data: "`2024-10-09 13:13`"
 ---
 - # Argomento:
-	- utilizza solo 5 dei 7 [[Architettura standard dei protocollo||livelli]] _ISO/OSI RM_ 
+	- utilizza solo 5 dei 7 [[Architettura standard dei protocolli||livelli]] _ISO/OSI RM_ 
 	- la sessione di comunicazione è gestita a livello trasporto e al livello applicazione 
 	- quando l'applicazione comunica i dati arrivano al livello applicazione che determina quali bit in quella stringa hanno un _determinato significato_ e poi chiede al livello trasporto di spedire i dati e di garantire la comunicazione e il ritorno dell'aknowledgement oppure sperare che arrivi.
 	- ## Incapsulamento:  

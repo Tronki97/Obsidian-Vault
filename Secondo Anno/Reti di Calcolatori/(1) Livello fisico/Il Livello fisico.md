@@ -13,6 +13,8 @@ data: "`2024-10-11 13:48`"
 			- quindi la limitazione nel trasferire le informazioni spesso è delimitata dalla _capacità di leggerle piuttosto che dal trasferirle_. 
 		- ## Throughput: 
 			- l'indice che dice quanti _b/s puri di sola informazione_ riesci a trasmettere sul canale 
-		- 
+- Come possono dei canali wireless avere diverse larghezze di banda:
+	- L’efficienza del trasferimento di bit su un canale dipende dalla velocità di codifica e decodifica dei bit che stanno venendo trasferiti.
+	- 
 - # Link Utili:
 	- 

@@ -82,7 +82,7 @@ data: "`2025-03-31 11:14`"
             - Se due dispositivi hanno un RSSI massimo, a fondo scala, si confronta quanto ricevono con tale valore di RSSI. Questo è il tetto massimo ricevibile (pienamente sufficiente per ricevere bene). Non confrontare gli RSSI direttamente perché ogni dispositivo ha una scala diversa.
 - # Antenne:
     - Esistono tre categorie principali di antenne:
-        - ## Omni-direzionali :
+        - ## Omnidirezionali :
 	        - vanno in tutte le direzioni, ma non in modo omogeneo (altrimenti sarebbero isotropiche).
 		- ## Semplice dipolo:
 			 - Il guadagno passivo è causato dalla forma della radiazione, che assume la forma di una ciambella.
@@ -122,7 +122,20 @@ data: "`2025-03-31 11:14`"
     - $$ PL = 36.6 + 10 \log_{10}(F) + 20 \log_{10}(D) $$
 		- Dove:
 			 - $F$ è la frequenza in MHz.
-			 - $D$ è la distanza tra il trasmettitore e il ricevitore in km.
+			 - $D$ è la distanza tra il trasmettitore e il ricevitore in km (da convertire in miglia).
+- # Link budget:
+	- Eccesso di segnale tra trasmettitore e ricevitore.
+	- Misurata in dB, dBm o mW.
+	- RS: il segnale più debole ricevibile:
+		- Più basso è meglio è.
+	- Il link budget si calcola facendo:
+		- Potenza ricevuta in dBm - RS in dBm.
+	- ## ES:
+		- $RS=-82dBm$   potenza ricevuta= $-50dBm$:
+		- Link budget = $-50 +82=32dBm$
+		- Ciò significa che il segnale ha un margine di 32 dB prima che diventi non disponibile.
+	- ## Fade margin:
+		- Del margine extra per il link budget (di solito nell’ordine dei $[+10...+20]dB$). 
 - # Link Utili:
 	- 
 - # BOH:

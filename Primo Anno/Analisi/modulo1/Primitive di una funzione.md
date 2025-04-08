@@ -1,80 +1,80 @@
-**primitive di una funzione**
-Definizione: sia $f: A \to \mathbb{R}, \ A \subseteq \mathbb{R}$, una funzione $F: A \to \mathbb{R}$ si dice _primitiva_ di $f$ su $A$ se vale $F'(x) = f(x) \ \ \forall x \in A$
+## Definizione:
+Sia $f: A \to \mathbb{R}$, con $A \subseteq \mathbb{R}$, una funzione. Una funzione $F: A \to \mathbb{R}$ si dice **primitiva** di $f$ su $A$ se e solo se per ogni $x \in A$, vale che:
+$$ F'(x) = f(x). $$
 
-es. $f: \mathbb{R} \to \mathbb{R}, f(x) = \cos{x}$, allora $F(x) = \sin{x}$ è una primitiva di $f$ su tutto $\mathbb{R}$. Infatti $\frac{d}{dx} \sin{x} = \cos{x} \ \ \forall x \in \mathbb{R}$	
+### Esempio:
+Consideriamo la funzione $f: \mathbb{R} \to \mathbb{R}$ definita da $f(x) = \cos{x}$. La sua primitiva è $F(x) = \sin{x}$, poiché $\frac{d}{dx}\sin{x} = \cos{x}$ per ogni $x \in \mathbb{R}$. Notiamo che anche la funzione $G(x) = \sin{x} + k$, dove $k$ è una costante reale qualsiasi, è primitiva di $f$. Infatti:
+$$ G'(x) = (\sin{x} + k)' = \cos{x}. $$
 
-nota: $\forall k \in \mathbb{R}$ la funzione $G(x) = \sin{x} + k$ è anch'essa primitiva di $f$ (la derivata di una costante è 0, quindi derivando $k$ rimane 0).
+### Unicità delle primitive su un intervallo aperto:
+Siano $F: ]a, b[ \to \mathbb{R}$ e $G: ]a, b[ \to \mathbb{R}$ due primitive di una funzione continua $f$ su un intervallo aperto $]a, b[$. Allora esiste una costante reale $k$ tale che:
+$$ G(x) = F(x) + k \quad \forall x \in ]a, b[. $$
 
-Si capisce allora che _la primitiva non è unica, di fatto sono infinite_
+### Dimostrazione:
+Consideriamo la funzione $H: ]a, b[ \to \mathbb{R}$ definita come:
+$$ H(x) = G(x) - F(x). $$
+Poiché entrambe le primitive derivano a $f$, allora per ogni $x \in ]a, b[$ si ha:
+$$ H'(x) = G'(x) - F'(x) = f(x) - f(x) = 0. $$
 
-In generale si dice che se $F$ è primitiva di $f$ su $A$ allora ci sono infinite primitive (una per ogni $k \in \mathbb{R}$).
+Quindi, $H$ è una funzione costante su $]a, b[$. Sappiamo che una funzione con derivata nulla è costante. Dunque:
+$$ H(x) = k \quad \forall x \in ]a, b[, $$
+per qualche costante reale $k$. Questo significa che:
+$$ G(x) - F(x) = k \quad \forall x \in ]a, b[. $$
 
-ma allora domanda: le primitive sono tutte (aggiungendo costanti)? O ci sono primitive che non differiscono da una costante? La risposta è sì ma anche no, dipende.
+### Caso in cui il teorema non vale:
+Il teorema sopra descritto non è valido se l'intervallo considerato non è aperto. Ad esempio, consideriamo la funzione $f: \mathbb{R} \setminus \{0\} \to \mathbb{R}$ definita da:
+$$ f(x) = \frac{1}{x^2}. $$
 
-##### **Caratterizzazione delle primitive di una funzione su un intervallo**:
-sia $f: ]a, b[ \to \mathbb{R}$, e siano $F: ]a, b[ \to \mathbb{R}$ e $G: ]a, b[ \to \mathbb{R}$ due primitive di $f$ su $]a, b[$, allora $\exists k \in \mathbb{R}: G(x) = F(x) + k \ \ \forall k \in ]a, b[$, ovvero, informalmente, che _$F$ e $G$ differiscono per una costante $k$_
-- Dimostrazione:
-		- considero $H: ]a, b[ \to \mathbb{R}$ come $H(x) = G(x) - F(x)$
-		- sappiamo che $F'(x) = f(x) \ \ \forall x$ e $G'(x) = f(x) \ \ \forall x$
-		$$\frac{d}{dx} H(x) = \frac{d}{dx} G(x) - \frac{d}{dx} F(x) = f(x) - f(x) = 0$$
-		- allora se $H'(x) = 0$ su $]a, b[$ allora significa che $H$ è una funzione costante
-		- perciò abbiamo che $\exists k \in \mathbb{R} : H(x) = k \ \ \forall x \implies G(x) - F(x) = k \ \ \forall x \in ]a, b[$
-		- osservazione: il teorema può non valere se non lavoriamo su un intervallo 
-	- Controesempio: $f: \mathbb{R} \setminus \{0\} \to \mathbb{R}, \ f(x) = \frac{1}{x^{2}}$, ora considero $F: \mathbb{R} \setminus \{0\} \to \mathbb{R}, \ F(x) = - \frac{1}{x}$ che è una primitiva di $f$ su $\mathbb{R} \setminus \{0\}$; 
-		- Considero invece $$G: \mathbb{R} \setminus \{0\} \to \mathbb{R}, \ G(x) = \begin{cases} -\frac{1}{x} & x > 0 \\ - \frac{1}{x} + 3 & x < 0 \end{cases}$$
-		- e risulta $G'(x) = F'(x) = \frac{1}{x^{2}} \ \ \forall x \in \mathbb{R} \setminus \{0\}$, quindi $G$ e $F$ sono primitive di $f$ per quell'intervallo, _ma non differiscono per una costante_
-				- infatti se faccio $G(x) - F(x)$ varrà 0 per $x > 0$ e $3$ se $x < 0$, che non è costante
-- #### **funzioni integrali**
-	- d'ora in poi $A = ]a, b[$ (basta che sia aperto)
-	- definizione: sia $f: A \to \mathbb{R}$ continua, e $c \in A$. Introduciamo: 
-		- $$I_{c}: A \to \mathbb{R}, I_{c}(x) = \int_{c}^{x} f(t) \ dt$$ 
-	- nota: $I_{c}$ è _ben definita_ (perché $f$ è continua)
-	- osservazione: significato di $I_{c}$ nel caso in cui $f(x) \geq 0 \ \ \forall x$ (integrale come area)
-		- l'idea della funzione integrale è di vedere come cambia il valore dell'area al variare di $x$
-		- oss1: $f: A \to \mathbb{R}$, $c \in A$, $I_{c}(x) = \int_{c}^{x} f$, allora vale $I_{c}(c) = \int_{c}^{c} f = 0$
-		- oss2: dati $c, c' \in A$, $f: A \to \mathbb{R}$, vale $I_{c}(x) - I_{c'}(x) = k$ (costante in $x$), infatti $$I_{c}(x) - I_{c'}(x) = \int_{c}^{x} f - \int_{c'}^{x} f = \int_{c}^{x} f + \int_{x}^{c'} f = \int_{c}^{c'} f$$ che non dipende da $x$ 
-- #### **Teorema fondamentale del calcolo (integrale) sulla derivata della funzione integrale**
-	- Sia $f: A \to \mathbb{R}$ continua; $c \in A$; sia $I_{c}: A \to \mathbb{R}$ la funzione integrale. Allora $I_{c}$ è derivabile in ogni punto $x \in A$ e soddisfa $$I_{c}'(x) = f(x) \ \ \forall x \in A$$
-	- cioè $$\frac{d}{dx} \int_{c}^{x} f(t) \ dt = f(x) \ \ \forall x \in A$$
-	- o anche $I_{c}$ è una primitiva di $f$
-	- se $f(x) \geq 0 \ \ \forall x$, significato grafico, ovvero $\frac{d}{dx} \text{ Area} (A_{x}) = f(x) \ \ \forall x > c$
-	- esempio:
-		- considero la funzione $F(x) = \int_{0}^{x} \sin(t + t^{2} + 3) \ dt$
-		- molto difficile (forse impossibile) calcolare $F(x)$, però sappiamo che $F'(x) = \frac{d}{dx} \int_{0}^{x} \sin(t + t^{2} + 3) \ dt = \sin(x + x^{2} + 3)$
-		- osservazione: il teorema assicura che ogni $f: A \to \mathbb{R}$ continua ammette primitive (che non significa dire che la so trovare... ma si sa che esistono)
-		- dimostrazione
-			- $f: A \to \mathbb{R}$, $c \in A$, $I_{c}: A \to \mathbb{R}$ funzione integrale
-			- devo calcolare la derivata di $I_{c}$, attraverso il rapporto incrementale
-			- calcolo $$\lim_{h \to 0^{+}} \frac{I_{c}(x + h) - I_{c}(x)}{h} = \lim_{h \to 0^{+}} \frac{1}{h} (I_{c}(x+h) - I_{c}(x)) = \lim_{h \to 0^{+}} \frac{1}{h} \left(\int_{c}^{x+h} f - \int_{c}^{x} f\right)= \lim_{h \to 0^{+}} \frac{1}{h} \int_{x}^{x+h} f(t) \ dt$$
-			- è una media integrale, quindi so che $\exists c = c(h) \in [x, x+h]: \frac{1}{h} \int_{x}^{x+h} f = f(c)$
-			- facciamo tornare il limite per $h \to 0^{+}$, ottenendo $x \leq c(h) \leq x+h$, per cui per $h$ che tende a 0 per il [[Teorema del confronto|teorema del confronto]] si ha $c(h) \to x$ 
-			- si ha allora, per la continuità di $f$, che $f(c(h))$ tende a $f(x)$
-	- esempio
-		- $h: \mathbb{R} \to \mathbb{R}$, $h(x) = \int_{x}^{3} \sqrt{1+t^{4}} e^{-t \sin{t}} \ dt$
-		- calcolo $h'(x)$			
-		- $$h'(x) = \frac{d}{dx} \int_{x}^{3} f(t) \ dt = \frac{d}{dx} \left(- \int_{3}^{x} f(t) \ dt\right) = - \sqrt{1 + x^{4}} e^{-x \sin(x)}$$
-		- sappiamo che $h$ è decrescente
-		- estensione del teorema fondamentale del calcolo
-			- sia $h(x) = \int_{0}^{x^{2}}\sqrt{1+t}e^{-t} \ dt$, quanto vale $h'(x)$
-			- $h'(x) \stackrel{?}{=} \sqrt{1 + x^{2}}e^{-x^{2}}$ --> NO
-			- osserviamo che, posto $I(z) = \int_{0}^{z} \sqrt{1+t}e^{-t} \ dt$, risulta $I'(z) = \frac{d}{dx} I = \sqrt{1+z}e^{-z}$
-			- la funzione $h$ è composta, $h(x) = I(x^{2})$, per il teorema della derivazione composta ho
-				- $h'(x) = I'(x^{2}) \cdot 2x = \sqrt{1 + x^{2}}e^{-x^{2}} \cdot 2x$
-			- quindi in generale
-				- date $g: A \to \mathbb{R}$, $h: \mathbb{R} \to \mathbb{R}$ (derivabile), considero $n(x) = \int_{c}^{h(x)} g(t) \ dt$
-				- per calcolare la derivata $n'(x)$, pongo $I(z) = \int_{c}^{z} g(t) \ dt$ e ho che $I'(z) = \frac{d}{dx} I = g(z)$
-				- scrivo $n(x) = I(h(x)) = (I \circ h)(x)$ (composta)
-				- per il teorema fondamentale del calcolo vale $n'(x) = I'(h(x)) \cdot h'(x) = g(h(x)) \cdot h'(x)$
-				- cioè $\frac{d}{dx} \int_{c}^{h(x)} g(t) \ dt = g(h(x)) \cdot h'(x)$
-					- nota che $h(x) = x \implies h'(x) = 1$ (ci si ritrova con la versione dell'enunciato)
-		- esercizi
-			- calcolare $\frac{d}{dx} \int_{0}^{\sin{x}} t^{2} e^{-t} \ dt = \sin^{2}{x} e^{-\sin{x}} \cdot \cos{x}$
-			- calcolare $\frac{d}{dx} \int_{x}^{2x} \ln(1 + t^{2}) \ dt = \frac{d}{dx} \left(\int_{x}^{0} \ln(1 + t^{2}) \ dt + \int_{0}^{2x} \ln(1 + t^{2}) \ dt\right) = - \ln(1 + x^{2}) + \ln(1 + 4x^{2}) \cdot 2$
-			- calcolare $\lim_{x \to 0} \frac{1}{x^{2}} \int_{0}^{x} \sin(t^{2} - t) \ dt$, si può fare con teorema della media integrale per confermare che è $\frac{0}{0}$
-				- lo facciamo con [[Teorema di de l'Hopital|Hopital]]
-				- $\lim_{x \to 0} \frac{\frac{d}{dx} \int_{0}^{x} \sin(t^{2} - t) \ dt}{\frac{d}{dx} x^{2}} = \lim_{x \to 0} \sin\frac{x^{2} - x}{2x} = - \frac{1}{2}$ (con [[Sviluppo in serie di Taylor|Taylor]])
-	- prossima volta: teorema fondamentale del calcolo per calcolo degli integrali definiti --> formula di Torricelli
-		- $f: A \to \mathbb{R}$ continua
-		- $F: A \to \mathbb{R}$ primitiva di $f$
-		- $a, b \in A$
-		- allora $$\int_{a}^{b} f(x) \ dx = F(b) - F(a) = [F(x)]_{a}^{b}$$
+La funzione $F(x) = -\frac{1}{x}$ è una primitiva di $f$ su $\mathbb{R} \setminus \{0\}$. Consideriamo ora la funzione:
+$$ G(x) = \begin{cases}
+-\frac{1}{x}, & x > 0, \\
+-\frac{1}{x} + 3, & x < 0.
+\end{cases} $$
+
+Allora $G'(x) = f(x)$ per ogni $x \in \mathbb{R} \setminus \{0\}$, ma $G$ e $F$ non differiscono per una costante su tutto $\mathbb{R} \setminus \{0\}$.
+
+## Funzioni integrali
+
+### Definizione:
+Sia $f: A \to \mathbb{R}$ continua, con $A = ]a, b[$. Introduciamo la funzione integrale $I_c$ definita come:
+$$ I_c(x) = \int_{c}^{x} f(t) \, dt. $$
+
+### Proprietà della funzione integrale:
+1. **Ben definizione**: Poiché $f$ è continua su un intervallo aperto, l'integrale definito esiste per ogni $x \in ]a, b[$.
+2. **Significato grafico**:
+   - Se $f(x) \geq 0$ per ogni $x$, allora $I_c(x)$ rappresenta la somma delle aree sotto la curva di $f(t)$ tra $c$ e $x$. In particolare, $I_c(c) = 0$.
+   - Se consideriamo due punti $c$ e $c'$ in $A$, allora:
+     $$ I_c(x) - I_{c'}(x) = \int_{c}^{x} f(t) \, dt - \int_{c'}^{x} f(t) \, dt = \int_{c}^{c'} f(t) \, dt. $$
+     Questo significa che la differenza tra le funzioni integrali dipende solo dall'intervallo di integrazione.
+
+### Teorema fondamentale del calcolo (integrali)
+Sia $f: A \to \mathbb{R}$ una funzione continua su un intervallo aperto $A$, e sia $c \in A$. La funzione integrale $I_c$ è derivabile in ogni punto di $A$ e soddisfa:
+$$ I'_c(x) = f(x) \quad \forall x \in A. $$
+
+### Esempio:
+Consideriamo la funzione:
+$$ F(x) = \int_{0}^{x} \sin(t + t^2 + 3) \, dt. $$
+Non è facile calcolare esplicitamente $F(x)$, ma sappiamo che:
+$$ F'(x) = \frac{d}{dx} \int_{0}^{x} \sin(t + t^2 + 3) \, dt = \sin(x + x^2 + 3). $$
+
+### Esempi di calcolo delle derivate
+1. **Calcolare $\frac{d}{dx} \int_{0}^{\sin{x}} t^2 e^{-t} \, dt$**:
+   - Utilizzando la regola della catena:
+     $$ \frac{d}{dx} \int_{0}^{\sin{x}} t^2 e^{-t} \, dt = (\sin{x})' \cdot \left( \frac{d}{du} \int_{0}^{u} t^2 e^{-t} \, dt \right) = \cos{x} \cdot (u^2 e^{-u})\bigg|_{u=\sin{x}} = \sin^2{x} e^{-\sin{x}} \cdot \cos{x}. $$
+
+2. **Calcolare $\frac{d}{dx} \int_{x}^{2x} \ln(1 + t^2) \, dt$**:
+   - Sfruttando la proprietà della funzione integrale:
+     $$ \frac{d}{dx} \left( \int_{x}^{0} \ln(1 + t^2) \, dt + \int_{0}^{2x} \ln(1 + t^2) \, dt \right) = -\ln(1 + x^2) + 2\ln(1 + (2x)^2). $$
+
+3. **Calcolare $\lim_{x \to 0} \frac{1}{x^2} \int_{0}^{x} \sin(t^2 - t) \, dt$**:
+   - Utilizzando il teorema di de l'Hôpital:
+     $$ \lim_{x \to 0} \frac{\frac{d}{dx} \int_{0}^{x} \sin(t^2 - t) \, dt}{\frac{d}{dx} x^2} = \lim_{x \to 0} \frac{\cos(x^2 - x)}{2x} = -\frac{1}{2}. $$
+
+### Estensione del teorema fondamentale del calcolo
+Consideriamo la funzione:
+$$ h(x) = \int_{0}^{x^2} \sqrt{1 + t} e^{-t} \, dt. $$
+Calcolando la sua derivata:
+$$ h'(x) = 2x \cdot \sqrt{1 + x^2} e^{-x^2}. $$
+
+### Formula di Torricelli
+La formula di Torricelli è una applicazione del teorema fondamentale del calcolo per il calcolo degli integrali definiti.

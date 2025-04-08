@@ -4,7 +4,7 @@ aliases:
 data: "`2024-10-23 13:23`"
 ---
 - # Livello rete:
-	- si trova al terzo livello delle [[Architettura standard dei protocollo]] 
+	- si trova al terzo livello delle [[Architettura standard dei protocolli]] 
 	- le reti locali sono connesse in modo gerarchico basati sui _router_ che le gestiscono e fanno da tramite per comunicare con altre reti locali staccate. 
 	- il router utilizza delle tabelle di instradamento per poter inoltrare i dati da inviare alle altre reti.
 		- address resolution Protocol: converte i Mac address in IP e viceversa.

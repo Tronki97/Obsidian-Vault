@@ -217,5 +217,6 @@ data: "`2025-03-11 13:23`"
 					- #grafico
 				- Quindi la [[Funzione di ripartizione]] risulta essere:
 					- $$F_{X}(x)=\begin{cases}0 & x<0  \\ p+(1-p)(1-e^{-x}) & x\ge0\end{cases}$$
+		- 
 - # Link Utili: 
 	- 
