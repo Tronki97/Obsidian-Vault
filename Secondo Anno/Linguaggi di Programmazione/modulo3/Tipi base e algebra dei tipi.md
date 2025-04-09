@@ -94,6 +94,16 @@ data: "`2025-04-02 12:55`"
 			- Dati due tipi $A,B$,
 			- La forma più semplice del tipo prodotto e il tipo $A \times B$ rappresentano tutte le combinazioni dei valori in $A$ e $B$
 			- Per farne l’accesso si vanno a controllare i vari elementi dentro a questo insieme.
+		- ## record:
+			- Non c’è una differenza posizionale negli elementi ma si danno dei nomi ad ogni elemento (come le [[Strutture]] in C).
+		- ## Pattern matching:
+			- Serve destrutturare certi tipi strutturati creati da tipi prodotto. Il _pattern matching_ controlla e individua elementi specifici rispetto ad un certo schema 
+		- ## Tipi Ricorsivi:
+	- ## Tipi somma:
+		- Serve poter indicare una variabile che può contenere un unione disgiunta di tipi, che dice che può contenere uno dei due tipi e non entrambi.
+			- ![[Pasted image 20250409132807.png]]
+		- Si fa usando delle unioni etichettate:
+			- Ogni elemento si porta dietro il tipo a cui appartiene.
 - # metodi di computazione sui tipi:
 	- ## Regole di equivalenza:
 		- Controllo se due tipi corrispondono allo stesso tipo.
