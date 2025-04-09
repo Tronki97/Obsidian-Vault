@@ -55,12 +55,45 @@ data: "`2025-04-02 12:55`"
 			- Fanno riferimento a dei dati in memoria.
 			- Possono essere gli indici di array. 
 			- Usati anche per implementare [[Alberi e Alberi binari]] e Liste. 
-		- I riferimenti possono essere:
-			- ### Wild:
-				- Quando non sono inizializzati e possono causare comportamenti inaspettati.
-			- ### Dangling:
-				- Quando il dato referenziato viene deallocato e se ci si accede si potrebbe avere un comportamento inaspettato.
-- # definire nuovi tipi:
+			- I riferimenti possono essere:
+				- ### Wild:
+					- Quando non sono inizializzati e possono causare comportamenti inaspettati.
+				- ### Dangling:
+					- Quando il dato referenziato viene deallocato e se ci si accede si potrebbe avere un comportamento inaspettato.
+			- Nel `malloc` viene restituito un puntatore a `void` che normalmente non avrebbe senso in quanto è appunto vuoto, ma in realtà serve per dirmi che dopo quell’azione il controllo ritorna al programma che esegue il codice. Utile anche per evitare side-effect in quanto l’unica cosa che si lascia dietro (sullo heap) è il fatto di aver eseguito quella linea di codice.
+			- Creo una variabile ed un puntatore dello stesso tipo e poi assegno al puntatore il valore della variabile usando `&` 
+				- ![[Pasted image 20250409115835.png]]
+			- La dereferenziazione:
+				- ![[Pasted image 20250409115917.png]] 
+				- Assegno al puntatore il valore contenuto nella variabile `pi` per poi andare a leggerlo e sommargli 1 per infine assegnarlo alla locazione di memoria puntata da `p`
+			- Si può fare una _deallocazione implicita_ in quanto al posto di liberare ciò che viene puntato cambio invece ciò che esso punta mettendolo a `null`:
+				- ![[Pasted image 20250409120348.png]]
+	- 
+- # Definire nuovi tipi:
+	- ## Insiemi potenza:
+		- $$\wp(S)=\{T:T\subseteq S\}$$
+		- Rappresenta l’insieme potenza di $S$ che contiene tutti i sottoinsiemi generati da qualsiasi combinazione di elementi in $S$
+			- ![[Pasted image 20250409124106.png]]
+	- ## Coppie ordinate e prodotto cartesiano:
+		- Siano $a\in A \ \ b\in B$ e $A\cap B = \emptyset$ e sia:
+			- $$(a,b):=\{\{a\}, \{a,b\}\}$$
+		- Allora:
+			- $\{a\} ⊆ A \{b\} ⊆ B$
+			- $\{a\} ∈ ℘(A), \ \ \{b\} ∈ ℘(B)$
+			- $\{a, b\} ⊆ A ∪ B, \ \ \{a, b\} ∈ ℘(A ∪ B)$
+			- $(a, b) ⊂ ℘(A ∪ B)$
+			- $(a, b) ∈ ℘( ℘(A ∪ B) )$
+			- Sia:
+				- $$\{(a, b) | a ∈ A ∧ b ∈ B\} ≜ A × B$$
+				- Chiamato quindi _prodotto cartesiano_
+	- ## Tipi prodotto:
+		- è un tipo composto, prendo per esempio un array e lo lego ad un tipo base ed ha operatori binari.
+			- Quelli più comuni sono _coppie, tuple, record, varianti_.
+		- La grandezza è fissata.
+		- ## Coppie e tuple:
+			- Dati due tipi $A,B$,
+			- La forma più semplice del tipo prodotto e il tipo $A \times B$ rappresentano tutte le combinazioni dei valori in $A$ e $B$
+			- Per farne l’accesso si vanno a controllare i vari elementi dentro a questo insieme.
 - # metodi di computazione sui tipi:
 	- ## Regole di equivalenza:
 		- Controllo se due tipi corrispondono allo stesso tipo.
