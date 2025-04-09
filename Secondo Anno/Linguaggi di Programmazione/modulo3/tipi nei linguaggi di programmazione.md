@@ -31,6 +31,7 @@ data: "`2025-04-02 11:17`"
 			- 
 	- ## Inferred typing:
 		- Non serve annotare il tipo di ogni variabile in quanto il linguaggio dispone di algoritmi che deducono il _tipo_ dal contesto. 
-	- 
+	- ## Manifest typing:
+		- 
 - # Link Utili:
 	- 

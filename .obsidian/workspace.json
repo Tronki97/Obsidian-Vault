@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Algoritmi programmazioni Lineare.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Algoritmi programmazioni Lineare"
+              "title": "Tipi base e algebra dei tipi"
+            }
+          },
+          {
+            "id": "761186dde61c07aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/programmazione/c++/Alberi.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Alberi"
             }
           }
         ]
@@ -63,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "grafi pesati",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -210,8 +234,12 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Vincoli sintattici.md",
+    "Primo Anno/programmazione/c++/Alberi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
+    "Secondo Anno/Sistemi Operativi/progetto/Liste.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
     "Secondo Anno/Ottimizzazione combinatoria/Algoritmi programmazioni Lineare.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Vincoli sintattici.md",
     "Pasted image 20250409100823.png",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
@@ -234,10 +262,6 @@
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Componenti di rete.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Canali di comunicazione della rete.md",
     "Secondo Anno/Reti di Calcolatori/Architettura protocolli di internet.md",
-    "Secondo Anno/Reti di Calcolatori/Architettura standard dei protocolli.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
     "immagini/Pasted image 20250407213130.png",

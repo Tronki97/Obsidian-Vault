@@ -31,14 +31,35 @@ data: "`2025-04-02 12:55`"
 	- ## Tipi array:
 		- Insieme di elementi dello stesso tipo, contigui in memoria, ognuno indicizzato da una chiave indicativa (come l’indice della posizione di un elemento).
 		- Un altro tipo di array sono quelli associativi che al posto di usare delle chiavi di indice numerico usano delle chiavi di qualche altro tipo. 
-			- Come le [[Tabelle Hash]]
+			- Come le [[Tabelle Hash]] 
 		- Inoltre si posso fare anche array multidimensionali con quindi più di una chiave di indice.
 		- ### Operazioni:
 			- Quella più semplice è quella di selezionare un elemento attraverso l’indice dell’array.
 				- I linguaggi safe si assicurano che quando si accede ad uno o più elementi di quell’array non si esca dai confini delimitati dalla dimensione effettiva. 
 			- Poi ci sono, in alcuni linguaggi, operazioni di assegnazione, confronto e aritmetiche che però necessitano che tutti gli array confrontati abbiano la stessa dimensione.
 		- In alcuni linguaggi come [[Java]] gli array sono inizializzati a run-time e messi sull’ [[Heap]] vengono definiti _dinamici_ e hanno dimensione “variabile”.
-		- Stride: permette di fare i calcoli in base al rank degli array su cui va ad agire.
+		- ___Stride___: permette di fare i calcoli in base al rank degli array su cui va ad agire.
+	- ## Tipi insieme:
+		- Struttura dati senza ordine degli elementi ma devono essere unici. 
+		- ### Operazioni:
+			- I classici dell’algebra dell’insiemistica: inclusione, unione, intersezione, ecc…
+			- Compreso anche il complementare di un insieme.
+		- Può anche essere rappresentato con un _array caratteristico_
+			- Dove il bit j-esimo indica se l’elemento j-esimo del tipo base appartiene all’insieme.
+			- Scomodo da usare con grossi insiemi.
+	- ## Tipi riferimento:
+		- Da accesso indiretto ad un altro valore, ovvero _fa riferimento_ ad un dato.
+		- ### Operazioni:
+			- Creazione, uguaglianza, dereferenziazione ovvero avere accesso al dato referenziato rendendola "pratica".
+		- ### Puntatori:
+			- Fanno riferimento a dei dati in memoria.
+			- Possono essere gli indici di array. 
+			- Usati anche per implementare [[Alberi e Alberi binari]] e Liste. 
+		- I riferimenti possono essere:
+			- ### Wild:
+				- Quando non sono inizializzati e possono causare comportamenti inaspettati.
+			- ### Dangling:
+				- Quando il dato referenziato viene deallocato e se ci si accede si potrebbe avere un comportamento inaspettato.
 - # definire nuovi tipi:
 - # metodi di computazione sui tipi:
 	- ## Regole di equivalenza:
