@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Algoritmi programmazioni Lineare.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Il Livello fisico"
-            }
-          },
-          {
-            "id": "64cddf3890061a47",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Il Livello fisico"
+              "title": "Algoritmi programmazioni Lineare"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -233,10 +208,21 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "64cddf3890061a47",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Vincoli sintattici.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Algoritmi programmazioni Lineare.md",
+    "Pasted image 20250409100823.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
+    "Pasted image 20250409095717.png",
+    "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse/Gestione risorse.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling/Algoritmi di scheduling.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Scheda di rete.md",
@@ -253,16 +239,7 @@
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/DHCP.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Indirizzamento IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
     "immagini/Pasted image 20250407213130.png",
     "Senza nome.canvas",
     "immagini/Pasted image 20250408154503.png",
@@ -272,8 +249,6 @@
     "immagini/Pasted image 20250406224531.png",
     "immagini/Pasted image 20250406222510.png",
     "immagini/Pasted image 20250406222219.png",
-    "immagini/Pasted image 20250406221610.png",
-    "immagini/Pasted image 20250406221257.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Memoria secondaria",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria",
