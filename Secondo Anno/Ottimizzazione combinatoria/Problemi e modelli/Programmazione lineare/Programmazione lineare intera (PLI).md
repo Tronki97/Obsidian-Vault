@@ -93,7 +93,7 @@ data: "`2025-02-26 10:18`"
 			- le prestazioni sono identiche.
 		- si vuole assegnare i progetti ai pc in modo da minimizzare il tempo complessivo (parallelo) di compilazione.
 		- ### Variabili:
-			- $$\begin{cases}1 & \text{il progetto i è compilato tramite il pc}\\ 0 & \text{altrimenti}\end{cases}$$
+			- $$x_{ij}=\begin{cases}1 & \text{il progetto i è compilato tramite il pc} \ j\\ 0 & \text{altrimenti}\end{cases}$$
 			- $x_{ij}\in \mathbb{N} \ \ \ \forall i \in \{1,...,n\} \ \ \ \forall j \in \{2,...,m\}$
 			- $y=$ _limitazione superiore ai tempi di calcolo dei vari pc_
 		- ### Vincoli:

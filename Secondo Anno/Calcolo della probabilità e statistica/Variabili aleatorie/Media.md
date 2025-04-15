@@ -35,6 +35,11 @@ data: "`2025-03-21 19:01`"
 						- $$=\sum\limits_{x\in S_{X}}\alpha x*\mathbb{P}_{X}(x)+\beta*g(x)*\mathbb{P}_{X}(x)=\alpha\sum\limits_{x\in S_{X}} x*\mathbb{P}_{X}(x)+\beta\sum\limits_{x\in S_{X}} g(x)*\mathbb{P}_{X}(x)=$$
 						- $$=\mathbb{E}[X]+\mathbb{E}[g(x)]$$
 	- ## Per variabili aleatorie continue:
-		- 
+		- Nota la funzione $f_{X}$ di $X$ V.A continua 
+			- $$\mathbb{E}[X]=\int _{\mathbb{R}} x f_{X}(x) \ dx$$
+			- Ben definito se:
+				- $$\int _{\mathbb{R}} |x| f_{X}(x) \ dx<+\infty$$
+		- $$\mathbb{E}[X]=\int_{\mathbb{R}} h(x)f_{X}(x)\ dx$$
+	- 
 - # Link Utili:
 	- 

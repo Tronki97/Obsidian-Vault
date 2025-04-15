@@ -60,7 +60,7 @@ data: "`2025-02-26 10:38`"
 		- La funzione obiettivo sarà:
 			- $$g(z_{1},z_{2},y_{1},y_{2})=b_{1}y_{1}+c_{1}(a_{1}y_{1} + z_{1})+b_{2}y_{2}+c_{2}(a_{2}y_{2} + z_{2})$$
 				- Definita: $\mathbb{R}^{4}\to \mathbb{R}$
-			- Di conseguenza il valore di  $f$ in ogni punto è definito dalla quadrupla: $(z_{1},z_{2},y_{1},y_{2})$
+			- Di conseguenza il valore di $f$ in ogni punto è definito dalla quadrupla: $(z_{1},z_{2},y_{1},y_{2})$
 				- L’unica eccezione è $x=a_{2}$ che corrisponde a queste due quadruple:
 					- $(a_{2}-a_{1}, 0,1,0)$ solo questo è _accettabile_
 					- $(0,0,0,1)$

@@ -1,0 +1,34 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-11 13:33`"
+---
+- # Uniforme continua:
+	- Prendo l’intervallo $S_{X}=(a,b)$
+		- $X\sim Unif(a,b)$
+		- L’unico vincolo $a<b$
+	- $$f_{X}(x)=\begin{cases} \frac{1}{b-a} & x\in (a,b) \\ 0 & \text{altrove} \end{cases}$$
+	- La funzione di densità è costante in $S_{X}$.
+		- #grafico
+	- ## Funzione di ripartizione:
+		- $x<a \implies F_{X}(x)=0$
+		- $x\ge b \implies F_{X}(x)=1$
+		- $$x\in (a,b) \implies F_{X}(x)=\int_{a}^{x} \frac{1}{b-a} \ dy = \left[ \frac{1}{b-a}y  \right]_{a}^{x}=\frac{x-a}{b-a}$$
+		- Quindi:
+			- $$F_{X}(x)=\begin{cases} 0 & x<a \\ \frac{x-a}{b-a} & x\in [a,b] \\ 1 & x\ge b\end{cases}$$
+		- #grafico
+		- ## Media:
+			- $$\mathbb{E}[X]=\int_{-\infty}^{+\infty} x f_{X}(x) \ dx = \int_{a}^{b} x \frac{1}{b-a} \ dx = \left[ \frac{x^{2}}{2(b-a)} \right]_{a}^{b}$$
+				- $$=\frac{b^{2}-a^{2}}{2(b-a)}=\frac{(b-a)(b+a)}{2(b-a)}=\frac{b+a}{2}$$
+		- ## Varianza:
+			- $$var(X)=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}$$
+			- $$=\int_{-\infty}^{+\infty} x^{2} f_{X}(x) \ dx - \left( \frac{b+a}{2} \right)^{2}=\int_{a}^{b} x^{2} \frac{1}{b-a} \ dx - \frac{(b+a)^{2}}{4}=$$
+			- $$=\left[ \frac{x^{3}}{3(b-a)} \right]_{a}^{b}-\frac{(b+a)^{2}}{4}=\frac{b^{3}-a^{3}}{3(b-a)}-\frac{(b+a)^{2}}{4}$$
+			- $$=\frac{(b-a)(b^{2}+ab+a^{2})}{3(b-a)}-\frac{(b+a)(b+a)}{4}=\frac{(b^{2}+ab+a^{2})}{3}-\frac{(b+a)^{2}}{4}$$
+			- $$=\frac{4(b^{2}+ab+a^{2})-3(b^{2}+2ab+a^{2})}{12}$$
+			- $$=\frac{(4-3)b^{2}+(-6+4)ab+(4-3)a^{2}}{12}$$
+			- $$=\frac{(b-a)^{2}}{12}$$
+		- 
+- # Link Utili:
+	- 

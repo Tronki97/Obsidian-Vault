@@ -1,0 +1,51 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-11 10:48`"
+---
+- # Attributi dei file:
+	- ## Nome:
+		- Modo per rintracciare il file
+	- ## Tipo:
+		- Necessario al [[Sistema operativo]] per capire come trattarlo, chi lo ha creato in modo da ridurre gli errori  
+		- Unix spesso vede tutti i file come sequenza di caratteri, nelle caratteristiche di quel file viene specificato che tipo di programma può eseguirlo/aprirlo. 
+		- ### File speciali:
+			- Senza dati, hanno solo info fatta da una coppia di indici per il kernel.
+			- Indica l’unità gestita dal device driver o la caratteristica del device.
+			- Vengono gestiti come file perché posso usare le stesse SYSCALL che uso per i file normali senza stare a crearne altre.
+	- ## Locazione e dimensione:
+		- Dove trovare i pezzi del file nella memoria secondaria.
+	- ## Data e ora:
+		- Dati riguardo alla data di creazione, all’ultima modifica o accesso.
+		- Utile anche al [[Makefile]] quando controlla se il file c corrente è più nuovo del file oggetto e in caso lo compila. 
+	- ## Info sulla proprietà:
+		- Utenti, gruppi, etc
+		- Può essere usato per le autorizzazioni.
+- # Struttura:
+	- 1. Sequenze di byte
+		- Scelta minima che alleggerisce il codice del kernel, riducendo gli errori e velocizzando il codice.
+	- 2. Sequenze di record logici  
+	- 3.  Ad albero.
+		- ![[Pasted image 20250411110832.png]]
+	- Se si hanno più formati di file si rischia di avere più errori e appesantire il kernel.
+- # Accesso:
+	- ## Sequenziale:
+		- Read, write.
+	- ## Diretto:
+		- Quando si legge o scrive in una posizione specifica.
+	- ## indicizzato:
+		- Si fanno lettura e scrittura rispetto ad una chiave specifica.
+		- Come si fa nei _database_
+		- C’è una corrispondenza chiave-posizione.
+- # Operazioni sui file:
+	- Creazione, cancellazione ecc…
+	- Tutte le operazioni sui file si basano sul concetto di “aprire” un file prima di eseguirci un operazione e “chiusi” al termine.  
+- # Sematica:
+	- Delle sessioni: 
+		- Quando un file viene aperto viene in realtà copiato in una sessione in modo che poi solo alla fine tutte le modifiche fatte vengano salvate altrimenti risulterebbe che ogni azione I/O sia un’interruzione per tutti gli utenti che accedono a quel file 
+- # Implementazione:
+	- ## Organizzazione del disco:
+		- 
+- # Link Utili:
+	- 

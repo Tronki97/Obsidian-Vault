@@ -1,0 +1,32 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-10 15:15`"
+---
+- # Argomento:
+	- nata per avere confidenzialità tra utenti che si scambiano dei dati
+	- Serve quindi costruire un infrastruttura per garantire la confidenzialità.
+	- _plaintext_: dato non cifrato
+	- _cipher_: algoritmi di cifratura.
+	- _chiave segreta_: secondo input per il cipher che determina la trasformazione del plaintext in ciphertext.
+	- _dechipher_: algoritmo inverso del cipher per riottenere il dato _plaintext_
+	- In un canale pubblico chiunque potrebbe ascoltare qualsiasi cosa stia scorrendo facendo _eavesdropping_
+		- Chi spia attivamente può anche alterare i messaggi.
+		- Chi lo fa passivamente semplicemente ascolta.
+	- # Funzioni:
+		- $C_{k}(m)=c$ encriptazione del messaggio $m$ con algoritmo $C$ con chiave $k$
+		- $D_{k}(c)=m$ decriptazione del messaggio $c$ con algoritmo $D$ con chiave $k$
+			- $C$ e $D$ sono matematicamente inversi l'uno dell'altro siccome $D_{k}(C_{k}(m))=m$
+	- Un cifrario permetto garantirebbe confidenzialità sempre 
+	- _segretezza computazionale_: segretezza garantita sse l’attaccante non è in grado di decifrare a causa di tempo e/o risorse computazionali.
+	- Il brute force è sempre possibile se il cifrario è con un numero limitato di caratteri di crittografia
+- # Cifrari:
+	- ## Cesare:
+		- Si fa uno shift circolare, a dx o sx, dell’alfabeto in base ad un numero scelto. 
+		- ![[Pasted image 20250410162851.png]]
+			- In questo caso lo shift è di 3.
+		- Per decifrare si fa l’opposto. Pok
+		- Ijhuybhui
+- # Link Utili:
+	- 

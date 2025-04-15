@@ -88,7 +88,7 @@ data: "`2025-02-25 13:11`"
 			- ![[Pasted image 20250302182310.png| 400]]
 			- $A=T\cap B$
 			- $$\mathbb{P}(A)=\mathbb{P}(T\cap B)=\mathbb{P}(B|T)*\mathbb{P}(T)=\frac{1}{3}* \frac{1}{2}=\frac{1}{6}$$
-- # Indipendenza di eventi: 
+- # Indipendenza di eventi:  ^1f3d12
 	- Se $\mathbb{P}(B)$ non altera la probabilità di $A$ e si scrive $A\perp B$ quindi i due eventi non si influenzano.
 		- $$\mathbb{P}(A|B)=\mathbb{P}(A),\ \ \mathbb{P}(B)>0$$
 	- ## Def
@@ -136,7 +136,7 @@ data: "`2025-02-25 13:11`"
 			- mi chiedo quale sia la probabilità di un evento a caso dentro lo [[Modello probabilistico di un esperimento aleatorio|spazio campionario]]
 			- $\mathbb{P}(\{(T,1)\})= ?$
 			- $\mathbb{P}(.)$ uniforme nei 2 sotto-esperimenti.
-			- I due eventi sono indipendenti.
+			- I due eventi sono indipendenti. ^7b3a21
 			- Dimostro che su $\Omega$ ho la probabilità uniforme 
 				- ovvero: $\mathbb{P}({w})=\frac{1}{|\Omega|}=\frac{1}{8}$
 			- T: esce testa.

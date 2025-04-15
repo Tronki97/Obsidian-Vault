@@ -25,3 +25,17 @@ data: "`2024-09-25 13:12`"
 	- virtualizzazione del mezzo di trasmissione.
 	- ### ES: 
 		- se con la fibra ottica voglio ricevere solo la luce verde vuol dire che sono nel canale della luce verde.
+- # Canali di comunicazione wireless:
+	- ## sistemi radio banda stretta:
+		- Si trasmette e riceve con una sola frequenza, in questo modo si ha dei canali punto a punto.
+		- Se più persone vogliono parlare si necessità di condividere la frequenza radio con più persone, per evitare che due persone parlino contemporaneamente si cerca di attenuare la possibilità che quei due parlino sullo stesso canale usando certe regole.
+		- 
+	- ## spread spectrum technology:
+		- Si ha un intervallo di frequenze e tutte le frequenze fanno parte di un canale.
+		- Si riesce a comunicare lo stesso se ci si trova sulla stessa frequenza di comunicazione ciò che si scontra e distrugge viene ricostruito e così permettendo di comunicare.
+		- ### Frequence hopping:
+			- Saltare tra frequenze nell’intervallo permette di considerarle come bande strette perché entrambi devono avere la stessa sequenza di salti per arrivare ad una determinata frequenza avendo una sorta di combinazione.
+				- Inoltre i salti devono essere fatti nel giusto intervallo di tempo.
+		- ### sequenza diretta:
+			- Ogni singolo bit è codificato su tutte le frequenze dell’intervallo.
+		- 

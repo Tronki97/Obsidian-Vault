@@ -99,11 +99,32 @@ data: "`2025-04-02 12:55`"
 		- ## Pattern matching:
 			- Serve destrutturare certi tipi strutturati creati da tipi prodotto. Il _pattern matching_ controlla e individua elementi specifici rispetto ad un certo schema 
 		- ## Tipi Ricorsivi:
+			- Si impone una struttura di codice che può chiamare se stessa per definire il tipo ricorsivo usando i _Tipi prodotto_ _record:
+				- ![[Pasted image 20250410133109.png]]
+			- 
 	- ## Tipi somma:
 		- Serve poter indicare una variabile che può contenere un unione disgiunta di tipi, che dice che può contenere uno dei due tipi e non entrambi.
 			- ![[Pasted image 20250409132807.png]]
+		- Multiset:
+			- Più elementi con lo stesso valore ma sono delle copie l’uno dell’altro.
+			- Lo si potrebbe usare per i _problemi di statistica_????
 		- Si fa usando delle unioni etichettate:
 			- Ogni elemento si porta dietro il tipo a cui appartiene.
+	- ## Relazioni:
+		- Una relazione $\mathbb{R}\subseteq S_{1} \times...\times S_{n}$ è su un prodotto $S_{1} \times...\times S_{n}$ quando relaziona insieme gli elementi di quegli insiemi $S_{k}$ e ovvero è un sottoinsieme di tutte le possibili combinazioni delle tuple ottenibili con il prodotto cartesiano tra quegli insiemi.
+		- ### Binaria:
+			- $s$ source ; $t$ target
+			- Quando $\mathbb{R} \subseteq S \times T$. Dati $s\in S, \ t\in T$ se $(s,t)\in \mathbb{R}$ allora si scrive $s \mathbb{R} t$
+			- $S$ è il dominio di $\mathbb{R}$ e $T$ è l’immagine
+	- ## Funzioni:
+		- Una funzione si definisce come una relazione con un rapporto uno ad uno tra gli elementi di $S$ e $T$
+		- Di solito si adotta la notazione: $$\mathbb{R}(s)=t$$
+			- $s$ è l’_argomento_
+			- $t$ è il _valore_ di $\mathbb{R}$ per $s$ 
+		- Quando $S$ rappresenta tutto il dominio di $\mathbb{R}$ allora essa è una _funzione totale_
+- # Algebra dei tipi:
+	- Utilizzabile per esprimere e verificare le proprietà dei programmi. 
+		- ![[Pasted image 20250410142548.png]]
 - # metodi di computazione sui tipi:
 	- ## Regole di equivalenza:
 		- Controllo se due tipi corrispondono allo stesso tipo.

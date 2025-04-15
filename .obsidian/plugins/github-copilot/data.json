@@ -18,5 +18,19 @@
     "nodePath"
   ],
   "useDeviceSpecificSettings": false,
-  "proxy": ""
+  "proxy": "",
+  "chatSettings": {
+    "deviceCode": "0f5eb06f314fca1b5e1909fe4b41b9def0d3341d",
+    "pat": "ghu_tdIBRnN0olisdcpM8JPosb8d8Utgh54MpRvv",
+    "accessToken": {
+      "token": "tid=2dff7d502f03fe64d421c355ce52a33b;exp=1744722748;sku=free_educational;proxy-ep=proxy.individual.githubcopilot.com;st=dotcom;chat=1;cit=1;malfil=1;editor_preview_features=1;ccr=1;rt=1;8kp=1;ip=137.204.150.28;asn=AS137:c60dcdaca91ba32c5e347e80aca55d9c800752b65c46b0ce92e400df3166bc60",
+      "expiresAt": 1744722748
+    },
+    "selectedModel": {
+      "label": "Claude 3.7 Sonnet Thinking",
+      "value": "claude-3.7-sonnet-thought"
+    }
+  },
+  "systemPrompt": "You are GitHub Copilot, an AI assistant. You are helping the user with their tasks in Obsidian.",
+  "invertEnterSendBehavior": false
 }

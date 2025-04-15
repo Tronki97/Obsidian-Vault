@@ -1,7 +1,10 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: 
+aliases:
+  - distribuzione uniforme discreta
+  - distribuzione di bernoulli
+  - distribuzione binomiale
+  - distribuzione di poisson
 data: "`2025-04-03 16:09`"
 ---
 - # Distribuzione uniforme (Discreta):
@@ -12,13 +15,13 @@ data: "`2025-04-03 16:09`"
 	- $$\mathbb{E}[X]=\frac{1}{n}\sum\limits_{i=1}^{n}x_{i}$$
 	- $$var(X)=\sum\limits_{x_{i}\in S_{X}}(x_{i}-\mathbb{E}[X])^{2}p_{X}(x_{i})=\frac{1}{n}\sum\limits_{i=1}^{n}(x_{i}-\mathbb{E}[X])^{2}$$
 - # Distribuzione di Bernoulli di parametro:
-	- Con parametro $p\in [0,1]$
-	- $S_{X}=\{0,1\}$
-	- $$\begin{array}{|c|c|c|c|c|c|c|} \hline x & 0&1&{///}\\ \hline \mathbb{P}(X=x) &1-p &p&1 \\ \hline \end{array}$$
-	- Sono considerate le [[Variabili aleatorie#^a7a7e4|V.A di bernoulli]] 
-	- $$\mathbb{E}[X]=\sum\limits_{i=1}^{n} x_{i}*p_{X}(x_{i})=0*(1-p)+1*p=p$$
-	- $$var(X)=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}=p-p^{2}=p*(1-p)$$
-	- $$\mathbb{E}[X^{2}]=\sum\limits_{i}x_{i}^{2}*p_{X}(x_{i})=0-(1-p)+1*p=p$$
+	- $p\in [0,1]$:
+		- $S_{X}=\{0,1\}$
+		- $$\begin{array}{|c|c|c|c|c|c|c|} \hline x & 0&1&{///}\\ \hline \mathbb{P}(X=x) &1-p &p&1 \\ \hline \end{array}$$
+		- Sono considerate le [[Variabili aleatorie#^a7a7e4|V.A di bernoulli]] 
+		- $$\mathbb{E}[X]=\sum\limits_{i=1}^{n} x_{i}*p_{X}(x_{i})=0*(1-p)+1*p=p$$
+		- $$var(X)=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}=p-p^{2}=p*(1-p)$$
+		- $$\mathbb{E}[X^{2}]=\sum\limits_{i}x_{i}^{2}*p_{X}(x_{i})=0-(1-p)+1*p=p$$
 - # Distribuzione binomiale:
 	- _Con parametro_ $p\in [0,1]$ e $n\in \mathbb{N}$
 	- _Si fanno $n$ prove indipendenti con probabilità di successo $p$_.
@@ -60,8 +63,17 @@ data: "`2025-04-03 16:09`"
 	- $$p_{X}(k)=e^{-\lambda} \frac{\lambda^{k}}{k!}\ \ \ k\in \mathbb{N}_{0}$$
 	- $$\sum\limits_{k=0}^{\infty} \frac{x^{k}}{k!}=e^{x}$$
 		- Sviluppo in serie di [[Taylor per le funzioni elementari||Taylor]] senza considerare l’errore siccome si esegue la sommatoria con grado infinito.
-	- $$\mathbb{E}[X]=\sum\limits_{k=0}^{\infty} k*e^{-\lambda} \frac{\lambda^{k}}{k!}=$$
-		- Dove $k!=k(k-1)!$ e $\lambda^{k}=\lambda*\lambda^{k-1}$
-	- $$=\lambda \sum\limits_{k=1}^{\infty} \frac{\lambda^{k-1}}{(k-1)!}*e^{-\lambda}$$
+	- ## Valore atteso:
+		- $$\mathbb{E}[X]=\sum\limits_{k=0}^{\infty} k*e^{-\lambda} \frac{\lambda^{k}}{k!}=$$
+			- Dove $k!=k(k-1)!$ e $\lambda^{k}=\lambda*\lambda^{k-1}$
+		- $$=\lambda \sum\limits_{k=1}^{\infty} \frac{\lambda^{k-1}}{(k-1)!}*e^{-\lambda}=\lambda$$
+			- Dove la parte sotto la sommatoria è uguale a 1.
+	- ## Varianza:
+		- $$Var(X)=\mathbb{E}[X(X-1)]+\mathbb{E}[X]-(\mathbb{E}[X])^{2}=$$
+		- $$=\sum\limits_{k=0}^{\infty} k(k-1)*e^{-\lambda} \frac{\lambda^{k}}{k!}  +\lambda -\lambda^{2} $$
+			- Faccio gli stessi passaggi di prima.
+		- $$=\lambda^{2} \sum\limits_{k=1}^{\infty} \frac{\lambda^{k-2}}{(k-2)!}*e^{-\lambda} + \lambda-\lambda^{2}$$
+			- La parte sotto la sommatoria risulta essere 1 per lo stesso motivo di prima.
+		- $$\lambda^{2}+\lambda-\lambda^{2}=\lambda$$
 - # Link Utili:
 	- 

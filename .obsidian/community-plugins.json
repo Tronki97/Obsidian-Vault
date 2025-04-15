@@ -19,7 +19,6 @@
   "obsidian-smart-typography",
   "oz-clear-unused-images",
   "obsidian-reading-time",
-  "github-copilot",
   "multi-column-markdown",
   "obsidian-excalidraw-plugin",
   "file-explorer-note-count",
@@ -29,5 +28,6 @@
   "easy-typing-obsidian",
   "local-gpt",
   "ai-providers",
-  "3d-graph"
+  "3d-graph",
+  "github-copilot"
 ]

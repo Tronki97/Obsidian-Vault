@@ -5,7 +5,7 @@ data: "`2025-03-21 20:33`"
 ---
 - # Def :
 	-  Sia $X:\Omega \to \mathbb{R}$ [[Variabili aleatorie#^62da4f|V.A discreta]] con $S_{X}$ la _varianza_ di $X$ è:
-		- $$var(X)= \mathbb{E}[(X-\mathbb{E}[X])^{2}]=\sigma^{2}_{X}$$
+	[[Variabili aleatorie]]	- $$var(X)= \mathbb{E}[(X-\mathbb{E}[X])^{2}]=\sigma^{2}_{X}$$
 			- Dove $X$ è una [[Variabili aleatorie|V.A]] e $\mathbb{E}[X]$ è un numero.
 	- Ed è di fatto quanto discosta un valore dalla sua [[Media]].
 	- ## OSS:
@@ -40,5 +40,9 @@ data: "`2025-03-21 20:33`"
 			- $$=\mathbb{E}[a^{2}X^{2}+b^{2}+2abX]-(\mathbb{E}[aX])^{2}-(\mathbb{E}[b])^{2}-2\mathbb{E}[aX]-\mathbb{E}[b]=$$
 			- $$=a^{2}\mathbb{E}[X^{2}]+b^{2}+2ab \mathbb{E}[X]-a^{2}(\mathbb{E}[X])^{2}-b^{2}-2ab \mathbb{E}[X]=$$
 			- $$=a^{2}\mathbb{E}[X^{2}]-a^{2} \mathbb{E}[X]^{2}=a^{2}(\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2})=a^{2}*var(X)$$
+- # V.A continue:
+	- La base è identica a quella delle discrete:
+		- $$var(x)= \int_{\mathbb{R}} x^{2} f_{X}(x)\ dx -(\int_{\mathbb{R}} x f_{X}(x)\ dx)^{2}$$
+	- 
 - # Link Utili:
 	- 
