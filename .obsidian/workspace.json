@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "template/Modello appunti.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Modello appunti"
+              "title": "Homepage"
             }
           },
           {
-            "id": "7ae8f16a62a318d6",
+            "id": "3cb10f256c131a00",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
+                "file": "Algoritmo del simplesso.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,35 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Probabilità condizionata"
-            }
-          },
-          {
-            "id": "0e672f3c50a67450",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Calcolo combinatorio"
+              "title": "Algoritmo del simplesso"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -236,8 +212,8 @@
             "state": {
               "type": "github-copilot-chat-view",
               "state": {},
-              "icon": "bot-message-square",
-              "title": "Copilot Chat"
+              "icon": "lucide-file",
+              "title": "Plugin non più attivo"
             }
           }
         ],
@@ -245,7 +221,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 565.5
+    "width": 332.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -267,46 +243,46 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "3cb10f256c131a00",
   "lastOpenFiles": [
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
+    "Algoritmo del simplesso.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
+    "Pasted image 20250415161913.png",
+    "Pasted image 20250415161628.png",
+    "Pasted image 20250415161025.png",
+    "Pasted image 20250415154256.png",
+    "immagini/Pasted image 20241029180400.png",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
     "template/Modello appunti.md",
-    "Homepage.md",
-    "Vettori aleatori.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Proprietà delle probabilità.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Richiami di teoria degli insiemi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità di unione non disgiunta di insiemi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "immagini/Pasted image 20250410162851.png",
     "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
     "immagini/Pasted image 20250414094703.png",
     "immagini/Pasted image 20250414094554.png",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Variabili a valori discreti.md",
     "immagini/Pasted image 20250411110832.png",
     "immagini/Pasted image 20250409132807.png",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
-    "immagini/Pasted image 20250410142548.png",
-    "immagini/Pasted image 20250410133109.png",
-    "immagini/Pasted image 20250409095717.png",
-    "immagini/Pasted image 20250409124106.png",
-    "immagini/Pasted image 20250409120348.png",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
     "Senza nome.canvas",

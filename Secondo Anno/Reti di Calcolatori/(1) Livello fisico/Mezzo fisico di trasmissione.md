@@ -38,4 +38,42 @@ data: "`2024-09-25 13:12`"
 				- Inoltre i salti devono essere fatti nel giusto intervallo di tempo.
 		- ### sequenza diretta:
 			- Ogni singolo bit è codificato su tutte le frequenze dell’intervallo.
-		- 
+- # Logical wireless channel:
+	- ## Multiplexing:
+		- In 4 dimensioni: 
+			- Tempo $t$
+				- 
+			- Frequenza $f$
+				- 
+			- Spazio $s_{i}$
+			- Codifica $c$
+		- ## Time multiplexing:
+			- Ognuno usa il proprio canale e ogni coppia che comunica può usare tutto lo spettro di comunicazione, la frequenza è uguale per tutti. Quindi ognuno aspetta che arrivi il tempo giusto che gli è stato assegnato per poter parlare 
+			- _Spazio di guardia_: utile perché bisogna aspettare che la comunicazione sia effettivamente transitata al di fuori dell’area di comunicazione per evitare che quando si trasmette di nuovo ci sia disturbo.
+		- ## Frequency multiplexing:
+			- Si separa tutto lo spettro in bande di frequenza più piccole.
+			- Un canale si becca una certa banda per tutto il tempo.
+			- Spazio di guardia: spazio di frequenze non usato Per evitare che i canali si sommino durante 
+			- Serve un canale principale per negoziare e decidere quale canale effettivamente usare
+		- ## Time and frequency multiplexing:
+			- Combinazione dei metodi precedenti.
+			- Un canale si becca una certa banda di frequenza per un certo periodo di tempo. 
+			- E ad ogni periodo di tempo scaduto si fa _frequency hopping_ verso un’altra banda di frequenza.
+		- ## Code multiplexing:
+			- Sfrutti delle leggi della correlazione per separare i canali che però rimangono sovrapposti.
+		- ## Frequency planning:
+			- Si riusano certe frequenze solo in base alla distanza tra le stazioni base.
+				- ![[Pasted image 20250415154256.png]]
+		- ## Modulation:
+			- ### Digitale:
+				- Serve a codificare i bit in modo da essere trasmessi.
+				- #### ASK:
+					- ![[Pasted image 20250415161025.png]]
+					- Si prende la frequenza del carrier e se si ha un ampiezza diversa da 0 allora la si chiama simbolo del bit 1.
+				- #### FSK:
+					- Usa diversi tipi di frequenza per indicare 1 (la più alta) o 0 (la più bassa) o viceversa dipende dal protocollo applicato.
+						- ![[Pasted image 20250415161628.png]]
+				- #### PSK:
+					- Si usa la fase del segnale per indicare 1 o 0.
+						- ![[Pasted image 20250415161913.png]]
+					- 
