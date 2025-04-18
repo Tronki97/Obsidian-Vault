@@ -1,7 +1,9 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: []
+aliases:
+  - accoppiamento perfetto
+  - accoppiamento di massima cardinalità
+  - accoppiamento di costo minimo
 data: "`2025-04-09 09:36`"
 ---
 - # Argomento:
@@ -15,20 +17,25 @@ data: "`2025-04-09 09:36`"
 			- Degli archi $\in M$ sono detti _interni_ mentre quelli appartenenti a $A-M$ sono _esterni_.
 		- I nodi che compaiono in qualche arco di $M$ si dicono _accoppiati_, gli altri nodi sono detti _esposti_
 		- ### Perfetto:
-			- è detto _perfetto_ se non ci sono nodi _esposti_ 
+			- è detto _perfetto_ se non ci sono nodi _esposti_
+		- ### Costo:
+			- Il costo di un accoppiamento $M$ è calcolato come:
+				- $$c(M)=\sum\limits_{(i,j)\in M} c_{ij}$$
 	- ## Accoppiamento di massima cardinalità:
 		- Determinare l’accoppiamento di massima cardinalità
 		- Si può vedere come un [[problema di flusso massimo]] con molte sorgenti. Ma le _capacità_ saranno tutte a $1$ che significa scegliere (apparterrà ad $M$) o meno quell’arco
 		- Si potrebbero usare gli algoritmi classici, ma possono essere semplificati di molto 
-			- Ogni [[problema di flusso massimo|cammini aumentanti]] deve essere:
+			- Ogni [[problema di flusso massimo|cammino aumentante]] deve essere:
 				- _alternante_: archi interni seguiti da esterni e ciclicamente si ripete.
 				- Devono partire da un origine _esposta_
-				- $P_{E}=P-M$ e $P_{I}=M\cap P$ sono gli archi esterni e interni di un cammino $P$ allora $|P_{E}|-|P_{I}|=1$
+				- $P_{E}=P-M$ e $P_{I}=M\cap P$ sono rispettivamente gli archi esterni e interni di un cammino $P$ allora $|P_{E}|-|P_{I}|=1$
+			- La capacità $\theta(M,P)$ di un cammino aumentante $P$ sarò sempre 1 e  di conseguenza:
+				- $$M \oplus (\theta(M,P))P = (M-P_{I})\cup P_{E}$$
 			- La complessità dell’algoritmo semplificato sarà quindi:
 				- $O(mn)$ perché:
 					- $$U=\max \{c_{ij}|(i,j)\in A\}=1$$
 		- ## ES:
-			- 
+			- ![[Pasted image 20250418202410.png|200]]
 	- ## Accoppiamento di costo minimo:
 		- Determino l’accoppiamento di costo minimo fra tutti quelli _perfetti_
 		- Ogni arco ha un costo effettivo.

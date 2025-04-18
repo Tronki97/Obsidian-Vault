@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Dualità"
+            }
+          },
+          {
+            "id": "2fb5e47694c553c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmi programmazioni Lineare"
+            }
+          },
+          {
+            "id": "20f16049ee63f3ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmi programmazioni Lineare"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -218,16 +267,23 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "2fb5e47694c553c8",
   "lastOpenFiles": [
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
-    "Pasted image 20250416115604.png",
-    "immagini/Pasted image 20250415154256.png",
-    "Homepage.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
+    "immagini/Pasted image 20250416115604.png",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
+    "immagini/Pasted image 20250418202410.png",
+    "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
+    "immagini/Pasted image 20250415154256.png",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
     "immagini/Pasted image 20250415161913.png",
@@ -245,18 +301,10 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità di unione non disgiunta di insiemi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Modello probabilistico di un esperimento aleatorio.md",
     "immagini/Pasted image 20250410162851.png",
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
     "immagini/Pasted image 20250414094703.png",
     "immagini/Pasted image 20250414094554.png",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
-    "immagini/Pasted image 20250411110832.png",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",

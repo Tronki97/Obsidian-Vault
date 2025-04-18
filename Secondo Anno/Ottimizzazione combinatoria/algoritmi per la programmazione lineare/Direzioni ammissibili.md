@@ -1,0 +1,32 @@
+---
+tags:
+  - TODO
+aliases:
+  - direzione di crescita
+  - direzioni di crescita
+data: "`2025-04-18 20:27`"
+---
+- # Direzioni ammissibili:
+	- Si vuole che lo spostamento nella regione ammissibile sia una direzione ammissibile e di crescita.
+	- Si prende una coppia asimmetrica e consideriamo una soluzione ammissibile per il primale $\bar x$ 
+	- $\xi$ è un vettore $\in \mathbb{R}^n$ detto _direzione ammissibile_ se 
+		- $$\exists \bar \lambda>0: x(\lambda)=\bar x +\lambda \xi$$
+		- è ammissibile nel _primale_ $\forall \lambda \in [0,\bar \lambda ]$
+	- ## come capire se una direzione è ammissibile:
+		- $\xi$ è ammissibile per $\bar x \iff A_{I(\bar x)}\xi\le 0$ 
+		- ### Dim:
+			- Per definire $\xi$ si può anche dire :
+				- $$A_{i}x(\lambda)=A_{i}\bar x + \lambda A_{i} \xi \le b_{i}$$
+			- Si osserva che:
+				- Se il vincolo è attivo nella riga $i$ allora $A_{i}\bar x=b_{i}$ e quindi l’equazione vale sse:
+					- $$\lambda A_{i} \xi\le 0$$
+				- Se il vincolo non è attivo allora l’equazione è verificata da ogni $\xi$ purché $\lambda$ sia abbastanza piccolo.
+	- ## Direzioni di crescita:
+		- $\xi$ è detta _direzione di crescita_ per $\bar x$ se uno spostamento $\lambda$ lungo $\xi$ fa crescere il valore della [[Programmazione lineare intera (PLI)#^fbc927|funzione obiettivo]]:
+			- $$cx(\lambda)=c\bar x +\lambda c \xi > c\bar x \iff c \xi >0$$
+		- Quindi questa direzione non dipende da $\bar x$
+		- E si osserva che:
+			- Con $c=0$ allora tutte le soluzioni sono ottime.
+			- $c\ne 0$ allora esiste una direzione ammissibile per $\bar x$ che sia anche di crescita, allora $\bar x$ _non può essere ottima_
+- # Link Utili:
+	- 
