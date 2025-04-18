@@ -30,33 +30,8 @@
               "icon": "lucide-file",
               "title": "Homepage"
             }
-          },
-          {
-            "id": "3cb10f256c131a00",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algoritmo del simplesso.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Algoritmo del simplesso"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -243,17 +218,21 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "3cb10f256c131a00",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
-    "Algoritmo del simplesso.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
+    "Pasted image 20250416115604.png",
+    "immagini/Pasted image 20250415154256.png",
     "Homepage.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
-    "Pasted image 20250415161913.png",
-    "Pasted image 20250415161628.png",
-    "Pasted image 20250415161025.png",
-    "Pasted image 20250415154256.png",
+    "immagini/Pasted image 20250415161913.png",
+    "immagini/Pasted image 20250415161628.png",
+    "immagini/Pasted image 20250415161025.png",
     "immagini/Pasted image 20241029180400.png",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
@@ -272,16 +251,12 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
     "immagini/Pasted image 20250414094703.png",
     "immagini/Pasted image 20250414094554.png",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
     "immagini/Pasted image 20250411110832.png",
-    "immagini/Pasted image 20250409132807.png",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",

@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: 
 aliases:
   - MCF
   - pseudoflusso
@@ -9,6 +9,8 @@ aliases:
   - sbilanciamento complessivo
   - cammini aumentanti con pseudoflussi
   - psudoflusso minimale
+  - cammini minimi successivi
+  - CMS
 data: "`2025-03-25 17:25`"
 ---
 - # Problema di flusso di costo minimo (MCF):

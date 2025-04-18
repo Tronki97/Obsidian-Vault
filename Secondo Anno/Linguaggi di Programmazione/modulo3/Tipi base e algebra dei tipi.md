@@ -128,10 +128,34 @@ data: "`2025-04-02 12:55`"
 - # metodi di computazione sui tipi:
 	- ## Regole di equivalenza:
 		- Controllo se due tipi corrispondono allo stesso tipo.
+			- “Quando due tipi sono uguali?”
+		- Si indebolisce il concetto di uguaglianza e si va appunto all’_equivalenza_ 
+			- Ho una funzione che prende degli _interi_ e io gli passo dei _positivi_ (che sono sottoinsiemi degli interi) allora la funzione può essere eseguita.
+			- Non vale però il contrario anche perché nei tipi interi ci sono dei valori in più rispetto ai _positivi_ che magari la funzione non riuscirebbe a gestire.
+		- ### Preordini:
+			- $\mathbb{R}$ è una relazione binaria su $S$ e $\mathbb{R}\subseteq S \times S$ ed ha delle proprietà:
+				- Riflessività: dato $s$ $(s,s)\in \mathbb{R}$ ovvero devo poter dire che $s$ equivale a se stesso.
+				- Simmetria: dati $s_{1},s_{2}$ $\{(s_{1},s_{2}), (s_{2},s_{1})\}\subseteq \mathbb{R}$
+				- Anti-simmetria: dati $s_{1},s_{2}$ $\{(s_{1},s_{2}), (s_{2},s_{1})\}\subseteq \mathbb{R}$ implica che $s_{1}=s_{2}$
+				- Transitiva: dati $s_{1},s_{2}, s_{3}$ $\{(s_{1},s_{2}), (s_{2},s_{3})\}\subseteq \mathbb{R}$ implica che $(s_{1},s_{3})\in \mathbb{R}$
+			- Quando $\mathbb{R}$ è riflessiva e transitiva è chiamato _preordine_.
+			- Quando $\mathbb{R}$ è un preordine simmetrico viene chiamato _equivalenza_ se invece è anti-simmetrico allora è chiamato _ordine parziale_.
+		- ### equivalenza nominale:
+			- Due tipi sono equivalenti se hanno lo stesso nome anche se formano lo stesso insieme
+			- Prendendo `dollaro=int` e `euro=int` anche se sono entrambi `int` in un sistema nominale sono diversi.
+		- ### Duck typing:
+			- Il controllo di tipi viene fatto ad esecuzione e si controlla se un valore supporta gli operatori previsti dal programma.
+			- Gli errori restituiti sono solo a run-time.
+			- Si risparmia un bel po’ di sintassi
+			- ![[Pasted image 20250416115604.png|500]]
 	- ## Regole di compatibilità:
 		- Specificano quando un tipo può essere usato al posto di un altro.
 	- ## Regole di inferenza:
 		- Permette di abbassare il peso riguardo il manifest typing togliendo quindi delle annotazioni di tipo al programma.
-	- 
+		- Si usa un _algoritmo di unificazione_ praticamente dei sistemi di equazioni???
+			- Si riesce quindi a capire tutti i tipi di tutte le variabili nel programma e ora devo capire come usarele.
+		- ### Algoritmo:
+			- https://saveriogiallorenzo.com/teaching/pl/slides/it/L02.pdf pagina 63
+		- 
 - # Link Utili:
 	- 
