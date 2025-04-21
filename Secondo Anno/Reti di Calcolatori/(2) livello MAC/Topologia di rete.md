@@ -5,6 +5,7 @@ aliases:
   - rete a stella
   - rete a bus
   - rete ad albero
+  - single point of failure
 data: "`2024-09-20 15:14`"
 ---
 - le [[Infrastruttura e collegamenti di rete||infrastrutture]] di rete hanno diversi schemi di connessione dei dispositivi. Questi schemi topologici spesso si usano per organizzare una _rete locale_ ([[Intro al corso di Reti#^35cee0||LAN]]). Con diverse topologie:
