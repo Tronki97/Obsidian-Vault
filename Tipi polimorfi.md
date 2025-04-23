@@ -1,0 +1,56 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-23 11:34`"
+---
+- # intro:
+	- Per ora tutti i tipi fatti erano monomorfi ovvero che hanno una sola forma.
+	- Ora invece i tipi cambiano forma in base a dei parametri e che quindi possono essere usati in contesti diversi.
+	- Utile perché si possono riutilizzare certe strutture dati scrivendo meno codice e risparmiando tempo.
+- # Polimorfismo di tipo:
+	- Si astraggono dettagli dell’istanziazione concreta del tipo.
+	- ## Ad-hoc (sovraccarico):
+		- Si sovraccarica il significato di una certa definizione di una operazione su tipi diversi.
+		- Comportandosi allo stesso modo dal punto di vista semantico
+		- Si può prendere in esame l’operazione somma $+$ che può essere usato per diversi tipi:
+			- `int, float, double...`
+			- `+: a x a -> a`
+			- Ma può essere usato anche sulle _stringhe_ dove invece si intende una _concatenazione_.
+		- ![[Pasted image 20250423115257.png|400]]
+		- Serve quindi fare un _indirizzamento(dispatch)_ all’implementazione che si intende usare, di solito lo si fa in maniera statica (in fase di compilazione).
+		- Si può anche fare dinamico una volta che si ha l’informazione.
+	- ## Sottotipaggio (subtyping):
+		- Ci norma il comportamento di tutti i tipi compongono il nostro sistema di tipi stabilendo relazioni da-astratto-a-specifico.
+		- Quando viene dato un tipo più specifico di quello che viene richiesto in quanto la richiesta poteva non essere completa.
+		- è una relazione binaria che si indica con $<:$ 
+			- $A<:B$ significa che il tipo $A$ è un sottotipo di $B$.
+			- $A$ è un tipo più specifico di $B$ quindi si può usare $A$ al posto di $B$ in tutti gli spazi che lo necessitano.
+			- Di solito è un _preordine parziale_
+				- $T<: T, S<: T \land R<: S \implies R<:T$
+				- E vale anche che $T<: S \land S<: T \implies T=S$
+		- ### Sottotipaggio dei record
+			- Si può anche considerare come _relazione_ tra un tipo *target* e uno _sostituto_ considerando i _record_:
+				- ![[Pasted image 20250423121210.png|400]]
+					- `Dog<: Animal` Definito come _sottotipaggio in larghezza_ siccome si sta aggiungendo un campo.
+				- ![[Pasted image 20250423121310.png|400]]
+					- _Sottotipaggio in profondità_ in quanto si sta sostituendo un campo con un suo sottocampo
+					- Non è detto però che `DogHouse<: AnimalHouse` in quanto non è detto che un `DogHouse` possa essere usato al posto di un `AnimalHouse`.
+						- Se si deve estrarre un `Animal` da un `AnimalHouse` si potrebbe tranquillamente estrarre da un `DogHouse` in quanto `Dog<: Animal`
+		- ### Covarianza e controvarianza:
+			- Legato a consumo e produzione 
+	- ## Parametrico (universale):
+		- Un tipo dipende per certi versi da un altro tipo quindi viene parametrizzato da un altro tipo.
+		- Per esempio gli _Array_ 
+		- Le operazioni diventano parametriche rispetto agli elementi, si astrae da quello che c’è dentro al tipo 
+		- Si sta dicendo che $\forall T, Type(T)$ 
+			- $T$ è un tipo generico e quindi può essere usato per qualsiasi tipo.
+		- ![[Pasted image 20250423125505.png|600]]
+			- Nel momento in cui ho delle astrazioni mi aspetto di avere un tipo lista generica 
+			- Quindi tutte le implementazioni che dipendono da un tipo astratto non vanno a guardare il contenuto del tipo.
+		- Se ci si aspetta di produrre un qualcosa allora vuol dire che estende il tipo.
+		- Se ci si aspetta di consumare un qualcosa allora vuol dire che è il super del tipo.
+			- ![[Pasted image 20250423131852.png]]
+			- 
+- # Link Utili:
+	- 

@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "011ea60e8744bffc",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
+                "file": "Tipi polimorfi.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DNS"
+              "title": "Tipi polimorfi"
             }
           },
           {
-            "id": "7403f88f7428bfe8",
+            "id": "6cffde7b2be7ed75",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,31 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Livello trasporto"
-            }
-          },
-          {
-            "id": "6f3de922638228d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC-address.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "MAC-address"
+              "title": "Tipi base e algebra dei tipi"
             }
           }
         ]
@@ -111,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MAC",
+                "query": "probabilità totali",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -266,12 +242,24 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "011ea60e8744bffc",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Untitled 2.webp",
-    "Untitled 1.webp",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
+    "Pasted image 20250423131852.png",
+    "Pasted image 20250423125505.png",
+    "Pasted image 20250423121310.png",
+    "Pasted image 20250423121210.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula delle probabilità totali.md",
+    "Tipi polimorfi.md",
+    "Pasted image 20250423115257.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
+    "immagini/Untitled 1.webp",
+    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
+    "immagini/Untitled 2.webp",
+    "immagini/Untitled 1 1.webp",
+    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
     "Secondo Anno/Reti di Calcolatori/Architettura standard dei protocolli.md",
@@ -287,23 +275,11 @@
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/reti a commutazione di circuito.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Scheda di rete.md",
-    "Homepage.md",
     "Primo Anno/architettura degli elaboratori/Architettura HACK/Cache.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/servizi client server.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza in rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sottoreti.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Protocollo ICMP.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/SDN.md",
-    "Untitled.webp",
     "immagini/Untitled.webp",
     "immagini/Pasted image 20250416115604.png",
     "immagini/Pasted image 20250418202410.png",
-    "immagini/Pasted image 20250415154256.png",
-    "immagini/Pasted image 20250415161913.png",
-    "immagini/Pasted image 20250415161628.png",
-    "immagini/Pasted image 20250415161025.png",
-    "immagini/Pasted image 20241029180400.png",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",

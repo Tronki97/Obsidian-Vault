@@ -21,7 +21,7 @@ data: "`2024-11-29 15:33`"
 		- ### DNS iterativo:
 			- quando il client manda una richiesta che il DNS server non conosce lui manda la richiesta ad un altro server che si trova ad un livello superiore di quello che ha ricevuto la richiesta.
 			- N.B: è sempre il client a mandare la richiesta.
-			- ![[Untitled 1.webp|350]]
+			- ![[Untitled 1 1.webp|350]]
 		- ### DNS ricorsivo:
 			- il client manda la richiesta al server DNS e il server DNS si occupa di fare tutte le richieste necessarie per trovare l'indirizzo IP.
 			- in questo modo si alleggerisce il carico del client.

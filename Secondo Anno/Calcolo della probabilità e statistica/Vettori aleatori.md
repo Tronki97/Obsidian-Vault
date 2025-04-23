@@ -1,7 +1,9 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - indipendenza di variabili aleatorie
+  - leggi marginali
 data: "`2025-04-15 14:16`"
 ---
 - # Intro: 
@@ -21,11 +23,11 @@ data: "`2025-04-15 14:16`"
 		- Prende quindi un insieme delle parti $B$ e restituisce la probabilità che $(X,Y)\in B$
 			- $$\mathbb{P}_{(X,Y)}(B):=\mathbb{P}((X,Y)\in B)$$
 	- Si scrive quindi $(X,Y)\sim \mathbb{P}_{(X,Y)}$
-	- E quella appena definita si chiama _legge congiunta_
+		- E quella appena definita si chiama _legge congiunta_
 	- ## Leggi marginali:
 		- $\mathbb{P}_{X}$ legge marginale di $X$
 		- $\mathbb{P}_{Y}$ legge marginale di $Y$
-	- Partendo dalla legge congiunta posso ottenere quelle marginali ma non viceversa a meno che non conosca come esse dipendano
+	- Partendo dalla legge congiunta posso ottenere quelle marginali in quanto essa contiene più informazioni ma non viceversa a meno che non conosca come esse dipendano.
 - # Indipendenza di variabili aleatorie:
 	- Richiedo indipendenza tra gli eventi generati.
 	- Si considerano gli eventi generati dalle due [[Variabili aleatorie]] $X,Y$
@@ -49,6 +51,67 @@ data: "`2025-04-15 14:16`"
 			- Per ipotesi so che:
 				- $$\mathbb{P}(X\in B_{1}, Y\in B_{2})=\mathbb{P}(X\in B_{1})*\mathbb{P}(Y\in B_{2})$$
 				- 
-				- 
+- # vettori aleatori (bidimensionali) discreti:
+	- ## Def:
+		- è un vettore aleatorio composto da [[Variabili aleatorie#^62da4f|V.A discrete]] 
+		- Si dice che il _vettore aleatorio_ $(X,Y)$ con spazio di probabilità $(\Omega, \mathbb{P})$ è discreto se $X, Y$ sono variabili aleatorie discrete.
+	- ## Def:
+		- Sia $(X,Y)$ vettore aleatorio discreto allora la funzione:
+			- $$p_{(X,Y)}: \mathbb{R}^{2} \to [0,1]$$
+				- $$p_{(X,Y)}(x,y)=\mathbb{P}(X=x, Y=y)$$
+			- Si dice densità congiunta di probabilità discreta del vettore aleatorio $(X,Y)$
+		- ### OSS:
+			- Si conoscono 
+				- $p_{X}$ e $S_{X}=\{x_{1},..., x_{n},...\}$
+				- $p_{Y}$ e $S_{Y}=\{y_{1},..., y_{m},...\}$
+				- $S_{X} \times S_{Y}$ prodotto cartesiano tra i due supporti.
+					- Fuori dai valori del risultato del prodotto cartesiano il valore della densità è 0.
+					- Ma potrebbe essere che anche alcuni valori compresi nel prodotto cartesiano abbiano densità 0.
+				- $S_{(X,Y)}$ “vero supporto del vettore $(X,Y)$”: 
+					- $$S_{(X,Y)}:\{(x,y)\in \mathbb{R}^{2}: p_{(X,Y)}(x,y)>0\}$$
+	- ## Teorema:
+		- Sia $(X,Y)$ vettore aleatorio discreto con $p_{X},S_{X}$ e $p_{Y},S_{Y}$ densità e supporti delle variabili aleatorie e $p_{(X,Y)}$ densità congiunta di $(X,Y)$ 
+		- Allora:
+			- 1) $$p_{(X,Y)}(x_{i},y_{j})=0 \ \ \ \ \ \forall (x_{i},y_{j})\notin S_{X} \times S_{Y}$$
+			- 2) $$\sum\limits_{i,j} p_{(X,Y)}(x_{i},y_{j})=1$$
+			- 3) $$\mathbb{P}_{(X,Y)}(B)=\mathbb{P}((X,Y)\in B)= \sum\limits_{i,j:(x_{i},y_{j})\in B}p_{(X,Y)}(x_{i},y_{j})$$
+	- ## Come passare dalla densità congiunta a quelle marginali:
+		- Serve quindi trovare le marginali conoscendo:
+			- $$p_{(X,Y)}(x,y)=\mathbb{P}(X=x, Y=y); \forall (x,y)\in S_{X} \times S_{Y}$$
+		- Ovvero trovare $p_{X}(x)=\mathbb{P}(X=x), \forall x\in S_{X}$
+		- Per farlo serve utilizzare le [[Formula delle probabilità totali]]
+			- $A_{1}=\{X=x\}, A_{2}=\{Y=y\}$ $\mathbb{P}(A_{1}\cap A_{2})$
+			- Partizione di $\Omega = \{A_{j}\}_{j: y_{j}\in S_{Y}}$
+		- La formula mi dice che:
+			- $$\mathbb{P}(A_{1})=\sum\limits_{j:y_{j}\in S_{Y}}\mathbb{P}(A_{1}\cap A_{j})$$
+		- ### Teorema:
+			- Se $(X,Y)$ è un vettore aleatorio discreto con densità congiunta $p_{(X,Y)}$ e supporto $S_{X,}$ e $S_{Y}$ allora:
+				- $$p_{X}(x)=\sum\limits_{j:y_{j}\in S_{Y}}p_{(X,Y)}(x,y_{j})$$
+				- $$p_{Y}(y)=\sum\limits_{i:x_{i}\in S_{X}}p_{(X,Y)}(x_{i},y)$$
+			- 
+	- ## Tabella per la densità congiunta:
+		- Valida nel caso in cui $S_{X}$ e $S_{Y}$ siano finite:
+			- 
+		- ### ES:
+			- $x_{i} \to B\left( \frac{1}{2} \right)$, $x_{1} \perp\!\!\!\perp x_{2}$
+				- #tabella di densità 
+			- $i=1,2$
+			- $(X_{1,}X_{1})$ e $(X_{1}, X_{2})$
+				- #tabella di densità congiunta.
+	- ## Teorema:
+		- Sia $(X;Y)$ vettore aleatorio discreto con $p_{(X,Y)}$ densità congiunta allora:
+			- $$X \perp\!\!\!\perp Y \iff p_{(X,Y)}(x,y)= p_{X}(x) * p_{Y}(y)$$
+		- ### Dim:
+			- Si ricorda che $X \perp\!\!\!\perp Y$ significa che:
+				- $$\mathbb{P}(X\in B_{1}, Y\in B_{2})=\mathbb{P}(X\in B_{1})*\mathbb{P}(Y\in B_{2})$$
+			- $\implies$)
+				- La mia ipotesi è che $X \perp\!\!\!\perp Y$ e quindi mi basta prendere 
+					- $B_{1}=\{x\}$ e $B_{2}=\{y\}$
+			- $\Longleftarrow$ )
+				- Siano $B_{1}, B_{2} \in \mathbb{R}$
+				- $$\mathbb{P}(X\in B_{1}, Y\in B_{2})= \sum\limits_{i,j} p_{(X,Y)} (x_{i},y_{j})=$$
+					- Per ipotesi ho che:
+				- $$=\sum\limits_{i} p_{X}(x_{i}) * \sum\limits_{j}p_{Y}(y_{j})=$$
+				- $$=\mathbb{P}(X \in B_{1})*\mathbb{P}(Y\in B_{2})$$
 - # Link Utili:
 	- 

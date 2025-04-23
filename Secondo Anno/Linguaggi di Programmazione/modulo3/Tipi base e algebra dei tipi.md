@@ -153,7 +153,7 @@ data: "`2025-04-02 12:55`"
 	- ## Regole di inferenza:
 		- Permette di abbassare il peso riguardo il manifest typing togliendo quindi delle annotazioni di tipo al programma.
 		- Si usa un _algoritmo di unificazione_ praticamente dei sistemi di equazioni???
-			- Si riesce quindi a capire tutti i tipi di tutte le variabili nel programma e ora devo capire come usarele.
+			- Si riesce quindi a capire tutti i tipi di tutte le variabili nel programma e ora devo capire come usarle.
 		- ### Algoritmo:
 			- https://saveriogiallorenzo.com/teaching/pl/slides/it/L02.pdf pagina 63
 		- 
