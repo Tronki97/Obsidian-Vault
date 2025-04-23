@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tipi polimorfi.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Tipi polimorfi"
-            }
-          },
-          {
-            "id": "6cffde7b2be7ed75",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Tipi base e algebra dei tipi"
+              "title": "Homepage"
             }
           }
         ]
@@ -244,21 +220,25 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Pasted image 20250423131852.png",
-    "Pasted image 20250423125505.png",
-    "Pasted image 20250423121310.png",
-    "Pasted image 20250423121210.png",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/File system.md",
+    "Pasted image 20250423164111.png",
+    "immagini/Pasted image 20250423153317.png",
+    "immagini/Pasted image 20250423160854.png",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
+    "Homepage.md",
+    "immagini/Pasted image 20250423155229.png",
+    "immagini/Pasted image 20250423115257.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
+    "immagini/Pasted image 20250423131852.png",
+    "immagini/Pasted image 20250423125505.png",
+    "immagini/Pasted image 20250423121310.png",
+    "immagini/Pasted image 20250423121210.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula delle probabilità totali.md",
-    "Tipi polimorfi.md",
-    "Pasted image 20250423115257.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
     "immagini/Untitled 1.webp",
-    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "immagini/Untitled 2.webp",
-    "immagini/Untitled 1 1.webp",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
@@ -275,11 +255,6 @@
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/reti a commutazione di circuito.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Scheda di rete.md",
-    "Primo Anno/architettura degli elaboratori/Architettura HACK/Cache.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/servizi client server.md",
-    "immagini/Untitled.webp",
-    "immagini/Pasted image 20250416115604.png",
-    "immagini/Pasted image 20250418202410.png",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
