@@ -8,7 +8,7 @@ LANDING_BUTTON = "Click to steal some Punti Intuizione👆"
 # (Optional) Site description on landing page
 LANDING_DESCRIPTION = "I have nothing but poca voglia"
 # (REQUIRED) The Markdown page linked to landing page button (e.g. put home for ./home.md)
-LANDING_PAGE = "Homepage"
+LANDING_PAGE = "0-Mostarda/Home"
 # (Optional) Site title on landing page
 LANDING_TITLE = "Appunti di uno studente svogliato 💖"
 PYTHON_VERSION = "3.8"

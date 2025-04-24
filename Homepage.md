@@ -5,12 +5,24 @@ cssclasses:
 # Vault Info
 
 ## Ultimi modificati:
-```dataview
-TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia
-FROM ""
-SORT file.mtime DESC
-LIMIT 10
-```
+<!-- QueryToSerialize: LIST FROM Primo Anno/Analisi -->
+
+<!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" SORT file.mtime DESC LIMIT 10 -->
+<!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" SORT file.mtime DESC LIMIT 10 -->
+
+| File                                                                                                                               | Materia                          |
+| ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| [[Homepage]]                                                                                                          | Homepage.md                      |
+| [[Analisi matematica]]                                                                           | 0-Mostarda/Analisi matematica.md |
+| [[Modello mostarda]]                                                                                 | template/Modello mostarda.md     |
+| [[Modello appunti]]                                                                                   | template/Modello appunti.md      |
+| [[Home]]                                                                                                       | 0-Mostarda/Home.md               |
+| [[Secondo anno]]                                                                                       | 0-Mostarda/Secondo anno.md       |
+| [[Primo anno]]                                                                                           | 0-Mostarda/Primo anno.md         |
+| [[Gestione delle chiavi]]                 | Sistemi Operativi                |
+| [[Autenticazioni Firme digitali]] | Sistemi Operativi                |
+| [[Eccezioni]]                                                       | Linguaggi di Programmazione      |
+<!-- SerializedQuery END -->
 
 ## Ultime lezioni da finire:
 

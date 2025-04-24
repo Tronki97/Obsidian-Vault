@@ -16,7 +16,6 @@
   "colored-text",
   "execute-code",
   "mousewheel-image-zoom",
-  "obsidian-smart-typography",
   "oz-clear-unused-images",
   "obsidian-reading-time",
   "multi-column-markdown",
@@ -29,5 +28,6 @@
   "local-gpt",
   "ai-providers",
   "3d-graph",
-  "github-copilot"
+  "github-copilot",
+  "dataview-serializer"
 ]
