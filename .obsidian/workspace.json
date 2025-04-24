@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-Mostarda/Secondo anno.md",
+                "file": "0-Mostarda/Tecnologie Web.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Secondo anno"
+              "title": "Tecnologie Web"
             }
           },
           {
@@ -79,8 +79,7 @@
               "title": "Algoritmo di Dekker"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -201,13 +200,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0-Mostarda/Sistemi Operativi.md",
+                "file": "0-Mostarda/Tecnologie Web.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Sistemi Operativi"
+              "title": "Struttura di Tecnologie Web"
             }
           },
           {
@@ -282,16 +281,22 @@
       "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
+    "0-Mostarda/Tecnologie Web.md",
+    "0-Mostarda/Calcolo delle probabilità e statistica.md",
+    "0-Mostarda/Linguaggi di Programmazione.md",
+    "0-Mostarda/Algebra e Geometria.md",
+    "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
     "0-Mostarda/Secondo anno.md",
     "0-Mostarda/Sistemi Operativi.md",
+    "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Algoritmo di Dekker.md",
     "Secondo Anno/Tecnologie Web/Javascript/Programmazione asincrona.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/linguaggio C.md",
-    "0-Mostarda/Tecnologie Web.md",
     "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
     "Secondo Anno/Tecnologie Web/Progetto/Credenziali mongoDB.md",
     "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
@@ -304,12 +309,6 @@
     "Secondo Anno/Tecnologie Web/componenti.md",
     "Secondo Anno/Tecnologie Web/Javascript/Javascript.md",
     "Secondo Anno/Tecnologie Web/Javascript/modularizzazione.md",
-    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
-    "0-Mostarda/Calcolo numerico.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
-    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
     "0-Mostarda",
     "immagini/Pasted image 20250423164111.png",
     "netlify.toml",
