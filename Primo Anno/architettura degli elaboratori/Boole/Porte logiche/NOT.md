@@ -4,5 +4,5 @@ Qualsiasi ingresso ci sia esso verrà negato quindi avrà risultato opposto:
 | --- | --- |
 | 0   | 1   |
 | 1   | 0   |
-![[porta NOT]]
+
 

@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - mostarda
 aliases: 
 data: "`2025-04-24 17:09`"
 ---

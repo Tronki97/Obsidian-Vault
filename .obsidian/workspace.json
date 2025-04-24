@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "779ca4abad079021",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-Mostarda/Algoritmi e strutture dati.md",
+                "file": "0-Mostarda/Secondo anno.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Algoritmi e strutture dati"
+              "title": "Secondo anno"
+            }
+          },
+          {
+            "id": "865c2d5615c4a854",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0-Mostarda/Sistemi Operativi.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Sistemi Operativi"
+            }
+          },
+          {
+            "id": "e53c6419499e8d2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Algoritmo di Dekker.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmo di Dekker"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -88,7 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 269.50418853759766
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -152,13 +201,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md",
+                "file": "0-Mostarda/Sistemi Operativi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Homepage"
+              "title": "Struttura di Sistemi Operativi"
             }
           },
           {
@@ -190,6 +239,20 @@
               "icon": "lucide-file",
               "title": "Plugin non più attivo"
             }
+          },
+          {
+            "id": "c135cdf899592f5a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tutte le proprietà"
+            }
           }
         ],
         "currentTab": 5
@@ -215,37 +278,38 @@
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "publish:Pubblica modifiche": false
+      "publish:Pubblica modifiche": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false
     }
   },
-  "active": "779ca4abad079021",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/NP-completezza.md",
-    "0-Mostarda/Algoritmi e strutture dati.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/Tabelle hash/Strategie di ispezione.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Tecniche algoritmiche/Algoritmi Greedy.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "Homepage.md",
-    "Primo Anno/Algebra e geometria/Simmetria.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/Heap/Code con Priorità.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo1/alberi/Alberi AVL.md",
-    "0-Mostarda/Algebra e Geometria.md",
-    "Secondo Anno/Calcolo Numerico/sistemi lineari/autovalori e autovettori.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazioni lineari definite da una matrice.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Composizione di applicazioni lineari.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Controimmagine.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Coordinate rispetto a una base.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Forme dei sottospazi.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Kernel.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Suriettiva.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/teorema di struttura per sistemi lineari.md",
-    "Primo Anno/Algebra e geometria/Cambio di base.md",
-    "0-Mostarda/Analisi matematica.md",
-    "0-Mostarda/Primo anno.md",
-    "0-Mostarda/Logica per l'informatica.md",
-    "0-Mostarda/Programmazione.md",
+    "0-Mostarda/Secondo anno.md",
+    "0-Mostarda/Sistemi Operativi.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Algoritmo di Dekker.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Programmazione asincrona.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/linguaggio C.md",
+    "0-Mostarda/Tecnologie Web.md",
+    "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
+    "Secondo Anno/Tecnologie Web/Progetto/Credenziali mongoDB.md",
+    "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
+    "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
+    "Secondo Anno/Tecnologie Web/Javascript/server-side JS.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Temi trasversali di Javascript.md",
+    "Secondo Anno/Tecnologie Web/Javascript/client-side JS.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Funzioni javascript.md",
+    "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
+    "Secondo Anno/Tecnologie Web/componenti.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Javascript.md",
+    "Secondo Anno/Tecnologie Web/Javascript/modularizzazione.md",
+    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
+    "0-Mostarda/Calcolo numerico.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/mappa contrattiva.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/Algoritmo di bisezione.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/algoritmo di iterazione di punto fisso.md",
+    "Secondo Anno/Calcolo Numerico/Numeri finiti ed errori/metodo di newton.md",
     "0-Mostarda",
     "immagini/Pasted image 20250423164111.png",
     "netlify.toml",
