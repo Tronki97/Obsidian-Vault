@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Autenticazioni Firme digitali.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Autenticazioni Firme digitali"
             }
           }
         ]
@@ -220,15 +220,22 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Pasted image 20250424151548.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
+    "Autenticazioni Firme digitali.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
+    "Pasted image 20250424135854.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
+    "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/File system.md",
     "Pasted image 20250423164111.png",
     "immagini/Pasted image 20250423153317.png",
     "immagini/Pasted image 20250423160854.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Richiami Di Architettura.md",
-    "Homepage.md",
     "immagini/Pasted image 20250423155229.png",
     "immagini/Pasted image 20250423115257.png",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
     "immagini/Pasted image 20250423131852.png",
     "immagini/Pasted image 20250423125505.png",
     "immagini/Pasted image 20250423121310.png",
@@ -237,7 +244,6 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula delle probabilità totali.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
-    "immagini/Untitled 1.webp",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
@@ -250,11 +256,6 @@
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Protocollo ARP e RARP.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/DHCP.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Canali di comunicazione della rete.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/reti a commutazione di circuito.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Scheda di rete.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",

@@ -11,20 +11,21 @@ data: "`2025-04-23 11:34`"
 - # Polimorfismo di tipo:
 	- Si astraggono dettagli dell’istanziazione concreta del tipo.
 	- ## Ad-hoc (sovraccarico):
-		- Si sovraccarica il significato di una certa definizione di una operazione su tipi diversi.
+		- Si _sovraccarica_ il significato di una certa definizione di una operazione su tipi diversi.
 		- Comportandosi allo stesso modo dal punto di vista semantico
 		- Si può prendere in esame l’operazione somma $+$ che può essere usato per diversi tipi:
 			- `int, float, double...`
 			- `+: a x a -> a`
 			- Ma può essere usato anche sulle _stringhe_ dove invece si intende una _concatenazione_.
 		- ![[Pasted image 20250423115257.png|400]]
+			- _Il sovraccarico può essere anche sulla cardinalità degli elementi piuttosto che sul tipo._
 		- Serve quindi fare un _indirizzamento(dispatch)_ all’implementazione che si intende usare, di solito lo si fa in maniera statica (in fase di compilazione).
 		- Si può anche fare dinamico una volta che si ha l’informazione.
 	- ## Sottotipaggio (subtyping):
 		- Ci norma il comportamento di tutti i tipi compongono il nostro sistema di tipi stabilendo relazioni da-astratto-a-specifico.
 		- Quando viene dato un tipo più specifico di quello che viene richiesto in quanto la richiesta poteva non essere completa.
 		- è una relazione binaria che si indica con $<:$ 
-			- $A<:B$ significa che il tipo $A$ è un sottotipo di $B$.
+			- $A<:B$ significa che il tipo $A$ _è un sottotipo_ di $B$.
 			- $A$ è un tipo più specifico di $B$ quindi si può usare $A$ al posto di $B$ in tutti gli spazi che lo necessitano.
 			- Di solito è un _preordine parziale_
 				- $T<: T, S<: T \land R<: S \implies R<:T$
@@ -38,7 +39,9 @@ data: "`2025-04-23 11:34`"
 					- Non è detto però che `DogHouse<: AnimalHouse` in quanto non è detto che un `DogHouse` possa essere usato al posto di un `AnimalHouse`.
 						- Se si deve estrarre un `Animal` da un `AnimalHouse` si potrebbe tranquillamente estrarre da un `DogHouse` in quanto `Dog<: Animal`
 		- ### Covarianza e controvarianza:
-			- Legato a consumo e produzione 
+			- Legato a consumo e produzione.
+			- Input covarianza output controvarianza per quanto riguarda le funzioni. 
+			-   
 	- ## Parametrico (universale):
 		- Un tipo dipende per certi versi da un altro tipo quindi viene parametrizzato da un altro tipo.
 		- Per esempio gli _Array_ 
