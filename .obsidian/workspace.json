@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Autenticazioni Firme digitali"
+              "title": "Homepage"
             }
           }
         ]
@@ -220,8 +220,8 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "immagini/Pasted image 20250423164111.png",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
+    "immagini/Pasted image 20250423164111.png",
     "netlify.toml",
     "immagini/Pasted image 20250424151548.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
