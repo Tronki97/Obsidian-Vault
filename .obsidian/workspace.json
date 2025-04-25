@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-Mostarda/Tecnologie Web.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,55 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Tecnologie Web"
-            }
-          },
-          {
-            "id": "865c2d5615c4a854",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0-Mostarda/Sistemi Operativi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Sistemi Operativi"
-            }
-          },
-          {
-            "id": "e53c6419499e8d2f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Algoritmo di Dekker.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Algoritmo di Dekker"
+              "title": "Homepage"
             }
           }
         ]
@@ -277,14 +229,13 @@
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "publish:Pubblica modifiche": false,
-      "file-tree-alternative:File Tree Alternative Plugin": false
+      "publish:Pubblica modifiche": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "0-Mostarda/Tecnologie Web.md",
+    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "0-Mostarda/Calcolo delle probabilità e statistica.md",
     "0-Mostarda/Linguaggi di Programmazione.md",
     "0-Mostarda/Algebra e Geometria.md",
