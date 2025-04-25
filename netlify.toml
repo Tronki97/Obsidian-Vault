@@ -13,7 +13,7 @@ LANDING_PAGE = "0-Mostarda/Home"
 LANDING_TITLE = "Appunti di uno studente svogliato 💖"
 PYTHON_VERSION = "3.8"
 # (REQUIRED) Site repo URL
-REPO_URL = "https://github.com/Tronki97/Obsidian-Vault.git"
+REPO_URL = "https://github.com/Tronki97/Obsidian-Vault"
 # (Optional) Site title in navbar
 SITE_TITLE = "Ale's Second 🧠"
 # (Optional) Site title in browser tab (leave blank to use SITE_TITLE)
