@@ -25,7 +25,7 @@ data: "`2025-02-23 17:04`"
 				+ la quantità: $\mathcal{R_{P}}(g)=\frac{\mathcal{E_P}(g)}{|Z_\mathcal{P}|}=\frac{|c_\mathcal{P}(g)-Z_\mathcal{P}|}{|Z_\mathcal{P}|}$
 		+ Una soluzione g si dice $\epsilon$-ottima se $\mathcal{R_{P}(g)\leq}\epsilon$
 		+ Un algoritmo si dice $\epsilon$-approssimato se restituisce una soluzione $\epsilon$-ottima.
-	+ ## Rilassamenti:
+	+ ## Rilassamenti: ^184b6f
 		+ Talvolta anche calcolare l’errore diventa problematico, e quindi si procede risolvendo un problema che è un’_approssimazione_ del problema di partenza.
 		+ dato $\mathcal{P}$ di minimo, un _rilassamento_ di $\mathcal{P}$ è un qualunque problema $\overline{\mathcal{P}}$ definito come:
 			+ $$min\{c_{\overline{\mathcal{P}}}(g)|g\in \mathbb{F_{\overline{\mathcal{P}}}}\}$$

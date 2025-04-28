@@ -10,14 +10,14 @@ data: "`2025-04-11 13:33`"
 		- L’unico vincolo $a<b$
 	- $$f_{X}(x)=\begin{cases} \frac{1}{b-a} & x\in (a,b) \\ 0 & \text{altrove} \end{cases}$$
 	- La funzione di densità è costante in $S_{X}$.
-		- #grafico
+		- ![[Pasted image 20250425184018.png]]
 	- ## Funzione di ripartizione:
 		- $x<a \implies F_{X}(x)=0$
 		- $x\ge b \implies F_{X}(x)=1$
 		- $$x\in (a,b) \implies F_{X}(x)=\int_{a}^{x} \frac{1}{b-a} \ dy = \left[ \frac{1}{b-a}y  \right]_{a}^{x}=\frac{x-a}{b-a}$$
 		- Quindi:
 			- $$F_{X}(x)=\begin{cases} 0 & x<a \\ \frac{x-a}{b-a} & x\in [a,b] \\ 1 & x\ge b\end{cases}$$
-		- #grafico
+		- ![[Pasted image 20250425184221.png]]
 		- ## Media:
 			- $$\mathbb{E}[X]=\int_{-\infty}^{+\infty} x f_{X}(x) \ dx = \int_{a}^{b} x \frac{1}{b-a} \ dx = \left[ \frac{x^{2}}{2(b-a)} \right]_{a}^{b}$$
 				- $$=\frac{b^{2}-a^{2}}{2(b-a)}=\frac{(b-a)(b+a)}{2(b-a)}=\frac{b+a}{2}$$

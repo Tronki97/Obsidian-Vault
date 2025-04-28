@@ -1,0 +1,40 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-28 10:25`"
+---
+- # Intro:
+	- Finora si è sempre utilizzato variabili _reali_ nei problemi di [[Programmazione lineare]] con ricerfca dell'ottimo
+		- 
+	- Ma se siamo nella [[Programmazione lineare intera (PLI)|PLI]] 
+		- Non si può fare allo stesso modo.
+		- Quindi trovare l'ottimo è un problema [[NP-completezza|NP completo]] ovvero non esistono soluzioni efficienti.
+		- E quindi si usa un approccio detto _branch-and-bound_
+			- Nel caso peggiore è _esponenziale_ anche se permette di scartare man mano certi sottoinsiemi di soluzioni.
+- # Prerequisiti:
+	- Si usano tecniche di [[Algoritmi di ottimizzazione#^184b6f|rilassamento]] 
+		- Serve che sia possibile in ogni momento passare da un problema $\mathbb{P}$ ad un suo rilassamento $\mathbb{T}=RELAX(\mathbb{P})$ 
+		- E solitamente si usa per _rimuovere i vincoli di interezza_ e ciò da luogo ad un [[Programmazione lineare|PL]] 
+			- $$RELAX(\min\{cx|Ax\le b \land x\in \mathbb{Z}^{n}\})=\min\{cx|Ax\le b\}$$
+	- ## Branching :
+		- Serve poter partizionare l'insieme delle soluzioni ammissibili di $\mathbb{P}$ ottenendo 2 sotto-problemi $PARTITION(\mathbb{P})=(\mathbb{T,Q})$ che sono più semplici.
+		- Si sceglie una $x_{i}$ e un _bound_ $n$
+			- $$PARTITION(\min\{cx|Ax\le b\land x\in \mathbb{Z}^{n}\})=$$
+			- $$=(\min\{cx|Ax\le b\land x_{i}\le n \land x\in \mathbb{Z}^{n}\}, )$$
+- # Algoritmo:
+	- 1) $S=\{\mathbb{P}\}$ $v^{*}=\infty$
+		- S = Insieme di problemi che contiene $\mathbb{P}$
+	- 2)
+	- 3) si sceglie un problema $\mathbb{T}\in S$; $S=S-\{\mathbb{T}\}$
+	- 4) se $RELAX(\mathbb{T})$ è vuoto allora ritorno al punto 2
+		- Vuol dire che quello è un ramo morto da non considerare.
+	- 5) se $RELAX(\mathbb{T})$ è illimitato allora $S=S\cup \{\mathbb{Q,S}\}$ dove $(\mathbb{Q,S})=PARTITION(\mathbb{T})$
+	- 6) siano $x,v$ la soluzione e il valore ottimo di $RELAX(\mathbb{T})$
+	- 7) se $v\ge v^{*}$ allora ritorno al punto 2
+		- Se il valore è maggiore di quello trovato prima allora non serve continuare a cercare.
+	- 8) se $x$ è soluzione ammissibile per $\mathbb{T}$ e $v<v^{*}$ allora $v^{*}=v$ e $x^{*}=x$ e si ritorna al punto 2
+		- Vuol dire che la soluzione trovata è migliore di quella di prima.
+	- 9) se $x$ non è soluzione ammissibile per $\mathbb{T}$ e $v<v^{*}$ allora $S=S\cup\{\mathbb{Q,S}\}$ dove $(\mathbb{Q,S})=PARTITION(\mathbb{T})$ e si ritorna al punto 2.
+- # Link Utili:
+	- 

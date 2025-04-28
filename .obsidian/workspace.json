@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Tecnica Branch-and-Bound.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Tecnica Branch-and-Bound"
+            }
+          },
+          {
+            "id": "c805367c334d9631",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmo del simplesso"
             }
           }
         ]
@@ -232,34 +256,36 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
+    "Tecnica Branch-and-Bound.md",
+    "Homepage.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Canali di comunicazione della rete.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
+    "Pasted image 20250425184221.png",
+    "Pasted image 20250425184018.png",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC-address.md",
     "0-Mostarda/Tecnologie Web.md",
     "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "0-Mostarda/Calcolo delle probabilità e statistica.md",
     "0-Mostarda/Linguaggi di Programmazione.md",
     "0-Mostarda/Algebra e Geometria.md",
     "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
-    "0-Mostarda/Secondo anno.md",
-    "0-Mostarda/Sistemi Operativi.md",
-    "Secondo Anno/Sistemi Operativi/Sistema operativo.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Algoritmo di Dekker.md",
-    "Secondo Anno/Tecnologie Web/Javascript/Programmazione asincrona.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/linguaggio C.md",
-    "Secondo Anno/Tecnologie Web/Progetto/CLI.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Credenziali mongoDB.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
-    "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
-    "Secondo Anno/Tecnologie Web/Javascript/server-side JS.md",
-    "Secondo Anno/Tecnologie Web/Javascript/Temi trasversali di Javascript.md",
-    "Secondo Anno/Tecnologie Web/Javascript/client-side JS.md",
-    "Secondo Anno/Tecnologie Web/Javascript/Funzioni javascript.md",
-    "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
-    "Secondo Anno/Tecnologie Web/componenti.md",
-    "Secondo Anno/Tecnologie Web/Javascript/Javascript.md",
-    "Secondo Anno/Tecnologie Web/Javascript/modularizzazione.md",
     "0-Mostarda",
     "immagini/Pasted image 20250423164111.png",
     "netlify.toml",
@@ -270,8 +296,6 @@
     "immagini/Pasted image 20250423155229.png",
     "immagini/Pasted image 20250423115257.png",
     "immagini/Pasted image 20250423131852.png",
-    "immagini/Pasted image 20250423125505.png",
-    "immagini/Pasted image 20250423121310.png",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",

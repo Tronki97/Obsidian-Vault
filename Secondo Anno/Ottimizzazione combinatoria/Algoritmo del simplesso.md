@@ -28,5 +28,30 @@ data: "`2025-04-16 10:20`"
 	- 11) _si torna al punto 1_
 - # ES:
 	- #inserisci-esempio 
+- # Correttezza:
+	- L'algoritmo mantiene 3 invarianti:
+		- $B$ è sempre _base ammissibile_
+		- $\bar x$ è _soluzione ammissibile_ per il problema primale:
+			- $$\max \{cx | Ax\le b\}$$
+			- $\bar y A = c$
+			- Quindi $\bar x$ è sempre un [[Algoritmi programmazioni Lineare#^a0d9ff|vertice]]
+			- Per $\bar y$ la condizione $\bar y A=c$ vale per come sono inizializzati:
+				- $\bar y _{N}$ e $\bar y_{B}$ 
+			- Quindi $\bar y$ è sempre soluzione ammissibile per il problema duale:
+				- $$\min \{y b | yA=c\}$$
+		- Quindi se $\bar y_{B}\ge 0$ allora si restituiscono $\bar x, \bar y$ che sono soluzioni ottime per i problemi primali e duali e quindi _il programma termina correttamente_.
+		- Se ciò non vale si cerca una direzione di crescita ammissibile per $\bar x$ e $\xi$ lo sarà sempre per come viene definito al passo 7:
+			- $$c \xi = c(-A_{B}^{-1} u_{h})=-(cA_{B}^{-1})u_{h}=-\bar y u_{h}=-y_{h}>0$$
+		- Se considero un vincolo $i\in N$ e $A_{i} \xi \le 0$ allora $\bar x(\lambda)$ soddisfa il vincolo per ogni $\lambda \ge 0$
+		- Mentre se $A_{i} \xi >0$:
+			- $$A_{i} \bar x(\lambda)=A_{i}\bar x + \lambda A_{i}\xi\le b_{i} \iff  \lambda\le \frac{b_{i}-A_{i}\bar x}{A_{i}\xi}$$
+		- Se $0<\bar\lambda<\infty$ allora $\bar x(\lambda)$ è ammissibile $\forall \lambda\in [0,\bar \lambda]$. Ci si può quindi spostare da $B$ a $B\cup \{k\}-\{h\}$
+			- Gestito dagli step 9 e 10
+		- Se $\bar \lambda=0$ allora _la direzione non è ammissibile_ ma si cambia comunque la base come nell'altro caso ma rimanendo _sullo stesso vertice_ 
+- # Complessità:
+	- Si dimostra come ogni base ammissibile viene trattata al massimo una volta durante l'esecuzione.
+	- Si avranno quindi al massimo $\binom{m}{n}$ iterazioni rischiando di diventare _esponenziale_ in $n$
+	- Nel caso _medio_ si è nell'ordine del _polinomiale_.
+	- 
 - # Link Utili:
 	- 
