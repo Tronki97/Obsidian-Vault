@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tecnica Branch-and-Bound.md",
+                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Tecnica Branch-and-Bound"
+              "title": "Wireless"
+            }
+          },
+          {
+            "id": "57859959888cf991",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Mezzo fisico di trasmissione"
             }
           },
           {
@@ -55,7 +79,8 @@
               "title": "Algoritmo del simplesso"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -87,7 +112,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "probabilità totali",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -256,20 +281,22 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
     "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
-    "Tecnica Branch-and-Bound.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
     "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/Architettura standard dei protocolli.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Tecnica Branch-and-Bound.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Canali di comunicazione della rete.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
@@ -284,8 +311,6 @@
     "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
     "0-Mostarda/Calcolo delle probabilità e statistica.md",
     "0-Mostarda/Linguaggi di Programmazione.md",
-    "0-Mostarda/Algebra e Geometria.md",
-    "Primo Anno/Algebra e geometria/Applicazione lineare/Applicazione lineare.md",
     "0-Mostarda",
     "immagini/Pasted image 20250423164111.png",
     "netlify.toml",

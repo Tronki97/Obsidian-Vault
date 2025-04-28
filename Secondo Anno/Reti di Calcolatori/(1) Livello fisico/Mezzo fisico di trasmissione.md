@@ -76,4 +76,15 @@ data: "`2024-09-25 13:12`"
 				- #### PSK:
 					- Si usa la fase del segnale per indicare 1 o 0.
 						- ![[Pasted image 20250415161913.png]]
-					- 
+- # DSSS:
+	- Si fa lo XOR tra i dati mandati dall'utente e i valori della _chipping sequence_ scegliendo quindi il canale di comunicazione.
+	- Si usa tutto lo spettro di frequenza.
+	- Allungando la chipping sequence si riceve più energia ed è come se chi sta trasmettendo usasse più energia.
+- # CDMA:
+	- Code division multiple access.
+	- Si hanno 2 trasmittenti su canali A e B 
+		- Si vogliono trasmettere su A il bit 1 e su B il bit 0
+		- I chip sono: $A_{k}=010011$; $B=110101$
+- # OFDM:
+	- Trasmette un flusso di dati in modo concorrente su un numero elevato di sottocanali di comunicazione separati (_subcarrier_)
+	- Non si necessita di filtrare ognuno di quei sottocanali, quindi risulta che un canale è rappresentato da un pacchetto di _subcarrier_.
