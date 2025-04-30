@@ -19,7 +19,7 @@ data: "`2025-04-24 13:40`"
 		- ![[Pasted image 20250424135854.png]]
 			- Ciò significa che nel blocco `try` potrebbe esserci un errore del tipo specificato in `catch()` e in base a quello fare qualcosa.
 			- Si adatta bene ai linguaggi con sistemi di tipi _nominali_ 
-		- Gli `Error` e `RuntimeException` sono dei fallimenti irrecuperabili a livello _runtime_ e che interromperebbero l’esecuzione del programma quindi ogni volta che si implementa del codice che potrebbe generarli non viene richiesto di includerli in un `try-catch` perché ci si aspetta che il programmatore conosca il funzionamento della sua implementazione
+		- Gli `Error` e `RuntimeException` sono dei fallimenti irrecuperabili a livello _runtime_ e che interromperebbero l’esecuzione del programma quindi ogni volta che si implementa del codice che potrebbe generarli non viene richiesto di includerli in un `try-catch` perché _ci si aspetta che il programmatore conosca il funzionamento della sua implementazione_
 	- 
 - # Link Utili:
 	- 

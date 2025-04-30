@@ -88,3 +88,4 @@ data: "`2024-09-25 13:12`"
 - # OFDM:
 	- Trasmette un flusso di dati in modo concorrente su un numero elevato di sottocanali di comunicazione separati (_subcarrier_)
 	- Non si necessita di filtrare ognuno di quei sottocanali, quindi risulta che un canale è rappresentato da un pacchetto di _subcarrier_.
+- 

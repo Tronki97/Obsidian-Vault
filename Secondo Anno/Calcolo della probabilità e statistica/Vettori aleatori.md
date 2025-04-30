@@ -113,5 +113,56 @@ data: "`2025-04-15 14:16`"
 					- Per ipotesi ho che:
 				- $$=\sum\limits_{i} p_{X}(x_{i}) * \sum\limits_{j}p_{Y}(y_{j})=$$
 				- $$=\mathbb{P}(X \in B_{1})*\mathbb{P}(Y\in B_{2})$$
+	- ## Teorema:
+		- $h:\mathbb{R}^{2} \to \mathbb{R}, (X,Y)$ vettore aleatorio discreto.
+		- $h(X,Y)$ v.a
+		- $$\mathbb{E}[h(X,Y)]=\sum\limits_{i,j}h(x_{i},y_{j})p_{(X,Y)}(x_{i},y_{j})$$
+		- $$var(h(X,Y))=\mathbb{E}[h^{2}(X,Y)]-\mathbb{E}[h(X,Y)]^{2}$$
+			- $\mathbb{E}[h^{2}(X,Y)]=\sum\limits_{i,j}h^{2}(x_{i},y_{j})p_{(X,Y)}(x_{i},y_{j})$
+		- ### Corollario Linearità del valore atteso:
+			- $$\mathbb{E}[aX+bY]=a \mathbb{E}[X]+b \mathbb{E}[Y]$$
+		- ### Dim:
+			- $$h(x,y)=ax+by$$
+			- $$\mathbb{E}[aX+bY]=\mathbb{E}[h(X,Y)]=\sum\limits_{i,j}(ax_{i},by_{j})p_{(X,Y)}(x_{i},y_{j})=$$
+			- $$=a\sum\limits_{i}x_{i}\sum\limits_{j}p_{(X,Y)}(x_{i},y_{j})+b\sum\limits_{i}p_{(X,Y)}(x_{i},y_{j})=$$
+			- $$=a\sum\limits_{i}x_{i}p_{X}(x_{i})$$
+		- ### Corollario:
+			- $(X,Y)$ vettore aleatorio discreto.
+			- $X \perp\!\!\!\perp Y \implies \mathbb{E}[XY]=\mathbb{E}[X]*\mathbb{E}[Y]$
+		- ### Dim:
+			- $$\mathbb{E}[XY]=\sum\limits_{i,j}x_{i}y_{j} p_{(X,Y)}(x_{i},y_{j})=$$
+				- Per l'ipotesi
+			- $$=\sum\limits_{i,j}x_{i}y_{j} p_{X}(x_{i})p_{Y}(y_{j})=\sum\limits_{i}x_{i}p_{X}(x_{i})*\sum_{j}y_{j}p_{Y}(y_{j})=\mathbb{E}[X]*\mathbb{E}[Y]$$
+	- ## Indici di un vettore aleatorio discreto:
+		- $(X,Y)$ vettore aleatorio discreto 
+		- ### Vettore delle medie:
+			- $$\begin{pmatrix}\mathbb{E}[X]\\ \mathbb{E}[Y]\end{pmatrix}\in \mathbb{R}^{2}$$
+		- ### Matrice delle covarianze:
+			- $$\begin{pmatrix}Var(X) & Cov(X,Y) \\ Cov(Y,X)& Var(Y)\end{pmatrix}\in \mathbb{R}^{2 \times 2}$$
+			- #### OSS:
+				- 1) $Var(X)=Cov(X,X)$
+				- 2) $Cov(X,Y)=Cov(Y,X)$ matrice simmetrica
+		- ### Def:
+			- $$Cov(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=$$
+			- $$=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]$$
+			- Se $Cov(X,Y)=0$ allora $X,Y$ sono _incorrelate_
+		- ### Lemma:
+			- _Formula pratica sulla covarianza_
+			- $$Cov(X,Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=$$
+			- $$=\mathbb{E}[XY-\mathbb{E}[X]Y-\mathbb{E}[Y]X+\mathbb{E}[X]\mathbb{E}[Y]]=$$
+			- $$=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]-\mathbb{E}[Y]\mathbb{E}[X]+\mathbb{E}[X]\mathbb{E}[Y]=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]$$
+		- ### Teorema:
+			- $X \perp\!\!\!\perp Y \implies Cov(X,Y)=0$ ovvero sono _incorrelate_.
+				- Ma non vale il contrario.
+		- ### Dim:
+			- $X \perp\!\!\!\perp Y \implies \mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$
+	- ## Def:
+		- $$\rho_{X,Y}:= \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}\in [-1,1]$$
+			- è _detto coefficiente di correlazione_ tra $X$ e $Y$
+		- $$Cov(X,Y)=0 \iff \rho_{X,Y}=0$$
+		- $\rho_{X,Y}=\pm 1 \iff Y=aX+b$ per qualche $a,b \in \mathbb{R}$
+		- $\rho_{X,Y}\in (0,1)\iff \text{"approsssimativamente" dipendenza lineare}$
+		- $\rho_{X,Y}=0 \iff \text{non ho alcuna dipendenza lineare}$
+		- $X \perp\!\!\!\perp Y \implies \not \exists f: \mathbb{R}\to \mathbb{R}: Y=f(X)$
 - # Link Utili:
 	- 

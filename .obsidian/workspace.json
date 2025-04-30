@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
+                "file": "Sicurezza della memoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Wireless"
-            }
-          },
-          {
-            "id": "57859959888cf991",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Mezzo fisico di trasmissione"
-            }
-          },
-          {
-            "id": "c805367c334d9631",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Algoritmo del simplesso"
+              "title": "Sicurezza della memoria"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -281,55 +232,55 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
+    "Pasted image 20250430124555.png",
+    "Pasted image 20250430124435.png",
+    "Pasted image 20250430115355.png",
+    "Pasted image 20250430114608.png",
+    "Pasted image 20250430113746.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
+    "Sicurezza della memoria.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
+    "immagini/Pasted image 20250425184018.png",
     "Homepage.md",
-    "Secondo Anno/Reti di Calcolatori/Architettura standard dei protocolli.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Tecnica Branch-and-Bound.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Canali di comunicazione della rete.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
-    "Pasted image 20250425184221.png",
-    "Pasted image 20250425184018.png",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC-address.md",
-    "0-Mostarda/Tecnologie Web.md",
-    "Secondo Anno/Tecnologie Web/Il WWW/Intro al WWW.md",
-    "0-Mostarda/Calcolo delle probabilità e statistica.md",
-    "0-Mostarda/Linguaggi di Programmazione.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Livello MAC nelle reti wireless.md",
+    "immagini/Pasted image 20250429174952.png",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
+    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
+    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/servizi client server.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sottoreti.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza in rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Protocollo ICMP.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/SDN.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/NAT.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
+    "immagini/Pasted image 20250425184221.png",
+    "immagini/Pasted image 20250425184221.png",
     "0-Mostarda",
     "immagini/Pasted image 20250423164111.png",
     "netlify.toml",
     "immagini/Pasted image 20250424151548.png",
-    "immagini/Pasted image 20250424135854.png",
-    "immagini/Pasted image 20250423153317.png",
-    "immagini/Pasted image 20250423160854.png",
-    "immagini/Pasted image 20250423155229.png",
-    "immagini/Pasted image 20250423115257.png",
-    "immagini/Pasted image 20250423131852.png",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
     "Senza nome.canvas",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Memoria secondaria",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

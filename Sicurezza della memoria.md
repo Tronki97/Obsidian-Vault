@@ -1,0 +1,56 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-04-30 11:35`"
+---
+- # Dangling pointer:
+	- I riferimenti possono diventare dangling quando fanno riferimento ad una destinazione non valida. Non accade solo usando la funzione `free` ma basta qualsiasi situazione che rispetterebbe quella condizione:
+	- In questi casi si creerebbero _comportamenti inaspettati_
+		- ![[Pasted image 20250430113746.png]]
+	- I puntatori _wild_ sono facili da controllare perché basta guardare se c'è stato un assegnamento oppure se ha il valore default dato da _run-time_ che quindi non si sa
+	- Mentre quelli dangling non lo sono
+- # Tombstones:
+	- Un modo per gestire i riferimenti dangling e di fatto serve per difendere la memoria dal programma scritto male.
+	- Associano ad ogni allocazione una _parola_ in più chiamata _tombstone_
+	- Viene fatto a run-time quando viene fatta una _dereferenziazione_.
+	- Queste _lapidi_ successivamente conterranno l'indirizzo dell'elemento allocato e quindi il puntatore sarà riferito a questa _tombstone_ 
+		- Ciò implica che accedere ad un valore necessita di fare due salti di puntatori, raddoppiando di fatto il tempo di accesso in memoria, però salvaguardandosi dall'accesso ad un valore inesistente.
+		- ![[Pasted image 20250430114608.png]]
+		- Le tombstones rimangono perché tanto vengono definite come spazio di memoria utilizzabile.
+- # Lock and Keys:
+	- Si associano ai puntatori e ai valori in memoria delle chiavi e lucchetti e quindi si controlla, ogni volta che si dereferenzia il puntatore che la chiave corrisponda al lucchetto.
+	- ![[Pasted image 20250430115355.png]]
+	- In questo modo però si occupa più memoria per appunto "portarsi dietro" chiave e lucchetto.
+- # Garbage collection:
+	- Si parla di gestione automatica della memoria, non si necessita più di gestirla manualmente con `free, malloc`, ma basta creare una nuova struttura e quando viene smessa di essere utilizzata il garbage collector controlla dei valori che gli dicono di rimuoverla.
+	- ## Garbage detection:
+		- Rileva se certi oggetti in memoria sono in uso oppure no
+	- ## Garbage collection:
+		- Libera la memoria da quegli oggetti non usati.
+	- Conoscere il tipo di dato da eliminare da una mano al garbage collector.
+	- ## Reference count:
+		- Ogni volta che si guarda una area di memoria si controlla se qualcuno punta ad essa e si incrementa il contatore e se non ce n'è nessuno allora si può liberare quell'area.
+	- ## Mark and Sweep:
+		- Si contrassegnano i garbage da eliminare seguendo due fasi:
+			- 1) attraversa l' [[Heap]] e contrassegna tutti gli oggetti. $\{M\}$
+			- 2) attraversa lo stack e segue i puntatori agli oggetti nell'heap che vengono poi marcati. $\{M_{1}\}$
+			- Infine $\{M\}-\{M_{1}\}$ e il risultato viene eliminato.
+		- ![[Pasted image 20250430124555.png]]
+		- Questo metodo però interrompe l'esecuzione del programma per potersi assicurare di vedere tutti gli oggetti e assicurarsi che durante il controllo lo stato degli oggetti in memoria non cambi.
+			- In questo modo però si ha dello stuttering nel programma, avendo un calo nel framerate.
+	- ## Stop and Copy:
+		- è una evoluzione del _mark and sweep_, si divide in 2 la memoria, la prima metà è per l'assegnazione e l'altra la si tiene libera per usare questa tecnica.
+		- Quando parte il garbage collection si controlla tutto quello che non è garbage e lo copia nella seconda metà di memoria che diventerà quella principale, e la prima viene liberata invertendo così di fatto i ruoli delle 2 aree di memoria.
+			- ![[Pasted image 20250430124435.png|400]]
+		- Più la memoria è grande meno volte verrà chiamato il garbage collector.
+- # Borrow-check:
+	- Si basa sul concetto che ogni _valore ha un possessore_ (ownership).
+	- Questa ownership si può passare ad un altro  
+	- E si può anche prendere in prestito la proprietà di un valore senza per forza passarla.
+- # Tipi copia:
+	- Non uso più la move per passare il possesso ma si crea una copia
+- # Lifetime:
+	- 
+- # Link Utili: 
+	- 
