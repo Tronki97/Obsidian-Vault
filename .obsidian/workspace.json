@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sicurezza della memoria.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Sicurezza della memoria"
+              "title": "Tecnica Branch-and-Bound"
             }
           }
         ]
@@ -232,24 +232,25 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Pasted image 20250430124555.png",
-    "Pasted image 20250430124435.png",
-    "Pasted image 20250430115355.png",
-    "Pasted image 20250430114608.png",
-    "Pasted image 20250430113746.png",
+    "Homepage.md",
+    "immagini/Pasted image 20250430113746.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
+    "immagini/Pasted image 20250430124555.png",
+    "immagini/Pasted image 20250430124435.png",
+    "immagini/Pasted image 20250430115355.png",
+    "immagini/Pasted image 20250430114608.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
-    "Sicurezza della memoria.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
     "immagini/Pasted image 20250425184018.png",
-    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Livello MAC nelle reti wireless.md",
     "immagini/Pasted image 20250429174952.png",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Algoritmo del simplesso.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
@@ -268,7 +269,6 @@
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Protocollo ICMP.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/SDN.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/NAT.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
@@ -277,7 +277,6 @@
     "0-Mostarda",
     "immagini/Pasted image 20250423164111.png",
     "netlify.toml",
-    "immagini/Pasted image 20250424151548.png",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Senza nome.canvas",

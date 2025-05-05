@@ -51,6 +51,6 @@ data: "`2025-04-30 11:35`"
 - # Tipi copia:
 	- Non uso più la move per passare il possesso ma si crea una copia
 - # Lifetime:
-	- 
+- I riferimenti non devono mai sopravvivere ai loro valori riferiti.
 - # Link Utili: 
 	- 
