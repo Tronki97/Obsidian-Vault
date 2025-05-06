@@ -1,0 +1,83 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-05-06 13:30`"
+---
+- # Argomento:
+	- Si ha a che fare con successioni di [[Variabili aleatorie]] nello specifico [[Variabili aleatorie|V.A discreta]] 
+	- Questi teoremi sono dei risultati che si ottengono sotto certe condizioni 
+- # teorema limite centrale:
+	- Se prendo la media di una successione di variabili aleatorie e la confronto con la media della popolazione, questa nuova variabile aleatoria converge ad un qualche risultato e si trova alla base della statistica
+	- Problema Stimare
+		- Esperimento aleatorio con $X$ V.A voglio trovare la legge dell'esperimento $\mathbb{P}_{X}$ ovvero stimare la legge di $X$ 
+		- Idea:
+			- Stimare il [[Media|valore atteso]] di $X$ ($\mathbb{E}[X]$) con la media campionaria:
+				- $$\bar x_{n}: \frac{x_{1},...,x_{n}}{n}$$
+				- Dove le $x_{i}$ sono i risultati di $n$ prove.
+				- Dal punto di vista teorico ho $X_{1},...,X_{n}$ con $n>>1$ di cui $x_{i}$ sono i valori noti una volta fatto l'esperimento e quindi ho che;
+					- $(X_{n})_{n\in \mathbb{N}}$ _successione di variabili aleatorie indipendenti e identicamente distribuite (iid)_
+			- Sapendolo stimare allora so stimare anche $\mathbb{E}[f(X)]\ \ \forall f: \mathbb{R}\to \mathbb{R}$
+			- Inoltre posso stimare $\mathbb{P}(A), A\subset \Omega$ ovvero:
+				- $X= \mathbb{1}_{A}: \mathbb{E}[X]=\mathbb{P}(A)$ 
+			- Voglio dimostarre cje $\bar x_{n}$ è una buona stima di $\mathbb{E}[X]$
+	- ## Teorema legge dei grandi numeri (LGN):
+		- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a _iid_  con $\mu=\mathbb{E}[X]$ e $\sigma^{2}=Var(x)$
+			- $$\bar x_{n}: \frac{x_{1},...,x_{n}}{n}$$
+			- $$\mathbb{P}(|\bar X_{n}-\mu|>\epsilon)\le \frac{\sigma^{2}}{x \epsilon^{2} }$$
+			- In particolare:
+				- $$\lim_{n\to \infty} \mathbb{P}(|\bar X_{n}-\mu|>\epsilon)=0$$
+					- $\forall \epsilon > 0$ e spiega con che velocità converge.
+		- ### Lemma:
+			- _disuguaglianza di chebychev_:
+				- $Y$ deve essere una v.a con $\mathbb{E}[Y]$ e $Var(Y)$ Allora: 
+					- $$\mathbb{P}(|Y-\mathbb{E}[Y]|>\epsilon)\le \frac{Var(Y)}{\epsilon^{2}}$$
+						- $\forall \epsilon>0$
+					- ### Dim:
+						- $$\mathbb{P}(|Y-\mathbb{E}[Y]|>\epsilon)\le \frac{\mathbb{E}[(Y-\mathbb{E}[Y])^{2}]}{\epsilon^{2}} \implies$$
+						- $$\implies \mathbb{E}[(Y-\mathbb{E}[Y])^{2}]=$$
+						- $$= \mathbb{E}[(Y-\mathbb{E}[Y])^{2}*\mathbb{1}_{\{|Y-\mathbb{E}[Y]|>\epsilon\}}]+ \mathbb{E}[\mathbb{E}[(Y-\mathbb{E}[Y])^{2}]*\mathbb{1}_{\{|Y-\mathbb{E}[Y]|\le \epsilon\}}]\implies$$
+		- ### Teorema:
+			- $$Var(X+Y)=\mathbb{E}[(X+Y-\mathbb{E}[X+Y])^{2}]=\mathbb{E}[(X+Y-\mathbb{E}[X]+\mathbb{E}[Y])^{2}]=$$
+			- $$=\mathbb{E}[(X-\mathbb{E}[X])^{2}]+ \mathbb{E}[(Y-\mathbb{E}[Y])^{2}]+2\mathbb{E}[(X-\mathbb{E[X]})(Y-\mathbb{E}[Y])]=$$
+			- $$=Var(X)+Var(Y)+Cov(X,Y)$$
+				- Però sono indipendenti quindi $Cov(X,Y)=0$
+		- ### Dim LGN:
+			- Basta prendere $Y=\bar X_{n}$ 
+			- $$\bar X_{n}=\frac{1}{n} \sum\limits_{i=1}^{n}x_{i}$$
+			- $$\mathbb{E}[\bar X_{n}]= \frac{1}{n} \sum\limits_{i=1}^{n} \mathbb{E}[X_{i}]= \frac{n \mu}{n}=\mu$$
+				- Sommatoria di tutti i valori attesi che però sono identicamente distribuite.
+			- $$Var(\bar X_{n})=\frac{1}{n^{2}} \sum\limits_{i=1}^{n}Var(X_{i})=\frac{n \sigma^{2}}{n^{2}}=\frac{\sigma^{2}}{n}$$
+				- Applicando la disuguaglianza di Chebychev, il fatto che tutte le $X_{i}$ siano _iid_, che la $Var(X_{i})=\sigma^{2}$ e che anche vale il teorema precedente sulla varianza di una somma.
+	- ## Metodo Montecarlo:
+		- L'obiettivo è approsimare degli integrali:
+			- $$\int_{a}^{b}f(x) dx$$
+				- Con $f:\mathbb{R}\to \mathbb{R}$ generica
+		- Per ipotesi $a=0, b=1$
+			- $$\int_{0}^{1}f(x) dx=\int_\mathbb{R}f(x)\mathbb{1}_{(0,1)}(x) dx = \mathbb{E}[f(X)]$$
+				- Dove $\mathbb{1}_{(0,1)}(x)=f_{x}(x)$ e $X\sim Unif(0,1)$ 
+			- Applicando la LGN:
+				- $$Y_{i}=f(X_{i}), X_{i}\sim Unif(0,1)$$
+				- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a _iid_  
+				- $$\sum_{i=1}^{n}Y_{i}=\frac{{f(X_{i})+...+f(X_{n})}}{n}$$
+				- Con $n\to \infty$ $\mathbb{E}[f(X)]=\int_{0}^{1}f(x) dx$ 
+			- La convergenza è dell'ordine di $\frac{1}{\sqrt{n}}$ e non dipende dalla dimensione dell'integrale.
+				- Cio vuol dire che:
+					- $$\mathbb{E}[|\bar X_{n}-\mu|]\approx \frac{1}{\sqrt{n}}$$
+				- Questo è una conseguenza del _teorema limite centrale_ _TLC_
+- # Teorema limite centrale:
+	- Se prendo una successione di variabili aleatorie _iid_ con $\mu$ e $\sigma^{2}>0$
+	- $$Z_{n}:=\frac{\bar X_{n}- \mu}{\frac{\sigma}{\sqrt{n}}}$$
+		- Si osserva che $\mathbb{E}[Z_{n}]=0, Var(Z_{n})=1$
+	- Allora:
+		- $$\mathbb{P}(Z_{n}\le x)\xrightarrow{n\to \infty} \Phi(x)$$
+		- $$\Phi(x)=\int_{- \infty}^{x} \frac{1}{\sqrt{2n}} e^\frac{-z^{2}}{2}dz$$
+		- Quando $n \to \infty$ allora  $\frac{\bar X_{n}- \mu}{\frac{\sigma}{\sqrt{n}}}=Z_{n} \approx Z$ ovvero ha approssimativamente la stessa legge.
+		- $$\bar X_{n} \approx \frac{\sigma}{\sqrt{n}}z + \mu$$
+			- Sempre quando $n\to \infty$
+	- Allora la media campionaria converge in distribuzione alla normale:
+		- $$\bar X_{n}=\frac{1}{n}\sum\limits_{i=1}^{n}X_{i} \xrightarrow{d} \mathcal{N}(\mu, \frac{\sigma^{2}}{n})$$
+			- Dove $d$ sta per convergenza in distribuzione.
+			- La convergenza è in distribuzione e non in probabilità.
+- # Link Utili:
+	- 
