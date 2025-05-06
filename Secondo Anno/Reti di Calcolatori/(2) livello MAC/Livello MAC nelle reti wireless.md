@@ -21,5 +21,29 @@ data: "`2025-04-29 16:38`"
 - Per verificare se c'è una collisione nel caso del wireless nel caso in cui ci sia un ricevente lontano dal trasmettitore
 	- ![[Pasted image 20250429174952.png]]
 	- In quel caso il trasmettitore non rileverà mai collisioni e quindi sarà compito del ricevitore farlo per poi mandare un pacchetto al trasmettitore che gli dice di trasmettere i dati visto che c'è spazio per andare.
+- # MACA:
+	- Utilizza il meccanismo RTS/CTS (request to send / clear to send) 
+	- Non usa il _carrier sense_ 
+- # RTS/CTS:
+	- Si necessita di gestire i terminali esposti e nascosti.
+		- Termianli nascosti:
+			- Quando due terminali non si vedono tra di loro.
+			- 
+		- Terminali esposti:
+			- Quando due terminali si vedono tra di loro ma non possono comunicare.
+			- Sono un problema perchè se due usano il carrier sense non riusciranno a comunicare contemporaneamente
+	- ![[Pasted image 20250506154531.png]]
+	- A prima di inviare i dati manda in una sorta di broadcast un RTS ovvero request to send
+	- Nel momento in cui C riceve RTS, suppongo che non stia ascoltando nessun altro, viene correttamente interpretato, 
+		- Quindi C manda un CTS (sempre in broadcast) ovvero clear to send che indica una sorta di ACK dicendo ad A che può parlare.
+	- Se l'RTS viene sentito ma il CTS no, allora non so se disturbo le comunicazioni ma comunque si parla di comunicare tra trasmittenti.
+	- Se il CTS viene ricevuto senza però aver mandato un RTS allora non si può comunicare.
+	- Spesso nell'impostazione dei modem non viene messo il checkbox per l'RTS/CTS, ma si mette il threshold da modificare: 
+		- Spesso settarlo a 1499 perché 1500 è la dimensione max di un frame ethernet o 1000 byte
+		- Per il wifi il max dim è 2378 e spesso lo si trova a 2346 di default
+		- Ha senso impostare RTS/CTS per frame appena più piccoli del massimo trasferibile perché vuol dire che in quel caso si sta facendo un file transfer che occupa grandi dimensioni.
+	- Un attacco a questo protocollo sarebbe il CTS flooding:
+		- Un attaccante manda un CTS a tutti i nodi della rete, non ti da la garanzia di rilevarlo e se lo rilevi non da la certezza che sia effettivamente un attacco.
+- 
 - # Link Utili:
 	- 

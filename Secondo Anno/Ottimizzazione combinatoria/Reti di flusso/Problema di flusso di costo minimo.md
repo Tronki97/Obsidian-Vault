@@ -11,6 +11,7 @@ aliases:
   - psudoflusso minimale
   - cammini minimi successivi
   - CMS
+  - cancellazione dei cicli
 data: "`2025-03-25 17:25`"
 ---
 - # Problema di flusso di costo minimo (MCF):
@@ -83,5 +84,10 @@ data: "`2025-03-25 17:25`"
 						- $\theta_{i}>0$ e ogni $P_{i}$ è un ciclo da $c_{y}<c_{x}$ però risulta che:
 							- $$c_{x}>c_{x}+\theta_{1}c(P_{1})+...+\theta_{n}c(P_{n})$$
 								- E quindi che $c(P_{i})<0$ per qualche $i$ 
+	- ## Cancellazione dei cicli:
+		- Si prende un flusso ammissibile dal grafo G e lo si mette in $x$, se non esiste il problema è vuoto
+			- In pratica usare [[problema di flusso massimo#^434d0a|edmonds-karp]] per ottenere il flusso e poi eliminare i nodi $\{s,t\}$
+		- Poi si sceglie un ciclo di costo negativo e si aggiorna il flusso in base alla capacità minima degli archi che compongono il ciclo. Se non ci sono più cicli si termina altrimenti si ripete il processo.
+		- ![[Pasted image 20250506171121.png]]
 - # Link Utili:
 	- 

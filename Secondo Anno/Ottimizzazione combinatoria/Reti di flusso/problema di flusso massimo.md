@@ -107,7 +107,7 @@ data: "`2025-03-25 18:21`"
 					- Quindi ad ogni iterata il flusso aumenta di almeno 1.
 					- L’algoritmo termina quindi dopo al più $nU$ iterazioni.
 				- _Il problema dell’algoritmo sta nell’assenza di vincoli sulla scelta dei cammini da aumentare._
-		- ### Algoritmo di Edmonds-Karp:
+		- ### Algoritmo di Edmonds-Karp: ^434d0a
 			- è una modifica dell’algoritmo di Ford-Fulkerson ma si mette un criterio sulla scelta dei cammini da aumentare.
 				- Si modifica il punto 2 di quell’algoritmo Utilizzando una visita [[Visite sui Grafi#^3c4eb5|BFS]] sul grafo $G_{x}$ in questo modo si nota come verranno scelti sempre i cammini con meno archi quindi più corti.
 			- #### Proprietà:

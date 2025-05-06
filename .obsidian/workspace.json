@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ca1ca5d400c74a7c",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Varianza"
+              "title": "Problema di flusso di costo minimo"
             }
           },
           {
-            "id": "336db7abd8cd5ba8",
+            "id": "f50012e054463315",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,58 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Media"
-            }
-          },
-          {
-            "id": "d31dd523b4e93c5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Vettori aleatori"
-            }
-          },
-          {
-            "id": "9275d4e960c10354",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Probabilità condizionata"
+              "title": "Problemi di accoppiamento"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -304,22 +257,29 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "ca1ca5d400c74a7c",
+  "active": "f50012e054463315",
   "lastOpenFiles": [
-    "Teoremi limite.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Livello MAC nelle reti wireless.md",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
+    "Pasted image 20250506171121.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
+    "Pasted image 20250506154531.png",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
     "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
     "immagini/Pasted image 20250430113746.png",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
@@ -329,26 +289,18 @@
     "immagini/Pasted image 20250430114608.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
     "immagini/Pasted image 20250425184018.png",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Livello MAC nelle reti wireless.md",
     "immagini/Pasted image 20250429174952.png",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
     "immagini/Pasted image 20250425184221.png",
-    "immagini/Pasted image 20250425184221.png",
     "0-Mostarda",
-    "immagini/Pasted image 20250423164111.png",
     "netlify.toml",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
