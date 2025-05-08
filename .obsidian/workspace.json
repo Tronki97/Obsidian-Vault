@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Problema di flusso di costo minimo"
+              "title": "Homepage"
             }
           },
           {
-            "id": "f50012e054463315",
+            "id": "f4d9478f1d0a7f63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
+                "file": "Shell scripting.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Problemi di accoppiamento"
+              "title": "Shell scripting"
             }
           }
         ],
@@ -79,7 +79,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Files"
             }
           },
           {
@@ -88,15 +88,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": true,
+                "query": "maschera",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Ricerca"
+              "title": "Search"
             }
           },
           {
@@ -106,14 +106,14 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Segnalibri"
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 269.50418853759766
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Homepage.md",
+                "file": "Javascript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Homepage"
+              "title": "Backlinks for Javascript"
             }
           },
           {
@@ -148,12 +148,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Homepage.md",
+                "file": "Javascript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Homepage"
+              "title": "Outgoing links from Javascript"
             }
           },
           {
@@ -163,9 +163,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
+                "useHierarchy": true
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -177,13 +175,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0-Mostarda/Tecnologie Web.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "file": "Javascript.md"
               },
               "icon": "lucide-list",
-              "title": "Struttura di Tecnologie Web"
+              "title": "Outline of Javascript"
             }
           },
           {
@@ -207,17 +202,17 @@
             }
           },
           {
-            "id": "4121852fb4cdb5b9",
+            "id": "9882b26e7253d011",
             "type": "leaf",
             "state": {
-              "type": "github-copilot-chat-view",
+              "type": "advanced-tables-toolbar",
               "state": {},
               "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "title": "Plugin no longer active"
             }
           },
           {
-            "id": "c135cdf899592f5a",
+            "id": "76d7584aee1199a1",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -227,7 +222,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "Tutte le proprietà"
+              "title": "All properties"
             }
           }
         ],
@@ -235,76 +230,76 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.5
+    "width": 345.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Apri selezione rapida": false,
-      "graph:Apri vista grafo": false,
+      "publish:Publish changes...": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "3d-graph:3D Graph": false,
-      "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
-      "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false,
-      "markdown-importer:Apri importazione Markdown": false,
-      "audio-recorder:Avvia/ferma registrazione": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "audio-recorder:Start/stop recording": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
       "homepage:Open homepage": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "publish:Pubblica modifiche": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "f50012e054463315",
+  "active": "f4d9478f1d0a7f63",
   "lastOpenFiles": [
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Livello MAC nelle reti wireless.md",
     "Homepage.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
-    "Pasted image 20250506171121.png",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
-    "Pasted image 20250506154531.png",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
-    "immagini/Pasted image 20250430113746.png",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
-    "immagini/Pasted image 20250430124555.png",
-    "immagini/Pasted image 20250430124435.png",
-    "immagini/Pasted image 20250430115355.png",
-    "immagini/Pasted image 20250430114608.png",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
-    "immagini/Pasted image 20250425184018.png",
-    "immagini/Pasted image 20250429174952.png",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
-    "immagini/Pasted image 20250425184221.png",
-    "0-Mostarda",
+    "Shell scripting.md",
+    "Pasted image 20250508152455.png",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/linguaggio C.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
+    "template/Modello mostarda.md",
     "netlify.toml",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
+    "latexsheet-a4.pdf",
+    "immagini/step_size.png",
+    "immagini/convessa 1.png",
+    "immagini/Untitled.webp",
+    "immagini/Untitled 2.webp",
+    "immagini/Untitled 1.webp",
+    "immagini/Untitled 1 1.webp",
+    "immagini/Screenshot (9).png",
+    "immagini/Screenshot (21).png",
+    "immagini/Screenshot (15).png",
+    "Secondo Anno/Tecnologie Web/Set di caratteri/Standard unico.md",
+    "Secondo Anno/Tecnologie Web/Progetto/Workflow.md",
+    "Secondo Anno/Tecnologie Web/Progetto/Credenziali mongoDB.md",
+    "Secondo Anno/Tecnologie Web/Javascript/server-side JS.md",
+    "Secondo Anno/Tecnologie Web/Javascript/modularizzazione.md",
+    "Secondo Anno/Tecnologie Web/Javascript/interpolazione (TW).md",
+    "Secondo Anno/Tecnologie Web/Javascript/client-side JS.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Temi trasversali di Javascript.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Programmazione asincrona.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Javascript.md",
+    "Secondo Anno/Tecnologie Web/Javascript/Funzioni javascript.md",
+    "Secondo Anno/Tecnologie Web/Javascript",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
+    "Secondo Anno/Tecnologie Web/CSS/Tipografia.md",
+    "Secondo Anno/Tecnologie Web/CSS/Page layout.md",
+    "Secondo Anno/Tecnologie Web/CSS/CSS.md",
+    "Secondo Anno/Tecnologie Web/CSS",
+    "Secondo Anno/Sistemi Operativi/progetto/Fase 3.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Sicurezza nei sistemi operativi.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Gestione delle chiavi.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Crittografia.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
-    "Senza nome.canvas",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione della memoria",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria",
+    "Secondo Anno/Sistemi Operativi/Modulo 2",
     "Untitled.canvas",
     "template/Senza nome.canvas",
     "programmazione/Untitled.canvas",

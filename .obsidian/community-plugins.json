@@ -28,6 +28,5 @@
   "local-gpt",
   "ai-providers",
   "3d-graph",
-  "github-copilot",
   "dataview-serializer"
 ]

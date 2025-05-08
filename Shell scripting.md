@@ -1,0 +1,48 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-05-08 15:16`"
+---
+- # Argomento:
+	- differenza tra script e programma:
+		- la granularità delle istruzioni.
+		- negli script ogni statement è l’attivazione di un programma.
+- per rendere un file di testo uno script basta accenedere il bit che lo rende eseguibile.
+- uno script quindi è una sequenza di comandi.
+- # Comandi:
+	- i comandi vanno messi come prima parte dello statement e poi  l’oggetto a cui si devono riferire.
+	- `chmod` per modificare i permessi dei file.
+		- ![[Pasted image 20250508152455.png]]
+	- `rm` rimuove i file
+	- `cp` copia i file.
+	- `ln` crea il link che sia simbolico o meno
+		- link simbolico: un puntatore ad un nome diverso.
+			- se si cancella il file a cui punta, il link rimane valido ma punta al nulla. 
+		- link fisico: si danno più nomi ad un file.
+	- `kill`: termina il processo mandando il segnale `15` per dire di terminare il processo. se si mette il `-9` il processo viene terminato immediatamente. 
+	- `echo`: comando per mostrare il parametro, utile per “debuggare” in quanto la shell ha le variabili, `echo $SHELL` farà vedere il valore della variabile `SHELL`.
+	- ci sono variabili che sono built-in come `$PATH`
+	- ## Caratteri speciali:
+		- `ls > list.txt` ridireziona l’output nel file
+		- `ls >> list.txt` aggiunge l’output nel file
+		- `ls | wc -w` aggiunge l’output del primo comando ai parametri del secondo comando.
+		- `who | tee `
+		- wildcard: 
+			- `*.c`: sostituisce qualsiasi stringa vuol dire che prende tutti i nomi di file che finiscono con `.c`.
+			- `prova00?.c`: tutti i file che sono uguali tranne per il carattere al posto dell ? fanno match. 
+		- `;` serve per fare una sequenza di comandi. se si mette una sequenza tra parentesi `( ; ; )` quella sequenza viene eseguita da una sottoshell.
+		- `&&` utile per la cortocircuitazione se il primo comando ha successo allora viene eseguito il secondo altrimenti no.
+		- se si mette `&` alla fine di un comando allora verrà eseguito in background.
+		- `' '` : viene considerato come stringa primitiva senza eseguire i comandi al interno e senza interpretare le variabili 
+		- `" "` : ciò che si trova dentro viene eseguito quando passato come parametro per un comando. 
+		- `renice` altera la priorità del processo specificato
+		- I comandi restituiscono uno status code che se non è 0 vuol dire che c'è stato un errore altrimenti 0.
+		- `$?` è il valore di ritorno dell'ultimo comando.
+- # Variabili:
+	- locali: si tende a metterle col nome in minuscolo, non possono essere passate al processo figlio. 
+	- d’ambiente: si tende a metterle col nome in maiuscolo, vengono copiate nell'ambiente del programma e possono quindi essere passate al processo figlio.
+	- per accedere alla variabile si usa `$` .
+- 
+- # Link Utili:
+	- 
