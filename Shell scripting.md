@@ -36,13 +36,18 @@ data: "`2025-05-08 15:16`"
 		- se si mette `&` alla fine di un comando allora verrà eseguito in background.
 		- `' '` : viene considerato come stringa primitiva senza eseguire i comandi al interno e senza interpretare le variabili 
 		- `" "` : ciò che si trova dentro viene eseguito quando passato come parametro per un comando. 
-		- `renice` altera la priorità del processo specificato
+	- `renice` altera la priorità del processo specificato
 		- I comandi restituiscono uno status code che se non è 0 vuol dire che c'è stato un errore altrimenti 0.
 		- `$?` è il valore di ritorno dell'ultimo comando.
+	- `source`: quando viene chiamato uno script diverso viene aperta una nuova shell che lo esegue se invece si vuole che venga eseguito dalla stessa si usa questo comando.
+	- `touch`: modifica il tempo di accesso/modifica di un file, portandolo ad un tempo specifico. Usabile anche per creare un nuovo file. 
+	- `SED`: `stream EDitor` scandisce dei file ed esegue una modifica su tutte le righe che rispettano una certa condizione.
+	- 
 - # Variabili:
 	- locali: si tende a metterle col nome in minuscolo, non possono essere passate al processo figlio. 
 	- d’ambiente: si tende a metterle col nome in maiuscolo, vengono copiate nell'ambiente del programma e possono quindi essere passate al processo figlio.
 	- per accedere alla variabile si usa `$` .
-- 
+	- Quando ci si riferisce ad una variabile inesistente non da errore ma vuoto.
+	- 
 - # Link Utili:
 	- 
