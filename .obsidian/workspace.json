@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a2be6140752ae7c4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Teoremi limite"
-            }
-          },
-          {
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Catene di Markov.md",
+                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Catene di Markov"
+              "title": "Algoritmo del simplesso"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -259,15 +234,18 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi a stati finiti.md",
+    "Primo Anno/Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
+    "Primo Anno/Algebra e geometria/Determinante/Matrice invertibile.md",
+    "Primo Anno/Algebra e geometria/Cambio di base.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
+    "Homepage.md",
     "Catene di Markov.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi a stati finiti.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
     "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
-    "Homepage.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
     "Pasted image 20250508142331.png",
     "Pasted image 20250508140113.png",
-    "Primo Anno/Algebra e geometria/Cambio di base.md",
     "Primo Anno/Algebra e geometria/Introduzione.md",
     "Primo Anno/Algebra e geometria/Teorema spettrale.md",
     "Primo Anno/Algebra e geometria/Simmetria.md",
@@ -287,9 +265,6 @@
     "Pasted image 20250506154531.png",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
     "immagini/Pasted image 20250430113746.png",
     "immagini/Pasted image 20250430124555.png",
     "immagini/Pasted image 20250430124435.png",
