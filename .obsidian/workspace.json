@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Sistemi Operativi/python scripting.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
-            }
-          },
-          {
-            "id": "f4d9478f1d0a7f63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Shell scripting.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Shell scripting"
+              "title": "python scripting"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -252,10 +227,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f4d9478f1d0a7f63",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi/Shell scripting.md",
+    "Secondo Anno/Sistemi Operativi/python scripting.md",
     "Homepage.md",
-    "Shell scripting.md",
     "Pasted image 20250508152455.png",
     "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/linguaggio C.md",
@@ -293,7 +269,6 @@
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Sicurezza nei sistemi operativi.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Gestione delle chiavi.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Crittografia.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Scheduling",
     "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione risorse",
