@@ -1,0 +1,54 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-05-07 11:42`"
+---
+- # Argomento:
+	- Con i tipi è stato introdotto il modo di interpretare una stringa di bit per dire che è appunto di un determinato tipo con varie proprietà e operazioni.
+	- Aggiungendo quindi un incapsulamento per poter distinguere quelle sezioni di bit
+	- Questa capsula inoltre opacizza la gestione di questi tipi per gli utenti.
+- # ADT (abstract data type):
+	- Fanno rispettare le astrazioni implementate di default e dal programmatore proteggendo delle parti di codice da altre.
+	- Costituito da:
+		- Il nome del tipo astratto _A_
+		- Il tipo di rappresentazione: _T_
+		- Operazioni di: _creazione, interrogazione e manipolazione_ di valori di tipo _A_
+		- ![[Pasted image 20250507115330.png|350]]
+	- ## Nascondere informazioni:
+		- Si possono usare dei modificatori di visualizzazione come `public, private` se non viene esplicitato allora saranno tutte pubbliche.
+	- ## Indipendenza della rappresentanza:
+		- Implementazioni corrette dello stesso ADT vengono viste allo stesso modo dal consumatori dell'ADT.
+	- Il type checker fa un controllo dell'utilizzo dei tipi astratti e anche della loro implementazione in base al "contratto" stipulato tramite i modificatori e la rappresentazione usata.
+- # moduli:
+	- Quando si fanno progetti di grandi dimensioni può essere utile rendere disponibili diversi ADT nello stesso "pacchetto" ciò è appunto detto _modulo_ 
+- # Tipi esistenziale:
+	- `trait Counter { fn new…; fn get…; fn inc…; }`
+	- Corrisponde al tipo esistenziale:
+		- `CounterADT = { ∃X, {new : () → X, get : X → int, inc : X → X}`
+	- Il modo per mantenere l'oggetto esistenziale effettivamente facendo un operazione che gli viene assegnata e non proprio un operazione aritmetica precisa lo si fa tramite uno _stato_ che quell'oggetto mantiene e con il quale le operazioni interagiscono.
+- # Oggetti:
+	- è una capsula che contiene dati e operazioni che manipolano quei dati e mantiene uno stato a cui si può accedere solo tramite quelle operazioni
+	- Le operazioni vengono chiamate _metodi_.
+	- E le variabili interne sono _campi_ che sono sostanzialmente dei _record_.
+	- Non si usano più le chiamate a procedure avendo la memoria condivisa che complica le cose ma si usano i [[Message passing|messaggi]], 
+	- La sintassi quindi si riassume in:
+		- "invoco il metodo $m$ con i parametri $p_{1},p_{2}$ sull'oggetto $o$"
+	- Anche qui si possono usare i modificatori di visibilità. 
+		- Protected:
+		- Private:
+		- Public:
+- # Classi:
+	- Un template per generare delle istanziazioni degli oggetti.
+	- Permette di racchiudere l'implementazioni dei metodi che modificano certi campi.
+	- Non girano sul modello ad oggetti.
+	- ![[Pasted image 20250508140113.png|350]]
+	- Basta analizzare cosa fa una implementazione di una classe e allora saprò cosa fanno tutti gli oggetti. 
+	- Le classi quindi detengono le implementazioni delle operazioni e lo stato per ogni oggetto è salvato in memoria al contrario dello stato della classe che è _inesesistente_ 
+	- L'istanziazione di oggetti è fatta dinamicamente, in linguaggi come [[Java]] viene fatto sullo [[Heap]] mentre in altri come _C++_ viene fatto sullo _stack_
+	- ## Prototipi:
+		- Si basa sulla delegazione di funzione per implementare dei metodi tipo quelli delle classi, utilizzato in linguaggi come [[Javascript]]:
+			- ![[Pasted image 20250508142331.png|400]]
+			- `c=new Counter();` consiste nel clonare un oggetto in un altro.
+- # Link Utili:
+	- 

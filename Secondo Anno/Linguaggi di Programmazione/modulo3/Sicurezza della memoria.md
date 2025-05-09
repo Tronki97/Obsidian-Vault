@@ -48,6 +48,7 @@ data: "`2025-04-30 11:35`"
 	- Si basa sul concetto che ogni _valore ha un possessore_ (ownership).
 	- Questa ownership si può passare ad un altro  
 	- E si può anche prendere in prestito la proprietà di un valore senza per forza passarla.
+	- Inoltre il possesso preso in prestito sussiste fintanto che chi lo ha prestato è in vita. 
 - # Tipi copia:
 	- Non uso più la move per passare il possesso ma si crea una copia
 - # Lifetime:

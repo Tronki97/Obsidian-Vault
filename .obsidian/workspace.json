@@ -8,12 +8,36 @@
         "type": "tabs",
         "children": [
           {
+            "id": "a2be6140752ae7c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Teoremi limite"
+            }
+          },
+          {
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
+                "file": "Catene di Markov.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Problema di flusso di costo minimo"
-            }
-          },
-          {
-            "id": "f50012e054463315",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Problemi di accoppiamento"
+              "title": "Catene di Markov"
             }
           }
         ],
@@ -257,49 +257,50 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "f50012e054463315",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi a stati finiti.md",
+    "Catene di Markov.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
+    "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
+    "Pasted image 20250508142331.png",
+    "Pasted image 20250508140113.png",
+    "Primo Anno/Algebra e geometria/Cambio di base.md",
+    "Primo Anno/Algebra e geometria/Introduzione.md",
+    "Primo Anno/Algebra e geometria/Teorema spettrale.md",
+    "Primo Anno/Algebra e geometria/Simmetria.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
+    "Pasted image 20250507115330.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Livello MAC nelle reti wireless.md",
-    "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
     "Pasted image 20250506171121.png",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
     "Pasted image 20250506154531.png",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
     "immagini/Pasted image 20250430113746.png",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
     "immagini/Pasted image 20250430124555.png",
     "immagini/Pasted image 20250430124435.png",
     "immagini/Pasted image 20250430115355.png",
     "immagini/Pasted image 20250430114608.png",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
-    "immagini/Pasted image 20250425184018.png",
-    "immagini/Pasted image 20250429174952.png",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
-    "immagini/Pasted image 20250425184221.png",
     "0-Mostarda",
     "netlify.toml",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",

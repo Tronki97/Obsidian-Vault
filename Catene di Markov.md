@@ -1,0 +1,70 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-05-09 13:19`"
+---
+- # Argomento:
+	- Si considera una successione di [[Variabili aleatorie#^62da4f|V.A discreta]] non saranno più indipendenti ma saranno correlate da dalla _proprietà di Markov_
+		- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a. 
+- # Processo stocastico:
+	- Insieme di v.a indicizzate da un certo parametro: 
+		- A tempo discreto:
+			- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a.
+		- A tempo continuo:
+			- $(X_{t})_{t\in \mathbb{R}}$ successione di v.a.
+- Si considera un processo stocastico a livello discreto.
+- # Catene di Markov:
+	- Si richiede che tutti i supporti della successione siano racchiusi in un $S$ quindi:
+		- $$S_{X_{1}}\subset S,..., S_{X_{n}}\subset S$$
+	- 
+	- Si ha a che fare con una successione di [[Variabili aleatorie#^62da4f|V.A discreta]] $(X_{n})_{n\in \mathbb{N}}$ tale che:
+		- $\exists S$ finito o infinito tale:
+			- $$S_{X_{1}}\subset S,..., S_{X_{n}}\subset S$$  
+		- $$\mathbb{P}(X_{n+1}=x_{n+1}|X_{n}=x_{n},...,X_{0}=x_{0})=\mathbb{P}(X_{n+1}=x_{n+1}|X_{n}=x_{n})$$
+			- Dove $X_{i}\in S$ e $S$ _è lo spazio degli stati._
+			- La probabilità di passare dallo stato $x_{n}$ allo stato $x_{n+1}$ dipende solo dallo stato corrente $x_{n}$ e non da quelli precedenti.
+	- ## Ipotesi da assumere:
+		- 1) $S$ è finito quindi $|S|:=N$ 
+		- 2) la catena è omogenea nel tempo:
+			- Ovvero $\pi_{i,j}(n)=\pi_{i,j} \ \ \forall n \in \mathbb{N}, \forall i,j \in S$  
+				- Dove $\pi_{i,j}$ è la probabilità di passare dallo stato $i$ allo stato $j$ in un passo.
+			- $\pi: (\pi_{i,j})_{i,j=1,..,N}\in \mathbb{R}^{N \times N}$
+				- #Lamatrice_di_transizione .
+			- $\pi_{i,j}=\mathbb{P}(X_{n+1}=j|X_{n}=i)$
+				- $i,j \in S$
+		- ### TEO:
+			- 1) $$\pi_{i,j}\in [0,1] \ \ \ \forall i,j \in S$$
+			- 2) $$ \sum\limits_{j=1}^{N} \pi_{i,j} =1$$
+				- #### Dim:
+					- $$\sum\limits_{j=1}^{N} \pi_{i,j}=\mathbb{P}(X_{n+1}=j|X_{n}=i)=$$
+					- $$=\sum\limits_{j=1}^{N} \frac{\mathbb{P}(X_{n+1},X_{n})}{\mathbb{P}(X_{n}=1)}=1$$
+	- La rappresentazione prevede i nodi che rappresentano gli stati e gli archi sui quali si riporta la probabilità di transizione tra gli stati; la somma delle probabilità sugli archi uscenti deve sommare ad 1.
+	- ## ES:
+		- $N=3$
+		- $$\pi=\begin{pmatrix}0&1&0 \\ 0& \frac{1}{2} & \frac{1}{2}\\ \frac{1}{2} & 0 & \frac{1}{2}\end{pmatrix}$$
+		- #grafo
+	- ## Def:
+		- La probabilità di transizione in $m$ passi con $m>0$ è la [[Probabilità condizionata]] :
+			- $$\pi_{i,j}^{(m)}:= \mathbb{P}(X_{n+m}=j| X_{n}=i)$$
+		- ### OSS:
+			- $$\pi_{i,j}^{(0)}=\mathbb{P}(X_{n}=j| X_{n}=i)=\begin{cases}1 & i=j \\ 0 & i\ne j\end{cases}$$
+			- $$\pi_{i,j}^{(1)}=\pi_{i,j}$$
+				- Ovvero la probabilità di transizione in un passo
+		- ### ES:
+			- Fissati $i,j\in S$ con $m=2$
+			- $$\pi_{i,j}^{(2)}=\sum\limits_{k=1}^{N} \pi_{i,k}* \pi_{k,j}\to \pi*\pi$$
+			- $$\pi_{i,j}^{(2)}=\mathbb{P}(X_{n+2}=j | X_{n}=i)$$
+			- $$=\frac{\mathbb{P}(X_{n+2}=j , X_{n}=i)}{\mathbb{P}(X_{n}=1)}$$
+	- ## Classe di comunicazione:
+		- Insieme di stati, $C\subset S$, tale che:
+			- $$\forall i,j \in C \implies \mathbb{P}(X_{n+1}=j|X_{n}=i)>0$$
+				- Ovvero posso passare da uno stato all'altro.
+			- ### OSS:
+				- Se $C$ è una classe di comunicazione allora $\pi_{i,j}^{(m)}>0$ per ogni $m\in \mathbb{N}$ e $i,j\in C$ 
+	- ## Legge delle variabili aleatorie:
+		- Da trovare la legge di $X_{n}$ con $n\in \mathbb{N}$
+			- $$\begin{array}{|} X_{n}& 1 & 2 & ... & N \\ P_{X_{n}} & P_{X_{n}}(1) & P_{X_{n}}(2)& ... & P_{X_{n}}(n)\end{array}$$
+			- 
+- # Link Utili:
+	- 

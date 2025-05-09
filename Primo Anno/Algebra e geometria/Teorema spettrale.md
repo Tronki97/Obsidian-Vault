@@ -8,13 +8,13 @@ data: "`2024-08-31 20:05`"
 	- Sia $f:\mathbb{R}^{n} \to \mathbb{R}^{n}$ un endomorfismo simmetrico. allora esiste una [[Base]] di $\mathbb{R}^{n}$ costituita da [[Autovettore|autovettori]] di $f$ in particolare:
 		- 1) un endomorfismo simmetrico è sempre [[Diagonalizzabilità||diagonalizzabile]]
 		- 2)se $\lambda_{1}\ne \lambda_{2}$ allora $V_{\lambda_{1}}\bot V_{\lambda_{2}}$
-		- 3) se $M_{c}^{c}(f)=A$ allora esiste una matrice [[Primo Anno/Analisi/modulo2/Ortogonalità|Ortogonalità||ortogonale]] $P$ e una matrice diagonale $D$ t.c$$P^{-1}AP=P^{T}AP=D$$Cioè $A$ è _ortogonalmente simile_ ad una matrice diagonale
+		- 3) se $M_{c}^{c}(f)=A$ allora esiste una matrice [[Primo Anno/Analisi/modulo2/Ortogonalità|ortogonale]] $P$ e una matrice diagonale $D$ t.c$$P^{-1}AP=P^{T}AP=D$$Cioè $A$ è _ortogonalmente simile_ ad una matrice diagonale
 	- la matrice $D$ simile ad $A$ è la matrice diagonale dei [[Autovalore|autovalori]] di $A$. La matrice $P$ è la matrice ortogonale i cui vettori colonna sono gli autovettori di $A$.
 	- ## ES:
 		- sia $A=\begin{pmatrix}1&1&1\\1&1&1\\1&1&1\end{pmatrix}$ devo determinare una matrice ortogonale $P$ t.c $P^{T}AP=D$(diagonale); $P^{\bot}\implies P^{-1}=P^{T}$
-		- _$A$ simmetrica $\implies$ $A$ è diagonalizzabile _
+		- _$A$ simmetrica $\implies$ $A$ è diagonalizzabile_
 		- Mi serve una [[Base ortonormale]] costituita da [[Autovettore||autovettori]]:
-			- trovo una base dei singoli [[Autospazio||autospazi]]
+			- trovo una base dei singoli [[Autospazio||autospazi]] 
 			- ortogonalizzo ogni base con [[Algoritmo di Gram-Schmidt||Gram-Schmidt]] 
 			- unisco le basi trovate e ottengo una base ortonormale $\beta$ di autovettori $I_{\beta c}^{-1}AI_{\beta c}=D$   
 			- _N.B_: $I_{\beta c}^{-1}=I_{\beta c}^{T}$ perché la base è ortonormale 
