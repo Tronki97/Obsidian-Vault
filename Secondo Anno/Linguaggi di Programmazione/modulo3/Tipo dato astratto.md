@@ -1,7 +1,14 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - ADT
+  - abstract data type
+  - moduli
+  - tipi esistenziale
+  - oggetti
+  - classi
+  - prototipi
 data: "`2025-05-07 11:42`"
 ---
 - # Argomento:
