@@ -27,7 +27,7 @@ data: "`2025-04-09 10:02`"
 		- è comunque una regione con infiniti punti, quindi bisogna capire se si necessita di considerarli tutti.
 		- Si può notare come la funzione obiettivo è lineare.
 		- Quindi ci interessa trovare dei punti che massimizzano la retta generata dai valori assegnati a $x,y$ sempre rimanendo nella zona ammissibile (grigia).
-			- Ma l ‘obiettivo dell’algoritmo è evitare di controllare tutti quanti i punti frigi (perché sono troppi) e quindi restringere il campo di ricerca ai vertici del poligono.
+			- Ma l'obiettivo dell’algoritmo è evitare di controllare tutti quanti i punti frigi (perché sono troppi) e quindi restringere il campo di ricerca ai vertici del poligono.
 		- ### OSS:
 			- Se mancasse il vincolo $x\le 3$ si avrebbe un [[Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione#^1429ac|problema illimitato]] e l’algoritmo progettato se ne renderebbe conto e lo riconoscerebbe. 
 - # Nozioni preliminari:

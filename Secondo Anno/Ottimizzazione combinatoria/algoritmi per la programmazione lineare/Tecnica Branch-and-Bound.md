@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - branching
 data: "`2025-04-28 10:25`"
 ---
 - # Intro:

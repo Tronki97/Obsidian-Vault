@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
+                "file": "access control.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Tipo dato astratto"
+              "title": "access control"
             }
           }
         ]
@@ -234,8 +234,21 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Tecniche crittografiche per l'autenticazione.md",
+    "User Authentication.md",
+    "Condivisione del segreto e Key Escrow.md",
+    "access control.md",
     "Homepage.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
@@ -245,25 +258,12 @@
     "Primo Anno/Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
     "Primo Anno/Algebra e geometria/Determinante/Matrice invertibile.md",
     "Primo Anno/Algebra e geometria/Cambio di base.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi a stati finiti.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
     "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
     "immagini/Pasted image 20250508142331.png",
     "immagini/Pasted image 20250508140113.png",
-    "Primo Anno/Algebra e geometria/Introduzione.md",
-    "Primo Anno/Algebra e geometria/Teorema spettrale.md",
-    "Primo Anno/Algebra e geometria/Simmetria.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base e algebra dei tipi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
     "immagini/Pasted image 20250507115330.png",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Livello MAC nelle reti wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
     "immagini/Pasted image 20250506171121.png",
     "immagini/Pasted image 20250430113746.png",
     "immagini/Pasted image 20250430124555.png",

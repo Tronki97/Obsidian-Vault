@@ -48,7 +48,7 @@ data: "`2025-05-09 13:19`"
 		- La probabilità di transizione in $m$ passi con $m>0$ è la [[Probabilità condizionata]] :
 			- $$\pi_{i,j}^{(m)}:= \mathbb{P}(X_{n+m}=j| X_{n}=i)$$
 		- ### OSS:
-			- $$\pi_{i,j}^{(0)}=\mathbb{P}(X_{n}=j| X_{n}=i)=\begin{cases}1 & i=j \\ 0 & i\ne j\end{cases}$$
+			- $$\Pi_{i,j}^{(0)}=\mathbb{P}(X_{n}=j| X_{n}=i)=\begin{cases}1 & i=j \\ 0 & i\ne j\end{cases}$$
 			- $$\pi_{i,j}^{(1)}=\pi_{i,j}$$
 				- Ovvero la probabilità di transizione in un passo
 		- ### ES:
@@ -65,6 +65,23 @@ data: "`2025-05-09 13:19`"
 	- ## Legge delle variabili aleatorie:
 		- Da trovare la legge di $X_{n}$ con $n\in \mathbb{N}$
 			- $$\begin{array}{|} X_{n}& 1 & 2 & ... & N \\ P_{X_{n}} & P_{X_{n}}(1) & P_{X_{n}}(2)& ... & P_{X_{n}}(n)\end{array}$$
-			- 
+			- Si necessita per calcolarla conoscere una variabile aleatoria relativa ad uno stato precedente.
+	- ## Distribuzione invariante:
+		- Sia $(X_{n})_{n}$ con matrice di transizione $\Pi$ e spazio degli stati con $|S|=N$
+		- Sia $\vec \nu=(\nu_{1},...,\nu_{n})$: 
+			- 1) $\nu_{i}\in [0,1]\ \ \ \forall i=1,.., n$
+			- 2)  $\sum\limits_{i=1}^{N} \nu_{i}=1$ 
+		- Allora si dice che $\nu$ è una distribuzione invariante per la catena se:
+			- $$\vec \nu = \vec \nu \Pi$$
+		- ### OSS:
+			- Sia $\vec p_{X_{1}}$ distribuzione invariante per $\Pi$:
+				- $$\vec p_{X_{1}} = \vec p_{X_{1}} \Pi$$
+			- Sappiamo che $\vec p_{X_{n}}= \vec p_{X_{1}} * \Pi^{n-1}=$
+				- Dove $\Pi^{n-1}$ è la probabilità di transizione in $n-1$ passi
+			- $$=\vec p_{X_{1}} \Pi * \Pi^{n-2}=$$
+				- Ma dall'ipotesi so che $\vec p_{X_{1}} = \vec p_{X_{1}} \Pi$ quindi diventa:
+			- $$=\vec p_{X_{1}}* \Pi^{n-2}=$$
+			- E così via fino a diventare:
+				- $$\vec p_{X_{1}}\ \ \ \forall n\in N$$
 - # Link Utili:
 	- 
