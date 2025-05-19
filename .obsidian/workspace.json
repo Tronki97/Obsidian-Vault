@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "access control.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,107 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "access control"
+              "title": "Homepage"
+            }
+          },
+          {
+            "id": "d5dd1eb94903cc4f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Dualità"
+            }
+          },
+          {
+            "id": "ccfeeafd3133546a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Direzioni ammissibili"
+            }
+          },
+          {
+            "id": "dc6a929afb9ebb99",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Algoritmo del simplesso"
+            }
+          },
+          {
+            "id": "b81dff14d659d15a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Primo Anno/Algebra e geometria/Determinante/Matrice invertibile.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Matrice invertibile"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -88,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.50418853759766
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -232,35 +329,35 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "dc6a929afb9ebb99",
   "lastOpenFiles": [
-    "Tecniche crittografiche per l'autenticazione.md",
-    "User Authentication.md",
-    "Condivisione del segreto e Key Escrow.md",
-    "access control.md",
-    "Homepage.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Protocollo ARP e RARP.md",
-    "immagini/Pasted image 20250506154531.png",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Variabili a valori discreti.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
     "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
-    "Primo Anno/Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
+    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
     "Primo Anno/Algebra e geometria/Determinante/Matrice invertibile.md",
-    "Primo Anno/Algebra e geometria/Cambio di base.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi a stati finiti.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
+    "Primo Anno/Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
+    "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
+    "Homepage.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov.md",
+    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/RAID.md",
+    "access control.md",
+    "immagini/Pasted image 20250506154531.png",
     "immagini/Pasted image 20250508142331.png",
     "immagini/Pasted image 20250508140113.png",
     "immagini/Pasted image 20250507115330.png",

@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - iperpiano
   - semispazio
@@ -34,7 +33,8 @@ data: "`2025-04-09 10:02`"
 	- ## Iperpiano:
 		- Equivalente di una retta 
 		- $$\{x\in \mathbb{R}^{n}|ax=b\}$$
-		- 
+			- Ovvero le soluzioni dell'equazione $ax=b$ con $a\in \mathbb{R}^{2}$ e $b\in \mathbb{R}$
+			- 
 	- ## Semispazio:
 		- Analogo dell’iperpiano ma al posto di un equazione c’è una disequazione:
 			- $$\{x\in \mathbb{R}^{n}|ax\le b\}$$
@@ -50,7 +50,7 @@ data: "`2025-04-09 10:02`"
 			- $$\forall x,y \in C\ \ \ \forall \alpha \in [0,1]\ \ \ \alpha x+(1-\alpha)y\in C$$
 		- _i semispazi e poliedri_ sono insiemi convessi.
 	- Se considero un _poliedro_ $P$ e fisso un sottoinsieme $I$ di $\{1,...,m\}$ indico:
-		- $\overline{I}$ il complementare $\{1,...,m\}-I$ di $I$
+		- $\bar I$ il complementare $\{1,...,m\}-I$ di $I$
 		- $A_{I}$ la sottomatrice di $A$ dove considero solo le _righe_ come indice in $I$
 		- Infine $P_{I}$ è definito come:
 			- $$\{x| A_{I}x=b_{I}\wedge A_{\overline{I}}x\le b_{\overline{I}}\}$$
@@ -87,7 +87,7 @@ data: "`2025-04-09 10:02`"
 	- Normalmente un poliedro può essere rappresentato:
 		- Come _intersezione di sottospazi_
 		- Come _somma di un politopo e un cono_.
-	- Il _teorema di Motzkin_ ci dice che queste due rappresentazioni sono equivalenti, MA hanno dimensione diversa:
+	- Il _teorema di Motzkin_ ci dice che queste due rappresentazioni sono equivalenti, _MA hanno dimensione diversa_:
 		- Prendendo $n$ come dimensione, se si prendono in esame $2n$ sottospazi allora i vertici saranno $2^{n}$ (quadrato: 4; cubo: 8; cubo a 4 dimensioni: 16).
 - # Teorema fondamentale:
 	- Ho $P=\{x| Ax\le b\}$ 
@@ -106,7 +106,7 @@ data: "`2025-04-09 10:02`"
 	- Ora si dimostra che: _tale problema ha ottimo finito sse_ $cv_{j}\le 0\ \ \forall j\in \{1,...,t\}$
 		- $\implies$) 
 			- Se prendessi il caso in cui $cv_{j}>0$ per qualche $j$ allora si potrebbe aumentare il valore di $v_{j}$ portando quindi il valore della funzione obiettivo ad un valore a piacimento.
-		- $\Longleftarrow$
+		- $\Longleftarrow$ )
 			- Avendo come ipotesi che $cv_{j}\le 0$ per ogni $j$ e prendendo un $y\in P$. Si ha che $\lambda_{1}$ e $\nu_{j}$ sono i coefficienti corrispettivi del teorema di decomposizione:
 				- $$cy=\sum\limits_{i=1}^{s}\lambda_{i}(cx_{i})+ \sum\limits_{j=1}^{t}\nu_{j}(cv_{j})\le \sum\limits _{i=1}^{s}\lambda_{i}(cx_{i})\le \sum\limits _{i=1}^{s}\lambda_{i}(cx_{k})=cx_{k}$$
 					- Valido perché $cv_{j}\le0$ quindi sommarlo diminuisce o rende uguale il valore ed inoltre visto che:

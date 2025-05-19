@@ -44,6 +44,7 @@ data: "`2025-04-16 10:20`"
 		- Se considero un vincolo $i\in N$ e $A_{i} \xi \le 0$ allora $\bar x(\lambda)$ soddisfa il vincolo per ogni $\lambda \ge 0$
 		- Mentre se $A_{i} \xi >0$:
 			- $$A_{i} \bar x(\lambda)=A_{i}\bar x + \lambda A_{i}\xi\le b_{i} \iff  \lambda\le \frac{b_{i}-A_{i}\bar x}{A_{i}\xi}$$
+				- E si sceglie l'indice $i$ tale che rende $\lambda$ minimo  
 		- Se $0<\bar\lambda<\infty$ allora $\bar x(\lambda)$ è ammissibile $\forall \lambda\in [0,\bar \lambda]$. Ci si può quindi spostare da $B$ a $B\cup \{k\}-\{h\}$
 			- Gestito dagli step 9 e 10
 		- Se $\bar \lambda=0$ allora _la direzione non è ammissibile_ ma si cambia comunque la base come nell'altro caso ma rimanendo _sullo stesso vertice_ 

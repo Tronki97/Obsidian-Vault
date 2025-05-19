@@ -83,5 +83,66 @@ data: "`2025-05-09 13:19`"
 			- $$=\vec p_{X_{1}}* \Pi^{n-2}=$$
 			- E così via fino a diventare:
 				- $$\vec p_{X_{1}}\ \ \ \forall n\in N$$
+	- ## Comportamento asintotico:
+		- Ovvero come si comporta una catena con $n\to \infty$ dove $n$ è il numero di passi.
+		- ### Def:
+			- $(X_{n})_{n}$ con matrice di transizione $\Pi$ e spazio degli stati con $|S|=N$ _è detta regolare_ se:
+				- $$\exists n_{0} \in \mathbb{N}: \Pi_{ij}^{(n_{0})}>0 \ \ \ \forall i,j \in S$$
+			- Ovvero: $\Pi^{n_{0}}=\Pi...\Pi$ è strettamente positiva ovvero tutti gli elementi sono positivi.
+		- ### OSS:
+				- Se $(X_{n})_{n}$ è regolare, allora è irriducibile. Infatti se $X_{n})_{n}$ è regolare $\exists$ un cammino di $n_{0}$ da $i$ a $j$  $\forall  i,j$ 
+				- _ma non vale il viceversa_
+		- ### ES:
+			- $$\Pi=\begin{pmatrix}0&1 \\ 1&0\end{pmatrix}$$
+			- La catena è irriducibile ma è regolare?
+			- $$\Pi^{2}=\begin{pmatrix}1&0 \\ 0&1\end{pmatrix}$$
+			- La quale non rispetta l'ipotesi di regolarità in quanto $\not >0$
+			- $$\Pi^{n}=\begin{cases} \Pi & n\text{ dispari} \\ I& n\text{ pari}  \end{cases}$$
+		- ### Teorema ergodico:
+			- Detto anche di _convergenza all'equilibrio_.
+			- $(X_{n})_{n}$ catena con matrice $\Pi$
+			- Se $(X_{n})_{n}$ è _regolare_ allora:
+				- 1)  $\exists!$ distribuzione invariante $\vec \nu$ per $\Pi$
+				- 2) $$\forall i \in \vec \nu\ \ \ \Pi_{ij}^{(n)} \xrightarrow{n\to \infty} \nu_{j}\ \ \ \forall j\in S$$
+				- 3) La velocità di convergenza esponenziale:
+					- $$|\Pi_{ij}^{(n)}- \nu_{j}|\le C*Q^{n}, \ \ \ C>0, Q\in (0,1)$$
+			- #### OSS:
+				- Il 2) vuol dire che:
+					- $$p_{X_{n}}(j)\xrightarrow{n\to \infty}\nu_{j}\ \ \forall j\in S$$
+					- $$p_{X_{n}}(j)=\sum\limits_{i=1}^{N}p_{X_{1}}(i)*\Pi_{ij}^{(n-1)}\xrightarrow{n\to \infty}\sum\limits_{i=1}^{N} p_{X_{1}}(i) \nu_{j}$$
+						- Dove la sommatoria fa 1 quindi:
+					- $$=\nu_{j}$$
+					- E di conseguenza: $\mathbb{P}(X_{n}=j)\simeq \nu_{j}$
+			- #### OSS:
+				- Ma $\vec\nu=\vec \nu \Pi$ è un problema agli [[Autovalore]] quindi asintoticamente complicato e di conseguenza si usa il _teorema ergodico_.
+- # Page rank:
+	- Ordinare le pagine secondo un criterio di significatività
+	- _Nodi: pagine_ 
+	- _Archi: link_
+	- Con numero di pagine molto grande.
+	- $$PR(j)=\sum\limits_{i=1}^{N}c_{i}PR(i)\longrightarrow \text{verificato da } \vec \nu$$
+- # Teo:
+	- $(X_{n})_{n}$ è irriducibile $\implies \exists!$ distribuzione invariante
+	- ## Def:
+		- Sia $i\in S$ 
+		- $$d_{i}:= MCD\{n\ge 1: \Pi_{ii}^{(n)}>0\}$$
+			- è detto _periodo di_ $i$ 
+			- Se $d_{i}=1$ allora la catena è _aperiodica_ quindi non si riuscirà mai a tornare in $i$
+		- ### OSS:
+			- $\Pi_{ii}>0 \implies d_{i}=1$ 
+			- $(X_{n})_{n}$ è irriducibile $\implies d_{i}=d \ \ \forall i \in S$
+- ## ES:
+	- Convergenza di $\vec p_{X_{n}}$
+		- $$\Pi^{(n-1)}=\begin{cases} \Pi & n\ pari \\ I & n\ dispari\end{cases}$$
+		- $$\vec p_{X_{n}}=p_{X_{1}}\Pi^{(n-1)}=\begin{cases}(\alpha,1 - \alpha)\begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}=(1-\alpha,\alpha)\end{cases}$$
+- # Classificazione degli stati:
+	- $T_{i} =\min \{n\ge 2: X_{n}=1\}$
+	- $T_{i}:\Omega\to \mathbb{N}\cup \{\infty\}$ tempo aleatorio
+	- Primo istante in cui arrivo in $i\in S$
+	- $i\in S$ è detto:
+		- _Ricorrente_ se $\mathbb{P}(T_{i}<\infty| X_{1}=i)=1$ 
+		- _Transitorio_
+	- C è detta  _classe chiusa_ se 
+		- $\forall i\in C, \ \ \ i\to j \implies j\in C$
 - # Link Utili:
 	- 
