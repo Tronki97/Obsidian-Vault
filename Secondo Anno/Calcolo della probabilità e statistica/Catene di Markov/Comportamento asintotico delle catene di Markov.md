@@ -1,0 +1,41 @@
+---
+tags:
+  - TODO
+aliases:
+  - teorema ergodico
+data: "`2025-05-21 12:15`"
+---
+- ## Comportamento asintotico:
+	- Ovvero come si comporta una catena con $n\to \infty$ dove $n$ è il numero di passi.
+	- ### Def:
+		- $(X_{n})_{n}$ con matrice di transizione $\Pi$ e spazio degli stati con $|S|=N$ _è detta regolare_ se:
+			- $$\exists n_{0} \in \mathbb{N}: \Pi_{ij}^{(n_{0})}>0 \ \ \ \forall i,j \in S$$
+		- Ovvero: $\Pi^{n_{0}}=\Pi...\Pi$ è strettamente positiva ovvero tutti gli elementi sono positivi.
+	- ### OSS:
+			- Se $(X_{n})_{n}$ è regolare, allora è irriducibile. Infatti se $X_{n})_{n}$ è regolare $\exists$ un cammino di $n_{0}$ da $i$ a $j$  $\forall  i,j$ 
+			- _ma non vale il viceversa_
+	- ### ES:
+		- $$\Pi=\begin{pmatrix}0&1 \\ 1&0\end{pmatrix}$$
+		- La catena è irriducibile ma è regolare?
+		- $$\Pi^{2}=\begin{pmatrix}1&0 \\ 0&1\end{pmatrix}$$
+		- La quale non rispetta l'ipotesi di regolarità in quanto $\not >0$
+		- $$\Pi^{n}=\begin{cases} \Pi & n\text{ dispari} \\ I& n\text{ pari}  \end{cases}$$
+	- ### Teorema ergodico:
+		- Detto anche di _convergenza all'equilibrio_.
+		- $(X_{n})_{n}$ catena con matrice $\Pi$
+		- Se $(X_{n})_{n}$ è _regolare_ allora:
+			- 1)  $\exists!$ distribuzione invariante $\vec \nu$ per $\Pi$
+			- 2) $$\forall i \in \vec \nu\ \ \ \Pi_{ij}^{(n)} \xrightarrow{n\to \infty} \nu_{j}\ \ \ \forall j\in S$$
+			- 3) La velocità di convergenza esponenziale:
+				- $$|\Pi_{ij}^{(n)}- \nu_{j}|\le C*Q^{n}, \ \ \ C>0, Q\in (0,1)$$
+		- #### OSS:
+			- Il 2) vuol dire che:
+				- $$p_{X_{n}}(j)\xrightarrow{n\to \infty}\nu_{j}\ \ \forall j\in S$$
+				- $$p_{X_{n}}(j)=\sum\limits_{i=1}^{N}p_{X_{1}}(i)*\Pi_{ij}^{(n-1)}\xrightarrow{n\to \infty}\sum\limits_{i=1}^{N} p_{X_{1}}(i) \nu_{j}$$
+					- Dove la sommatoria fa 1 quindi:
+				- $$=\nu_{j}$$
+				- E di conseguenza: $\mathbb{P}(X_{n}=j)\simeq \nu_{j}$
+		- #### OSS:
+			- Ma $\vec\nu=\vec \nu \Pi$ è un problema agli [[Autovalore]] quindi asintoticamente complicato e di conseguenza si usa il _teorema ergodico_.
+- # Link Utili:
+	- 

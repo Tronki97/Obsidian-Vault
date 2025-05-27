@@ -1,0 +1,141 @@
+---
+tags:
+  - TODO
+aliases:
+  - classi di comunicazione
+  - classe di comunicazione
+  - proprietà di Markov
+  - proprietà di markov
+  - ipotesi sulla transizione
+  - probabilità di transizione
+  - probabilità di transizione in m passi
+data: "`2025-05-09 13:19`"
+---
+- # Argomento:
+	- Si considera una successione di [[Variabili aleatorie#^62da4f|V.A discreta]] non saranno più indipendenti ma saranno correlate da dalla _proprietà di Markov_
+		- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a. 
+- # Processo stocastico:
+	- Insieme di [[Variabili aleatorie|V.A]] indicizzate da un certo parametro: 
+		- _A tempo discreto_:
+			- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a.
+		- _A tempo continuo_:
+			- $(X_{t})_{t\in \mathbb{R}}$ successione di v.a.
+- Si considera un processo stocastico a livello discreto.
+- # Catene di Markov:
+	- Si richiede che tutti i supporti della successione siano racchiusi in un $S$ quindi:
+		- $$S_{X_{1}}\subset S,..., S_{X_{n}}\subset S$$
+	- Si ha a che fare con una successione di [[Variabili aleatorie#^62da4f|V.A discreta]] $(X_{n})_{n\in \mathbb{N}}$ (_catena di Markov_)  se:
+		- 1)  $\exists S$ finito o infinito tale:
+			- $$S_{X_{1}}\subset S,..., S_{X_{n}}\subset S$$  
+		- 2) Vale la _Proprietà di Markov_:
+			- $\forall i,j, i_{n-1}, ..., i_{1} \in S$
+			- $$\mathbb{P}(X_{n+1}=j|X_{n}=i,...,X_{1}=i_{1})=\mathbb{P}(X_{n+1}=j|X_{n}=i)$$
+				- Dove $X_{i}\in S$ e $S$ _è lo spazio degli stati._
+				- La probabilità di passare dallo stato $i$ allo stato $j$ dipende solo dallo stato corrente $i$ e non da quelli precedenti.
+	- ## Ipotesi da assumere:
+		- 1) $S$ è finito quindi $|S|:=N$ 
+		- 2) la catena è omogenea nel tempo:
+			- Ovvero $\pi_{i,j}(n)=\pi_{i,j} \ \ \forall n \in \mathbb{N}, \forall i,j \in S$  
+				- Dove $\pi_{i,j}$ è la probabilità di passare dallo stato $i$ allo stato $j$ in un passo. (_probabilità di transizione_)
+			- $\pi: (\pi_{i,j})_{i,j=1,..,N}\in \mathbb{R}^{N \times N}$
+				- ![[Pasted image 20250521122706.png]]
+			- $\pi_{i,j}=\mathbb{P}(X_{n+1}=j|X_{n}=i)$
+				- $i,j \in S$
+		- ### TEO:
+			- 1) $$\pi_{i,j}\in [0,1] \ \ \ \forall i,j \in S$$
+			- 2) $$ \sum\limits_{j=1}^{N} \pi_{i,j} =1\ \  \forall i\in S$$
+			- #### Dim:
+				- $$\sum\limits_{j=1}^{N} \pi_{i,j}=\mathbb{P}(X_{n+1}=j|X_{n}=i)=$$
+				- $$=\sum\limits_{j=1}^{N} \frac{\mathbb{P}(X_{n+1}=j,X_{n}=i)}{\mathbb{P}(X_{n}=i)}=$$
+					- Per la [[Formula delle probabilità totali]] diventa:
+				- $$\sum\limits_{j=1}^{N} \frac{\mathbb{P}(X_{n}=i)}{\mathbb{P}(X_{n}=i)}=1$$
+- # Rappresentazione catena di Markov: 
+	- I nodi rappresentano gli stati
+	- Gli archi sui quali si riporta la probabilità di transizione tra gli stati
+	- _La somma delle probabilità sugli archi uscenti deve sommare ad 1_.
+	- ![[Pasted image 20250521123211.png]]
+		- $$\alpha_{1} + \alpha_{2}+\alpha_{3}=1$$
+	- ## ES:
+		- $N=3$
+		- $$\pi=\begin{pmatrix}0&1&0 \\ 0& \frac{1}{2} & \frac{1}{2}\\ \frac{1}{2} & 0 & \frac{1}{2}\end{pmatrix}$$
+		- ![[Pasted image 20250521123303.png|400]]
+- # Probabilità di transizione in m passi:
+	- La probabilità di transizione in $m$ passi con $m>0$ è la [[Probabilità condizionata]] :
+		- $$\pi_{ij}^{(m)}:= \mathbb{P}(X_{n+m}=j| X_{n}=i)$$
+	- ## OSS:
+		- $$\Pi_{i,j}^{(0)}=\mathbb{P}(X_{n}=j| X_{n}=i)=\begin{cases}1 & i=j \\ 0 & i\ne j\end{cases}$$
+		- $$\pi_{ij}^{(1)}=\pi_{ij}$$
+			- Ovvero la probabilità di transizione in un passo
+	- ## ES:
+		- Fissati $i,j\in S$ con $m=2$
+		- $$\pi_{i,j}^{(2)}=\sum\limits_{k=1}^{N} \pi_{ik}* \pi_{kj}\to \pi*\pi$$
+		- $$\pi_{ij}^{(2)}=\mathbb{P}(X_{n+2}=j | X_{n}=i)$$
+		- $$=\frac{\mathbb{P}(X_{n+2}=j , X_{n}=i)}{\mathbb{P}(X_{n}=i)}$$
+	- ## Teorema:
+		- $$\Pi^{(m)}=\Pi *... * \Pi$$
+			- Moltiplicati tra di loro per $m-1$ volte 
+		- ### OSS:
+			- $$\Pi^{(0)}=I_{N}=\Pi^{(0)}$$
+			- $$\Pi^{(1)}=\Pi=\Pi'$$
+- # Classe di comunicazione:
+	- Insieme di stati, $C\subset S$, tale che:
+		- $$\forall i,j \in C \implies \mathbb{P}(X_{n+1}=j|X_{n}=i)>0$$
+			- Ovvero posso passare da uno stato all'altro.
+		- ## OSS:
+			- Se $C$ è una classe di comunicazione allora $\pi_{i,j}^{(m)}>0$ per ogni $m\in \mathbb{N}$ e $i,j\in C$ 
+			- _Ovvero posso andare dallo stato $i$ a $j$ in un numero qualsiasi di passi_
+	- ## ES:
+		- ![[Pasted image 20250521124103.png|500]]
+			- Le zone cerchiate in verde sono le varie _classi di comunicazione_
+- # Legge delle variabili aleatorie:
+	- Da trovare la legge di $X_{n}$ con $n\in \mathbb{N}$
+		- $$\begin{array}{c|c|c|c} X_{n}& 1 & 2 & ... & N \\ \hline \vec p_{X_{n}} & p_{X_{n}}(1) & p_{X_{n}}(2)& ... & p_{X_{n}}(n)\end{array}$$
+		- Si necessita per calcolarla conoscere una variabile aleatoria relativa ad uno stato precedente.
+	- $$p_{X_{n}}(j)=\mathbb{P}(X_{n}=j)=$$
+		- Conosco la probabilità di transizione $\pi_{ij}=\mathbb{P}(X_{n+1}=j | X_{n}=i)$
+	- $$= \sum\limits_{i=1}^{N} \mathbb{P}(X_{n}=j, X_{1}=i)=$$
+	- $$= \sum\limits_{i=1}^{N} \mathbb{P}(X_{n}=j| X_{1}=i)* \mathbb{P}(X_{1}=i)=$$
+		- Conosco anche che $\mathbb{P}(X_{n}=j| X_{1}=i) = \pi^{(n-1)}_{ij}$ e che $\mathbb{P}(X_{1}=i) = p_{X_{1}}(i)$
+	- $$=\sum\limits_{i=1}^{N} p_{X_{1}}(i) * \pi^{(n-1)}_{ij} $$
+	- Ma devo conoscere per forza $p_{X_{1}}$?
+		- Fisso un $k$
+		- $$p_{X_{n}}(j)=\sum\limits_{i=1}^{N} p_{X_{k}}(i) * \pi^{(n-k)}_{ij}$$
+			- Con $k=1$:
+				- $$p_{X_{n}}(j)=\sum\limits_{i=1}^{N} p_{X_{1}}(i) * \pi^{(n-1)}_{ij}$$
+			- Con $k=n-1$:
+				- $$p_{X_{n}}(j)=\sum\limits_{i=1}^{N} p_{X_{n-1}}(i) * \pi^{(1)}_{ij}$$
+					- $$=\sum\limits_{i=1}^{N} p_{X_{n-1}}(i) * \pi_{ij}$$
+	- Quindi risulta che:
+		- $$\vec p_{X_{n}}=\vec p_{X_{1}}\Pi^{(n-1)}=\vec p_{X_{n-1}}\Pi^{(n-k)}$$
+			- Con $k<n$ 
+- # Page rank:
+	- Ordinare le pagine secondo un criterio di significatività
+	- _Nodi: pagine_ 
+	- _Archi: link_
+	- Con numero di pagine molto grande.
+	- $$PR(j)=\sum\limits_{i=1}^{N}c_{i}PR(i)\longrightarrow \text{verificato da } \vec \nu$$
+- # Teo:
+	- $(X_{n})_{n}$ è irriducibile $\implies \exists!$ distribuzione invariante
+	- ## Def:
+		- Sia $i\in S$ 
+		- $$d_{i}:= MCD\{n\ge 1: \Pi_{ii}^{(n)}>0\}$$
+			- è detto _periodo di_ $i$ 
+			- Se $d_{i}=1$ allora la catena è _aperiodica_ quindi non si riuscirà mai a tornare in $i$
+		- ### OSS:
+			- $\Pi_{ii}>0 \implies d_{i}=1$ 
+			- $(X_{n})_{n}$ è irriducibile $\implies d_{i}=d \ \ \forall i \in S$
+- ## ES:
+	- Convergenza di $\vec p_{X_{n}}$
+		- $$\Pi^{(n-1)}=\begin{cases} \Pi & n\ pari \\ I & n\ dispari\end{cases}$$
+		- $$\vec p_{X_{n}}=p_{X_{1}}\Pi^{(n-1)}=\begin{cases}(\alpha,1 - \alpha)\begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}=(1-\alpha,\alpha)\end{cases}$$
+- # Classificazione degli stati:
+	- $T_{i} =\min \{n\ge 2: X_{n}=1\}$
+	- $T_{i}:\Omega\to \mathbb{N}\cup \{\infty\}$ tempo aleatorio
+	- Primo istante in cui arrivo in $i\in S$
+	- $i\in S$ è detto:
+		- _Ricorrente_ se $\mathbb{P}(T_{i}<\infty| X_{1}=i)=1$ 
+		- _Transitorio_
+	- C è detta  _classe chiusa_ se 
+		- $\forall i\in C, \ \ \ i\to j \implies j\in C$
+- # Link Utili:
+	- 

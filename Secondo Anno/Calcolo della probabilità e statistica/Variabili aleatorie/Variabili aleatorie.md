@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - V.A
   - variabili aleatorie costanti
@@ -87,7 +86,7 @@ data: "`2025-03-11 13:23`"
 - # V.A discreta: ^62da4f
 	- Variabili aleatorie che assumono un numero finito numerabile di valori.
 	- L’immagine è finita.
-	- $X: \Omega \to \mathbb{R}$ è una V.A discreta se:
+	- $X: \Omega \to \mathbb{R}$ è una _V.A discreta_ se:
 		- $\Omega$ discreto:  $Im(X)$ finita numerabile.
 		- $\exists S_{X}\subset Im(X), S_{X}$ finito o infinito numerabile, tale che: $\mathbb{P}(X\in S_{x})=1$ quasi certamente ed è detto _insieme di supporto_ e rappresenta tutti i valori possibili della V.A con $\mathbb{P}(.)>0=\{x\in \mathbb{R}: \mathbb{P}(X=x)>0\}$.
 	- ## ES:
@@ -138,7 +137,7 @@ data: "`2025-03-11 13:23`"
 					- 2) $\int_{-\infty}^{+\infty} f_{X}(x) \ dx=1$ 
 	- ## ES:
 		- $$f_{X}=\begin{cases}0 &x<0 \\ e^{-x} & x\ge 0\end{cases}$$
-		- #grafico .
+		- ![[Pasted image 20250527200921.png|700]]
 		- $$\int_{-\infty}^{\infty} f_{X}(x)\  dx=\int_{0}^{\infty}e^{-x}\ dx= $$
 			- Ciò grazie alle proprietà degli [[Integrali]] 
 		- $$= \lim_{k\to \infty} \int _{0}^{k}e^{-x} \ dx=\lim_{k\to \infty} [-e^{-x}]_{0}^{k}=$$
@@ -155,7 +154,7 @@ data: "`2025-03-11 13:23`"
 				- Se si facesse l’integrale risulterebbe lo stesso uguale ad 1
 		- $f_{X}$ può anche essere illimitata.
 	- ## Def:
-		- Sia $(\Omega, \mathbb{P})$ uno spazio di probabilità e $X$ una V.A allora si dice che:
+		- Sia $(\Omega, \mathbb{P})$ uno spazio di probabilità e $X$ una [[Variabili aleatorie|V.A]] allora si dice che:
 			- $X$ è _continua_ se 
 				- $$\exists f_{X}: \mathbb{P}(a\le X\le b)=\int_{a}^{b}f_{X}(x)\ dx$$
 		- E appunto si dice continua perché assume valori su un insieme continuo e la sua funzione di ripartizione è definita continua _non a scalini_.
@@ -164,10 +163,10 @@ data: "`2025-03-11 13:23`"
 		- $F_{X}(x)=F_{X}(x^{-})=p_{X}(x)=0$ e ciò vuol dire che $F(x)$ è continua se $X$ è una V.A continua.
 	- ## OSS:
 		- Se $a=b$ vuol dire che $\mathbb{P}(X=a)$ quindi $\int_{a}^{a}f_{X}=0$
-		- $$F_{X}(x):= \mathbb{P}(X\le x)= \lim_{a\to-\infty} \mathbb{P}(a\le X\le b)= \lim_{a\to -\infty}\int_{a}^{b} f_{X}(x)\  dx=$$
-		- $$=\int_{- \infty}^{b} f_{X}(x)\ dx$$
+		- $$F_{X}(x):= \mathbb{P}(X\le x)= \lim_{a\to-\infty} \mathbb{P}(a\le X\le b)= \lim_{a\to -\infty}\int_{a}^{b} f_{X}(y)\  dy=$$
+		- $$=\int_{- \infty}^{b} f_{X}(y)\ dy$$
 	- ## Casi particolari:
-		- $\mathbb{P}(a< X \le b)= \mathbb{P}(a\le X \le b)=\int_{a}^{b}f_{X}(x)=F_{X}(b)-F_{X}(a)$ (sono compresi tutti gli intervalli di inclusione) siccome la funzione è continua in tutti i punti quindi non cambierebbe includere o meno $a$ o $b$ nell’intervallo di integrazione.
+		- $\mathbb{P}(a< X \le b)= \mathbb{P}(a\le X \le b)=\int_{a}^{b}f_{X}(x)=F_{X}(b)-F_{X}(a)$ (_sono compresi tutti gli intervalli di inclusione_) siccome la funzione è continua in tutti i punti quindi non cambierebbe includere o meno $a$ o $b$ nell’intervallo di integrazione.
 		- $\mathbb{P}(X\le x)=\mathbb{P}(X<x)=F_{X}(x)$ e di conseguenza:
 			- $$\mathbb{P}(X\ge x)=1-\mathbb{P}(X\le x)=1-F_{X}(x)=1-\int_{-\infty}^{x}f_{X}(x)=$$
 			- $$=\int_{-\infty}^{\infty}f_{X}(x)-\int_{-\infty}^{x}f_{X}(x)=\int_{x}^{\infty}f_{X}(x)$$
@@ -177,21 +176,21 @@ data: "`2025-03-11 13:23`"
 		- $$\mathbb{P}(X\in B)=\int_{-1}^{0} f_{X}(x)+\int_{2}^{3} f_{X}(x)+\int_{5}^{\infty} f_{X}(x) \ \ dx$$
 	- ## ES:
 		- $$f(x)=\begin{cases}1& x\in [0,1] \\ 0& altrimenti\end{cases}$$
-		- #grafico
+		- ![[Pasted image 20250527201644.png|550]]
 		- Definisco poi una funzione $\tilde{f}(x)$ come:
 			- $$\tilde{f}(x)=\begin{cases}f(x) & x\ne \frac{1}{2 } \\ 0 & x=\frac{1}{2 } \end{cases}$$
 			- Il grafico è uguale a quello precedente tranne nel punto $x=\frac{1}{2 }$ dove sarà uguale a $0$
 		- $$\int_{-\infty}^{\infty} \tilde{f}(x)= \int_{-\infty}^{\frac{1}{2}} \tilde{f}(x)\ + \int_{\frac{1}{2 }}^{\infty} \tilde{f}(x)=1$$
 		- Da ciò risulta che avere queste due densità diverse non cambia il risultato.
 		- Se prendessi per esempio: $0\le a< \frac{1}{2}<b\le 1$
-			- $$\int_{a}^{b} f(x)=\int_{a}^{b} \tilde{f}(x)=$$
+			- $$\int_{a}^{b} f(x)=\int_{a}^{b} \tilde{f}(x)= \int_{a}^{\frac{1}{2}}  \tilde{f}(x) dx + \int^{b}_{\frac{1}{2}}  \tilde{f}(x) dx= \left( \frac{1}{2} -a\right)+ \left( b- \frac{1}{2} \right)=b-a$$
 	- ## OSS:
 		- Data una V.A continua _la sua densità non è unica_, in particolare:
 			- Se $g$ è una funzione uguale ad $f_{X}$ a meno di un insieme finito di valori, allora anche $g$ è una densità
 	- ## ES:
 		- Si riprende l’esempio inziale di $X=$ tempo di vita di un componente.
 		- $$f_{X}(x)=\begin{cases}0 &x<0 \\ e^{-x} & x\ge 0\end{cases}$$
-		- #Grafico
+		- ![[Pasted image 20250527202144.png]]
 		- $$x\le0: F_{X}(x)=\int_{-\infty}^{x}f_{X}(y)\ dy=0$$
 		- $$x>0: F_{X}(x)=\int_{-\infty}^{x}f_{X}(y)\ dy= \int_{-\infty}^{0}f_{X}(y)\ dy+\int_{0}^{x}f_{X}(y)\ dy=$$
 		- $$=\int_{0}^{x}e^{-y}\ dy=[-e^{-x}]_{0}^{x}=1-e^{-x}$$
@@ -201,7 +200,6 @@ data: "`2025-03-11 13:23`"
 			- Far si che la componente possa avere un difetto di fabbrica con $\mathbb{P}>0$
 				- $$p_{X}(x)=\mathbb{P}(X=0)=p>0$$
 			- $$\mathbb{P}(X\in [a,b])=\begin{cases} \int_{a}^{b} f_{X}(x)\ dx &0\notin [a,b]\\ \int_{a}^{b} f_{X}(x)\ dx  + p& 0\in [a,b]\end{cases}$$
-			- #grafico 
 			- Per far si che questa cosa rispetti le proprietà ho la necessità che 
 				- $$\int_{-\infty}^{\infty} f_{X}(x)\ dx + p=1$$
 				- Quindi: $$\int_{-\infty}^{\infty} f_{X}(x)\ dx\ne 1$$
@@ -210,11 +208,11 @@ data: "`2025-03-11 13:23`"
 				- Se $x<0: F_{X}(x)=\mathbb{P}(X\le 1)=\int_{-\infty}^{x}f_{X}(x)\ dx=0$
 				- Se  $x=0: F_{X}(0)=\mathbb{P}(X\le 0)=\mathbb{P}(X=0)+\mathbb{P}(X\le 0)=p$
 					- Per l’ipotesi iniziale.
-				- Se 
+				- Se $x>0$
 					- $$x>0: F_{X}(0)=\mathbb{P}(X\le x)=\mathbb{P}(X<0)+\mathbb{P}(0\le X\le x)=p+\int_{0}^{x}=$$
 					- $$=p+(1-p)\int_{0}^{x}e^{-y}=$$
 					- $$=p+(1-p)*(1-e^{-x})$$
-					- #grafico
+					- ![[Pasted image 20250527202504.png|600]]
 				- Quindi la [[Funzione di ripartizione]] risulta essere:
 					- $$F_{X}(x)=\begin{cases}0 & x<0  \\ p+(1-p)(1-e^{-x}) & x\ge0\end{cases}$$
 - # Link Utili: 

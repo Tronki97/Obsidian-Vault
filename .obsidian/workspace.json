@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "13471b5adcae7a57",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Distribuzioni notevoli continue"
             }
           },
           {
-            "id": "d5dd1eb94903cc4f",
+            "id": "57885f92bcc22c5f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Dualità"
+              "title": "Variabili aleatorie"
             }
           },
           {
-            "id": "ccfeeafd3133546a",
+            "id": "70ca041056051c9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,16 +76,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Direzioni ammissibili"
+              "title": "Distribuzione (o legge) di una variabile aleatoria"
             }
           },
           {
-            "id": "dc6a929afb9ebb99",
+            "id": "71ac3940409bac2b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,35 +100,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Algoritmo del simplesso"
-            }
-          },
-          {
-            "id": "b81dff14d659d15a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primo Anno/Algebra e geometria/Determinante/Matrice invertibile.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Matrice invertibile"
+              "title": "Funzione di ripartizione"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -160,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#grafico",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -329,44 +305,47 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "dc6a929afb9ebb99",
+  "active": "57885f92bcc22c5f",
   "lastOpenFiles": [
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Direzioni ammissibili.md",
+    "Pasted image 20250527202504.png",
+    "Pasted image 20250527202144.png",
+    "Pasted image 20250527201644.png",
+    "Pasted image 20250527200921.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
+    "Pasted image 20250527195908.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Introduzione/desktop.ini",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Indipendenza di eventi.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Introduzione/Probabilità di unione non disgiunta di insiemi.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Introduzione",
+    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Paradossi.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula delle probabilità totali.md",
+    "Homepage.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmi programmazioni Lineare.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problema di flusso di costo minimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Reti di flusso.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Variabili a valori discreti.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/MathProg.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Algoritmi di ottimizzazione.md",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Inviluppi e coni convessi.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi E Modelli.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
-    "Primo Anno/Algebra e geometria/Determinante/Matrice invertibile.md",
-    "Primo Anno/Algebra e geometria/Aritmetica modulare/Aritmetica modulare.md",
     "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
-    "Homepage.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov.md",
-    "Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Componenti connesse di un grafo.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/Gestione IO e memoria secondaria/RAID.md",
-    "access control.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
+    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Variabili a valori discreti.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Distribuzione invariante.md",
+    "immagini/Pasted image 20250521122706.png",
+    "immagini/Pasted image 20250521124103.png",
+    "immagini/Pasted image 20250521123303.png",
+    "immagini/Pasted image 20250521123211.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov",
     "immagini/Pasted image 20250506154531.png",
     "immagini/Pasted image 20250508142331.png",
-    "immagini/Pasted image 20250508140113.png",
-    "immagini/Pasted image 20250507115330.png",
-    "immagini/Pasted image 20250506171121.png",
-    "immagini/Pasted image 20250430113746.png",
-    "immagini/Pasted image 20250430124555.png",
-    "immagini/Pasted image 20250430124435.png",
-    "immagini/Pasted image 20250430115355.png",
-    "immagini/Pasted image 20250430114608.png",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete",
@@ -374,9 +353,6 @@
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
     "0-Mostarda",
-    "netlify.toml",
-    "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

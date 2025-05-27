@@ -1,11 +1,8 @@
 ---
-tags: []
+tags: 
 aliases:
   - regola della catena
   - diagramma ad albero
-  - eventi indipendenti
-  - indipendenza di eventi
-  - indipendenza tra più di 2 eventi
 data: "`2025-02-25 13:11`"
 ---
 - # Intro:
@@ -54,8 +51,8 @@ data: "`2025-02-25 13:11`"
 	- Qui vale la regola della catena, 
 		- $$\mathbb{P}(A_{1}\cap A_{2}\cap ... \cap A_n)=\mathbb{P}(A_{1})*\mathbb{P}(A_{1}|A_{2})*\mathbb{P}(A_{1}|A_{2}\cap A_{1})*...* \mathbb{P}(A_{n}|A_{n-1}\cap A_{n-2}\cap...\cap A_{1})$$
 - # ES:
-	- Ho 3 palline bianche, 2 nere e 1 rossa,
-	- $\mathbb{P}(A)=$ probabilità di pescare 1 bianca poi 1 rossa poi 1 nera.
+	- Ho 3B, 2N e 1R,
+	- $\mathbb{P}(A)=$ probabilità di pescare 1B poi 1R poi 1N.
 	- Si hanno quindi 3 famiglie di eventi:
 		- $$(B_{i})_{i=1,...,k}\ \ \ , (R_{i})_{i=1,...,k}\ \ \ , (N_{i})_{i=1,...,k}$$
 	- $$\mathbb{P}(A)=\mathbb{P}(B_{1}\cap R_{2}\cap N_{3})=$$
@@ -66,7 +63,7 @@ data: "`2025-02-25 13:11`"
 - # Diagramma ad albero:
 	- Nodo: un evento (il primo è $\Omega$)
 	- Ramo: probabilità di quel evento (la prima prob non è condizionata tutte le altre si)
-	- i rami formano una partizione di $\Omega$:
+	- I rami formano una partizione di $\Omega$:
 		- $$(B_{i})_{i=1,...,n}: B_{i}\cap B_{j}=\emptyset \ \ \ \forall i\ne j$$
 		- ![[Pasted image 20250228135945.png]]
 		- Questo è l’albero relativo all’esempio precedente.
@@ -88,64 +85,11 @@ data: "`2025-02-25 13:11`"
 			- ![[Pasted image 20250302182310.png| 400]]
 			- $A=T\cap B$
 			- $$\mathbb{P}(A)=\mathbb{P}(T\cap B)=\mathbb{P}(B|T)*\mathbb{P}(T)=\frac{1}{3}* \frac{1}{2}=\frac{1}{6}$$
-- # Indipendenza di eventi:  ^1f3d12
-	- Se $\mathbb{P}(B)$ non altera la probabilità di $A$ e si scrive $A\perp B$ quindi i due eventi non si influenzano.
-		- $$\mathbb{P}(A|B)=\mathbb{P}(A),\ \ \mathbb{P}(B)>0$$
-	- ## Def
-		- $\mathbb{P}(A\cap B)=\mathbb{P}(A)\mathbb{P}(B) \implies A\perp B$
-	- ## OSS:
-		- $\mathbb{P}(A)>0$ per la _regola della catena_
-		- $A\bot B \iff \mathbb{P}(B|A)=\mathbb{P}(B)$ 
-		- $\mathbb{P}(B)>0$
-		- $A\bot B \iff \mathbb{P}(A|B)=\mathbb{P}(A)$ per la _regola della catena_ 
-		- Inoltre l’_indipendenza_ è diversa dalla _disgiunzione_:
-			- $$A\bot B \ \ \ \ne \ \ \ A\cap B=\emptyset$$
-		- Infatti:
-			- se $A\bot B \ \wedge\ A\cap B=\emptyset$
-			- $$0=\mathbb{P}(\emptyset)=\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$$
-				- ciò implica che $\mathbb{P}(A)=0$  _e/o_  $\mathbb{P}(B)=0$
-	- ## Teorema:
-		- $A\bot B \implies A^{C}\bot B, \ A\bot B^{C} ,\  A^{C}\bot B^C$
-		- ### DIM:
-			- Dimostro che $A\bot B \implies A^{C}\bot B$ 
-				- Ho come _ipotesi_ che: $\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$
-			- Quindi che $\mathbb{P}(A^{C}\cap B)=\mathbb{P}(A^{C})*\mathbb{P}(B)$
-			- So intanto che: $B=(A\cap B)\cup (A^{C}\cap B)$
-				- Aiutandosi con un disegno:
-				- ![[Pasted image 20250302183351.png]]
-			- $$\mathbb{P}(B)=\mathbb{P}(A\cap B)+\mathbb{P}(A^{C}\cap B)=$$
-			- Per l’ipotesi posso dire che:
-			- $$\mathbb{P}(B)=\mathbb{P}(A)*\mathbb{P}(B)+\mathbb{P}(A^{C}\cap B)\implies$$
-			- $$\mathbb{P}(A^{C}\cap B)=\mathbb{P}(B)-(\mathbb{P}(A)*\mathbb{P}(B))=\mathbb{P}(B)*(1-\mathbb{P}(A))=\mathbb{P}(B)*\mathbb{P}(A^{C})$$
-				- Ricordare infatti che $\mathbb{P}(A^{C})=1-\mathbb{P}(A)$
-	- ## Indipendenza tra più di 2 elementi:
-		- L’indipendenza si complica con più eventi e vale la cosa seguente:
-		- ### Def:
-			- ho 3 eventi $A,B,C$ eventi indipendenti tra di loro
-			- 1) $\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$
-			- 2) $\mathbb{P}(A\cap C)=\mathbb{P}(A)*\mathbb{P}(C)$
-			- 3) $\mathbb{P}(B\cap C)=\mathbb{P}(B)*\mathbb{P}(C)$
-			- 4) $\mathbb{P}(A\cap B\cap C)=\mathbb{P}(A)*\mathbb{P}(B)*\mathbb{P}(C)$
-			- in generale con $A_{1},...,A_{n}$ eventi indipendenti:
-				- $$\mathbb{P}(A_{i_{1}}\cap ...\cap A_{i_{k}})=\mathbb{P}(A_{i_{1}})*\mathbb{P}(A_{i_{1}})$$
-	- ## ES:
-		- Lancio una moneta ed un D4 normali.
-		- determino la spazio di probabilità che descriva l’ [[Modello probabilistico di un esperimento aleatorio#^58d2bd|esperimento aleatorio]] ovvero $(\Omega, \mathbb{P})$
-		- $\Omega= \{T,C\}\times\{1,2,3,4\}=\{(T,1),(T,2),(T,3),(T,4),(C,1),(C,2),(C,3),(C,4)\}$
-		- $\mathbb{P}(.)$
-			- mi chiedo quale sia la probabilità di un evento a caso dentro lo [[Modello probabilistico di un esperimento aleatorio|spazio campionario]]
-			- $\mathbb{P}(\{(T,1)\})= ?$
-			- $\mathbb{P}(.)$ uniforme nei 2 sotto-esperimenti.
-			- I due eventi sono indipendenti. ^7b3a21
-			- Dimostro che su $\Omega$ ho la probabilità uniforme 
-				- ovvero: $\mathbb{P}({w})=\frac{1}{|\Omega|}=\frac{1}{8}$
-			- T: esce testa.
-			- $A_{i}$: esce un numero $i$ dal D4.
-			- $$\mathbb{P}(\{(T,1)\})= \mathbb{P}(T\cap1)=\mathbb{P}(A_{i})*\mathbb{P}(T)=$$
-				- Grazie all’indipendenza.
-			- $$=\frac{1}{4}* \frac{1}{2}=\frac{1}{8}$$
-				- Grazie alla probabilità uniforme sui due sotto-esperimenti.
-		- ### Diagramma ad albero:
-			- ![[Pasted image 20250302192135.png]]
-	- 
+- # ES:
+	- $$\Omega=\{ (n_{1},n_{2},n_{3},n_{4},n_{5}): n_{i}\in \{1,...,90\}\}$$
+		- $n_{i}$ sono distinti $i=1,...,5$
+	- $E_{ij}=$ “estraggo il numero j alla i-esima estrazione” $i=1,...5$   $j=1,...,90$
+	- $$\mathbb{P}(E_{1, n_{1}} \cap E_{2, n_{2}} \cap E_{3, n_{3}}\cap E_{4, n_{4}}\cap E_{5, n_{5}})=$$
+	- $$=\mathbb{P}(E_{1},n_{1})*\mathbb{P}(E_{2},n_{2}|E_{1},n_{1})*\mathbb{P}(E_{3},n_{3}|E_{1},n_{1}\cap E_{2},n_{2})*...*\mathbb{P}(E_{5},n_{5}|E_{1},n_{1}\cap E_{2},n_{2}\cap E_{3},n_{3}\cap E_{4},n_{4})$$
+	- $$=\frac{1}{90}* \frac{1}{89}* \frac{1}{88}* \frac{1}{87}* \frac{1}{86}=\frac{1}{|\Omega|}$$
 - # Link Utili:

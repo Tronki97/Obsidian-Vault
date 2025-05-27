@@ -1,0 +1,69 @@
+---
+tags: 
+aliases:
+  - eventi indipendenti
+  - indipendenza tra più di 2 eventi
+data: "`2025-05-27 19:13`"
+---
+- # Indipendenza di eventi:  ^1f3d12
+	- Se $\mathbb{P}(B)$ non altera la probabilità di $A$ e si scrive $A \perp\!\!\!\perp B$ quindi i due eventi non si influenzano.
+		- $$\mathbb{P}(A|B)=\mathbb{P}(A),\ \ \mathbb{P}(B)>0$$
+	- ## Def
+		- $\mathbb{P}(A\cap B)=\mathbb{P}(A)\mathbb{P}(B) \implies A \perp\!\!\!\perp B$
+	- ## OSS:
+		- $\mathbb{P}(A)>0$ per la _regola della catena_
+		- $A \perp\!\!\!\perp B \iff \mathbb{P}(B|A)=\mathbb{P}(B)$ 
+		- $\mathbb{P}(B)>0$
+		- $A \perp\!\!\!\perp B \iff \mathbb{P}(A|B)=\mathbb{P}(A)$ per la _regola della catena_ 
+		- Inoltre l’_indipendenza_ è diversa dalla _disgiunzione_:
+			- $$A \perp\!\!\!\perp B \ \ \ \ne \ \ \ A\cap B=\emptyset$$
+		- Infatti:
+			- se $A \perp\!\!\!\perp B \ \wedge\ A\cap B=\emptyset$
+			- $$0=\mathbb{P}(\emptyset)=\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$$
+				- ciò implica che $\mathbb{P}(A)=0$  _e/o_  $\mathbb{P}(B)=0$
+	- ## Teorema:
+		- $A \perp\!\!\!\perp B \implies A^{C} \perp\!\!\!\perp B, \ A \perp\!\!\!\perp B^{C} ,\  A^{C} \perp\!\!\!\perp B^C$
+		- ### DIM:
+			- Dimostro che $A \perp\!\!\!\perp B \implies A^{C} \perp\!\!\!\perp B$ 
+				- Ho come _ipotesi_ che: $\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$
+			- Quindi che $\mathbb{P}(A^{C}\cap B)=\mathbb{P}(A^{C})*\mathbb{P}(B)$
+			- So intanto che: $B=(A\cap B)\cup (A^{C}\cap B)$
+				- Aiutandosi con un disegno:
+				- ![[Pasted image 20250302183351.png]]
+			- $$\mathbb{P}(B)=\mathbb{P}(A\cap B)+\mathbb{P}(A^{C}\cap B)=$$
+			- Per l’ipotesi posso dire che:
+			- $$\mathbb{P}(B)=\mathbb{P}(A)*\mathbb{P}(B)+\mathbb{P}(A^{C}\cap B)\implies$$
+			- $$\mathbb{P}(A^{C}\cap B)=\mathbb{P}(B)-(\mathbb{P}(A)*\mathbb{P}(B))=\mathbb{P}(B)*(1-\mathbb{P}(A))=\mathbb{P}(B)*\mathbb{P}(A^{C})$$
+				- Ricordare infatti che $\mathbb{P}(A^{C})=1-\mathbb{P}(A)$
+	- ## Indipendenza tra più di 2 elementi:
+		- L’indipendenza si complica con più eventi e vale la cosa seguente:
+		- ### Def:
+			- ho 3 eventi $A,B,C$ eventi indipendenti tra di loro
+			- 1) $\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$
+			- 2) $\mathbb{P}(A\cap C)=\mathbb{P}(A)*\mathbb{P}(C)$
+			- 3) $\mathbb{P}(B\cap C)=\mathbb{P}(B)*\mathbb{P}(C)$
+			- 4) $\mathbb{P}(A\cap B\cap C)=\mathbb{P}(A)*\mathbb{P}(B)*\mathbb{P}(C)$
+			- in generale con $A_{1},...,A_{n}$ eventi indipendenti:
+				- $$\mathbb{P}(A_{i_{1}}\cap ...\cap A_{i_{k}})=\mathbb{P}(A_{i_{1}})*\mathbb{P}(A_{i_{1}})$$
+	- ## ES:
+		- Lancio una moneta ed un D4 normali.
+		- determino la spazio di probabilità che descriva l’[[Modello probabilistico di un esperimento aleatorio#^58d2bd|esperimento aleatorio]] ovvero $(\Omega, \mathbb{P})$
+		- $\Omega= \{T,C\}\times\{1,2,3,4\}=\{(T,1),(T,2),(T,3),(T,4),(C,1),(C,2),(C,3),(C,4)\}$
+		- $\mathbb{P}(.)$
+			- mi chiedo quale sia la probabilità di un evento a caso dentro lo [[Modello probabilistico di un esperimento aleatorio|spazio campionario]]
+			- $\mathbb{P}(\{(T,1)\})= ?$
+			- $\mathbb{P}(.)$ uniforme nei 2 sotto-esperimenti.
+			- I due eventi sono indipendenti. ^7b3a21
+			- Dimostro che su $\Omega$ ho la probabilità uniforme 
+				- ovvero: $\mathbb{P}({w})=\frac{1}{|\Omega|}=\frac{1}{8}$
+			- T: esce testa.
+			- $A_{i}$: esce un numero $i$ dal D 4.
+			- $$\mathbb{P}(\{(T,1)\})= \mathbb{P}(T\cap1)=\mathbb{P}(A_{i})*\mathbb{P}(T)=$$
+				- Grazie all’indipendenza.
+			- $$=\frac{1}{4}* \frac{1}{2}=\frac{1}{8}$$
+				- Grazie alla probabilità uniforme sui due sotto-esperimenti.
+		- ### Diagramma ad albero:
+			- ![[Pasted image 20250302192135.png]]
+- 
+- # Link Utili:
+	- 

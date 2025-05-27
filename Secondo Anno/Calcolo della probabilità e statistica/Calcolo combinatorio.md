@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: 
 aliases:
   - metodo dei coefficienti binomiali
   - metodo delle scelte successive
@@ -9,20 +9,16 @@ aliases:
   - formula di stifel
   - probabilità binomiale
   - mss
+  - formula di laplace
 data: "`2025-03-04 13:37`"
 ---
-- # ES (da mettere in un altro file):
-	- $$\Omega=\{ (n_{1},n_{2},n_{3},n_{4},n_{5}): n_{i}\in \{1,...,90\}\}$$
-		- $n_{i}$ sono distinti $i=1,...,5$
-	- $E_{ij}=$ “estraggo il numero j alla i-esima estrazione” $i=1,...5$   $j=1,...,90$
-	- $$\mathbb{P}(E_{1, n_{1}} \cap E_{2, n_{2}} \cap E_{3, n_{3}}\cap E_{4, n_{4}}\cap E_{5, n_{5}})=$$
-	- $$=\mathbb{P}(E_{1},n_{1})*\mathbb{P}(E_{2},n_{2}|E_{1},n_{1})*\mathbb{P}(E_{3},n_{3}|E_{1},n_{1}\cap E_{2},n_{2})*...*\mathbb{P}(E_{5},n_{5}|E_{1},n_{1}\cap E_{2},n_{2}\cap E_{3},n_{3}\cap E_{4},n_{4})$$
-	- $$=\frac{1}{90}* \frac{1}{89}* \frac{1}{88}* \frac{1}{87}* \frac{1}{86}=\frac{1}{|\Omega|}$$
 - # Intro:
 	- Esistono spazi di probabilità dove i singoletti che compongono uno [[Modello probabilistico di un esperimento aleatorio#^521af6|spazio campionario]] hanno la stessa probabilità.
-	- Esiste una tecnica che consiste nel trovare una partizione di  uno spazio campionario i cui eventi elementari hanno la stessa probabilità.
+	- Esiste una tecnica che consiste nel trovare una partizione di uno spazio campionario i cui eventi elementari hanno la stessa probabilità.
 - # Teorema (formula di laplace):
-	- Se  $\Omega=\{w_{1},...,w_{n}\}$ e $\mathbb{P}(\{w_{n}\})=\frac{1}{n}$ (quindi siamo nel setting della probabilità uniforme) allora $\mathbb{P}(A)=\frac{\text{\# elementi di A}}{n}=\frac{|A|}{n}$ con $A\subseteq \Omega$ 
+	- Se  $\Omega=\{w_{1},...,w_{n}\}$ e $\mathbb{P}(\{w_{n}\})=\frac{1}{n}$ (_quindi siamo nel setting della probabilità uniforme_) allora 
+		- $$\mathbb{P}(A)=\frac{\text{\# elementi di A}}{n}=\frac{|A|}{n}$$ 
+			- con $A\subseteq \Omega$ 
 		- _formula di laplace_
 - # Fattoriali:
 	- $$n!=n*(n-1)*...*1$$
@@ -36,8 +32,10 @@ data: "`2025-03-04 13:37`"
 	- ## formula di newton:
 		- $$(a+b)^{n}=\sum\limits_{k=0}^{n}\binom{n}{k}a^{k}b^{n-k}$$
 		- ### ES:
-			- $$(a+b)^{3}=\sum\limits_{k=0}^{3}\binom{3}{k}a^{k}b^{3-k}$$
-			- Continuo.
+			- $$(a+b)^{3}=\sum\limits_{k=0}^{3}\binom{3}{k}a^{k}b^{3-k}=$$
+			- $$=(\binom{3}{0}*a^{0}b^{3}) + (\binom{3}{1}*a^{1}b^{2}) + (\binom{3}{2}*a^{2}b^{1})+ (\binom{3}{3}*a^{3}b^{0})=$$
+			- $$= (1*1*b^{3})+(3ab^{2})+(3a^{2}b)+(a^{3})=$$
+			- $$=a^{3}+b^{3}+3ab^{2}+3a^{2}b$$
 - # Metodo delle scelte successive:
 	- ## ES:
 		- Alfabeto di 36 caratteri $\Omega=\{a,b,...,z,0,1,...,9\}=\{1,2,...,26,...,36\}$

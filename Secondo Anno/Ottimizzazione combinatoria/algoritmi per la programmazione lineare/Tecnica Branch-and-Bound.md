@@ -6,7 +6,7 @@ aliases:
 data: "`2025-04-28 10:25`"
 ---
 - # Intro:
-	- Finora si è sempre utilizzato variabili _reali_ nei problemi di [[Programmazione lineare]] con ricerfca dell'ottimo
+	- Finora si è sempre utilizzato variabili _reali_ nei problemi di [[Programmazione lineare]] con ricerca dell'ottimo
 		- 
 	- Ma se siamo nella [[Programmazione lineare intera (PLI)|PLI]] 
 		- Non si può fare allo stesso modo.
