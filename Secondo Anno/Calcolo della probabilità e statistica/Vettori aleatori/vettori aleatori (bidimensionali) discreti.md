@@ -1,0 +1,121 @@
+---
+tags: []
+aliases: 
+data: "`2025-05-29 11:52`"
+---
+- # intro:
+	- è un vettore aleatorio composto da [[Variabili aleatorie#^62da4f|V.A discrete]] 
+	- Si dice che il _vettore aleatorio_ $(X,Y)$ con spazio di probabilità $(\Omega, \mathbb{P})$ è discreto se $X, Y$ sono variabili aleatorie discrete.
+- # Def:
+	- Sia $(X,Y)$ [[Vettori aleatori||vettore aleatorio]] discreto allora la funzione:
+		- $$p_{(X,Y)}: \mathbb{R}^{2} \to [0,1]$$
+			- $$p_{(X,Y)}(x,y)=\mathbb{P}(X=x, Y=y)$$
+		- Si dice _densità congiunta di probabilità discreta_ del vettore aleatorio $(X,Y)$
+	- ### OSS:
+		- Si conoscono 
+			- $p_{X}$ e $S_{X}=\{x_{1},..., x_{n},...\}$
+			- $p_{Y}$ e $S_{Y}=\{y_{1},..., y_{m},...\}$
+			- $S_{X} \times S_{Y}$ [prodotto cartesiano](https://www.youmath.it/lezioni/algebra-elementare/insiemistica/1524-prodotto-cartesiano.html) tra i due supporti.
+				- Fuori dai valori del risultato del prodotto cartesiano il valore della densità è 0.
+				- Ma potrebbe essere che anche alcuni valori compresi nel prodotto cartesiano abbiano densità 0.
+			- $S_{(X,Y)}$ “vero supporto del vettore $(X,Y)$”: 
+				- $$S_{(X,Y)}:\{(x,y)\in \mathbb{R}^{2}: p_{(X,Y)}(x,y)>0\}$$
+- ## Teorema:
+	- Sia $(X,Y)$ _vettore aleatorio discreto_ con $p_{X},S_{X}$ e $p_{Y},S_{Y}$ densità e supporti delle variabili aleatorie e $p_{(X,Y)}$ densità congiunta di $(X,Y)$ 
+	- Allora:
+		- 1) $$p_{(X,Y)}(x_{i},y_{j})=0 \ \ \ \ \ \forall (x_{i},y_{j})\notin S_{X} \times S_{Y}$$
+		- 2) $$\sum\limits_{i,j} p_{(X,Y)}(x_{i},y_{j})=1$$
+		- 3) $$\mathbb{P}_{(X,Y)}(B)=\mathbb{P}((X,Y)\in B)= \sum\limits_{i,j:(x_{i},y_{j})\in B}p_{(X,Y)}(x_{i},y_{j})$$
+- ## Come passare dalla densità congiunta a quelle marginali:
+	- è possibile trovare le densità marginali delle due [[Variabili aleatorie|V.A]] conoscendo quella congiunta ma non viceversa perché non si conoscono le eventuali _dipendenze_.
+	- Serve quindi trovare le marginali conoscendo:
+		- $$p_{(X,Y)}(x,y)=\mathbb{P}(X=x, Y=y); \forall (x,y)\in S_{X} \times S_{Y}$$
+	- Ovvero trovare $p_{X}(x)=\mathbb{P}(X=x), \forall x\in S_{X}$
+	- Per farlo serve utilizzare le [[Formula delle probabilità totali]]
+		- $A_{1}=\{X=x\}, A_{2}=\{Y=y\}$ $\mathbb{P}(A_{1}\cap A_{2})$
+		- Partizione di $\Omega = \{A_{j}\}_{j: y_{j}\in S_{Y}}$
+	- La formula mi dice che:
+		- $$\mathbb{P}(A_{1})=\sum\limits_{j:y_{j}\in S_{Y}}\mathbb{P}(A_{1}\cap A_{j})$$
+	- ### Teorema:
+		- Se $(X,Y)$ è un vettore aleatorio discreto con densità congiunta $p_{(X,Y)}$ e supporto $S_{X,}$ e $S_{Y}$ allora:
+			- $$p_{X}(x)=\sum\limits_{j:y_{j}\in S_{Y}}p_{(X,Y)}(x,y_{j})$$
+			- $$p_{Y}(y)=\sum\limits_{i:x_{i}\in S_{X}}p_{(X,Y)}(x_{i},y)$$
+		- 
+- ## Tabella per la densità congiunta:
+	- Valida nel caso in cui $S_{X}$ e $S_{Y}$ siano finite:
+		- ![[Pasted image 20250529115956.png|700]]
+	- ### ES:
+		- $x_{i} \to B\left( \frac{1}{2} \right)$, $x_{1} \perp\!\!\!\perp x_{2}$
+			- $$\begin{array}{|c|c|c|} X_{i}&0&1& \\ \hline   p_{X} & \frac{1}{2}& \frac{1}{2 }&1\end{array}$$
+		- $i=1,2$
+		- $(X_{1,}X_{1})$ e $(X_{1}, X_{2})$
+			- ![[Pasted image 20250529120348.png]]
+			- Dal teorema successivo si può notare come $X_{1} \not \perp\!\!\!\perp X_{1}$ mentre $X_{1} \perp\!\!\!\perp X_{2}$.
+- ## Teorema:
+	- Sia $(X;Y)$ vettore aleatorio discreto con $p_{(X,Y)}$ densità congiunta allora:
+		- $$X \perp\!\!\!\perp Y \iff p_{(X,Y)}(x,y)= p_{X}(x) * p_{Y}(y)$$
+	- ### Dim:
+		- Si ricorda che $X \perp\!\!\!\perp Y$ significa che:
+			- $$\mathbb{P}(X\in B_{1}, Y\in B_{2})=\mathbb{P}(X\in B_{1})*\mathbb{P}(Y\in B_{2})$$
+		- $\implies$)
+			- La mia ipotesi è che $X \perp\!\!\!\perp Y$ e quindi mi basta prendere 
+				- $B_{1}=\{x\}$ e $B_{2}=\{y\}$
+		- $\Longleftarrow$ )
+			- Siano $B_{1}, B_{2} \in \mathbb{R}$
+			- $$\mathbb{P}(X\in B_{1}, Y\in B_{2})= \sum\limits_{i,j} p_{(X,Y)} (x_{i},y_{j})=$$
+				- Per ipotesi ho che:
+			- $$=\sum\limits_{i} p_{X}(x_{i}) * \sum\limits_{j}p_{Y}(y_{j})=$$
+			- $$=\mathbb{P}(X \in B_{1})*\mathbb{P}(Y\in B_{2})$$
+- ## Teorema:
+	- $h:\mathbb{R}^{2} \to \mathbb{R}, (X,Y)$ vettore aleatorio discreto.
+	- $h(X,Y)$ v.a
+	- $$\mathbb{E}[h(X,Y)]=\sum\limits_{i,j}h(x_{i},y_{j})p_{(X,Y)}(x_{i},y_{j})$$
+	- $$Var(h(X,Y))=\mathbb{E}[h^{2}(X,Y)]-\mathbb{E}[h(X,Y)]^{2}$$
+		- $\mathbb{E}[h^{2}(X,Y)]=\sum\limits_{i,j}h^{2}(x_{i},y_{j})p_{(X,Y)}(x_{i},y_{j})$
+	- ### Corollario Linearità del valore atteso:
+		- $$\mathbb{E}[aX+bY]=a \mathbb{E}[X]+b \mathbb{E}[Y]$$
+	- ### Dim:
+		- $$h(x,y)=ax+by$$
+		- $$\mathbb{E}[aX+bY]=\mathbb{E}[h(X,Y)]=\sum\limits_{i,j}(ax_{i}+by_{j})p_{(X,Y)}(x_{i},y_{j})=$$
+		- $$=a\sum\limits_{i}x_{i}\sum\limits_{j}p_{(X,Y)}(x_{i},y_{j})+b\sum\limits_{i}p_{(X,Y)}(x_{i},y_{j})=$$
+		- $$=a\sum\limits_{i}x_{i}p_{X}(x_{i})+ b\sum\limits_{j}y_{j}p_{Y}(y_{j})=\mathbb{E}[X]+\mathbb{E}[Y]$$
+	- ### Corollario:
+		- $(X, Y)$ vettore aleatorio discreto.
+		- $X \perp\!\!\!\perp Y \implies \mathbb{E}[XY]=\mathbb{E}[X]*\mathbb{E}[Y]$
+	- ### Dim:
+		- $$\mathbb{E}[XY]=\sum\limits_{i, j}x_{i}y_{j} p_{(X, Y)}(x_{i}, y_{j})=$$
+			- Per l'ipotesi di indipendenza 
+		- $$=\sum\limits_{i, j}x_{i}y_{j} p_{X}(x_{i}) p_{Y}(y_{j})=\sum\limits_{i}x_{i}p_{X}(x_{i})*\sum_{j}y_{j}p_{Y}(y_{j})=\mathbb{E}[X]*\mathbb{E}[Y]$$
+- # Indici di un vettore aleatorio discreto:
+	- $(X, Y)$ vettore aleatorio discreto 
+	- ## Vettore delle medie:
+		- $$\begin{pmatrix}\mathbb{E}[X]\\ \mathbb{E}[Y]\end{pmatrix}\in \mathbb{R}^{2}$$
+	- ## Matrice delle covarianze:
+		- $$\begin{pmatrix}Var (X) & Cov (X, Y) \\ Cov (Y, X)& Var (Y)\end{pmatrix}\in \mathbb{R}^{2 \times 2}$$
+		- ### OSS:
+			- 1) $Var (X)=Cov (X, X)$
+			- 2) $Cov (X, Y)=Cov (Y, X)$ matrice simmetrica
+	- ## Covarianza: 
+		- $$Cov (X, Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=$$
+		- $$=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]$$
+		- Se $Cov (X, Y)=0$ allora $X, Y$ sono _incorrelate_
+		- ### Lemma:
+			- _Formula pratica sulla covarianza_
+			- $$Cov (X, Y)=\mathbb{E}[(X-\mathbb{E}[X])(Y-\mathbb{E}[Y])]=$$
+			- $$=\mathbb{E}[XY-\mathbb{E}[X]Y-\mathbb{E}[Y]X+\mathbb{E}[X]\mathbb{E}[Y]]=$$
+			- $$=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]-\mathbb{E}[Y]\mathbb{E}[X]+\mathbb{E}[X]\mathbb{E}[Y]=\mathbb{E}[XY]-\mathbb{E}[X]\mathbb{E}[Y]$$
+	- ## Teorema:
+		- $X \perp\!\!\!\perp Y \implies Cov (X, Y)=0$ ovvero sono _incorrelate_.
+			- Ma non vale il contrario.
+	- ## Dim:
+		- $X \perp\!\!\!\perp Y \implies \mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$
+- ## Def:
+	- $$\rho_{X, Y}:= \frac{Cov (X, Y)}{\sqrt{Var (X) Var (Y)}}\in [-1,1]$$
+		- è _detto coefficiente di correlazione_ tra $X$ e $Y$
+	- $$Cov (X, Y)=0 \iff \rho_{X, Y}=0$$
+	- $\rho_{X, Y}=\pm 1 \iff Y=aX+b$ per qualche $a, b \in \mathbb{R}$
+	- $\rho_{X, Y}\in (0,1)\iff \text{"approsssimativamente" dipendenza lineare}$
+	- $\rho_{X, Y}=0 \iff \text{non ho alcuna dipendenza lineare}$
+	- $X \perp\!\!\!\perp Y \implies \not \exists f: \mathbb{R}\to \mathbb{R}: Y=f (X)$
+- # Link Utili:
+	- 

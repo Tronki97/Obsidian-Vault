@@ -8,31 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "13471b5adcae7a57",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "immagini/Pasted image 20250529110325.png"
               },
-              "icon": "lucide-file",
-              "title": "Distribuzioni notevoli continue"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250529110325"
             }
           },
           {
-            "id": "57885f92bcc22c5f",
+            "id": "07abe3d4237c2c9a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -56,12 +44,12 @@
             }
           },
           {
-            "id": "70ca041056051c9e",
+            "id": "6d1ae433320cedff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
+                "file": "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/Vettori aleatori.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,35 +64,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Distribuzione (o legge) di una variabile aleatoria"
-            }
-          },
-          {
-            "id": "71ac3940409bac2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Funzione di ripartizione"
+              "title": "Vettori aleatori"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -136,7 +99,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#grafico",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -305,30 +268,41 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "57885f92bcc22c5f",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Pasted image 20250527202504.png",
-    "Pasted image 20250527202144.png",
-    "Pasted image 20250527201644.png",
-    "Pasted image 20250527200921.png",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/vettori aleatori (bidimensionali) discreti.md",
+    "immagini/Pasted image 20250529120348.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/Vettori aleatori.md",
+    "immagini/Pasted image 20250529115956.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/desktop.ini",
+    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/tavola_normale.pdf",
+    "immagini/Pasted image 20250529111330.png",
+    "immagini/Pasted image 20250529110325.png",
+    "Homepage.md",
+    "immagini/Pasted image 20250527195908.png",
+    "immagini/Pasted image 20250528124135.png",
+    "immagini/Pasted image 20250528121751.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
+    "Excalidraw/distribuzione_esponenziale.excalidraw.md",
+    "immagini/Pasted Image 20250528120309_911.png",
+    "immagini/Pasted Image 20250528120251_238.png",
+    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
-    "Pasted image 20250527195908.png",
+    "immagini/Pasted image 20250527202504.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Introduzione/desktop.ini",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Indipendenza di eventi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Introduzione/Probabilità di unione non disgiunta di insiemi.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Introduzione",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Probabilità condizionata.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Paradossi.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula delle probabilità totali.md",
-    "Homepage.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Algoritmo del simplesso.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/Problemi di accoppiamento.md",
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Dualità.md",
@@ -336,23 +310,11 @@
     "Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
     "Primo Anno/Algebra e geometria/Determinante/Determinante.md",
     "Secondo Anno/Ottimizzazione combinatoria/Reti di flusso/problema di flusso massimo.md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Programmazione lineare intera (PLI).md",
-    "Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Programmazione lineare/Variabili a valori discreti.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Distribuzione invariante.md",
-    "immagini/Pasted image 20250521122706.png",
-    "immagini/Pasted image 20250521124103.png",
-    "immagini/Pasted image 20250521123303.png",
-    "immagini/Pasted image 20250521123211.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov",
-    "immagini/Pasted image 20250506154531.png",
-    "immagini/Pasted image 20250508142331.png",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico",
-    "0-Mostarda",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

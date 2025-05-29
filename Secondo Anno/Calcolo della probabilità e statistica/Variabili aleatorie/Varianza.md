@@ -42,7 +42,7 @@ data: "`2025-03-21 20:33`"
 			- $$=a^{2}\mathbb{E}[X^{2}]-a^{2} \mathbb{E}[X]^{2}=a^{2}(\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2})=a^{2}*var(X)$$
 - # V.A continue:
 	- La base è identica a quella delle discrete:
-		- $$var(x)= \int_{\mathbb{R}} x^{2} f_{X}(x)\ dx -(\int_{\mathbb{R}} x f_{X}(x)\ dx)^{2}$$
+		- $$var(x)= \int_{\mathbb{R}} x^{2} f_{X}(x)\ dx -(\int_{\mathbb{R}} x f_{X}(x)\ dx)^{2}=\int_\mathbb{R}(x-\mathbb{E}[X])^{2}f_{X}(x) dx$$
 	- 
 - # Link Utili:
 	- 

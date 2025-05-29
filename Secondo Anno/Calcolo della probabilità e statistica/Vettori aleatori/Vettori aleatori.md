@@ -1,0 +1,72 @@
+---
+tags:
+  - TODO
+aliases:
+  - indipendenza di variabili aleatorie
+  - leggi marginali
+  - legge congiunta
+data: "`2025-04-15 14:16`"
+---
+- # Intro: 
+	- Insieme di [[Variabili aleatorie]].
+	- Utili per la presenza o meno di _dipendenza_ tra le Variabili aleatorie contenute
+- # Def:
+	- $(\Omega, \mathbb{P})$ [[Modello probabilistico di un esperimento aleatorio#^521af6|spazio campionario]]
+	- $(X,Y):\Omega \to \mathbb{R}^{2}$
+	-              $\omega\to (X(\omega),Y(\omega))=(x,y)$
+	- si dice vettore aleatorio bidimensionale.
+	- è anche espandibile a tutte le dimensioni.
+- # Legge congiunta:
+	- Legge di un vettore bidimensionale.
+	- Sia $(\Omega, \mathbb{P})$ e sia $(X,Y)$ un vettore aleatorio in quello s.p.
+	- Si definisce _legge congiunta di_ $X,Y$ la probabilità:
+		- $$\mathbb{P}_{(X,Y)}: P(\mathbb{R}^{2})\to [0,1]$$
+		- Prende quindi un insieme delle parti $B$ e restituisce la probabilità che $(X,Y)\in B$
+			- $$\mathbb{P}_{(X,Y)}(B):=\mathbb{P}((X,Y)\in B)$$
+	- Si scrive quindi $(X,Y)\sim \mathbb{P}_{(X,Y)}$
+		- E quella appena definita si chiama _legge congiunta_
+	- ## Leggi marginali:
+		- $\mathbb{P}_{X}$ legge marginale di $X$
+		- $\mathbb{P}_{Y}$ legge marginale di $Y$
+	- Partendo dalla legge congiunta posso ottenere quelle marginali in quanto essa contiene più informazioni ma non viceversa a meno che non conosca come esse dipendano.
+- # Indipendenza di variabili aleatorie:
+	- Richiedo indipendenza tra gli eventi generati.
+	- Si considerano gli eventi generati dalle due [[Variabili aleatorie]] $X,Y$
+	- Si ricorda che:
+		- $$\mathbb{P}(A\cap B)=\mathbb{P}(A)*\mathbb{P}(B)$$
+			- Se sono [[Probabilità condizionata#^1f3d12|eventi indipendenti]]
+	- ## Def:
+		- Si dice che $X,Y$ sono indipendenti ($X \perp\!\!\!\perp Y$) se:
+			- $$\mathbb{P}(X\in B_{1}, Y\in B_{2})=\mathbb{P}(X\in B_{1})*\mathbb{P}(Y\in B_{2})$$
+				- $\forall B_{1},B_{2} \in \mathbb{R}$
+				- _Le appartenenze indicano gli eventi generati dalla variabile_
+				- $$\mathbb{P}_{(X,Y)}(B_{1}\times B_{2})=\mathbb{P}_{X}(B_{1})*\mathbb{P}_{Y}(B_{2})$$
+		- _Quindi la legge congiunta si fattorizza nelle marginali_
+		- ## OSS:
+			- Questa definizione è espandibile a $n$ dimensioni
+	- ## Teorema:
+		- Se $X,Y$ sono indipendenti allora non esiste una funzione tale che:
+			- $$Y=f(X)$$
+			- A meno che $f$ sia una funzione costante.
+		- ### Lemma:
+			- $$X \perp\!\!\!\perp Y, \ \ f,g:\mathbb{R}\to \mathbb{R} \implies f(X) \perp\!\!\!\perp g(Y)$$
+		- ### Dimostrazione lemma:
+			- $$\mathbb{P}(f(X)\in \bar{B_{1}}, g(Y)\in \bar B_{2})=\mathbb{P}(f(X)\in \bar B_{1})*\mathbb{P}(g(Y)\in \bar B_{2})$$
+			- Per ipotesi so che:
+				- $$\mathbb{P}(X\in B_{1}, Y\in B_{2})=\mathbb{P}(X\in B_{1})*\mathbb{P}(Y\in B_{2})$$
+			- $$\mathbb{P}(f(X)\in \bar B_{1}, g(Y)\in \bar B_{2})= \mathbb{P}(X\in f^{-1}(\bar B_{1}), Y\in g^{-1}(\bar B_{2}))=$$
+			- $$=\mathbb{P}(X\in B_{1}, Y\in B_{2})$$
+				- Che per l'ipotesi so essere:
+			- $$=\mathbb{P}(X\in B_{1})*\mathbb{P}(Y\in B_{2})= \mathbb{P}(f(X)\in \bar B_{1}, g(Y)\in \bar B_{2})$$
+		- ### Dimostrazione teorema:
+			- Per assurdo suppongo che esista $Y=f(X)$ per un $f:\mathbb{R}\to \mathbb{R}$ non costante
+			- Scelgo $g(y)=Y=f(X)$, usando il lemma ottengo che:
+				- $$\mathbb{P}(f(X)\in B_{1}, f(X)\in B_{2})= \mathbb{P}(f(X)\in B_{1})*\mathbb{P}(f(X)\in B_{2})$$
+					- $\forall B_{1}, B_{2} \subset \mathbb{R}$
+			- Scelgo successivamente $B_{1}=B_2 =B$
+				- $$\mathbb{P}(f(X)\in B)-[\mathbb{P}(f(X)\in B)]^{2}=0$$
+				- $$\mathbb{P}(f(X)\in B)*[1-\mathbb{P}(f(X)\in B)]=0$$
+				- Quindi $\mathbb{P}(f(X)\in B)=0$ oppure 1
+				- $$\begin{cases}\mathbb{P}(f(X)\in B)=0 \iff \mathbb{P}_{Y}(B)=d_{a}(b)=\begin{cases} 0 &a\notin B \\ 1 & a\in B\end{cases}\iff Y\equiv a=f(X)  \end{cases} $$
+- # Link Utili:
+	- 

@@ -1,7 +1,12 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: 
+aliases:
+  - uniforme continua
+  - distribuzione esponenziale
+  - distribuzione normale gaussiana
+  - distribuzione normale standard
+  - integrale di gauss
+  - standardizzazione
 data: "`2025-04-11 13:33`"
 ---
 - # Uniforme continua:
@@ -29,6 +34,87 @@ data: "`2025-04-11 13:33`"
 			- $$=\frac{4(b^{2}+ab+a^{2})-3(b^{2}+2ab+a^{2})}{12}$$
 			- $$=\frac{(4-3)b^{2}+(-6+4)ab+(4-3)a^{2}}{12}$$
 			- $$=\frac{(b-a)^{2}}{12}$$
-		- 
+- # Distribuzione esponenziale:
+	- $X\sim Exp(\lambda), \lambda>0$
+	- $$f_{X}(x)=\lambda e^{-\lambda x} \mathbb{1}_{[0, \infty)}(x)$$
+	- $S_{X}=[0,\infty)$
+	- ## Funzione di ripartizione:
+		- $x<0$:
+			- $F(x)=0$
+		- $x\ge 0$:
+			- $$F_{X}(x)=\int_{0}^{x}\lambda e^{-\lambda y} \ dy=[ -e^{-\lambda y}]_{0}^{x}=1-e^{-\lambda y}$$
+			- $$F_{X}(x) (1-e^{-\lambda x})\mathbb{1}_{[0, \infty)}(x)$$
+		 - ![[distribuzione_esponenziale.excalidraw|5000]]
+	- ## Media:
+		- $$\mathbb{E}[X]=\int_{0}^{\infty}x \lambda e^{-\lambda x} dx=[-x e^{-\lambda x}]_{0}^{\infty} + \frac{1}{\lambda} \int _{0}^{\infty}\lambda e^{-\lambda x} dx =$$
+		- $$=0- \frac{1}{\lambda} [e^{-\lambda x}]_{0}^{\infty}=\frac{1}{\lambda}$$
+	- ## Varianza:
+		- $$var(X)=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}=\int_{0}^{\infty} x^{2} \lambda e^{-\lambda x} dx - \left( \frac{1}{\lambda} \right)^{2}=$$
+		- $$= \left( [-x^{2}e ^{-\lambda x}]_{0}^{\infty} + \frac{2}{\lambda} \int _{0}^{\infty}\lambda x e^{-\lambda x} dx \right) - \frac{1}{\lambda^{2}}=$$
+		- $$\left( 0+\frac{2}{\lambda^{2}} \right)-\frac{1}{\lambda^{2}}= \frac{1}{\lambda^{2}}$$
+- # Distribuzione normale o Gaussiana:
+	- $X\sim N(\mu, \sigma^{2})$
+		- Con $\mu = \mathbb{E}[X]$  
+		- $\sigma^{2}= Var(X)$.
+	- $$f_{X}(x)=\frac{1}{\sqrt{2\pi \sigma^{2}}} e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$
+	- $$F_{X}(x)= \int _{-\infty}^{x} \frac{1}{\sqrt{2\pi \sigma^{2}}}  e^{-\frac{(y-\mu)^{2}}{2\sigma^{2}}} dy$$
+- # Distribuzione normale standard:
+	- $Z\sim N(0,1)$
+		- $$\phi_{X}(x)=\frac{1}{\sqrt{2\pi}} e^{-\frac{x^{2}}{2}}$$
+		- $$\Phi_{X}(x)= \int _{-\infty}^{x} \frac{1}{\sqrt{2\pi}}  e^{-\frac{y^{2}}{2}} dy$$
+	- ![[Pasted image 20250528121751.png]]
+	- ## Media e varianza:
+		- $\mathbb{E}[Z]=0$
+		- $var(Z)=1$
+	- ## Integrale di Gauss:
+		- $$\int_{-\infty}^{+\infty} e^{-z^{2}} dz = \sqrt{\pi}$$
+		- Si può dimostrare che se $X\sim N(\mu, \sigma^{2})$ allora:
+		- $$Z:= \frac{X- \mu}{\sigma}\sim N(0,1)$$
+		- ### Standardizzazione:
+			- Qualunque sia la legge di $X$ con $\mathbb{E}[X]=\mu$ e $Var(X)=\sigma^{2}$
+			- $$Z:= \frac{X- \mu}{\sigma}$$
+				- è detta _standardizzante_ con le sue proprietà sulla [[Media]] e [[Varianza]]
+		- ### Dim:
+			- $$Z:= \frac{X- \mu}{\sigma}\sim N(\mu,\sigma^{2})$$
+			- $$f_{X}(x)=\frac{1}{\sqrt{2\pi \sigma^{2}}} e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$
+			- Devo dimostrare che: 
+				- $$f_{Z}(z)=\frac{1}{\sqrt{2\pi}}e^{-\frac{z^{2}}{2}}$$
+			- $S_{X}= \mathbb{R} \implies S_{Z}= \mathbb{R}$
+			- $$F_{Z}(z)=\mathbb{P}(Z\le z)=\mathbb{P}\left( \frac{{X-\mu}}{\sigma}  \le z\right)=\mathbb{P}(X\le z \sigma + \mu)=$$
+			- $$= F_{X}(z \sigma+\mu)$$
+			- $$f_{Z}(z)=F'_{Z}(z)=\sigma F'_{X}(z \sigma +\mu) = \sigma f_{X}(z \sigma +\mu)=$$
+			- $$=\sigma \frac{1}{\sqrt{2\pi \sigma^{2}}} e^{-\frac{(z \sigma +\mu -\mu)^{2}}{2\sigma^{2}}}= \frac{1}{\sqrt{2\pi}}e^{-\frac{z^{2}}{2}}$$
+	- ![[Pasted image 20250528124135.png]]
+	- ## Proprietà di $\Phi(n)$:
+		- $\Phi(0)=\frac{1}{2}$
+		- $\Phi(-n)=1- \Phi(n),\ \ n\in \mathbb{R}$
+	- ## ES:
+		- ![[Pasted image 20250529110325.png]]
+		- $X\sim N(\mu, \sigma^{2}), \ \ \mu=9.99 \ \ \sigma=0.012$
+		- A)
+			- $$\mathbb{P}(X > 10)=\mathbb{P}\left( \frac{X-\mu}{\sigma} > \frac{10-\mu}{\sigma}\right)=\mathbb{P}\left( Z> \frac{10-9.99}{0.012} \right)$$
+				- Sto facendo una standardizzazione con $Z\sim N(0,1)$
+			- $$\simeq \mathbb{P}(Z>0.8333)=1-\Phi(0.8333)=20\%$$
+			- $$\Phi(x)=\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{z^{2}}{2}}dz$$
+				- Che è la [[Funzione di ripartizione]] di $Z\sim N(0,1)$
+		- B)
+			- Determino $l$ tale che:
+				- $$\mathbb{P}(X<l)=0.1$$
+			- $$\mathbb{P}(X<l)=\mathbb{P}\left( \frac{X-\mu}{\sigma} > \frac{l-\mu}{\sigma}\right)=\mathbb{P}\left(  Z< \frac{l-9.99}{0.012} \right)=0.1$$
+				- Vuol dire quindi che:
+			- $$\Phi\left( \frac{l-9.99}{0.012} \right)=0.1$$
+				- ![[Pasted image 20250529111330.png]]
+			- Ovvero:
+				- $$\frac{l- 9.99}{0.012}=\Phi^{-1}(x)$$
+				- Che non è presente sulla [[tavola_normale.pdf||tavola]]. 
+			- ### OSS:
+				- $$\Phi(-x)=1-\Phi(x) \ \ \forall x\in \mathbb{R}$$
+			- Quindi:
+				- $$\Phi\left( \frac{l-9.99}{0.012} \right)=1- \Phi\left( \frac{9.99-l}{0.012} \right)=0.1$$
+				- $$\Phi\left( \frac{9.99-l}{0.012} \right)=0.9$$
+				- $$\Phi^{-1}(0.9)=\frac{9.99-l}{0.012}$$
+				- $$l=9.99-0.012 \Phi^{-1}(0.9)$$
+					- Con $\Phi^{-1}(0.9)\simeq 1.2816$  secondo la [[tavola_normale.pdf||tavola]]
+				- $$l=9.99-0.012 \cdot 1.2816 \simeq 9.99-0.01538 \simeq 9.97462$$
 - # Link Utili:
 	- 
