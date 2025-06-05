@@ -2,7 +2,6 @@
 Professor: renzo.davoli@unibo.it
 Module: "1"
 tags:
-  - pending
   - project
 ---
 ## APPUNTI

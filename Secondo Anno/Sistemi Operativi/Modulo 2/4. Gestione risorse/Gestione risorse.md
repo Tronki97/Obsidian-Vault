@@ -1,10 +1,9 @@
 ---
-tags: []
+tags: 
 aliases:
   - assegnazione statica
   - assegnazione dinamica
   - prerilasciabile
-  - grafo di holt
   - risorse
   - condizioni di deadlock
   - classi di risorse
@@ -14,7 +13,7 @@ data: "`2025-03-07 10:52`"
 	- Sono un insieme di elementi a cui i [[Concorrenza#^68dcd8|processi]] accedono
 	- Possono essere fisiche o logiche:
 		- _Fisiche_: [[Memorie]], dischi, interfacce di rete…
-		- _Logiche_: Descrittori di processo, classi, [[Sezioni critiche (critical section)|sezioni critiche]] … 
+		- _Logiche_: Descrittori di processo([[Scheduler#^464f21|PCB]]), classi, [[Sezioni critiche (critical section)|sezioni critiche]] … 
 	- Possono essere suddivise in _classi_: ^e7531f
 		- Ogni risorsa viene detta _istanza di una classe_
 		- Il numero di risorse viene detto _molteplicità_.
@@ -50,28 +49,5 @@ data: "`2025-03-07 10:52`"
 		- Le richieste sono bloccanti ed un processo che ha ottenuto una risorsa ne può richiedere un’altra.
 	- ## Richiesta circolare:
 		- Il processo $P_{0}$ attende $P_{1}$ che attende $P_{2}$ che a sua volta aspetta $P_{0}$ 
-- # Grafo di Holt: ^6ffbfd
-	- è un grafo orientato
-	- è un grafo bipartito:
-		- I nodi sono suddivisi in 2 sottoinsiemi e gli archi collegano solo i nodi di 2 sottoinsiemi diversi.
-		- I sottoinsiemi sono _risorse e processi_
-	- _L’arco risorsa → processo_ indica che la risorsa è assegnata al processo.
-	- _L’opposto invece_ indica che un processo ha fatto richiesta di una risorsa.
-	- ![[Pasted image 20250307112155.png]]
-	- ## Variante generale:
-		- L'insieme delle risorse è partizionato in classi e gli archi di richiesta sono diretti alla classe e non alla singola risorsa
-		- Gli archi di richiesta per delle risorse devono rappresentare solo richieste che non sono soddisfacibili. 
-		- ![[Pasted image 20250307112435.png]]
-	- ## Implementazione:
-		- Si rappresenta come un grafo pesato:
-			- Sugli archi (P→C) la molteplicità della richiesta.
-			- Sugli archi (C→P) la molteplicità dell’assegnazione.
-			- Dentro alla classe si scrive il numero di risorse non ancora assegnate.
-		- ![[Pasted image 20250307112838.png]]
-	- ## Riducibilità:
-		- Un grafo di Holt si può ridurre se esiste almeno un nodo processo con solo archi entranti.
-		- Ridurre un grafo consiste nell’eliminare tutti gli archi di tale nodo e riassegnare le risorse ad altri processi
-		- ![[Pasted image 20250307113843.png]]
-- 
 - # Link Utili:
 	- 

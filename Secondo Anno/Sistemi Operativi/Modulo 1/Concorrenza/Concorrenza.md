@@ -31,7 +31,7 @@ data: "`2024-10-10 10:56`"
 		- i dati, le immagini e lo stato di avanzamento sono separati
 	- ## Vita dei processi:
 		- _running_
-			- Il processo è in esecuzione entra in questo stato quando viene scelto dallo [[Scheduling#^de7898|scheduler]] preso dalla _ready queue_.
+			- Il processo è in esecuzione entra in questo stato quando viene scelto dallo [[Scheduler#^de7898|scheduler]] preso dalla _ready queue_.
 		- _waiting_:
 			- Non può procedere fino a quando non si verifica un certo evento, ed inoltre non può essere caricato da nessuno finche non finisce.
 		- _ready_

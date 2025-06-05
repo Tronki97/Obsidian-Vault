@@ -1,6 +1,12 @@
 ---
-tags: []
-aliases: 
+tags: 
+aliases:
+  - interrupt
+  - device driver
+  - device controller
+  - DMA
+  - RAM
+  - trap
 data: "`2025-02-22 18:15`"
 ---
 - # Architettura Di Von Neumann
@@ -20,7 +26,7 @@ data: "`2025-02-22 18:15`"
 		+ è hardware e permette di controllare la memoria.
 	+ Il _memory manager_:
 		+ è software e permette di configurare le funzionalità della memoria.
-+ # [[Trap e interrupt#^24fd86||interrupt]]
++ # Interrupt ^63291e
 	+ È un meccanismo che permette l'interruzione del normale ciclo di esecuzione della CPU.
 		+ Segnale che il controller può inviare al processore.
 		+ Nel funzionamento normale i processori sono quelli che governano il bus.

@@ -15,13 +15,14 @@ data: "`2025-03-08 16:24`"
 - # Threads:
 	- Tutti i processi finora descritti sono definiti come _single threaded_ ovvero si può eseguire una sola sequenza di istruzioni alla volta, un processo non può fare più cose contemporaneamente.
 		- Come scaricare 2 pagine diverse da un web browser.
-	- Molti [[Sistema operativo||sistemi operativi]] moderni usano processi _multithreaded_ ovvero un processo può eseguire più sequenze di istruzioni contemporaneamente.
-		- Associando un thread ad ogni finestra aperta in un web browser, è possibile scaricare i dati in modo indipendente
+	- ## Multithread:
+		- Molti [[Sistema operativo||sistemi operativi]] moderni usano processi _multithreaded_ ovvero un processo può eseguire più sequenze di istruzioni contemporaneamente.
+			- Associando un thread ad ogni finestra aperta in un web browser, è possibile scaricare i dati in modo indipendente
 	- Ogni thread possiede:
 		- La propria copia dello stato del processore
 		- Il proprio [[Registri#^b1a012||program counter]] 
 		- Uno stack separato.
-	- I threads che appartengono allo stesso processo condividono:
+	- I _threads_ che appartengono allo stesso processo condividono:
 		- Codice,
 		- Dati,
 		- Risorse I/O
@@ -29,13 +30,13 @@ data: "`2025-03-08 16:24`"
 	- ## Benefici:
 		- Il fatto che diversi thread condividano certe informazioni permette l’implementazione di alcune applicazioni come:
 			- Nei web browser la condivisione dei parametri di configurazione fra i vari Thread
-		- Visto che allocare nuova memoria e fare context switch tra processi è costoso si preferisce fare queste azioni con i threads perché costa di meno.  
+		- Visto che allocare nuova memoria e fare [[Scheduler#^635de2|context switch]] tra processi è costoso si preferisce fare queste azioni con i _threads_ perché costa di meno.  
 		- Usare i thread al posto dei processi rende l’implementazione di un programma più efficiente. _Ma comunque si necessita di processi distinti per applicazioni diverse_.
 	- ## Implementazione dei multithread:
 		- ### User Thread 
 			- A livello utente.
 			- Sono supportati sopra il kernel e vengono implementati da una _thread library_ a livello utente, la quale fornisce supporto per la: _creazione, scheduling e gestione_ dei threads senza l’intervento del kernel
-			- L’implementazione è efficiente ma se il kernel è single-threaded uno qualsiasi di questi _user threads_ che fa una chiamata di sistema bloccante causa il blocco dell’intero processo 
+			- _L’implementazione è efficiente_ ma se il kernel è single-threaded uno qualsiasi di questi _user threads_ che fa una chiamata di sistema bloccante causa il _blocco dell’intero processo_ 
 		- ### Kernel threads:
 			- Supportati direttamente dal [[Sistema operativo]]
 			- _creazione, scheduling e gestione_ sono implementati a livello kernel

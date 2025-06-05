@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - indipendenza di variabili aleatorie
   - leggi marginali

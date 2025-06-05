@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - First come first served
   - FCFS
@@ -20,38 +19,60 @@ aliases:
   - priorità
 data: "`2025-03-08 17:39`"
 ---
+- # Scheduling:
+	- ## Diagramma di Gantt:
+		- Si usa per rappresentare uno schedule:
+			- ![[Pasted image 20250308163255.png]]
+			- Qui la risorsa viene usata dal processo $P_{1}$ dal tempo 0 al tempo $t_{1}$, poi viene assegnata a $P_{2}$ fino al tempo $t_{2}$ e quindi a $P_{3}$ fino al tempo $t_{3}$.  
+		- ### Multi-risorsa:
+			- Se si dovesse rappresentare lo schedule di più risorse il diagramma sarà composta da più righe parallele:
+			- ![[Pasted image 20250308163516.png]]
 - # Algoritmi di scheduling:
 	- ## First Come First Served (FCFS):
 		- Il processo che arriva per primo viene servito per primo.
 		- Si implementa con una coda FIFO
-		- Ha [[Scheduling#^914e04|tempi di attesa]] medi e di [[Scheduling#^88bd62|turnaround]] alti inoltre i processi [[Scheduling#^a14d11|CPU bound]] ritardano quelli [[Scheduling#^70c0ca|I/O bound]]
+		- Ha [[Scheduler#^914e04|tempi di attesa]] medi e di [[Scheduler#^88bd62|turnaround]] alti inoltre i processi [[Scheduler#^a14d11|CPU bound]] ritardano quelli [[Scheduler#^70c0ca|I/O bound]]
 		- ### ES:
 			- Ordine di arrivo $P_{1},P_{2},P_{3}$
-			- [[Scheduling#^c336d7|CPU burst]]: $P_{1}=22, P_{2}=2, P_{3}=2$
+			- [[Scheduler#^c336d7|CPU burst]]: $P_{1}=22, P_{2}=2, P_{3}=2$
 			- Tempo medio turnaround: $(32+34+36)/3=34ms$
 			- Tempo medio di attesa: $(0+32+34)/3=22ms$
 			- ![[Pasted image 20250308172056.png]]
 			- Suppongo di avere:
-				- Un processo CPU bound
-				- Un certo numero di processi I/O bound
+				- Un processo [[Scheduler#^a14d11|CPU bound]]
+				- Un certo numero di processi [[Scheduler#^70c0ca|I/O bound]]
 				- I processi I/O bound si mettono in coda dietro al processo CPU bound, e in alcuni casi la ready queue si può svuotare:
 					- ![[Pasted image 20250308172238.png]]
 	- ## Shortest Job First (SJF):
-		- La CPU viene assegnata al processo ready che ha la minima durata del CPU burst successivo
-		- Senza [[Scheduling#^cc7eb1|preemption]].
+		- La CPU viene assegnata al processo ready che ha la minima durata del [[Scheduler#^c336d7|CPU burst]] successivo
+		- Senza [[Scheduler#^cc7eb1|preemption]].
 		- ### ES:
 			- Tempo medio turnaround: $(0+2+4+36)/3=7ms$
 			- Tempo medio di attesa: $(0+2+4)/3=2ms$ 
 			- ![[Pasted image 20250308172631.png]]
-		- # DA FINIRE
-			- 
-	- ## Scheduling Round-robin:
+		- ### Caratteristiche:
+			- è _ottimale_ rispetto al tempo di attesa visto che è dimostrabile come sia il migliore algoritmo possibile per minimizzare il tempo medio di attesa.
+			- _impossibile da implementare in pratica_
+			- Si possono fornire solo delle approssimazioni in quanto non si può conoscere il prossimo [[Scheduler#^c336d7|CPU burst]] ma si conoscono tutti quelli precedenti.
+			- #### Calcolo approssimato della durata:
+				- Sia $t_{n}$ la durata del n-esimo CPU burst e $T_{n}$ la corrispondente previsione allora si calcola $T_{n+1}$ come:
+					- $$T_{n+1}=\alpha t_{n} + (1-\alpha)T_{n}$$
+				- Svolgendo la _formula di ricorrenza_ si ottiene:
+					- $$T_{n+1}=\sum\limits_{j=0...n} \alpha(1-\alpha)^{j}t_{n-j} + (1-\alpha)^{n+1}T_{0}$$
+				- $t_{n}$ rappresenta la storia recente
+				- $T_{n}$ rappresenta la storia passata
+				- $\alpha$ è il peso relativo di storia passata e recente 
+		- Questo algoritmo può essere soggetto a [[Proprietà di un programma#^054a32|starvation]]
+		- Esiste anche una versione con [[Scheduler#^cc7eb1|preemption]] :
+			- Dove il processo corrente può essere messo nella coda ready, se arriva un Processo con un [[Scheduler#^c336d7|CPU burst]] più breve di quanto rimane da eseguire al Processo corrente
+	- ## Scheduling Round-Robin:
 		- Basato sul concetto di _quanto di tempo (time slice)_
 			- Ogni processo ha un certo tempo di CPU, se non termina entro questo tempo viene messo in coda alla _ready queue_ e si passa al prossimo.
 			- Oppure può decidere di lasciare volontariamente il processore in seguito ad un’operazione I/O.
 		- In entrambi i casi precedenti il primo processo ad essere eseguito è il primo della ready queue.
-		- _La durata del quanto di tempo è un parametro importante_:
-			- Se è troppo breve il sistema sarà meno efficiente perché ci sarà un overhead dovuto ai [[Scheduling#^635de2|context switch]].
+		- ### Durata quanto di tempo:
+			- _La durata del quanto di tempo è un parametro importante_:
+			- Se è troppo breve il sistema sarà meno efficiente perché ci sarà un overhead dovuto ai [[Scheduler#^635de2|context switch]].
 			- Se è troppo lungo i processi _ready_ rimarranno inattivi per lunghi periodi di tempo il che può essere fastidioso per gli utenti.
 		- ### Interval Timer
 			- Si necessita di un _interval timer_ che faccia da “sveglia” per il processore
@@ -60,23 +81,23 @@ data: "`2025-03-08 17:39`"
 		- ### ES:
 			- Tre processi: $P_{1},P_{2},P_{3}$
 			- PCU burst: $P_{1}=10+14, P_{2}=6+4, P_{3}=6$
-			- Time slice: $4$
+			- Quanto di tempo: $4$
 			- Tempo medio di turnaround: $(40+26+20)/3=28.66ms$
 			- Tempo medio di attesa: $(16+16+16)/3=15.33ms$
 				- Si suppongono attese di I/O brevi $(<2ms)$
-			- [[Scheduling#^b38b86|tempo di risposta]] medio: $4ms$
+			- [[Scheduler#^b38b86|tempo di risposta]] medio: $4ms$
 			- ![[Pasted image 20250308173545.png]]
 	- ## Scheduling a priorità:
 		- Non tutti i processi sono uguali tra loro e quindi alcuni devono essere eseguiti prima di altri in quanto potrebbero causare problemi.
 			- Ogni processo ha quindi una priorità associata.
-				- Definita o dal sistema operativo come nel shortest job first
+				- Definita o dal sistema operativo come nel _shortest job first_
 				- Definita esternamente dall’utente con una syscall per esempio.
 		- Si implementa con una coda [[Code con Priorità||coda con priorità]] 
 		- ### Priorità:
 			- _Statica_: uguale durante tutta la vita del processo.
 				- Può avvenire [[Proprietà di un programma#^054a32|starvation]]
 			- _Dinamica_: varia durante l’esecuzione del processo, per esempio nel shortest job next. 
-				- Utile per esvitare starvation, usando una tecnica chiamata _aging_ che consiste nel:
+				- Utile per evitare starvation, usando una tecnica chiamata _aging_ che consiste nel:
 					- Aumentare la priorità di un processo in attesa gradualmente.
 					- Se un processo è in attesa da molto tempo, la sua priorità aumenta.
 					- Continuando ad aumentare la priorità e lui a rimanere in attesa prima o poi raggiungerà la priorità massima e verrà eseguito.

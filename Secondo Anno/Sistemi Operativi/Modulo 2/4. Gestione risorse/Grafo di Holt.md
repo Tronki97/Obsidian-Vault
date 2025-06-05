@@ -1,0 +1,31 @@
+---
+tags: []
+aliases: 
+data: "`2025-06-05 13:26`"
+---
+- # Grafo di Holt: ^6ffbfd
+	- è un grafo orientato
+	- è un grafo bipartito:
+		- I nodi sono suddivisi in 2 sottoinsiemi e gli archi collegano solo i nodi di 2 sottoinsiemi diversi.
+		- I sottoinsiemi sono _risorse e processi_
+	- _L’arco risorsa → processo_ indica che la risorsa è assegnata al processo.
+	- _L’opposto invece_ indica che un processo ha fatto richiesta di una risorsa.
+	- ![[Pasted image 20250307112155.png]]
+	- ## Variante generale:
+		- L'insieme delle risorse è partizionato in classi e gli archi di richiesta sono diretti alla classe e non alla singola risorsa
+		- Gli archi di richiesta per delle risorse devono rappresentare solo richieste che non sono soddisfacibili. 
+		- ![[Pasted image 20250307112435.png]]
+	- ## Implementazione:
+		- Si rappresenta come un grafo pesato:
+			- P = processo ; C = classe
+			- Sugli archi (P→C) la molteplicità della richiesta.
+			- Sugli archi (C→P) la molteplicità dell’assegnazione.
+			- Dentro alla classe si scrive il numero di risorse non ancora assegnate.
+		- ![[Pasted image 20250307112838.png]]
+	- ## Riducibilità:
+		- Un grafo di Holt si può ridurre se esiste almeno un nodo processo con solo archi entranti.
+		- Ridurre un grafo consiste nell’eliminare tutti gli archi di tale nodo e riassegnare le risorse ad altri processi
+		- ![[Pasted image 20250307113843.png]]
+- 
+- # Link Utili:
+	- 
