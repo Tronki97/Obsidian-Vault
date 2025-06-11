@@ -1,0 +1,78 @@
+---
+tags:
+  - TODO
+aliases:
+  - MBR
+data: "`2025-04-11 10:48`"
+---
+- # Organizzazione del disco:
+	- Un disco può essere diviso in più partizioni _indipendenti_ che potrebbero ospitare file system diversi.
+	- Il primo settore è chiamato MBR (Master Boot Record) e contiene le informazioni riguardo le partizioni.
+		- Usato per fare il _boot di sistema_.
+		- Contiene la _tabella delle partizioni_
+		- Contiene l'indicazione della _partizione attiva_
+	- L’_MBR_ viene letto ed eseguito al boot del sistema.
+	- ![[Pasted image 20250423153317.png]]
+	- Le partizioni possono anche essere usati per fare dei backup del sistema.
+	- MBR accetta solo 4 partizioni primarie e l’ultima può essere divisa a sua volta in partizioni non primarie.
+	- Mentre GPT (GUID Partition Table) può avere più partizioni primarie e secondarie.
+	- ### Struttura di una partizione:
+		- Ogni partizione inizia con un boot block
+		- Superblock:
+			- Contiene puntatori a tutte le altre informazioni riguardo il file system e su parametri fondamentali per l’organizzazione
+		- Tabella gestione dello spazio libero 
+- ## Allocazione dello spazio a blocchi:
+	- Mi serve sapere dove sono dei pezzi di file allocati in giro per la memoria
+	- ### Contigua:
+		- I file sono memorizzati in blocchi contigui di dischi e se superano le dimensioni di un blocco si trascinano in quelli successivi.
+		- Non servono strutture dati per collegare i blocchi.
+		- I blocchi continui non necessitano di operazioni di _seek_
+		- _Molto efficiente nei file system di sola lettura._
+			- Come i CD.
+		- Però rimane il problema della [[frammentazione esterna]]
+	- ### Concatenata:
+		- Ogni file è una lista di blocchi
+			- Ogni blocco punta a quello successivo
+			- Il descrittore del file contiene i puntatori al primo e all’ultimo blocco.
+		- ![[Pasted image 20250423155229.png]]
+		- Con questa implementazione si evita la [[frammentazione esterna]]
+		- L’accesso diretto è inefficiente, la dimensione utile di un blocco non è potenza di  2
+	- ### FAT:
+		- File allocation table 
+		- Allocazione basata su una tabella sempre usando delle concatenazioni.
+		- Invece di avere i puntatori dentro i blocchi si ha un vettore di quei puntatori.
+		- Utile perché l’accesso è solo uno in quanto si sa dove inizia un file e si può accedere direttamente alla cella dell’array _FAT_ 
+	- ### Indicizzata:
+		- A ogni file corrisponde un blocco indice che contiene i puntatori ai blocchi di dati.
+			- Per accedere si carica in memoria il blocco indice corrispondente al file. 
+		- ![[Pasted image 20250423160854.png]]
+		- Un problema è che la dimensione dei blocchi indice determina la dimensione dei file. Per risolvere si possono usare altri blocchi indice che puntano a blocchi indice.
+			- Si ha un albero di indici.
+	- 
+- ## Gestione spazio libero:
+	- Si può usare una mappa di bit con ogni bit corrispondente ad un blocco del disco.
+		- 0 = libero
+		- 1 = occupato
+	- Oppure una lista concatenata di blocchi liberi:
+		- Si integra bene con il metodo FAT per l’allocazione delle aree libere.
+- ## Implementare le directory:
+	- Un file speciale contenente informazioni sui file contenuti in una directory.
+		- è suddivisa in un certo numero di _directory entry_
+	- Implementabile come lista concatenata oppure come [[Tabelle Hash]]
+	- ![[Pasted image 20250423164111.png]]
+- ## Controllo di coerenza:
+	- Fsck: file system check.
+	- ### Phase 1:
+		- Controlla i blocchi e le loro dimensioni, scandendo la tabella degli I-node controllando le incoerenze.
+	- ### Phase 2:
+		- Controlla i nomi dei percorsi e le directory controllando che puntino a I-node legali.
+	- ### Phase 3:
+		- Scandisce l’albero del [[Visione implementatore]] per vedere se tutti i file sono raggiungibili.
+		- Se ne trova alcuni irraggiungibili li mette in una cartella.
+	- ### Phase 4:
+		- Verifica il numero di riferimenti per ogni file.
+		- Se il numero di reference è troppo alto.
+		- Se il numero è troppo basso vuol dire che se sei cancella il file ci saranno comunque delle cartelle che lo puntano ancora.
+		- 
+- # Link Utili:
+	- 

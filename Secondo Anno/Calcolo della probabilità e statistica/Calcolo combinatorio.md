@@ -10,6 +10,7 @@ aliases:
   - probabilità binomiale
   - mss
   - formula di laplace
+  - permutazioni
 data: "`2025-03-04 13:37`"
 ---
 - # Intro:

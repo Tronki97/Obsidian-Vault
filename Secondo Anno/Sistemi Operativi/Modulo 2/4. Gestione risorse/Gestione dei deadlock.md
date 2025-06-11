@@ -9,7 +9,6 @@ aliases:
   - allocazione gerarchica
 data: "`2025-03-13 15:46`"
 ---
-- 
 - # Detection and recovery:
 	- Si mantiene aggiornato il grafo di Holt con tutti gli assegnamenti, le kill dei [[Concorrenza#^68dcd8|processi]] e le richieste di [[Gestione risorse#^d3013b|risorse]].
 	- ## Teorema:
@@ -72,7 +71,7 @@ data: "`2025-03-13 15:46`"
 				- ovvero si dividono le classi di risorse e ad ogni classe si associa una priorità e quindi un processo potrà allocare solo le risorse che hanno priorità maggiore a quelle che ha già allocato. 
 				- E per allocarne una che non rispetta la condizione di priorità deve rilasciare tutte le risorse che ha in quel momento.
 		- ### Problemi:
-			- L’allocazione gerarchica è inefficiente ed inoltre l’indisponibilità di una risorsa  ad alta priorità ritarda processi che già hanno risorse ad altra priorità.
+			- L’allocazione gerarchica è inefficiente ed inoltre l’indisponibilità di una risorsa  ad alta priorità ritarda processi che già hanno risorse ad alta priorità.
 			- L’allocazione totale è anch’essa inefficiente e se un processo ha bisogno di una risorsa anche per poco tempo deve allocarla per tutta la sua vita.
 	- ## Avoidance:
 		- Prima di assegnare una risorsa il sistema calcola il modo per evitare che si verifichi il deadlock.
@@ -93,7 +92,12 @@ data: "`2025-03-13 15:46`"
 			- #### Stato SAFE:
 				- Sequenza che consente di valutare se la situazione attuale può consetire a tutti i processi di terminare.
 				- Dato il $COH$ ce ne deve essere almeno 1 con $n_{i}=0$ quindi permettendo al processo di terminare e restituire le risorse con le quali soddisfare altri processi.
-				- 
+				- Si ha inoltre $s$ una [[Calcolo combinatorio|permutazione]] dei valori $1,...,N$ con $s[i]$ la posizione $i$ nella sequenza.
+				- Inoltre si ha un vettore $avail$ calcolato in questo modo:
+					- $avail[i]=COH$
+					- $avail[j+1]=avail[j] + p_{s(j)}$ con $j=1,...,N-1$
+				- In conclusione uno stato si definisce _SAFE_ se vale la condizione:
+					- $$n_{s(j)}\le avail[j]\ \ \ \ \ j=1,...,N$$
 			- #### Stato UNSAFE:
 				- Condizione necessaria ma non sufficiente per avere deadlock.
 		- ### Algoritmo del banchiere multi valuta:
@@ -106,13 +110,26 @@ data: "`2025-03-13 15:46`"
 				- $\overline{p_{i}}$ …
 				- $\overline{n_{i}}= \overline{c_{i}}-\overline{p_{i}}$ … per ogni valuta.
 				- $\overline{COH}=\overline{C}-\sum\limits_{i=1,...,N}\overline{p_{i}}$ … per ogni valuta.
+			- #### Stato SAFE:
+				- Si ha una sequenza $s$ come prima e un vettore $\overline{avail}$ calcolato in questo modo:
+					- $\overline{avail[i]}=\overline{COH}$
+					- $\overline{avail[j+1]}=\overline{avail[j]} + \overline{p_{s(j)}}$ con $j=1,...,N-1$
+				- Uno stato si definisce _SAFE_ se vale la condizione:
+					- $$n_{s(j)}\le \overline{avail[j]}\ \ \ \ \ j=1,...,N$$
 			- #### Teorema:
 				- Se durante la costruzione di una sequenza si giunge ad un punto in cui nessun processo è soddisfacibile allora lo stato non è SAFE e non esiste nessuna sequenza che consente di soddisfare i processi.
 			- #### Dim:
 				- Per assurdo 
 				- Suppongo che lo stato sia SAFE ovvero che esista la sequenza che consente di soddisfare i processi.
-				- $C$ la sequenza interrotta e $C'$ la sequenza che porta allo stato SAFE.
+				- $C$ _la sequenza interrotta_ e $C'$ _la sequenza che porta allo stato SAFE_.
 				- Sia $H$ un processo non appartenente alla sequenza $C$
+				- Siano $C, C'$ le sequenze dei [[Concorrenza#^68dcd8|processi]] come nella figura:
+					- ![[Pasted image 20250611120617.png|300]]
+				- $H=\{p \in proc| p\notin C\}$
+					- Con $h$ il primo elemento di $H$ che compare in $C'$
+				- Tutti gli elementi di $C'$ prima di $h$ compaiono in $C$. Chiamiamo $C''$ il segmento iniziale di $C'$ fino al punto precedente l'applicazione di $h$.
+				- Le risorse disponibili all'applicazione di $h$ in $C'$ sono $avail[C'']=COH+ \sum\limits_{j\in C''} p_{j}$ $h$ è quindi applicabile avendo $n\le avail(C'')$
+				- Ma $avail(C)= COH+ \sum\limits_{j\in C} p_{j}$ quindi $avail(C)\le avail(C'')$ allora $h$ è applicabile alla fine di $C$ ma questo va contro all'ipotesi che $C$ non potesse continuare.
 - # Ostrich algorithm:
 	- Consiste nell’evitare di controllare per i deadlock e far finta che non si possano verificare.
 	- Usato perché evitare i deadlock può essere costoso.

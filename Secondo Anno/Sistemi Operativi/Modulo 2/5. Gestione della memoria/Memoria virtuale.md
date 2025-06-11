@@ -25,24 +25,40 @@ data: "`2025-04-06 20:03`"
 	- Gli indirizzi virtuali logici possono essere mappati su indirizzi fisici della memoria principale oppure su una memoria secondaria.
 		- Se si accede alla memoria secondaria, i dati sono trasferiti nella memoria centrale e se quella memoria è piena dei dati vengono trasferiti in una memoria secondaria e completare il trasferimento.
 - # Paginazione a richiesta:
-	- Usiamo la paginazione, solo che nella tabella delle pagine viene aggiunto un campo che indica l’indirizzo nella memoria secondaria e un bit che indica se la pagina è disponibile nella memoria centrale.
+	- Usiamo la paginazione, solo che nella _tabella delle pagine_ viene aggiunto un campo che indica l’indirizzo nella memoria secondaria e un bit che indica se la pagina è disponibile nella memoria centrale.
 	- Se si tenta di accedere ad una pagina che manca nella memoria centrale, il processore genera una [[Trap e interrupt#^ca5cf6|trap]] (_page fault_) e il sistema operativo con il _pager_ si occupa di trasferire la pagina in memoria centrale.
+	- ## Algoritmo:
+		- Si individua la pagina in memoria secondaria, si individua un frame libero, e, se non esiste:
+			- Richiama l'algoritmo di rimpiazzamento utilizzato.
+			- Aggiorna la _page table_ (invalidando la vittima) e la _frame table_ (con frame libero).
+			- Se la pagina "vittima" è stata variata la scrive su disco.
+		- Aggiorna di nuovo la _frame table_ col frame occupato
+		- Legge la pagina, che ha provocato il fault, dal disco.
+		- Aggiorna la _page table_(caricato il [[Gestione della memoria#^63aaa2|TLB]])
+		- Infine riattiva il processo.
 - ![[Pasted image 20250321102727.png]]
 - # Pager/swapper:
 	- ### Swap:
 		- Prendere l’intera memoria del processo sospenderlo e poi mettere la memoria del processo in quella secondaria e riattivare poi il processo.
 		- _swap-in_: quando si porta la memoria secondaria in quella principale.
 		- _swap-out_: quando si porta la memoria principale in quella secondaria.
-	- Nella paginazione su richiesta si fa swap solo delle pagine che servono.
+	- Nella paginazione su richiesta si fa _swap_ solo delle pagine che servono.
 - # Gestione page fault:
-	- Quando non ci sono frame liberi serve liberarne uno e si sceglie di eliminare la pagina _meno utile_ usando un algoritmo di rimpiazzamento:
+	- Quando non ci sono frame liberi serve liberarne uno e si sceglie di eliminare la pagina _meno utile_ usando un algoritmo di rimpiazzamento.
+	- Suppongo che il codice nella pagina 0 faccia riferimento alla 1, ma la [[Gestione della memoria#^b3b567|MMU]] si accorge che la pagina 1 non è nella memoria principale, si genera un "page fault" catturato dal S.O. 
+		- ![[Pasted image 20250611132519.png|600]]
+	- Il S.O poi cerca in [[Memoria secondaria]] la pagina da caricare che poi la caricherà in memoria principale con il suo contenuto.
+		- ![[Pasted image 20250611132814.png|650]]
+	- Infine:
+		- ![[Pasted image 20250611132409.png|700]]
 	- ## Stringa di riferimenti:
-		- Una sequenza di riferimenti in memoria che poi sono i tutti i numeri di pagina.
+		- Una sequenza di riferimenti in memoria che poi sono tutti i numeri di pagina.
+		- Si può generare esaminando il funzionamento dei programmi reali o con un generatore random di numeri.
 	- ## Anomalia di Belady:
 		- Non è detto che aumentando il numero di frame allora diminuisca il numero di page fault.
 	- ## Algoritmi di sostituzione/rimpiazzamento:
 		- Si invalida la pagina da togliere facendo in modo che non venga più considerata in memoria e se un processo tenta di accedervi è come se non la vedesse.
-		- Poi si aggiorna la frame table con il frame libero.
+		- Poi si aggiorna la _frame table_ con il frame libero.
 		- L’algoritmo minimizza il numero di _page fault_ trovando quindi la pagina meno utile in questo momento.
 		- ### Valutazione:
 			- Gli algoritmi vengono valutati esaminando come si comportano quando applicati ad una _stringa di riferimenti_ in memoria.
@@ -52,7 +68,7 @@ data: "`2025-04-06 20:03`"
 			- Quindi un algoritmo è detto _a stack_ se per ogni stringa $s$ e tempo $t$ si ha che:
 				- $$S_{t}(s,A,m)\subseteq S_{t}(s,A,m+1)$$
 			- #### Teorema:
-				- Si si ha un algoritmo a stack non possono esserci casi della _anomalia di Belady_
+				- Se si ha un algoritmo a stack non possono esserci casi della _anomalia di Belady_
 			- #### Dim:
 				- Si prende un $S_{t}(s,A,m)$ e $S_{t}(s,A,m+1)$ se caricassi un altra pagina $p$ ci sarebbe page fault?
 					- Se  $p$ appartiene al primo allora anche al secondo quindi non c’è page fault in entrambi.
@@ -61,7 +77,7 @@ data: "`2025-04-06 20:03`"
 						- Quindi aumentando il numero di frame non si ha un aumento di _page fault_.
 		- ### FIFO:
 			- Butta via la pagina che è stata caricata per prima in memoria.
-			- Però il fatto che una pagina sia stata caricata per prima non significa che non sarà più usata.
+			- Però il fatto che una pagina sia stata caricata per prima _non significa che non sarà più usata_.
 			- ![[Pasted image 20250321111403.png|700]]
 		- ### MIN:
 			- Si sceglie la pagina che verrà acceduta nel futuro più lontano.
@@ -75,13 +91,13 @@ data: "`2025-04-06 20:03`"
 			- Questo però è molto costoso perché si necessiterebbe di controllare l’overflow del contatore o averne uno molto alto. 
 			- #### Approssimare l’algoritmo
 				- ##### Additional-Reference-Bit-Algorithm
-					- Per approssimare questo algoritmo si tiene conto se una pagina è stata acceduta impostandone i reference bit a 1 e poi periodicamente si controlla quali siano state accedute e si resetta il bit.
+					- Per approssimare questo algoritmo si tiene conto se una pagina è stata acceduta impostandone i _reference bit_ a 1 e poi periodicamente si controlla quali siano state accedute e si resetta il bit.
 					- ![[Pasted image 20250405183343.png|650]]
 				- ##### Second chance algorithm:
 					- Corrisponde ad un caso particolare dell’algoritmo precedente dove la dimensione della “storia” è 1
 					- Le pagine in memoria vengono gestite come una lista circolare,
 					- Partendo dalla posizione successiva all’ultima pagina caricata, la lista viene scandita secondo la seguente regola:
-						- Se la pagina _è stata acceduta_ il reference bit viene messo a 0  
+						- Se la pagina _è stata acceduta_ il _reference bit_ viene messo a 0  
 						- Altrimenti la pagina selezionata diventa la “vittima”.
 					- ![[Pasted image 20250405184019.png|700]]
 			- #### Teorema: 

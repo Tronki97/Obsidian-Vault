@@ -21,7 +21,7 @@ data: "`2025-04-05 18:52`"
 		- Si necessitano di strutture dati per tenere traccia della memoria libera e occupata.
 		- ### mappa di bit:
 			- La memoria è suddivisa in un’unica allocazione.
-			- Ad ongi unità di allocazione è associato un bit nella bitmap 
+			- Ad ogni unità di allocazione è associato un bit nella bitmap 
 			- Ogni bit a 0 indica che la cella è libera, 1 che è occupata.
 			- ![[Pasted image 20250320163159.png]]
 			- Questa struttura dati ha il vantaggio di avere una dimensione fissa calcolabile all’inizio; ma per individuare uno spazio di memoria di dimensione $k$ unità, è necessario cercare una sequenza di $k$ bit 0 consecutivi e questa operazione è $O(m)$ costosa dove $m$ è il numero di celle di memoria.

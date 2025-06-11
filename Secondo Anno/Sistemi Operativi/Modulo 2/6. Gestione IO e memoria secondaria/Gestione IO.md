@@ -27,7 +27,6 @@ data: "`2025-04-06 21:26`"
 	- ## Buffering:
 		- Utile per gestire una differenza di velocità tra [[Problemi classici di concorrenza#^1ff6a7|produttore/consumatore]] di un certo flusso di dati.
 		- Per gestire la differenza di dimensioni nell’unità di trasferimento.
-		- 
 	- ## Caching:
 		- Mantiene nella memoria primaria una copia dei dati che si trovano nella memoria secondaria.
 		- Differisce dal buffering perché mantiene una _copia_ dell’informazione e non un’_istanza_ come nel buffering

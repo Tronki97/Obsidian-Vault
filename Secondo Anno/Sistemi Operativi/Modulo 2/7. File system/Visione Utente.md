@@ -1,0 +1,107 @@
+---
+tags: []
+aliases:
+  - file
+  - directory
+  - file speciali
+  - tipo di un file
+data: "`2025-06-11 16:27`"
+---
+- # File:
+	- Entità atomica di assegnazione/gestione della [[Memoria secondaria]] 
+	- Collezione di info correlate.
+	- Da una vista logica uniforme alle info correlate
+	- ## Attributi:
+		- ### Nome:
+			- Stringa di caratteri che serve al S.O per rintracciare il file
+			- Può essere _case sensitive_
+		- ## Tipo:
+			- Necessario al [[Sistema operativo]] per capire come trattarlo, chi lo ha creato in modo da ridurre gli errori  
+			- Unix spesso vede tutti i file come sequenza di caratteri, nelle caratteristiche di quel file viene specificato che tipo di programma può eseguirlo/aprirlo.
+			- _Possono avere diversi tipi_:
+				- _Senza formato_ (stringa di byte), quindi solo testo
+				- _Con formato_: file di record, di database, `a.out`
+				- [[Set di caratteri|ASCII]] _/binario_: può essere o meno visualizzabile (7/8 bit)
+				- _sorgente, oggetto..._
+				- _eseguibili_
+			- Conoscere il tipo del file permette di evitare operazioni non valide come: _stampare un file eseguibile_
+			- Per Identificare un tipo di file ci sono vari modi:
+				- _Dalla estensione_:
+				- Utilizzando un attributo "tipo" associato al file nella directory
+				- _Magic number_.
+			- ### File speciali:
+				- Senza dati, hanno solo info fatta da una coppia di indici per il kernel.
+				- Indica l’unità gestita dal device driver o la caratteristica del device.
+				- Vengono gestiti come file perché posso usare le stesse SYSCALL che uso per i file normali senza stare a crearne altre.
+				- Utile per dire al kernel di agire direttamente sul device
+		- ## Locazione e dimensione:
+			- Dove trovare i pezzi del file nella memoria secondaria.
+		- ## Data e ora:
+			- Dati riguardo alla data di creazione, all’ultima modifica o accesso.
+			- Utile anche al [[Makefile]] quando controlla se il file `.c` corrente è più nuovo del file oggetto e in caso lo compila. 
+		- ## Info sulla proprietà:
+			- Utenti, gruppi, etc
+			- Può essere usato per le autorizzazioni.
+		- ## Protezione:
+			- Info di accesso per verificare chi è autorizzato a eseguire operazioni sui file
+	- ## Struttura dei file:
+		- 1. _Sequenze di byte_
+			- Scelta minima che alleggerisce il codice del kernel, riducendo gli errori e velocizzando il codice.
+		- 2. _Sequenze di record logici_  
+		- 3.  _Ad albero_.
+			- ![[Pasted image 20250411110832.png]]
+		- Per gestire la struttura dei file si possono fare diverse scelte:
+			- _Scelta minimale_:
+				- I file sono semplici stringhe di byte tranne per quanto riguarda gli _eseguibili_
+			- _parte strutturata / parte scelta dall'utente_
+			- _diversi tipi di file predefiniti_
+		- ### Supporto:
+			- Se si hanno _più formati_ di file si rischia di avere più errori e appesantire il kernel, Anche se la gestione risulta più efficiente e non duplicata per i formati speciali.
+			- Con _meno formati_ si ha un codice di sistema più snello.
+	- ## Metodi di accesso:
+		- ### Sequenziale:
+			- Read, write.
+		- ### Diretto:
+			- Quando si legge o scrive in una posizione specifica.
+		- ### indicizzato:
+			- Si fanno lettura e scrittura rispetto ad una chiave specifica.
+			- Come si fa nei _database_
+			- C’è una corrispondenza chiave-posizione rappresentata da una tabella.
+			- Memorizzarlo è molto efficiente ma dispendioso.
+			- ### ES:
+				- ![[Pasted image 20250611164929.png]]
+	- ## Operazioni sui file:
+		- Ogni volta che si deve fare una operazione su di un file attraverso l'interfaccia per la programmazione ([[API REST|API]]) bisogna prima _aprire_ il file e poi _chiuderlo_ quando si ha finito.
+			- Questa concezione è utile per:
+				- _mantenere le strutture dati di accesso al file_
+				- _gestire gli accessi concorrenti_
+				- _definire un descrittore per le operazioni di accesso ai dati_.
+		- ### Creazione:
+			- Il [[Sistema operativo]] deve allocare spazio per il file e creare la struttura dati che lo rappresenta.
+			- Se il file esiste già, viene generato un errore.
+		- ### Apertura:
+			- Il file viene aperto per essere letto o scritto.
+			- Il S.O. crea una _tabella dei file aperti_ (open file table) che contiene info riguardo al file aperto.
+			- Se il file non esiste, viene generato un errore.
+		- ### Lettura/Scrittura:
+			- Si legge o scrive il file in base al metodo di accesso scelto.
+		- ### Chiusura:
+			- Si chiude il file e si libera la memoria allocata per esso.
+		- ### Cancellazione:
+			- Si rimuove il file dal sistema e si libera lo spazio occupato.
+- # Directory:
+	- Rappresenta un insieme di file anche se in molti sistemi le directory sono _file speciali_
+	- ## Operazioni:
+		- _Creare, cancellare, rinominare, aprire/chiudere, leggere, link/unlink_
+	- ## Struttura:
+		- A livello singolo, due livelli, a [[Grafi|grafo aciclico]], a [[Grafi|grafo]], ad albero
+		- ## Albero:
+			- ![[Pasted image 20250611165746.png|800]]
+		- ### A grafo aciclico:
+			- Un file può essere contenuto in due o più directory diverse
+			- Esiste però una unica copia del suddetto file e quindi quando si modifica il file, si modifica in tutte le directory.
+			- ![[Pasted image 20250611170020.png|700]]
+- # Semantica della coerenza:
+	- Quando un file viene aperto viene in realtà copiato in una sessione in modo che poi solo alla fine tutte le modifiche fatte vengano salvate altrimenti risulterebbe che ogni azione I/O sia un’interruzione per tutti gli utenti che accedono a quel file 
+- # Link Utili:
+	- 

@@ -19,11 +19,11 @@ aliases:
 data: "`2025-03-13 17:18`"
 ---
 - # Memory manager:
-	-  gestisce la memoria principale, assegna e de-alloca la memoria ai processi.
+	- Gestisce la memoria principale, assegna e de-alloca la memoria ai processi.
 	- Tiene traccia della memoria libera e occupata
 	- è un componente software a differenza dell’MMU. 
 - # Binding:
-	- Lo fa il compilatore ed è l’associazione degli indirizzi logici con quelli fisici.
+	- Lo fa il compilatore ed è _l’associazione degli indirizzi logici con quelli fisici_.
 	- Può avvenire durante:
 		- ## Compilazione :
 			- Indirizzi calcolati al momento della compilazione e saranno gli stessi durante tutto il programma 
@@ -31,7 +31,7 @@ data: "`2025-03-13 17:18`"
 				- Un esempio può essere il _kernel_
 			- ![[Pasted image 20250313172457.png]]
 			- Non richiede hardware speciale, veloce e semplice ma non funziona con la _multiprogrammazione_ perché 2 processi che eseguono lo stesso programma necessiterebbero di allocare la stessa cella di memoria.
-		- ## caricamento :
+		- ## Caricamento :
 			- Il codice generato dal compilatore non ha indirizzi assoluti ma relativi.
 			- Codice detto _rilocabile_:
 			- Il loader si occupa dei riferimenti ad indirizzi di memoria coerentemente al punto iniziale di caricamento
@@ -49,7 +49,7 @@ data: "`2025-03-13 17:18`"
 	- ## Fisici :
 		- Sono gli indirizzi reali della memoria principale che sono associati agli indirizzi logici.
 		- L’MMU traduce da indirizzi logici a fisici
-- # MMU:
+- # MMU: ^b3b567
 	- ## ES:
 		- ![[Pasted image 20250320152956.png]]
 		- Si prende un registro di rilocazione $R$ che permette alla MMU di trasformare gli indirizzi logici $[0,MAX]$ in indirizzi fisici $[R,R+MAX]$. 
@@ -86,7 +86,7 @@ data: "`2025-03-13 17:18`"
 		- _E si suppone che i frame della pagina inizino da un indirizzo multiplo di 4096_.
 	- ## Implementazione della tabella delle pagine:
 		- Si potrebbe inserire in un insieme di registri ad alta velocità per facilitarne l’accesso, però sarebbe troppo costoso.
-- # Translation lookaside buffer (TLB):
+- # Translation lookaside buffer (TLB): ^63aaa2
 	- Insieme di registri associativi ad alta velocità $O(1)$ 
 	- Ogni registro ha 2 parti:
 		- _Chiave_: che di solito è il numero di pagina
