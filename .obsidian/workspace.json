@@ -11,12 +11,72 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "immagini/Pasted image 20250612114848.png"
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduling.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250612114848"
+              "icon": "lucide-file",
+              "title": "Scheduling"
+            }
+          },
+          {
+            "id": "661c075159d5d635",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo/Richiami Di Architettura.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Richiami Di Architettura"
+            }
+          },
+          {
+            "id": "5919f631ae5264c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Scheduler"
             }
           },
           {
@@ -43,7 +103,8 @@
               "title": "Tecniche crittografiche per l'autenticazione"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -75,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "compattazione",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -244,8 +305,14 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "5919f631ae5264c8",
   "lastOpenFiles": [
+    "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo/Richiami Di Architettura.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Allocazione della memoria.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduling.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/User Authentication.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
+    "immagini/Pasted image 20250612114848.png",
     "Condivisione del segreto e Key Escrow.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/access control.md",
     "immagini/Pasted image 20250612131359.png",
@@ -257,9 +324,7 @@
     "immagini/Pasted image 20250612125609.png",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Tecniche crittografiche per l'autenticazione.md",
     "immagini/Pasted image 20250612123642.png",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/User Authentication.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
-    "immagini/Pasted image 20250612114848.png",
     "Homepage.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Sicurezza nei sistemi operativi.md",
     "immagini/Pasted image 20250605122738.png",
@@ -274,13 +339,10 @@
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Working set.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Thrashing.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Memoria virtuale.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Allocazione della memoria.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Grafo di Holt.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione risorse.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Distribuzione invariante.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/tavola_normale.pdf",

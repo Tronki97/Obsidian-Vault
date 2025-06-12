@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: 
 aliases:
   - First come first served
   - FCFS
@@ -17,6 +17,7 @@ aliases:
   - EDF
   - interval timer
   - priorità
+  - aging
 data: "`2025-03-08 17:39`"
 ---
 - # Scheduling:
