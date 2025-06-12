@@ -11,6 +11,18 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "immagini/Pasted image 20250612114848.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250612114848"
+            }
+          },
+          {
+            "id": "d5bac74b57d85cab",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Tecniche crittografiche per l'autenticazione.md",
@@ -234,25 +246,24 @@
   },
   "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Pasted image 20250612123642.png",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/User Authentication.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Tecniche crittografiche per l'autenticazione.md",
     "Condivisione del segreto e Key Escrow.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/access control.md",
+    "immagini/Pasted image 20250612131359.png",
+    "immagini/Pasted image 20250612130826.png",
+    "immagini/Pasted image 20250612130425.png",
+    "immagini/Pasted image 20250612125957.png",
+    "immagini/Pasted image 20250612125810.png",
+    "immagini/Pasted image 20250612125637.png",
+    "immagini/Pasted image 20250612125609.png",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Tecniche crittografiche per l'autenticazione.md",
+    "immagini/Pasted image 20250612123642.png",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/User Authentication.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
-    "Pasted image 20250612114848.png",
+    "immagini/Pasted image 20250612114848.png",
     "Homepage.md",
-    "access control.md",
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Sicurezza nei sistemi operativi.md",
     "immagini/Pasted image 20250605122738.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione implementatore.md",
-    "immagini/Pasted image 20250611181343.png",
-    "immagini/Pasted image 20250611180940.png",
-    "immagini/Pasted image 20250611180321.png",
-    "immagini/Pasted image 20250611175922.png",
-    "immagini/Pasted image 20250611175504.png",
-    "immagini/Pasted image 20250611175309.png",
-    "immagini/Pasted image 20250611175111.png",
-    "immagini/Pasted image 20250611174859.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione Utente.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",

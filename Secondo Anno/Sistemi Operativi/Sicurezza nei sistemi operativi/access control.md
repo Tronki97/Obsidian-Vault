@@ -1,0 +1,160 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-05-15 18:14`"
+---
+- # Obiettivi:
+	-  confidenzialità: nega accessi non autorizzati alle risorse 
+	- Integrità: nega modifica delle risorse ai non autorizzati 
+	- Disponibilità: un accesso autorizzato deve essere concesso in maniera tempestiva 
+		- Non possono essere massimizzati tutti e tre insieme (trade off)
+		- Triviale garantire confidenzialità e integrità se si sacrifica la disponibilità (negare ogni accesso) 
+- # Def:
+	- Insieme di politiche e meccanismi che riguardano operazioni da utenti su oggetti 
+		- Quali accessi sono permessi, quando, a chi 
+		- _soggetto_ entità in grado di accedere un oggetto  
+		- _oggetto_: ne devo controllare l'accesso 
+		- _diritto di accesso_ 
+	- **Discretionary access control (DAC)**
+		- Regole sono a discrezione dei soggetti 
+	- **Mandatory access control**
+		- Regole stabilite dal sistema 
+	- Noi parleremo solo di DAC 
+- # Principi di sicurezza:
+	- Open design 
+	- Separazione di politiche e meccanismi 
+	- Numero limitato di meccanismi per implementare una politica 
+	- Accessi devono essere prima negati e poi acquisiti, quindi di base i soggetti _non hanno privilegi di accesso su nessun oggetto_.
+	- Struttura del S.O: deve garantire che ogni accesso è controllato dal sistema e non concesso a caso 
+		- _complete mediation_ fatto dal _reference monitor_
+	- Un soggetto deve avere privilegi minimi necessari a portare avanti quello che deve fare 
+		- Limita i danni che possono essere provocati da configurazioni errate di sistema. 
+		- Limita il numero di programmi privilegiati.
+		- Aiuta nel debugging.
+		- Permette l'isolamento di sotto-sistemi critici.
+- # TCB: Trusted Computing Base 
+	- Spazio diviso in 
+		- User space 
+		- Kernel Space 
+			- Contiene il Trusted computing Base 
+			- E il TCB contiene il reference monitor 
+			- Le richieste dell'utente devono sempre passare prima per il reference monitor 
+	- $S$: insieme dei soggetti 
+	- $O$: insieme oggetti
+		- Che possono essere attivi e comportarsi come _soggetti_
+	- $\alpha$: insieme delle operazioni che possono essere eseguite. 
+- # Domini di protezione:
+	- è un insieme di oggetti e l'insieme di diritti di accesso per ognuno 
+	- Formalmente è un insieme di _tuple_ 
+	- Ogni soggetto è associato ad un dominio di protezione in cui opera 
+		- Questo abbinamento può essere _statico o dinamico_ 
+- # DAC matrix:
+	- Un modello di Discretionary Access Control (DAC)
+	- è una matrice $M$ con i _domini come righe_ e _oggetti come colonne_
+	- ogni cella $M(i,j)$ contiene l'insieme di diritti di accesso $\alpha$ che il dominio $D_i$ permette sull'oggetto $O_j$
+	- ![[Pasted image 20250612125609.png]]
+	- ## ES:
+		- ![[Pasted image 20250612125637.png]]
+			- _file 4_  è un dizionario e non dovrebbe essere copiato ma A e B possono copiarlo perché possono leggere File 4 e scrivere File 2 
+		- ![[Pasted image 20250612125810.png]]
+			- Aggiungiamo un'operazione nuova: switch (transita) e Aggiungiamo una riga e una colonna $D_{4}$ dove il file dizionario è leggibile solo da nel dominio $D_{4}$ 
+			- Il dominio D 2 (utente A) può fare lo switch nel dominio D 4, il che comporta che i diritti acquisiti prima devono essere manteunti 
+			-  un processo quando fa lo switch porta i diritti di prima nel nuovo dominio. (vengono copiati in D 4)
+			- Due utenti possono fare lo switch nello stesso dominio: possiamo fare istanze multiple dello stesso nuovo dominio.
+			- ![[Pasted image 20250612125957.png]]
+			- A questo punto A e B possono consultare dizionario, però lo fanno soltanto secondo le regole di chi ha implementato il dominio 4 (tipo non possono copiarlo interamente) 
+	- ## Implementazione:
+		- Può essere implementato come una tabella globale fatta da un [[Array]] bidimensionale.
+		- è semplice da implementare, ma può essere molto grande e difficile da gestire in un sistema dinamico dove i domini e gli oggetti possono cambiare continuamente e i privilegi di accesso cambiano nel tempo.
+- # Access Control list (ACL):
+	- La matrice viene memorizzata per colonne 
+		- ogni oggetto associato  ad una lista di _tuple_ `<domain, set_of_access_rights>` 
+		- Ottimizzazioni: includiamo solo domini che specificano diritti di accesso diversi dal default 
+		- Può comportarsi come una "lista di invitati" 
+	- ![[Pasted image 20250612130425.png]]
+	- Unix ha tre domini: 
+		- _Owner, group, others_
+		- Un esempio è:
+			- `babaoglu% ls -l /etc/passwd`
+			- `-rw-r--r--  1 root wheel  7479 Jan 1 2020  /etc/passwd`
+- # Capability:
+	- La matrice viene memorizzate per righe 
+	- ogni dominio viene associato ad una lista di permessi `<oggetti, access_rights_for_object>`
+		- Questa tupla è detta _capability_ 
+	- è come avere la chiave per aprire un lucchetto che protegge un oggetto
+	- ![[Pasted image 20250612130826.png]]
+	- Un oggetto deve essere in grado di discernere capability vere da false 
+	- Possono essere implementate usando _crittografia a chiave pubblica_ 
+	- `<oggetto, diritti, codice unico>` viene firmato con la chiave privata dell'oggetto e consegnata al soggetto 
+	- Quando lo deve utilizzare si verifica che la capability sia vera o no (lo verifica l'oggetto) 
+		- Controlla _firma, nome, codice di controllo_ e limita gli accessi a quelli specificati dalle _tuple_ 
+	- Una capability può essere _copiata e trasferita_ ma non modificata
+- # Revoca dei diritti di accesso:
+	- La revoca può essere:
+		- Immediata o posticipata
+		- Selettiva o generale
+		- Parziale o totale
+		- Temporanea o permanente.
+	- Nel caso _ACL_: 
+		- Revoca semplice basta togliere il soggetto tra quelli a cui l'accesso prima era garantito 
+	- Nel caso di _capability_:
+		- Diventa più complicato perché le _capability_ sono distribuite ai soggetti che ne fanno uso (possono essere ovunque)
+		- Modificare quindi significa prima localizzarle (potrebbe essere difficile o impossibile) 
+		- _aggiungere scadenza_: se si vuole mantenere l'accesso, alla scadenza va rinnovato 
+		- _capability indirette_: 
+			- Si introduce un livello di direzione, per revocare una _capability_ basta togliere quel livello intermedio 
+			- Le capabilities non puntano all'oggetto ma a celle di tabelle intermedie che puntano all'oggetto.
+			- Modificando queste entries si può simulare una revoca immediata 
+- # Esempi di controllo dell'accesso:
+	- Ogni oggetto (o [[Gestione risorse|risorse]]) in UNIX è un [[Visione Utente#^1b4d31|file]] con uno schema di nomi ad albero.
+	- ![[Pasted image 20250612131359.png|700]]
+	- Ogni file ha un _owner_ e un _group_
+	- I permessi di accesso Sono fatti di 9 bit corrispondenti a:
+		- Read, write excecute per owner, group , altri 
+	- Utenti e gruppi sono identificati usando interi che si trovano nel password file 
+		-  `mezzina:x:501:1000: Leonardo Mezzina:/home/mezzina:`
+			- User-id: 501
+			- Group-id: 1000
+- # Possesso dei file:
+	- Ogni processo creato da un utente eredità il suo user id e il group id e li usa come propri real-user id e real group id 
+	- Quando un processo crea un file, il suo _owner e gruppo_ vengono settati ai _real-user-id_ e _real-group-id_ del processo che li crea. 
+	- l'owner di un file può essere modificato con `chown newusername file(s)` 
+	- _real-user-id, real-group-id_: 
+		- Identificano chi ha lanciato il processo 
+		- Sono letti dal password file 
+	- _effective-user-id, effective-group-id_: 
+		- Settati dinamicamente durante l'esecuzione tramite il setuid comando 
+		- Sono usati per determinare gli access rights del processo quando interagisce con il file system 
+- # Accesso ibrido:
+	- Combina ACL e capbilities per avere i vantaggi di entrambi 
+		- Uso ACL solo al momento del primo accesso 
+		- Accessi successivi con capabilities (sono più veloci) 
+		- ACL però rende più facile la revoca 
+	- ## ES in UNIX:
+		- System call _Open_
+			-  `int open(const char *pathname, int flags)`
+			- Dove la flag può essere:
+				- `O_RDONLY`: read only
+				- `O_WRONLY`: write only
+				- `O_RDWR`: read and write
+			- `open()` controlla che il nome del file esista che l processo abbia i permessi di accesso richiesti e ritorna un intero chiamato _file descriptor_ che è un indice della  tabella di open file descriptor del processo 
+			- Il _file descriptor table_ non è altro che una lista di _capabilities_ che corrispondono ai file che possono essere acceduti dal processo 
+				- Un processo può usare una capability puntandola nel file descriptor table, ma non può modificarla 
+			- `Open()` deve fare l'_autenticazione_ 
+				- Dopo la prima apertura si crea una capability del file di script, dopodiché tutti gli accessi successivi sono fatti usando la capability (molto più veloci).
+- # Saved-user-id 
+	- In aggiunta a _real-user-id, real-group-id, effective-user-id and effectivegroup-id_ ogni [[Concorrenza#^68dcd8|processo]] ha anche un _saved-user-id_ e _saved-group-id_. Che contengono copie degli effective-user-id e effective-group-id al momento in cui il comando `setuid` è eseguito.
+	- Vogliamo che un utente possa cambiare solo la propria password 
+		- Questo programma farà tutti i controlli che utente possa toccare solo le righe che corrispondono a se stesso. 
+	- Si utilizza **setuid** per risolvere il problema delle password 
+		- Root scrive un comando /bin/passwd che è posseduto da root con i permessi r-s--x--x (il bit seuid è on)
+		- Il file `/etc/passwd` è posseduto da root con i permessi `rw` root only 
+		- `/bin/passwd` è eseguito da un processo, il suo effective-use-id cambia a root 
+		- Quindi un processo può scrivere il file `/etc/passwd` ma solo dopo aver fatto tutti i controlli 
+- # Link Utili:
+	- 
+
+
+
+

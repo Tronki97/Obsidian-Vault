@@ -1,7 +1,11 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: []
+aliases:
+  - challenge-response
+  - crittografia simmetrica
+  - crittografia asimmetrica
+  - OTP one-way ash
+  - strong authentication
 data: "`2025-05-15 18:14`"
 ---
 - # intro:
