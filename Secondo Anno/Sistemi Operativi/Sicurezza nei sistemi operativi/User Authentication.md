@@ -1,0 +1,83 @@
+---
+tags: 
+aliases:
+  - salting
+  - login spoofing
+  - password-based
+  - biometrics
+data: "`2025-05-15 18:14`"
+---
+- # Intro:
+	- L'autenticazione di una persona può avvenire in vari modi ed essere basata su molti fattori:
+		- 1. **qualcosa che so**: password, PIN
+		- 2. **qualcosa che ho**: smart card, token
+		- 3. **qualcosa che sono**: impronta digitale, riconoscimento facciale
+		- 4. **dove sono**: geolocalizzazione, indirizzo IP
+		- 5. **qualcosa che fai**
+	- Le opzioni 2-3-5 richiedono spesso dell'hardware speciale.
+	- Mentre la 1 è la più comune.
+- # Password-based 
+	- **problemi: forza bruta** 
+		- è sempre una stringa finita $\to$ forza bruta,  quindi può essere sempre "indovinata"  
+		- Può essere reso improbabile: 
+			- Sia $P$ probabilità di indovinare una password in tempo $T$ 
+			- $G$ tentativi che posso fare in una unità di tempo
+			- $N$ spazio di password 
+			- P $\simeq (G \times  T) /N$  
+			- Si può abbassare $P$:
+				- riducendo il tempo $T$ (con il _password aging_, un tot di tempo dopo la quale siamo costretti a cambiare password)
+				- aumentando lo spazio $N$ (password lunghe e complesse)
+				- riducendo $G$ (artificialmente) 
+	- **problemi: on-line attack**
+		- Il sistema sotto attacco è usato per valutare se un tentativo ha avuto successo o meno 
+		- Difese: 
+			- Inserire ritardo tra un tentativo e l'altro (riducendo quindi $G$)
+			- Limitare numero di tentativi possibili prima di bloccare l'account
+	- **off-line attack**
+		- Attacchi fatti su un sistema diverso rispetto a quello che stiamo cercando di compromettere 
+		- Basato su una lista precostruita di potenziali password.
+	- ## Salvarsi le password:
+		- Su un file _plain-text_ protetto dal sistema operativo e dai suoi meccanismi di controllo; però si rischia sempre che un'utente privilegiato ne abusi.
+	- ## Cifratura delle password:
+		- Si usano _hash one-way_ per cifrare le password.
+		- Il file mantiene i digest di questi hash.
+		- Al login, si calcola il digest della password fornita dall'utente e lo si confronta con quello nel file.
+		- In Unix/Linux questo file è tipicamente `/etc/passwd`.
+	- ## Dictionary attack:
+		- Si prende file di password cifrate, e un file (dictionary) che è fonte delle parole più comuni utilizzabili come password 
+		- Per ogni parola del dictionary ci si calcola il _digest_ e si confronta con le password 
+		- _hash one way_: non è un segreto il tipo di algoritmo viene usato, è informazione di dominio pubblico 
+		- Ci sono già programmi che lo fanno 
+		- ![[Pasted image 20250612114848.png|550]]
+		- ### Difesa:
+			- Si può _limitare l'accesso del file di password solo agli amministratori_.
+			- Visto che questo è un attacco che viene fatto off-line (in un sistema diverso da quello sotto attacco) non abbiamo accesso al ritmo dell'attacco quindi modificarlo non aiuta a difendersi 
+			- Possiamo scegliere _hash one way pesante_ che impieghi molto tempo per calcolare il digest e ciò Potrebbe rallentare l'attaccante 
+				- _es_ applicare DES 25 volte ad un blocco di 0 usando la pw come chiave 
+			- #### Salting:
+				- Invece di memorizzare una password di un utente U, il sistema memorizza per utente $U$ due quantità:
+					- **S** (salt):  numero random generato dal sistema 
+					- **Q** : il digest contenuto dalla concatenazione tra la Password e il Salt 
+					- _Solo S e Q sono salvati nel file delle password_ 
+				- L'utente che vuole autenticarsi immette la password $P$ che viene concatenata con il $S$ assegnato per quell'utente; il risultato è messo nella funzione di hash $f$ per ottenere $Q^*$ che verrà poi confrontato con $Q$.
+				- Con questo metodo la stessa password può avere diversi hash in base al salt, rendendo più difficile l'attacco di tipo _dictionary_.
+				- E quindi può prevenire attacchi globali verso user che hanno la stessa password per diversi servizi.
+			- Password **Shadow** : separa le password crittate da altre informazioni che sono tipicamente contenute nel file delle password (nome dell'utente, numero di telefono) 
+				- In sistemi Unix i password digest stanno in `etc/passwd` accessibili a tutti perché contiene tante informazioni utili a far funzionare il sistema 
+				- `/etc/shadow`:  separa le password da tutte le info ausiliarie 
+					- X: sul file delle password indica che la password non è lì ma che sta nello shadow
+					- Il _File shadow_ è accessibile solo a super utente (amministratore di sistema) 
+	- ## Login spoofing:
+		- Un attaccante crea un programma che genera una finta finestra per il login, chiedendo all'utente di inserire le credenziali.
+		- L'attaccante poi registra le credenziali inserite e le usa per accedere al sistema.
+		- Appena l'utente inserisce le credenziali, viene mostrato a schermo un messaggio di errore che lo invita a reinserire le credenziali, procedendo a chiudere il programma e facendo partire quello legittimo.
+	- ## Phishing:
+		- Un attaccante invia un'email o un messaggio che sembra provenire da una fonte affidabile, chiedendo all'utente di fornire le credenziali.
+		- Spesso si affida a [social engeneering](https://it.wikipedia.org/wiki/Ingegneria_sociale)
+- # Biometrics:
+	- L'autenticazione biometrica si basa su caratteristiche fisiche o comportamentali uniche dell'individuo.
+	- Devono essere rapide da reperire per l'utente 
+	- ## Tipi di biometria:
+		- **Fisiologica**: impronta digitale, riconoscimento facciale, iride, voce.
+- # Link Utili:
+	- 

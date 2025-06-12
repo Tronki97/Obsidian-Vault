@@ -13,66 +13,137 @@ data: "`2025-04-11 10:48`"
 		- Contiene l'indicazione della _partizione attiva_
 	- L’_MBR_ viene letto ed eseguito al boot del sistema.
 	- ![[Pasted image 20250423153317.png]]
-	- Le partizioni possono anche essere usati per fare dei backup del sistema.
-	- MBR accetta solo 4 partizioni primarie e l’ultima può essere divisa a sua volta in partizioni non primarie.
-	- Mentre GPT (GUID Partition Table) può avere più partizioni primarie e secondarie.
-	- ### Struttura di una partizione:
-		- Ogni partizione inizia con un boot block
-		- Superblock:
+	- ## Struttura partizione:
+		- Ogni partizione inizia con un _boot block_
+		- Il MBR carica il _boot block_ nella partizione attiva e lo esegue
+		- Il _boot block_ carica il [[Sistema operativo]] e lo esegue 
+		- Il resto della partizione dipende dal file system.
+		- _Superblock_:
 			- Contiene puntatori a tutte le altre informazioni riguardo il file system e su parametri fondamentali per l’organizzazione
-		- Tabella gestione dello spazio libero 
-- ## Allocazione dello spazio a blocchi:
-	- Mi serve sapere dove sono dei pezzi di file allocati in giro per la memoria
-	- ### Contigua:
+		- _Tabella gestione dello spazio libero_
+		- _Tabella gestione spazio occupato_: 
+			- Contiene info sui file presenti nel sistema ma non è presente in tutti i _file system_
+		- _Root dir_:
+			- [[Visione Utente#^889353|directory]] radice del file system
+		- ![[Pasted image 20250611172132.png]]
+	- Le partizioni possono anche essere usate per fare dei _backup del sistema_.
+	- MBR accetta solo 4 partizioni primarie e l’ultima può essere divisa a sua volta in partizioni non primarie.
+	- Mentre GPT (_GUID Partition Table_) può avere più partizioni primarie e secondarie.
+- # Allocazione dello spazio a blocchi:
+	- Mi serve sapere dove sono dei pezzi di file allocati in giro per la memoria e quindi come vengono scelti i blocchi dati da usare per un [[Visione Utente#^1b4d31|file]] e come vengono collegati tra loro per formare una struttura unica.
+	- ## Contigua:
 		- I file sono memorizzati in blocchi contigui di dischi e se superano le dimensioni di un blocco si trascinano in quelli successivi.
 		- Non servono strutture dati per collegare i blocchi.
 		- I blocchi continui non necessitano di operazioni di _seek_
 		- _Molto efficiente nei file system di sola lettura._
 			- Come i CD.
-		- Però rimane il problema della [[frammentazione esterna]]
-	- ### Concatenata:
+		- Molto efficiente anche l'_accesso diretto_:
+			- `block= offset % blocksize`
+			- `pos=offset % blocksize`
+		- Però rimane il problema della [[frammentazione esterna]] ed inoltre i file non possono crescere di dimensioni.
+		- ![[Pasted image 20250611172711.png|300]]
+	- ## Concatenata:
 		- Ogni file è una lista di blocchi
 			- Ogni blocco punta a quello successivo
 			- Il descrittore del file contiene i puntatori al primo e all’ultimo blocco.
 		- ![[Pasted image 20250423155229.png]]
 		- Con questa implementazione si evita la [[frammentazione esterna]]
-		- L’accesso diretto è inefficiente, la dimensione utile di un blocco non è potenza di  2
+		- L’accesso diretto è inefficiente, la dimensione utile di un blocco non è potenza di 2 
+		- Per minimizzare l' [overhead](https://it.wikipedia.org/wiki/Overhead) dato dai puntatori i blocchi vengono riuniti in cluster e vengono allocati in modo indivisibile, in questo modo lo spazio dedicato ai puntatori diminuisce ma aumenta lo spazio sprecato per la frammentazione esterna. 
 	- ### FAT:
-		- File allocation table 
+		- _File allocation table_ 
 		- Allocazione basata su una tabella sempre usando delle concatenazioni.
 		- Invece di avere i puntatori dentro i blocchi si ha un vettore di quei puntatori.
 		- Utile perché l’accesso è solo uno in quanto si sa dove inizia un file e si può accedere direttamente alla cella dell’array _FAT_ 
+		- ![[Pasted image 20250611173559.png]] ![[Pasted image 20250611173620.png|200]]
 	- ### Indicizzata:
 		- A ogni file corrisponde un blocco indice che contiene i puntatori ai blocchi di dati.
 			- Per accedere si carica in memoria il blocco indice corrispondente al file. 
 		- ![[Pasted image 20250423160854.png]]
-		- Un problema è che la dimensione dei blocchi indice determina la dimensione dei file. Per risolvere si possono usare altri blocchi indice che puntano a blocchi indice.
-			- Si ha un albero di indici.
-	- 
-- ## Gestione spazio libero:
-	- Si può usare una mappa di bit con ogni bit corrispondente ad un blocco del disco.
-		- 0 = libero
-		- 1 = occupato
-	- Oppure una lista concatenata di blocchi liberi:
-		- Si integra bene con il metodo FAT per l’allocazione delle aree libere.
+		- Un problema è che la dimensione dei blocchi indice determina la dimensione dei [[Visione Utente#^1b4d31|file]]. Per risolvere si possono usare altri blocchi indice che puntano a blocchi indice però rimane il problema dell'accesso diretto a file di grandi dimensioni. 
+			- ![[Pasted image 20250611174859.png]]
+		- #### Indice multilivello:
+			- Un'altra possibile soluzione è quella di usare un blocco indice dei blocchi indice
+			- In questo modo si vanno a perdere le prestazioni in quanto è richiesto un maggior numero di accessi.
+			- ![[Pasted image 20250611175111.png]]
+		- #### Caso UNIX:
+			- Ogni file è associato ad un _i-node_ il quale è una struttura dati contenente gli [[Visione Utente#^87c711|attributi]] di un file, e un indice di blocchi diretti e indiretti, secondo uno schema misto.
+			- ![[Pasted image 20250611175309.png]]
+			- Nel caso dell'accesso sequenziale si hanno buone performance, i file brevi sono acceduti più velocemente e occupano meno memoria.
+- # Gestione spazio libero:
+	- ## Mappa di bit
+		- Si può usare una mappa di bit con ogni bit corrispondente ad un blocco del disco.
+			- 0 = libero
+			- 1 = occupato
+		- Oppure una lista concatenata di blocchi liberi:
+			- Si integra bene con il metodo FAT per l’allocazione delle aree libere.
+		- ![[Pasted image 20250611175504.png|700]]
+	- ## Lista concatenata:
+		- I blocchi sono mantenuti in una lista concatenata 
+		- Si integra bene con FAT per l'allocazione delle aree libere.
+		- Richiede poco spazio in memoria centrale ma l'allocazione di aree di memoria ampie è costosa e l'allocazione di aree libere contigue è difficoltosa.
+	- ## Lista concatenata di blocchi:
+		- In ogni momento è necessario solo mantenere in memoria un _blocco contenente elementi liberi_ inoltre _non necessita di una struttura dati a parte_, i blocchi contenenti elenchi liberi di blocchi possono essere mantenuti all'interno dei blocchi stessi.
+		- Ma l'allocazione di aree di memoria ampie è _costosa_ e l'allocazione di aree libere contigue è difficoltosa.
+		- ![[Pasted image 20250611175922.png]]
+	- ## Scegliere la dimensione di un cluster:
+		- Grandi dimensioni: alta velocità di lettura ma _frammentazione interna_
+		- Piccole dimensioni: velocità più bassa ma meno frammentazione.
+		- ![[Pasted image 20250611180321.png]]
 - ## Implementare le directory:
-	- Un file speciale contenente informazioni sui file contenuti in una directory.
+	- Una [[Visione Utente#^889353|directory]] è Un [[Visione Utente#^3bf413|file speciale]] contenente informazioni sui file contenuti in una directory.
 		- è suddivisa in un certo numero di _directory entry_
 	- Implementabile come lista concatenata oppure come [[Tabelle Hash]]
 	- ![[Pasted image 20250423164111.png]]
-- ## Controllo di coerenza:
-	- Fsck: file system check.
-	- ### Phase 1:
-		- Controlla i blocchi e le loro dimensioni, scandendo la tabella degli I-node controllando le incoerenze.
-	- ### Phase 2:
-		- Controlla i nomi dei percorsi e le directory controllando che puntino a I-node legali.
-	- ### Phase 3:
-		- Scandisce l’albero del [[Visione implementatore]] per vedere se tutti i file sono raggiungibili.
-		- Se ne trova alcuni irraggiungibili li mette in una cartella.
-	- ### Phase 4:
-		- Verifica il numero di riferimenti per ogni file.
-		- Se il numero di reference è troppo alto.
-		- Se il numero è troppo basso vuol dire che se sei cancella il file ci saranno comunque delle cartelle che lo puntano ancora.
-		- 
+	- _Lunghezza dei nomi fissa_:
+		- Meccanismo semplice.
+		- Ma si ha uno spazio riservato molto grande rischiando uno spreco di memoria
+		- Oppure si usa uno spazio piccolo ma si avranno poi nomi brevi.
+	- Mentre memorizzare nomi a _lunghezza variabile_ nelle directory comporta dei problemi:
+		- Struttura dati più complessa
+		- ![[Pasted image 20250611180940.png|700]]
+	- ## directory a grafo aciclico:
+		- Per implementarla ci sono due modi possibili:
+			- ### Link simbolici:
+				- Un file speciale che contiene il percorso di un altro file che mi interessa.
+				- Quando si accede al file, il sistema operativo segue il percorso e accede al file reale.
+				- Permette di avere più nomi per lo stesso file.
+			- ### Hard link:
+				- Le info relative al file sono presenti, uguali, in entrambe le [[Visione Utente#^889353|directory]], non si necessita di una doppia ricerca nel file system ma non è possibile distinguere la copia dall'originale.
+				- Per implementarlo si necessitano gli _i-node_ i quali devono contenere un contatore di riferimenti.
+				- ![[Pasted image 20250611181343.png]]
+- # Performance:
+	- Per provare a migliorare le performance del file system si possono usare:
+		- ## Cache:
+			- Si memorizzano i blocchi più usati in memoria centrale per velocizzare l'accesso ai file.
+			- Si usano algoritmi come [[Memoria virtuale#^356dee|LRU]] (Least Recently Used) per gestire la cache.
+		- Si può usare una Tabella dei descrittori dei file aperti.
+		- Si può usare un buffer di blocco per [[Richiami Di Architettura#^11bc48|DMA]] (Direct Memory Access) per velocizzare l'accesso ai file.
+- # Controllo di coerenza:
+	- L'utilizzo della cache può provocare inconsistenze nel file system quando c'è un blackout per esempio e ci sono 2 soluzioni:
+		- ## Curare:
+			- Fsck: file system check.
+			- ### Fase 1:
+				- Controlla i blocchi e le loro dimensioni, scandendo la tabella degli _i-node_ controllando le incoerenze.
+			- ### Fase 2:
+				- Controlla i nomi dei percorsi e le directory controllando che puntino a _I-node_ legali.
+			- ### Fase 3:
+				- Scandisce l’albero per vedere se tutti i file sono raggiungibili.
+				- Se ne trova alcuni irraggiungibili li mette in una cartella.
+			- ### Fase 4:
+				- Verifica il numero di riferimenti per ogni file.
+				- Se il numero di reference è troppo alto.
+				- Se il numero è troppo basso vuol dire che se si cancella il file ci saranno comunque delle cartelle che lo puntano ancora.
+			- ### Fase 5:
+				- Verifica gli _i-node_ e i blocchi liberi/occupati
+			- ### Fase 6:
+				- Aggiorna le varie tabelle per salvare i cambiamenti.
+		- ## Prevenire:
+			- Ogni aggiornamento al file system è trattato come una _transazione_ e viene eseguita in modo _atomico_ ciò consente di ripristinare rapidamente uno stato coerente.
+			- ### Log:
+				- Tutte le transazioni sono memorizzate su di un _log_ 
+				- Una transazione è completata solo quando è stata _memorizzata nel log_ ma comunque il file system può non essere ancora aggiornato.
+				- Periodicamente le transazioni nei log _vengono effettuate nel file system_ e quando viene modificato in questo modo, la transazione è _rimossa dal log_ 
+				- In caso di errore tutte le transazioni nel log _devono essere ripetute_
 - # Link Utili:
 	- 

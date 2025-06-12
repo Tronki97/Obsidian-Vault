@@ -83,7 +83,7 @@ data: "`2025-04-06 20:03`"
 			- Si sceglie la pagina che verrà acceduta nel futuro più lontano.
 			- Questo algoritmo garantisce il minimo numero di page fault.
 			- ![[Pasted image 20250321111935.png|650]]
-		- ### LRU (least recently used):
+		- ### LRU (least recently used): ^356dee
 			- Si sceglie la pagina che è stata acceduta meno recentemente.
 			- è basato sul presupposto che la distanza tra due riferimenti successivi alla stessa pagina non vari eccessivamente.
 			- ![[Pasted image 20250321112249.png|650]]

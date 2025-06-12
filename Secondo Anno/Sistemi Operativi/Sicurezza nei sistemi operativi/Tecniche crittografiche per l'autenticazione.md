@@ -1,0 +1,54 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-05-15 18:14`"
+---
+- # intro:
+	- Quando il canale nella quale utente mette la password, non è sicuro Servono tecniche _One-time-password_ dove possono essere trasmesse in chiaro ma sono utilizzabili sono una volta O trasmetti la password crittata 
+		- _Crittografia simmetrica o asimmetrica_ 
+- # schema challenge-response 
+	- $U$ dichiara l'intenzione di accedere all'_host_ 
+	- Host seleziona una "challenge" e la manda a U 
+	- U computa la risposta alla challenge e la rimanda all'_host_ 
+		- Se risposta computata e risposta aspettata combaciano, allora entra 
+	- _One time password_
+	- Un esempio può essere l'accesso con lo _SPID_ usando il codice _OTP_(che poi sta per One Time Password).
+- # Crittografia simmetrica 
+	- Utente $U$ condivide segreto $K$ (password) con l'host
+	- $U$ dichiara l'intenzione di accedere 
+	- Host genera una stringa random $chal$ e la manda a U (e se la ricorda)
+	- U computa la risposta come $resp = C_{K}(chal)$ e la manda all'host 
+	- Host compara $chal$ con $D_{K}(resp)$
+	- Solo U può rispondere alla sfida con la risposta giusta, perché conosce la chiave K (che è la sua password) 
+- # cifratura asimmetrica
+	- Host tiene un file di tutte le chiavi pubbliche degli utenti 
+		- U dichiara intenzione 
+		- Host genera stringa $chal$ 
+		- U risponde  firmando la sfida con la sua chiave privata 
+			- $Resp = Sign(chal)$ 
+		- Host verifica la firma (usando la chiave pubblica che possiede)
+		- Il possesso di una propria firma digitale assicura l'autenticazione
+- # OTP con One-way Hash:
+	- Host genera un numero random $R$ per l'utente $U$
+	- Host calcola $x_0 = R$, $x_1 = f(x_0)$, $x_2 = f(x_1)$, ... , $x_{n} = f(x_{n-1})$ 
+		- dove $f$ è una funzione _hash one-way_ 
+	- U mantiene la lista dei numeri $x_0, x_1, ..., x_{n}$ mentre l'host mantiene solo il valore $x_{n+1}$ associato all'utente $U$
+	- U per autenticarsi manda il suo nome e il valore $x_{n}$ (in chiaro)
+	- Il sistema calcola $f(y)$ e lo confronta con il valore memorizzato di $x_{n+1}$
+	- Se sono uguali, U può accedere
+	- U cancella $x_{n}$ dalla sua lista e l'host sostituisce $x_{n+1}$ con $x_{n}$
+- # OTP nella pratica:
+	- Nella pratica quando si sta accedendo ad informazioni bancarie o carte di credito legate al proprio conto corrente esistono dei _token fisici_ 
+	- ![[Pasted image 20250612123642.png]]
+	- Con il codice generato che rimane valido solo per un determinato periodo di tempo.
+- # Strong Authentication:
+	- Combina due fattori dell' [[User Authentication]] :
+		- 1. **qualcosa che so**: password, PIN
+		- 2. **qualcosa che ho**: smart card, token
+		- 3. **qualcosa che sono**: impronta digitale, riconoscimento facciale
+	- Una combinazione dei primi 2 è la più comune, per esempio mettere prima il PIN della carta di credito e poi generare il codice OTP con il token.
+	- In questo modo si può avere una _autenticazione a 2 fattori_
+- # Link Utili:
+	- 
+

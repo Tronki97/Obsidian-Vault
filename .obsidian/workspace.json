@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a5547770b85590c6",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione Utente.md",
+                "file": "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Tecniche crittografiche per l'autenticazione.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Visione Utente"
-            }
-          },
-          {
-            "id": "988145a6322ac07a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione implementatore.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Visione implementatore"
+              "title": "Tecniche crittografiche per l'autenticazione"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -257,13 +232,28 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "988145a6322ac07a",
+  "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione Utente.md",
+    "Pasted image 20250612123642.png",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/User Authentication.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Tecniche crittografiche per l'autenticazione.md",
+    "Condivisione del segreto e Key Escrow.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
+    "Pasted image 20250612114848.png",
+    "Homepage.md",
+    "access control.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Sicurezza nei sistemi operativi.md",
+    "immagini/Pasted image 20250605122738.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione implementatore.md",
-    "Pasted image 20250611170020.png",
-    "Pasted image 20250611165746.png",
-    "Pasted image 20250611164929.png",
+    "immagini/Pasted image 20250611181343.png",
+    "immagini/Pasted image 20250611180940.png",
+    "immagini/Pasted image 20250611180321.png",
+    "immagini/Pasted image 20250611175922.png",
+    "immagini/Pasted image 20250611175504.png",
+    "immagini/Pasted image 20250611175309.png",
+    "immagini/Pasted image 20250611175111.png",
+    "immagini/Pasted image 20250611174859.png",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione Utente.md",
     "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/RAID.md",
@@ -273,30 +263,16 @@
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Working set.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Thrashing.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Memoria virtuale.md",
-    "Pasted image 20250611132814.png",
-    "Pasted image 20250611132519.png",
-    "Pasted image 20250611132409.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Allocazione della memoria.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
-    "Pasted image 20250611120617.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Grafo di Holt.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione risorse.md",
-    "Homepage.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
     "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Distribuzione invariante.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Comportamento asintotico delle catene di Markov.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Catene di Markov.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/vettori aleatori (bidimensionali) discreti.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/Vettori aleatori.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-    "Pasted image 20250605122738.png",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/tavola_normale.pdf",
-    "immagini/Pasted image 20250529110325.png",
-    "immagini/Pasted image 20250529120348.png",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/desktop.ini",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori",
     "Secondo Anno/Calcolo della probabilità e statistica/Introduzione/desktop.ini",

@@ -7,11 +7,11 @@ aliases:
   - tipo di un file
 data: "`2025-06-11 16:27`"
 ---
-- # File:
+- # File: ^1b4d31
 	- Entità atomica di assegnazione/gestione della [[Memoria secondaria]] 
 	- Collezione di info correlate.
 	- Da una vista logica uniforme alle info correlate
-	- ## Attributi:
+	- ## Attributi: ^87c711
 		- ### Nome:
 			- Stringa di caratteri che serve al S.O per rintracciare il file
 			- Può essere _case sensitive_
@@ -29,7 +29,7 @@ data: "`2025-06-11 16:27`"
 				- _Dalla estensione_:
 				- Utilizzando un attributo "tipo" associato al file nella directory
 				- _Magic number_.
-			- ### File speciali:
+			- ### File speciali: ^3bf413
 				- Senza dati, hanno solo info fatta da una coppia di indici per il kernel.
 				- Indica l’unità gestita dal device driver o la caratteristica del device.
 				- Vengono gestiti come file perché posso usare le stesse SYSCALL che uso per i file normali senza stare a crearne altre.
@@ -89,7 +89,7 @@ data: "`2025-06-11 16:27`"
 			- Si chiude il file e si libera la memoria allocata per esso.
 		- ### Cancellazione:
 			- Si rimuove il file dal sistema e si libera lo spazio occupato.
-- # Directory:
+- # Directory: ^889353
 	- Rappresenta un insieme di file anche se in molti sistemi le directory sono _file speciali_
 	- ## Operazioni:
 		- _Creare, cancellare, rinominare, aprire/chiudere, leggere, link/unlink_

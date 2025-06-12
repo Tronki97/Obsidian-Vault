@@ -29,5 +29,6 @@
   "ai-providers",
   "3d-graph",
   "github-copilot",
-  "dataview-serializer"
+  "dataview-serializer",
+  "obsidian-image-layouts"
 ]

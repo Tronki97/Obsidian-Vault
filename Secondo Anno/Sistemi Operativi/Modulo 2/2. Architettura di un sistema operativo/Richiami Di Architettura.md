@@ -139,7 +139,7 @@ data: "`2025-02-22 18:15`"
 					+ Il completamento dell'operazione viene segnalato attraverso l'interrupt.
 				+ Al ricevimento dell'interrupt, la CPU copia i dati dal buffer locale del controller alla memoria.
 				+ L'input segnala la fine dell'operazione di IO.
-+ # Direct Memory Access (DMA)
++ # Direct Memory Access (DMA) ^11bc48
 	+ IL SO:
 		+ Attiva l'operazione di IO specificando l'indirizzo in memoria di destinazione (input) o di provenienza (output) dei dati.
 		+ Il controller del dispositivo prende (output) o pone (input) i dati per l'operazione di IO direttamente dalla memoria generale.
