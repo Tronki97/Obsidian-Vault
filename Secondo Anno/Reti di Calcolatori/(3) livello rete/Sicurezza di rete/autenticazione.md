@@ -13,6 +13,7 @@ data: "`2025-02-24 11:48`"
 	- un attaccante si finge un altro utente con il quale si è convinti di star parlando.
 	- piazzandosi in mezzo fa passare la R e rispedisce indietro la $K^{-}_{T}(R)$ e poi le verrà richiesta la chiave pubblica e lei manderà la sua chiave pubblica che però è diversa da quella di Alice.
 	- poi si prosegue guardando il messaggio decriptandolo leggendolo e facendolo passare ri-criptato nuovamente come se non fosse mai stato intercettato.
+	- ![[Untitled 1.webp|700]]
 	- ## Problema:
 		- serve una garanzia che la chiave pubblica che viene ricevuta sia effettivamente quella dell’interlocutore col quale si vuole parlare.
 	- ## Soluzione:

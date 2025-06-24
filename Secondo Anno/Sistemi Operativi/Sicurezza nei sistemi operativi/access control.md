@@ -1,7 +1,11 @@
 ---
-tags:
-  - TODO
-aliases: 
+tags: []
+aliases:
+  - ACL
+  - capability
+  - TCB
+  - DAC matrix
+  - matrice DAC
 data: "`2025-05-15 18:14`"
 ---
 - # Obiettivi:
@@ -117,7 +121,7 @@ data: "`2025-05-15 18:14`"
 			- User-id: 501
 			- Group-id: 1000
 - # Possesso dei file:
-	- Ogni processo creato da un utente eredità il suo user id e il group id e li usa come propri real-user id e real group id 
+	- Ogni processo creato da un utente eredita il suo user id e il group id e li usa come propri real-user id e real group id 
 	- Quando un processo crea un file, il suo _owner e gruppo_ vengono settati ai _real-user-id_ e _real-group-id_ del processo che li crea. 
 	- l'owner di un file può essere modificato con `chown newusername file(s)` 
 	- _real-user-id, real-group-id_: 
@@ -138,7 +142,7 @@ data: "`2025-05-15 18:14`"
 				- `O_RDONLY`: read only
 				- `O_WRONLY`: write only
 				- `O_RDWR`: read and write
-			- `open()` controlla che il nome del file esista che l processo abbia i permessi di accesso richiesti e ritorna un intero chiamato _file descriptor_ che è un indice della  tabella di open file descriptor del processo 
+			- `open()` controlla che il nome del file esista che il processo abbia i permessi di accesso richiesti e ritorna un intero chiamato _file descriptor_ che è un indice della tabella di open file descriptor del processo 
 			- Il _file descriptor table_ non è altro che una lista di _capabilities_ che corrispondono ai file che possono essere acceduti dal processo 
 				- Un processo può usare una capability puntandola nel file descriptor table, ma non può modificarla 
 			- `Open()` deve fare l'_autenticazione_ 

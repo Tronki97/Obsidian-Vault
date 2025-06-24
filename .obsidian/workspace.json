@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduling.md",
+                "file": "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,83 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Scheduling"
-            }
-          },
-          {
-            "id": "661c075159d5d635",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo/Richiami Di Architettura.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Richiami Di Architettura"
-            }
-          },
-          {
-            "id": "5919f631ae5264c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Scheduler"
-            }
-          },
-          {
-            "id": "d5bac74b57d85cab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Tecniche crittografiche per l'autenticazione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Tecniche crittografiche per l'autenticazione"
+              "title": "Protocolli di rete organizzati a livelli"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -136,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "compattazione",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -305,44 +232,44 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "5919f631ae5264c8",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo/Richiami Di Architettura.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Allocazione della memoria.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduling.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/User Authentication.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
+    "Secondo Anno/Reti di Calcolatori/Architettura protocolli di internet.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
+    "Untitled 2.webp",
+    "Untitled-1.webp",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza in rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Crittografia.md",
+    "Untitled 1.webp",
+    "Untitled.webp",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Infrastruttura e collegamenti di rete.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Scheda di rete.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/reti a commutazione di circuito.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Rete a commutazione di pacchetto.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Protocollo ARP e RARP.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC-address.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Livello MAC nelle reti wireless.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Intro al corso di Reti.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Canali di comunicazione della rete.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Componenti di rete.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+    "Homepage.md",
     "immagini/Pasted image 20250612114848.png",
-    "Condivisione del segreto e Key Escrow.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/access control.md",
     "immagini/Pasted image 20250612131359.png",
     "immagini/Pasted image 20250612130826.png",
     "immagini/Pasted image 20250612130425.png",
     "immagini/Pasted image 20250612125957.png",
     "immagini/Pasted image 20250612125810.png",
-    "immagini/Pasted image 20250612125637.png",
-    "immagini/Pasted image 20250612125609.png",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Tecniche crittografiche per l'autenticazione.md",
-    "immagini/Pasted image 20250612123642.png",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
-    "Homepage.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Sicurezza nei sistemi operativi.md",
-    "immagini/Pasted image 20250605122738.png",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione implementatore.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione Utente.md",
-    "Secondo Anno/Sistemi Operativi/Introduzione ai Sistemi Operativi.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/RAID.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/Disk scheduling.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/Memoria secondaria.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/Gestione IO.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Working set.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Thrashing.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Memoria virtuale.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Grafo di Holt.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione risorse.md",
-    "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/tavola_normale.pdf",

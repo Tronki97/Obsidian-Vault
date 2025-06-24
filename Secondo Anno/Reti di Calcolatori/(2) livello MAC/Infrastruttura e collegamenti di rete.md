@@ -4,6 +4,7 @@ aliases:
   - completamente connesso
   - minimamente connesso
   - partizione di rete
+  - broadcast
 ---
 - ## Collegamenti: 
 	- mezzo di trasmissione di rete tra due calcolatori:
@@ -31,4 +32,14 @@ aliases:
 			- c'è almeno un gruppo di nodi connessi tra di loro che sono separati da altri gruppi di nodi sempre connessi tra di loro.
 			- può verificarsi quando uno schema _minimamente connesso_ perde un collegamento. 
 			- ![[Pasted image 20240927131326.png]]
-- 
+- # Canali di comunicazione della rete
+	- ## Canale ad acceso multiplo (Broadcast):
+		- Tutti i dispositivi comunicano sullo stesso canale
+		- Bisogna decidere un _arbitraggio_ (chi comunica e quando)
+		- Richiede indirizzamento, ovvero decidere il destinatario della trasmissione.
+			- Indirizzi univoci per mittente e destinatari/o 
+			- [[MAC-address|indirizzo MAC]] della [[Scheda di rete]] 
+		- ES: 
+			- [[Mezzo fisico di trasmissione#^ddbf07||Wi-Fi]] e cavo [[Topologia di rete#^0240d4||Ethernet]]
+				- però con questi non è possibile implementare il protocollo [[Topologia di rete#^4bad82||token ring]] 
+		

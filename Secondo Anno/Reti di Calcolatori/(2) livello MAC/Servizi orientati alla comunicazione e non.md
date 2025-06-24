@@ -1,7 +1,7 @@
 ---
-tags: []
+tags: 
+data:
 ---
-
 - Un servizio è ciò che si può realizzare per l'utente che può poi utilizzare. Quindi ciò che ci puoi fare con il trasferimento dei dati.
 - Nelle [[Rete a commutazione di pacchetto||Reti a commutazione di pacchetto]] ad ogni passo intermedio i dati vengono se-instradati verso la direzione giusta dai _router_ 
 - è possibile che i pacchetti dati trasmessi vengano persi oppure arrivino non in ordine.

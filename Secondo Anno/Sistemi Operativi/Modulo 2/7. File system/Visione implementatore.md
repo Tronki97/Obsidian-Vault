@@ -1,8 +1,12 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - MBR
+  - allocazione dello spazio a blocchi
+  - FAT
+  - allocazione indicizzata
+  - gestione dello spazio libero
+  - controllo di coerenza
 data: "`2025-04-11 10:48`"
 ---
 - # Organizzazione del disco:

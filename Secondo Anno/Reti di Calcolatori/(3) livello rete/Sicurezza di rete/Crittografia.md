@@ -1,0 +1,36 @@
+---
+tags: 
+aliases:
+  - chiave simmetrica
+  - chiave asimmetrica
+  - RSA
+data: "`2025-06-24 18:28`"
+---
+- # A chiave simmetrica:
+	-  Alice e Bob condividono la _stessa chiave_ (detta _chiave simmetrica_). Dato un messaggio $m$ e la chiave $K_{S}$:
+		- Alice calcola $K_{S}(m)$, ovvero crittografa il messaggio con la chiave, e lo spedisce sul canale di comunicazione.
+		- Bob decifra il messaggio usando la stessa chiave $\to$ $K_{S}(K_{S}(m))=m$
+	- Un protocollo che sfrutta questo tipo di crittografia è $DES, 1993$
+		- Chiave a $56$ bit, dati suddivisi in blocchi da $64$ bit.
+		- Al giorno d'oggi si potrebbe bucare con un _brute force_ 
+- # A chiave asimmetrica:
+	- Detta anche _a chiave pubblica_, esistono 2 chiavi:
+		- Quella _pubblica_ che tutti conoscono
+		- Quella _privata_ che conosce solo chi la genera.
+	- ![[Untitled.webp|700]]
+- # RSA:
+	- Sfrutta l' [[Aritmetica modulare]], perché ogni tipo di messaggio criptato o non può essere rappresentato con dei numeri, quindi criptare quel messaggio è criptare quel numero.
+	- ## Creare una coppia di chiavi:
+		- Si scelgono 2 numeri primi molto grandi $p$ e $q$ (es. $1024$ bit l'uno)
+		- $n=pq$  $z=(p-1)(q-1)$
+		- Si sceglie un $e< n$ tale che $e$ e $z$ sono [coprimi](https://it.wikipedia.org/wiki/Interi_coprimi).
+		- Si sceglie $d$ tale che $ed -1$ è esattamente divisibile per $z$
+		- $K^{+}_{N}=(n,e)$    $K^{-}_{B}=(n,d)$
+	- ## Criptare e decriptare:
+		- $c=m^{e} \ \ mod \ \ n$
+		- $m=c^{d}\ \ mod \ \ n$
+		- Criptare con la pubblica e decriptare con quella privata equivale a fare l'operazione speculare
+	- Questo algoritmo risulta sicuro siccome trovare la chiave privata da quella pubblica $(n,e)$ comporta scomporre $n$ in fattori primi senza conoscere $p,q$ ma $n$ è un numero molto grande.
+	- 
+- # Link Utili:
+	- 

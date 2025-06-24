@@ -33,7 +33,7 @@ data: "`2025-04-06 22:52`"
 	- Detto anche _algoritmo dell’ascensore_
 	- Ad ogni istante la testina è associata ad una direzione.
 	- La testina si sposta ad ogni richiesta in quella direzione.
-	- Finite le richieste con quella direzione essa viene invertita e si eseguono quelle richiete.
+	- Finite le richieste con quella direzione essa viene invertita e si eseguono quelle richieste.
 	- ### Caratteristiche:
 		- Efficiente
 		- Tempo medio di accesso non omogeneo in quanto vengono privilegiate le tracce centrali.

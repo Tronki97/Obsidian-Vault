@@ -53,7 +53,7 @@ data: "`2025-02-22 18:15`"
 		+ Il mascheramento esiste perché ci sono dei momenti in cui non si vuole gestire il coordinamento di accesso a delle risorse condivise.
 		+ Quando siamo in un sistema multiprocessore il mascheramento viene fatto per ogni processore.
 			+ Fatto per non avere interrupt dello stesso tipo.
-			+ Per fare mutua esclusione in sistemi multiprocessore servono gli spin-lock.
+			+ Per fare mutua esclusione in sistemi multiprocessore servono gli _spin-lock_.
 + # Interrupt HW (Interrupt Normali)
 	+ Eventi asincroni che possono avvenire in qualsiasi momento.
 	+ Ad esempio:
@@ -119,7 +119,7 @@ data: "`2025-02-22 18:15`"
 		+ Oppure si possono annidare l'esecuzioni degli interrupt.
 			+ Si gestiscono prima quelli con priorità maggiori e poi quelli con priorità minori.
 			+ Approccio più complesso in quanto richiedono stack separati.
-				+ Lo stack di valutazione dei processi è una struttura dati usati per gestire le chiamate a funzione e le chiamate a funzione nidificate.
+				+ Lo _stack di valutazione_ dei processi è una struttura dati usati per gestire le chiamate a funzione e le chiamate a funzione nidificate.
 					+ Record di attivazione.
 					+ Quando c'è un interruzione lo stato dello stack deve rimanere invariato.
 				+ Quando si nidificano gli interrupt mi serve un altro stack separato.
@@ -141,7 +141,7 @@ data: "`2025-02-22 18:15`"
 				+ L'input segnala la fine dell'operazione di IO.
 + # Direct Memory Access (DMA) ^11bc48
 	+ IL SO:
-		+ Attiva l'operazione di IO specificando l'indirizzo in memoria di destinazione (input) o di provenienza (output) dei dati.
+		+ Attiva l'operazione di IO specificando l'indirizzo in memoria fisica di destinazione (input) o di provenienza (output) dei dati.
 		+ Il controller del dispositivo prende (output) o pone (input) i dati per l'operazione di IO direttamente dalla memoria generale.
 		+ L'interrupt specifica la terminazione dell'operazione.
 + # Memoria Centrale (RAM)

@@ -12,7 +12,7 @@ data: "`2025-03-13 15:46`"
 - # Detection and recovery:
 	- Si mantiene aggiornato il grafo di Holt con tutti gli assegnamenti, le kill dei [[Concorrenza#^68dcd8|processi]] e le richieste di [[Gestione risorse#^d3013b|risorse]].
 	- ## Teorema:
-		- Se le risorse rispettano le [[Gestione risorse#^c336f6|condizioni di deadlock]] esso avviene sse il [[Gestione risorse#^6ffbfd|grafo di Holt]] contiene un ciclo.
+		- Se le risorse rispettano le [[Gestione risorse#^c336f6|condizioni di deadlock]] esso avviene sse il [[Grafo di Holt]] contiene un ciclo.
 	- ## Dim:
 		- Utilizzo un _grafo Wait-For_ dove i nodi risorsa vengono eliminati e gli archi appropriati sono collassati.
 		- ![[Pasted image 20250307113501.png|500]]
@@ -84,17 +84,17 @@ data: "`2025-03-13 15:46`"
 			- Una volte che tutte le richieste sono state accolte il banchiere deve garantire la restituzione in un tempo finito.
 			- #### Parametri:
 				- $N$: numero di clienti.
-				- $C$: capitale iniziale
+				- $IC$: capitale iniziale
 				- $C_{i}$ quanto il cliente $i$ può chiedere al massimo.
-				- $P_{i}$ denaro dato al cliente.
+				- $p_{i}$ denaro dato al cliente.
 				- $n_{i}=c_{i}-p_{i}$ credito residuo del cliente $i$
-				- $COH=C-\sum\limits_{i=1,...,N}P_{i}$ quantità di soldi che ha il banchiere al momento. 
+				- $COH=IC-\sum\limits_{i=1,...,N}p_{i}$ quantità di soldi che ha il banchiere al momento. 
 			- #### Stato SAFE:
-				- Sequenza che consente di valutare se la situazione attuale può consetire a tutti i processi di terminare.
+				- Sequenza che consente di valutare se la situazione attuale può consentire a tutti i processi di terminare.
 				- Dato il $COH$ ce ne deve essere almeno 1 con $n_{i}=0$ quindi permettendo al processo di terminare e restituire le risorse con le quali soddisfare altri processi.
 				- Si ha inoltre $s$ una [[Calcolo combinatorio|permutazione]] dei valori $1,...,N$ con $s[i]$ la posizione $i$ nella sequenza.
 				- Inoltre si ha un vettore $avail$ calcolato in questo modo:
-					- $avail[i]=COH$
+					- $avail[1]=COH$
 					- $avail[j+1]=avail[j] + p_{s(j)}$ con $j=1,...,N-1$
 				- In conclusione uno stato si definisce _SAFE_ se vale la condizione:
 					- $$n_{s(j)}\le avail[j]\ \ \ \ \ j=1,...,N$$
@@ -105,14 +105,14 @@ data: "`2025-03-13 15:46`"
 			- I diversi tipi di valute rappresentano le varie [[Gestione risorse#^e7531f||classi di risorse]].
 			- #### Parametri:
 				- $N$ numero clienti 
-				- $\overline{C}$ vettore dei capitali iniziali per ogni valuta.
-				- $\overline{c_{i}}$ …
-				- $\overline{p_{i}}$ …
-				- $\overline{n_{i}}= \overline{c_{i}}-\overline{p_{i}}$ … per ogni valuta.
-				- $\overline{COH}=\overline{C}-\sum\limits_{i=1,...,N}\overline{p_{i}}$ … per ogni valuta.
+				- $\overline{IC}$ vettore dei capitali iniziali per ogni valuta.
+				- $\overline{c_{i}}$ capitale massimo del cliente $i$ per ogni valuta.
+				- $\overline{p_{i}}$ capitale attualmente allocato al cliente $i$ per ogni valuta.
+				- $\overline{n_{i}}= \overline{c_{i}}-\overline{p_{i}}$ credito residuo del cliente $i$ per ogni valuta.
+				- $\overline{COH}=\overline{IC}-\sum\limits_{i=1,...,N}\overline{p_{i}}$ quantità di soldi che ha il banchiere al momento per ogni valuta.
 			- #### Stato SAFE:
 				- Si ha una sequenza $s$ come prima e un vettore $\overline{avail}$ calcolato in questo modo:
-					- $\overline{avail[i]}=\overline{COH}$
+					- $\overline{avail[1]}=\overline{COH}$
 					- $\overline{avail[j+1]}=\overline{avail[j]} + \overline{p_{s(j)}}$ con $j=1,...,N-1$
 				- Uno stato si definisce _SAFE_ se vale la condizione:
 					- $$n_{s(j)}\le \overline{avail[j]}\ \ \ \ \ j=1,...,N$$

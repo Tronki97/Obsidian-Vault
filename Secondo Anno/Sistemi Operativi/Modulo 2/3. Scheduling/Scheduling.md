@@ -81,7 +81,7 @@ data: "`2025-03-08 17:39`"
 				- Viene interfacciato come se fosse un’unità I/O.
 		- ### ES:
 			- Tre processi: $P_{1},P_{2},P_{3}$
-			- PCU burst: $P_{1}=10+14, P_{2}=6+4, P_{3}=6$
+			- CPU burst: $P_{1}=10+14, P_{2}=6+4, P_{3}=6$
 			- Quanto di tempo: $4$
 			- Tempo medio di turnaround: $(40+26+20)/3=28.66ms$
 			- Tempo medio di attesa: $(16+16+16)/3=15.33ms$
