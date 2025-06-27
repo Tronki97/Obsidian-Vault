@@ -1,0 +1,41 @@
+---
+tags: 
+aliases:
+  - client/server
+  - peer to peer
+  - p2p
+data: "`2025-06-26 11:11`"
+---
+- # Modelli architetturali:
+	- ## Client/server:
+		- i client spediscono richieste di servizio, i server sono host sui quali sono in esecuzione i servizi che soddisfano le richieste
+		- I _server_ hanno di solito IP permanenti e sono sempre attivi per garantire i loro servizi.
+		- I _client_ hanno IP dinamici e si collegano in maniera intermittente con il server quando hanno bisogno di un servizio.
+		- La comunicazione tra due client è mediata da un server
+	- ## peer to peer:
+		- tutti gli host sono contemporaneamente sia client che server
+		- ogni host cerca di soddisfare le richieste ricevute e agisce da client quando spedisce ad altri host delle richieste
+		- è un'architettura scalabile in quanto l'aumento dei peer aumenta sia la capacità del servizio che la domanda.
+	- I vari processi possono essere _Client_ che inizializzano la comunicazione e _server_ che aspettano di essere contattati. Questi processi mandano e ricevono messaggi dai propri [[Livello trasporto#^297138|socket]].
+- # Protocolli:
+	- gestiscono l’invio e la ricezione di richieste e risposte, definendo i campi dei vari messaggi e il significato delle informazioni che è necessario includere
+	- ## Aperti:
+		- standardizzati, documentati e pubblicamente disponibili, permettono interoperabilità tra diverse implementazioni e sistemi (es. [[HTTP]] e SMTP)
+	- ## Proprietari:
+		- sviluppati e controllati da specifiche aziende o entità e non standardizzati ma relegati a uno specifico servizio proprietario.
+- # Cenni HTTP:
+	- è un protocollo stateless, le cui connessioni possono essere:
+		- ## Persistenti:
+			- Si possono inviare molti oggetti sulla stessa connessione [[Livello trasporto#^157bc5|TCP]]
+			- Rimane aperto anche dopo la risposta del server.
+			- Se il client non chiude la connessione essa rimane pendente causando _problemi di carico_.
+		- ## Non-persistenti:
+			- Massimo un oggetto inviato per connessione [[Livello trasporto#^157bc5|TCP]].
+			- Il tempo di risposta è 2 RTT (round trip time, tempo di andata e ritorno) + il tempo di trasmissione dell'oggetto.
+			- Sottopone il [[Sistema operativo]] a un carico elevato date le numerose aperture e chiusure delle connessioni. 
+- # Cookies:
+	- Piccoli file di testo che vengono inviati dal server al client e memorizzati localmente che servono a riconoscere un client, è un modo per rendere [[HTTP]] stateful.
+	- Sono salvati lato utente e contengono: autorizzazioni, carrelli, stato della connessione...
+	- ![[Untitled 3.webp|600]]
+- # Link Utili:
+	- 

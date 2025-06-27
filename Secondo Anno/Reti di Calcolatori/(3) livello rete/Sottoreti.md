@@ -8,8 +8,8 @@ aliases:
 data: "`2024-11-06 13:11`"
 ---
 - # Argomento:
-	- avere una sottorete vuol dire sotto-dividere internamente una rete, rubando una parte di bit dalla parte che sarebbe dell’host number. 
-	- per fare questa cosa si usa la Netmask
+	- avere una sottorete vuol dire sotto-dividere internamente una rete, rubando una parte di bit dalla parte che sarebbe dell’ [[Indirizzamento IPv4#^4b558e|host number]]. 
+	- per fare questa cosa si usa la _Netmask_
 - # Netmask: ^430c89
 	- cominciano sempre con un 1 a destra o a sinistra ed appena il numero cambia da 0 a 1 o viceversa tutti quelli successivi sono uguali.
 	- Ogni sottorete necessita del suo router.
@@ -19,7 +19,7 @@ data: "`2024-11-06 13:11`"
 	- quindi la parte dei bit che viene rubato è chiamata _sottorete_ 
 	- per capire da quale bit la maschera inizia a rubare bisogna guardare la [[Indirizzamento IPv4#^c84a48|classe di rete]], 
 	- necessita di un indirizzo IP per poter essere definita
-- # Classless inter domain routing:
+- # Classless interdomain routing:
 	- un modo semplice per rappresentare una sottorete.
 	- mettere un simbolo e un numero per dire che si sta parlando di una sottorete.
 		- _inserisci esempio_.
@@ -32,12 +32,12 @@ data: "`2024-11-06 13:11`"
 - # Esercizio:
 	- ![[Pasted image 20241113151121.png]]
 		- 1) so che la rete a disposizione è : $130.136 \ \ \ / 16$ ovvero ho a disposizione tutta la rete.
-		- 2) parto dalla sottorete più bassa con il più grande numero di host. (IP2-B)
+		- 2) parto dalla sottorete più bassa con il più grande numero di host. _(IP2-B)_
 			- devo allocare 140 host quindi mi servono 256-2 spazi (siccome 128 non bastano) ovvero 8 bit (l’ultimo byte) 
 			- Di conseguenza il terzo byte diventa la sottorete regalando tutti quei bit rendendo la rete $/24$ .
 			- quindi tutti gli host vanno da $[130.136.0.1- 130.136.0.254]$ (compreso il router che è l’ultimo) 
 			- risulta infine che sono allocati 140 indirizzi lasciandone 114 non utilizzati.
-		- 3) metto giù la sottorete IP2-A
+		- 3) metto giù la sottorete _IP2-A_
 			- richiede 120 host quindi bastano 128-2 spazi (7 bit) 
 				- una domanda da farsi è se mai verranno aggiunti altri host in futuro e in quel caso si utilizzano già preventivamente un bit in più.
 			- visto che necessito solo di 7 bit il bit inutilizzato va alla maschera di sottorete rendendo la rete $/ 25$
@@ -50,6 +50,8 @@ data: "`2024-11-06 13:11`"
 		- 5) progetto la rete IP1:
 			- contiene 48 host
 			- necessita di 64 spazi quindi 6 bit di host con una subnet mask di 10 bit rendendola di tipo $/ 26$
-			- 
+		- 6) progetto la rete IP3:
+			- contiene 4 host
+			- necessita di 8 spazi quindi 3 bit di host con una subnet mask di 13 bit rendendola di tipo $/ 29$ 
 - # Link Utili:
 	- 

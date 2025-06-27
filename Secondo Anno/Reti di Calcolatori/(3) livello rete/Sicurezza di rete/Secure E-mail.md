@@ -16,7 +16,7 @@ data: "`2025-02-24 13:42`"
 	- per garantire l’[[autenticazione]] di rete viene aggiunta, al messaggio, la firma digitale come l’Hash del messaggio criptato con la chiave privata di Alice ($K_{A}^{-}$)
 		- ![[Pasted image 20250224134554.png]]
 - # completo
-	- ![[Untitled 2.webp]]
+	- ![[Untitled 2 1.webp]]
 		- è un unione di procedure: inviati $K_{S}(K_{A}^{-}(H(m))), K_{S}(m), K_{B}^{+}(K_{S})$
 - Tutto quello appena visto è anche detto _PEC_ alla quale si può aggiungere anche una _marca temporale_ la quale dice il momento in cui il server di invio ha ricevuto quel messaggio per inviarlo via posta; anche questa marca è fornita da una _CA_.
 - # Link Utili:

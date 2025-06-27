@@ -16,8 +16,19 @@ data: "`2024-11-27 13:28`"
 - # DEF: ^3671f0
 	- usa i protocolli TCP(_transmission control protocol_) e UDP(_user data protocol_)
 	- si correggono eventuali incertezze per quanto riguarda dei pacchetti che potrebbero andare persi o arrivare disordinati.
+	- Deve garantire:
+		- _Integrità dei dati_:
+			- i dati devono arrivare integri e senza errori.
+		- _Timing_:
+			- Alcune app necessitano di un delay limitato per funzionare bene.
+		- _throughput_:
+			- Deve essere minimo per garantire una buona esperienza utente.
+		- _sicurezza_:
+			- Serve crittografare i dati, mantenere l'integrità...
 - # UDP: ^bd8258
 	- la rete continua a funzionare in maniera _connectionless_ quindi non affidabile.
+	- Non stabilisce una connessione tra mittente e destinatario quindi non si può sapere il se e il perché un pacchetto non è arrivato.
+	- Però ha bassissima latenza visto che non c'è bisogno di creare la connessione, mandare gli ACK e controllare i flussi e congestione.
 - # TCP: ^157bc5
 	- ## Affidabilità:
 		- rende la rete affidabile _End-to-End_ ovvero da qualsiasi punto verso qualsiasi destinazione connessa alla rete 
@@ -38,7 +49,8 @@ data: "`2024-11-27 13:28`"
 		- ## _sliding window_
 			- serve per capire la situazione dei router lungo la strada tra mittente e destinatario quanto siano congestionati.
 			- il mittente manda un pacchetto sonda e in base a quanto ci mette per ricevere l’ack manda proporzionalmente una certa quantità di pacchetti 
-				- la finestra parte da una granddezza di 1 se il pacchetto che invia riceve l’ack duplico la finestra e quindi il numero di pacchetti inviati.
+				- la finestra parte da una grandezza di 1 se il pacchetto che invia riceve l’ack duplico la finestra e quindi il numero di pacchetti inviati.
+					- Questo è anche chiamato _slow start_.
 				- appena manca un ack la dimensione della finestra torna a 1.
 				- invece per quanto riguarda le reti senza fili la grandezza della finestra viene solo dimezzata perché la causa di queste perdite di ack potrebbero non essere legate ad una congestione del router ma, per esempio, ad una interferenza.
 			- facendo un grafico sulla sliding window che rappresenta l’andamento del flusso si ottiene un andamento a _dente di sega_ e il valore medio è il valore medio della derivata del segnale.
@@ -58,5 +70,6 @@ data: "`2024-11-27 13:28`"
 		- si possono aprire comunicazioni fintanto che il buffer ha abbastanza memoria libera da poter allocare per creare una nuova comunicazione.
 		- un possibile attacco consiste nello sfruttare la finestra di apertura della sessione quindi continuando a tenere le risorse allocate.
 			- un rimedio potrebbe essere l’implementazione di un garbage collection  
+	- Per rendere TCP sicuro si usa [[Secure socket layer (SSL)|SSL]] 
 - # Link Utili:
 	- 

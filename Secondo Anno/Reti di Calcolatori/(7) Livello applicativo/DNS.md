@@ -1,8 +1,9 @@
 ---
-tags: []
+tags: 
 aliases:
   - DNS iterativo
   - DNS riscorsivo
+  - record DNS
 data: "`2024-11-29 15:33`"
 ---
 - # intro:
@@ -25,7 +26,7 @@ data: "`2024-11-29 15:33`"
 		- ### DNS ricorsivo:
 			- il client manda la richiesta al server DNS e il server DNS si occupa di fare tutte le richieste necessarie per trovare l'indirizzo IP.
 			- in questo modo si alleggerisce il carico del client.
-			- ![[Untitled 2.webp|350]]
+			- ![[Untitled 4.webp|350]]
 	- ## Record DNS:
 		- Visto che il DNS è fondamentalmente un database distribuito con i nomi e gli indirizzi IP associati, ci sono diversi tipi di record DNS che sono chiamati RR(_record di risorse_).
 		- ### I più comuni sono:
@@ -41,10 +42,21 @@ data: "`2024-11-29 15:33`"
 			- _NS_ (Name Server Record): specifica il server DNS autoritativo per quel dominio.
 				- Name: nome del dominio (es: `example.com`)
 				- Value: nome dell’host del server autoritativo del dominio.
+		- ### Esempio di inserimento:
+			- Il registrar DNS (organizzazione che gestisce la registrazione dei nomi di dominio) inserisce due RR nel server del _TLD.com_ per il _dominio networkuptopia.com_:
+				- 1. Un record _NS_ collega il dominio al nome del server DNS autoritativo `ns.networkuptopia.com`.
+					- RR: `networkuptopia.com`, `dns1.networkuptopia.com`.
+				- 2. Un record _A_ che collega il nome del server DNS autoritativo con l'indirizzo IP corrispondente 
+					- nel RR: `dns1.networkuptopia.com`, `212.212.212.1`
+			- Il registrar DNS configura poi i propri server DNS autoritativi, creando un record _A_ in uno di quei server che mappa [www.networkuptopia.com](http://www.networkuptopia.com/) a un indirizzo IP specifico
+			- Infine si crea anche un record _MX_ per [networkuptopia.com](http://www.networkuptopia.com/) che specifica il server di posta associato al dominio, sempre su quel server autoritativo.
 - # Attacchi al DNS:
 	- DNS poisoning: 
 		- _cache poisoning_: si riempie la cache del server con informazioni sbagliate.
-- 
+	- Man-in-the-middle:
+		- si fa credere al client che il server DNS sia quello giusto ma in realtà è un server fasullo.
+	- _DDoS_:
+		- Si bombarda un server DNS di richieste inutili e facili da spedire rendendo inaccessibile quel server per il traffico legittimo.
 - # ES:
 	- ![[Pasted image 20241129154611.png]]
 - # Importante:

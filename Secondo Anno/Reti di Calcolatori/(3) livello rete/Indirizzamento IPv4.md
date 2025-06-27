@@ -8,14 +8,18 @@ aliases:
   - classe di rete
   - indirizzo statico
   - indirizzo dinamico
+  - classe A
+  - classe B
+  - classe C
 data: "`2024-10-25 13:24`"
 ---
 - # Indirizzo: ^789112
 	- un indirizzo IP viene associato ad una sola [[Scheda di rete]] 
 	- è possibile che però che una scheda di rete possa cambiare indirizzo IP, quando vengono scollegate e ricollegate alla rete. 
+	- Per quanto riguarda la privacy, il tipo di IP usato non inficia su essa. 
 	- ## Statico:
-		- indirizzo che rimane_ sempre quello anche dopo una disconnessione_. 
-		- operazione fatta dal router che rileva il mac-address della scheda e ci associa sempre lo stesso indirizzo.
+		- indirizzo che rimane _sempre quello anche dopo una disconnessione_. 
+		- operazione fatta dal router che rileva il [[MAC-address]] della scheda e ci associa sempre lo stesso indirizzo.
 		- ### Conseguenze 
 			- non è ottimale usare solo questo a causa di alcune macchine che stanno poco tempo connesse a internet
 			- Utile invece per i _server_. 
@@ -24,14 +28,13 @@ data: "`2024-10-25 13:24`"
 		- può cambiare indirizzo dopo una disconnessione anche breve. 
 		- ### Conseguenze:
 			- utile per macchine che non stanno sempre collegate alla rete. Come i Portatili
-	- per quanto riguarda la privacy non cambia il tipo di IP usato 
 - # IPv4 ^afb979
 	- è composto da $32$ bit = sequenza di 4 valori decimali a _8 bit l’uno_ separati da un punto ed ogni valore è compreso tra $[0-255]$ come:
 		- $130.136.25.1$
 	- ed è composto da:
 		- ## Network number:
 			- numero della rete IP alla quale appartiene la scheda
-		- ## Host number:
+		- ## Host number: ^4b558e
 			- numero dell’interfaccia di rete.
 - # Classi di rete: ^c84a48
 	- ## Classe A: ^90280c
@@ -41,7 +44,7 @@ data: "`2024-10-25 13:24`"
 			- $83.1.2.3$ è un esempio. 
 		- ### utilizzi IRL
 			- Utilizzato dai servizi di telecomunicazioni perché si possono rappresentare circa $16$ milioni di host 
-	- ## Classe B:
+	- ## Classe B: ^5f0a49
 		- se inizia con $10$ e il _Network number_ è composto da 2 byte (16 bit)
 		- $2^{14}$ reti rappresentabili a partire da $128.0$ a $191.255$
 		- _host number_ rappresentabili: $2^{16}$ ed è sempre rappresentato dagli ultimi due byte dell’indirizzo.
@@ -49,6 +52,7 @@ data: "`2024-10-25 13:24`"
 		- se Inizia con $110$ e occupa $3$ byte 
 		- $2^{21}$ reti rappresentabili.
 			- da $192.0.0$ a $223.255.255$ 
-		- $256$ host rappresentabili _meno gli host $0$ e $1$_ quindi un totale di $254$ 
+		- $256$ host rappresentabili _meno gli host $0$ e $1$ _ quindi un totale di $254$ 
+	- ![[Untitled 5.webp]]
 - # Link Utili:
 	- 

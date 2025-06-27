@@ -9,7 +9,7 @@ data: "`2024-11-20 14:04`"
 	- il router quando riceve un pacchetto da mandare all’interno della [[Sottoreti|sottorete]] deve sapere a chi mandare il pacchetto.
 	- per fare ciò il router deve conoscere l’[[MAC-address|indirizzo MAC]] della macchina a cui deve mandare il pacchetto.
 		- e quindi mandare il pacchetto a livello MAC che se ne occuperà.
-		- se chiede di mandarlo in broadcast bisogna scrivere il MAC address di broadcast che quindi è associato a tutte le macchine che tutte riconoscono come il loro: 
+		- se chiede di mandarlo in broadcast bisogna scrivere il [[MAC-address]] di broadcast che quindi è associato a tutte le macchine che tutte riconoscono come il loro: 
 			- `FF:FF:FF:FF:FF:FF`
 			-  e se è broadcast la macchina non deve mandare _l’ack_ al mittente.
 	- il router per fare ciò usa il protocollo _ARP_ e _RARP_.
@@ -31,7 +31,7 @@ data: "`2024-11-20 14:04`"
 			- che consiste nel mandare un pacchetto ARP con l’indirizzo MAC di un’altra macchina ma con lo stesso IP 
 			- grazie all’ARP si nota che l’indirizzo IP è già associato ad un altro MAC e quindi si capisce che c’è qualcosa che non va e quindi si può bloccare il pacchetto.
 - # RARP:
-	- Reverse Address Resolution Protocol
+	- _Reverse Address Resolution Protocol_
 	- permette di associare un indirizzo MAC ad un indirizzo IP.
 	- Funziona in maniera analoga all’ARP ma al contrario.
 - # Considerazioni:

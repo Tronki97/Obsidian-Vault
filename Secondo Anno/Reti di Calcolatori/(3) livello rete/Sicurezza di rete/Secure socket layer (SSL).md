@@ -7,6 +7,8 @@ aliases:
   - data records
   - VPN
   - IPsec
+  - SSL
+  - nonce
 data: "`2025-02-25 17:00`"
 ---
 - # Intro:
@@ -22,9 +24,9 @@ data: "`2025-02-25 17:00`"
 		- viene generata una chiave simmetrica a partire dal _MS_ e da altre informazioni
 		- ### Quattro chiavi:
 			- $K_{C}=$ chiave di criptazione per i dati mandati dal client al server.
-			- $M_{C}$ chiave MAC per i dati mandati dal client al server.
+			- $M_{C}$ = chiave MAC per i dati mandati dal client al server.
 			- $K_{S}=$ chiave di criptazione per i dati mandati dal server al client.
-			- $M_{S}$ chiave MAC per i dati mandati dal server al client.
+			- $M_{S}$ = chiave MAC per i dati mandati dal server al client.
 		- $KDF$: chiavi derivate da _MS_ e da altre informazioni usando delle funzioni.
 	- ## Data records:
 		- i dati vengono mandati in pacchetti chiamati _record_ che contengono:
@@ -35,24 +37,46 @@ data: "`2025-02-25 17:00`"
 		- per evitare che l’attaccante registri i record di dati e li invii in un secondo momento, si aggiunge un numero di sequenza dentro al MAC :
 			- $$MAC=MAC(M_{X}, sequence||data)$$
 		- per evitare che l’attaccante registri tutti quanti i record si usa una _nonce_.
+			- _Ovvero un numero usato una volta sola generato a caso_ 
 	- ## Control information:
 		- a volte l’attaccante effettua un attacco di troncamento, fingendo un segmento di chiusura TCP e quindi gli utenti pensano ci siano meno dati di quelli effettivi. 
 		- per evitare ciò si aggiunge un campo di _type.
 			- ![[Pasted image 20250225172924.png]]
 			- $$MAC=MAC(M_{X}, \text{sequence||type||data})$$
 	-  ![[Pasted image 20250225173051.png]]
+- # Real SSL:
+	- ## Handshaking:
+		- 1. Il client manda una lista di algoritmi che supporta insieme al _nonce_.
+		- 2. Il server sceglie uno di quegli algoritmi e manda indietro:
+			- La scelta + il certificato + il _nonce_ del server.
+		- 3. Il client verifica il certificato del server, estrae la chiave pubblica, genera il _pre master secret_, cripta con la chiave pubblica del server e lo manda al server.
+		- 4. Il client e il server computano indipendentemente la criptazione e la chiave MAC dal _pre master secret_ e dai _nonce_.
+		- 5. Il client manda un MAC di tutti i messaggi handshake
+		- 6. Il server manda un MAC di tutti i messaggi handshake
+		- Generare i due _nonce_ permette di evitare che l’attaccante possa registrare i messaggi e poi mandarli in un secondo momento.
+	- ## Record:
+		- ![[Pasted image 20250626134628.png|600]]
+			- Nell'header c'è il _tipo_ del contenuto, la _versione_ e la _lunghezza_.
+			- MAC contiene i numeri di sequenza e la MAC key $M_{X}$
+			- _Fragment_ è composto da $2^{14}$ bytes ovvero $16KB$
 - # VPN:
 	- nonostante tutto questo l’attaccante può comunque fare spoofing dell’[[Indirizzamento IPv4#^afb979||indirizzo IP]] 
 	- per evitare ciò si usa una VPN che cifra tutto il traffico e quindi l’attaccante non può fare spoofing.
 	- le stesse VPN usano IPsec 
 	- Gli IP rimangono visibili esternamente per garantire il traffico di dati attraverso i router ma esiste comunque una parte cifrata con i veri indirizzi IP. 
-- # IPsec
+	- ![[Pasted image 20250627115039.png|700]]
+- # Ipsec
+	- Ha due modalità di funzionamento:
+		- Trasporto dove il datagramma è emesso e ricevuto da un sistema finale e protegge i protocolli di livello superiore.
+			- ![[Pasted image 20250627120824.png|600]]
+		- Tunneling:
+			- ![[Pasted image 20250627120853.png|600]]
 	- utilizza due protocolli:
-	- ## AH:
-		- autentica i pacchetti IP e quindi verifica che non siano stati modificati. 
-		- ma non garantisce la [[Sicurezza Di Rete#^92bd4c|confidenzialità]]
-	- ## ESP:
-		- cifra i pacchetti IP e quindi garantisce la privacy, [[Sicurezza Di Rete#^cb41ce|integrità]] e [[autenticazione]].
-		- 
+		- ## AH (authentication header):
+			- autentica i pacchetti IP e quindi verifica che non siano stati modificati. 
+			- ma non garantisce la [[Sicurezza Di Rete#^92bd4c|confidenzialità]]
+		- ## ESP (encapsulation security protocol):
+			- cifra i pacchetti IP e quindi garantisce la privacy, [[Sicurezza Di Rete#^cb41ce|integrità]] e [[autenticazione]].
+			- Più usato rispetto ad _AH_
 - # Link Utili:
 	- 

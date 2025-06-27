@@ -1,0 +1,78 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-06-27 12:17`"
+---
+- # Argomento:
+	- Quando avvengono collisioni dei segnali si creano vari problemi per il ricevitore:
+		- Si spreca potenza e canale il quale viene occupato per una trasmissione fallita.
+	- Nelle reti cablate le collisioni vengono gestite facilmente.
+	- Per controllarle nel wireless si usa un controllo della contesa del canale di comunicazione lato mittente.
+	- _effetto cattura_: si verifica quando un segnale più forte incontra e sopprime quelli più deboli facendo decodificare al ricevente solo quello.
+	- _dominio di collisione_: insieme di nodi che condividono lo stesso canale di comunicazione.
+	- ![[Untitled.webp|600]]
+		- Classificazione dei protocolli wireless.
+- # Protocolli Time domain first:
+	- il tempo è la dimensione primaria utilizzata per organizzare e gestire le trasmissioni dei dati
+	- Si fa maggior enfasi su controllo della latenza, ritardo e la sincronizzazione delle trasmissioni.
+	- ## ALOHA:
+		- ### Puro:
+			- #### Funzionamento:
+				- Si spedisce il pacchetto
+				- Si aspetta un _RTT_ (ovvero il tempo di un pacchetto di andare e tornare)
+				- Se si riceve un _ACK_ si passa al prossimo pacchetto altrimenti si genera un numero random di tempo da attendere prima di riprovare detto _backoff_
+			- Il _tempo di vulnerabilità_ del frame è 2 volte la sua dimensione
+				- Che sarebbe la finestra durante la quale un frame può collidere.
+				- C'è un alto rischio di collisione.
+		- ### Slotted:
+			- #### Funzionamento:
+				- Si divide il tempo in slot.
+				- Si aspetta l'inizio di uno slot di tempo prima di mandare il pacchetto.
+				- Si aspetta un RTT quantizzato in slot.
+				- Se si riceve un ACK si passa al prossimo pacchetto altrimenti si genera un numero random di slot da attendere prima di riprovare.
+	- ## CSMA (carrier sens multiple access):
+		- Simile all'_ALOHA puro_, ma la trasmissione dipende dal chip che ascolta il canale, con il canale occupato la trasmissione è ritardata.
+		- Il tempo di vulnerabilità è 2 volte il delay della propagazione; con gli slot sarebbe uguale al delay della propagazione.
+	- ![[Untitled 1.webp]]
+		- Analisi del [[Il Livello fisico#^e14f6f|throughput]] dei 3 algoritmi.
+- # Protocolli Space domain:
+	- Si basa sulla separazione spaziale dei canali di comunicazione.
+	- C'è enfasi sulla distribuzione dei nodi, copertura del segnale riduzione interferenza e massimizzare l'efficienza spaziale.
+	- ## Problema dei terminali nascosti:
+		- Si verifica quando un nodo non può sentire le trasmissioni di un altro nodo, ma entrambi possono comunicare con un terzo nodo $\to$  porta a collisioni non rilevate.
+	- ## Problema dei terminali esposti:
+		- Si verifica quando un nodo può sentire le trasmissioni di un altro nodo, ma non può comunicare con esso, portando a una sottoutilizzazione del canale.
+	- ## RTS/CTS:
+		- Si necessita di gestire i terminali esposti e nascosti.
+		- ![[Pasted image 20250506154531.png]]
+		- A prima di inviare i dati manda in una sorta di broadcast un _RTS_ ovvero _request to send_
+		- Nel momento in cui C riceve _RTS_, suppongo che non stia ascoltando nessun altro, viene correttamente interpretato, 
+			- Quindi C manda un _CTS_ (sempre in broadcast) ovvero _clear to send_ che indica una sorta di ACK dicendo ad A che può parlare.
+		- Se l'_RTS_ viene sentito ma il _CTS_ no, allora non so se disturbo le comunicazioni ma comunque si parla di comunicare tra trasmittenti.
+		- Se il CTS viene ricevuto senza però aver mandato un RTS allora non si può comunicare.
+		- Spesso nell'impostazione dei modem non viene messo il checkbox per l'RTS/CTS, ma si mette il threshold da modificare: 
+			- Spesso settarlo a 1499 perché 1500 è la dimensione max di un frame ethernet o 1000 byte
+			- Per il WI-FI il max dim è 2378 e spesso lo si trova a 2346 di default
+			- Ha senso impostare RTS/CTS per frame appena più piccoli del massimo trasferibile perché vuol dire che in quel caso si sta facendo un file transfer che occupa grandi dimensioni.
+		- ### CTS flooding:
+			- Un possibile attacco a questo protocollo.
+			- Un attaccante manda un CTS a tutti i nodi della rete, non ti da la garanzia di rilevarlo e se lo rilevi non da la certezza che sia effettivamente un attacco.
+	- ## MACA:
+		- Utilizza il meccanismo _RTS/CTS_ 
+			- Con 30 byte ciascuno e slot di tempo pari alla durata di invio di uno dei due tipi di pacchetto.
+		- Non usa il _carrier sense_ siccome la contesa è sul ricevente.
+	- ## MACAW:
+		- Usa una versione di RTS/CTS _slotted_ senza _carrier sense_ e con ACK
+			- Percorso dati: $RTS \to CTS \to DATA\to ACK$
+			- Ha il _backoff_ adattivo per regolare dinamicamente la lunghezza del ritardo nella ritrasmissione dei dati in caso di collisioni.
+	- ## FAMA:
+		- Usa una versione di RTS/CTS _slotted_ con _carrier sense_ e ACK dove il carrier sense agisce prime dell'_RTS_
+- # Protocolli ad-Hoc:
+	- Le reti _ad-Hoc multi-hop_ sono reti in cui i dispositivi comunicano tra loro senza un'infrastruttura fissa, come router o access point.
+	- Ogni dispositivo agisce sia da nodo di trasmissione che ricezione.
+	- Questi protocolli sono basati su combinazione _data+ack_ ma hanno problemi di auto contesa ovvero il messaggio da inviare potrebbe scontrarsi con l'ACK o altri messaggi nel flusso.
+	- ## IEEE 802.11 Wireless LAN:
+		- 
+- # Link Utili:
+	- 
