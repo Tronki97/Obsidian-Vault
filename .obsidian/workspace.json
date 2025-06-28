@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Protocolli MAC wireless.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,31 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Protocolli MAC wireless"
-            }
-          },
-          {
-            "id": "1d1d4905ba129f30",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Livello MAC nelle reti wireless.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Livello MAC nelle reti wireless"
+              "title": "Homepage"
             }
           }
         ]
@@ -258,8 +234,18 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
+    "Untitled 6.webp",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
+    "Untitled 5.webp",
+    "Untitled 4.webp",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
+    "Untitled 3.webp",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Livello MAC nelle reti wireless.md",
-    "Protocolli MAC wireless.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Protocolli MAC wireless.md",
+    "Untitled 2.webp",
     "Untitled 1.webp",
     "Untitled.webp",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Componenti di rete.md",
@@ -267,16 +253,13 @@
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Intro al corso di Reti.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC-address.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
     "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
     "immagini/Pasted image 20250626134628.png",
     "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Wireless.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
     "immagini/Pasted image 20250627120853.png",
     "immagini/Pasted image 20250627120824.png",
-    "immagini/Pasted image 20250627115039.png",
     "Homepage.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/DHCP.md",
@@ -287,13 +270,6 @@
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Instradamento dei pacchetti e Routing.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/Indirizzamento IPv4.md",
     "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
-    "immagini/Untitled 5.webp",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "immagini/Untitled 4.webp",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "immagini/Untitled 3.webp",
-    "immagini/Untitled 2 1.webp",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/tavola_normale.pdf",

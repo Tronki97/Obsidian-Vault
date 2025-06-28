@@ -1,18 +1,29 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - ampiezza
+  - frequenza
+  - area di copertura
+  - raggio di trasmissione
+  - raggio di ricezione
+  - raggio di interferenza
+  - shadowing
+  - fase
+  - signal gain
+  - VSWR
+  - EIRP
 data: "`2025-03-31 11:14`"
 ---
 - # Argomento:
     - Tutti i classici protocolli spesso ricevono dei side-effect da queste reti e quindi necessitano di aggiustamenti. Side
-    - Un'onda radio si ottiene facendo passare della corrente alternata in un filo conduttore, ottenendo così un campo elettromagnetico. Questa onda è definita da una sinusoidale onde.
+    - _Un'onda radio si ottiene facendo passare della corrente alternata in un filo conduttore_, ottenendo così un campo elettromagnetico. Questa onda è definita da una sinusoidale onde.
         - L'energia è proporzionale alla carica elettrica che si sposta nel filo.
-    - ## Ampiezza:
+    - ## Ampiezza (dB):
         - Segnali con ampiezza più alta tendono ad andare più lontano, poiché trasmessi per più tempo perdono meno potenza. Questo significa che i segnali radio hanno un determinato raggio di copertura.
             - La **potenza** è data dalla quantità di energia investita divisa per il tempo.
             - Spesso si indica come prodotto tra corrente e tensione.
-    - ## Frequenza:
+    - ## Frequenza (Hz):
         - Correlata alla lunghezza d'onda, calcolabile come $\frac{c}{f}$ dove $c$ è la velocità della luce.
         - L'insieme delle frequenze utilizzabili da un dispositivo è chiamato **canale di trasmissione** o **banda**.
         - Si misura in **Hertz (Hz)**.
@@ -61,10 +72,13 @@ data: "`2025-03-31 11:14`"
         - Rischi di bruciare il trasmettitore.
         - Distorsione delle chitarre si basa su questo principio.
     - ## EIRP:
-        - Equivalent Isotropically Radiated Power (Potenza Elettromagnetica Radiata Isotropa).
+        - _Equivalent Isotropically Radiated Power_ (Potenza Elettromagnetica Radiata Isotropa).
         - Quanto effettivamente si perde arrivando all'antenna.
         - Si parla più forte ma si disturba l'ambiente circostante.
             - Si suppone che un antenna sia isotropica e si definisce un massimo essendo l'ampiezza dell'onda dell'isotropica minima rispetto alle altre antenne.
+        - ### ES:
+	        - Se do $16mW$ direttamente all'antenna _isotropica_ l'energia irradiata in tutte le direzioni è $16mW$
+	        - Se li do ad una che focalizza 10 volte l'energia in una direzione, il valore _EIRP_ sarebbe quello che dovrei dare ad una isotropica per irradiare $160mW$ in questo caso l'EIRP è $160mW$. 
 - # Conversione tra dBm e milliwatt:
     - **dBi**: è il db-isotropic, la misura del guadagno passivo dell'antenna.
         - Per avere un'antenna isotropica, questa dovrebbe avere un dipolo pari a 0. In realtà, le antenne reali concentrano l'energia in modo non isotropico, generando un guadagno passivo in una certa direzione.
@@ -73,6 +87,13 @@ data: "`2025-03-31 11:14`"
                     - $1 \text{ mW} * 4 = 4 \text{ mW}$.
                 - Guardando il guadagno in dBi nella direzione preferenziale, si può sapere l’_EIRP_ (_Effective Isotropic Radiated Power_) dell'antenna e capire se è in regola con i limiti di potenza.
                     - Ad esempio, se un'intential radiator trasmette 1 mW e l'antenna ha un guadagno passivo di 10 dBi, allora l'EIRP sarà $1 \text{ mW} * 10 = 10 \text{ mW}$.
+    - ## ES:
+	    - Segnale trasmesso a $TX=100mW$ è ricevuto a $RX=0.000005mW$
+	    - Quindi la differenza di potenza in $dB$ = $10*\log_{10}\left( \frac{RX}{TX} \right)=10*(-7.3)=-73dB$
+	    - Quindi il segnale partito con una potenza di $10mW$ arriva con un gain di $-73dB$.
+	- ## N.B:
+		- Un guadagno di $3dB$ vuol dire un raddoppiamento della potenza 
+		- Un guadagno di $10dB$ vuol dire un $*10$ della potenza 
 - # Potenza Monitoraggio:
     - La sensibilità nei dispositivi moderni si trova nel range $[-90, ..., +10]$ dBm. A seconda della potenza in questo intervallo, si ha:
         - **Signal Detection**: la capacità di capire ciò che ricevo.
@@ -96,8 +117,10 @@ data: "`2025-03-31 11:14`"
         - ## Altamente-direzionali :
 	        - antenne che concentrano la radiazione in un'unica direzione.
 - # Line Of Sight (LOS):
+	- ![[Untitled 6.webp]]
     - Rappresenta la linea retta che congiunge il trasmettitore e il ricevitore. Non dovrebbe esserci alcuna ostruzione lungo questa linea.
 - # Fresnel Zone:
+	- _La zona attorno alla Line of sight_ 
     - I segnali vengono diffratti, ma parte di quella diffrazione ri-converge nella direzione originale.
         - A seconda del percorso di diffrazione, la fase dell'onda che torna e arriva all'antenna ricevente sarà additiva o inversa.
     - Il blocco della Fresnel Zone può interrompere il link!
@@ -105,6 +128,9 @@ data: "`2025-03-31 11:14`"
             - Non richiedono né potenza né tipo di antenna, perché la diffrazione è un fenomeno che vale sempre. La formula è sempre la stessa.
     - Chiaramente, la zona di Fresnel non si applica in ambienti chiusi, dove c'è il rimbalzo da cui si ricava l'energia.
     - **Curiosità**: La stessa curvatura terrestre può dimezzare la zona di Fresnel.
+    - La sezione di una FZ ideale dovrebbe essere libera per almeno il 60%:
+	    - $R_{60\%}=43.3*\sqrt{\left( \frac{d}{4f} \right)}$
+	    - $d$ è in miglia e  $f$ in $GHz$ 
 - # Grafici Importanti:
     - ## Grafico di Azimuth: 
 	    - rappresenta il segnale in dB attorno all'antenna, misurato nelle 4 direzioni cardinali. Un dipolo avrà un grafico di _Azimuth_ quasi circolare perché è omni-direzionale.
@@ -119,14 +145,15 @@ data: "`2025-03-31 11:14`"
         - Possibilità di aumentare la velocità della trasmissione.
 - # Path Loss:
     - È espresso in dB e rappresenta una stima pessimistica della dispersione sulla base della distanza e della frequenza. La formula da ricordare è:
-    - $$ PL = 36.6 + 10 \log_{10}(F) + 20 \log_{10}(D) $$
+    - $$ PL = 36.6 + 20 \log_{10}(F) + 20 \log_{10}(D) $$
 		- Dove:
 			 - $F$ è la frequenza in MHz.
 			 - $D$ è la distanza tra il trasmettitore e il ricevitore in km (da convertire in miglia).
+	- Come regola generale si può dire che raddoppiando la distanza si ha una perdita di $6dB$ ovvero il segnale si riduce a circa $\frac{1}{4}$ quindi per raddoppiare la distanza doppiamo quadruplicare la potenza del segnale. 
 - # Link budget:
 	- Eccesso di segnale tra trasmettitore e ricevitore.
 	- Misurata in dB, dBm o mW.
-	- RS: il segnale più debole ricevibile:
+	- _RS: il segnale più debole ricevibile_:
 		- Più basso è meglio è.
 	- Il link budget si calcola facendo:
 		- Potenza ricevuta in dBm - RS in dBm.

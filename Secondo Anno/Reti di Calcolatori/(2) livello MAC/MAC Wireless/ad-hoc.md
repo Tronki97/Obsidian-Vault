@@ -1,0 +1,40 @@
+---
+tags: []
+aliases:
+  - PCF
+  - DCF
+  - IEEE 802.11
+  - wireless LAN
+data: "`2025-06-28 11:42`"
+---
+- # Argomento:
+	-  Le reti _ad-Hoc multi-hop_ sono reti in cui i dispositivi comunicano tra loro senza un'infrastruttura fissa, come router o access point.
+	- Ogni dispositivo agisce sia da nodo di trasmissione che ricezione.
+	- Questi protocolli sono basati su combinazione _data+ack_ ma hanno problemi di auto contesa ovvero il messaggio da inviare potrebbe scontrarsi con l'ACK o altri messaggi nel flusso.
+	- ## IEEE 802.11 Wireless LAN:
+		- ![[Untitled 2.webp|500]]
+		- Costruita su due funzioni coesistenti: _DCF_ e _PCF_
+		- ### PCF:
+			- Detta _point coordinated mode_ è un servizio opzionale
+			- In un access point, gestisce le stazioni che appartengono alla sua lista di accesso ([[access control#^26954d|ACL]]) al canale.
+			- Garantisce un _accesso non conteso_ al canale da parte delle varie stazioni a lui collegate.
+				- Grazie ad un _poll_ dei nodi legati all'access point, che determina se hanno qualcosa da trasmettere 
+			- Ogni stazione connessa al canale fa un [[time domain first#^6bda93|carrier sense]] prima di trasmettere.
+			- _IFS_: _inter frame spaces_ che possono essere:
+				- _SIFS_ (short) dopo i quali, solo la stazione interrogata dall'access point può trasmettere qualsiasi tipo di messaggio.
+				- _PIFS_ (point) dopo i quali solo l'access point può trasmettere (e PCF prende il controllo) e ciò serve a garantire il funzionamento della _PCF_ sull'access point prima che il controllo passi a _DCF_
+				- _DIFS_ (distributed): dopo i quali qualsiasi stazione può trasmettere.
+			- ![[Untitled 3.webp]]
+		- ### DCF:
+			- Il modello di accesso al canale è [[time domain first#^6bda93|CSMA]] 
+				- _Carrier sensing_
+				- [[time domain first#^7657bf|backoff]] esponenziale basato sugli slot
+				- Non c'è _collision detection_, ma solo _avoidance_.
+			- ![[Untitled 4.webp|650]]
+			- ![[Untitled 5.webp|650]]
+			- #### Come calcolare il backoff:
+				- $CW_{i}$ = dimensione della finestra contesa al i-esimo tentativo di trasmissione
+					- Questo valore è duplicato dopo ogni collisione.
+				- $$BackoffTime(i)=(CW_{i}*random())*SlotTime$$
+- # Link Utili:
+	- 

@@ -71,7 +71,7 @@ data: "`2025-05-15 18:14`"
 	- ## Implementazione:
 		- Può essere implementato come una tabella globale fatta da un [[Array]] bidimensionale.
 		- è semplice da implementare, ma può essere molto grande e difficile da gestire in un sistema dinamico dove i domini e gli oggetti possono cambiare continuamente e i privilegi di accesso cambiano nel tempo.
-- # Access Control list (ACL):
+- # Access Control list (ACL): ^26954d
 	- La matrice viene memorizzata per colonne 
 		- ogni oggetto associato  ad una lista di _tuple_ `<domain, set_of_access_rights>` 
 		- Ottimizzazioni: includiamo solo domini che specificano diritti di accesso diversi dal default 

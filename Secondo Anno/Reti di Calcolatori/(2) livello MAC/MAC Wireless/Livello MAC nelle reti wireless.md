@@ -16,7 +16,7 @@ data: "`2025-04-29 16:38`"
 		- In teoria appena il canale è libero.
 		- Ma va meglio se si randomizza il tempo da aspettare prima di ricominciare a parlare.
 			- Così la probabilità di una nuova collisione è molto più bassa visto che i numeri casuali generati dai 2 utenti (rappresentanti l'attesa) che hanno colliso probabilmente saranno diversi
-- Nel [[Wireless]] il protocollo deve controllare non solo se c'è qualcuno che sta parlando ma anche dove si trova visto che il decadimento del segnale nelle onde radio è molto ripido.
+- Nel [[Reti Wireless]] il protocollo deve controllare non solo se c'è qualcuno che sta parlando ma anche dove si trova visto che il decadimento del segnale nelle onde radio è molto ripido.
 	- Quindi si cerca di separare il segnale in diversi canali solo che questa operazione è costosa.
 - Per verificare se c'è una collisione nel caso del wireless nel caso in cui ci sia un ricevente lontano dal trasmettitore
 	- ![[Pasted image 20250429174952.png]]

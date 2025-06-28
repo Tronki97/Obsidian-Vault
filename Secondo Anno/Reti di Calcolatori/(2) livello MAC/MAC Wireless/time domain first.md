@@ -1,0 +1,35 @@
+---
+tags: 
+aliases:
+  - ALOHA
+  - slotted
+  - CSMA
+  - carrier sense
+  - backoff
+data: "`2025-06-28 11:39`"
+---
+- # Argomento:
+	-   il tempo è la dimensione primaria utilizzata per organizzare e gestire le trasmissioni dei dati
+	- Si fa maggior enfasi su controllo della latenza, ritardo e la sincronizzazione delle trasmissioni.
+	- ## ALOHA:
+		- ### Puro:
+			- #### Funzionamento:
+				- Si spedisce il pacchetto
+				- Si aspetta un _RTT_ (ovvero il tempo di un pacchetto di andare e tornare)
+				- Se si riceve un _ACK_ si passa al prossimo pacchetto altrimenti si genera un numero random di tempo da attendere prima di riprovare detto _backoff_ ^7657bf
+			- Il _tempo di vulnerabilità_ del frame è 2 volte la sua dimensione
+				- Che sarebbe la finestra durante la quale un frame può collidere.
+				- C'è un alto rischio di collisione.
+		- ### Slotted:
+			- #### Funzionamento:
+				- Si divide il tempo in slot.
+				- Si aspetta l'inizio di uno slot di tempo prima di mandare il pacchetto.
+				- Si aspetta un RTT quantizzato in slot.
+				- Se si riceve un ACK si passa al prossimo pacchetto altrimenti si genera un numero random di slot da attendere prima di riprovare.
+	- ## CSMA (carrier sens multiple access): ^6bda93
+		- Simile all'_ALOHA puro_, ma la trasmissione dipende dal chip che ascolta il canale, con il canale occupato la trasmissione è ritardata.
+		- Il tempo di vulnerabilità è 2 volte il delay della propagazione; con gli slot sarebbe uguale al delay della propagazione.
+	- ![[Untitled 1.webp]]
+		- Analisi del [[Il Livello fisico#^e14f6f|throughput]] dei 3 algoritmi.
+- # Link Utili:
+	- 
