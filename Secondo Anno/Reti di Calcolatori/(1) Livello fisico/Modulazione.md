@@ -1,0 +1,56 @@
+---
+tags: 
+aliases:
+  - modulazione digitale
+  - modulazione gerarchica
+  - ASK
+  - FSK
+  - PSK
+  - BPSK
+  - QPSK
+  - QAM
+data: "`2025-07-01 12:18`"
+---
+- # Modulazione Digitale:
+	- I dati sono tradotti in un segnale analogico da _modulare_ per predisporli a essere trasmessi tramite un [[Mezzo fisico di trasmissione||mezzo fisico]]
+	- Nel caso della modulazione serve uno strumento _hardware_ chiamato _modulatore digitale_ che converta la codifica digitale in un segnale analogico il quale avrà caratteristiche distinguibili come: _ASK, FSK, PSK_
+	- A questo punto serve un altro componente chiamato _modulatore analogico_ che dia un segnale idoneo  ad essere trasmesso su un determinato canale.
+		- Questo modulatore si basa sulla frequenza a cui bisogna trasmettere, chiamata _radio carrier_, e alla _baseband_. Facendo una sovrapposizione di questi due segnali si ottiene il segnale da trasmettere ed esistono vari metodi per farla: _AM, FM, PM_.
+	- Dal lato del ricevente si ha un percorso speculare solo che il segnale potrebbe arrivare con delle interferenze incontrate sul cammino.
+	- ## ASK:
+		- ![[Pasted image 20250415161025.png]]
+		- Si prende la frequenza del carrier e se si ha un ampiezza diversa da 0 allora la si chiama simbolo del bit 1.
+	- ## FSK:
+		- Usa diversi tipi di frequenza per indicare 1 (la più alta) o 0 (la più bassa) o viceversa dipende dal protocollo applicato.
+		- ![[Pasted image 20250701114847.png]]
+	- ## PSK:
+		- Si usa la fase del segnale per indicare 1 o 0.
+		- ![[Pasted image 20250415161913.png]]
+- # Rappresentazione del segnale:
+	- ![[Untitled-1 1 1.webp]]
+		- 1. Nel dominio dell'ampiezza.
+		- 2. Nel dominio della frequenza.
+		- 3. Diagramma di statistica di fase e ampiezza rappresentate con le coordinate polari.
+			- Dove ogni simbolo rappresenta un possibile stato della radiofrequenza trasmessa.
+	- La terza rappresentazione si presta per rappresentare codifiche in _PSK_.
+	- ## BPSK:
+		- Si hanno codifiche diverse per opposizioni di fase (0 e 1) sfrutta però poco lo spettro.
+	- ## QPSK:
+		- Codifica in 4 fasi (00, 01, 10, 11) ma è più facilmente mal interpretabile.
+		- Si potrebbe ricondurre ad un tiro al bersaglio che in base al quadrante in cui cade lo si riconduce ad uno dei 4 simboli, aumentando l'area associata ad un simbolo si diminuisce la probabilità di errore ma si spreca più banda.
+		- La cosa migliore sarebbe minimizzare il numero di bit diversi in fasi vicine così in caso di errore i bit errati sono il numero minore possibile questo numero dovrebbe essere 1 perché:
+			- Si usa come [[Correzione di errori#^2d37e7|Bit di parità]]
+			- ![[Untitled-1 2.webp]]
+	- ## QAM:
+		- Combinazione di modulazione di ampiezza e fase del segnale per ogni simbolo trasmesso; 
+		- Es. 16-QAM (16 symbols, 1 symbol = 4 bit)
+			- ![[Untitled-1 3.webp]]
+			- Più simboli si vogliono rappresentare più l'area di ogni simbolo si riduce.
+- # Modulazione gerarchica:
+	- Si può modulare due diverse sequenze di bit nello stesso segnale e dare una priorità diversa ad ognuna.
+		- ![[Untitled-1 4.webp|300]]
+		- Ogni area grigia contiene 16 simboli (i vari punti) utilizzati per codificare la sequenza a priorità minore
+		- Ogni quadrante invece è etichettato con una sequenza di due bit, quelli a priorità alta 
+		- Quando il canale ha poco rumore, si tende ad avere errori solo sulla parte a bassa priorità, chiaramente se il rumore aumenta è compromessa anche la codifica a priorità alta
+- # Link Utili:
+	- 

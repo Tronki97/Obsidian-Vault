@@ -12,7 +12,7 @@ data: "`2025-06-28 11:42`"
 	- Ogni dispositivo agisce sia da nodo di trasmissione che ricezione.
 	- Questi protocolli sono basati su combinazione _data+ack_ ma hanno problemi di auto contesa ovvero il messaggio da inviare potrebbe scontrarsi con l'ACK o altri messaggi nel flusso.
 	- ## IEEE 802.11 Wireless LAN:
-		- ![[Untitled 2.webp|500]]
+		- ![[Untitled 2 2.webp|500]]
 		- Costruita su due funzioni coesistenti: _DCF_ e _PCF_
 		- ### PCF:
 			- Detta _point coordinated mode_ è un servizio opzionale
@@ -24,14 +24,14 @@ data: "`2025-06-28 11:42`"
 				- _SIFS_ (short) dopo i quali, solo la stazione interrogata dall'access point può trasmettere qualsiasi tipo di messaggio.
 				- _PIFS_ (point) dopo i quali solo l'access point può trasmettere (e PCF prende il controllo) e ciò serve a garantire il funzionamento della _PCF_ sull'access point prima che il controllo passi a _DCF_
 				- _DIFS_ (distributed): dopo i quali qualsiasi stazione può trasmettere.
-			- ![[Untitled 3.webp]]
+			- ![[Untitled 3 1.webp]]
 		- ### DCF:
 			- Il modello di accesso al canale è [[time domain first#^6bda93|CSMA]] 
 				- _Carrier sensing_
 				- [[time domain first#^7657bf|backoff]] esponenziale basato sugli slot
 				- Non c'è _collision detection_, ma solo _avoidance_.
-			- ![[Untitled 4.webp|650]]
-			- ![[Untitled 5.webp|650]]
+			- ![[Untitled 4 1.webp|650]]
+			- ![[Untitled 5 1.webp|650]]
 			- #### Come calcolare il backoff:
 				- $CW_{i}$ = dimensione della finestra contesa al i-esimo tentativo di trasmissione
 					- Questo valore è duplicato dopo ogni collisione.

@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases: 
 data: "`2025-06-27 12:17`"
 ---
@@ -11,9 +10,7 @@ data: "`2025-06-27 12:17`"
 	- Per controllarle nel wireless si usa un controllo della contesa del canale di comunicazione lato mittente.
 	- _effetto cattura_: si verifica quando un segnale più forte incontra e sopprime quelli più deboli facendo decodificare al ricevente solo quello.
 	- _dominio di collisione_: insieme di nodi che condividono lo stesso canale di comunicazione.
-	- ![[Untitled.webp|600]]
+	- ![[Untitled 6.webp|600]]
 		- Classificazione dei protocolli wireless.
-- # Protocolli ad-Hoc:
-	- 
 - # Link Utili:
 	- 

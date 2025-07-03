@@ -2,20 +2,105 @@
 tags: 
 aliases:
   - throughput
+  - narrowband
+  - spread spectrum
+  - frequency hopping
+  - direct sequence
+  - DSSS
+  - CDMA
+  - multiplexing
+  - frequency planning
 data: "`2024-10-11 13:48`"
 ---
-- # codifica dei segnali:
-	- la trasmissione richiede la codifica e decodifica di dati 
-		- digitali: bit 
-		- codifica di dati digitali usando i segnali analogici
-		- la velocità dei segnali è fissa siccome viaggiano sullo spettro elettromagnetico andando (quasi) a quella della luce
-		- capacità del canale di trasmissione ovvero: il numero massimo di bit al secondo trasmissibili. ciò che la determina è la lunghezza del canale su cui viaggiano i dati che quindi è l'indice del tempo di descrizione di ogni bit.
-			- quindi la limitazione nel trasferire le informazioni spesso è delimitata dalla _capacità di leggerle piuttosto che dal trasferirle_. 
-		- ## Throughput:  ^e14f6f
-			- l'indice che dice quanti _b/s puri di sola informazione_ riesci a trasmettere sul canale 
+- # Intro:
+	- Lo spettro radio è compreso tra $100kHz$ e $100GHz$
+	- Tra $1.8 \ e\ 2.4GHz$ c'è il _dualband_ tra $2.4 \ e\ 5$ c'è il Wi-Fi e il Bluetooth.
+	- La differenza tra le varie tecnologie è la frequenza di trasmissione che implica una comunicazione di più o meno bit al secondo.
+	- ## Collegamenti radio:
+		- _link assente_: nessuno dei due canali riesce a comunicare con l'altro.
+		- _link monodirezionale_: solo uno dei due riesce a comunicare con l'altro.
+		- _link bidirezionale_: entrambi riescono a comunicare.
+			- Può essere simmetrico o asimmetrico in base a se entrambi possono trasmettere alla stessa velocità o meno.
+	- La trasmissione richiede la codifica e decodifica di dati 
+		- Digitali: bit 
+		- Codifica di dati digitali usando i segnali analogici
+		- La velocità dei segnali è fissa siccome viaggiano sullo spettro elettromagnetico andando (quasi) a quella della luce
+		- Capacità del canale di trasmissione ovvero: il numero massimo di bit al secondo trasmissibili. Ciò che la determina è la lunghezza del canale su cui viaggiano i dati che quindi è l'indice del tempo di descrizione di ogni bit.
+			- Quindi la limitazione nel trasferire le informazioni spesso è delimitata dalla _capacità di leggerle piuttosto che dal trasferirle_. 
+		- ## Throughput:  ^e 14 f 6 f
+			- L'indice che dice quanti _b/s puri di sola informazione_ riesci a trasmettere sul canale 
 	- 
-- Come possono dei canali wireless avere diverse larghezze di banda:
-	- L’efficienza del trasferimento di bit su un canale dipende dalla velocità di codifica e decodifica dei bit che stanno venendo trasferiti.
-- 
+- # Tipi di canale:
+	- ## Narrow band:
+		- C'è una sola radiofrequenza concordata per comunicare.
+		- C'è una bassa frequenza di bit trasmessi
+		- Comunicare attraverso frequenze diverse richiede coordinazione
+	- ## Spread spectrum:
+		- Si usano più frequenze per comunicare.
+		- ### Frequency hopping:
+			- Si salta da una frequenza all'altra in modo casuale.
+			- Si usa per evitare interferenze e aumentare la sicurezza.
+				- In caso di interferenza su una frequenza, si può saltare a un'altra.
+			- Richiede che entrambi i dispositivi conoscano le stesse frequenze e il modo in cui saltare tra di esse.
+			- Collisioni inevitabili.
+			- ![[Untitled-1 1.webp| 500]]
+		- ### Direct sequence: 
+			- L'informazione è spalmata su tutte le frequenze dell'intervallo.
+			- Si divide il segnale in "_chip_", ovvero frammenti distribuiti nell'intervallo di [[Reti Wireless#^041ebf|frequenza]] 
+			- Per ricostruire il segnale si sommano i _chip_ che arrivano dai vari canali.
+			- #### N.B:
+				- I segnali se sommati tra di loro possono annullarsi ma il ricevitore di solito riesce a correlare la sequenza all'informazione che deve arrivargli; esistono i _golden codes_ ovvero sequenze che si usano per evitare che i segnali si annullino tra di loro.
+				- Mandare tutti questi chip non rallenta la comunicazione perché si spediscono tutti in parallelo.
+			- #### DSSS (Direct Sequence Spread spectrum):
+				- Si fa lo XOR tra i dati mandati dall'utente e i valori della _chipping sequence_ scegliendo quindi il canale di comunicazione.
+				- Si usa tutto lo spettro di frequenza.
+				- Allungando la _chipping sequence_ si riceve più energia ed è come se chi sta trasmettendo usasse più energia.
+	- 
+- # Multiplexing:
+	- Serve per massimizzare il numero di comunicazioni contemporanee data una banda di frequenza, un tempo, uno spazio e una codifica.
+	- ## Frequency multiplexing:
+		- Si separa lo spettro in bande di frequenza più piccole 
+		- Un canale si prende una certa banda per tutto il tempo 
+		- Non necessita quindi di coordinazione e funziona per segnali analogici.
+		- Ma spreca larghezza di banda se il traffico è distribuito non uniformemente.
+		- _Spazio di guardia_: utile perché bisogna aspettare che la comunicazione sia effettivamente transitata al di fuori dell’area di comunicazione per evitare che quando si trasmette di nuovo ci sia disturbo.
+		- ### OFDM:
+			- Sfrutta i canali adiacenti in una banda.
+			- 20 $MHz$ divisi in sotto-bande; ogni banda divisa in $52$ _subcarriers_ di cui 4 utilizzati per gestione della trasmissione (_pilot_) e 48 utilizzati per trasferire i dati.
+			- Non ci sono spazi di guardia.
+			- ![[Untitled-1 5.webp]]
+			- Un canale OFDM ospita da 128 to 2048 sub-carriers, per una larghezza di banda di conseguenza variabile tra 1.25 MHz e 20 Mhz
+			- Questi segnali sovrapposti sono ortogonali tra loro e quindi non si disturbano.
+	- ## Time multiplexing:
+		- Un canale si prende tutto lo spettro per un certo periodo di tempo.
+		- C'è solo un portatore del medium alla volta e il throughput è alto anche per molti utenti.
+		- Ma serve una sincronizzazione precisa.
+		- _Spazio di guardia_: spazio di frequenze non usato Per evitare che i canali si sommino durante
+	- ## Time and frequency multiplexing:
+		- Un canale si prende una certa banda di frequenza per un certo periodo di tempo.
+		- E ad ogni periodo di tempo scaduto si fa _frequency hopping_ verso un’altra banda di frequenza.
+		- C'è una protezione maggiore contro le interferenze per determinate frequenze e maggiore scambio di dati rispetto al _Code multiplexing_.
+		- Richiede coordinazione e sincronizzazione precisa.
+	- ## Code multiplexing:
+		- Ogni canale ha una codifica unica.
+		- Tutti i canali usano lo stesso spettro allo stesso tempo.
+		- Non serve coordinazione o sincronizzazione, da una buona protezione contro le interferenze
+		- Ma ha bassi ratei di condivisione di dati e un costo maggiore per la rigenerazione dei segnali.
+- # Frequency planning:
+	- Si riusano certe frequenze solo in caso ci sia una certa distanza tra le stazioni base
+	- ![[Pasted image 20250415154256.png]]
+	- ## assegnamento fisso:
+		- Certe frequenze si assegnano a certe stazioni base.
+		- Ma diverse stazioni base potrebbero avere diversi carichi di traffico dati.
+	- ## Assegnamento dinamico:
+		- La stazione base sceglie la [[Reti Wireless#^041ebf|frequenza]] in  base a quelle già usate dalle stazioni vicine
+		- C'è una maggiore capacità in celle con più traffico.
+		- L'assegnamento può essere anche in base alle misure di interferenza.
+- # CDMA:
+	- Si hanno 2 sender A e B ognuno con un messaggio e la propria chipping sequence.
+	- Chiave e messaggio vengono codificati con $0=-1$ e $1=+1$
+	- Il segnale da inviare si ottiene facondo lo XOR tra la chipping sequence e il messaggio.
+	- Si sovrappongono i segnali e si sommano le componenti.
+	- Dal segnale risultante si si estrae quello desiderato applicando la chiave giusta e se è positivo o negativo si risale a quale fosse il bit originale.
 - # Link Utili:
 	- 

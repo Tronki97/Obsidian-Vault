@@ -17,7 +17,7 @@ data: "`2025-06-24 18:28`"
 	- Detta anche _a chiave pubblica_, esistono 2 chiavi:
 		- Quella _pubblica_ che tutti conoscono
 		- Quella _privata_ che conosce solo chi la genera.
-	- ![[Untitled.webp|700]]
+	- ![[Untitled 6.webp|700]]
 - # RSA:
 	- Sfrutta l' [[Aritmetica modulare]], perché ogni tipo di messaggio criptato o non può essere rappresentato con dei numeri, quindi criptare quel messaggio è criptare quel numero.
 	- ## Creare una coppia di chiavi:

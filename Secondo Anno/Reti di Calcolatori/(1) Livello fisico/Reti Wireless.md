@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - ampiezza
   - frequenza
@@ -13,6 +12,9 @@ aliases:
   - signal gain
   - VSWR
   - EIRP
+  - path loss
+  - LOS
+  - fresnel zone
 data: "`2025-03-31 11:14`"
 ---
 - # Argomento:
@@ -23,7 +25,7 @@ data: "`2025-03-31 11:14`"
         - Segnali con ampiezza più alta tendono ad andare più lontano, poiché trasmessi per più tempo perdono meno potenza. Questo significa che i segnali radio hanno un determinato raggio di copertura.
             - La **potenza** è data dalla quantità di energia investita divisa per il tempo.
             - Spesso si indica come prodotto tra corrente e tensione.
-    - ## Frequenza (Hz):
+    - ## Frequenza (Hz): ^041ebf
         - Correlata alla lunghezza d'onda, calcolabile come $\frac{c}{f}$ dove $c$ è la velocità della luce.
         - L'insieme delle frequenze utilizzabili da un dispositivo è chiamato **canale di trasmissione** o **banda**.
         - Si misura in **Hertz (Hz)**.
@@ -87,6 +89,8 @@ data: "`2025-03-31 11:14`"
                     - $1 \text{ mW} * 4 = 4 \text{ mW}$.
                 - Guardando il guadagno in dBi nella direzione preferenziale, si può sapere l’_EIRP_ (_Effective Isotropic Radiated Power_) dell'antenna e capire se è in regola con i limiti di potenza.
                     - Ad esempio, se un'intential radiator trasmette 1 mW e l'antenna ha un guadagno passivo di 10 dBi, allora l'EIRP sarà $1 \text{ mW} * 10 = 10 \text{ mW}$.
+    - Da $mW$ a $dBm$:
+	    - $$ dBm = 10 * \log_{10}(mW) $$
     - ## ES:
 	    - Segnale trasmesso a $TX=100mW$ è ricevuto a $RX=0.000005mW$
 	    - Quindi la differenza di potenza in $dB$ = $10*\log_{10}\left( \frac{RX}{TX} \right)=10*(-7.3)=-73dB$
@@ -101,23 +105,8 @@ data: "`2025-03-31 11:14`"
             - **Channel Status Detection (CSD)**: capire se il canale è occupato o meno e quindi se posso trasmettere o no.
         - **RSSI**: le tacchette del Wi-Fi su ogni dispositivo.
             - Se due dispositivi hanno un RSSI massimo, a fondo scala, si confronta quanto ricevono con tale valore di RSSI. Questo è il tetto massimo ricevibile (pienamente sufficiente per ricevere bene). Non confrontare gli RSSI direttamente perché ogni dispositivo ha una scala diversa.
-- # Antenne:
-    - Esistono tre categorie principali di antenne:
-        - ## Omnidirezionali :
-	        - vanno in tutte le direzioni, ma non in modo omogeneo (altrimenti sarebbero isotropiche).
-		- ## Semplice dipolo:
-			 - Il guadagno passivo è causato dalla forma della radiazione, che assume la forma di una ciambella.
-				  - Esistono due tipi possibili di dipoli:
-					- A basso guadagno
-					- Ad alto guadagno
-			 - Bisogna capire quante e quali antenne usare in ogni situazione.
-			 - C'è anche il fattore del **tilt**, ossia dell'inclinazione.
-        - ## Semi-direzionali :
-	        - forma conica, utilizzate per ricevere segnali TV. Si punta verso il trasmettitore (in una posizione nota).
-        - ## Altamente-direzionali :
-	        - antenne che concentrano la radiazione in un'unica direzione.
 - # Line Of Sight (LOS):
-	- ![[Untitled 6.webp]]
+	- ![[Untitled 6 1.webp]]
     - Rappresenta la linea retta che congiunge il trasmettitore e il ricevitore. Non dovrebbe esserci alcuna ostruzione lungo questa linea.
 - # Fresnel Zone:
 	- _La zona attorno alla Line of sight_ 
@@ -134,22 +123,18 @@ data: "`2025-03-31 11:14`"
 - # Grafici Importanti:
     - ## Grafico di Azimuth: 
 	    - rappresenta il segnale in dB attorno all'antenna, misurato nelle 4 direzioni cardinali. Un dipolo avrà un grafico di _Azimuth_ quasi circolare perché è omni-direzionale.
+	    - ![[Pasted image 20250701104413.png|350]]
     - ## Grafico di Elevazione: 
 	    - uguale al grafico di Azimuth, ma parte da sopra l'antenna e ci gira intorno, quindi a destra, sotto e a sinistra.
-- # Array Di Antenne:
-    - Vantaggi della ricezione usando più antenne:
-        - Migliore capacità di ricezione in condizioni difficili.
-        - Miglioramento del rapporto segnale-suono (SNR).
-    - Vantaggi della trasmissione usando più antenne:
-        - Migliore copertura della rete.
-        - Possibilità di aumentare la velocità della trasmissione.
+	    - ![[Pasted image 20250701104439.png|350]]
 - # Path Loss:
     - È espresso in dB e rappresenta una stima pessimistica della dispersione sulla base della distanza e della frequenza. La formula da ricordare è:
     - $$ PL = 36.6 + 20 \log_{10}(F) + 20 \log_{10}(D) $$
 		- Dove:
 			 - $F$ è la frequenza in MHz.
 			 - $D$ è la distanza tra il trasmettitore e il ricevitore in km (da convertire in miglia).
-	- Come regola generale si può dire che raddoppiando la distanza si ha una perdita di $6dB$ ovvero il segnale si riduce a circa $\frac{1}{4}$ quindi per raddoppiare la distanza doppiamo quadruplicare la potenza del segnale. 
+	- ## Regola dei 6 dB
+	- Come regola generale si può dire che raddoppiando la distanza si ha una perdita di $6dB$ ovvero il segnale si riduce a circa $\frac{1}{4}$. Quindi per raddoppiare la distanza doppiamo quadruplicare la potenza del segnale. 
 - # Link budget:
 	- Eccesso di segnale tra trasmettitore e ricevitore.
 	- Misurata in dB, dBm o mW.
@@ -164,8 +149,4 @@ data: "`2025-03-31 11:14`"
 	- ## Fade margin:
 		- Del margine extra per il link budget (di solito nell’ordine dei $[+10...+20]dB$). 
 - # Link Utili:
-	- 
-- # BOH:
-	- Provate a leccare il volume della sfera lo sentite il sapore di nutella????
-	- Ah prof quella volta della nutella.
 	- 

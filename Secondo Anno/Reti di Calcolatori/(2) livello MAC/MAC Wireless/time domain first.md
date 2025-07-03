@@ -29,7 +29,7 @@ data: "`2025-06-28 11:39`"
 	- ## CSMA (carrier sens multiple access): ^6bda93
 		- Simile all'_ALOHA puro_, ma la trasmissione dipende dal chip che ascolta il canale, con il canale occupato la trasmissione è ritardata.
 		- Il tempo di vulnerabilità è 2 volte il delay della propagazione; con gli slot sarebbe uguale al delay della propagazione.
-	- ![[Untitled 1.webp]]
+	- ![[Untitled 1 3.webp]]
 		- Analisi del [[Il Livello fisico#^e14f6f|throughput]] dei 3 algoritmi.
 - # Link Utili:
 	- 

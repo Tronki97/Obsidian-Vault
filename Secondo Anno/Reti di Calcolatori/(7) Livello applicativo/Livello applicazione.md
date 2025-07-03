@@ -36,6 +36,6 @@ data: "`2025-06-26 11:11`"
 - # Cookies:
 	- Piccoli file di testo che vengono inviati dal server al client e memorizzati localmente che servono a riconoscere un client, è un modo per rendere [[HTTP]] stateful.
 	- Sono salvati lato utente e contengono: autorizzazioni, carrelli, stato della connessione...
-	- ![[Untitled 3.webp|600]]
+	- ![[Untitled 3 1.webp|600]]
 - # Link Utili:
 	- 

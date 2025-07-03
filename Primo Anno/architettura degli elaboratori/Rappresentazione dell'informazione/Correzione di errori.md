@@ -14,6 +14,6 @@ data: "`2024-08-31 20:05`"
 		- Come regola generale si usa che:
 			- Per rilevare _d_ bit errati è necessario un codice con distanza di Hamming $\geq d+1$ 
 			- per correggere _d_ bit errati è necessario un codice  con distanza di Hamming $\geq 2d+1$ 
-- ## Bit di parità
+- ## Bit di parità ^2d37e7
 	- un unico bit di controllo che vale 0 se il numero di "1" della sequenza è pari e vale 1 in caso contrario, in questo modo si avrà sempre un numero pari di "1" ovvero quelli della sequenza + quello di controllo.
 - ## Codice di Hamming 

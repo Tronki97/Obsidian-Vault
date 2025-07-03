@@ -1,0 +1,33 @@
+---
+tags: []
+aliases:
+  - omnidirezionali
+  - semplice dipolo
+  - semi-direzionali
+  - altamente-direzionali
+data: "`2025-07-01 10:42`"
+---
+- # Argomento:
+	-  Esistono tre categorie principali di antenne:
+        - ## Omnidirezionali :
+	        - Vanno in tutte le direzioni, ma non in modo omogeneo (altrimenti sarebbero isotropiche).
+		- ## Semplice dipolo:
+			 - Il guadagno passivo è causato dalla forma della radiazione, che assume la forma di una ciambella.
+				  - Esistono due tipi possibili di dipoli:
+					- A basso guadagno
+					- Ad alto guadagno
+			 - Bisogna capire quante e quali antenne usare in ogni situazione.
+			 - C'è anche il fattore del **tilt**, ossia dell'inclinazione.
+        - ## Semi-direzionali :
+	        - Forma conica, utilizzate per ricevere segnali TV. Si punta verso il trasmettitore (in una posizione nota).
+        - ## Altamente-direzionali :
+	        - Antenne che concentrano la radiazione in un'unica direzione.
+- # Array Di Antenne:
+    - Vantaggi della ricezione usando più antenne:
+        - Migliore capacità di ricezione in condizioni difficili.
+        - Miglioramento del rapporto segnale-suono (SNR).
+    - Vantaggi della trasmissione usando più antenne:
+        - Migliore copertura della rete.
+        - Possibilità di aumentare la velocità della trasmissione.
+- # Link Utili:
+	- 

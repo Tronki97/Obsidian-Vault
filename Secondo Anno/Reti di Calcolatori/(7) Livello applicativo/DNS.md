@@ -18,6 +18,13 @@ data: "`2024-11-29 15:33`"
 	- Gli host devono conoscere almeno un server DNS (l’IP) 
 	- i server radice conoscono tutti i _domain name_ e i loro IP associati.
 	- Permette inoltre di riferirsi a un solo identificatore per un _database_ su più macchine fisiche
+	- ## Server:
+		- ### Top level domain (TLD):
+			- sono i server che gestiscono i domini di primo livello come _com_, _org_, _net_, _it_ e così via.
+			- hanno un database con i nomi dei domini e gli indirizzi IP associati.
+		- ### autoritativi:
+			- sono i server che gestiscono i domini di secondo livello e i loro sottodomini.
+			- Forniscono la risposta definitiva a una query DNS: indirizzi IP, record ecc...
 	- ## Risoluzioni dei nomi:
 		- ### DNS iterativo:
 			- quando il client manda una richiesta che il DNS server non conosce lui manda la richiesta ad un altro server che si trova ad un livello superiore di quello che ha ricevuto la richiesta.
@@ -26,7 +33,7 @@ data: "`2024-11-29 15:33`"
 		- ### DNS ricorsivo:
 			- il client manda la richiesta al server DNS e il server DNS si occupa di fare tutte le richieste necessarie per trovare l'indirizzo IP.
 			- in questo modo si alleggerisce il carico del client.
-			- ![[Untitled 4.webp|350]]
+			- ![[Untitled 4 1.webp|350]]
 	- ## Record DNS:
 		- Visto che il DNS è fondamentalmente un database distribuito con i nomi e gli indirizzi IP associati, ci sono diversi tipi di record DNS che sono chiamati RR(_record di risorse_).
 		- ### I più comuni sono:
