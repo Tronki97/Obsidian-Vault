@@ -56,7 +56,6 @@ data: "`2024-11-27 13:28`"
 			- facendo un grafico sulla sliding window che rappresenta l’andamento del flusso si ottiene un andamento a _dente di sega_ e il valore medio è il valore medio della derivata del segnale.
 		- ## finestra di congestione:
 			- è un intero che rappresenta il max numero di segmenti inviabili prima di sapere che fine hanno fatto i precedenti
-			- 
 	- ## Funzionamento:
 		- consente lo smistamento dei pacchetti verso le rispettive applicazioni in ascolto su “porte”
 		- richiede l’attivazione della connessione _punto-a-punto_ tra due _socket_:
@@ -71,5 +70,6 @@ data: "`2024-11-27 13:28`"
 		- un possibile attacco consiste nello sfruttare la finestra di apertura della sessione quindi continuando a tenere le risorse allocate.
 			- un rimedio potrebbe essere l’implementazione di un garbage collection  
 	- Per rendere TCP sicuro si usa [[Secure socket layer (SSL)|SSL]] 
+- Inoltre il ritardo di ricezione dei pacchetti comporta un sottoutilizzo della rete in quanto ogni host che invia i pacchetti deve attendere che il destinatario risponda con un _ACK_ prima di inviarne altri e in quei momenti di attesa la rete non viene utilizzata.
 - # Link Utili:
 	- 

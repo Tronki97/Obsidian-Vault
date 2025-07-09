@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Tecnologie Web/Progetto/Shell.md",
+                "file": "Flashcard/Flashcard Reti.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Shell"
+              "title": "Flashcard Reti"
+            }
+          },
+          {
+            "id": "be218756a180ef64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "livello Rete"
+            }
+          },
+          {
+            "id": "740e8611372443c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sottoreti.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Sottoreti"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -63,7 +112,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ssh",
+                "query": "classless",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -100,76 +149,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ec4f706417d9f404",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Homepage.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Homepage"
-            }
-          },
-          {
-            "id": "8108372ecfbed318",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Homepage.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Homepage"
-            }
-          },
-          {
-            "id": "eb71e2bccddb387c",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
             "id": "4803e3cd3f4a91ea",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "0-Mostarda/Tecnologie Web.md",
+                "file": "Flashcard/Flashcard Reti.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Tecnologie Web"
-            }
-          },
-          {
-            "id": "887d7b99e2658c7c",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "title": "Struttura di Flashcard Reti"
             }
           },
           {
@@ -183,17 +174,55 @@
             }
           },
           {
-            "id": "4121852fb4cdb5b9",
+            "id": "701d07c75567376b",
             "type": "leaf",
             "state": {
-              "type": "github-copilot-chat-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin non più attivo"
+              "type": "backlink",
+              "state": {
+                "file": "Flashcard/Flashcard Reti.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a Flashcard Reti"
             }
           },
           {
-            "id": "c135cdf899592f5a",
+            "id": "e05915392f4c71f4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Flashcard/Flashcard Reti.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da Flashcard Reti"
+            }
+          },
+          {
+            "id": "a4d50505545a40ca",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "4910fce83df81f0f",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -205,9 +234,29 @@
               "icon": "lucide-archive",
               "title": "Tutte le proprietà"
             }
+          },
+          {
+            "id": "d36d86def90ec5c1",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "5b2fb071f72bff9b",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Coda di note da rivedere"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -230,36 +279,41 @@
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "publish:Pubblica modifiche": false
+      "publish:Pubblica modifiche": false,
+      "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "740e8611372443c5",
   "lastOpenFiles": [
-    "Secondo Anno/Sistemi Operativi/progetto/Process Control Block.md",
-    "Secondo Anno/Sistemi Operativi/progetto/progetto sistemi operativi..md",
-    "immagini/Pasted image 20250701104413.png",
-    "Homepage.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sottoreti.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Instradamento dei pacchetti e Routing.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Indirizzamento IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/DHCP.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
+    "Flashcard/Flashcard Reti.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Crittografia.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza in rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
+    "Primo Anno/architettura degli elaboratori/Rappresentazione dell'informazione/Correzione di errori.md",
+    "Pasted image 20250709125932.png",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Protocollo ICMP.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Protocolli MAC wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Protocollo ARP e RARP.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC-address.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Intro al corso di Reti.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Infrastruttura e collegamenti di rete.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Componenti di rete.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Rete a commutazione di pacchetto.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Livello MAC nelle reti wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Antenne.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
+    "Flashcard",
+    "immagini/Pasted image 20250701104413.png",
     "immagini/Untitled-1 5.webp",
     "immagini/Untitled-1 4.webp",
     "immagini/Untitled-1 3.webp",
@@ -268,10 +322,7 @@
     "immagini/Pasted image 20250701114847.png",
     "immagini/Untitled-1 1.webp",
     "immagini/Pasted image 20250701104439.png",
-    "immagini/Untitled 6 1.webp",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system",
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/tavola_normale.pdf",
@@ -280,7 +331,6 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Introduzione/desktop.ini",
     "Secondo Anno/Calcolo della probabilità e statistica/Introduzione",
     "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

@@ -1,10 +1,11 @@
 ---
-tags: []
+tags: 
 aliases:
   - netmask
   - subnetting
   - classless interdomain routing
   - subnet mask
+  - CIDR
 data: "`2024-11-06 13:11`"
 ---
 - # Argomento:
@@ -19,7 +20,7 @@ data: "`2024-11-06 13:11`"
 	- quindi la parte dei bit che viene rubato è chiamata _sottorete_ 
 	- per capire da quale bit la maschera inizia a rubare bisogna guardare la [[Indirizzamento IPv4#^c84a48|classe di rete]], 
 	- necessita di un indirizzo IP per poter essere definita
-- # Classless interdomain routing:
+- # Classless interdomain routing (CIDR):
 	- un modo semplice per rappresentare una sottorete.
 	- mettere un simbolo e un numero per dire che si sta parlando di una sottorete.
 		- _inserisci esempio_.

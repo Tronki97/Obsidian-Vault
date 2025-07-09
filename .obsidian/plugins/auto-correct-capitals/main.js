@@ -35,38 +35,62 @@ var NUMBERED_LIST_REGEX = /^(\d+)\.\s+(\S+)/;
 var DEFAULT_SETTINGS = {
   exclusionList: [],
   capitalizeListItem: false,
-  capitalizeSentences: false
+  capitalizeSentences: false,
+  abbreviations: ["e.g.", "i.e.", "etc.", "vs."]
 };
 var AutoCorrectPlugin = class extends import_obsidian.Plugin {
   constructor() {
     super(...arguments);
     this.lastKeyWasEnter = false;
-    // Caching fields for protected block check (so that isInProtectedBlock is computed only once per event)
+    this.lastKeyTyped = "";
+    // Cache for protected‑block detection (reset every editor‑change)
     this._lookedForProtectedBlock = false;
     this._isInProtectedBlock = false;
-    // Flag to ignore events caused by our own text replacements.
+    // Ignore events triggered by our own replacements
     this._suppressChangeEvent = false;
+    // Fast look‑up structures derived from settings
+    this.abbreviationsSet = /* @__PURE__ */ new Set();
+    this.exclusionSet = /* @__PURE__ */ new Set();
   }
+  // ──────────────────────────────────────────────────────────────────────
+  // Lifecycle
+  // ──────────────────────────────────────────────────────────────────────
   async onload() {
     console.log("Loading AutoCorrectPlugin");
     await this.loadSettings();
+    this.updateInternalSets();
     this.addSettingTab(new AutoCorrectSettingTab(this.app, this));
-    this.app.workspace.containerEl.addEventListener("keydown", (evt) => {
-      if (evt.key === "Enter") {
-        this.lastKeyWasEnter = true;
-      }
-    }, true);
+    this.app.workspace.containerEl.addEventListener(
+      "keydown",
+      (evt) => {
+        this.lastKeyWasEnter = evt.key === "Enter";
+        this.lastKeyTyped = evt.key;
+      },
+      true
+    );
     this.registerEvent(
       this.app.workspace.on("editor-change", (editor) => {
         this.handleEditorChange(editor);
       })
     );
   }
-  /**
-   * Central editor-change handler.
-   * Checks basic conditions (empty line, trigger) and resets the caching variables.
-   * If the event was triggered by our own change (via doc.replaceRange) it is suppressed.
-   */
+  onunload() {
+    console.log("Unloading AutoCorrectPlugin");
+  }
+  // ──────────────────────────────────────────────────────────────────────
+  // Helpers
+  // ──────────────────────────────────────────────────────────────────────
+  updateInternalSets() {
+    this.abbreviationsSet = new Set(
+      this.settings.abbreviations.map((a) => a.toLowerCase())
+    );
+    this.exclusionSet = new Set(
+      this.settings.exclusionList.map((e) => e.toLowerCase())
+    );
+  }
+  // ──────────────────────────────────────────────────────────────────────
+  // Main event handler
+  // ──────────────────────────────────────────────────────────────────────
   handleEditorChange(editor) {
     if (this._suppressChangeEvent) {
       this._suppressChangeEvent = false;
@@ -74,178 +98,145 @@ var AutoCorrectPlugin = class extends import_obsidian.Plugin {
     }
     const doc = editor.getDoc();
     const cursor = doc.getCursor();
-    let lineNumber = cursor.line;
+    let lineNo = cursor.line;
     const wasEnter = this.lastKeyWasEnter;
     this.lastKeyWasEnter = false;
     this._lookedForProtectedBlock = false;
     this._isInProtectedBlock = false;
-    if (wasEnter && lineNumber > 0) {
-      lineNumber--;
-    }
-    const fullLine = doc.getLine(lineNumber);
-    if (fullLine.length === 0)
+    if (wasEnter && lineNo > 0)
+      lineNo--;
+    const fullLine = doc.getLine(lineNo);
+    if (!fullLine)
       return;
-    const lineUpToCursor = wasEnter ? fullLine : fullLine.substring(0, cursor.ch);
-    const trigger = wasEnter || TRIGGER_CHARS.includes(lineUpToCursor.slice(-1));
+    const trigger = wasEnter || TRIGGER_CHARS.includes(fullLine.substring(0, cursor.ch).slice(-1) || "");
     if (!trigger)
       return;
     if (this.settings.capitalizeListItem) {
-      const trimmedLine = fullLine.trim();
-      if (trimmedLine.startsWith("- ")) {
-        this.correctListItem(editor, fullLine, lineNumber);
-      } else if (NUMBERED_LIST_REGEX.test(trimmedLine)) {
-        this.correctNumberedList(editor, fullLine, lineNumber);
+      const trimmed = fullLine.trim();
+      if (trimmed.startsWith("- ")) {
+        this.correctListItem(editor, fullLine, lineNo);
+      } else if (NUMBERED_LIST_REGEX.test(trimmed)) {
+        this.correctNumberedList(editor, fullLine, lineNo);
       }
     }
-    this.correctWord(editor, fullLine, lineNumber);
+    this.correctWord(editor, fullLine, lineNo);
     if (this.settings.capitalizeSentences) {
-      this.correctSentence(editor, fullLine, lineNumber);
+      this.correctSentence(editor, fullLine, lineNo);
     }
   }
-  /**
-   * Corrects bullet list items.
-   * Ensures that the first word is properly capitalized.
-   * If a correction is to be applied, it first checks if the edit is in a protected block.
-   */
-  correctListItem(editor, line, lineNumber) {
+  // ──────────────────────────────────────────────────────────────────────
+  // Corrections
+  // ──────────────────────────────────────────────────────────────────────
+  correctListItem(editor, line, lineNo) {
     const doc = editor.getDoc();
-    const listItemMatch = line.match(LIST_ITEM_REGEX);
-    if (!listItemMatch)
+    const match = line.match(LIST_ITEM_REGEX);
+    if (!match)
       return;
-    const listWord = listItemMatch[1];
-    const wordStart = line.indexOf(listWord);
-    let firstCorrection = listWord[0] !== listWord[0].toUpperCase();
-    let secondCorrection = listWord.length >= 3 && listWord[0] === listWord[0].toUpperCase() && listWord[1] === listWord[1].toUpperCase() && listWord[2] === listWord[2].toLowerCase();
-    if (!firstCorrection && !secondCorrection)
+    const word = match[1];
+    const wordStart = line.indexOf(word);
+    if (!/^[\p{L}\p{M}]/u.test(word[0]))
       return;
-    if (this.isInProtectedBlock(editor, wordStart, lineNumber))
+    if (this.exclusionSet.has(word.toLowerCase()))
       return;
-    if (firstCorrection && secondCorrection) {
-      const start = wordStart + 1;
-      const end = wordStart + 2;
-      const replacedChar = listWord[1].toLowerCase();
-      this._suppressChangeEvent = true;
-      doc.replaceRange(replacedChar, { line: lineNumber, ch: start }, { line: lineNumber, ch: end });
+    let replacement = word;
+    let changed = false;
+    if (word[0] !== word[0].toUpperCase()) {
+      replacement = word[0].toUpperCase() + word.slice(1);
+      changed = true;
     }
-    if (firstCorrection) {
-      if (this.isInProtectedBlock(editor, wordStart, lineNumber))
-        return;
-      const newWord = listWord[0].toUpperCase() + listWord.slice(1);
-      this._suppressChangeEvent = true;
-      doc.replaceRange(newWord, { line: lineNumber, ch: wordStart }, { line: lineNumber, ch: wordStart + listWord.length });
+    if (word.length >= 3 && word[0] === word[0].toUpperCase() && word[1] === word[1].toUpperCase() && word[2] === word[2].toLowerCase()) {
+      replacement = replacement[0] + replacement[1].toLowerCase() + replacement.slice(2);
+      changed = true;
     }
-    if (secondCorrection) {
-      if (this.isInProtectedBlock(editor, wordStart + 1, lineNumber))
-        return;
-      const start = wordStart + 1;
-      const end = wordStart + 2;
-      const replacedChar = listWord[1].toLowerCase();
-      this._suppressChangeEvent = true;
-      doc.replaceRange(replacedChar, { line: lineNumber, ch: start }, { line: lineNumber, ch: end });
-    }
+    if (!changed || this.isInProtectedBlock(editor, wordStart, lineNo))
+      return;
+    this._suppressChangeEvent = true;
+    doc.replaceRange(
+      replacement,
+      { line: lineNo, ch: wordStart },
+      { line: lineNo, ch: wordStart + word.length }
+    );
   }
-  /**
-   * Corrects numbered list items.
-   * For lines starting with a number, a dot and a space (e.g. "1. hello"), it ensures that the first word is capitalized.
-   */
-  correctNumberedList(editor, line, lineNumber) {
+  correctNumberedList(editor, line, lineNo) {
     const doc = editor.getDoc();
     const match = line.trim().match(NUMBERED_LIST_REGEX);
     if (!match)
       return;
-    const listWord = match[2];
+    const word = match[2];
     const markerLength = match[1].length + 2;
-    const wordStart = line.indexOf(listWord, markerLength);
-    if (!wordStart)
+    const wordStart = line.indexOf(word, markerLength);
+    if (wordStart === -1)
       return;
-    if (listWord[0] !== listWord[0].toUpperCase() && !this.isInProtectedBlock(editor, wordStart, lineNumber)) {
-      const newWord = listWord[0].toUpperCase() + listWord.slice(1);
+    if (!/^[\p{L}\p{M}]/u.test(word[0]))
+      return;
+    if (this.exclusionSet.has(word.toLowerCase()))
+      return;
+    if (this.isInProtectedBlock(editor, wordStart, lineNo))
+      return;
+    if (word[0] !== word[0].toUpperCase()) {
+      const newWord = word[0].toUpperCase() + word.slice(1);
       this._suppressChangeEvent = true;
-      doc.replaceRange(newWord, { line: lineNumber, ch: wordStart }, { line: lineNumber, ch: wordStart + listWord.length });
+      doc.replaceRange(newWord, { line: lineNo, ch: wordStart }, { line: lineNo, ch: wordStart + word.length });
     }
   }
-  /**
-   * Corrects the last word in the line if it matches the pattern (two uppercase letters followed by a lowercase letter).
-   * The protected block check is executed before applying corrections.
-   */
-  correctWord(editor, line, lineNumber) {
+  correctWord(editor, line, lineNo) {
     const doc = editor.getDoc();
-    const lastWordMatch = line.match(LAST_WORD_REGEX);
-    if (!lastWordMatch)
+    const match = line.match(LAST_WORD_REGEX);
+    if (!match)
       return;
-    const lastWord = lastWordMatch[0].trim();
-    const lastWordStart = line.lastIndexOf(lastWord);
-    if (this.settings.exclusionList.includes(lastWord))
+    const word = match[0];
+    if (this.exclusionSet.has(word.toLowerCase()))
       return;
-    if (lastWord.length >= 3 && lastWord[0] === lastWord[0].toUpperCase() && lastWord[1] === lastWord[1].toUpperCase() && lastWord[2] === lastWord[2].toLowerCase()) {
-      if (this.isInProtectedBlock(editor, lastWordStart, lineNumber))
-        return;
-      const start = lastWordStart + 1;
-      const end = lastWordStart + 2;
-      const replacedChar = lastWord[1].toLowerCase();
+    const start = line.lastIndexOf(word);
+    if (word.length >= 3 && word[0] === word[0].toUpperCase() && word[1] === word[1].toUpperCase() && word[2] === word[2].toLowerCase() && !this.isInProtectedBlock(editor, start, lineNo)) {
       this._suppressChangeEvent = true;
-      doc.replaceRange(replacedChar, { line: lineNumber, ch: start }, { line: lineNumber, ch: end });
+      doc.replaceRange(word[1].toLowerCase(), { line: lineNo, ch: start + 1 }, { line: lineNo, ch: start + 2 });
     }
   }
-  /**
-   * Corrects the first letter of the last sentence in the line if it is lowercase.
-   * The protected block check is executed before applying corrections.
-   */
-  correctSentence(editor, line, lineNumber) {
+  correctSentence(editor, line, lineNo) {
     const doc = editor.getDoc();
-    const lastPeriod = line.lastIndexOf(". ");
-    const lastExclamation = line.lastIndexOf("! ");
-    const lastQuestion = line.lastIndexOf("? ");
-    let sentenceStart = Math.max(lastPeriod, lastExclamation, lastQuestion);
-    sentenceStart = sentenceStart !== -1 ? sentenceStart + 2 : 0;
-    const rest = line.slice(sentenceStart);
-    const firstNonSpaceIndex = rest.search(/\S/);
-    if (firstNonSpaceIndex === -1)
-      return;
-    const absIndex = sentenceStart + firstNonSpaceIndex;
-    if (this.isInProtectedBlock(editor, absIndex, lineNumber))
-      return;
-    const charToCheck = line[absIndex];
-    if (charToCheck && charToCheck === charToCheck.toLowerCase() && charToCheck !== charToCheck.toUpperCase()) {
-      const correctedChar = charToCheck.toUpperCase();
+    const sentenceRegex = /(?:^|[.!?]\s+)([a-zäöüß])/gu;
+    let match;
+    while (match = sentenceRegex.exec(line)) {
+      const charIdx = match.index + match[0].length - 1;
+      if (this.isInProtectedBlock(editor, charIdx, lineNo))
+        continue;
+      const prevText = line.substring(0, charIdx).trimEnd();
+      const lastWord = prevText.split(/\s+/).pop();
+      if (lastWord && this.abbreviationsSet.has(lastWord.toLowerCase()))
+        continue;
+      const charToCheck = line[charIdx];
+      if (!/[A-Za-zÄÖÜäöüß]/.test(charToCheck) || this.exclusionSet.has(charToCheck.toLowerCase()))
+        continue;
       this._suppressChangeEvent = true;
-      doc.replaceRange(correctedChar, { line: lineNumber, ch: absIndex }, { line: lineNumber, ch: absIndex + 1 });
+      doc.replaceRange(charToCheck.toUpperCase(), { line: lineNo, ch: charIdx }, { line: lineNo, ch: charIdx + 1 });
     }
   }
-  /**
-   * Combined protected block check.
-   * Checks whether the given position in the current line is within:
-   * 1. A YAML frontmatter block (if the document begins with '---', then until the next '---').
-   * 2. A fenced codeblock (by counting lines that start with "```").
-   * 3. A fenced math block (by counting lines that start with "$$").
-   * 4. Inline code blocks (by counting unescaped backticks).
-   * 5. Inline math blocks (by counting unescaped '$').
-   *
-   * Uses caching so that it is only computed once per editor-change event.
-   */
-  isInProtectedBlock(editor, firstCharacterPosition, lineNumber) {
-    if (this._lookedForProtectedBlock) {
+  // ──────────────────────────────────────────────────────────────────────
+  // Protected‑block detection (YAML, fenced code/math, inline code/math)
+  // ──────────────────────────────────────────────────────────────────────
+  isInProtectedBlock(editor, pos, lineNo) {
+    if (this._lookedForProtectedBlock)
       return this._isInProtectedBlock;
-    }
     const doc = editor.getDoc();
-    const currentLineNumber = lineNumber !== void 0 ? lineNumber : doc.getCursor().line;
-    const line = doc.getLine(currentLineNumber);
+    const currentLine = lineNo !== void 0 ? lineNo : doc.getCursor().line;
+    const line = doc.getLine(currentLine);
     const firstLine = doc.getLine(0).trim();
     if (firstLine === "---") {
       let frontmatterEnd = -1;
-      for (let i = 1; i < currentLineNumber; i++) {
+      for (let i = 1; i < currentLine; i++) {
         if (doc.getLine(i).trim() === "---") {
           frontmatterEnd = i;
           break;
         }
       }
-      if (frontmatterEnd === -1 || currentLineNumber <= frontmatterEnd) {
+      if (frontmatterEnd === -1 || currentLine <= frontmatterEnd) {
         this._isInProtectedBlock = true;
         this._lookedForProtectedBlock = true;
         return true;
       }
     }
-    const linesAbove = doc.getRange({ line: 0, ch: 0 }, { line: currentLineNumber, ch: 0 });
+    const linesAbove = doc.getRange({ line: 0, ch: 0 }, { line: currentLine, ch: 0 });
     const codeBlockMatches = (linesAbove.match(/^```/gm) || []).length;
     if (codeBlockMatches % 2 !== 0) {
       this._isInProtectedBlock = true;
@@ -258,17 +249,15 @@ var AutoCorrectPlugin = class extends import_obsidian.Plugin {
       this._lookedForProtectedBlock = true;
       return true;
     }
-    let backticksCount = 0;
-    let mathCount = 0;
-    for (let i = 0; i < firstCharacterPosition && i < line.length; i++) {
-      if (line[i] === "`" && (i === 0 || line[i - 1] !== "\\")) {
-        backticksCount++;
-      }
-      if (line[i] === "$" && (i === 0 || line[i - 1] !== "\\")) {
-        mathCount++;
-      }
+    let backticks = 0;
+    let dollars = 0;
+    for (let i = 0; i < pos && i < line.length; i++) {
+      if (line[i] === "`" && (i === 0 || line[i - 1] !== "\\"))
+        backticks++;
+      if (line[i] === "$" && (i === 0 || line[i - 1] !== "\\"))
+        dollars++;
     }
-    if (backticksCount % 2 !== 0 || mathCount % 2 === 1) {
+    if (backticks % 2 !== 0 || dollars % 2 !== 0) {
       this._isInProtectedBlock = true;
       this._lookedForProtectedBlock = true;
       return true;
@@ -277,14 +266,15 @@ var AutoCorrectPlugin = class extends import_obsidian.Plugin {
     this._lookedForProtectedBlock = true;
     return false;
   }
-  onunload() {
-    console.log("Unloading AutoCorrectPlugin");
-  }
+  // ──────────────────────────────────────────────────────────────────────
+  // Settings persistence
+  // ──────────────────────────────────────────────────────────────────────
   async loadSettings() {
     this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
   }
   async saveSettings() {
     await this.saveData(this.settings);
+    this.updateInternalSets();
   }
 };
 var AutoCorrectSettingTab = class extends import_obsidian.PluginSettingTab {
@@ -295,25 +285,34 @@ var AutoCorrectSettingTab = class extends import_obsidian.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "AutoCorrect Capitals Misspelling Settings" });
-    new import_obsidian.Setting(containerEl).setName("Exclusion List").setDesc("Add words that should not be corrected (comma separated).").addTextArea(
-      (text) => text.setPlaceholder("comma separated list").setValue(this.plugin.settings.exclusionList.join(", ")).onChange(async (value) => {
-        this.plugin.settings.exclusionList = value.split(",").map((word) => word.trim());
+    containerEl.createEl("h2", { text: "AutoCorrect Plugin Settings" });
+    new import_obsidian.Setting(containerEl).setName("Exclusion List").setDesc("Words that should never be modified (comma separated).").addTextArea(
+      (text) => text.setValue(this.plugin.settings.exclusionList.join(", ")).onChange(async (value) => {
+        this.plugin.settings.exclusionList = value.split(",").map((w) => w.trim());
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian.Setting(containerEl).setName("Capitalize first letter in list").setDesc('If a line starts with "- " or a numbered list (e.g. "1. "), the first letter of the following word will be capitalized.').addToggle(
+    new import_obsidian.Setting(containerEl).setName("Capitalize list items").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.capitalizeListItem).onChange(async (value) => {
         this.plugin.settings.capitalizeListItem = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian.Setting(containerEl).setName("Capitalize sentence beginnings").setDesc("The first letter of the last sentence will be capitalized if it was typed in lowercase.").addToggle(
+    new import_obsidian.Setting(containerEl).setName("Capitalize sentences").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.capitalizeSentences).onChange(async (value) => {
         this.plugin.settings.capitalizeSentences = value;
         await this.plugin.saveSettings();
+        this.display();
       })
     );
+    if (this.plugin.settings.capitalizeSentences) {
+      new import_obsidian.Setting(containerEl).setName("Abbreviations").setDesc("Comma separated list of abbreviations that end with a dot but should not end a sentence.").addTextArea(
+        (text) => text.setValue(this.plugin.settings.abbreviations.join(", ")).onChange(async (value) => {
+          this.plugin.settings.abbreviations = value.split(",").map((w) => w.trim());
+          await this.plugin.saveSettings();
+        })
+      );
+    }
   }
 };
 

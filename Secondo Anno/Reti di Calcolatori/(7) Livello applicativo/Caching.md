@@ -15,5 +15,8 @@ data: "`2024-12-20 13:48`"
 	- La cache lato utente per non doversi interfacciare all'_origin server_ per ogni richiesta.
 	- Il browser manda tutte le richieste a lui, e se può soddisfarle manda lui le risposte, altrimenti vengono mandate, le richieste, all'origin server.
 	- Utile oltre ad accorciare i tempi anche per diminuire il carico sul server originario. 
+- # ES:
+	- Se un proxy può soddisfare metà delle richieste vuol dire che un browser per ottenere una risposta impiegherà il tempo per far arrivare la richiesta al proxy, mentre se non può soddisfarla dovrà interfacciarsi all'origin il che impiegherà più tempo.  
+	- $$X*9ms + (1-X)*309ms=97ms \implies X(9 - 309) = 97 -309 \implies X= \frac{212}{300}=70,7\%$$
 - # Link Utili:
 	- 
