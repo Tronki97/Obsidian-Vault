@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Flashcard/Flashcard Reti.md",
+                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Flashcard Reti"
+              "title": "Reti Wireless"
             }
           },
           {
-            "id": "be218756a180ef64",
+            "id": "c0bf6bf8fb8d38f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
+                "file": "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "livello Rete"
+              "title": "ad-hoc"
             }
           },
           {
-            "id": "740e8611372443c5",
+            "id": "0ace1b5f4e63e71c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sottoreti.md",
+                "file": "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,82 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Sottoreti"
+              "title": "time domain first"
+            }
+          },
+          {
+            "id": "8dec74687ea62f3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Modulazione"
+            }
+          },
+          {
+            "id": "c6c1cb47537bb924",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Il Livello fisico"
+            }
+          },
+          {
+            "id": "6106a9a43c520ace",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Livello applicazione"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -112,7 +183,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "classless",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -133,8 +204,7 @@
               "title": "Segnalibri"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -283,35 +353,35 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "740e8611372443c5",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Instradamento dei pacchetti e Routing.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Indirizzamento IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/DHCP.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
     "Flashcard/Flashcard Reti.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Crittografia.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza in rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
-    "Primo Anno/architettura degli elaboratori/Rappresentazione dell'informazione/Correzione di errori.md",
-    "Pasted image 20250709125932.png",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Protocollo ICMP.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Protocolli MAC wireless.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Livello MAC nelle reti wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Protocolli MAC wireless.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/HTTP.md",
+    "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
+    "Homepage.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Indirizzamento IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Protocollo ICMP.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sottoreti.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
+    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Instradamento dei pacchetti e Routing.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/DHCP.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
+    "Pasted image 20250709125932.png",
     "Flashcard",
     "immagini/Pasted image 20250701104413.png",
     "immagini/Untitled-1 5.webp",

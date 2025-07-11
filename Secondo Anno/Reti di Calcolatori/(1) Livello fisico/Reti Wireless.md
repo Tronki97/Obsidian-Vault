@@ -94,7 +94,7 @@ data: "`2025-03-31 11:14`"
     - ## ES:
 	    - Segnale trasmesso a $TX=100mW$ è ricevuto a $RX=0.000005mW$
 	    - Quindi la differenza di potenza in $dB$ = $10*\log_{10}\left( \frac{RX}{TX} \right)=10*(-7.3)=-73dB$
-	    - Quindi il segnale partito con una potenza di $10mW$ arriva con un gain di $-73dB$.
+	    - Quindi il segnale partito con una potenza di $100mW$ arriva con un gain di $-73dB$.
 	- ## N.B:
 		- Un guadagno di $3dB$ vuol dire un raddoppiamento della potenza 
 		- Un guadagno di $10dB$ vuol dire un $*10$ della potenza 

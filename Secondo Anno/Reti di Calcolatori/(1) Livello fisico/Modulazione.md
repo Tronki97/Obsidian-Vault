@@ -36,11 +36,14 @@ data: "`2025-07-01 12:18`"
 	- ## BPSK:
 		- Si hanno codifiche diverse per opposizioni di fase (0 e 1) sfrutta però poco lo spettro.
 	- ## QPSK:
-		- Codifica in 4 fasi (00, 01, 10, 11) ma è più facilmente mal interpretabile.
+		- Codifica in 4 fasi (00, 01, 10, 11), _2 bit al secondo_ ma è più facilmente mal interpretabile.
 		- Si potrebbe ricondurre ad un tiro al bersaglio che in base al quadrante in cui cade lo si riconduce ad uno dei 4 simboli, aumentando l'area associata ad un simbolo si diminuisce la probabilità di errore ma si spreca più banda.
 		- La cosa migliore sarebbe minimizzare il numero di bit diversi in fasi vicine così in caso di errore i bit errati sono il numero minore possibile questo numero dovrebbe essere 1 perché:
 			- Si usa come [[Correzione di errori#^2d37e7|Bit di parità]]
 			- ![[Untitled-1 2.webp]]
+		- ### Calcolo di trasmissione:
+			- Avendo un symbol rate: ($\frac{sym}{s}$) e il numero di simboli per la codifica si può calcolare il tempo di trasmissione:
+				- $$\text{symbol rate}\left( \frac{sym}{s} \right) \ *  \ \text{bit/sym}= \frac{b}{s}$$
 	- ## QAM:
 		- Combinazione di modulazione di ampiezza e fase del segnale per ogni simbolo trasmesso; 
 		- Es. 16-QAM (16 symbols, 1 symbol = 4 bit)

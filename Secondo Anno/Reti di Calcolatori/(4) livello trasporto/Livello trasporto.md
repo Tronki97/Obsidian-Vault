@@ -42,7 +42,7 @@ data: "`2024-11-27 13:28`"
 			- controllo della dimensione e velocità.
 			- la sliding window viene usata anche per capire quanti segmenti può inviare il mittente che possano essere smaltiti dal destinatario quindi il mittente invia il minimo tra la _sliding window_ per il _flusso_ e per la _congestione_.
 		- ## Gestione congestione:
-			- il non riuscire a smaltire i pacchetti di dati in uscita e in arrivo e quindi si accumulano sul buffer 
+			- il router non riuscire a smaltire i pacchetti di dati in uscita e in arrivo e quindi si accumulano sul buffer 
 			- controllo della velocità di invio dei segmenti.
 			- quindi il router mittente per prevenire la congestione deve regolarsi per mandare meno pacchetti per regolarizzare il traffico.
 	- _questi due controlli sono garantiti da un meccanismo chiamato_:
