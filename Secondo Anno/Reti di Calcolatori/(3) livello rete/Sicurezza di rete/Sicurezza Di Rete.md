@@ -36,6 +36,3 @@ data: "`2025-02-17 20:26`"
 		+ Queste funzioni hanno degli algoritmi semplici per criptare il messaggio, ma algoritmi molto costosi e lenti per la decriptazione del messaggio.
 	+ Il mittente e il destinatario condividono rispettivamente una _chiave di criptazione e una di decriptazione_.
 		+ In questo modo, il messaggio può essere cifrato e decifrato solamente da queste due macchine e da nessun altro.
-	- 
-- # Link Utili:
-	- # LA SICUREZZA NON ESISTE - RENZO DAVOLI 

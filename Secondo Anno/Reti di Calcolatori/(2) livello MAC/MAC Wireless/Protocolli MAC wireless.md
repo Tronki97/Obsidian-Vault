@@ -3,7 +3,7 @@ tags: []
 aliases: 
 data: "`2025-06-27 12:17`"
 ---
-- # Argomento:
+- # Protocolli MAC wireless:
 	- Quando avvengono collisioni dei segnali si creano vari problemi per il ricevitore:
 		- Si spreca potenza e canale il quale viene occupato per una trasmissione fallita.
 	- Nelle reti cablate le collisioni vengono gestite facilmente.
@@ -12,5 +12,3 @@ data: "`2025-06-27 12:17`"
 	- _dominio di collisione_: insieme di nodi che condividono lo stesso canale di comunicazione.
 	- ![[Untitled 6.webp|600]]
 		- Classificazione dei protocolli wireless.
-- # Link Utili:
-	- 

@@ -17,6 +17,5 @@ data: "`2024-10-23 13:23`"
 	- _IPv6_: quello che si userà in futuro, visto che si necessitano di più indirizzi IP ($2^{128}$) 
 - # Rete GARR
 	- infrastruttura di comunicazione per reti pubbliche: pubblica amministrazione, istituti di ricerca.
-	- 
 - # Link Utili:
 	- https://gins.garr.it/Statistics/x_siteservice_select.php

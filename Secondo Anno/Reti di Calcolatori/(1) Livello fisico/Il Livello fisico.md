@@ -12,7 +12,7 @@ aliases:
   - frequency planning
 data: "`2024-10-11 13:48`"
 ---
-- # Intro:
+- # Il livello Fisico:
 	- Lo spettro radio è compreso tra $100kHz$ e $100GHz$
 	- Tra $1.8 \ e\ 2.4GHz$ c'è il _dualband_ tra $2.4 \ e\ 5$ c'è il Wi-Fi e il Bluetooth.
 	- La differenza tra le varie tecnologie è la frequenza di trasmissione che implica una comunicazione di più o meno bit al secondo.
@@ -103,5 +103,3 @@ data: "`2024-10-11 13:48`"
 	- Il segnale da inviare si ottiene facondo lo XOR tra la chipping sequence e il messaggio.
 	- Si sovrappongono i segnali e si sommano le componenti.
 	- Dal segnale risultante si si estrae quello desiderato applicando la chiave giusta e se è positivo o negativo si risale a quale fosse il bit originale.
-- # Link Utili:
-	- 

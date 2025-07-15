@@ -23,7 +23,6 @@ data: "`2024-11-06 13:11`"
 - # Classless interdomain routing (CIDR):
 	- un modo semplice per rappresentare una sottorete.
 	- mettere un simbolo e un numero per dire che si sta parlando di una sottorete.
-		- _inserisci esempio_.
 - # Supernetting:
 	- operazione contraria al subnetting che consiste nel regalare bit della rete all’host 
 	- quindi fondendo diverse reti
@@ -31,7 +30,7 @@ data: "`2024-11-06 13:11`"
 	- quando si va ad allocare dello spazio per gli host è importante assegnare lo spazio a partire dall’alto e dal blocco più grande. Tutto questo per evitare la frammentazione.
 		- questo perché il subnetting funziona dai bit più significativi.
 - # Esercizio:
-	- ![[Pasted image 20241113151121.png]]
+	- ![[Pasted image 20241113151121.png||350]]
 		- 1) so che la rete a disposizione è : $130.136 \ \ \ / 16$ ovvero ho a disposizione tutta la rete.
 		- 2) parto dalla sottorete più bassa con il più grande numero di host. _(IP2-B)_
 			- devo allocare 140 host quindi mi servono 256-2 spazi (siccome 128 non bastano) ovvero 8 bit (l’ultimo byte) 
@@ -54,5 +53,3 @@ data: "`2024-11-06 13:11`"
 		- 6) progetto la rete IP3:
 			- contiene 4 host
 			- necessita di 8 spazi quindi 3 bit di host con una subnet mask di 13 bit rendendola di tipo $/ 29$ 
-- # Link Utili:
-	- 

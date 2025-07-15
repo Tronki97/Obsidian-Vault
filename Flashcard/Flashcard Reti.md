@@ -80,6 +80,13 @@ Quali sono le ragioni della perdita di pacchetti al livello rete? Esiste un modo
 La perdita dei pacchetti può avvenire a casua della congestione dei router dove i pacchetti si accumulano sul buffer di ricezione fino a portarlo all'overflow,  con quelli in eccesso che vengono cestinati. 
 Per gestire pacchetti in base alla loro priorità si possono usare code con priorità 
 
+A cosa servono gli indirizzi di Broadcast a livello MAC e livello
+Rete? Non basterebbe disporre dell’indirizzo di Broadcast solo a livello
+MAC o solo a livello Rete?
+?
+Solo a livello rete non basterebbe visto che non si possiederebbe l'indirizzo MAC a cui inviare il pacchetto.
+Solo a livello MAC non si riuscirebbe ad inviare il pacchetto ad una subnet distante. 
+
 # Livello trasporto
 Perché il ritardo di ricezione di pacchetti su Internet ha effetti sull’efficacia di
 Utilizzo percentuale della rete?
@@ -98,6 +105,11 @@ Rendono diversi il controllo di flusso e il controllo di congestione?
 Il controllo di flusso e di congestione sono implementati a livello trasporto, servono per garantire un buono smaltimento dei dati da parte dei router, viene implementato dal TCP.
 Il controllo di flusso permette di regolare la velocità con cui vengono mandati i pacchetti e quanti ne vengono mandati per regolarsi e capire quanti il router di destinazione riesce a smaltirne.
 Il controllo della congestione serve per non sovraccaricare la rete, perché nel caso vengano inviati troppi dati che non riescono a venir processati dal router se altri pacchetti necessitano di passare per quel router, verranno persi.
+
+Cosa sono le fasi di Slow start e congestion avoidance in TCP e a cosa servono?
+?
+La fase di slow start è quel momento in cui si cerca di capire quanto può essere grande la finestra di trasferimento di dati nella quale si mandano pacchetti di dati sempre crescenti nell'attesa di un ACK 
+Mentre Congestion avoidance è la fase in cui si aumenta gradualmente la velocità trasmissione dei pacchetti per cercare di evitare il punto di congestione della rete.
 
 # Livello applicazione
 Quali differenze ci sono tra Authoritative e Top-Level Domain DNS servers?

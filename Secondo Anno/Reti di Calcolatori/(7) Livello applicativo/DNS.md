@@ -6,7 +6,7 @@ aliases:
   - record DNS
 data: "`2024-11-29 15:33`"
 ---
-- # intro:
+- # DNS:
 	- gli utenti invece di andare a scrivere l’indirizzo [[Indirizzamento IPv4|IP]] scrivono un nome perché più facilmente ricordabile.
 	- però le macchine necessitano di un indirizzo IP e per riuscire a ricavare questo indirizzo dal nome si interroga un _server DNS_.
 	- ha un protocollo chiamato _DNS_ che in base ad un nome restituisce un indirizzo IP.
@@ -33,7 +33,7 @@ data: "`2024-11-29 15:33`"
 		- ### DNS ricorsivo:
 			- il client manda la richiesta al server DNS e il server DNS si occupa di fare tutte le richieste necessarie per trovare l'indirizzo IP.
 			- in questo modo si alleggerisce il carico del client.
-			- ![[Untitled 4 1.webp|350]]
+			- ![[DNS Ricorsivo.webp||350]]
 	- ## Record DNS:
 		- Visto che il DNS è fondamentalmente un database distribuito con i nomi e gli indirizzi IP associati, ci sono diversi tipi di record DNS che sono chiamati RR(_record di risorse_).
 		- ### I più comuni sono:
@@ -69,5 +69,3 @@ data: "`2024-11-29 15:33`"
 - # Importante:
 	- _non è necessario avere il DNS per poter navigare su internet_ ma è molto più comodo.
 	- DNS sfrutta principalmente [[Livello trasporto#^bd8258|UDP]] per le richieste quando invece un pacchetto di risposta è troppo grande oppure ci sono fallimenti nelle richieste viene impiegato il [[Livello trasporto#^157bc5|TCP]].
-- # Link Utili:
-	- 

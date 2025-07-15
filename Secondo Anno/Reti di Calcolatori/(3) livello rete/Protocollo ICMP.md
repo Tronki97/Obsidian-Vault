@@ -23,5 +23,3 @@ data: "`2024-11-15 13:44`"
 	- ## Traceroute:
 	    - è un programma che permette di verificare il percorso di un pacchetto da un host a un altro.
 	    - questo percorso non è sempre lo stesso, cambia in base al carico di lavoro dei router.
-- # Link Utili:
-	- 

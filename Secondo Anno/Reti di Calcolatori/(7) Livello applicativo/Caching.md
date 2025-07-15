@@ -18,5 +18,3 @@ data: "`2024-12-20 13:48`"
 - # ES:
 	- Se un proxy può soddisfare metà delle richieste vuol dire che un browser per ottenere una risposta impiegherà il tempo per far arrivare la richiesta al proxy, mentre se non può soddisfarla dovrà interfacciarsi all'origin il che impiegherà più tempo.  
 	- $$X*9ms + (1-X)*309ms=97ms \implies X(9 - 309) = 97 -309 \implies X= \frac{212}{300}=70,7\%$$
-- # Link Utili:
-	- 

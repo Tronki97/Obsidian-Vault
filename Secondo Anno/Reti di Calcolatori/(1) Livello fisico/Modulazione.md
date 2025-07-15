@@ -36,7 +36,7 @@ data: "`2025-07-01 12:18`"
 	- ## BPSK:
 		- Si hanno codifiche diverse per opposizioni di fase (0 e 1) sfrutta però poco lo spettro.
 	- ## QPSK:
-		- Codifica in 4 fasi (00, 01, 10, 11), _2 bit al secondo_ ma è più facilmente mal interpretabile.
+		- Codifica in 4 fasi (00, 01, 10, 11), _2 bit per simbolo_ ma è più facilmente mal interpretabile.
 		- Si potrebbe ricondurre ad un tiro al bersaglio che in base al quadrante in cui cade lo si riconduce ad uno dei 4 simboli, aumentando l'area associata ad un simbolo si diminuisce la probabilità di errore ma si spreca più banda.
 		- La cosa migliore sarebbe minimizzare il numero di bit diversi in fasi vicine così in caso di errore i bit errati sono il numero minore possibile questo numero dovrebbe essere 1 perché:
 			- Si usa come [[Correzione di errori#^2d37e7|Bit di parità]]
@@ -55,5 +55,3 @@ data: "`2025-07-01 12:18`"
 		- Ogni area grigia contiene 16 simboli (i vari punti) utilizzati per codificare la sequenza a priorità minore
 		- Ogni quadrante invece è etichettato con una sequenza di due bit, quelli a priorità alta 
 		- Quando il canale ha poco rumore, si tende ad avere errori solo sulla parte a bassa priorità, chiaramente se il rumore aumenta è compromessa anche la codifica a priorità alta
-- # Link Utili:
-	- 

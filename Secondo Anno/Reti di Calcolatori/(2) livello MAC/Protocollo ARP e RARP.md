@@ -35,6 +35,4 @@ data: "`2024-11-20 14:04`"
 	- permette di associare un indirizzo MAC ad un indirizzo IP.
 	- Funziona in maniera analoga all’ARP ma al contrario.
 - # Considerazioni:
-	- Le informazioni delle associazioni IP-MAC e viceversa sono memorizzate in una [[Cache]] all’interno del router quindi questi due protocolli sono usati sporadicamente.
-- # Link Utili:
-	- 
+	- Le informazioni delle associazioni IP-MAC e viceversa sono memorizzate in una [[Cache]] 

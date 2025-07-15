@@ -11,7 +11,7 @@ aliases:
   - FAMA
 data: "`2025-06-28 11:40`"
 ---
-- # Argomento:
+- # Protocolli space domain:
 	-  Si basa sulla separazione spaziale dei canali di comunicazione.
 	- C'è enfasi sulla distribuzione dei nodi, copertura del segnale riduzione interferenza e massimizzare l'efficienza spaziale.
 	- ## Problema dei terminali nascosti:
@@ -43,5 +43,3 @@ data: "`2025-06-28 11:40`"
 			- Ha il _backoff_ adattivo per regolare dinamicamente la lunghezza del ritardo nella ritrasmissione dei dati in caso di collisioni.
 	- ## FAMA:
 		- Usa una versione di RTS/CTS _slotted_ con _carrier sense_ e ACK dove il carrier sense agisce prime dell'_RTS_
-- # Link Utili:
-	- 

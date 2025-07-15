@@ -43,7 +43,7 @@ data: "`2025-02-25 17:00`"
 		- per evitare ciò si aggiunge un campo di _type.
 			- ![[Pasted image 20250225172924.png]]
 			- $$MAC=MAC(M_{X}, \text{sequence||type||data})$$
-	-  ![[Pasted image 20250225173051.png]]
+	-  ![[Pasted image 20250225173051.png||400]]
 - # Real SSL:
 	- ## Handshaking:
 		- 1. Il client manda una lista di algoritmi che supporta insieme al _nonce_.
@@ -55,7 +55,7 @@ data: "`2025-02-25 17:00`"
 		- 6. Il server manda un MAC di tutti i messaggi handshake
 		- Generare i due _nonce_ permette di evitare che l’attaccante possa registrare i messaggi e poi mandarli in un secondo momento.
 	- ## Record:
-		- ![[Pasted image 20250626134628.png|600]]
+		- ![[Pasted image 20250626134628.png|500]]
 			- Nell'header c'è il _tipo_ del contenuto, la _versione_ e la _lunghezza_.
 			- MAC contiene i numeri di sequenza e la MAC key $M_{X}$
 			- _Fragment_ è composto da $2^{14}$ bytes ovvero $16KB$
@@ -64,13 +64,13 @@ data: "`2025-02-25 17:00`"
 	- per evitare ciò si usa una VPN che cifra tutto il traffico e quindi l’attaccante non può fare spoofing.
 	- le stesse VPN usano IPsec 
 	- Gli IP rimangono visibili esternamente per garantire il traffico di dati attraverso i router ma esiste comunque una parte cifrata con i veri indirizzi IP. 
-	- ![[Pasted image 20250627115039.png|700]]
+	- ![[Pasted image 20250627115039.png|500]]
 - # Ipsec
 	- Ha due modalità di funzionamento:
 		- Trasporto dove il datagramma è emesso e ricevuto da un sistema finale e protegge i protocolli di livello superiore.
-			- ![[Pasted image 20250627120824.png|600]]
+			- ![[Pasted image 20250627120824.png|500]]
 		- Tunneling:
-			- ![[Pasted image 20250627120853.png|600]]
+			- ![[Pasted image 20250627120853.png|500]]
 	- utilizza due protocolli:
 		- ## AH (authentication header):
 			- autentica i pacchetti IP e quindi verifica che non siano stati modificati. 
@@ -78,5 +78,3 @@ data: "`2025-02-25 17:00`"
 		- ## ESP (encapsulation security protocol):
 			- cifra i pacchetti IP e quindi garantisce la privacy, [[Sicurezza Di Rete#^cb41ce|integrità]] e [[autenticazione]].
 			- Più usato rispetto ad _AH_
-- # Link Utili:
-	- 

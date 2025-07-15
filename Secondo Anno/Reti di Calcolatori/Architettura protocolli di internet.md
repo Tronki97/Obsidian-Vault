@@ -17,6 +17,3 @@ data: "`2024-10-09 13:13`"
 			- capire se il pacchetto dati sia arrivato o meno
 		- per capire a quale delle applicazioni inviare i dati dal livello più basso serve sapere il numero di _porta_ connesso. 
 		- _socket_: contiene indirizzo IP e numero di porta
-	- 
-- # Link Utili:
-	- 

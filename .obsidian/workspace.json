@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,127 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Reti Wireless"
-            }
-          },
-          {
-            "id": "c0bf6bf8fb8d38f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "ad-hoc"
-            }
-          },
-          {
-            "id": "0ace1b5f4e63e71c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "time domain first"
-            }
-          },
-          {
-            "id": "8dec74687ea62f3e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Modulazione"
-            }
-          },
-          {
-            "id": "c6c1cb47537bb924",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Il Livello fisico"
-            }
-          },
-          {
-            "id": "6106a9a43c520ace",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Livello applicazione"
+              "title": "Gestione della memoria"
             }
           }
         ]
@@ -353,45 +233,44 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Il Livello fisico.md",
-    "Flashcard/Flashcard Reti.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
+    "DNS Ricorsivo.webp",
+    "Cookies.webp",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione risorse.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Grafo di Holt.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Threads.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduling.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo/Richiami Di Architettura.md",
     "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Mezzo fisico di trasmissione.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Livello MAC nelle reti wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Protocolli MAC wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
-    "Secondo Anno/Tecnologie Web/HTTP & REST/HTTP.md",
-    "Secondo Anno/Tecnologie Web/HTTP & REST/Approfondimenti su HTTP.md",
     "Homepage.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Indirizzamento IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Protocollo ICMP.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sottoreti.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Instradamento dei pacchetti e Routing.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/DHCP.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Working set.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Thrashing.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Memoria virtuale.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Allocazione della memoria.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
+    "Secondo Anno/Reti di Calcolatori/Architettura protocolli di internet.md",
+    "Secondo Anno/Reti di Calcolatori/Architettura standard dei protocolli.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "Pasted image 20250709125932.png",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
+    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza in rete.md",
+    "Pasted image 20250714163612.png",
+    "immagini/Pasted image 20250709125932.png",
+    "immagini/NAT1.webp",
+    "immagini/NAT2.webp",
     "Flashcard",
     "immagini/Pasted image 20250701104413.png",
     "immagini/Untitled-1 5.webp",
     "immagini/Untitled-1 4.webp",
     "immagini/Untitled-1 3.webp",
-    "immagini/Untitled-1 2.webp",
-    "immagini/Untitled-1 1 1.webp",
-    "immagini/Pasted image 20250701114847.png",
-    "immagini/Untitled-1 1.webp",
-    "immagini/Pasted image 20250701104439.png",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system",
