@@ -17,7 +17,7 @@ aliases:
   - fresnel zone
 data: "`2025-03-31 11:14`"
 ---
-- # Argomento:
+- # Reti wireless:
     - Tutti i classici protocolli spesso ricevono dei side-effect da queste reti e quindi necessitano di aggiustamenti. Side
     - _Un'onda radio si ottiene facendo passare della corrente alternata in un filo conduttore_, ottenendo così un campo elettromagnetico. Questa onda è definita da una sinusoidale onde.
         - L'energia è proporzionale alla carica elettrica che si sposta nel filo.
@@ -33,7 +33,7 @@ data: "`2025-03-31 11:14`"
     - ## Area di copertura della propagazione radio:
         - Rappresenta il raggio di copertura di un'antenna, cioè fino a quando quell'antenna riesce a trasmettere e ricevere il segnale.
         - Presenta una legge di decadimento del segnale radio che è proporzionale al quadrato della distanza. A volte, a causa delle condizioni ambientali, questo decadimento può variare fino al cubo della distanza o anche di più.
-            - ![[Pasted image 20250402101053.png|400]]
+            - ![[Pasted image 20250402101053.png|200]]
         - ### Raggio di trasmissione:
             - Dove il segnale è ancora leggibile.
             - Dove c'è un basso errore nella lettura del segnale.
@@ -43,7 +43,7 @@ data: "`2025-03-31 11:14`"
         - ### Raggio di interferenza:
             - Dove il segnale potrebbe non essere rilevato.
             - Dove il segnale potrebbe essere disturbato dal rumore di fondo.
-        - ![[Pasted image 20250402101341.png|450]]
+        - ![[Pasted image 20250402101341.png|250]]
     - ## Shadowing:
         - Quando un ostacolo impedisce all'energia di passare come fosse nel vuoto, come un muro. Il segnale appena si imbatte in quell'ostacolo viene riflesso e quindi perde energia, che di solito diventa calore.
         - Alte frequenze sono adatte per le trasmissioni a breve distanza e vengono influenzate dagli ostacoli. Tuttavia, permettono di trasmettere più bit al secondo.
@@ -94,7 +94,7 @@ data: "`2025-03-31 11:14`"
     - ## ES:
 	    - Segnale trasmesso a $TX=100mW$ è ricevuto a $RX=0.000005mW$
 	    - Quindi la differenza di potenza in $dB$ = $10*\log_{10}\left( \frac{RX}{TX} \right)=10*(-7.3)=-73dB$
-	    - Quindi il segnale partito con una potenza di $10mW$ arriva con un gain di $-73dB$.
+	    - Quindi il segnale partito con una potenza di $100mW$ arriva con un gain di $-73dB$.
 	- ## N.B:
 		- Un guadagno di $3dB$ vuol dire un raddoppiamento della potenza 
 		- Un guadagno di $10dB$ vuol dire un $*10$ della potenza 
@@ -123,10 +123,10 @@ data: "`2025-03-31 11:14`"
 - # Grafici Importanti:
     - ## Grafico di Azimuth: 
 	    - rappresenta il segnale in dB attorno all'antenna, misurato nelle 4 direzioni cardinali. Un dipolo avrà un grafico di _Azimuth_ quasi circolare perché è omni-direzionale.
-	    - ![[Pasted image 20250701104413.png|350]]
+	    - ![[Pasted image 20250701104413.png|150]]
     - ## Grafico di Elevazione: 
 	    - uguale al grafico di Azimuth, ma parte da sopra l'antenna e ci gira intorno, quindi a destra, sotto e a sinistra.
-	    - ![[Pasted image 20250701104439.png|350]]
+	    - ![[Pasted image 20250701104439.png|150]]
 - # Path Loss:
     - È espresso in dB e rappresenta una stima pessimistica della dispersione sulla base della distanza e della frequenza. La formula da ricordare è:
     - $$ PL = 36.6 + 20 \log_{10}(F) + 20 \log_{10}(D) $$
@@ -148,5 +148,3 @@ data: "`2025-03-31 11:14`"
 		- Ciò significa che il segnale ha un margine di 32 dB prima che diventi non disponibile.
 	- ## Fade margin:
 		- Del margine extra per il link budget (di solito nell’ordine dei $[+10...+20]dB$). 
-- # Link Utili:
-	- 

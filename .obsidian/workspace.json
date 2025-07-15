@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Flashcard/Flashcard Reti.md",
+                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Flashcard Reti"
-            }
-          },
-          {
-            "id": "be218756a180ef64",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "livello Rete"
-            }
-          },
-          {
-            "id": "740e8611372443c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sottoreti.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Sottoreti"
+              "title": "Gestione della memoria"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -112,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "classless",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -133,8 +84,7 @@
               "title": "Segnalibri"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -283,45 +233,45 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "740e8611372443c5",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/livello Rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IPv6 e tunneling IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Instradamento dei pacchetti e Routing.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Indirizzamento IPv4.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/DHCP.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
-    "Flashcard/Flashcard Reti.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Crittografia.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza in rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
-    "Primo Anno/architettura degli elaboratori/Rappresentazione dell'informazione/Correzione di errori.md",
-    "Pasted image 20250709125932.png",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Protocollo ICMP.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione risorse.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Grafo di Holt.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Threads.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduling.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo/Richiami Di Architettura.md",
+    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
+    "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Working set.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Thrashing.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Memoria virtuale.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Allocazione della memoria.md",
+    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
+    "Secondo Anno/Reti di Calcolatori/Architettura protocolli di internet.md",
+    "Secondo Anno/Reti di Calcolatori/Architettura standard dei protocolli.md",
     "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Protocolli MAC wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/Livello MAC nelle reti wireless.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Topologia di rete.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Servizi orientati alla comunicazione e non.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
+    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
+    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza in rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure socket layer (SSL).md",
+    "Pasted image 20250714163612.png",
+    "Cookies.webp",
+    "DNS Ricorsivo.webp",
+    "immagini/Pasted image 20250709125932.png",
+    "immagini/NAT1.webp",
+    "immagini/NAT2.webp",
     "Flashcard",
     "immagini/Pasted image 20250701104413.png",
     "immagini/Untitled-1 5.webp",
     "immagini/Untitled-1 4.webp",
     "immagini/Untitled-1 3.webp",
-    "immagini/Untitled-1 2.webp",
-    "immagini/Untitled-1 1 1.webp",
-    "immagini/Pasted image 20250701114847.png",
-    "immagini/Untitled-1 1.webp",
-    "immagini/Pasted image 20250701104439.png",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system",

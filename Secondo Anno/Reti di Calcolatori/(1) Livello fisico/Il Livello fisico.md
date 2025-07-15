@@ -12,7 +12,7 @@ aliases:
   - frequency planning
 data: "`2024-10-11 13:48`"
 ---
-- # Intro:
+- # Il livello Fisico:
 	- Lo spettro radio è compreso tra $100kHz$ e $100GHz$
 	- Tra $1.8 \ e\ 2.4GHz$ c'è il _dualband_ tra $2.4 \ e\ 5$ c'è il Wi-Fi e il Bluetooth.
 	- La differenza tra le varie tecnologie è la frequenza di trasmissione che implica una comunicazione di più o meno bit al secondo.
@@ -27,9 +27,8 @@ data: "`2024-10-11 13:48`"
 		- La velocità dei segnali è fissa siccome viaggiano sullo spettro elettromagnetico andando (quasi) a quella della luce
 		- Capacità del canale di trasmissione ovvero: il numero massimo di bit al secondo trasmissibili. Ciò che la determina è la lunghezza del canale su cui viaggiano i dati che quindi è l'indice del tempo di descrizione di ogni bit.
 			- Quindi la limitazione nel trasferire le informazioni spesso è delimitata dalla _capacità di leggerle piuttosto che dal trasferirle_. 
-		- ## Throughput:  ^e 14 f 6 f
+		- ## Throughput:  ^e14f6f
 			- L'indice che dice quanti _b/s puri di sola informazione_ riesci a trasmettere sul canale 
-	- 
 - # Tipi di canale:
 	- ## Narrow band:
 		- C'è una sola radiofrequenza concordata per comunicare.
@@ -71,6 +70,8 @@ data: "`2024-10-11 13:48`"
 			- ![[Untitled-1 5.webp]]
 			- Un canale OFDM ospita da 128 to 2048 sub-carriers, per una larghezza di banda di conseguenza variabile tra 1.25 MHz e 20 Mhz
 			- Questi segnali sovrapposti sono ortogonali tra loro e quindi non si disturbano.
+			- Permette di trasmettere $250.000$ simboli al secondo
+			- _convoluzione_: rappresenta quanti subcarrier vengono usati effettivamente per trasferire dati.
 	- ## Time multiplexing:
 		- Un canale si prende tutto lo spettro per un certo periodo di tempo.
 		- C'è solo un portatore del medium alla volta e il throughput è alto anche per molti utenti.
@@ -102,5 +103,3 @@ data: "`2024-10-11 13:48`"
 	- Il segnale da inviare si ottiene facondo lo XOR tra la chipping sequence e il messaggio.
 	- Si sovrappongono i segnali e si sommano le componenti.
 	- Dal segnale risultante si si estrae quello desiderato applicando la chiave giusta e se è positivo o negativo si risale a quale fosse il bit originale.
-- # Link Utili:
-	- 

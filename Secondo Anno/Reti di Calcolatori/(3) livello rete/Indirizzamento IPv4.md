@@ -54,5 +54,3 @@ data: "`2024-10-25 13:24`"
 			- da $192.0.0$ a $223.255.255$ 
 		- $256$ host rappresentabili _meno gli host $0$ e $1$ _ quindi un totale di $254$ 
 	- ![[Untitled 5 1.webp]]
-- # Link Utili:
-	- 

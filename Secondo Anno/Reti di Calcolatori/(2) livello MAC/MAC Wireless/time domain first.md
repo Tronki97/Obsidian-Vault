@@ -8,7 +8,7 @@ aliases:
   - backoff
 data: "`2025-06-28 11:39`"
 ---
-- # Argomento:
+- # Protocolli time domain:
 	-   il tempo è la dimensione primaria utilizzata per organizzare e gestire le trasmissioni dei dati
 	- Si fa maggior enfasi su controllo della latenza, ritardo e la sincronizzazione delle trasmissioni.
 	- ## ALOHA:
@@ -31,5 +31,3 @@ data: "`2025-06-28 11:39`"
 		- Il tempo di vulnerabilità è 2 volte il delay della propagazione; con gli slot sarebbe uguale al delay della propagazione.
 	- ![[Untitled 1 3.webp]]
 		- Analisi del [[Il Livello fisico#^e14f6f|throughput]] dei 3 algoritmi.
-- # Link Utili:
-	- 

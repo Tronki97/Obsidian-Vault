@@ -52,5 +52,3 @@ data: "`2024-09-20 15:14`"
 	- ### Albero:
 		- Parte da un'host padre e si dirama con una gerarchia su altri.
 		- ![[Pasted image 20240920151957.png]]
-		- 
-- 

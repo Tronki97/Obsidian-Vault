@@ -14,5 +14,3 @@ data: "`2024-12-06 14:42`"
 	- avere una lista di personale autorizzato ad accedere a certi dati
 	- ## Application Gateway:
 		- server che verifica che chi sta usando certe applicazioni rischiose abbia le giuste autorizzazioni.
-- # Link Utili:
-	- 

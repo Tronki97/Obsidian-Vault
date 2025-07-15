@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - stateless packet filter
   - application gateways
@@ -56,5 +55,3 @@ data: "`2025-03-10 11:17`"
 		- [[NAT#^100d60|port scanning]] 
 		- Network mapping
 		- Attacchi DoS 
-- # Link Utili:
-	- 

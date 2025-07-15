@@ -7,7 +7,7 @@ aliases:
   - altamente-direzionali
 data: "`2025-07-01 10:42`"
 ---
-- # Argomento:
+- # Antenne:
 	-  Esistono tre categorie principali di antenne:
         - ## Omnidirezionali :
 	        - Vanno in tutte le direzioni, ma non in modo omogeneo (altrimenti sarebbero isotropiche).
@@ -29,5 +29,3 @@ data: "`2025-07-01 10:42`"
     - Vantaggi della trasmissione usando più antenne:
         - Migliore copertura della rete.
         - Possibilità di aumentare la velocità della trasmissione.
-- # Link Utili:
-	- 

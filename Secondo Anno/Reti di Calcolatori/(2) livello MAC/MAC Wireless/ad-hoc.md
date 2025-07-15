@@ -7,7 +7,7 @@ aliases:
   - wireless LAN
 data: "`2025-06-28 11:42`"
 ---
-- # Argomento:
+- # protocolli ad-hoc:
 	-  Le reti _ad-Hoc multi-hop_ sono reti in cui i dispositivi comunicano tra loro senza un'infrastruttura fissa, come router o access point.
 	- Ogni dispositivo agisce sia da nodo di trasmissione che ricezione.
 	- Questi protocolli sono basati su combinazione _data+ack_ ma hanno problemi di auto contesa ovvero il messaggio da inviare potrebbe scontrarsi con l'ACK o altri messaggi nel flusso.
@@ -36,5 +36,3 @@ data: "`2025-06-28 11:42`"
 				- $CW_{i}$ = dimensione della finestra contesa al i-esimo tentativo di trasmissione
 					- Questo valore è duplicato dopo ogni collisione.
 				- $$BackoffTime(i)=(CW_{i}*random())*SlotTime$$
-- # Link Utili:
-	- 

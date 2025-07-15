@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases: 
 data: "`2025-03-17 11:32`"
 ---
@@ -18,9 +17,6 @@ data: "`2025-03-17 11:32`"
 		- ### Contatori:
 			- Numero di bytes.
 			- Numero di pacchetti.
-		- ![[Pasted image 20250317113739.png]]
+		- ![[Pasted image 20250317113739.png||400]]
 	- ## Entrate della tabella di flusso:
-		- ![[Pasted image 20250317113943.png]]
-		- 
-- # Link Utili:
-	- 
+		- ![[Pasted image 20250317113943.png||500]]

@@ -4,8 +4,6 @@ aliases:
   - livelli
 date: 2024-10-02
 ---
-- # Link utili:
-	- 
 - # Argomento
 	- lo standard per l'architettura dei protocolli delle reti è chiamata 
 		- _Standard_ _ISO/OSI RM_ (Open System Interconnection Reference Model)

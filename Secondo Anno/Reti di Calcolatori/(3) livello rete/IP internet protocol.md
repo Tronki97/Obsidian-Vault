@@ -38,7 +38,7 @@ data: "`2025-03-17 09:56`"
 		- 20 bytes per l’IP
 		- In più altri byte per il livello.
 - # Frammentazione e riassemblaggio:
-	- I link spesso non riescono a far passare pacchetti di grandi dimensioni quindi si decide di frammentare in 3 pacchetti più piccoli quello principale altrimenti si rischia che un bit venga corrotto e il pacchetto cestinato di conseguenza.
+	- I link spesso non riescono a far passare pacchetti di grandi dimensioni quindi si decide di frammentare in 3 pacchetti più piccoli di quello principale altrimenti si rischia che un bit venga corrotto e il pacchetto cestinato di conseguenza.
 	- In caso uno di questo 3 pacchetti fallisca il viaggio si necessita di rimandare solo quello e non tutto quanto 
 	- I pacchetti vengono riassemblati dal destinatario. 
 	- ## Esempio di frammentazione:
@@ -49,7 +49,4 @@ data: "`2025-03-17 09:56`"
 		- Il flag di frammentazione sarà settato a 1 per i pacchetti tranne per l’ultimo che è messo a 0 indica appunto che dopo quello non bisogna aspettarne altri.
 		- L’offset indica la posizione del frammento nel pacchetto originale; se è a 0 indica che è la prima parte del pacchetto
 			- Per esempio 185 indica che si parte dal primo bit dopo i primi $185*8$ 
-		- ![[Pasted image 20250317102806.png]]
-		- 
-- # Link Utili:
-	- 
+		- ![[Pasted image 20250317102806.png||400]]

@@ -24,7 +24,7 @@ data: "`2025-06-26 11:11`"
 	- ## Proprietari:
 		- sviluppati e controllati da specifiche aziende o entità e non standardizzati ma relegati a uno specifico servizio proprietario.
 - # Cenni HTTP:
-	- è un protocollo stateless, le cui connessioni possono essere:
+	- è un protocollo stateless basato sul concetto di client/server, le cui connessioni possono essere:
 		- ## Persistenti:
 			- Si possono inviare molti oggetti sulla stessa connessione [[Livello trasporto#^157bc5|TCP]]
 			- Rimane aperto anche dopo la risposta del server.
@@ -36,6 +36,4 @@ data: "`2025-06-26 11:11`"
 - # Cookies:
 	- Piccoli file di testo che vengono inviati dal server al client e memorizzati localmente che servono a riconoscere un client, è un modo per rendere [[HTTP]] stateful.
 	- Sono salvati lato utente e contengono: autorizzazioni, carrelli, stato della connessione...
-	- ![[Untitled 3 1.webp|600]]
-- # Link Utili:
-	- 
+	- ![[Cookies.webp||400]]

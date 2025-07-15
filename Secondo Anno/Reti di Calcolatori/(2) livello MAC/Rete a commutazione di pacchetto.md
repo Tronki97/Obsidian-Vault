@@ -3,7 +3,7 @@ tags: []
 aliases: 
 data: "`2024-09-27 13:53`"
 ---
-- # Argomento:
+- # Rete a commutazione di pacchetto:
 	- Come la comunicazione di Internet.
 	- Ogni porzione di dato da comunicare viene raggruppato in un _pacchetto_ e ogni pacchetto è _indipendente_ l'uno dall'altro
 	- Serve un protocollo che eviti le collisioni tra tutti i pacchetti addensati in un unico canale di comunicazione 

@@ -17,7 +17,7 @@ data: "`2025-06-24 18:28`"
 	- Detta anche _a chiave pubblica_, esistono 2 chiavi:
 		- Quella _pubblica_ che tutti conoscono
 		- Quella _privata_ che conosce solo chi la genera.
-	- ![[Untitled 6.webp|700]]
+	- ![[Pasted image 20250714163612.png||400]]
 - # RSA:
 	- Sfrutta l' [[Aritmetica modulare]], perché ogni tipo di messaggio criptato o non può essere rappresentato con dei numeri, quindi criptare quel messaggio è criptare quel numero.
 	- ## Creare una coppia di chiavi:
@@ -25,12 +25,11 @@ data: "`2025-06-24 18:28`"
 		- $n=pq$  $z=(p-1)(q-1)$
 		- Si sceglie un $e< n$ tale che $e$ e $z$ sono [coprimi](https://it.wikipedia.org/wiki/Interi_coprimi).
 		- Si sceglie $d$ tale che $ed -1$ è esattamente divisibile per $z$
-		- $K^{+}_{N}=(n,e)$    $K^{-}_{B}=(n,d)$
+		- $K^{+}_{B}=(n,e)$ (_pubblica_)
+		- $K^{-}_{B}=(n,d)$ (_privata_)
 	- ## Criptare e decriptare:
 		- $c=m^{e} \ \ mod \ \ n$
 		- $m=c^{d}\ \ mod \ \ n$
 		- Criptare con la pubblica e decriptare con quella privata equivale a fare l'operazione speculare
 	- Questo algoritmo risulta sicuro siccome trovare la chiave privata da quella pubblica $(n,e)$ comporta scomporre $n$ in fattori primi senza conoscere $p,q$ ma $n$ è un numero molto grande.
-	- 
-- # Link Utili:
-	- 
+	- _garantisce anche la provenienza del messaggio in quanto si firma con la propria chiave privata_.

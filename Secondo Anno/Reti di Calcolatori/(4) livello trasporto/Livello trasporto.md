@@ -15,8 +15,7 @@ data: "`2024-11-27 13:28`"
 ---
 - # DEF: ^3671f0
 	- usa i protocolli TCP(_transmission control protocol_) e UDP(_user data protocol_)
-	- si correggono eventuali incertezze per quanto riguarda dei pacchetti che potrebbero andare persi o arrivare disordinati.
-	- Deve garantire:
+	- si correggono eventuali incertezze per quanto riguarda dei pacchetti che potrebbero andare persi o arrivare disordinati. Deve garantire:
 		- _Integrità dei dati_:
 			- i dati devono arrivare integri e senza errori.
 		- _Timing_:
@@ -37,12 +36,12 @@ data: "`2024-11-27 13:28`"
 			- permette di capire anche quando manca un segmento, siccome sono ordinati. 
 		- i pacchetti non ricevuti, ovvero che non hanno ricevuto l’ack entro il _timeout_, vengono ritrasmessi tutto ciò viene ripetuto finche l’ack non ritorna al mittente 
 		- quindi per garantire l’affidabilità, vengono ritrasmessi i pacchetti e ciò potrebbe creare dei duplicati.
-	- questo protocollo fa anche la gestione del flusso e della congestione
+	- questo protocollo fa anche la gestione del flusso e della congestione. Reso sicuro con [[Secure socket layer (SSL)|SSL]]
 		- ## Gestione flusso:
 			- controllo della dimensione e velocità.
 			- la sliding window viene usata anche per capire quanti segmenti può inviare il mittente che possano essere smaltiti dal destinatario quindi il mittente invia il minimo tra la _sliding window_ per il _flusso_ e per la _congestione_.
 		- ## Gestione congestione:
-			- il non riuscire a smaltire i pacchetti di dati in uscita e in arrivo e quindi si accumulano sul buffer 
+			- il router non riuscire a smaltire i pacchetti di dati in uscita e in arrivo e quindi si accumulano sul buffer 
 			- controllo della velocità di invio dei segmenti.
 			- quindi il router mittente per prevenire la congestione deve regolarsi per mandare meno pacchetti per regolarizzare il traffico.
 	- _questi due controlli sono garantiti da un meccanismo chiamato_:
@@ -69,7 +68,4 @@ data: "`2024-11-27 13:28`"
 		- si possono aprire comunicazioni fintanto che il buffer ha abbastanza memoria libera da poter allocare per creare una nuova comunicazione.
 		- un possibile attacco consiste nello sfruttare la finestra di apertura della sessione quindi continuando a tenere le risorse allocate.
 			- un rimedio potrebbe essere l’implementazione di un garbage collection  
-	- Per rendere TCP sicuro si usa [[Secure socket layer (SSL)|SSL]] 
-- Inoltre il ritardo di ricezione dei pacchetti comporta un sottoutilizzo della rete in quanto ogni host che invia i pacchetti deve attendere che il destinatario risponda con un _ACK_ prima di inviarne altri e in quei momenti di attesa la rete non viene utilizzata.
-- # Link Utili:
-	- 
+- Il ritardo di ricezione dei pacchetti comporta un sottoutilizzo della rete in quanto ogni host che invia i pacchetti  attende un _ACK_ prima di inviarne altri e in quei momenti la rete non viene utilizzata.

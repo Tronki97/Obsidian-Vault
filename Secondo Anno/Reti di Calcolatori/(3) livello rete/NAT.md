@@ -8,13 +8,13 @@ data: "`2024-12-18 14:39`"
 ---
 - # Network access translation:
 	- Quando un router deve farsi vedere da internet deve avere un indirizzo IP pubblico e statico 
-		- ![[Untitled 1 2.webp|600]]
+		- ![[NAT1.webp||450]]
 	- Questo router contiene una tabella chiamata _NAT translation table_, che _associa un numero di porta alta ad una macchina che si trova all'interno della rete locale mascherata dal router_.
 		- Conterrà quindi due indirizzi:
 			+ ## WAN (Wide Area Network) Side Address
 			+ ## LAN (Local Area Network) Side Address
 		+ Il _NAT_ permette quindi di fare in modo che una macchina presente alla sua rete locale sia convinta di poter comunicare con l'esterno come qualsiasi altro host, soltanto che non è realmente così.
-		+ ![[Untitled 1 2.webp]]
+		+ ![[NAT2.webp||450]]
 	+ Si _possono avere reti NAT nidificate all'interno di altre reti NAT_.
 		+ Più le reti NAT sono nidificate più layer di mascheramento avremo per le nostre macchine presenti nella rete locale privata.
 	+ Le _reti tipiche di indirizzamento NAT sono la 10... (classe A) e la 192.168... (classe C)_.
@@ -37,5 +37,3 @@ data: "`2024-12-18 14:39`"
 		+ Per capire come è fatta una rete NAT al suo interno si esegue un _port scanning_. ^100d60
 			+ Una macchina dall'esterno prova ogni porta del NAT finche' non ha completamente capito come è fatta l'architettura della rete e quali sono le potenziali debolezze di essa.
 			+ Per evitare questo fenomeno, il router controlla se una macchina sta controllando tutte le porte in maniera sequenziale. Una volta individuato il comportamento sospetto, il router filtra la macchina in modo che non possa più comunicare con la rete.
-- # Link Utili:
-	- 

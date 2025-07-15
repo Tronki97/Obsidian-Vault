@@ -17,7 +17,7 @@ data: "`2025-03-11 15:26`"
 				- Interfaccia di uscita. Con le porte di uscita 
 		- ### Longest prefix matching:
 			- è un algoritmo che permette di trovare il match più lungo tra l’indirizzo di destinazione e la tabella di forwarding.
-			- ![[Pasted image 20250311161940.png]]
+			- ![[Pasted image 20250311161940.png||400]]
 			- Quell’altrimenti spesso rappresenta il _deafult gateway_
 			- #### ES:
 				- 11001000 00010111 00010 _110 10100001_ verrebbe mandato fuori dall’interfaccia 0
@@ -44,11 +44,9 @@ data: "`2025-03-11 15:26`"
 		- Per realizzarlo ogni router sceglie quale sia il prossimo router a cui inoltrare i dati.
 			- Quindi ogni router scrive la propria tabella di instradamento.
 		- è utile nelle reti fatte da sistemi dinamici, come una rete Bluetooth
-		- ![[Pasted image 20250311154347.png|650]]
+		- ![[Pasted image 20250311154347.png|450]]
 	- ## Logicamente centralizzato
 		- Oppure c’è un livello superiore con un algoritmo che calcola le tabelle di instradamento per poi inviarle ad ogni router.   
 		- Con questo metodo si garantisce l’efficienza dell’instradamento in quanto il controllo remoto conosce tutta la strada.
 		- Però se per caso un collegamento ai router fallisce allora la tabella non verrà aggiornata creando dei problemi nell’instradamento.
-		- ![[Pasted image 20250311154330.png||650]]
-- # Link Utili:
-	- 
+		- ![[Pasted image 20250311154330.png||450]]
