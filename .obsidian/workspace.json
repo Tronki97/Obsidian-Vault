@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "437bbe11797dc253",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "de1c7af7b493b29a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
+                "file": "Flashcard/Flashcard Reti.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Gestione della memoria"
+              "title": "Flashcard Reti"
+            }
+          },
+          {
+            "id": "b214272678ee4145",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "space domain"
             }
           }
         ]
@@ -63,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "RTS",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +108,8 @@
               "title": "Segnalibri"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -233,39 +258,40 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "de1c7af7b493b29a",
   "lastOpenFiles": [
-    "DNS Ricorsivo.webp",
-    "Cookies.webp",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione risorse.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Grafo di Holt.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Threads.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduling.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo/Richiami Di Architettura.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
+    "Flashcard/Flashcard Reti.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Concorrenza.md",
     "Homepage.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Soluzioni speciali hardware.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Sezioni critiche (critical section).md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Proprietà di un programma.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Interazioni tra processi.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Azioni atomiche.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Algoritmo di Peterson.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Algoritmo di Dekker.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/User Authentication.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione implementatore.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system/Visione Utente.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/RAID.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/Disk scheduling.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/Memoria secondaria.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/6. Gestione IO e memoria secondaria/Gestione IO.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Working set.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Thrashing.md",
     "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Memoria virtuale.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Allocazione della memoria.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
-    "Secondo Anno/Reti di Calcolatori/Architettura protocolli di internet.md",
-    "Secondo Anno/Reti di Calcolatori/Architettura standard dei protocolli.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza in rete.md",
-    "Pasted image 20250714163612.png",
-    "immagini/Pasted image 20250709125932.png",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
     "immagini/NAT1.webp",
     "immagini/NAT2.webp",
+    "immagini/Pasted image 20250709125932.png",
+    "Pasted image 20250714163612.png",
+    "DNS Ricorsivo.webp",
+    "Cookies.webp",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione risorse.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Grafo di Holt.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Threads.md",
     "Flashcard",
     "immagini/Pasted image 20250701104413.png",
     "immagini/Untitled-1 5.webp",
