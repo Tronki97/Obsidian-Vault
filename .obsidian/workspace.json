@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Classe di una grammatica.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Gestione della memoria"
+              "title": "Classe di una grammatica"
+            }
+          },
+          {
+            "id": "d1821d23bf8054b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Parser bottom-up"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -63,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "turnarou",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -233,44 +258,46 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "DNS Ricorsivo.webp",
-    "Cookies.webp",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione dei deadlock.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Gestione risorse.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/4. Gestione risorse/Grafo di Holt.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Threads.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduling.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Gestione della memoria.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo/Richiami Di Architettura.md",
-    "Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Reti Wireless.md",
+    "Pasted image 20250807171530.png",
+    "Pasted image 20250807170044.png",
+    "Pasted image 20250807170033.png",
+    "Pasted image 20250807170017.png",
+    "Pasted image 20250807165837.png",
+    "Pasted image 20250807163152.png",
+    "Pasted image 20250807163135.png",
+    "Pasted image 20250807132843.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Classe di una grammatica.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
+    "Pasted image 20250807125823.png",
+    "Pasted image 20250807125559.png",
+    "Pasted image 20250807125435.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Top-down Parsing.md",
     "Homepage.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Working set.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Thrashing.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Memoria virtuale.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 2/5. Gestione della memoria/Allocazione della memoria.md",
-    "Secondo Anno/Reti di Calcolatori/Protocolli di rete organizzati a livelli.md",
-    "Secondo Anno/Reti di Calcolatori/Architettura protocolli di internet.md",
-    "Secondo Anno/Reti di Calcolatori/Architettura standard dei protocolli.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/DNS.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Livello applicazione.md",
-    "Secondo Anno/Reti di Calcolatori/(4) livello trasporto/Livello trasporto.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Secure E-mail.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Firewall.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza Di Rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Sicurezza in rete.md",
-    "Pasted image 20250714163612.png",
-    "immagini/Pasted image 20250709125932.png",
-    "immagini/NAT1.webp",
-    "immagini/NAT2.webp",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Bottom-up parsing.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser Top-down.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio LL(k).md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Semplificare le Grammatiche.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/grammatiche LR(k).md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Proprietà linguaggi liberi deterministici.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi finiti deterministici.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/PDA deterministico.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
+    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Sicurezza nei sistemi operativi.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Crittografia.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
+    "Secondo Anno/Sistemi Operativi/progetto/Fase 3.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
+    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Gestione delle chiavi.md",
+    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Scheda di rete.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
+    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
     "Flashcard",
-    "immagini/Pasted image 20250701104413.png",
-    "immagini/Untitled-1 5.webp",
-    "immagini/Untitled-1 4.webp",
-    "immagini/Untitled-1 3.webp",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
     "Secondo Anno/Sistemi Operativi/Modulo 2/7. File system",
@@ -279,7 +306,6 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori",
     "Secondo Anno/Calcolo della probabilità e statistica/Introduzione/desktop.ini",
     "Secondo Anno/Calcolo della probabilità e statistica/Introduzione",
-    "Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

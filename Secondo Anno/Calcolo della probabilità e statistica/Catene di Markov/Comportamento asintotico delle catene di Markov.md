@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - teorema ergodico
 data: "`2025-05-21 12:15`"

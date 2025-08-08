@@ -1,0 +1,31 @@
+---
+tags: []
+aliases: 
+data: "`2025-08-04 17:39`"
+---
+- # Def:
+	-  un linguaggio $L$ è di classe $LL(k)$ se esiste una grammatica di [[Classe di una grammatica#^1f2034||classe LL(k)]] tale che $L=L(G)$
+- # Prop:
+	- Per ogni $k\ge 0$, la classe  dei linguaggi $LL(k+1)$ contiene strettamente la classe dei linguaggi $LL(k)$
+	- ![[Pasted image 20250804174224.png|500]]
+		- $G$ è $LL(0)$ se ogni $A\in NT$ ha una sola produzione $L(G)=\{w\}$
+		- In pratica si usa solo $LL(1)$
+	- Se $G$ non è $LL(1)$, spesso la si può manipolare ([[Semplificare le Grammatiche|semplificare]]) trasformandola in una equivalente $LL(1)$
+- # ES:
+	- $G= S\to aSb\ |\ ab\ |\ c$ questa grammatica è $LL(2)$ ma non $LL(1)$
+	- $$G'=\begin{cases} S\to aT\ |\ c\\ T\to Sb\ |\ b \end{cases}$$
+		- Questa grammatica è ottenuta fattorizzando G, è $LL(1)$
+		- $First(aT)\cap First(c)=\emptyset$
+		- $First(Sb)\cap First(b)=\emptyset$
+	- $$L=\{a^{n}b^{n}\ |\ n\ge 1 \}\cup\{a^{n}cb^{n}\ |\ n\ge 0\}$$
+		- è di classe $LL(1)$ perché $G'$ è di [[Classe di una grammatica||classe]] $LL(1)$
+- # ES:
+	- $$L=\{a^{i}b^{j}\ |\ i\ge j\}$$
+		- è [[Linguaggio libero deterministico]] ma non è $LL(k)$ per nessun $k$
+		- ![[Pasted image 20250806155240.png]]
+		- Una sua possibile [[Grammatiche#^c95cdc|grammatica libera]]:
+			- $$G=\begin{cases}S\to aS\  |\ B  \\ B\to aBb\ |\ \epsilon \end{cases}$$
+				- $L(G)=L$
+		- Ma come si può scegliere tra $S\to aS$ e $S\to B$? Bisognerebbe leggere fino in fondo all'input per sapere quante $b$ in meno di $a$ ci siano. Di conseguenza $G$ non può essere $LL(k)$ per nessun $k$.
+- # Link Utili:
+	- 

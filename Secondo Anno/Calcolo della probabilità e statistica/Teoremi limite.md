@@ -1,6 +1,5 @@
 ---
-tags:
-  - TODO
+tags: []
 aliases:
   - iid
 data: "`2025-05-06 13:30`"

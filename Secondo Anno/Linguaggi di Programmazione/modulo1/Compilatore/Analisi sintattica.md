@@ -4,7 +4,7 @@ aliases:
   - Parser
 ---
 
-- ## Parser:
+- ## Parser: ^381037
 	- a partire dalla lista dei token generati dallo [[Analisi lessicale||scanner]] il parser produce l'[[Alberi di derivazione||albero di derivazione]] del programma, riconoscendo se le frasi hanno senso nel modo in cui sono scritte.
 		- ### ES:
 			- $(a(+b)))$ 

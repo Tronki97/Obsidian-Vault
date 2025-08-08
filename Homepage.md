@@ -2,7 +2,7 @@
 cssclasses:
   - dashboard
 ---
-# Vault Info
+E# Vault Info
 
 ## Ultimi modificati:
 <!-- QueryToSerialize: LIST FROM Primo Anno/Analisi -->
@@ -10,18 +10,18 @@ cssclasses:
 <!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" SORT file.mtime DESC LIMIT 10 -->
 <!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" SORT file.mtime DESC LIMIT 10 -->
 
-| File                                                                                                                               | Materia                          |
-| ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| [[Homepage]]                                                                                                          | Homepage.md                      |
-| [[Analisi matematica]]                                                                           | 0-Mostarda/Analisi matematica.md |
-| [[Modello mostarda]]                                                                                 | template/Modello mostarda.md     |
-| [[Modello appunti]]                                                                                   | template/Modello appunti.md      |
-| [[Home]]                                                                                                       | 0-Mostarda/Home.md               |
-| [[Secondo anno]]                                                                                       | 0-Mostarda/Secondo anno.md       |
-| [[Primo anno]]                                                                                           | 0-Mostarda/Primo anno.md         |
-| [[Gestione delle chiavi]]                 | Sistemi Operativi                |
-| [[Autenticazioni Firme digitali]] | Sistemi Operativi                |
-| [[Eccezioni]]                                                       | Linguaggi di Programmazione      |
+| File                                                                                                                                                             | Materia                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| [[Classe di una grammatica]]                 | Linguaggi di Programmazione |
+| [[Parser Top-down]]                                                                         | Linguaggi di Programmazione |
+| [[Parser bottom-up]]                                                                       | Linguaggi di Programmazione |
+| [[Top-down Parsing]]                                 | Linguaggi di Programmazione |
+| [[Linguaggio libero deterministico]] | Linguaggi di Programmazione |
+| [[Bottom-up parsing]]                               | Linguaggi di Programmazione |
+| [[Automi finiti deterministici]]                            | Linguaggi di Programmazione |
+| [[Laboratorio SO]]                                                                        | Sistemi Operativi           |
+| [[lab C 12_12_24]]                                                                        | Sistemi Operativi           |
+| [[Sicurezza nei sistemi operativi]]                           | Sistemi Operativi           |
 <!-- SerializedQuery END -->
 
 ## Ultime lezioni da finire:

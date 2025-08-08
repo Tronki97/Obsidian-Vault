@@ -1,0 +1,59 @@
+---
+tags: []
+aliases:
+  - shift
+  - reduce
+  - accept
+  - Shift
+  - Reduce
+  - Accept
+data: "`2024-10-30 19:02`"
+---
+- # Def:
+	- data $G=(NT, T, S, R)$ *libera*  , costruisco il [[Automi a Pila (PDA)|PDA]] 
+		- $$M=(T, \{q\}, T\cup NT\cup \{z\}, \delta,q, z, \emptyset)$$
+			- che riconosce $L(G)\cdot {\$}$  
+	- dove:
+		- $$\forall a\in T, \forall X\in T\cup NT\cup \{z\} \ \ \ (q,aX)\in \delta(q,a,X)$$
+			- *SHIFT* 
+		- $$(A\to \alpha) \in R \implies (q, A)\in \delta(q,\epsilon, \alpha^{R})$$
+			- _REDUCE_
+			- $\alpha^{R}$ è una generalizzazione dei *PDA* in cui si consuma una stringa sulla pila invece di solamente il _top_   
+		- $$(q, \epsilon)\in \delta(q,{\$}, SZ)$$
+			- _ACCEPT_ 
+			- “$” è il simbolo di fine input
+			- $S$ deve essere alla fine sulla pila.
+- # ES:
+	- $$G: S\to aSb \ |\  ab$$
+	- ![[Pasted image 20250730173747.png|500]]
+		- Con $X\in \{a,Z\}$ e $Y \in \{a,S\}$
+	- ![[Pasted image 20250730173907.png|700]]
+- # Nondeterminismo:
+	- ## Conflitti:
+		- __Shift-reduce__:
+			- $3) Zaab\ \ \ b{\$}$ si potrebbe fare lo shift 
+			- $4') Zaabb\ \ \ {\$}$ ma sarebbe infruttuoso
+		- __reduce-reduce__(ci sono più reduce possibili):
+	- Per poter ottenere un [[PDA deterministico|DPDA]] bisogna introdurre informazioni aggiuntive per risolvere questi conflitti:
+		- ___più stati___: o strutture particolari di supporto alla decisione come dei [[Automi finiti deterministici|DFA]] dai prefissi variabili.
+		- ___look-ahead___: guardando l'input in avanti.
+	- ## ES:
+		- $$\begin{cases}E \to T+E\ |\ T \\ T \to T*A\ | \ A \\ A\to a\ | \ b\ |\  (E) \end{cases}$$
+		- ![[Pasted image 20250730175356.png|700]]
+		- $$a*(b) \Longleftarrow A*(b)\Longleftarrow T*(b)\Longleftarrow T*(A)\Longleftarrow$$
+		- $$\Longleftarrow T*(T)\Longleftarrow T*(E)\Longleftarrow T*A \Longleftarrow T \Longleftarrow E$$
+			- _Derivazione canonica dx a rovescio_ (___rightmost___).
+		- ![[Pasted image 20250730180048.png]]
+		- Questo automa è __nondeterministico__ perché:
+			- _1)_ Non si sa chi ha la precedenza tra lo _shift_ e _reduce_
+				- Se al punto 1) avessi fatto un altro shift non avrei concluso nulla.
+				- Oppure al punto 3) se avessi fatto un altro reduce al posto di uno shift forse dopo non sarei riuscito a far riconoscere il linguaggio.
+			- _2)_ non si sa chi ha la precedenza tra 2 reduce diversi:
+				- Al punto 12) se avessi fatto il reduce $T\to A$ avrei ottenuto $ZT*T$ che non mi avrebbe portato alla soluzione.
+			- è buona norma scegliere in modo tale che ciò che si trova sulla pila sia un _prefisso_ (a rovescio) si una parte destra di una produzione della grammatica ad ES:
+				- Al punto 1) potrei fare lo shift e ottenere $Za*$ oppure il reduce e ottenere $ZA$ capisco che la seconda è più corretta perché non c'è nessuna produzione che comincia con $a*$ mentre per $A$ c'è.
+- # Importante: 
+	- Cercare di evitare di usare grammatiche libere con produzioni $\epsilon$ quando si vuole usare il [[Bottom-up parsing]] (shift-reduce). Perché si avrebbe un loop con una _reduce_ sempre applicabile.
+		- ![[Pasted image 20250730181341.png|600]]
+- # Link Utili:
+	- 
