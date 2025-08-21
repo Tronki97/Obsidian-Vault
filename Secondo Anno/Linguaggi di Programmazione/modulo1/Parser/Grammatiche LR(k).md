@@ -1,0 +1,83 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-08-19 12:55`"
+---
+- # Grammatiche LR(k):
+	- Item $LR(k) = [item\ LR(0), \beta]$ con $|\beta|\le k$
+	- Item iniziale = $[S'\to .S, {\$}]$
+	- Quando $[A\to \alpha.X \gamma, \beta]\in s$, ovvero lo stato dell'automa canonico $LR(k)$, allora anche $[X\to .\gamma, w]\in s$ se $X\to \gamma$ è una produzione e $w\in$ [[Parser Top-down|first]] $_{k}(\gamma \beta)$
+	- Tabella con _colonne_ su $T\cup {\$}$ (fatto per [[Parser bottom-up#^2f2330|shift]] e [[Bottom-up parsing#^8768af|accept]]) più tutti i $w$ tali che esiste un item $[A\to \alpha.\ , w]$ (fatto per le [[Parser bottom-up#^94ff73|reduce]])
+	- Affinché $G$ sia $LR(K)$ serve che la _tabella di parsing LR(k)_ ottenuta a partire dall'automa canonico $LR(k)$:
+		- Contenga al più una azione per ogni cella di questa tabella.
+		- Non esistano due $w_{1}, w_{2}$ sulle colonne tali che $w_{1}$ sia prefisso di $w_{2}$ e per almeno una riga le 2 corrispondenti entrate contengano un'azione.
+- # Grammatiche SLR(k):
+	- Si parte dall'automa canonico LR(0) e si riempie la tabella di parsing $SLR(k)$ 
+		- Con colonne si $T\cup {\$}$ (fatto per [[Parser bottom-up#^2f2330|shift]] e [[Bottom-up parsing#^8768af|accept]]) e in più sui $w \in Follow_{k}(A)$ per $A\to \alpha.$ secondo la legge:
+			- Se $[A\to \alpha.]\in s$ e $A\ne S'$ si inserisce "$reduce \ A\to \alpha$" in $M[s,w]$ per tutti i $w\in Follow_{k}(A)$
+	- Se la tabella $SLR(k)$ riempita in questo modo non ha conflitti e Non esistano due $w_{1}, w_{2}$ sulle colonne tali che $w_{1}$ sia prefisso di $w_{2}$ e per almeno una riga le 2 corrispondenti entrate contengano un'azione, _allora $G$ è SLR(k)_
+- # Grammatiche LALR(k):
+	- Si parte dall'automa canonico $LR(k)$ e si fondono insieme gli stati con lo stesso [[Parser bottom-up#^708cae|nucleo]].
+	- Se la tabella costruita in questo modo non ha conflitti e Non esistano due $w_{1}, w_{2}$ sulle colonne tali che $w_{1}$ sia prefisso di $w_{2}$ e per almeno una riga le 2 corrispondenti entrate contengano un'azione, _allora $G$ è LALR(k)_
+- # relazione tra grammatiche LL(k) e LR(k)
+	- ![[Pasted image 20250820141331.png|700]]
+	- ## Proposizione:
+		- 1)Se $G$ è $LL(k)$, allora $G$ è non ambigua e $L(G)$ è deterministico.
+		- 2) se $G$ è $LR(k)$, allora $G$ è non ambigua e $L(G)$ è deterministico.
+		- ### OSS:
+			- Esistono linguaggi generati da _grammatiche non ambigue_ ma _nondeterministici_.
+			- $$G= S\to aSa\ |\ bSb\ | \ \epsilon$$
+			- $$L(G)=\{ww^{R}|w\in \{a,b \}^{*}\}$$
+	- ## Linguaggi generati:
+		- ### Def:
+			- Un linguaggio $L$ è di classe $X$ se $\exists G$ di classe $X$ tale che $L=L(G)$
+		- Classificando i linguaggi piuttosto che le [[Grammatiche]] il diagramma si semplifica di molto.
+		- ### ES:
+			- $$G_{1}=\begin{cases} S\to aAc \\  A\to bAb\ | \ b\end{cases}$$
+			- $L(G_{1})=\{ab^{2n+1}c|\ n\ge 0\}$
+			- $G_{1}$ non è $LR(k)$ per nessun $k$ infatti non posso sapere se in $ab^{n}$ si debba ridurre con $A\to b$, fino a quando non si incontra "c": ovvero mi servirebbe sapere quando sono in mezzo alla stringa.
+			- Però questo linguaggio è generabile da una grammatica $LR(0)$
+			- $$G_{2}=\begin{cases}S\to aAc \\ A\to Abb \ | \ b\end{cases}$$
+			- ![[Pasted image 20250820160721.png]]
+			- Quindi $L(G_{1})=L(G_{2})$ che è un linguaggio $LR(0)$
+	- ## Teoremi:
+		- 1) un linguaggio è [[Linguaggio libero deterministico||libero deterministico]] sse p generato da una grammatica $LR(k)$ per qualche $k\ge0$
+		- 2) un linguaggio è libero deterministico sse è generato da una grammatica $SLR(1)$
+		- 3) I linguaggi generati da grammatiche $LL(k)$ sono strettamente contenuti nei linguaggi generati da grammatiche $SLR(1)$, $\forall k\ge0$
+		- ![[Pasted image 20250820161212.png]]
+		- ### OSS:
+			- Se $G$ è $LR(k)$, esiste $G' \in SLR(1)$ equivalente, ma $G'$ può essere molto più complessa di $G$.
+	- ## ES:
+		- $L=\{a^{i} b^{j}\ |\ i\ge j\ge 0 \}=a^{*}\{a^{n}b^{n}|\ n\ge 0\}$ questo linguaggio è libero deterministico.
+		- ![[Pasted image 20250820174707.png]]
+			- Riconosciuto dal [[PDA deterministico|DPDA]] per stato finale
+			- $L$ non è $LL(k)$ per nessun $k$
+			- Però è $SLR(1)$
+				- ![[Pasted image 20250820174812.png]]
+				- La cui tabella di parsing $SLR(1)$ corrispondente è:
+				- ![[Pasted image 20250820175026.png]]
+				- La quale non presenta conflitti. Quindi $G$ è $SLR(1)$
+	- ## OSSERVAZIONI:
+		- 1)
+			- $L_{1}=\{a^{n}b^{n}|\ n\ge 1\}$ è $LL(1)$ e $LR(0)$
+			- $L_{2}=\{a^{n}c^{n}|\ n\ge 1\}$ è $LL(1)$ e $LR(0)$
+			- Ma $L_{1}\cup L_{2}$ non è $LL(k)$ per nessun $k$ ma è $LR(0)$
+				- Quindi _l'unione dei linguaggi LL(1) può non essere LL(1)_
+		- 2)
+			- $L_{1}=\{a\}$ è $LL(1)$ e $LR(0)$
+			- $L_{2}=\{ab\}$ è $LL(1)$ e $LR(0)$
+			- La loro unione non è $LR(0)$ perché non gode della _prefix-property_. Però è $LL(1)$
+				- Quindi _l'unione di linguaggi LR(0) può non essere LR(0)_
+		- 3) 
+			- $L_{1}=a^{*}=\{a^{n}\ | \ n\ge 0\}$ è $LL(1)$
+			- $L_{2}=\{a^{n}b^{n}|n\ge 0\}$ è $LL(1)$ 
+			- La concatenazione di questi linguaggi $L_{1}\cdot L_{2}=\{a^{j} b^{n}|\ j\ge n\ge 0\}$ non è $LL(k)$ per nessun $k$
+				- Quindi _la concatenazione di due linguaggi LL(1) può non essere LL(1)_
+		- 4) 
+			- $$G_{k}=\begin{cases}S\to aSA\ |\ \epsilon \\ A\to a^{k-1}bS\ |\ c\end{cases}$$
+			- Il linguaggio generato da questa grammatica è un linguaggio $LL(k)$ per il quale non esiste una grammatica $LL(k-1)$ che lo generi. ad esempio:
+				- $$G_{2}=\begin{cases}S\to aSA\ |\ \epsilon \\ A\to abS\ |\ c \end{cases}$$
+				- $G_{2}$ non è $LL(1)$ ma è $LL(2)$ e si può dimostrare che non esiste $G'$ di classe $LL(1)$ che genera $L(G_{2})$
+ - # Link Utili:
+	- 

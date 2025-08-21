@@ -1,0 +1,49 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-08-21 12:55`"
+---
+- # Semantica:
+	- ## statica:
+		- Permette di fare controlli sul _testo_ del programma, senza mandarlo in esecuzione.
+	- ## Dinamica:
+		- Analizza eventuali errori a _run-time_
+	- ## Domanda:
+		- Esiste un programma che calcola?
+			- $$check(P)=\begin{cases}1 & \text{se P è corretto}\\ 0 & \text{se P presenta errori}\end{cases}$$
+	- ## ES:
+		- In questo esempio guardo un caso specifico in cui _l'errore è la non-terminazione_:
+			- Se il programma è scritto in un linguaggio sequenziale, ci si aspetta che il suo calcolo termini sempre.
+		- Dato il linguaggio di programmazione $L$, si prova ascrivere un programma $H$ che calcola la funzione:
+			- $$H(P,x)=\begin{cases}1 & P(x)\downarrow \ \ ''termina''  \\ 0 & P(x)\uparrow \ \ ''diverge''\end{cases}$$
+		- ### OSS:
+			- Per rispondere $0$ il programma deve _riconoscere in tempo finito_ che $P$ con input $x$ non terminerà mai il calcolo.
+		- _questo problema è definito come Problema della fermata o "halting problem"_
+- # Halting problem:
+	- Si suppone, per assurdo, che $H$ esista davvero.
+	- Usando $H$ si può realizzare l'applicazione:
+		- $$K(P)=\begin{cases} 1 & P(P)\downarrow \ \   \\ 0 & P(P)\uparrow \ \  \end{cases}=H(P,P)$$
+		- $P$ viene usato come dato che il $P$ usa.
+		- Quindi se esiste $H$ allora esiste anche $K$
+	- Se esiste $K$, allora si può scrivere un programma $G$ che prende in input $P$ e calcola:
+		- $$G(P)=\begin{cases}1 &K(P)=0 \\ \uparrow & K(P)=1\end{cases}$$
+		- Se esiste $K$ allora anche $G$ è facilmente programmabile.
+	- Ma se a $G$ dessi come input $G$?
+		- $$\begin{cases} G(G)=1 \iff K(G)=0 \iff G(G)\uparrow \\ G(G)=\uparrow \iff K(G)=1 \iff G(G)\downarrow \end{cases}$$
+			- Il che è una contraddizione, in quanto $G$ non può esistere quindi $K$ non può esistere e di conseguenza $H$ non può esistere.
+	- $H$ è il primo esempio di funzione non calcolabile (_o di problema non risolvibile - Turing 1936)
+- # Conseguenze:
+	- Molte altre applicazioni allora _NON ESISTONO_:
+		- $$Z(P)=\begin{cases}1 & \forall x \ P(x)=0 \\ 0 &altrimenti \end{cases}$$
+		- $Z$ risulta non calcolabile perché, se esistesse un programma per $Z$ allora potrei farne uno anche per $K$ costruendo l'applicazione $F$:
+			- $$F(P)(x)=\begin{cases}0 & P(P)\downarrow \\ \uparrow & P(P)\uparrow\end{cases}$$
+			- $F$ risulta calcolabile grazie ad un interprete che permetta di eseguire $P$ con $P$ come dato
+		- Con $F$ posso fare $K(P)=Z(F(P))$ infatti:
+			- $$Z(F(P))=\begin{cases}1 & \forall x\ F(P)(x)=0 \\ 0 & altrimenti \end{cases}$$
+			- $$=\begin{cases}1 & P(P)\downarrow \\ 0 & P(P) \uparrow \end{cases}=K(P)$$
+		- Ma sapendo che $K$ non è calcolabile risulta che $Z$ non è calcolabile a sua volta.
+- # Problema dell'equivalenza di 2 programmi:
+	- 
+- # Link Utili:
+	- 

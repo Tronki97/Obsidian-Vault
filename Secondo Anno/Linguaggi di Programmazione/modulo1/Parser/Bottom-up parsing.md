@@ -20,7 +20,7 @@ data: "`2024-10-30 19:02`"
 			- _REDUCE_
 			- $\alpha^{R}$ è una generalizzazione dei *PDA* in cui si consuma una stringa sulla pila invece di solamente il _top_   
 		- $$(q, \epsilon)\in \delta(q,{\$}, SZ)$$
-			- _ACCEPT_ 
+			- _ACCEPT_  ^8768af
 			- “$” è il simbolo di fine input
 			- $S$ deve essere alla fine sulla pila.
 - # ES:

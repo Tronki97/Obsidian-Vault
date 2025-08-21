@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Classe di una grammatica.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Classe di una grammatica"
+              "title": "Homepage"
             }
           },
           {
-            "id": "d1821d23bf8054b6",
+            "id": "a3165c36a1a7c4ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/Fondamenti di calcolabilità.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,35 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Parser bottom-up"
-            }
-          },
-          {
-            "id": "4a46529914e71671",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
+              "title": "Fondamenti di calcolabilità"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -112,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "turnarou",
+                "query": "LALR",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -263,6 +239,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "3d-graph:3D Graph": false,
@@ -282,33 +259,39 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "4a46529914e71671",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
-    "conflict-files-obsidian-git.md",
-    "Pasted image 20250807171530.png",
-    "Pasted image 20250807170044.png",
-    "Pasted image 20250807170033.png",
-    "Pasted image 20250807170017.png",
-    "Pasted image 20250807165837.png",
-    "Pasted image 20250807163152.png",
-    "Pasted image 20250807163135.png",
-    "Pasted image 20250807132843.png",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Classe di una grammatica.md",
-    "Pasted image 20250807125823.png",
-    "Pasted image 20250807125559.png",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Top-down Parsing.md",
     "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/Fondamenti di calcolabilità.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/desktop.ini",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Generatori di analizzatori sintattici.md",
+    "Pasted image 20250820195927.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Grammatiche LR(k).md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/grammatiche LR(k) 1.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
+    "immagini/Pasted image 20250820175026.png",
+    "immagini/Pasted image 20250818133719.png",
+    "immagini/Pasted image 20250820174812.png",
+    "immagini/Pasted image 20250820174707.png",
+    "immagini/Pasted image 20250820161212.png",
+    "immagini/Pasted image 20250820160721.png",
+    "immagini/Pasted image 20250820141331.png",
+    "immagini/Pasted image 20250819125412.png",
+    "immagini/Pasted image 20250819124844.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi finiti deterministici.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Derivazioni.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Bottom-up parsing.md",
+    "conflict-files-obsidian-git.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Classe di una grammatica.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Top-down Parsing.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser Top-down.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio LL(k).md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Semplificare le Grammatiche.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/grammatiche LR(k).md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Proprietà linguaggi liberi deterministici.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi finiti deterministici.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/PDA deterministico.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
     "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
@@ -316,11 +299,6 @@
     "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Crittografia.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
     "Secondo Anno/Sistemi Operativi/progetto/Fase 3.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Autenticazioni Firme digitali.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Gestione delle chiavi.md",
-    "Secondo Anno/Reti di Calcolatori/(2) livello MAC/Scheda di rete.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/Data Plane e Control Plane.md",
-    "Secondo Anno/Reti di Calcolatori/(3) livello rete/IP internet protocol.md",
     "Flashcard",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",
@@ -328,8 +306,6 @@
     "Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/tavola_normale.pdf",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/desktop.ini",
     "Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori",
-    "Secondo Anno/Calcolo della probabilità e statistica/Introduzione/desktop.ini",
-    "Secondo Anno/Calcolo della probabilità e statistica/Introduzione",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",
