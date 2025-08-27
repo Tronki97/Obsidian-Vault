@@ -6,6 +6,18 @@ aliases:
   - tombstones
   - lock and keys
   - garbage collection
+  - garbage detection
+  - reference count
+  - mark and sweep
+  - stop and copy
+  - borrow check
+  - catene di ownership
+  - estendere ownership
+  - tipi copia
+  - lifetime
+  - annotazioni sulla lifetime
+  - shared references
+  - mutable references
 data: "`2025-04-30 11:35`"
 ---
 - # Dangling pointer:
@@ -83,33 +95,33 @@ data: "`2025-04-30 11:35`"
 					- consentono all'user di _leggere ma non di modificare_ il valore grazie a queste caratteristiche si possono avere numerosi _riferimenti condivisi_ ad un valore
 				- ### _mutable references_:
 					- permettono all'user di _leggere e modificare_ un valore ma non permettono di avere altri riferimenti a quel valore attivi allo stesso momento, la sintassi è `&mut e` che genera un riferimento mutabile al valore contenuto nella variabile `e` 
-- # Tipi copia:
-	- Non uso più la _move_ per passare il possesso ma si crea una copia
-	- Efficiente soprattutto in Rust dove i "numeri" sono solo schemi di bit in memoria e che quindi non posseggono alcuna risorsa sullo [[Heap]] 
-- # Lifetime:
-	- Il [[Struttura di un compilatore|compilatore]] in Rust si assicura anche che nessun riferimento viva più del proprietario del valore riferito
-	- Le interazioni tra le variabili (_prestiti_) non modificano la _lifetime_ di una variabile ma impongono dei vincoli che il compilatore deve controllare.
-	- ## Annotazioni sulla lifetime
-		- A volte è necessario fornire delle info sulla lifetime tramite delle annotazioni
-		- ![[Pasted image 20250827194053.png]]
-		- ![[Pasted image 20250827194102.png]]
-			- In questo esempio al compilatore non è chiaro quale lifetime deve considerare il riferimento restituito dalla funzione `snd` se quello di `a` o `b` 
-		- Per risolvere si usano i _parametri di lifetime_, che in Rust vengono [[algebra dei tipi#^2516ce|inferiti]] alla creazione di una variabile `let x=5` gli assegna in automatico `int` e `lifetime 'l`, quest'ultimo viene vincolato dall'uso che si fa del valore riferito.
-		- Le annotazioni _rendono esplicite le durate di variabili correlate_.
-			- ![[Pasted image 20250827194625.png|300]]
-			- In questo esempio la struct $S$ vengono dichiarati due _parametri lifetime_ dove `'a` indica la durata di `x` e `'b` indica quella di `y,z` ciò permette ad `x` di vivere di più degli altri due campi. 
-			- Senza annotazione tutti e tre i campi avrebbero la stessa lifetime _generando un errore di compilazione_ 
-		- Questo discorso vale anche per le funzioni:
-			- Dove ad ogni tipo di variabile e al tipo del ritorno è associata una diversa durata.
-			- ![[Pasted image 20250827195238.png]]
-			- Visto che la scelta del riferimento da restituire è fatta a _runtime_ bisogna chiarire che si deve condividere la _lifetime_
-			- ![[Pasted image 20250827195408.png]]
-			- Il parametro `'l` lega insieme le durate di `a` e `b` 
-			- La specifica del parametro di ritorno serve a dire che _il riferimento restituito è preso in prestito dall'argomento con la stessa annotazione_ quindi `a` o `b`
-	- Per quanto riguarda i _riferimenti mutabili_, la lifetime può sovrapporsi solo a un riferimento preso in prestito dal riferimento mutabile stesso
-		- ![[Pasted image 20250827200913.png]]
-		- Nell'esempio la regola viene violata prendendo in prestito sia il riferimento mutabile sia quello immutabile a `greet`, il prestito sarebbe illegale anche dal punto di vista di un _riferimento condiviso_ in quanto dovrebbe essere di sola lettura e li lo stiamo andando a modificare.
-- # Riassunto sull'ownership:
-	- ![[Pasted image 20250827201315.png]]
+	- ## Tipi copia:
+		- Non uso più la _move_ per passare il possesso ma si crea una copia
+		- Efficiente soprattutto in Rust dove i "numeri" sono solo schemi di bit in memoria e che quindi non posseggono alcuna risorsa sullo [[Heap]] 
+	- ## Lifetime:
+		- Il [[Struttura di un compilatore|compilatore]] in Rust si assicura anche che nessun riferimento viva più del proprietario del valore riferito
+		- Le interazioni tra le variabili (_prestiti_) non modificano la _lifetime_ di una variabile ma impongono dei vincoli che il compilatore deve controllare.
+		- ### Annotazioni sulla lifetime
+			- A volte è necessario fornire delle info sulla lifetime tramite delle annotazioni
+			- ![[Pasted image 20250827194053.png]]
+			- ![[Pasted image 20250827194102.png]]
+				- In questo esempio al compilatore non è chiaro quale lifetime deve considerare il riferimento restituito dalla funzione `snd` se quello di `a` o `b` 
+			- Per risolvere si usano i _parametri di lifetime_, che in Rust vengono [[algebra dei tipi#^2516ce|inferiti]] alla creazione di una variabile `let x=5` gli assegna in automatico `int` e `lifetime 'l`, quest'ultimo viene vincolato dall'uso che si fa del valore riferito.
+			- Le annotazioni _rendono esplicite le durate di variabili correlate_.
+				- ![[Pasted image 20250827194625.png|300]]
+				- In questo esempio la struct $S$ vengono dichiarati due _parametri lifetime_ dove `'a` indica la durata di `x` e `'b` indica quella di `y,z` ciò permette ad `x` di vivere di più degli altri due campi. 
+				- Senza annotazione tutti e tre i campi avrebbero la stessa lifetime _generando un errore di compilazione_ 
+			- Questo discorso vale anche per le funzioni:
+				- Dove ad ogni tipo di variabile e al tipo del ritorno è associata una diversa durata.
+				- ![[Pasted image 20250827195238.png]]
+				- Visto che la scelta del riferimento da restituire è fatta a _runtime_ bisogna chiarire che si deve condividere la _lifetime_
+				- ![[Pasted image 20250827195408.png]]
+				- Il parametro `'l` lega insieme le durate di `a` e `b` 
+				- La specifica del parametro di ritorno serve a dire che _il riferimento restituito è preso in prestito dall'argomento con la stessa annotazione_ quindi `a` o `b`
+		- Per quanto riguarda i _riferimenti mutabili_, la lifetime può sovrapporsi solo a un riferimento preso in prestito dal riferimento mutabile stesso
+			- ![[Pasted image 20250827200913.png]]
+			- Nell'esempio la regola viene violata prendendo in prestito sia il riferimento mutabile sia quello immutabile a `greet`, il prestito sarebbe illegale anche dal punto di vista di un _riferimento condiviso_ in quanto dovrebbe essere di sola lettura e li lo stiamo andando a modificare.
+	- ## Riassunto sull'ownership:
+		- ![[Pasted image 20250827201315.png]]
 - # Link Utili: 
 	- 
