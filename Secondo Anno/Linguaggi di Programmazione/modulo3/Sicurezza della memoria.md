@@ -1,7 +1,11 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - dangling pointer
+  - tombstones
+  - lock and keys
+  - garbage collection
 data: "`2025-04-30 11:35`"
 ---
 - # Dangling pointer:
@@ -17,7 +21,7 @@ data: "`2025-04-30 11:35`"
 	- Queste _lapidi_ successivamente conterranno l'indirizzo dell'elemento allocato e quindi il puntatore sarà riferito a questa _tombstone_ 
 		- Ciò implica che accedere ad un valore necessita di fare due salti di puntatori, raddoppiando di fatto il tempo di accesso in memoria, però salvaguardandosi dall'accesso ad un valore inesistente.
 		- ![[Pasted image 20250430114608.png]]
-		- Le tombstones rimangono perché tanto vengono definite come spazio di memoria utilizzabile.
+		- Le _tombstones_ rimangono perché tanto vengono definite come spazio di memoria utilizzabile.
 - # Lock and Keys:
 	- Si associano ai puntatori e ai valori in memoria delle chiavi e lucchetti e quindi si controlla, ogni volta che si dereferenzia il puntatore che la chiave corrisponda al lucchetto.
 	- ![[Pasted image 20250430115355.png]]
@@ -31,6 +35,8 @@ data: "`2025-04-30 11:35`"
 	- Conoscere il tipo di dato da eliminare da una mano al garbage collector.
 	- ## Reference count:
 		- Ogni volta che si guarda una area di memoria si controlla se qualcuno punta ad essa e si incrementa il contatore e se non ce n'è nessuno allora si può liberare quell'area.
+		- Questa azione di decrementare il contatore di riferimenti non viene fatta solo all'oggetto stesso ma anche ad altri oggetti puntati da lui i quali dovranno essere liberati.
+		- _Questa tecnica non permette la gestione di strutture ricorsive in quanto si sta facendo una visita ricorsiva della struttura in memoria._
 	- ## Mark and Sweep:
 		- Si contrassegnano i garbage da eliminare seguendo due fasi:
 			- 1) attraversa l' [[Heap]] e contrassegna tutti gli oggetti. $\{M\}$
@@ -41,7 +47,7 @@ data: "`2025-04-30 11:35`"
 			- In questo modo però si ha dello stuttering nel programma, avendo un calo nel framerate.
 	- ## Stop and Copy:
 		- è una evoluzione del _mark and sweep_, si divide in 2 la memoria, la prima metà è per l'assegnazione e l'altra la si tiene libera per usare questa tecnica.
-		- Quando parte il garbage collection si controlla tutto quello che non è garbage e lo copia nella seconda metà di memoria che diventerà quella principale, e la prima viene liberata invertendo così di fatto i ruoli delle 2 aree di memoria.
+		- Quando parte il garbage collection si controlla tutto quello che _non è garbage_ e lo copia nella seconda metà di memoria che diventerà quella principale, e la prima viene liberata invertendo così di fatto i ruoli delle 2 aree di memoria.
 			- ![[Pasted image 20250430124435.png|400]]
 		- Più la memoria è grande meno volte verrà chiamato il garbage collector.
 - # Borrow-check:
@@ -49,9 +55,61 @@ data: "`2025-04-30 11:35`"
 	- Questa ownership si può passare ad un altro  
 	- E si può anche prendere in prestito la proprietà di un valore senza per forza passarla.
 	- Inoltre il possesso preso in prestito sussiste fintanto che chi lo ha prestato è in vita. 
+	- ## Catene di ownership:
+		- ![[Pasted image 20250827183625.png]]
+		- Quando `marx` esce dallo scope il controllore della _ownership_ sa che è sicuro rimuoverlo dallo stack con tutti gli oggetti dello [[Heap]] che possiede.
+			- ![[Pasted image 20250827183759.png]]
+	- ## Estendere la ownership:
+		- Si può _passare(move)_ l'ownership dei valori ad un altro proprietario
+			- In Rust questo procedimento, come la restituzione di un valore, non lo copia ma ne sposta la _ownership_.
+			- Questo passaggio interagisce con i costrutti del flusso di [[Controllo]]
+				- ![[Pasted image 20250827184707.png]]
+				- Questo blocco non verrebbe compilato in Rust siccome c'è un `if` dove viene spostato il valore posseduto da `x` in `a` in questo modo l'ultima istruzione assegnerebbe una variabile non inizializzata.
+			- Quindi in generale: _se è possibile che una variabile abbia spostato la ownership del proprio valore è da considerarsi non inizializzata_
+			- Un caso particolare riguarda le collezioni indicizzate come gli array:
+				- Dove si potrebbe spostare il possesso del valore di alcuni elementi del vettore, ma si necessiterebbe di segnarsi quali sono diventati non inizializzati in seguito allo spostamento della ownership finché che il vettore non viene deallocato.
+				- _Per questo motivo non è permesso questo spostamento ma piuttosto si fa riferimento a questi valori o si copiano_.
+		- Si possono dare maggiori libertà dalle regole ad alcuni tipi semplici, come gli [[Tipi base#^61fce8|intero]], float e i [[Tipi base#^902161|carattere]] 
+		- Si possono fornire _tipi speciali di puntatore con reference counter_ consentendo ai valori di _avere più proprietari_ 
+			- ![[Pasted image 20250827190059.png]]
+			- Ogni puntatore si riferisce allo stesso blocco di memoria, si applicano le stesse regole di _ownership_, quindi aumento e diminuzione del _reference counter_ e l'eventuale deallocazione
+			- Rimane il problema del non poter deallocare strutture ricorsive, infatti in Rust tali situazioni sono esplicite e rare, non potendo creare un ciclo senza che un valore più vecchio punti ad uno più recente rendendo quello più vecchio _mutabile_. 
+			- Per questo motivo i _puntatori Rc mantengono immutabili i loro referenti_ 
+		- Si può _prendere in prestito un riferimento_ a un valore, limitando i riferimenti a valori non proprietari con durata limitata.
+			- _i riferimenti non devono mai vivere più a lungo dei loro riferiti_
+				- Questo perché se eliminiamo un valore il suo proprietario verrà rimosso rendendo così il riferimento _dangling_ 
+			- Un riferimento da accesso ad un valore senza influenzarne l'ownership:
+				- ### _shared references_:
+					- consentono all'user di _leggere ma non di modificare_ il valore grazie a queste caratteristiche si possono avere numerosi _riferimenti condivisi_ ad un valore
+				- ### _mutable references_:
+					- permettono all'user di _leggere e modificare_ un valore ma non permettono di avere altri riferimenti a quel valore attivi allo stesso momento, la sintassi è `&mut e` che genera un riferimento mutabile al valore contenuto nella variabile `e` 
 - # Tipi copia:
-	- Non uso più la move per passare il possesso ma si crea una copia
+	- Non uso più la _move_ per passare il possesso ma si crea una copia
+	- Efficiente soprattutto in Rust dove i "numeri" sono solo schemi di bit in memoria e che quindi non posseggono alcuna risorsa sullo [[Heap]] 
 - # Lifetime:
-- I riferimenti non devono mai sopravvivere ai loro valori riferiti.
+	- Il [[Struttura di un compilatore|compilatore]] in Rust si assicura anche che nessun riferimento viva più del proprietario del valore riferito
+	- Le interazioni tra le variabili (_prestiti_) non modificano la _lifetime_ di una variabile ma impongono dei vincoli che il compilatore deve controllare.
+	- ## Annotazioni sulla lifetime
+		- A volte è necessario fornire delle info sulla lifetime tramite delle annotazioni
+		- ![[Pasted image 20250827194053.png]]
+		- ![[Pasted image 20250827194102.png]]
+			- In questo esempio al compilatore non è chiaro quale lifetime deve considerare il riferimento restituito dalla funzione `snd` se quello di `a` o `b` 
+		- Per risolvere si usano i _parametri di lifetime_, che in Rust vengono [[algebra dei tipi#^2516ce|inferiti]] alla creazione di una variabile `let x=5` gli assegna in automatico `int` e `lifetime 'l`, quest'ultimo viene vincolato dall'uso che si fa del valore riferito.
+		- Le annotazioni _rendono esplicite le durate di variabili correlate_.
+			- ![[Pasted image 20250827194625.png|300]]
+			- In questo esempio la struct $S$ vengono dichiarati due _parametri lifetime_ dove `'a` indica la durata di `x` e `'b` indica quella di `y,z` ciò permette ad `x` di vivere di più degli altri due campi. 
+			- Senza annotazione tutti e tre i campi avrebbero la stessa lifetime _generando un errore di compilazione_ 
+		- Questo discorso vale anche per le funzioni:
+			- Dove ad ogni tipo di variabile e al tipo del ritorno è associata una diversa durata.
+			- ![[Pasted image 20250827195238.png]]
+			- Visto che la scelta del riferimento da restituire è fatta a _runtime_ bisogna chiarire che si deve condividere la _lifetime_
+			- ![[Pasted image 20250827195408.png]]
+			- Il parametro `'l` lega insieme le durate di `a` e `b` 
+			- La specifica del parametro di ritorno serve a dire che _il riferimento restituito è preso in prestito dall'argomento con la stessa annotazione_ quindi `a` o `b`
+	- Per quanto riguarda i _riferimenti mutabili_, la lifetime può sovrapporsi solo a un riferimento preso in prestito dal riferimento mutabile stesso
+		- ![[Pasted image 20250827200913.png]]
+		- Nell'esempio la regola viene violata prendendo in prestito sia il riferimento mutabile sia quello immutabile a `greet`, il prestito sarebbe illegale anche dal punto di vista di un _riferimento condiviso_ in quanto dovrebbe essere di sola lettura e li lo stiamo andando a modificare.
+- # Riassunto sull'ownership:
+	- ![[Pasted image 20250827201315.png]]
 - # Link Utili: 
 	- 

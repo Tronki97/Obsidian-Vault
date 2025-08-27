@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Sicurezza della memoria"
             }
           },
           {
-            "id": "a3165c36a1a7c4ea",
+            "id": "67d3999df72c54c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/Fondamenti di calcolabilità.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo3/algebra dei tipi.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Fondamenti di calcolabilità"
+              "title": "algebra dei tipi"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -88,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "LALR",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -261,44 +260,45 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "Pasted image 20250827201315.png",
+    "Pasted image 20250827200913.png",
+    "immagini/Pasted image 20250827195408.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
+    "immagini/Pasted image 20250827195238.png",
+    "immagini/Pasted image 20250827194625.png",
+    "immagini/Pasted image 20250827194102.png",
+    "immagini/Pasted image 20250827194053.png",
+    "immagini/Pasted image 20250827190059.png",
+    "immagini/Pasted image 20250827184707.png",
+    "immagini/Pasted image 20250827183759.png",
+    "immagini/Pasted image 20250827183625.png",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/algebra dei tipi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base.md",
     "Homepage.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/Fondamenti di calcolabilità.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Memoria.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo2/esercizi di linguaggi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/desktop.ini",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Generatori di analizzatori sintattici.md",
-    "Pasted image 20250820195927.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Grammatiche LR(k).md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/grammatiche LR(k) 1.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
-    "immagini/Pasted image 20250820175026.png",
-    "immagini/Pasted image 20250818133719.png",
-    "immagini/Pasted image 20250820174812.png",
-    "immagini/Pasted image 20250820174707.png",
-    "immagini/Pasted image 20250820161212.png",
-    "immagini/Pasted image 20250820160721.png",
-    "immagini/Pasted image 20250820141331.png",
-    "immagini/Pasted image 20250819125412.png",
-    "immagini/Pasted image 20250819124844.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi finiti deterministici.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Derivazioni.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Bottom-up parsing.md",
     "conflict-files-obsidian-git.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Classe di una grammatica.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Top-down Parsing.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser Top-down.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio LL(k).md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Semplificare le Grammatiche.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Proprietà linguaggi liberi deterministici.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/PDA deterministico.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/Laboratorio SO.md",
-    "Secondo Anno/Sistemi Operativi/Modulo 1/laboratorio/lab C 12_12_24.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Sicurezza nei sistemi operativi.md",
-    "Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/Crittografia.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
-    "Secondo Anno/Sistemi Operativi/progetto/Fase 3.md",
     "Flashcard",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless",
     "Secondo Anno/Sistemi Operativi/Modulo 2/2. Architettura di un sistema operativo",

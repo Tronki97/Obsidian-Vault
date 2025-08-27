@@ -1,0 +1,203 @@
+---
+tags:
+aliases:
+  - Unit
+  - booleani
+  - carattere
+  - intero
+  - reale
+  - enumerazione
+  - estensionale
+  - intensionale
+  - tipi composti
+  - tipo array
+  - row-major
+  - column-major
+  - tipi insieme
+  - tipi riferimento
+  - insieme potenza
+  - tipi prodotto
+  - coppie
+  - tuple
+  - record
+  - pattern matching
+  - tipi rocrsivi
+  - tipi somma
+  - relazioni
+  - relazione
+  - funzioni
+data: "`2025-04-02 12:55`"
+---
+- # Tipi base:
+	- Sono valori denotabili semplici, possono essere chiamati `int, float, char` ed hanno una diversa definizione a differenza del linguaggio come anche un diverso modo di dichiararli.
+	- ## Tipo Unit:
+		- Contiene una sola unità, un singoletto, simile al tipo `void` che però non contiene nulla, quello che li accomuna è che rappresenta un ritorno che non influenza nulla in quanto ha una sola unità utile per eseguire una funzione del tipo: `f(g(5))` dove `f` richiede un qualcosa e `g` ritorna Unit che quindi non influenzerà il valore finale che però non si potrebbe fare se `g` ritornasse `void`.
+	- ## Tipi booleani:
+		- Comprendono i valori `true, false`
+		- Hanno le operazioni logiche classiche.
+		- La loro rappresentazione effettiva in memoria dipende dal modello hardware del linguaggio, dall'unità indirizzabile di base dell'architettura e da altri requisiti
+		- Ad esempio in _Rust_ richiedono 1 byte mentre nella JVM richiedono 2 byte (1 bit per il valore e 7 per il padding)
+	- ## Tipi carattere: ^902161
+		- Insieme di codici di caratteri
+		- Operazioni che dipendono dal linguaggio
+		- Valori denotabili, esprimibili e memorizzabili.
+		- La rappresentazione in memoria dipende dal modello hardware del linguaggio.
+	- ## Tipi interi: ^61fce8
+		- Come valori hanno un sottoinsieme finito di numeri interi fissato al momento della definizione del linguaggio
+		- Operazioni aritmetiche
+		- Valori denotabili, esprimibili e memorizzabili.
+	- ## Tipi reali:
+		- Come gli interi ma cambia la rappresentazione,
+			- Virgola fissa o mobile, più ci si avvicina allo 0 più aumenta la precisione.
+	- ## Enumerazione:
+		- Insieme finito di costanti ciascuna con un proprio nome 
+		- Le operazioni disponibili sugli `enum` sono il _confronto_, ottenere tutti i valori o passare da uno all'altro.
+		- Gli `enum` aiutano la leggibilità visto che i nomi di per se sono una forma di auto-documentazione inoltre permettono al [[tipi nei linguaggi di programmazione#^5b2524|type-checking]] di verificare che una variabile di tipo enumerazione assuma esattamente dei valori specifici che ritengo come corretti.
+	- ## Tipi estensionali e intensionali:
+		- Gli `interi` rispetto agli `enum` sono definiti in modo _intensionale_ ovvero tramite predicati che definiscono la loro appartenenza ad alcuni domini di valori possibili. Mentre gli `enum` sono definiti in maniera _estensionale_ ovvero elencando tutti i possibili abitanti di quel tipo.
+		- ## Intensionali: 
+			- Li si usa quando si ha un insieme definito di proprietà che identificano i valori validi del tipo da definire, risparmiando memoria se l'insieme degli abitanti è grande e rendendo possibile la definizione per quanto riguarda insiemi infiniti.
+		- ## Estensionali:
+			- Si usa quando è più efficiente specificare gli abitanti del tipo o non si ha un insieme chiaro di regole che li definiscono 
+- # Tipi composti:
+	- Insiemi di elementi denominati in modo particolare che sono composti da elementi dello stesso tipo base.
+	- ## Tipi array:
+		- Insieme di elementi dello stesso tipo, contigui in memoria, ognuno indicizzato da una chiave indicativa (come l’indice della posizione di un elemento).
+		- Un altro tipo di array sono quelli associativi che al posto di usare delle chiavi di indice numerico usano delle chiavi di qualche altro tipo. 
+			- Come le [[Tabelle Hash]] 
+		- Inoltre si posso fare anche array multidimensionali con quindi più di una chiave di indice.
+		- ### Operazioni:
+			- Quella più semplice è quella di selezionare un elemento attraverso l’indice dell’array.
+				- I linguaggi [[tipi nei linguaggi di programmazione#^75d594|safe]] si assicurano che quando si accede ad uno o più elementi di quell’array non si esca dai confini delimitati dalla dimensione effettiva. 
+			- Poi ci sono, in alcuni linguaggi, operazioni di assegnazione, confronto e aritmetiche che però necessitano che tutti gli array confrontati abbiano la stessa dimensione.
+		- In alcuni linguaggi come [[Java]] gli array sono inizializzati a run-time e messi sull’ [[Heap]] vengono definiti _dinamici_ e hanno dimensione “variabile”.
+		- ### Ordinamento:
+			- Negli array multidimensionali ci sono vari modi di ordinamento dei valori.
+			- #### Row-major:
+				- ![[Pasted image 20250826131802.png]]
+				- Due elementi sono considerati contigui se differiscono di uno nell'ultimo indice 
+			- #### Column-major:
+				- ![[Pasted image 20250826131809.png]]
+				- Due elementi sono contigui se differiscono di uno nel primo indice 
+			- In generale quelli più usati sono i _row-major_ anche perché il principio di località in funzione dei [[Cache#^9c9c74|cache miss]] li favorisce.
+		- ### Forma:
+			- Il _numero di dimensioni_ e gli _intervalli_ la determinano.
+			- è importante decidere quando _fissare la forma di un array_.
+			- Se la forma è _fissa_ la si può definire in fase di compilazione e in questo caso lo si può memorizzare sullo stack frame del blocco che porta la sua definizione, in questo modo si conosce la dimensione necessaria per memorizzare l'array(_ofsett tra il primo e l'ultimo elemento_).
+			- _quando definiamo la forma durante l'elaborazione della dichiarazione_ si conoscerà la dimensione dell'array quando il [[Controllo]] raggiunge la dichiarazione dell'array e quindi sapere se la dimensione dipende dal valore di una variabile. Lo si può comunque allocare sullo stack frame del blocco che ne contiene la definizione ma non si potrà preallocare in modo sicuro lo spazio in quanto non so la dimensione effettiva dell'array.
+				- Per ovviare a questo problema si usa l' [[Heap]] e si memorizza nel frame il puntatore all'inizio della regione di memoria.
+			- Altrimenti si potrebbero avere _array dinamici_ la cui forma cambia in fase di esecuzione.
+		- ___Stride___: permette di fare i calcoli in base al rank degli array su cui va ad agire.
+		- ### Array in vari linguaggi:
+			- #### C:
+				- La dichiarazione di una array corrisponde all'allocazione statica che può essere subito usata 
+				- ![[Pasted image 20250826141103.png|300]]
+			- #### Java:
+				- Quando viene dichiarata la sua variabile non si crea subito l'array, ma il nome in quel momento è solo un _riferimento_ 
+				- ![[Pasted image 20250826141120.png|300]]
+			- #### Rust:
+				- La dichiarazione corrisponde solo all'annotazione del nome `x` che in seguito viene associato ad un array
+				- Il tipo viene riportato nell'assegnazione per verificare il vincolo di dimensione.
+				- ![[Pasted image 20250826141133.png|300]]
+	- ## Tipi insieme:
+		- Struttura dati senza ordine degli elementi ma _devono essere unici_. 
+		- ### Operazioni:
+			- I classici dell’algebra dell’insiemistica: inclusione, unione, intersezione, ecc…
+			- Compreso anche il complementare di un insieme.
+		- Può anche essere rappresentato con un _array caratteristico_
+			- Dove il bit j-esimo indica se l’elemento j-esimo del tipo base appartiene all’insieme.
+			- Scomodo da usare con grossi insiemi.
+	- ## Tipi riferimento:
+		- Da accesso indiretto ad un altro valore, ovvero _fa riferimento_ ad un dato.
+		- ### Operazioni:
+			- Creazione, uguaglianza, dereferenziazione ovvero avere accesso al dato referenziato rendendola "pratica".
+		- ### Puntatori:
+			- Fanno riferimento a dei dati in memoria.
+			- Possono essere gli indici di array. 
+			- Usati anche per implementare [[Alberi e Alberi binari]] e Liste. 
+			- I riferimenti possono essere:
+				- ### Wild:
+					- Quando non sono inizializzati e possono causare comportamenti inaspettati.
+				- ### Dangling:
+					- Quando il dato referenziato viene deallocato e se ci si accede si potrebbe avere un comportamento inaspettato.
+			- Nel `malloc` viene restituito un puntatore a `void` che normalmente non avrebbe senso in quanto è appunto vuoto, ma in realtà serve per dirmi che dopo quell’azione il controllo ritorna al programma che esegue il codice. Utile anche per evitare side-effect in quanto l’unica cosa che si lascia dietro (sullo heap) è il fatto di aver eseguito quella linea di codice.
+			- Creo una variabile ed un puntatore dello stesso tipo e poi assegno al puntatore il valore della variabile usando `&` 
+				- ![[Pasted image 20250409115835.png]]
+			- La _dereferenziazione_:
+				- ![[Pasted image 20250409115917.png]] 
+				- Assegno al puntatore il valore contenuto nella variabile `pi` per poi andare a leggerlo e sommargli 1 per infine assegnarlo alla locazione di memoria puntata da `p`
+			- Si può fare una _deallocazione implicita_ in quanto al posto di liberare ciò che viene puntato cambio invece ciò che esso punta mettendolo a `null`:
+				- ![[Pasted image 20250409120348.png]]
+				- Questo procedimento però può creare problemi in quanto nel tempo quell'area di memoria inaccessibile _non liberata_ potrebbe crescere e incorrere nel fenomeno _memory-leak_ 
+			- Quindi è buona norma di fatto liberare l'area di memoria precedentemente occupata:
+				- ![[Pasted image 20250826142303.png]]
+- # Definire nuovi tipi:
+	- ## Insiemi potenza:
+		- $$\wp(S)=\{T:T\subseteq S\}$$
+		- Rappresenta l’insieme potenza di $S$ che contiene tutti i sottoinsiemi generati da qualsiasi combinazione di elementi in $S$
+			- ![[Pasted image 20250409124106.png]]
+	- ## Coppie ordinate e prodotto cartesiano:
+		- Siano $a\in A \ \ b\in B$ e $A\cap B = \emptyset$ e sia:
+			- $$(a,b):=\{\{a\}, \{a,b\}\}$$
+		- Allora:
+			- $\{a\} ⊆ A,  \{b\} ⊆ B$
+			- $\{a\} ∈ ℘(A), \ \ \{b\} ∈ ℘(B)$
+			- $\{a, b\} ⊆ A ∪ B, \ \ \{a, b\} ∈ ℘(A ∪ B)$
+			- $(a, b) ⊂ ℘(A ∪ B)$
+			- $(a, b) ∈ ℘( ℘(A ∪ B) )$
+			- Sia:
+				- $$\{(a, b) | a ∈ A ∧ b ∈ B\} ≜ A × B$$
+				- Chiamato quindi _prodotto cartesiano_
+	- ## Tipi prodotto:
+		- è un tipo composto, prendo per esempio un array e lo lego ad un tipo base ed ha operatori binari.
+			- Quelli più comuni sono _coppie, tuple, record, varianti_.
+		- La grandezza è fissata.
+		- ## Coppie e tuple:
+			- Dati due tipi $A,B$,
+			- La forma più semplice del tipo prodotto e il tipo $A \times B$ rappresentano tutte le combinazioni dei valori in $A$ e $B$
+			- Per farne l’accesso si vanno a controllare i vari elementi dentro a questo insieme.
+		- ## record:
+			- Non c’è una differenza posizionale negli elementi ma si danno dei nomi ad ogni elemento (come le [[Strutture]] in C).
+			- ![[Pasted image 20250826142828.png]]
+			- L'ordine dei campi potrebbe essere significativo e venire seguito nella loro rappresentazione in memoria, ad esempio memorizzando i campi in posizioni contigue anche se l'allineamento può portare spazi vuoti tra i campi.
+			- Da notare come _Rust_ obblighi a dover mettere sempre dei valori predefiniti nei posti mancanti.
+		- ## Pattern matching:
+			- Serve destrutturare certi tipi strutturati creati da tipi prodotto. Il _pattern matching_ controlla e individua elementi specifici rispetto ad un certo schema 
+			- ![[Pasted image 20250826143212.png]] 
+		- ## Tipi Ricorsivi:
+			- Si impone una struttura di codice che può chiamare se stessa per definire il tipo ricorsivo usando i _Tipi prodotto_ _record:
+				- ![[Pasted image 20250410133109.png]]
+	- ## Tipi somma: ^8d169e
+		- Serve poter indicare una variabile che può contenere un unione disgiunta di tipi, che dice che può contenere uno dei due tipi e non entrambi.
+			- ![[Pasted image 20250409132807.png]]
+		- Il tipo `enum` può aiutare a definire i tipi somma:
+			- ![[Pasted image 20250826143755.png]]
+		- I tipi somma possono anche essere un'alternativa ai _tipi prodotto_ per realizzare i _tipi ricorsivi_
+		- Multiset:
+			- Più elementi con lo stesso valore ma sono delle copie l’uno dell’altro.
+			- Lo si potrebbe usare per i _problemi di statistica_????
+		- Si fa usando delle unioni etichettate:
+			- Ogni elemento si porta dietro il tipo a cui appartiene.
+	- ## Relazioni:
+		- Una relazione $\mathbb{R}\subseteq S_{1} \times...\times S_{n}$ è su un prodotto $S_{1} \times...\times S_{n}$ quando relaziona insieme gli elementi di quegli insiemi $S_{k}$ e ovvero è un sottoinsieme di tutte le possibili combinazioni delle tuple ottenibili con il prodotto cartesiano tra quegli insiemi.
+		- ### Binaria:
+			- $s$ source ; $t$ target
+			- Quando $\mathbb{R} \subseteq S \times T$. Dati $s\in S, \ t\in T$ se $(s,t)\in \mathbb{R}$ allora si scrive $s \mathbb{R} t$
+			- $S$ è il dominio di $\mathbb{R}$ e $T$ è l’immagine
+	- ## Funzioni: ^768bf2
+		- Una funzione si definisce come una relazione con un rapporto uno ad uno tra gli elementi di $S$ e $T$
+		- Di solito si adotta la notazione: $$\mathbb{R}(s)=t$$
+			- $s$ è l’_argomento_
+			- $t$ è il _valore_ di $\mathbb{R}$ per $s$ 
+		- Si può dire anche che $\mathbb{R}$ _mappa_ $s$ in $t$ e si può adottare la notazione:
+			- $$\mathbb{R}\subseteq S \times T \equiv \mathbb{R}:S\to T$$
+		- Quando $S$ rappresenta tutto il dominio di $\mathbb{R}$ allora essa è una _funzione totale_
+		- Si ha un modo alternativo per scrivere $\wp(S)$ come $2^{S}$ grazie alla definizione:
+			- Dato $f\subseteq S \times T: f\in \wp(S \times T)$ visto che $S\times T \subset \wp(\wp(S\cup T))$ e $S \times T \in \wp(\wp(S\cup T))$ sia $\wp(S\times T ):=T^{S}$ allora $f\in T^{S}$ ovvero $f$ appartiene ad una famiglia di relazioni/funzioni che legano elementi di $S$ a quelli di $T$ la cui cardinalità è: $|T|^{|S|}$
+			- ### ES:
+				- $S=\{1,2,3\}$ e $T=\{f,t\}$ il numero di possibili $g: S\to T$ è $2^{3}$:
+					- $$((f,f,f), (t,f,f),(t,t,f),(f,t,f),...,(t,t,t))$$
+		- Tutto ciò è possibile considerando che $2:=\{0,1\}$ e $\wp(S)$ sia descritto dalle funzioni $f_{0}=\{(1,0),(2,0),(3,0)\}=\emptyset$, $f_{1}=\{(1,1),(2,0),(3,0)\}=\{1\}$,..., $f_{8}=\{(1,1),(2,1),(3,1)\}=\{1,2,3\}$
+- # 
+- # Link Utili:
+	- 

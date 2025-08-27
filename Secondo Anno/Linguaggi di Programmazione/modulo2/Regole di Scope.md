@@ -4,15 +4,39 @@ tags:
 aliases:
   - CRT
   - A-list
+  - scope statico
+  - scope dinamico
+  - display
+  - catena statica
 data: "`2025-02-26 12:00`"
 ---
-- #  Scope dinamico:
+- # Scope statico:
+	- Un nome non locale è risolto nel blocco che testualmente lo racchiude:
+		- ![[Pasted image 20250823170023.png]]
+		- Il corpo di `pippo` è nella parte dello scope della `x` più esterna, mentre la sua chiamata è nello scope di quella più interna
+	- ## Indipendenza dai nomi locali:
+		- ![[Pasted image 20250823171409.png|300]]
+		- `x,y` vengono modificate dentro `fie`, in questo modo la semantica del programma viene modificata in _scope dinamico_
+	- Con lo scope statico le associazioni sono note al tempo della compilazione, risultando più efficiente ma più complesso da implementare.
+	- ## RdA per scoping statico:
+		- ![[Pasted image 20250823184719.png]]
+			- _Link dinamico_: ptr al [[Memoria#^ba20bb|RdA]] precedente sullo stack
+			- _link statico_: ptr al RdA del blocco che contiene il testo del blocco in esecuzione.
+	- ## Catena statica:
+		- ![[Pasted image 20250823184937.png|700]]
+- # Scope dinamico:
 	- risalire la pila dei _record di attivazione_ finche non si trova una dichiarazione per quello che stiamo cercando
 	- i nomi delle variabili vengono salvati nei RdA, 
 	- ## Prima Implementazione:
 		- ![[Pasted image 20250227131931.png]]
 		- gli spazi grigi sono associazioni non attive.
 		- da dentro $D$ non mi è possibile vedere le variabili $x,v$ presenti dentro a $B$ ma posso vedere $B$ stessa 
+	- ## display:
+		- Tecnica per ridurre il costo, $h$, di blocchi da risalire per accedere ad un nome non locale, ad una costante.
+		- La catena statica è rappresentata come un _array_ con i-esimo elemento il puntatore al RdA del sottoprogramma di livello $i$
+		- ![[Pasted image 20250825154715.png]]
+			- Sequenza di chiamata $A,B,C,D,E,C$
+		- Se si necessita di un oggetto presente in uno scope esterno basta fare $Display[i-h]$
 	- ## A-list:
 		- Lista di associazioni
 		- associazioni sono memorizzazte in una struttura a parte gestita come una pila.
@@ -21,7 +45,7 @@ data: "`2025-02-26 12:00`"
 			- il tempo di accesso nel caso pessimo è lineare $O(n)$ 
 			- nomi memorizzati esplicitamente
 	- ## CRT:
-		- central reference table.
+		- _central reference table_.
 		- si memorizzano le info sui vari nomi nell’ordine inverso al quale sono introdotti nel programma
 		- una riga per ogni variabile dichiarata nel programma ed in ogni riga si ha un puntatore ad una lista di associazioni che indica il blocco in cui è stata dichiarata.
 			- mantenendo sempre l’ordine inverso(_guardare l’immagine_)

@@ -50,6 +50,7 @@ data: "`2025-02-23 18:02`"
 - # Ambiente:
 	- _Insieme delle associazioni_ di tutti i nomi definiti e dei relativi oggetti denotati
 	- Utilizzato dai linguaggi funzionali.
+	- è determinato dalle [[Regole di Scope]]
 	- ## Dichiarazione:
 		- Meccanismo col quale si crea un’associazione in ambiente
 			- ![[Pasted image 20250303110052.png|200]]
@@ -74,8 +75,8 @@ data: "`2025-02-23 18:02`"
 		- ### Distruzione:
 			- Uscita dal blocco con dichiarazione locale
 - ## Aliasing:
-		- Lo stesso nome può denotare più oggetti distinti in punti diversi del programma.
-		- ![[Pasted image 20250303110202.png]]
+	- Lo stesso nome può denotare più oggetti distinti in punti diversi del programma.
+	- ![[Pasted image 20250303110202.png]]
 - # Blocchi:
 	- Regioni testuali del programma, identificate da un simbolo di inizio e di fine(p.e le parentesi graffe), può contenere dichiarazioni _locali_ a quella regione.
 	- Permettono una gestione locale dei nomi, danno un po' più di chiarezza al codice e permettono di evitare l’aliasing.

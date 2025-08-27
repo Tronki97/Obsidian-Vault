@@ -1,0 +1,88 @@
+---
+tags:
+aliases:
+  - regole di equivalenza
+  - preordini
+  - equivalenza nominale
+  - equivalenza strutturale
+  - duck typing
+  - regole di compatibilità
+  - coercizione
+  - casting
+  - inferenza
+  - algoritmo di unificazione
+  - ordine parziale
+data: "`2025-08-27 13:10`"
+---
+- # Algebra dei tipi:
+	- Utilizzabile per esprimere e verificare le proprietà dei programmi. 
+		- ![[Pasted image 20250410142548.png]]
+		- ![[Pasted image 20250827115752.png]]
+- # metodi di computazione sui tipi:
+	- ## Regole di equivalenza:
+		- Controllo se due tipi corrispondono allo stesso tipo.
+			- “Quando due tipi sono uguali?”
+		- Si indebolisce il concetto di uguaglianza e si va appunto all’_equivalenza_ 
+			- Ho una funzione che prende degli _interi_ e io gli passo dei _positivi_ (che sono sottoinsiemi degli interi) allora la funzione può essere eseguita.
+			- Non vale però il contrario anche perché nei tipi interi ci sono dei valori in più rispetto ai _positivi_ che magari la funzione non riuscirebbe a gestire.
+		- ### Preordini:
+			- $\mathbb{R}$ è una relazione binaria su $S$ e $\mathbb{R}\subseteq S \times S$ ed ha delle proprietà:
+				- _Riflessività_: dato $s$, la coppia $(s,s)\in \mathbb{R}$ ovvero devo poter dire che $s$ equivale a se stesso.
+				- _Simmetria_: dati $s_{1},s_{2}$ $\{(s_{1},s_{2}), (s_{2},s_{1})\}\subseteq \mathbb{R}$
+				- _Anti-simmetria_: dati $s_{1},s_{2}$ $\{(s_{1},s_{2}), (s_{2},s_{1})\}\subseteq \mathbb{R}$ implica che $s_{1}=s_{2}$
+				- _Transitiva_: dati $s_{1},s_{2}, s_{3}$ $\{(s_{1},s_{2}), (s_{2},s_{3})\}\subseteq \mathbb{R}$ implica che $(s_{1},s_{3})\in \mathbb{R}$
+			- Quando $\mathbb{R}$ è riflessiva e transitiva è chiamato _preordine_.
+			- Quando $\mathbb{R}$ è un preordine simmetrico viene chiamato _equivalenza_ se invece è anti-simmetrico allora è chiamato _ordine parziale_. ^c16d0f
+		- ### equivalenza nominale:
+			- Due tipi sono equivalenti se hanno lo stesso nome anche se formano lo stesso insieme
+			- Prendendo `dollaro=int` e `euro=int` anche se sono entrambi `int` in un sistema nominale sono diversi.
+		- ### Duck typing:
+			- Il controllo di tipi viene fatto ad esecuzione e si controlla se un valore supporta gli operatori previsti dal programma.
+			- Gli errori restituiti sono solo a run-time.
+			- Si risparmia un bel po’ di sintassi
+			- ![[Pasted image 20250416115604.png|500]]
+		- ### Equivalenza strutturale (STE):
+			- Fintanto che non si evidenziano differenze strutturali due tipi possono definirsi equivalenti, questo controllo può anche essere eseguito staticamente; visto però che non sappiamo i percorsi intrapresi dai valori del programma, bisognerà eseguire dei controlli più _conservativi_, ovvero:
+				- Si confrontano le loro _operazioni, strutture e sottoelementi_
+				- $$(T_{a 1},..., T_{an})\ STE\  (T_{b 1},..., T_{bn})\iff \forall i \in [1, n], T_{ai}\  STE \ T_{bi}$$
+				- $$struct\ T_{a}\{f_{1}: T_{a 1},..., f_{n}: T_{an}\}\ STE \ struct\  T_{b}\{f_{1}: T_{b 1},..., f_{n}: T_{bn}\}\iff$$
+				- $$\iff \forall i \in [1, n], \ T_{ai} \ STE \ T_{bi}$$
+	- ## Scelta tra tipaggio nominale o strutturale:
+		- Il tipaggio nominale presenta altri vantaggi oltre alla nozione rigorosa:
+			- Si ha un collegamento diretto per il _runtime_, alla _stampa_ o al _marshaling_ o alla coercizione.
+			- Si ha una denotazione intuitiva dei tipi ricorsivi; la cui definizione fa riferimento al tipo stesso:
+				- ![[Pasted image 20250827121408.png]]
+			- Il controllo del _sottotipaggio_ è _controllo diretto_ delle relazioni nominali dichiarate tra i tipi nominati.
+	- ## Regole di compatibilità:
+		- Usare una forma "indebolita" di un tipo per ottenere un programma corretto: _compatibilità di tipo_ che è un _preordine (riflessivo e transitivo)_
+		- Specificano quando un tipo può essere usato al posto di un altro.
+		- ### interpretazioni comuni della compatibilità:
+			- I valori di $S$ sono _sottoinsieme_ di quelli di $T$
+			- I valori di $S$ sono _sottoinsieme di valori canonicamente corrispondenti_ di $T$
+				- Come tra `float` e `int` dove `int n` ha un `float` canonicamente corrispondente ovvero `n.0`
+			- I valori di $S$ sono un _sottoinsieme di valori arbitrari corrispondenti_ di $T$ 
+				- Assumo la presenza di una qualche trasformazione arbitraria che converte un valore di $S$ in uno di $T$, in questo modo posso rendere compatibili `int` e `float` convertendo questi ultimi in `int` (ad esempio arrotondandoli).
+			- Le operazioni sui valori di $T$ sono possibili anche su $S$ come visto nel _duck typing_
+	- ## Coercizione e casting di tipo:
+		- Esistono modi per _convertire i tipi da uno all'altro_:
+			- ### Coercizione di tipo:
+				- è una conversione _implicita_ di tipo canonica/arbitraria come può essere una funzione `sum` che accetta i `float` e se gli passassi un `int` il [[Struttura di un compilatore|compilatore]] /interprete farebbe tutte le conversioni necessarie implicitamente 
+				- Queste conversioni sono _sintattiche_ quindi hanno la stessa rappresentazione in memoria oppure tramite una conversione canonico/arbitraria la rappresentazione in memoria viene trasformata in un altro valore.
+			- ### Casting di tipo:
+				- è un'annotazione esplicita nel linguaggio di una conversione, ha anche valore di documentazione in quanto stai facendo vedere esplicitamente il tipo in cui converti:
+					- ![[Pasted image 20250827123026.png]]
+	- ## Regole di inferenza: ^2516ce
+		- Permette di abbassare il peso riguardo il [[tipi nei linguaggi di programmazione#^8d81aa|manifest typing]] togliendo quindi delle annotazioni di tipo al programma, in pratica il [[tipi nei linguaggi di programmazione#^02abf5|type-checker]] può _inferire_ certe informazioni visto che alcune annotazioni di tipo non vengono scritte.
+		- Si usa un _algoritmo di unificazione_, praticamente dei sistemi di equazioni.
+			- Si riesce quindi a capire tutti i tipi di tutte le variabili nel programma e ora devo capire come usarle.
+		- ### Algoritmo di unificazione:
+			- ![[Pasted image 20250827125036.png]]
+				- $C$ è l'insieme delle equazioni di tipo che derivano dall'analisi del codice di un programma.
+				- $[X \mapsto T]$ indica _rimpiazzo X con T_
+				- $A\circ B$ indica la _composizione di sostituzione di tipo_:
+					- $$A\circ B = [(X \mapsto A (T) \ \forall (X\mapsto T)\in B) \ \wedge  (X\mapsto T \forall (X\mapsto T)\in A| X\notin dom (B))]$$
+					- Dove $A (T)=T$ se $T\notin dom (A)$ e $A (X\to Y)=A (X)\to A (Y)$
+				- $FV (T)$ è l'insieme delle variabili libere di $T$
+			- #### ES:
+				- ![[Pasted image 20250827130730.png|600]]
+				- ![[Pasted image 20250827130742.png|600]]

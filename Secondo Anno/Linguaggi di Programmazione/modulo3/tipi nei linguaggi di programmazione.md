@@ -1,10 +1,18 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - tipaggio statico
+  - tipaggio dinamico
+  - type-checking
+  - type-checker
+  - type-safety
+  - safety
+  - inferred typing
+  - manifest typing
+  - strongly typed
 data: "`2025-04-02 11:17`"
 ---
-- # Argomento:
+- # Tipi:
 	- Servono per normare un qualcosa che il programma fa, e descrive dei vincoli, cosa ci si aspetta.
 	- Si guarda solo la sintassi di linguaggio per descrivere i vari comportamenti del programma, interessa sapere solo l’interpretazione del programma in base alla sintassi.
 		- Per dimostrare L'assenza di determinati comportamenti del Programma, fatto classificando le unità sintattiche in Base ai tipi di valore che assumono.
@@ -14,24 +22,34 @@ data: "`2025-04-02 11:17`"
 	- L’uso dei tipi aiuta a separare dei concettualmente e logicamente degli elementi diversi (come: _clienti, camere, prezzi_ ecc…)
 	- ## Supporto all’astrazione:
 		- Interfacce che servono per definire diverse operazioni che operano solo su certi tipi, inoltre servono per dare dei menu a quelli che usano certe funzioni senza che debbano vedere esattamente l’implementazione di quella funzione.
-	- ## Supporto alla correttezza:
-		- Facendo il _type-checking_ quindi trovando gli errori usando i tipi prima ancora di far girare il programma. Più facile rispetto all’analizzare lo stack trace degli errori.
-		- ### Safety:
-			- Garantire l’integrità delle sue astrazioni, e di quelle di livello superiore i linguaggi con questa caratteristica sono anche detti: _strongly typed_.
-			- Es: se un linguaggio mi fa definire un [[Array]] e quanto è grande quindi quando vado fuori dal limite dell’array mi dovrebbe arrivare un errore.
-		- ## Supporto implementazione:
-			- Nei linguaggi safe: Utile anche per velocizzare un programma siccome si aggiungono controlli a compile time invece di farli a run-time.
-			- Inoltre sapendo i valori limite di questi tipi so già dall’inizio quanta memoria allocare per ogni variabile di un determinato tipo.
+	- ## Supporto alla correttezza: ^02abf5
+		- Facendo il _type-checking_ quindi trovando gli errori usando i tipi prima ancora di far girare il programma. Più facile da gestire rispetto all’analizzare lo stack trace degli errori, anche in quanto le segnalazioni derivate sono più accurate  ^5b2524
+		- I tipi sono utili anche per fare il _refactoring_ di un codice in quanto basta modificare la dichiarazione di una struttura dati per poi, grazie al _type-checker_, individuare dove quel tipo viene usato nel modo errato.
+		- ### Safety: ^75d594
+			- Capacità di un linguaggio di Garantire l’integrità delle sue astrazioni, e di quelle di livello superiore i linguaggi con questa caratteristica sono anche detti: _strongly typed_.
+			- #### Es:
+				- se un linguaggio mi fa definire un [[Array]] con tutte le su operazioni e caratteristiche tra cui la dimensione, quando vado fuori dal limite dell’array mi dovrebbe arrivare un errore.
+			- Con la _type-safety_ si possono anche avere dei controlli a run-time che rilevano operazioni non consentite nell'ambito dei tipi che formano gli operandi e che quando accadono generano errori o sollevano eccezioni.
+	- ## Supporto implementazione:
+		- Nei linguaggi _safe_: Utile anche per velocizzare un programma siccome si aggiungono controlli a _compile time_ invece di farli a _run-time_.
+		- Inoltre sapendo i valori limite di questi tipi so già dall’inizio quanta memoria allocare per ogni variabile di un determinato tipo.
+	- ## Altre applicazioni:
+		- Usati nella sicurezza per le reti
+		- Si usano algoritmi di controllo dei tipi in strumenti di analisi dei programmi diversi da [[Struttura di un compilatore|compilatori]] 
+		- Usati nei database ad esempio sotto forma di _document type definitions_ (XML, JSON)
 	- ## Tipaggio statico e dinamico:
-		- ### Statico :
-			- Se è possibile controllare i tipi sul testo del programma senza eseguirlo quindi eliminando dal codice generato le annotazioni di tipo.
+		- ### Statico:
+			- Detto così se è possibile controllare i tipi sul testo del programma senza eseguirlo quindi eliminando dal codice generato le annotazioni di tipo (a meno che il run-time non necessiti di informazioni a livello dei tipi)
 			- Inoltre elimina tutti i controlli a run-time.
-		- ### Dinamico :
-			- Il controllo viene effettuato durante l’esecuzione del programma e ciò  richiede che ogni valore abbia un descrittore di Esecuzione che ne specifichi il tipo e che, a ogni operazione, il _runtime_ verifichi Che il programma esegua operazioni solo su operandi del tipo corretto e ciò rallenta di molto l’esecuzione del programma.
-			- 
+		- ### Dinamico:
+			- Il controllo viene effettuato durante l’esecuzione del programma e ciò richiede che ogni valore abbia un descrittore di Esecuzione che ne specifichi il tipo e che, a ogni operazione, il _runtime_ verifichi Che il programma esegua operazioni solo su operandi del tipo corretto e ciò rallenta di molto l’esecuzione del programma.
+		- Quindi la scelta del tipaggio di un linguaggio è influenzata dalla correttezza, le prestazioni e l'espressività del programma.
+		- Il tipaggio statico è si più veloce ma potrebbe portare ad errori che non verrebbero sollevati dal tipaggio dinamico un es:
+			- ![[Pasted image 20250826115001.png]]
+			- Il quale verrebbe rifiutato dal _type-checking_, ciò è dovuto all'indecidibilità dei programmi ([[Fondamenti di calcolabilità#^001a9b|terminazione]]) che rende impossibile sapere quale ramo  verrà eseguito o meno e ciò costringe il _type-checking_ a considerare tutti i possibili stati di calcolo.   
 	- ## Inferred typing:
 		- Non serve annotare il tipo di ogni variabile in quanto il linguaggio dispone di algoritmi che deducono il _tipo_ dal contesto. 
-	- ## Manifest typing:
-		- 
+	- ## Manifest typing: ^8d81aa
+		- Richiede che il programmatore annoti tutti i tipi di variabili e operazioni
 - # Link Utili:
 	- 

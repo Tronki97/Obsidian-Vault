@@ -1,7 +1,16 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - semantica statica
+  - semantica dinamica
+  - halting problem
+  - macchina di turing
+  - proprietà indecidibili
+  - semi-decidibile
+  - argomento di cantor
+  - Teorema di Jacopini-Bohm
+  - Tesi di Church-Turing
+  - Gerarchia di Macchine
 data: "`2025-08-21 12:55`"
 ---
 - # Semantica:
@@ -44,6 +53,97 @@ data: "`2025-08-21 12:55`"
 			- $$=\begin{cases}1 & P(P)\downarrow \\ 0 & P(P) \uparrow \end{cases}=K(P)$$
 		- Ma sapendo che $K$ non è calcolabile risulta che $Z$ non è calcolabile a sua volta.
 - # Problema dell'equivalenza di 2 programmi:
-	- 
+	- $$Equiv(P,Q)=\begin{cases}1 & P(x)=Q(x) \ oppure \ P(x)=\uparrow=Q(x) \\ 0& altrimenti\end{cases}$$
+	- $Equiv$ non è calcolabile se lo fosse potrei calcolare uno $Z$, ovvero costruire un programma per $Z$
+		- $$Z(P)=Equiv(P, Zero)=\begin{cases}1& \forall x\ P(x)=Zero(x)=0 \\ 0 & altrimenti\end{cases}$$
+		- Visto che già so che non può esistere un programma per $Z$ posso concludere che non può esistere un programma per $Equiv$
+- # Procedura di decisione:
+	- è un tipo di procedura che;
+		- Funziona per argomenti arbitrari
+		- Risponde _si_ o _no_ in un tempo finito.
+	- ## ES:
+		- $w\in L(G)$? è decidibile per le [[Grammatiche regolari]].
+- # Procedura di semi-decisione:
+	- Funziona per argomenti arbitrari
+	- Risponde _si_ in tempo finito
+	- Non è in grado di rispondere _NO_ in tempo finito.
+	- ## ES:
+		- $$H'(P,x)=\begin{cases} 1 & P(x)\downarrow \\ 0 & P(x)\uparrow \end{cases}$$
+- # Proprietà indecidibili:
+	- ## Terminazione: ^001a9b
+		- $$H(P,x)=\begin{cases} 1 & P(x)\downarrow \\ 0 & P(x)\uparrow \end{cases}$$
+			- _è semi-decidibile_
+	- ## Divergenza:
+		- $$D(P,x)=\begin{cases} 1 & P(x)\uparrow \\ 0 & P(x)\downarrow \end{cases}$$
+			- _non è semi-decidibile_
+	- ## Equivalenza di programmi
+	- ## Calcolo di una costante
+	- ## Generazione di errori a run-time
+	- Considerando dei linguaggi con un limitato potere espressivo, allora alcune di queste proprietà possono essere decise.
+		- ## ES:
+			- Se $L$ non i `while`, la ricorsione, allora tutti i suoi programmi terminano, quindi la _terminazione_ è decidibile.
+			- Se il linguaggio è _Turing-completo_ allora tutte le proprietà sopra sono _INDECIDIBILI_
+- # Macchina di Turing: ^53f7be
+	- $$M=(Q, A, B, \delta, q_{0}, q_{f})$$
+		- $Q$ insieme degli stati
+		- $A$ alfabeto finito dell'input (di solito cifre $0-9$)
+		- $B$ è l'alfabeto finito del "nastro" ($A\subset B,\  '\ '\in B$)
+		- $q_{0}$ è lo stato iniziale.
+		- $q_{f}$ è lo stato finale.
+		- $\delta: Q \times B \to Q \times B \times\{sx, dx\}$
+			- $\delta(q_{f}, b)$ è indefinita $\forall b \in B$
+	- ![[Pasted image 20250822125326.png]]
+	- ## Mosse:
+		- $\alpha q s \beta \vdash \alpha s'q' \beta$ se $\delta(q,s)=(q',s',dx)$
+		- $\alpha \bar{s} q s \beta\vdash \alpha q' \bar s s' \beta$ se $\delta(q,s)=(q', s' , sx)$
+	- $$L[M]=\{w\in A^{*}\ |\ q_{0} w \vdash^{*} \alpha q_{f} \beta\}$$
+		- Può succedere che non raggiunga mai ne $q_{f}$ ne uno stato di blocco "erroneo" ovvero può divergere.
+	- Una _MdT_ deterministica su alfabeto $A=[0-9]$ può essere considerata come una macchina che calcola _funzioni parziali binarie_:
+		- $$f_{M}(w)=\begin{cases}1 & q_{0}w \vdash^{*} \alpha q_{f}\beta \\ 0 & q_{0}w \vdash^{*} \alpha q'\beta \not \vdash \wedge \ q'\ne q_{f} \\ \uparrow & altrimenti \end{cases}$$
+	- Considerando l'insieme di tutte le funzioni parziali a valori binari:
+		- $$\mathscr{F}=\{f| f:\mathbb{N}\to \{0,1\}\}$$
+		- Si può quindi concludere che $f\in \mathscr{F}$ è _Turing-calcolabile_ se $\exists MdT\ M$ tale che:
+			- $$f_{M}=f$$
+	- ### OSS:
+		- Visto che una $MdT$ deterministica calcola una funzione, quale può essere l'insieme delle funzioni _Turing-calcolabili_?
+		- _La maggior parte delle funzioni in $\mathscr{F}$ non sono Turing-calcolabili_
+- # Argomento di Cantor:
+	- Suppongo che le funzioni binarie siano enumerabili, ora andrò a dimostrare che ciò è impossibile.
+	- ![[Pasted image 20250822172248.png|400]]
+	- Definisco la funzione:
+		- $$\bar{f}_{d}(i)=\overline{f_{i}(i)}$$
+			- Ovvero che $f_{i}(i)=1 \implies \overline{f_{i}(i)}=0$ e viceversa
+	- Ora $\forall i\in \mathbb{N}, \bar{f}_{d}(i)\ne f_{i}(i)$ ovvero $\bar{f}_{d}$ non compare in elenco.
+	- D'altro lato le _MdT_ sono enumerabili visto che ce ne sono tante quante $\mathbb{N}$
+		- _la stragrande maggioranza delle funzioni non è calcolabile (con MdT almeno)_
+	- Cambiando formalismo è possibile calcolarne di più.
+- # Formalismo turing-completo:
+	- Ha la stessa potenza espressiva delle $MdT$.
+- # Teorema di Jacopini-Bohm:
+	- Un linguaggio imperativo che contenga
+		- `if-then-else`
+		- `while`
+		- `;` _(composizione sequenziale)_
+	- è definibile come _Turing-completo_
+	- Grazie a questo teorema si è diffuso il principio di programmazione secondo il quale un linguaggio deve contenere solo operatori ben strutturati, la cui semantica è ben definibile _localmente_ solo guardando i propri argomenti
+- # Tesi di Church-Turing:
+	- Se una funzione è calcolabile algoritmicamente in qualche formalismo allora può essere calcolata con una _MdT_.
+	- è detta _Tesi_ perché:
+		- Non c'è una definizione formale di cos'è "algoritmicamente" calcolabile.
+		- è implicita una quantificazione universale su tutti i possibili formalismi, quindi servirebbero infinite prove in quanto si potrebbero creare sempre nuovi formalismi.
+	- Tesi considerata vera perché nessuno è ancora riuscito a confutarla.
+	- ## Criterio di equivalenza tra linguaggi:
+		- Se $L_{1}$ e $L_{2}$ sono _Turing-completi_ allora sono equamente espressivi per la tesi di _Church-Turing_
+	- Per quanto riguarda i linguaggi concorrenti è diverso perché i programmi concorrenti non calcolano solo funzioni, ma risolvono problemi...
+- # Gerarchia di Macchine:
+	- _espressività_ contro _analizzabilità_:
+	- $$Mdt \iff gramm.\ generali \iff w\in L(M) /  L(G)?$$
+		- è solo _semi-decidibile_
+	- $$PDA \iff gr. libere\iff w\in L[N]/L(G)$$
+		- è _decidibile_ ma rimane il problema dell'equivalenza:
+			- $$E(G_{1},G_{2})=\begin{cases}1 & L(G_{1})=L(G_{2})\\0&altirmenti \end{cases}$$
+			- Che è _indecidibile_
+	- $$DFA \iff gr. regolari \iff E(G_{1},G_{2})$$
+		- è _decidibile_
 - # Link Utili:
 	- 

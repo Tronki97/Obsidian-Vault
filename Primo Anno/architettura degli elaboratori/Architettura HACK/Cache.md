@@ -30,7 +30,7 @@ data: "`2024-08-31 20:05`"
 			- i restanti 16 bit vanno controllati con il _tag_: se coincidono e _valid_ è True allora il blocco cercato è in cache, altrimenti è in memoria centrale 
 - #### Gestione della Cache
 	- con un accesso di successo alla cache si ha un _cache hit_ altrimenti un _cache miss_ 
-		- ##### Cache miss:
+		- ##### Cache miss: ^9c9c74
 			- il blocco richiesto viene copiato dalla memoria centrale nella cache, ma solo dopo che il contento della corrispondente linea di cache sia stato riportato in memoria
 			- per questo motivo ogni tanto i dati in memoria centrale non coincidono con quelli, più aggiornati, della cache. e ciò porta a problemi quando più dispositivi provano ad accedere alla stessa memoria centrale, ed un modo per gestire ciò è impedire l'accesso ai blocchi in cache finché non vengono copiati in memoria. 
 - #### Paginazione
