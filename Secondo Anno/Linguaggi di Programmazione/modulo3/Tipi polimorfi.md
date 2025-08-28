@@ -50,7 +50,7 @@ data: "`2025-04-23 11:34`"
 					- _Sottotipaggio in profondità_ in quanto si sta sostituendo un campo con un suo sottocampo
 					- Non è detto però che `DogHouse<: AnimalHouse` in quanto non è detto che un `DogHouse` possa essere usato al posto di un `AnimalHouse`.
 						- Se si deve estrarre un `Animal` da un `AnimalHouse` si potrebbe tranquillamente estrarre da un `DogHouse` in quanto `Dog<: Animal`
-		- ### Covarianza e controvarianza:
+		- ### Covarianza e controvarianza: ^13824c
 			- Legato a consumo e produzione.
 			- Consumo (Input) _covarianza_ produzione (output) _controvarianza_ per quanto riguarda le funzioni. 
 				- I tipi [[Tipi base#^768bf2|funzione]] in consumo sono _controvarianti_ rispetto al tipo di riferimento, per esempio: `A2B <: D2B` (i quali danno lo stesso output ovvero un `bool`) sono in relazione controvariante rispetto a `Dog<:Animal` perché si può sostituire `D2B` a cui il contesto si aspetta di fornire un `Dog`, con `A2B` che usa meno info.

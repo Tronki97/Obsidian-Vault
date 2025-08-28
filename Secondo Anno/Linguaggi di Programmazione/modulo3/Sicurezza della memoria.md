@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - dangling pointer
   - tombstones

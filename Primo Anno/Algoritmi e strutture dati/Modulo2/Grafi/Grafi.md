@@ -127,7 +127,7 @@ data: "`2024-08-31 20:05`"
 	- un ciclo è _semplice_ se i nodi della seqeunza sono tutti distinti.
 - ## Grafi aciclici
 	- Un grafo non orientato è _aciclico_ se è senza cicli semplici 
-	- Un grafo orientato è _aciclico_ se è privo di cicli
+	- Un grafo orientato è _aciclico_ se è privo di cicli ^49f05c
 	- ### NOTA:
 		- un grafico orientato aciclico è chiamato _DAG_
 - ## Grafo completo 

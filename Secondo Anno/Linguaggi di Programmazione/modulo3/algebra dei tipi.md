@@ -25,7 +25,7 @@ data: "`2025-08-27 13:10`"
 		- Si indebolisce il concetto di uguaglianza e si va appunto all’_equivalenza_ 
 			- Ho una funzione che prende degli _interi_ e io gli passo dei _positivi_ (che sono sottoinsiemi degli interi) allora la funzione può essere eseguita.
 			- Non vale però il contrario anche perché nei tipi interi ci sono dei valori in più rispetto ai _positivi_ che magari la funzione non riuscirebbe a gestire.
-		- ### Preordini:
+		- ### Preordini: ^5942fb
 			- $\mathbb{R}$ è una relazione binaria su $S$ e $\mathbb{R}\subseteq S \times S$ ed ha delle proprietà:
 				- _Riflessività_: dato $s$, la coppia $(s,s)\in \mathbb{R}$ ovvero devo poter dire che $s$ equivale a se stesso.
 				- _Simmetria_: dati $s_{1},s_{2}$ $\{(s_{1},s_{2}), (s_{2},s_{1})\}\subseteq \mathbb{R}$
@@ -33,7 +33,7 @@ data: "`2025-08-27 13:10`"
 				- _Transitiva_: dati $s_{1},s_{2}, s_{3}$ $\{(s_{1},s_{2}), (s_{2},s_{3})\}\subseteq \mathbb{R}$ implica che $(s_{1},s_{3})\in \mathbb{R}$
 			- Quando $\mathbb{R}$ è riflessiva e transitiva è chiamato _preordine_.
 			- Quando $\mathbb{R}$ è un preordine simmetrico viene chiamato _equivalenza_ se invece è anti-simmetrico allora è chiamato _ordine parziale_. ^c16d0f
-		- ### equivalenza nominale:
+		- ### equivalenza nominale: ^73b2a9
 			- Due tipi sono equivalenti se hanno lo stesso nome anche se formano lo stesso insieme
 			- Prendendo `dollaro=int` e `euro=int` anche se sono entrambi `int` in un sistema nominale sono diversi.
 		- ### Duck typing:
@@ -68,7 +68,7 @@ data: "`2025-08-27 13:10`"
 			- ### Coercizione di tipo:
 				- è una conversione _implicita_ di tipo canonica/arbitraria come può essere una funzione `sum` che accetta i `float` e se gli passassi un `int` il [[Struttura di un compilatore|compilatore]] /interprete farebbe tutte le conversioni necessarie implicitamente 
 				- Queste conversioni sono _sintattiche_ quindi hanno la stessa rappresentazione in memoria oppure tramite una conversione canonico/arbitraria la rappresentazione in memoria viene trasformata in un altro valore.
-			- ### Casting di tipo:
+			- ### Casting di tipo: ^4e60bb
 				- è un'annotazione esplicita nel linguaggio di una conversione, ha anche valore di documentazione in quanto stai facendo vedere esplicitamente il tipo in cui converti:
 					- ![[Pasted image 20250827123026.png]]
 	- ## Regole di inferenza: ^2516ce
