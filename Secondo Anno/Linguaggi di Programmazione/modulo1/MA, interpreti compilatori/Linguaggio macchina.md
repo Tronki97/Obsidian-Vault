@@ -1,3 +1,8 @@
+---
+tags:
+aliases:
+data: "`2024-09-17 14:30`"
+---
 - M(o [[MA (macchina astratta)||MA]]) = macchina astratta
 - $L_{M}$ = linguaggio macchina di M. Ovvero è il linguaggio che è "compreso" dall'[[Interprete]] di M:
 	- I programmi sono particolari dati primitivi su cui opera l'interprete.

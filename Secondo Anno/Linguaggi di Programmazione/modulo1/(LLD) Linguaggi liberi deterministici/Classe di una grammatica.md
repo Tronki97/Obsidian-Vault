@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - classe
   - grammatiche LL(k)

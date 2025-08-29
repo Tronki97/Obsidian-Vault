@@ -1,3 +1,8 @@
+---
+tags:
+aliases:
+data: "`2024-09-19 12:06`"
+---
 - ## Strumenti automatici
 	- Lex: genera analizzatori lessicali
 	- Yacc: genera analizzatori sintattici

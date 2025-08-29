@@ -11,21 +11,9 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "immagini/Pasted image 20250827200913.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250827200913"
-            }
-          },
-          {
-            "id": "e0a2df0475ad29d1",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Secondo Anno/Linguaggi di Programmazione/modulo3/algebra dei tipi.md",
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi finiti deterministici.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -40,10 +28,131 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "algebra dei tipi"
+              "title": "Automi finiti deterministici"
+            }
+          },
+          {
+            "id": "4ba3a99f8dd7ee9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser Top-down.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Parser Top-down"
+            }
+          },
+          {
+            "id": "ded53b0c8d21e288",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Proprietà di chiusura dei linguaggi liberi.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Proprietà di chiusura dei linguaggi liberi"
+            }
+          },
+          {
+            "id": "e108b2c3f8671ab8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Proprietà linguaggi liberi deterministici.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Proprietà linguaggi liberi deterministici"
+            }
+          },
+          {
+            "id": "31636f2abbd929de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Linguaggi regolari.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Linguaggi regolari"
+            }
+          },
+          {
+            "id": "a3bb98ef5b54744f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Proprietà algoritmiche dei linguaggi regolari"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -75,7 +184,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Cho",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -160,12 +269,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "immagini/Pasted image 20250827200913.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita da Pasted image 20250827200913"
+              "title": "Collegamenti in uscita"
             }
           },
           {
@@ -222,7 +330,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.5
+    "width": 422.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -246,9 +354,35 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "db79be7258f0f00b",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Da exp regolari a NFA equivalenti.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Linguaggo riconosciuto.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/minimizzazione.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Da DFA a grammatiche regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Proprietà di chiusura dei linguaggi liberi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Proprietà linguaggi liberi deterministici.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/equivalenza NFA-DFA.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Grammatiche regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Linguaggi regolari.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automa minimo.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi a stati finiti.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Grammatiche regolari ed Expr.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Pumping Theorem.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser Top-down.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Classe di una grammatica.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio LL(k).md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Automi a Pila (PDA).md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Semantica e sintassi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Pragmatica.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Descrivere un linguaggio.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Rappresentazione finita di linguaggi.md",
+    "Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Linguaggio Generato.md",
+    "immagini/Pasted image 20250827200913.png",
     "immagini/Pasted image 20250828181721.png",
     "immagini/Pasted image 20250828175254.png",
     "immagini/Pasted image 20250828174541.png",
@@ -258,33 +392,8 @@
     "immagini/Pasted image 20250828165750.png",
     "immagini/Pasted image 20250828165711.png",
     "immagini/Pasted image 20250828164432.png",
-    "immagini/Pasted image 20250828164413.png",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/algebra dei tipi.md",
-    "Homepage.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Sicurezza della memoria.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Eccezioni.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Heap.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo3/tipi nei linguaggi di programmazione.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/Fondamenti di calcolabilità.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Memoria.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/Nomi, ambiente, blocchi, regole di scope.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo2/esercizi di linguaggi.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/desktop.ini",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Generatori di analizzatori sintattici.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Grammatiche LR(k).md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/grammatiche LR(k) 1.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi finiti deterministici.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Derivazioni.md",
-    "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Bottom-up parsing.md",
-    "conflict-files-obsidian-git.md",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Parser",
     "Flashcard",
     "Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless",

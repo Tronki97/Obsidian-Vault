@@ -1,3 +1,8 @@
+---
+tags:
+aliases:
+data: "`2024-09-17 14:25`"
+---
 - è il componente che interpreta le istruzioni ed è costituito da:
 	- Operazioni per *l'elaborazione dei dati primitivi*
 	- Operazioni e strutture dati per il *controllo della sequenza* di esecuzione delle operazioni

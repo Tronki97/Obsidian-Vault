@@ -23,7 +23,7 @@ data: "`2024-10-10 12:37`"
 				- cancellate nel passo _1_ 
 				- $B\in Q-F$ e $D\in F$ 
 			- "a" distingue A e C perché:
-				- $\delta(A,a)=B$   e   $\delta(C, a)=A$ 
+				- $\delta(A,a)=B$   e   $\delta(C, a)=D$ 
 				- ma $B\in Q-F$ e $D\in F$
 			- "b" non permette di fare nuove distinzioni 
 	- ## 3) 

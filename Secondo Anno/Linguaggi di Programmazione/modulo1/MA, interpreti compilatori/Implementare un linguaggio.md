@@ -1,3 +1,8 @@
+---
+tags:
+aliases:
+data: "`2024-09-17 15:09`"
+---
 - ## Preconcetto: ^7219a0
 	- ### Funzione parziale:
 		- $f:A\ -o \to B$ ovvero che può essere _non definita_ su qualche $a\in A$

@@ -1,3 +1,8 @@
+---
+tags:
+aliases:
+data: "`2024-09-17 14:23`"
+---
 - è un insieme di strutture dati ed algoritmi che permettono di memorizzare ed eseguire un programma ha come componente essenziale l'interprete.
 - ![[Schema di una macchina.png]]
 - ## Realizzare una macchina astratta: ^584d6e
