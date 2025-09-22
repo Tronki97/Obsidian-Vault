@@ -1,0 +1,35 @@
+---
+tags:
+aliases:
+data: "`2024-09-17 14:23`"
+---
+- # Def:
+	- Supponendo di avere un linguaggio $L$ definisco la sua macchina astratta come $M_{L}$ è un insieme di strutture dati ed algoritmi che permettono di memorizzare ed eseguire un programma scritto in $L$.
+	- ![[Schema di una macchina.png]]
+- ## Realizzare una macchina astratta: ^584d6e
+	- ### 1) realizzazione _hardware_
+		- sempre possibile ma usata solo per macchine a basso livello o dedicate
+		- massima velocità
+		- niente flessibilità
+	- ### 2) emulazione o simulazione _firmware_
+		- SDeA _MA_ realizzati tramite microprogrammi, che risiedono in [[Memorie#^ff2552||ROM]] 
+		- macchina ospite microprogrammabile
+		- alta velocità
+		- flessibilità maggiore rispetto all'HW puro.
+	- ### 3) Interpretazione o simulazione via software 
+		- SDeA _MA_ realizzati tramite _programmi scritti nel linguaggio della macchina ospite(MO)_
+			- _MO_ qualsiasi
+			- minore velocità
+			- _massima flessibilità_
+	- Nella realtà si usa un misto delle 3 tecniche precedenti
+	- la conseguenza del punto _3_  è che è possibile realizzare macchine il cui linguaggio è sofisticato con cui a propria volta si possono realizzare macchina il cui linguaggio è ancora più sofisticato.  
+- ## Gerarchia di MA
+	- un'architettura informatica si struttura in una serie di macchine astratte gerarchiche:
+		- ![[Stack di MA.png]]
+			- $M_{i}$ usa i servizi di $M_{i-1}$(ovvero il linguaggio $L_{M_{i-1}}$) per dare dei servizi a $M_{i+1}$ (ovvero realizzare un interprete per il linguaggio $L_{M_{i+1}}$)
+	- ### ES: 
+		- Quando si scrive un file su Word (_WP_) poi si procede a salvare suddetto _file_ quindi:
+			- WP richiede al livello inferiore (l'interfaccia del [[SO]]) l'apertura di una finestra per il nome del file
+				- l'interfaccia SO richiede al sistema operativo la disponibilità di un'area di memorizzazione
+					- il SO richiede al *file system* un indirizzo logico per il file
+					- ...

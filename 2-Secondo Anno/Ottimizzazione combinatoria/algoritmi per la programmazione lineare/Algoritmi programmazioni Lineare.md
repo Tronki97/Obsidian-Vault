@@ -1,0 +1,116 @@
+---
+tags: []
+aliases:
+  - iperpiano
+  - semispazio
+  - poliedro
+  - insieme convesso
+  - facce
+  - faccia
+  - vertice
+  - vertici
+  - soluzioni di base
+  - vincoli attivi
+  - insiemi convessi
+  - motzkin
+  - teorema fondamentale
+data: "`2025-04-09 10:02`"
+---
+- # intro:
+	-  Ci si concentra nella costruzione di algoritmi per la [[Programmazione lineare]] senza i _vincoli in interezza_
+	- ## ES:
+		- $$\max {x+y}$$ 
+		- $0 \le x\le 3$    $x+2y \ge 2$   $0\le y\le 2$
+		- Possono essere visti come vincoli che isolano certi punti del piano cartesiano.
+		- ![[Pasted image 20250409100823.png|500]]
+		- è comunque una regione con infiniti punti, quindi bisogna capire se si necessita di considerarli tutti.
+		- Si può notare come la funzione obiettivo è lineare.
+		- Quindi ci interessa trovare dei punti che massimizzano la retta generata dai valori assegnati a $x,y$ sempre rimanendo nella zona ammissibile (grigia).
+			- Ma l'obiettivo dell’algoritmo è evitare di controllare tutti quanti i punti frigi (perché sono troppi) e quindi restringere il campo di ricerca ai vertici del poligono.
+		- ### OSS:
+			- Se mancasse il vincolo $x\le 3$ si avrebbe un [[2-Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione#^1429ac|problema illimitato]] e l’algoritmo progettato se ne renderebbe conto e lo riconoscerebbe. 
+- # Nozioni preliminari:
+	- ## Iperpiano:
+		- Equivalente di una retta 
+		- $$\{x\in \mathbb{R}^{n}|ax=b\}$$
+			- Ovvero le soluzioni dell'equazione $ax=b$ con $a\in \mathbb{R}^{2}$ e $b\in \mathbb{R}$
+			- 
+	- ## Semispazio:
+		- Analogo dell’iperpiano ma al posto di un equazione c’è una disequazione:
+			- $$\{x\in \mathbb{R}^{n}|ax\le b\}$$
+				- $b\in \mathbb{R}$
+			- L’_iperpiano_ corrisponde al “confine” del corrispondente _semispazio_
+			- Questi valori di disequazione corrispondono ai vincoli.
+	- ## poliedro: ^ab0205
+		- Intersezione di un numero finito $m$ di _semispazi_
+		- Devono esistere una matrice $A\in \mathbb{R}^{m \times n}$ e $b\in \mathbb{R}^{m}$
+			- $$P=\{x|Ax\le b\}$$
+	- ## Insieme convesso: ^5799ac
+		- Un insieme dove se costruisci un insieme di tutti i punti che si connettono tra di loro sono appartenenti all’insieme stesso.
+			- $$\forall x,y \in C\ \ \ \forall \alpha \in [0,1]\ \ \ \alpha x+(1-\alpha)y\in C$$
+		- _i semispazi e poliedri_ sono insiemi convessi.
+	- Se considero un _poliedro_ $P$ e fisso un sottoinsieme $I$ di $\{1,...,m\}$ indico:
+		- $\bar I$ il complementare $\{1,...,m\}-I$ di $I$
+		- $A_{I}$ la sottomatrice di $A$ dove considero solo le _righe_ come indice in $I$
+		- Infine $P_{I}$ è definito come:
+			- $$\{x| A_{I}x=b_{I}\wedge A_{\overline{I}}x\le b_{\overline{I}}\}$$
+		- Risulta quindi che il poliedro $P_{I}$ sarà di dimensione più piccola di $P$ e se scegliesse come nuovi vincoli alcuni che non fanno rispettare le disequazioni che vengono lasciate invariate allora risulta un poliedro vuoto.
+	- ## Facce: ^99c600
+		- I lati e vertici del poliedro ma anche il poliedro stesso.
+		- Il poliedro $P_{I}$ risultante da $P$ è anch’esso una faccia di $P$
+		- La faccia permette di definire un _vertice_.
+	- ## Vertice: ^a0d9ff
+		- Una faccia determinata da $A_{I}$ con [[Rango righe]] $k$ ha dimensione $n-k$ o inferiore.
+		- Quindi le facce determinate da $A_{I}$ con rango $n$ hanno necessariamente [[Dimensione]] 0 e son dette _vertici_.
+			- Per l’ipotesi sul rango l’equazione $A_{I}x=b_{I}$ ammette una sola soluzione.
+	- ## Soluzioni di base:
+		- Non necessariamente sono vertici ma solo se sono ammissibili e devono far parte dell’intero poliedro.
+		- Suppongo che $B$ sia tale che $A_{B}$ sia quadrata e [[Aritmetica modulare|invertibile]]:
+			- $B$ è detta [[Base]]
+			- $A_{B}$ è detta _matrice di base_
+			- $x_{B}=A^{-1}_{B}b_{B}$ è la _soluzione di base_.
+	- ## Vincoli attivi:
+		- Con $x\in P$ allora i vincoli soddisfatti _come uguaglianze_ sono detti _attivi_.
+		- Si indica $I(x)$ l’_insieme degli indici dei vincoli attivi in $x$_
+			- $$I(x)=\{i|A_{i}x=b_{i}\}$$
+		- $\forall J\subseteq I(x)$ il poliedro su $J$ è una faccia di $P$ e $P_{I(x)}$ è la faccia minimale. 
+	- ## ES:
+		- Prendendo l’esempio precedente ottengo le matrici:
+			- $$A=\begin{pmatrix} -1 & 0 \\ 1 & 0 \\ -1 & -2 \\ 0&1 \\ 0&-1\end{pmatrix}\ \ b= \begin{pmatrix} 0\\ 3 \\ -2\\ 2 \\ 0\end{pmatrix}$$
+- # Teorema di Motzkin:
+	- Prendendo due insiemi $X,Y$ della stessa [[Dimensione]] il sottoinsieme $X+Y$ è definito come:
+		- $$X+Y=\{x+y|x\in X \wedge y\in Y \}$$
+	- Allora $P \subseteq \mathbb{R}^{n}$ è un _poliedro_ $\iff$ $\exists X,V$ finiti tali che:
+		- $$P=conv(X)+cono(V)$$
+		- Ovvero $P$ è _generato_ dai punti di $X$ e le direzioni di $V$
+			- Se $X$ è minimale allora i suoi elementi sono tutti e soli vertici di $P$
+	- Normalmente un poliedro può essere rappresentato:
+		- Come _intersezione di sottospazi_
+		- Come _somma di un politopo e un cono_.
+	- Il _teorema di Motzkin_ ci dice che queste due rappresentazioni sono equivalenti, _MA hanno dimensione diversa_:
+		- Prendendo $n$ come dimensione, se si prendono in esame $2n$ sottospazi allora i vertici saranno $2^{n}$ (quadrato: 4; cubo: 8; cubo a 4 dimensioni: 16).
+- # Teorema fondamentale:
+	- Ho $P=\{x| Ax\le b\}$ 
+		- $$P=conv(\{x_{1},...,x_{n} \})+cono(\{v_{1},...,v_{n} \})$$
+	- Allora il problema di massimo 
+		- $$\max\{cx| Ax\le b\}$$
+		- Ha un _ottimo finito_ $\iff$ $cv_{j}\le 0$ ovvero i raggi esterni continuano a decrescere.
+		- In tal caso $\exists k: x_{k}$ è una soluzione ottima. 
+			- Ovvero la soluzione si trova in uno dei vertici.
+- # Dim:
+	- Si usa il _teorema di decomposizione_ si ha che il problema diventi:
+		- $$\max c(\sum\limits_{i=1}^{s}\lambda_{i}x_{i}\  + \ \sum\limits_{j=1}^{t} \nu_{j}v_{j})=$$
+		- $$=\max \sum\limits_{i=1 }^{s} \lambda_{i}(cx_{i})+ \sum\limits_{j=1 }^{t} \nu_{j}(cv_{j})$$
+			- Per gli inviluppi convessi:
+				- $$\sum\limits_{i=1}^{s} \lambda_{i}=1\ \ \ \lambda_{i}\ge 0 \ \ \nu_{j}\ge0$$
+	- Ora si dimostra che: _tale problema ha ottimo finito sse_ $cv_{j}\le 0\ \ \forall j\in \{1,...,t\}$
+		- $\implies$) 
+			- Se prendessi il caso in cui $cv_{j}>0$ per qualche $j$ allora si potrebbe aumentare il valore di $v_{j}$ portando quindi il valore della funzione obiettivo ad un valore a piacimento.
+		- $\Longleftarrow$ )
+			- Avendo come ipotesi che $cv_{j}\le 0$ per ogni $j$ e prendendo un $y\in P$. Si ha che $\lambda_{1}$ e $\nu_{j}$ sono i coefficienti corrispettivi del teorema di decomposizione:
+				- $$cy=\sum\limits_{i=1}^{s}\lambda_{i}(cx_{i})+ \sum\limits_{j=1}^{t}\nu_{j}(cv_{j})\le \sum\limits _{i=1}^{s}\lambda_{i}(cx_{i})\le \sum\limits _{i=1}^{s}\lambda_{i}(cx_{k})=cx_{k}$$
+					- Valido perché $cv_{j}\le0$ quindi sommarlo diminuisce o rende uguale il valore ed inoltre visto che:
+						- $$\sum\limits_{i=1}^{s} \lambda_{i}=1$$
+					- Allora si porta il massimo valore di $cx_{k}$ fuori che rappresenterà quindi il _valore ottimo_.
+- # Link Utili:
+	- 

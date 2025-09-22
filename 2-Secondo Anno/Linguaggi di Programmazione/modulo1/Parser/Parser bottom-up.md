@@ -1,0 +1,290 @@
+---
+tags: 
+aliases:
+  - shift
+  - reduce
+  - parser LR
+  - maniglia
+  - handle
+  - tabella di parsing LR
+  - nucleo
+  - core
+  - prefisso viabile
+  - parser LALR
+data: "`2024-11-19 11:09`"
+---
+- # shift-reduce:
+	- ## shift: ^2f2330
+		- Un simbolo $\in T$ viene spostato dall'input sulla pila
+	- ## Reduce: ^94ff73
+		- fa il contrario di un [[Parser Top-down]] 
+		- rimuove una stringa $\alpha^{R}$ dalla pila e la sostituisce con $A$ 
+	- riconosce la stringa per [[Automi a Pila (PDA)#^a594b1|pila vuota]]
+- # nondeterministico:
+	- ## Input:
+		- [[Grammatiche#^c95cdc|grammatiche libere]] $G$ con simbolo iniziale $S$
+	- ## Output:
+		- ogni volata che faccio “reduce” fornisco in output la produzione usata.
+	- quindi in pratica il parser parte dall’input e costruisce sulla pila la sequenza di produzioni necessarie per produrre quell’input e se ci riesce accetta la stringa data. 
+	- Si inizializza la pila a ${\$}$ 
+	- Si inizializza l'input a $w{\$}$
+	- Si usa il seguente [[Automi a Pila (PDA)|PDA]] per trovare la derivazione dell'input
+		- $$M=(T,\{q\}, T\cup NT\cup \{\$\}, \delta, \$, \emptyset)$$
+			- 1) $(q, aX)\in \delta(q,a,X)\ \ \forall a\in T \ \ \forall x \Gamma$    (_SHIFT_)
+			- 2) $(q, A)\in \delta(q,\epsilon,\alpha^{R})$ se $(A\to \alpha)\in R$     (_REDUCE_)
+				- Ad ogni _REDUCE_ si fornisce in output la produzione usata.
+			- 3) $(q, \epsilon)\in \delta(q, \$, S\$)$    (_ACCEPT_)
+				- Alla fine, se rimane $S{\$}$ sulla pila con in input ${\$}$ lo si accetta. 
+	- ## ES:
+		- ![[Pasted image 20241119112217.png|600]] ![[Pasted image 20241119112233.png|600]] 
+		- e l’albero di derivazione generato è appunto costruita bottom-up e rightmost:
+			- ![[Pasted image 20241119112348.png|500]]
+	- C'è in sacco di _nondeterminismo_:
+		- _Conflitti shift-reduce_: al 2) si poteva fare shift invece di reduce
+		- _conflitti reduce-reduce_: al 11) si poteva usare la regola di derivazione $E\to T$ invece di $T\to A*T$
+- # Parser LR:
+	- L: input letto da sinistra a destra 
+	- R: genera una derivazione rightmost.
+	- ## Composizione:
+		- ![[Pasted image 20250806162120.png]]
+		- Una configurazione è:
+			- $$(S_{0}...S_{n}, X_{1}...X_{m}, a_{i}...a_{k}{\$})$$
+				- $S$: stack degli stati
+				- $X$: stack dei simboli.
+				- $a$: resto dei simboli.
+		- ### OSS:
+			- $X_{1}...X_{m} \ \ \   a_{i}...a_{k}$ è una stringa intermedia della derivazione canonica destra.
+	- ## Mosse:
+		- 1) prima legge lo _stato top_ ($S_{n}$) e i _simboli correnti dell'input_ ($a_{i}$)
+		- 2) Consulta la tabella di parsing LR $M[S_{n}, a_{i}]$
+			- Se $M[S_{n}, a_{i}]=\text{shifts}$ allora la nuova configurazione è:
+				- $$(S_{0}...S_{n}, X_{1}...X_{m}\ a_{i}, a_{i+1}...a_{k}{\$})$$
+			- Se $M[S_{n}, a_{i}]=\text{reduce} \ \ A\to \beta$ allora la configurazione diventa:
+				- $$(S_{0}...S_{n-r}\ S, X_{1}...X_{m-r}\ A, a_{i}...a_{k}{\$})$$
+					- Dove $r=|\beta|$ e $M[S_{n-r}, A]=goto\ S$
+				- In sostanza fa _tre passi_:
+					- 1) fa "pop" di $r$ elementi dai 2 stack
+					- 2) metto $A$ in cima alla pila dei simboli
+					- 3) calcolo il nuovo stato top, guardando $M[S_{n-r}, A]=goto \ S$ e metto $S$ in cima alla pila degli stati.
+			- Se $M[S_{n}, a_{i}]=accept$ allora finisco.
+			- Se $M[S_{n}, a_{i}]$ è vuoto allora c'è un errore.
+	- ## ES:
+		- $G= S\to (S)\ |\ ( )$ necessito di aggiungere un altro simbolo iniziale:
+			- $$G=\begin{cases}(1)\ S'\to S  \\ (2) \ S\to (S) \\ (3)\ S\to  ()\end{cases}$$
+		- Si genera la tabella di parsing $LR(0)$
+		- ![[Pasted image 20250806181006.png]]
+		- Le operazioni shift-reduce devono fare in modo che in cima alla pila rimanga un prefisso di una parte dx di una produzione.
+		- In questo esempio appena sulla pila compare "$)$" allora bisogna fare una _reduce_, la reduce da fare dipende dallo stato su cui siamo finiti nel [[Automi finiti deterministici|DFA]].
+		- Questa tabella è generabile grazie al _DFA dei prefissi viabili_ o _Automa canonico $LR(0)$_ 
+			- ![[Pasted image 20250806181959.png]]
+	- ## Modifiche alla pila:
+		- La pila viene modificata solo in 2 casi:
+			- 1) _shift_: la pila passa da ${\$}\gamma$ a ${\$} \gamma x$. In tal caso il DFA si trova nello stato $S$ dopo aver elaborato ${\$} \gamma$ basta poi far ripartire il DFA da $S$ con input $x$
+			- 2) _reduce_ $A\to \alpha$: la pila passa da ${\$}\gamma \alpha$ a ${\$} \gamma A$ e in tal caso il DFA si trova nello stato $S$ dopo aver elaborato ${\$}\gamma \alpha$, quindi non c'è bisogno di far ripartire il DFA dalla base della pila, basta ripristinare lo stato in cui si trovava subito prima di elaborare il primo simbolo di $\alpha$ e fornirgli il simbolo $A$ in input.
+		- _Per fare tutto ciò si necessita dello stack degli stati del DFA._
+	- Uno stato del _DFA dei prefissi viabili_ è costituito da un insieme di _item LR(0)_:
+		- Ovvero una produzione con indicata, con un "$.$", una posizione della sua parte destra.
+		- #### ES:
+			- $A\to XYZ$ genera 4 item:
+				- $A\to .XYZ$
+				- $A\to X.YZ$
+				- $A\to XY.Z$
+				- $A\to XYZ.$
+	- Questo "." indica quanto della produzione è stato già analizzato.
+		- Se $A\to \alpha .\beta$ è nello stato del DFA in cima alla pila vuol dire che $\alpha$ è sulla pila dei simboli e ci si aspetta che nell'input da leggere ci sia $\beta$
+		- Se $A\to \alpha.$ è nello stato del DFA in cima alla pila allora sulla pila dei simboli c'è l'_handle_ $\alpha$ e possiamo fare la _reduce_. 
+	- ## Costruire l'NFA dei prefissi viabili:
+		- Data una [[Grammatiche#^c95cdc|grammatica libera]] se ne prende una versione aumentata con un nuovo simbolo iniziale $S'$ e una produzione $S'\to S$
+		- $[S'\to .S]$ è lo stato iniziale.
+		- Dallo stato $[A\to \alpha.X \beta]$ si fa una transizione allo stato $[A\to \alpha X.\beta]$ etichettato $X$, per $X\in T\cup NT$ 
+		- Dallo stato $[A\to \alpha.X \beta]$, per $X\in NT$ e per ogni produzione $X\to \gamma$, c'è una $\epsilon-$ transizione verso lo stato $[X\to .\gamma]$
+	- ## ES:
+		- ![[Pasted image 20250807124758.png]]
+			- Vengono generati da $G$ tutti gli item $LR(0)$
+		- ![[Pasted image 20250807124940.png]]
+	- ## Automa canonico LR(0):
+		- è il DFA ottenuto dall'NFA dei prefissi viabili tramite la costruzione per sottoinsiemi oppure in modo diretto usando le funzioni ausiliarie $Clos(I)$ e $Goto(I,X)$
+			- Con $I$ insieme di $Item$ e $X\in T\cup NT$
+			- ![[Pasted image 20250807125421.png|500]]
+			- ![[Pasted image 20250807125435.png|500]]
+		- ![[Pasted image 20250807125559.png|600]]
+		- ### ES:
+			- ![[Pasted image 20250807125823.png|700]]
+			- $$Clos(\{S'\to .S\})=\{S'\to .S, \ S\to .(S),\ S\to .()  \}$$
+				- Ovvero lo stato iniziale $I_{0}$
+			- $$Goto(I_{0}, \{\ (\ \}\ )= Clos(\{S\to (.S),\ S\to (.)\})=\{S\to (.S),\ S\to (.),\ S\to .(S),\ S\to .()\}$$
+				- Ovvero lo stato $I_{2}$
+	- ## Tabella di parsing LR: ^5d8d50
+		- è una matrice $M$:
+			- _righe_: stati dell'automa canonico $LR(0)/LR(1)$
+			- _colonne_: $T\cup \{\$ \}\cup NT$ 
+				- $T\cup \{\$ \}$ per le azioni
+				- $NT$ per i $Goto$
+		- $M[s, X]$ contiene le azioni che potrebbe compiere il parser con $S$ in cima alla pila degli stati e $X$ come simbolo in input
+			- Se è vuota allora c'è un errore
+			- Se contiene più azioni allora c'è un conflitto e di conseguenza il parser è _nodeterministico_
+		- ### Caso LR(0):
+			- Per ogni stato $S$ dell'automa canonico
+				- Se $x\in T$ e $S \xrightarrow{x}t$ nell'automa inserisco _shift_ in $M[s,x]$
+				- Se $A\to \alpha. \ \in S$ e $A\ne S'$, inserisco _reduce $A\to \alpha$_ in $M[s,x]$ per tutti gli $x\in T\cup \{\$\}$
+				- Se $S'\to S \in s$ inserisco _accept_ in $M[s, \{\$\}]$
+				- Se $A\in NT$ e $S \xrightarrow{A}t$ nell'automa LR(0); inserisco _goto t_ in $M[s,A]$
+			- #### grammatica LR(0)
+				- Una grammatica si dice $LR(0)$ se ogni casella nella [[Parser bottom-up#^5d8d50|tabella di parsing LR]] contiene al più un elemento.
+			- Per quanto riguarda l'ultimo esempio la tabella di parsing risultante è:
+				- ![[Pasted image 20250807132843.png|700]]
+				- Non presentando conflitti $G$ è di [[Classe di una grammatica|classe]] LR(0)
+		- 
+		- 
+- # Risoluzione dei conflitti:
+	- Bisogna scegliere l'azione giusta da compiere in modo che sulla pila ci sia un _prefisso viabile_.
+	- ## Prefisso viabile:
+		- ### Prima definizione:
+			- Sequenza $\in (T\cup NT)^{*}$ che può apparire sulla pila di un [[Parser bottom-up]] _per una configurazione che accetta un input_.
+			- In sostanza si necessita che la parte top della pila sia un prefisso di una parte dx di una produzione.
+			- Negli esempi fatti prima:
+				- ${\$}a+$ non è prefisso di nessuna parte dx di una produzione ma ${\$}A$ lo è.
+				- ${\$}T+A*E$ non è prefisso di una parte dx di una produzione mentre ${\$}T+T$ lo è
+			- Quindi si necessita di fornire al PDA una struttura di controllo (_tabella di parsing_) che aiuti a scegliere l'azione giusta.
+		- ### Seconda definizione:
+			- è una stringa $\gamma \in (T\cup NT)^{*}$ viabile per $G$ libera se e solo se esiste _una derivazione rightmost_.
+				- $$(S \Rightarrow^{*}Say) \implies (\delta \alpha \beta y = \gamma \beta y) $$
+					- Per qualche $y \in T^{*}$, $\delta \in (T\cup NT)^{*}$ e per una produzione $A\to \alpha \beta$. Inoltre $S$ è un _prefisso viabile_ per definizione 
+					- Un prefisso viabile si dice _completo_ se $\beta= \epsilon$; in quel caso $\alpha$ è detto _handle_(maniglia) per $\gamma y$, (_ovvero in cima alla pila trovo $\alpha^{R}$ e posso fare una reduce_) ^952cf9
+			- #### Teorema:
+				- Data $G$ libera, i _prefissi viabili_ di $G$ costituiscono un [[Linguaggi regolari|linguaggio regolare]] e può essere descritto con un DFA.
+			- Il Parser può consultare il _DFA_ dei prefissi viabili ovvero la tabella di parsing per decidere cosa fare.
+				- Se la pila contiene un prefisso viabile completo allora il parser _riduce_.
+				- Se la pila contiene un prefisso viabile incompleto allora _shifta_.
+				- Se la pila non contiene un prefisso viabile allora errore.
+			- A seconda di come è fatto il DFA il parser può risultare deterministico o meno.
+			- _ogni prefisso di un prefisso viabile è anch'esso un prefisso viabile_.
+- # Risoluzione conflitti LR(0):
+	- _Una grammatica libera però può non essere $LR(0)$_
+		- ![[Pasted image 20250807163135.png]]
+		- ![[Pasted image 20250807163152.png|500]]
+		- Si usa quindi il _look-ahead_ ovvero si guarda il [[Parser Top-down#^ea28e7|follow]] di $S$ se $b$ gli appartiene allora il conflitto è reale.
+		- Però $Follow(S)=\{\$\}$ quindi si risolve a favore dello _shift_
+			- ![[Pasted image 20250807165837.png]]
+			- Tabella $S(imple)LR(1)$; solo per i caratteri nel $Follow(S)$ metto $r2$ 
+	- ## ES:
+		- ![[Pasted image 20250807170017.png]]
+		- ![[Pasted image 20250807170033.png]]
+		- ![[Pasted image 20250807170044.png]]
+		- Tabella $SLR(1)$ senza conflitti quindi ci dice che $G$ è $SLR(1)$ ma non $LR(0)$.
+	- ## OSS:
+		- 1) _Se $G$ ha produzioni $\epsilon$ allora $G$ difficilmente è $LR(0)$ _ 
+		- 2) _Se $L$ è [[Linguaggio libero deterministico]] e gode della prefix-property_ (ovvero se $\not \exists x,y \in L:$ $x$ è prefisso di $y$) allora $L$ è $LR(0)$; quindi se $L$ è libero deterministico, ma non è $LR(0)$ allora non gode della _prefix property_.
+		- 3) _se L è_ $LR(0)$ ed è finito allora gode della _prefix-property_. _ovvero se L è finito e non gode di questa proprietà allora L non è $LR(0)$ _
+		- 4) Se $L$ è $LR(0)$ ma è infinito, può non godere della _prefix-property_.
+		- ### ES:
+			- ![[Pasted image 20250807171530.png]]
+	- ## Tabella di parsing SLR(1):
+		- ___Colonne___: $T\cup \{\$\}\cup NT$
+		- ___Righe___: stati dell'automa canonico $LR(0)$
+		- ### Riempimento:
+			- Per ogni stato $s$ dell'automa $LR(0)$:
+				- 1) se $x\in T$ e $S\xrightarrow{x}t$, si inserisce $shift$ in $M[s,x]$
+				- 2) se $A\to \alpha. \in s$ e $A\ne S'$, inserisco $reduce \ A\to \alpha$ in $M[s,x]$ _per tutti gli_ $x\in Follow(A)$
+					- Prima, per $LR(0)$ era per tutti gli $x\in T\cup \{\$\}$ questa modifica fa si di limitare l'uso della _reduce_ solo ai casi plausibili.
+				- 3) se $S'\to S.\ \in s$, inserisco $accept$ in $M[s,\$]$ 
+				- 4) se $A\in NT$ e $S \xrightarrow{A}t$ inserisco $goto \ t$ in $M[s,A]$
+- # Risoluzione conflitti SLR(1):
+	- Una grammatica $G$ può anche non essere $SLR(1)$
+	- ![[Pasted image 20250818133719.png|700]]
+		- Se si considera lo stato $I_{2}$ si può notare un conflitto ${Shift}/{reduce}$ perché "$=$" $\in Follow(E)$
+		- Quindi nella tabella di parsing $SLR(1)$ si avrebbe $M[I_{2}, =]= \{s_{6}, r_{3}\}$
+		- ### OSS:
+			- Se noi sappiamo con certezza che il carattere successivo è davvero "$=$" allora la reduce $E\to V.$ non va considerata, perché non è mai possibile derivare $S\Rightarrow^{*}E=...$ ma avrebbe senso solo fare lo shift.
+		- ### OSS:
+			- $= \ \in Follow(E)$ significa che esiste una derivazione tale che $S\Rightarrow^{*}\alpha E=\beta$, ma quello che serve è sapere se $S\Rightarrow^{*}E=\beta$ perché è la [[Derivazioni|derivazione]] corrente.
+			- #### N.B:
+				- $S \implies V=E \implies*E=E$
+				- Quindi effettivamente $= \ \in Follow(E)$ ma è impossibile derivare $S\Rightarrow^{*}E=...$ per cui nello stato $I_{2}$, se un input c'è "$=$" allora bisogna sicuramente fare lo shift a $I_{6}$ 
+		- Da ciò si evince che bisogna ridurre i casi in cui si possa usare la _reduce_ a casi ancora più plausibili di quanto dica il $Follow(E)$
+			- $item \ LR(1)$: ovvero una coppia formata da:
+				- $item\ LR(0)$ detto _nucleo/core_ ^708cae
+				- Un simbolo di look-ahead $\in T\cup \{\$\}$
+		- ## ES:
+			- ![[Pasted image 20250818152912.png]]
+				- Stato dell'automa canonico $LR(1)$,
+				- se leggo "$=$" allora faccio uno $shift$
+				- Se leggo ${\$}$ allora faccio $reduce\ E\to V$
+			- ### Intuizione:
+				- Se l'automa è in uno stato che contiene l'item LR(1) $[A\to \alpha.\beta, x]$
+					- Sta cercando di riconoscere la [[Parser bottom-up#^952cf9|maniglia]] $\alpha \beta$ di cui $\alpha$ è già sulla pila.
+					- Sull'input si aspetta una stringa derivabile da $\beta x$, ovvero $x$ può davvero essere fatta in _questa derivazione_
+						- è importante perché usando il $Follow$ nella $SLR(1)$ so solo che esiste una derivazione che produce $x\in Follow(A)$ ma non è detto sia in quella che sto esaminando.
+	- ## NFA LR(1):
+		- Come stati ha gli item LR(1) della _grammatica aumentata_
+		- $[S'\to .S, {\$}]$ è lo stato iniziale.
+		- Da $[A\to \alpha.X \beta,\ a]$ c'è una transizione allo stato $[A\to \alpha X.\beta, a]$ etichettata $X$ per $X\in T\cup NT$
+		- Da $[A\to \alpha.X \beta,\ a]$, per $X\in NT$ e per ogni produzione $X\to \gamma$, c'è una $\epsilon-$ transizione verso $[X\to .\gamma, \ b]$ _per ogni $b\in First(\beta a)$_
+			- $(First(\beta a)\subseteq T\cup \{\$\})$
+	- ## Automa canonico LR(1):
+		- Si ottiene in 2 modi:
+			- [[Automi finiti deterministici|DFA]] ottenuto da NFA LR(1) con la [[Automi finiti deterministici#^f20c1c|costruzione dei sottoinsiemi]]
+			- In modo diretto, usando le funzioni $Clos(I)$ e $Goto(I,X)$, partendo dallo stato inziale $Clos([S'\to .S, {\$}])$ 
+		- ### OSS:
+			- $Goto(I,X)$ non considera il _look-ahead_, ovvero agisce solo sulla parte _core/LR(0)_ dell'item _LR(1)_
+	- ## Riempire la tabella di parsing LR(1):
+		- Per ogni stato $S$ dell'automa canonico LR(1):
+			- 1) se $x\in T$ e $S\Rightarrow^{*}t$ nell'automa LR(1) si inserisce $shift \ t$ in $M[s,x]$
+			- 2) se $[A\to \alpha., x]\in s$ e $A\ne S'$, inserisco $reduce \ A\to \alpha$ in $M[s,x]$
+			- 3) se $[S'\to S.\ , {\$}]\in s$, inserisco $accept$ in $M[s,\$]$
+			- 4) se $A\in NT$ e $S \xrightarrow{A}t$ nell'automa LR(1) inserisco $goto \ t$ in $M[s,A]$
+			- _ogni casella che rimane vuota è un errore_
+		- ### Def:
+			- Una [[Grammatiche#^c95cdc|grammatica libera]] $G$ è di [[Classe di una grammatica|classe]] LR(1) se ogni casella della tabella di parsing LR(1) ha al più un elemento (_non ci sono conflitti_)
+	- ## ES:
+		- ![[Pasted image 20250818160209.png|600]]
+		- ![[Pasted image 20250818160234.png|600]]
+			- _Tabella di parsing LR(1)_ ottenuta dall'automa LR(1)
+- # Parser LALR(1): ^d6df98
+	- Ovvero Parser look-ahead LR(1) 
+	- Ha tabelle di parsing molto grandi a causa del LR(1)
+	- è un buon compromesso tra la semplicità di SLR(1) e la selettività di LR(1)
+	- ## Come ottenerlo:
+		- ### Osservazioni:
+			- 1) _nucleo di uno stato LR(1)_: insieme di item LR(0) ottenuto dimenticando i look-ahead degli item LR(1)
+			- 2) _nucleo di stato LR(1)_ = stato dell'automa LR(0) 
+			- 3) _le transizioni dell'automa LR(1) dipendono solo dal nucleo_:
+				- $Goto(I,X)$ usa, di $I$, solo la parte "nucleo/LR(0)" dell'item LR(1). 
+		- Quindi la tabella di parsing $LALR(1)$ si ottiene da quella $LR(1)$ fondendo insieme gli stati con lo stesso nucleo.
+			- _tante righe quanti sono gli stati dell'automa LR(0)_
+			- _meno "reduce" della tabella SLR(1)_
+	- ## ES:
+		- Riprendendo l'esempio precedente.
+		- ![[Pasted image 20250819112303.png|700]]
+		- Si può notare guardando l'automa LR(1) corrispondente che gli stati 3-6, 4-7, 8-9 possono essere fusi insieme.
+		- ![[Pasted image 20250819112416.png]]
+		- _$G$ risulta $LALR(1)$ perché non sono presenti conflitti_
+		- $$I_{36}=I_{3}\cup I_{6}=\{[C\to c.C, c/d/{\$}] , [C\to .cC, c/d/{\$}], [C\to .d, c/d/{\$}]  \}$$
+		- Se $G$ è $LR(1)$ e anche $LALR(1)$ allora:
+			- I due automi $LR(1)$ e $LALR(1)$ si mimano perfettamente su input corretti.
+			- Mentre su input sbagliati, $LALR(1)$ può fare qualche _reduce_ in più prima di accorgersi dell'errore, per esempio sulla grammatica dell'esempio precedente con input $ccd{\$}$:
+				- ![[Pasted image 20250819112918.png|700]]
+				- ![[Pasted image 20250819112934.png|700]]
+			- Nonostante rilevi dopo  l'errore l'automa $LALR(1)$ non farà mai degli shift in più rispetto al $LR(1)$ per un certo input.
+				- I due parser di fatto consumano la stessa porzione di input prima di rilevare l'errore.
+			- Di conseguenza _LALR(1) è un corretto sostituto di LR(1)_
+	- ## Passare da LR(1) a LALR(1):
+		- Fondere due stati LR(1) con lo stesso _core_ può creare conflitti.
+		- Sono possibili solo nuovi conflitti _reduce/reduce_. Infatti, suppongo che in _s_, stato ottenuto per fusione di 2 stati $LR(1)$ $s_{1}, s_{2}$, presenti un conflitto _shift/reduce_. Allora esiste un _item_ $[A\to \alpha.\ , a]$ e un _item_ $[B\to \beta.a \gamma\ ,\  b]$. Suppongo anche che $[A\to \alpha.\ , a] \in s_{1}$ allora $[A\to \alpha.\ , a]$ e $[B\to \beta.a \gamma\ ,\  c]$ appartengono ad $s_{1}$ per qualche $c$
+			- Anche $s_{1}$ in $LR(1)$ avrebbe un conflitto _shift/reduce_, contro l'ipotesi che la tabella $LR(1)$ non presenti conflitti.
+		- Quindi _se $LR(1)$ è senza conflitti allora $LALR(1)$ potrà avere al massimo conflitti reduce/reduce_
+		- Quindi _se si generano conflitti allora G non è LALR(1) pur essendo LR(1)_
+		- ### ES:
+			- $$G=\begin{cases}S'\to S \\ S\to aAa\ |\ bAb\ | \ aBb \ | \ bBa \\ A\to c \\ B\to c \end{cases}$$
+			- ![[Pasted image 20250819124630.png]]
+			- $I_{6}$ e $I_{7}$ risultano avere lo stesso _core_ e se li fondo:
+				- ![[Pasted image 20250819124844.png]]
+				- Presentano un conflitto _reduce/reduce_
+					- $$M'[67,a]=\{A\to c, B\to c\}= M'[67,b]$$
+			- #### N.B:
+				- Gli stati $I_{6}$ e $I_{7}$ non presentano conflitti quindi $G$ _è davvero LR(1) non LALR(1)_
+	- _è possibile costruire il parser LALR(1) anche senza passare da quello LR(1) ma lo si può fare direttamente da quello LR(0) avendo una maggiore efficienza nella costruzione ed è la tecnica usata dai generatori di parser come YACC_
+	- ## Riassunto:
+		- ![[Pasted image 20250819125412.png|850]]
+- # Link Utili:
+	- 

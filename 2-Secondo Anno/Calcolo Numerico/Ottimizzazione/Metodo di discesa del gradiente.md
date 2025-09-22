@@ -1,0 +1,49 @@
+---
+tags: []
+aliases: 
+data: "`2025-01-04 16:45`"
+---
+- # Metodi di ricerca in linea:
+	- Sono un tipo di algoritmi che si basano sulla [[Classificazione punti di minimo#^273a33|condizione del primo ordine]] per calcolare soluzioni al problema di ottimizzazione [[2-Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione#^d124c1|svincolato]]:
+		- $$min_{x} f(x)$$ 
+	- l’idea è di calcolare la soluzione attraverso un procedimento iterativo, scegliendo un termine $x_{0} \in \mathbb{R}^{n}$ si considera:
+		- $$x_{k+1}=x_{k}+\alpha_{k}p_{k}$$
+			- $\alpha_{k}$ è lo _step-size_ o _learning rate_ 
+			- $p_{k}$ è un vettore detto _direzione di discesa_
+			- viene scelto in modo tale che:
+				- $$f(x_{k+1})\le f(x_{k})$$
+				- ovvero che l’algoritmo si muova verso la direzione del minimo ad ogni iterazione.
+- # Def:
+	- $p_{k}$ è una _direzione di discesa_ se $\exists \alpha_{k}: f(x_{k}+\alpha_{k}p_{k})\le f(x_{k})$ 
+	- ## Teorema:
+		- $p_{k}$  è una direzione di discesa se $$p_{k}^{T}\nabla f(x_{k})\leq 0$$
+		- se si sceglie $p_{k}=-\nabla f(x_{k})$ allora:
+			- $$p_{k}^{T}\nabla f(x_{k})=(-\nabla f(x_{k}))^{T}\nabla f(x_{k})=$$
+			- $$= - ||\nabla f(x_{k})||^{2}_{2}\le0$$
+		- usando questa direzione si ottiene un metodo di ricerca di linea definito da:
+			- $$\begin{cases} x_{0}\in \mathbb{R}^{2} \\ x_{k+1}= x_{k}-\alpha_{k}\nabla f(x_{k})\end{cases}$$
+- # Criteri di arresto:
+	- questo algoritmo viene eseguito finché non viene trovata la soluzione esatta ma si possono imporre dei _criteri di arresto_ per farlo terminare prima 
+		- raggiungimento di $k_{max}$ iterazioni.
+		- errore relativo minore di una certa tolleranza. 
+- # Scelta del passo:
+	- la scelta del passo $\alpha$ è importante in quanto se troppo alto farà crescere l’errore relativo di tantissimo: quindi l’algoritmo _non converge_.
+	- ![[step_size.png|700]]
+		- __$\alpha$ troppo piccolo:__ richiede molte iterazioni per raggiungere il punto di minimo.
+		- __$\alpha$ troppo grande:__ aggiornamenti del valore drastici fanno si che l’algoritmo non converge e l’errore relativo cresce.
+		- __$\alpha$ ottimale:__ l’errore relativo decresce in modo monotono.
+- # Condizioni di Wolfe:
+	- Il metodo GD converge ad un punto stazionario se $\forall k\in \mathbb{N}, \alpha_{k}$ soddisfa le condizioni di Wolfe:
+		- $$\begin{cases}f(x_{k}-\alpha_{k}\nabla f(x_{k}))\le f(x_{k})-c_{1}\alpha_{k}||\nabla f(x_{k})||^{2}_{2}\\ \nabla f(x_{k})^{T}\nabla f(x_{k}-\alpha_{k}\nabla f(x_{k}))\le c_{2}||\nabla f(x_{k})||^{2}_{2}\end{cases}$$
+		- con $0<c_{1}<c_{2}<1$ 
+		- la prima condizione detta di _Armijo_ inoltre implica che:
+			- $$f(x_{k+1})\le f(x_{k})-c_{1}\alpha_{k}||\nabla f(x_{k})||^{2}_{2}\le f(x_{k})$$
+			- ovvero che la funzione decresca ad ogni iterazione. 
+- # Algoritmo di backtracking:
+	- questo algoritmo permette di trovare un passo $\alpha_{k}$ che rispetti le condizioni di Wolfe e funziona così:
+		- inizializzo $\alpha_{k}$ con una stima di partenza (di solito $\alpha_{k}=1$)
+		- si controlla che quell’$\alpha_{k}$ soddisfi la condizione di Armijo
+		- se non la soddisfa si riduce $\alpha_{k}$ di un fattore $\beta$ e si ripete il controllo, altrimenti l’algoritmo termina.
+	- questo algoritmo però deve calcolare l’$\alpha_{k}$ giusto e per questo potrebbe impiegare più tempo per convergere rispetto ad un metodo di ricerca in linea (__il quale però non ha certezza di convergere__) 
+- # Link Utili:
+	- 

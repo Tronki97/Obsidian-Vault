@@ -18,7 +18,7 @@ data: "`2025-04-24 16:48`"
 	- [[derivata direzionale lungo una curva]]
 		- [[Disuguaglianza triangolare]], [[Prodotto scalare Euclideo]]
 		- [[Norma euclidea]]
-		- [[Primo Anno/Analisi/modulo2/Ortogonalità|Ortogonalità]]
+		- [[1-Primo Anno/Analisi/modulo2/Ortogonalità|Ortogonalità]]
 		- [[Punti critici di una funzione]]
 # Link Utili:
  

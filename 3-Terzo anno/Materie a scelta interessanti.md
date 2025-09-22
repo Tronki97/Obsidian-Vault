@@ -1,0 +1,6 @@
+- # 1 ° semestre:
+	- [introduzione all'analisi dei dati](https://www.unibo.it/it/studiare/insegnamenti-competenze-trasversali-moocs/insegnamenti/insegnamento/2025/493356) 
+	- [informatica giuridica](https://www.unibo.it/it/studiare/insegnamenti-competenze-trasversali-moocs/insegnamenti/insegnamento/2025/534149)
+- # 2 ° semestre:
+	- [strategia aziendale](https://www.unibo.it/it/studiare/insegnamenti-competenze-trasversali-moocs/insegnamenti/insegnamento/2025/422036)
+	- 

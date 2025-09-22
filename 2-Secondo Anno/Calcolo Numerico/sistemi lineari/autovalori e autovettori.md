@@ -1,0 +1,49 @@
+---
+tags: []
+aliases:
+  - SVD
+data: "`2024-09-30 13:14`"
+---
+- $Ax=b: A \to m \times n$ con  $m>n$ 
+	- non ha soluzione.
+- ## Obiettivo:
+	- $\min_{x\in \mathbb{R}^{n}}||Ax-b||^{2}_2$
+	- decomposizioni matriciali: ovvero $A$ scritta come prodotto di 2 o più [[Matrici]]
+- ## decomposizione ad autovalori:
+	- $A=VDV^{-1}$ dove $V=\{v_1,...,v_n\}$ 
+		- se $A$ ha una decomposizione di questo tipo si dice [[Diagonalizzabilità||diagonalizzabile]]
+- ## Vettori ortogonali:
+	- [[1-Primo Anno/Analisi/modulo2/Ortogonalità|Ortogonalità]] 
+- ## Ortonormalità:
+	- due vettori sono ortonormali se sono ortogonali tra di loro e di lunghezza unitaria:
+		- $\|v_{i}\|_{2}=1$ 
+	- i vettori $x=\frac{1}{\sqrt{2}}(1,1)$ e $y=\frac{1}{\sqrt{2}}(-1,1)$ sono ortonormali.
+		- Risolvi:
+- ## Matrici ortogonali:
+	- una matrice $W$ $n \times n$ è ortogonale se le sue colonne sono vettori ortonormali:
+		- $\begin{pmatrix}1&-1 \\1 &1\end{pmatrix}$ non è ortogonale.
+		- V=$\begin{pmatrix}\frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}\\ \frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\end{pmatrix}$ lo è 
+	- ### Proprietà:
+		- $V^{T}=V^{-1}$
+		- $\forall x \in \mathbb{R}^{n}; \|x\|_{2}=\|Vx\|_{2}$ quindi non modificano la lunghezza del vettore x
+- ## Fattorizzazione in valori singolari(SVD): ^30ec44
+	- data una matrice $m \times n$ di rango $k\le n \le m$, la SVD costruisce le basi ortogonali di $\mathbb{R}^{m}$ e $\mathbb{R}^{n}$ che permettono di rappresentare A come una matrice diagonale; $A=U \Sigma V^{T}$ 
+	- $$\Sigma=\begin{pmatrix}\sigma_{1}& 0& 0\\ 0&\sigma_{2}&0\\ \cdots&\cdots&\cdots\\0&0 & \sigma_{n}\\&0&\end{pmatrix}$$
+		- $U$ è una matrice $m \times m$ ortogonale le cui colonne sono i _vettori singolari sinistri di A_
+		- $V$ è una matrice $n \times n$ ortogonale le cui colonne sono i _vettori singolari destri di A_ 
+		- $\Sigma$ è una matrice diagonale $m \times n$ 
+			- gli elementi $\sigma_{1}\ge \sigma_{2}\ge...\ge \sigma_{n} \ge 0$ sono i valori singolari di $A$. $k=rk(A)\iff \sigma_{1}\ge \sigma_{2}\ge...\ge \sigma_{n} > 0 \wedge \sigma_{k+1}=... \sigma_{n}=0$ 
+	- ### Proprietà:
+		- $$A^{T}A=(U \Sigma V^{T})^{T}(U \Sigma V^{T})=(V^{T})^{T}\Sigma^{T}U^{T} U \Sigma V^{T}= $$
+		- $$=(V^{T})^{T}\Sigma^{T}\Sigma V^{T}= $$
+		- $$= V \begin{pmatrix}\sigma_{1}^{2}& 0& 0\\ 0&\sigma_{2}^{2}&0\\ \cdots&\cdots&\cdots\\0&0 & \sigma_{n}^{2}\\&0&\end{pmatrix}V^{T}$$ 
+		- $\sigma_{i}(A)=\sqrt{\lambda_{i}(A^{T}A)}$     $i=1,...,n$ 
+		- $\lambda_{i}(A^{T}A)$ è l'autovalore $i$ della matrice ottenuta dal prodotto $(A^{T}A)$ 
+		- _Si può fare lo stesso procedimento con $AA^{T}$_ 
+			- $$AA^{T}=(U \Sigma V^{T})(U \Sigma V^{T})^{T}=$$
+			- $$=U \Sigma \Sigma^{T}U^{T}$$
+			- $$=U\begin{pmatrix}\sigma_{1}^{2}& 0& 0\\ 0&\sigma_{2}^{2}&0\\ \cdots&\cdots&\cdots\\0&0 & \sigma_{n}^{2}\\&0&\end{pmatrix}U^{-1}$$
+				- $\sigma_{i}^{2}(A)=\lambda_{1}(AA^{T})$ 
+	- ### Caso particolare:
+		- se A è _invertibile_ si ha che $m=n$ e $k=rk(A)=m=n$ 
+			-  $\|A^{-1}\|_{2}=\sqrt{\lambda_{min}(A^{T}A)}=\frac{1}{\sigma_{n}}$ 

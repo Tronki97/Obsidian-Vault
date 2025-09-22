@@ -1,0 +1,101 @@
+---
+tags:
+aliases:
+  - polimorfismo di tipo
+  - polimorfismo ad-hoc
+  - sottotipaggio
+  - covarianza
+  - controvarianza
+  - sussunzione
+  - polimorfismo parametrico
+  - PECS
+  - monadi
+  - tipo opzione
+  - tipo maybe
+  - tipo risultato
+data: "`2025-04-23 11:34`"
+---
+- # intro:
+	- Per ora tutti i tipi fatti erano monomorfi ovvero che hanno una sola forma.
+	- Ora invece i tipi cambiano forma in base a dei parametri e che quindi possono essere usati in contesti diversi.
+	- Utile perché si possono riutilizzare certe strutture dati scrivendo meno codice e risparmiando tempo.
+- # Polimorfismo di tipo: ^6488ff
+	- Si astraggono dettagli dell’istanziazione concreta del tipo.
+	- Consente agli sviluppatori di specificare un insieme di operazioni su un dato di tipo _parametrico_ 
+	- ## Ad-hoc (sovraccarico): ^c3c1ed
+		- Si _sovraccarica_ il significato di una certa definizione di una operazione su tipi diversi.
+		- Comportandosi allo stesso modo dal punto di vista semantico
+		- Si può prendere in esame l’operazione somma $+$ che può essere usato per diversi tipi:
+			- `int, float, double...`
+			- `+: a x a -> a`
+			- Ma può essere usato anche sulle _stringhe_ dove invece si intende una _concatenazione_.
+		- ![[Pasted image 20250423115257.png|400]]
+			- _Il sovraccarico può essere anche sulla cardinalità degli elementi piuttosto che sul tipo._
+		- Serve quindi fare un _indirizzamento(dispatch)_ all’implementazione che si intende usare, di solito lo si fa in maniera statica (_in fase di compilazione_).
+		- Si può anche fare dinamico una volta che si ha l’informazione.
+	- ## Sottotipaggio (subtyping):
+		- Ci norma il comportamento di tutti i tipi compongono il nostro sistema di tipi stabilendo relazioni da-astratto-a-specifico.
+		- Quando viene dato un tipo più specifico di quello che viene richiesto in quanto la richiesta poteva non essere completa.
+		- è una relazione binaria che si indica con $<:$ 
+			- $A<:B$ significa che il tipo $A$ _è un sottotipo_ di $B$.
+			- $A$ è un tipo più specifico di $B$ quindi si può usare $A$ al posto di $B$ in tutti gli spazi che lo necessitano.
+			- Di solito è un [[algebra dei tipi#^c16d0f|preordine parziale]] 
+				- $T<: T, S<: T \land R<: S \implies R<:T$
+				- E vale anche che $T<: S \land S<: T \implies T=S$
+		- ### Sottotipaggio dei record
+			- Si può anche considerare come _relazione_ tra un tipo *target* e uno _sostituto_ considerando i _record_:
+				- ![[Pasted image 20250423121210.png|400]]
+					- `Dog<: Animal` Definito come _sottotipaggio in larghezza_ siccome si sta aggiungendo un campo.
+				- ![[Pasted image 20250423121310.png|400]]
+					- _Sottotipaggio in profondità_ in quanto si sta sostituendo un campo con un suo sottocampo
+					- Non è detto però che `DogHouse<: AnimalHouse` in quanto non è detto che un `DogHouse` possa essere usato al posto di un `AnimalHouse`.
+						- Se si deve estrarre un `Animal` da un `AnimalHouse` si potrebbe tranquillamente estrarre da un `DogHouse` in quanto `Dog<: Animal`
+		- ### Covarianza e controvarianza: ^13824c
+			- Legato a consumo e produzione.
+			- Consumo (Input) _covarianza_ produzione (output) _controvarianza_ per quanto riguarda le funzioni. 
+				- I tipi [[Tipi base#^768bf2|funzione]] in consumo sono _controvarianti_ rispetto al tipo di riferimento, per esempio: `A2B <: D2B` (i quali danno lo stesso output ovvero un `bool`) sono in relazione controvariante rispetto a `Dog<:Animal` perché si può sostituire `D2B` a cui il contesto si aspetta di fornire un `Dog`, con `A2B` che usa meno info.
+					- ![[Pasted image 20250827163438.png]]
+				- Per quanto riguarda in _produzione_ (ovvero quando il contesto si aspetta una funzione da cui avere un valore di _output_) sono _covarianti_; ad esempio `U2D<:U2A` hanno una relazione _covariante_ rispetto a  `Dog<:Animal` perché si può sostituire `U2D` che produce un `Dog` a `U2A` da cui il contesto si aspetta di ricevere un `Animal`.
+					- ![[Pasted image 20250827163812.png]]
+				- ![[Pasted image 20250827164327.png]]
+		- ### Sussunzione (subsumption):
+			- Ovvero decidere se `S<:T`
+			- Due strategie principali per deciderlo
+			- #### Estensionale:
+				- Per estensione si ha che $S<: T \ e\ \forall s \in S, [[s]] \in T$
+			- #### Intensionale:
+				- Se $S<:T$ allora il predicato che definisce l'appartenenza a $T$ deve:
+					- 1) far parte del predicato di $S$
+					- 2) essere applicato sullo stesso dominio di quello per $S$ 
+			- Per quanto riguarda i [[Tipi base]] i sistemi di tipi definiscono relazioni specifiche come: `char <: string`
+	- ## Parametrico (universale): ^4fb301
+		- Un tipo dipende per certi versi da un altro tipo quindi viene parametrizzato da un altro tipo.
+		- Per esempio gli _Array_ 
+		- Le operazioni diventano parametriche rispetto agli elementi, si astrae da quello che c’è dentro al tipo 
+		- Si sta dicendo che $\forall T.Type(T)$ 
+			- $T$ è un tipo generico e quindi può essere usato per qualsiasi tipo.
+		- ![[Pasted image 20250423125505.png|600]]
+			- Nel momento in cui ho delle astrazioni mi aspetto di avere un tipo lista generica 
+			- Quindi tutte le implementazioni che dipendono da un tipo astratto non vanno a guardare il contenuto del tipo.
+		- Introduce anche la nozione di _tipi universali_ con definizioni come:
+			- ![[Pasted image 20250827171914.png]]
+			- Che vedono `max` con tipo $\forall T.T<: Comparable.T\times T \to T$ dove il _per ogni_ indica che la definizione è valida per qualsiasi tipo $T$ _fintanto che è un sottotipo di comparable_
+		- ### PECS:
+			- _Producer extends, consumer super_
+			- Se ci si aspetta di produrre un qualcosa allora vuol dire che estende il tipo.
+			- Se ci si aspetta di consumare un qualcosa allora vuol dire che è il super del tipo.
+				- ![[Pasted image 20250423131852.png]]
+	- ## Tipi monadici:
+		- Le monadi sono un'astrazione utilizzata nei linguaggi funzionali per semplificare la composizione e la risoluzione di catene di funzioni.
+		- In maniera semplice sono dei "contenitori" che incapsulano alcune funzionalità.
+		- ### Opzione/maybe:
+			- Utile per gestire in maniera strutturata puntatori nulli.
+			- Presentano a livello di tipo la dualità tra puntatori validi e non validi mescolando tipi parametrici e [[Tipi base#^8d169e|tipi somma]]
+				- ![[Pasted image 20250827172937.png]]
+				- Il valore di tipo `Maybe<T>` è una capsula attorno a un valore di tipo $T$
+		- ### Risultato:
+			- Un raffinamento dei tipi _maybe/option_ dove si usano i tipi polimorfi e somma per distinguere tra un risultato errato e un esecuzione errata, segnalata da un errore.
+			- ![[Pasted image 20250827173252.png]]
+				- In pratica rappresentano un _alternativa alla gestione delle eccezioni_ con una gestione più lineare degli stati del programma dal momento che il programmatore deve o _scartare i risultati_ con un errore o _considerare tutti i possibili stati_.
+- # Link Utili:
+	- 

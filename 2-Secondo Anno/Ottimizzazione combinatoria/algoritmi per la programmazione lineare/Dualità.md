@@ -1,0 +1,42 @@
+---
+tags: 
+aliases:
+  - coppie simmetriche
+  - coppie asimmetriche
+  - teorema debole di dualità
+data: "`2025-04-18 20:26`"
+---
+- # Dualità:
+	- Concetto per capire se si è nell’ottimo con una soluzione.
+	- Si basa sull’involuzione ovvero funzione inversa di se stessa.
+	- ## Coppie asimmetriche:
+		- Primale: $\max\{cx| Ax\le b\}$
+		- Duale: $\min\{yb| (yA=c)\land (y\ge 0)\}$
+	- ## Coppie simmetriche:
+		- Primale: $\max\{cx|(Ax\le b ) \land (x\ge 0)\}$
+		- Duale: $\min \{yb|(yA\ge c ) \land (y\ge 0)\}$
+	- ## dimostrare la dualità
+		- Ovvero dimostrare che il duale del duale è il _primale_
+		- Prendo il caso simmetrico e lo scrivo in forma standard:
+			- $$\min \{yb|(yA\ge c ) \land (y\ge 0)\}$$
+		- Divento poi:
+			- $$-\max\{y(-b)| (yA\ge c ) \land (y\ge 0)\}=$$
+			- $$=-\max\{(-b)^{T}y| ((A)^{T}y \le -c) \land (y\le 0)\}$$
+		- Il cui duale risulta essere:
+			- $$-\min \{-cx|((x(A)^{T})\ge (-b))\land (x\ge 0)\}=$$
+			- $$=\max\{cx| (Ax \ge b) \land (x\ge 0)\}$$
+	- ## Teorema debole:
+		- Se $\overline{x},\bar{y}$ sono soluzioni ammissibili per il _primale e duale_ rispettivamente allora:
+			- $$c\bar{x}\le \bar{y}b$$
+		- ### Dim:
+			- #### Caso coppia asimmetrica:
+				- $$\begin{cases}A \bar x \le b \\ \bar y A = c, \ \bar y \ge 0 \end{cases} \implies \begin{cases} \bar y A \bar x \le \bar y b \\ \bar y A \bar x = c\bar x\end{cases} \implies c\bar x \le \bar y b$$
+			- #### Caso coppia simmetrica:
+				- $$\begin{cases}A \bar x \le b, \ \bar x \ge 0 \\ \bar y A \ge c, \ \bar y \ge 0 \end{cases} \implies \begin{cases} \bar y A \bar x \le \bar y b \\ \bar y A \bar x \ge c\bar x\end{cases}\implies c\bar x \le \bar y b$$
+		- ### Corollari:
+			- 1) Se il primale è [[2-Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione#^1429ac|illimitato]] allora il duale è vuoto.
+				- Implicherebbe avere una $cx$ che cresce all’infinito e ciò vorrebbe dire che $c\bar x > \bar y b$ che va in contrasto con il _teorema di dualità debole_.
+			- 2) se $\bar x , \bar y$ sono soluzioni ammissibili per il primale e duale rispettivamente e $c\bar x = \bar y b$ allora quelle sono _soluzioni ottime_
+				- Ipotizzando che $c\bar x = \bar y b$ e  $\bar x$ non fosse ottima, si potrebbe trovare una $z$ ammissibile migliore di $\bar x$ e quindi con $cz >\bar y b$ che andrebbe in contrasto con il _teorema debole di dualità_. 
+- # Link Utili:
+	- 

@@ -1,0 +1,55 @@
+---
+tags:
+aliases:
+  - branching
+data: "`2025-04-28 10:25`"
+---
+- # Intro:
+	- Finora si è sempre utilizzato variabili _reali_ nei problemi di [[Programmazione lineare]] con ricerca dell'ottimo
+		- 
+	- Ma se siamo nella [[Programmazione lineare intera (PLI)|PLI]] 
+		- Non si può fare allo stesso modo.
+		- Quindi trovare l'ottimo è un problema [[NP-completezza|NP completo]] ovvero non esistono soluzioni efficienti.
+		- E quindi si usa un approccio detto _branch-and-bound_
+			- Nel caso peggiore è _esponenziale_ anche se permette di scartare man mano certi sottoinsiemi di soluzioni.
+- # Prerequisiti:
+	- Si usano tecniche di [[Algoritmi di ottimizzazione#^184b6f|rilassamento]] 
+		- Serve che sia possibile in ogni momento passare da un problema $\mathbb{P}$ ad un suo rilassamento $\mathbb{T}=RELAX(\mathbb{P})$ 
+		- E solitamente si usa per _rimuovere i vincoli di interezza_ e ciò da luogo ad un [[Programmazione lineare|PL]] 
+			- $$RELAX(\min\{cx|Ax\le b \land x\in \mathbb{Z}^{n}\})=\min\{cx|Ax\le b\}$$
+	- ## Branching :
+		- Serve poter partizionare l'insieme delle soluzioni ammissibili di $\mathbb{P}$ ottenendo 2 sotto-problemi $PARTITION(\mathbb{P})=(\mathbb{T,Q})$ che sono più semplici.
+		- Si sceglie una $x_{i}$ e un _bound_ $n$
+			- $$PARTITION(\min\{cx|Ax\le b\land x\in \mathbb{Z}^{n}\})=$$
+			- $$=(\min\{cx|Ax\le b\land x_{i}\le n \land x\in \mathbb{Z}^{n}\}, \min \{cx|Ax\le b \land x_{i}\ge n+1 \land x \in \mathbb{Z}^{n}\})$$
+- # Algoritmo:
+	- 1) $S=\{\mathbb{P}\}$ $v^{*}=\infty$
+		- S = Insieme di problemi che contiene $\mathbb{P}$
+	- 2) se $S= \emptyset$ allora termina e restituisci la soluzione ottima $x^{*}$ se definita.
+	- 3) si sceglie un problema $\mathbb{T}\in S$; $S=S-\{\mathbb{T}\}$
+	- 4) se $RELAX(\mathbb{T})$ è vuoto allora ritorno al punto 2
+		- Vuol dire che quello è un ramo morto da non considerare.
+	- 5) se $RELAX(\mathbb{T})$ è illimitato allora $S=S\cup \{\mathbb{Q,S}\}$ dove $(\mathbb{Q,S})=PARTITION(\mathbb{T})$
+		- Significherebbe che il problema $\mathbb{T}$ potrebbe essere qualsiasi cosa allora si partiziona anche $\mathbb{T}$ 
+	- 6) siano $x,v$ la soluzione e il valore ottimo di $RELAX(\mathbb{T})$
+	- 7) se $v\ge v^{*}$ allora ritorno al punto 2
+		- Se il valore è maggiore di quello trovato prima allora non serve continuare a cercare.
+	- 8) se $x$ è soluzione ammissibile per $\mathbb{T}$ e $v<v^{*}$ allora $v^{*}=v$ e $x^{*}=x$ e si ritorna al punto 2
+		- Vuol dire che la soluzione trovata è migliore di quella di prima.
+	- 9) se $x$ non è soluzione ammissibile per $\mathbb{T}$ e $v<v^{*}$ allora $S=S\cup\{\mathbb{Q,S}\}$ dove $(\mathbb{Q,S})=PARTITION(\mathbb{T})$ e si ritorna al punto 2.
+		- Vuol dire che il valore ottimo trovato è migliore ma la soluzione trovata non appartiene a quelle ammissibili per $\mathbb{T}$ quindi lo si partiziona.
+- # Correttezza:
+	- ## Invarianti:
+		- Se l'istruzione 7 da esito positivo allora esiste $x$ per $\mathbb{P}$ che non sta in $\mathbb{T}$ 
+		- Nel punto 9 ma anche in altri; tutte le soluzioni ammissibili per $\mathbb{T}$ si trovano in $\mathbb{Q,S}$ 
+		- Ogni volta che si esegue 2, l'ottimo di $\mathbb{P}$ è in $x^{*}$ oppure è uno tra gli ottimi dei problemi in $S$.
+			- Questa condizione vale all'inizio.
+			- Se tale condizione vale e $S\ne \emptyset$ allora tale condizione continua a valere ogni volta che si cicla e si ritorna alla condizione 2
+- # Complessità:
+	- Se il problema di partenza è illimitato allora la procedura diverge.
+		- Esisterebbero anche delle euristiche per evitare che succeda nei problemi di [[Programmazione lineare]]
+	- $RELAX, PARTITION$ hanno un grado di scelta dei problemi in $S$ non deterministica.
+		- Si osserva che spesso trattare $S$ come uno stack nella scelta dei problemi migliora le prestazioni.
+		- Quando si fa una $PARTITION$ in modo da cercare di diminuire $v^{*}$ è una buona scelta che ci fa avvicinare più velocemente alla soluzione ottima.
+- # Link Utili:
+	- 

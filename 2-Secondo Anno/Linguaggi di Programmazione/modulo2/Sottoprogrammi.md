@@ -1,0 +1,96 @@
+---
+tags:
+aliases:
+  - parametro attuale
+  - parametro formale
+  - passaggio per valore
+  - passaggio per riferimento
+  - passaggio per risultato
+  - deep binding
+  - shallow binding
+data: "`2025-03-12 11:14`"
+---
+- # Astrazione sul controllo:
+	- La definizione di funzioni; Ne specifico il tipo, la scrivo e infine la uso senza conoscere il contesto di utilizzo della funzione.
+	- La comunicazione attraverso la funzione e il codice avviene grazie ai _parametri_ o all’ambiente globale.
+	- Un altro tipo di astrazione sul controllo possono essere gli oggetti.
+	- ## Parametri:
+		- _Parametro formale_: quello definito all’interno dello scope della funzione
+		- _Parametro attuale_: quello all’interno dello scope quando chiamiamo la funzione.
+		- ### Passaggio di parametri:
+			- #### per valore:
+				- Il valore dell’attuale è assegnato al formale comportandosi come una variabile locale 
+				- Va da `main` al `processo`
+				- Le modifiche al formale non si applicano all’attuale.
+				- ![[Pasted image 20250312114047.png]]
+				- Viene eseguito `y+1` e il valore risultante è assegnato al parametro formale
+				- Al ritorno da `foo` la variabile `x` viene distrutta e di conseguenza non c’è legame tra il `main` e il corpo della funzione.
+				- Se si hanno dati di grandi dimensioni risulta costoso in quanto si necessita di copiare i dati nel parametro formale. 
+			- #### per riferimento:
+				- ![[Pasted image 20250312114812.png]]
+				- Viene passato un riferimento che può essere un puntatore o l’indirizzo di memoria.
+				- Il valore passato deve essere una variabile a se stante 
+				- C’è una trasmissione in entrambe le direzioni di informazioni
+				- Efficiente nel passaggio, però ha come svantaggio che i side-effect sono più presenti.
+			- #### Per risultato:
+				- ![[Pasted image 20250312115942.png]]
+				- Il formale $x$ è una variabile locale sulla pila 
+				- Alla fine della funzione il valore di $x$ è assegnato al valore del chiamante
+				- Quindi il valore viene cambiato solo una volta che la funzione ha finito di eseguirsi.
+			- #### Per valore-risultato:
+				- Un unione dei due
+				- All'inizio il parametro attuale viene copiato nel parametro formale, e alla fine avviene il contrario.
+			- #### Per nome:
+				- all'invocazione della funzione viene prima sostituito in tutte le occorrenze del parametro formale il parametro attuale, e poi viene eseguita normalmente la funzione
+				- Si possono creare dei conflitti nel caso in cui nella funzione stessa ci fosse la definizione di una variabile con lo stesso nome:
+					- ![[Pasted image 20250830181003.png|300]]
+				- Per risolvere si usano le _chiusure_ nel passaggio per nome si passa la chiusura `<exp, amb>`, dove `exp` è il parametro attuale e `amb` è l'ambiente in cui viene valutato distinguendo così le variabili che appartengono ad ambienti diversi.
+					- ![[passaggio-per-nome-chiusura.png]]
+- # Binding:
+	- ## Deep binding:
+		- Si tiene conto dell’ambiente al momento della creazione del legame tra due funzioni h→f.
+	- ## Shallow binding:
+		- Si tiene conto dell’ambiente al momento della chiamata di $f$ via $h$
+	- ## ES:
+		- ![[Pasted image 20250825161253.png]]
+		- ### Scope statico:
+			- _deep binding_: si fa riferimento alla $x$ rossa.
+			- _shallow binding_: si fa riferimento alla $x$ rossa.
+		- ### Scope dinamico:
+			- _deep binding_: si fa riferimento alla $x$ blu in quanto fa parte dell'ambiente nel momento in cui si è creato il legame $f\to h$
+			- _shallow binding_: si fa riferimento alla $x$ nera in quanto fa parte dell'ambiente in cui c'è stata la chiamata di $f$ tramite $h$.
+- # Chiusure:
+	- Passare dinamicamente sia il legame con il codice della funzione sia il suo ambiente non locale: `<code, env>`
+	- Utile per implementare il deep binding.
+- # Eccezioni:
+	- Usate a volte per terminare parte di una computazione a volte a causa di condizioni inusuali o eccezionali, ma non necessario.
+	- Si possono passare dei dati durante questo salto
+	- Si fa ritornale il controllo al punto di gestione più recente.
+	- Gli [[Memoria#^ba20bb|RdA]] non necessari sono deallocati.
+	- ## Due costrutti:
+		- _Dichiarazione del gestore dell'eccezione_
+		- _comando/espressione per sollevare l'eccezione_
+	- ## ES:
+		- ![[Pasted image 20250825162920.png|700]]
+	- ## Sollevare un'eccezione:
+		- Il gestore è legato in modo statico al blocco di codice protetto, l'esecuzione del gestore rimpiazza il blocco di codice che doveva essere eseguito.
+	- ## Propagare un eccezione:
+		- Se l'eccezione non è gestita dal chiamante essa viene propagata e si risale una catena _dinamica_ fino a quando non si incontra il gestore dell'eccezione o si raggiunge il _top level_ il quale potrebbe fornire un gestore per l'eccezione.
+		- ![[Pasted image 20250825163355.png|600]]
+		- ![[Pasted image 20250825163524.png]]
+	- ## Implementazione:
+		- ### Semplice:
+			- All'inizio del blocco protetto (`try`):
+				- Si mette sulla pila il gestore
+			- Quando un'eccezione è sollevata:
+				- Si toglie il pro gestore dalla pila e si guarda se è quello giusto
+				- Se non è il caso allora si risolleva l'eccezione 
+			- Questo metodo è inefficiente in quanto ad ogni `try e routine` si necessita di fare il controllo di tutta la pila 
+		- ### Migliore:
+			- Il [[Struttura di un compilatore|compilatore]] genera una tabella dove per ogni blocco protetto e per ogni routine c'è una coppia `<block_addr, handler_addr>`
+			- L'ordine della tabella è in base al primo elemento
+			- Quando viene sollevata un'eccezione:
+				- Si fa una ricerca binaria del _ProgCounter_ sul primo elemento e si trasferisce il controllo all'indirizzo corrispondente del gestore (`handler_addr`)
+			- Se il gestore risolleva l'eccezione si ripete il procedimento
+- # Link Utili:
+	- 

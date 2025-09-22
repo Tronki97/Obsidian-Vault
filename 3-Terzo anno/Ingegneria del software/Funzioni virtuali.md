@@ -1,0 +1,83 @@
+---
+tags:
+aliases:
+  - early binding
+  - comportamenti virtuali
+  - VFT
+  - VFTP
+  - FTP
+data: "`2025-09-22 13:32`"
+---
+- # preconcetti:
+	-  Spesso si ha che il cliente ci dice ciò che vuole ma le informazioni cambiano nel tempo e vengono definite mano a mano.
+	- Quindi serve che io possa modificare in seguito ciò che il mio programma deve fare.
+	- _Falsificazione della preconcezione_ ovvero il permesso di cambiare idea sulla definizione di un oggetto (fisico e astratto).
+	- Parallelamente questo concetto può essere applicato ai linguaggi ad oggetti.
+- # Funzioni virtuali:
+	- Serve che il comportamento degli oggetti sia determinato il più tardi possibile.
+	- Le funzioni virtuali permettono di gestire il cambiamento e vengono implementate attraverso il [[Tipo dato astratto#^b44058|late binding]]
+	- E quindi il metodo di una classe che può essere ridefinito in una classe derivata (_overriding_)
+		- Può succedere quando il metodo da cui fare l'_overriding_ è virtuale.
+		- Questo metodo deve avere la stessa _firma_ del metodo da cui fare l'_overriding_
+			- _nome_
+			- _Numero di parametri formali e i parametri stessi_
+			- A volte viene anche chiamata _prototipo_ della funzione
+		- AI _metodi statici_ non posso fare l'overriding mentre a quelle _virtuali_ si 
+		- ## N.B:
+			- Se faccio l'overriding di una funzione ma con firma diversa il metodo della classe base non è più visibile in `C++`
+		- ## Casistiche:
+			- Quando `f` viene invocata sull'oggetto `o` della classe `D` derivata da `B`
+				- Se `f` è definita solo in `D` allora `D.f` viene chiamata normalmente su `o`
+				- Se `f` è definita solo in `B` allora `B.f` viene chiamata su `o` perché `f` è ereditata da `D` 
+				- Se `f` è overridata allora il metodo modificato viene chiamato su `o`
+		- Quindi solo alla definizione dell'oggetto capisco quale metodo di quale classe viene chiamato.
+		- ## ES:
+			- ![[Pasted image 20250922134127.png]]
+			- Quale tipo di metodo `transmit` verrà chiamato dipende solo dal tipo di dato ritornato dalla funzione `getConnection()`, quindi non a compile-time ma a _runtime_ di fatto essendo un _late binding_ 
+- ## Funzioni virtuali in Java e C++:
+	- In java l'overriding è sempre possibile e per prevenirlo si usa la keyword `final`
+		- Questa keyword si può anche usare per evitare che una classe possa essere estesa eliminando l'ereditarietà
+		- ![[Pasted image 20250922134620.png]]
+	- In `C++` i metodi per essere virtuali devono essere dichiarati esplicitamente come tali
+		- Per farci l'override devono per forza essere dichiarati come virtuali
+			- Altrimenti la funzione verrà nascosta dalla definizione di quella nuova
+			- E non è possibile prevenire questo _hiding_ della vecchia funzione
+		- ![[Pasted image 20250922135228.png]]
+- # Comportamenti virtuali:
+	- ![[Pasted image 20250922135356.png]]
+	- Visto che ogni metodo `startEngine()` è diverso si necessita sapere quale di questi metodi viene eseguito quando _invocato_ 
+	- ![[Pasted image 20250922135545.png]]
+	- L'array `aVehicleArray` contiene gli "indirizzi", riferimenti ([[Java]]) o puntatori (C++) dei diversi oggetti delle appropriate classi da cui derivano ma verrà invocato lo stesso metodo per ogni oggetto.
+	- Quindi grazie al [[Tipo dato astratto#^b44058|late binding]] è possibile sapere a _runtime_ quale metodo specifico viene invocato.
+- # Early binding:
+	- Il compilatore lega al punto dove la funzione chiamata si trova nel codice, avviene a _compile-time_ ed è il comportamento standard di C++ per le funzioni e i metodi.
+- # Implementare il late binding:
+	- Il _VFTP_ (virtual function table pointer) punta alla VFT
+	- ## VFT:
+		- Tiene in memoria i puntatori al codice della funzione virtuale che può essere chiamata su un determinato oggetto.
+	- Per eseguire una chiamata a _runtime_ vengono eseguiti determinati passi:
+		- 1) dal puntatore il programma raggiunge l'oggetto
+		- 2) viene controllata la _VFTP_ nell'oggetto.
+		- 3) dalla _VFTP_ si trova la _FTP_ della giusta classe dell'oggetto
+		- 4) cerca la giusta cella della _FTP_ 
+		- 5) usando il puntatore contenuto nella giusta cella si raggiunge la porzione di codice da eseguire.
+	- Il problema del late binding è che è costoso in quanto si necessita di chiamare molte funzioni quindi di eseguire dei jump che rallentano il programma.
+- # Esercizio:
+	- Codice da pagina 40 a 43 di [queste slide](https://virtuale.unibo.it/pluginfile.php/2778869/mod_resource/content/2/20250922.ExtraLectureOnVF.pdf)
+		- `B::f()`
+		- `A::g()`
+		- `B::f()`
+		- `B::g()`
+		- `A::i()`
+		- `E::i()     D::m()     E::h()`
+		- `A::g()`
+		- `E::g()`
+		- `A::g()`
+		- `G::f(int)`
+		- `G::f(int)`
+		- `E::h()`
+		- `E::i()   D::m()     E::h()`
+		- `E::g()`
+		- 
+- # Link Utili:
+	- 

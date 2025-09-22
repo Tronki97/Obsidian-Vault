@@ -33,7 +33,7 @@ data: "`2025-04-24 17:09`"
 	- [[Regola di Sarrus]]
 	- [[Teorema di Binet]]
 	- [[Teorema di Laplace]]
-- [[Primo Anno/Analisi/modulo2/Ortogonalità|Ortogonalità]]:
+- [[1-Primo Anno/Analisi/modulo2/Ortogonalità|Ortogonalità]]:
 	- [[Applicazione ortogonale]], [[Sottospazio ortogonale]]
 	- [[Base ortogonale]], [[Base ortonormale]]
 	- [[Matrice ortogonale]]

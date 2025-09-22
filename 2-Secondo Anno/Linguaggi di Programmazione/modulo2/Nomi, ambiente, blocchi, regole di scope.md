@@ -1,0 +1,86 @@
+---
+tags: []
+aliases:
+  - oggetti denotabili
+  - vita di un oggetto
+  - binding statico
+  - binding dinamico
+  - aliasing
+  - annidamento
+data: "`2025-02-23 18:02`"
+---
+- # Nomi:
+	- sequenze di caratteri usata per denotare qualche cos’altro
+	- ![[Pasted image 20250223180416.png]]
+	- nei linguaggi i nomi sono spesso _token alfa-numerici_
+	- L’_uso_ di un nome serve ad indicare l’oggetto denotato
+- # Oggetti denotabili:
+	- un oggetto è denotabile se è possibile associargli un _nome_
+	- ## Nomi definiti dall’utente:
+		- variabili, parametri formali, procedure (in senso lato), tipi definiti dall’utente, etichette, moduli, costanti definite dall’utente, eccezioni.
+	- ## Nomi definiti dal linguaggio:
+		- tipi primitivi, operazioni primitive, costanti predefinite.
+	- _legame_(o binding) tra nome ed oggetto.
+	- ## Operazioni:
+		- _Creazione, Accesso, Modifica, Distruzione_
+		- Creare e distruggere un oggetto non equivale a creare e distruggere i legami per esso
+		- ![[Pasted image 20250303111438.png]]
+			- Alcuni eventi fondamentali
+			- Il tempo tra la creazione e la distruzione di un oggetto è detto _vita_ dell’oggetto.
+	- ## Vita di un oggetto:
+		- Non è coincidente con la vita dei legami per esso
+		- ### Vita più lunga di quella del legame:
+			- ![[Pasted image 20250303111633.png]]
+				- Durante l’esecuzione di `P` esiste un legame tra `X` e un Oggetto che esiste prima e dopo tale esecuzione.
+		- ### Vita più corta di quella del legame:
+			- ![[Pasted image 20250303111739.png]]
+				- Dopo la `free` esiste comunque un legame, _pendente_, per esso (`Y`) : _dangling reference_.
+				- 
+- # Binding Time:
+	- ## Statico:
+		- ### Progettazione del linguaggio:
+			- tipi primitivi, nomi per operazioni e costanti predefinite
+		- ### Scrittura del programma:
+			- definizione di nomi(variabili, funzioni, ecc) il cui legame viene completato in seguito.
+		- ### Compilazione:
+			- Legame di alcuni nomi (var. Globali)
+			- 
+	- ## Dinamico:
+		- esecuzione: legame definitivo di tutti i nomi non ancora legati
+- # Ambiente:
+	- _Insieme delle associazioni_ di tutti i nomi definiti e dei relativi oggetti denotati
+	- Utilizzato dai linguaggi funzionali.
+	- è determinato dalle [[Regole di Scope]]
+	- ## Dichiarazione:
+		- Meccanismo col quale si crea un’associazione in ambiente
+			- ![[Pasted image 20250303110052.png|200]]
+	- ## Ambiente locale:
+		- Associazioni create all’ingresso del blocco
+	- ## Ambiente non locale:
+		- Associazioni ereditate da altri blocchi.
+	- ## Ambiente globale:
+		- Una parte dell’ambiente non locale che contiene tutte le associazioni comuni a tutti i blocchi
+			- Dichiarazioni esplicite di variabili globali
+			- Dichiarazioni del blocco più esterno
+			- Associazioni esportate da moduli ecc.
+	- ## Operazioni:
+		- ### Creazione:
+			- Associazione nome-oggetto denotato; dichiarazione locale in blocco.
+		- ### Riferimento:
+			- Uso di un nome per denotare l’oggetto
+		- ### Disattivazione:
+			- Associazione nome-oggetto denotato quindi una dichiarazione che maschera un nome.
+		- ### Riattivazione:
+			- Uscita dal blocco con dichiarazione che maschera.
+		- ### Distruzione:
+			- Uscita dal blocco con dichiarazione locale
+- ## Aliasing:
+	- nomi diversi possono denotare lo stesso oggetto.
+	- ![[Pasted image 20250303110202.png]]
+- # Blocchi:
+	- Regioni testuali del programma, identificate da un simbolo di inizio e di fine(p.e le parentesi graffe), può contenere dichiarazioni _locali_ a quella regione.
+	- Permettono una gestione locale dei nomi, danno un po' più di chiarezza al codice e permettono di evitare l’aliasing.
+	- ## Annidamento:
+		- Un blocco può essere contenuto in un altro blocco, e tutte le variabili dichiarate nel blocco possono essere viste da tutti i blocchi annidati in esso
+- # Link Utili:
+	- 

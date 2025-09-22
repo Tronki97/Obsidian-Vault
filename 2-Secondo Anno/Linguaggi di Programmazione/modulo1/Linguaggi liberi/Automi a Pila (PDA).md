@@ -1,0 +1,105 @@
+---
+tags: []
+aliases:
+  - PDA
+  - push down automata
+  - automa a pila
+  - stato finale
+  - pila vuota
+data: "`2024-10-19 16:41`"
+---
+- # Intro:
+	- tratta grammatiche più generali rispetto a quelle [[Grammatiche regolari||regolari]] 
+	- per poter identificare i linguaggi liberi è necessario conoscere gli _Automi a pila_
+- # PDA (Push down automata)
+	- sono un tipo di automa che usano memoria ausiliaria di tipo _stack_ invece degli stati finiti.
+	- Si dividono in _deterministici e non_ i primi utili per costruire i _[[Struttura di un compilatore||compilatori]]_ gli altri per i _linguaggi liberi_ 
+	- infatti l'[[Analisi sintattica||l'analizzatore sintattico]], presa la lista di token dell'[[Analisi lessicale||analizzatore lessicale]], genera un [[Alberi di derivazione]] relativo alla grammatica libera usata per fare il _parser_ 
+	- per far si che gli [[Automi finiti non deterministici||NFA]]/[[Automi finiti deterministici||DFA]] riconoscano i linguaggi liberi necessitano di avere una _pila che cresce illimitatamente_ 
+		- per esempio nel riconoscere una stringa palindroma
+		- l'automa deve "ricordare" la prima metà dell'input in modo da confrontarlo con la seconda metà in ordine inverso
+	- ## Pila:
+		- può leggere solo l'elemento in cima 
+		- può rimuovere solo l'elemento in cima 
+		- può inserire un nuovo elemento solo in cima 
+- # Automa a pila:
+	- è una 7-upla :
+		- $$(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$$
+			- $\Sigma$ : alfabeto finito.
+			- $\Gamma$ : è un insieme finito di simboli della Pila.
+			- $\delta$ : è la funzione di transizione di tipo:
+				- $$\delta: Q \times (\Sigma \cup \{\epsilon\})\times \Gamma\to P(Q\times \Gamma^{*})$$
+				- ($\Sigma \cup \{\epsilon\}$) consuma un simbolo dell'input $\Sigma$ oppure no $\epsilon$ 
+				- $\Gamma$ consuma il simbolo in cima alla pila.
+				- $P(Q\times \Gamma^{*})$ : Sulla pila scrive una stringa di lunghezza qualsiasi di simboli $\Gamma$ 
+			- $\bot\in \Gamma$ : è il simbolo inziale sulla pila.
+			- $F$ : sono gli stati finali 
+- # Transizioni di un PDA:
+	- ## Descrizione istantanea:
+		- ($q,w,\beta$) 
+		- $q$ è lo stato corrente.
+		- $w\in \Sigma^{*}$ input non ancora letto.
+		- $\beta\in \Gamma^{*}$ stringa sulla pila 
+	- ## Mossa:
+		- ![[Pasted image 20241019170918.png]]
+	- ## Computazione:
+		- ![[Pasted image 20241019170943.png]]
+- # Linguaggio riconosciuto: ^edde38
+	- due modi per il riconoscimento: 
+	- $N=(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$ 
+	- ## Per stato finale: ^879bee
+		- $$L[N]=\{w\in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \alpha) \ \ q\in F \}$$
+	- ## Per pila vuota: ^a594b1
+		- $$P[N]=\{w \in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \epsilon)\}$$
+	- ### OSS:
+		- Spesso per un certo PDA $N$ 
+			- $$L[N]\ne P[N]$$ 
+		- $$L=L[N]\implies \exists N': L=P[N']$$
+			- ovvero non cambia la classe dei linguaggi riconosciuti da PDA per stato finale o per pila vuota
+- # ES:
+	- ![[Pasted image 20241022171731.png]]
+	- ![[Pasted image 20241022171758.png]]
+- # Determinismo:
+	- $|\delta(q,a,Z)|\le 1$    $\forall q \in Q, \ \ \forall a\in \Sigma, \ \ \forall Z \in \Gamma$
+	- $\delta(q,\epsilon,Z)\ne \emptyset \implies \delta(q,a,Z)= \emptyset$   $\forall a \in \Sigma$ 
+	- ![[Pasted image 20241022172300.png]]
+	- PDA deterministico perché rispetta le condizioni descritte.
+	- ## OSS: 
+		- i PDA a differenza dei [[Automi finiti deterministici||DFA]] non garantiscono di leggere tutta la stringa in input infatti l'esempio precedente si blocca con $acc$ 
+- # Teorema:
+	- la classe dei linguaggi riconosciuti per pila vuota o per stato finale _non cambia_
+	- (1) se $L=P[N]$ allora posso costruire $N'$ tale che $L=L[N']$
+	- (2) se $L=L[N]$ allora posso costruire $N'$ tale che $L=P[N']$
+	- ## Dim:
+		- (1) ![[Pasted image 20241022172907.png]]
+		- (2) ![[Pasted image 20241022173002.png]]
+			- $Z$ può essere rimossa dallo stack solo grazie alla $X\in \Gamma \cup \{Z\}$ perché $Z\notin \Gamma$ 
+- # Da linguaggio a PDA:
+	- $$L=\{ a^{n}c b^{n}| n\ge 0\}$$
+	- $Z$ simbolo iniziale; $\Gamma=\{A,Z\}$ ; $X\in \Gamma$
+	- ![[Pasted image 20241022173255.png]]
+	- $L=L[N]=P[N]$ 
+- # Da grammatica a PDA:
+	- $S\to aSb\ |\  \epsilon$
+	- ![[Pasted image 20241022173416.png]]
+- # Teorema 2:
+	- un linguaggio $L$ è libero da contesto sse è accettato da un PDA 
+	- ## Dim:
+		- $\implies$)  $L$ è libero, $\implies\exists G= (NT, T, R, S)$ libera tale che:
+			- $$L=P[N]$$
+			- $$N=(\underset{\Sigma}{T}\ ,\  \{q\}\ ,\  \underset{\Gamma}{T\cup NT}\ ,\  \delta\ ,\  q\ ,\  \underset{\bot}{S}\ ,\  \emptyset)$$
+				- $\delta(q, \epsilon, A)=\{(q,\beta)| A\to \beta \in R\}$ $\forall A\in NT$
+				- $\delta(q,a,a)=\{(q, \epsilon)\}$ 
+				- _ovvero_:
+					-  Ogni volta che $N$ ha $A$ in cima alla pila sceglie una regola per $A$, senza consumare l'input.
+					-  se invece c'è $a$ in cima e l'input ha $a$ allora vengono entrambi consumati.
+					-  se l'input invece è diverso dalla cima della pila ci si blocca e si fa backtracking provando un'altra regola. 
+		- $\impliedby$) $L=P[N] \implies \exists G$ libera tale che $L=L(G)$ 
+			- ## Lemma 1:
+				- ogni PDA  $N$ può essere simulato da uno $N'$ con un solo stato 
+			- ## Lemma 2:
+				- Ogni PDA con un solo stato ha una equivalente [[Grammatiche#^c95cdc||grammatica libera]] 
+- # Riassunto:
+	- _Un linguaggio $L$ è libero sse è accettato da un PDA (nondeterministico)_
+- # Link Utili:
+	- 

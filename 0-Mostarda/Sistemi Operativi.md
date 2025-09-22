@@ -12,7 +12,7 @@ data: "`2025-04-24 16:48`"
 		- [[Sezioni critiche (critical section)|sezioni critiche]], [[Soluzioni speciali hardware]]
 		- [[Algoritmo di Dekker]], [[Algoritmo di Peterson]]
 		- [[Semafori]]:
-			- [[Semafori binari]]
+			- [[Semafori Binari]]
 			- [[Implementazione dei semafori]]
 			- [[Problemi classici di concorrenza]]
 		- [[Monitor]]:

@@ -21,7 +21,7 @@ data: "`2025-04-24 16:48`"
 	- [[Interpolazione]]
 	- [[Underfit, Overfit e Regolarizzazione]]
 - Ottimizzazione:
-	- [[Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione|problemi di Ottimizzazione]]
+	- [[2-Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione|problemi di Ottimizzazione]]
 	- [[Classificazione punti di minimo]]
 	- [[Metodo di discesa del gradiente]]
 	- [[Metodo gradienti coniugati (CGLS)]]

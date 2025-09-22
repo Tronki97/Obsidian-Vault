@@ -1,0 +1,45 @@
+---
+tags:
+aliases:
+data: "`2025-09-22 10:09`"
+---
+- # struttura corso:
+	- Si concentra sulla produzione del sistema software sul _design_ e sulla _codifica_
+	- ## Lunedì:
+		- Di persona 
+	- ## Mercoledì:
+		- Online
+- # Esame:
+	- Orale, su tutto il corso. 
+	- Si può fare uno scritto al posto dell'orale con 10 domande.
+	- Si può anche fare dei progetti che possono ridurre le domande dello scritto.
+- # Contenuto:
+	- Principalmente ci si concentra sui linguaggi orientati agli [[Tipo dato astratto|oggetti]] dove la computazione si concentra.
+		- Questi oggetti sono struddure dati contenenti:
+			- _Dati_ (campi) 
+			- _Metodi_
+	- La computazione procede grazie all'interazione tra questi oggetti.
+		- Ovvero questi oggetti si scambiano messaggi.
+		- `.` è l'operatore `send` del messaggio.
+		- Questo concetto di interazione è diventato col tempo:
+			- _programmazione ad attori o ad agenti_
+	- ## Alternative:
+		- _imperativo_: si definiscono passi sequenziali che svolgono un compito
+		- _funzionale_: il programma si pasa sul computare un _input_ in un _output_
+	- Mentre quelli ad oggetti hanno oggetti che collaborano tra di loro per trovare la soluzione.
+	- ## Caratteristiche comuni dei linguaggi OOP:
+		- ### Classe:
+			- Anche se si può avere classi senza avere oggetti
+		- ### Ereditarietà:
+			- Ma possono esserci linguaggi ad oggetti senza ereditarietà
+				- Come `Go` e `Rust`
+		- ### Polimorfismo:
+			- Uno stesso nome può essere associato a comportamenti diversi e avere diverse modalità di funzionamento 
+				- [[Tipi polimorfi#^c3c1ed|polimorfismo ad-hoc]]
+				- [[Tipi polimorfi#^6488ff|polimorfismo di tipo]]: _overriding_ o _virtual function_
+				- [[Tipi polimorfi#^4fb301|polimorfismo parametrico]]
+					- In `C` si implementano con i `Template` generando codice per ogni diverso tipo utilizzato, aumentando la dimensione del codice oggetto generato; hanno una sorta di struttura gerarchica, usando la `template specialization`
+					- In `C` i generici si possono implementare con i puntatori `Void`
+			- è utile per la caratteristica di [[Tipo dato astratto#^b44058|late binding]] fatto in `C` tramite i `Signal`
+- # Link Utili:
+	- 

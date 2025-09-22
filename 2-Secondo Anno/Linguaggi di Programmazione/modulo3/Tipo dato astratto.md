@@ -1,0 +1,225 @@
+---
+tags:
+aliases:
+  - ADT
+  - abstract data type
+  - moduli
+  - tipi esistenziale
+  - oggetti
+  - classi
+  - prototipi
+  - oggetti esistenziali
+  - vista privata
+  - vista pubblica
+  - interfaccia
+  - sottotipi
+  - ereditarietà
+  - shadowing delle variabili
+  - shadowing
+  - overriding
+  - overloading
+  - package
+  - protected
+  - Top
+  - Tipi intersezione
+  - costruttori
+  - ereditarietà multipla
+  - dispatch dinamico dei metodi
+  - early binding
+  - late binding
+  - metodi statici
+  - late self binding
+  - type erasure
+  - wildcards
+  - type parameter erasure
+data: "`2025-05-07 11:42`"
+---
+- # Argomento:
+	- Con i tipi è stato introdotto il modo di interpretare una stringa di bit per dire che è appunto di un determinato tipo con varie proprietà e operazioni.
+	- Aggiungendo quindi un incapsulamento per poter distinguere quelle sezioni di bit
+	- Questa capsula inoltre opacizza la gestione di questi tipi per gli utenti.
+- # ADT (abstract data type):
+	- Fanno rispettare le astrazioni implementate di default e dal programmatore proteggendo delle parti di codice da altre.
+	- Nei linguaggi [[tipi nei linguaggi di programmazione#^75d594|type-safe]] l'utente non può interagire con la capsula rappresentata da un tipo se non tramite la sua mediazione.
+	- Quindi un ADT è un _tipo che definisce i possibili valori che lo compongono e le possibili operazioni che possono essere eseguite su essi_.
+	- ## Costituito da:
+		- Il nome del tipo astratto _A_
+		- Il tipo di rappresentazione: _T_
+		- Operazioni di: _creazione, interrogazione e manipolazione_ di valori di tipo _A_
+		- ![[Pasted image 20250507115330.png|350]]
+	- ## Nascondere informazioni:
+		- Si possono usare dei modificatori di visualizzazione come `public, private` se non viene esplicitato allora saranno tutte pubbliche.
+		- Si occulta quindi dietro le interfacce i dettagli implementativi, come la _struttura_ e il _funzionamento delle operazioni_.
+	- ## Indipendenza della rappresentanza:
+		- Implementazioni corrette dello stesso _ADT_ vengono viste allo stesso modo dal consumatori dell'ADT. 
+		- Visto che gli ADT sono indipendenti dalla rappresentazione è sicuro utilizzare qualsiasi implementazione compatibile con il tipo di dato ADT.
+	- ## In Rust:
+		- ![[Pasted image 20250828130400.png|700]]
+		- Sono implementati in modo diretto tramite i _tratti_, ovvero un meccanismo per aggregare le funzionalità comuni a più tipi, il tratto quindi è il tipo astratto la cui interfaccia da accesso agli utenti al tipo concreto tramite l' `impl` delle operazioni.
+	- Il [[tipi nei linguaggi di programmazione#^02abf5|type-checker]] fa un controllo dell'utilizzo dei tipi astratti e anche della loro implementazione in base al "contratto" stipulato tramite i modificatori e la rappresentazione usata.
+- # moduli:
+	- Quando si fanno progetti di grandi dimensioni può essere utile rendere disponibili diversi ADT nello stesso "pacchetto" ciò è appunto detto _modulo_ 
+	- Nel modulo è anche definita la _visibilità_ dei dati che racchiude.
+	- Come gli ADT i moduli possono fornire diversi gradi di flessibilità all'utente.
+- # Tipi esistenziali:
+	- Tipi dove `trait Counter { fn new…; fn get…; fn inc…; }` Corrisponde al tipo esistenziale:
+		- `CounterADT = { ∃X, {new : () → X, get : X → int, inc : X → X}`
+		- Si possono avere vari abitanti di questo nuovo tipo di cui si possono ignorare i dettagli interni e manteniamo comunque la [[tipi nei linguaggi di programmazione#^75d594|safety]]
+	- Il modo per mantenere l'oggetto esistenziale effettivamente facendo un operazione che gli viene assegnata e non proprio un operazione aritmetica precisa lo si fa tramite uno _stato_ che quell'oggetto mantiene e con il quale le operazioni interagiscono.
+	- Un implementazione valida può essere:
+		- $$\{Counter, c\}=\{^{*}int,\{new=1,get=fn(i:int)\{i\},inc=fn(i:int)\}\}as\ CounterADT$$
+		- Dove $^{*}int$ è il tipo concreto usato dalle implementazioni delle operazioni.
+		- "$as$" si usa perché la stessa implementazione può appartenere a tipi esistenziali diversi 
+		- `Counter c1=c.new()`
+		- `c.get(c.inc(c1)) // 2`
+	- Il nome del tipo sarà poi vincolato quindi si potrà avere una sola implementazione del tipo `Counter` nella continuazione del programma.
+- # Oggetti esistenziali:
+	- Forniscono una visione alternativa degli ADT che _consente a più implementazioni dello stesso tipo esistenziale di interagire_
+	- Si necessita quindi che l'implementazione di un tipo esistenziale sia un valore rappresentabile del sistema dei tipi
+	- Quindi gli oggetti sono _tipi concreti che mantengono il loro stato interno e portano con sé l'associazione con il loro tipo esistenziale_
+	- ## ES:
+		- ![[Pasted image 20250828152752.png]]
+		- Dove le due implementazioni di `Counter` possono sussistere insieme visto che il loro stato è nascosto dentro l'implementazione e l'unico modo per leggerlo è tramite le operazioni
+		- Visto che ogni oggetto ha la propria rappresentazione interna _un programma può mescolare implementazioni Diverse dello stesso tipo di oggetto_
+- # Oggetti:
+	- è una capsula che contiene dati e operazioni che manipolano quei dati e mantiene uno stato a cui si può accedere solo tramite quelle operazioni
+	- Le operazioni vengono chiamate _metodi_.
+	- E le variabili interne sono _campi_ che sono sostanzialmente dei _record_.
+	- Non si usano più le chiamate a procedure avendo la memoria condivisa che complica le cose ma si usano i [[Message passing|messaggi]], 
+	- La sintassi quindi si riassume in:
+		- "invoco il metodo $m$ con i parametri $p_{1},p_{2}$ sull'oggetto $o$"
+		- `o.v` indica l'accesso alla variabile `v` dell'oggetto `o`
+	- Anche qui si possono usare i modificatori di visibilità. 
+		- Protected:
+		- Private:
+		- Public:
+- # Classi:
+	- Un template per generare delle istanziazioni degli oggetti.
+	- Permette di racchiudere l'implementazioni dei metodi che modificano certi campi.
+	- Non girano sul modello ad oggetti.
+	- ![[Pasted image 20250508140113.png|350]]
+	- Basta analizzare cosa fa una implementazione di una classe e allora saprò cosa fanno tutti gli oggetti. 
+	- Le classi quindi detengono le implementazioni delle operazioni e lo stato per ogni oggetto è salvato in memoria al contrario dello stato della classe che è _inesesistente_ 
+	- Le classi memorizzano solo l'implementazione del codice di tutti gli oggetti e quando si invoca un metodo di un oggetto ci si sta rivolgendo all'implementazione della sua classe, e chiaramente il metodo va ad agire sullo stato dell'oggetto non della classe
+	- Nell'implementazione di una classe quando ci si vuole riferire ad una variabile dell'oggetto corrente si usa `this/self`
+		- ![[Pasted image 20250828153931.png|400]]
+	- ## Gestione in memoria:
+		- L'istanziazione di oggetti è fatta dinamicamente, in linguaggi come [[Java]] viene fatto sullo [[Heap]] mentre in altri come _C++_ viene fatto sullo _stack_
+	- ## Prototipi:
+		- Si basa sulla delegazione di funzione per implementare dei metodi tipo quelli delle classi, utilizzato in linguaggi come [[Javascript]]:
+			- ![[Pasted image 20250508142331.png|400]]
+			- `c=new Counter();` consiste nel clonare un oggetto in un altro.
+		- Come le _classi_ i prototipi si occupano di essere il modello per la struttura e il funzionamento di un oggetto, ma _i prototipi sono linguisticamente degli oggetti_.
+		- Possono definire metodi comuni ai loro deleganti, ovvero se si vuole accedere ad un campo non presente in quell'oggetto l'azione verrà delegata implicitamente; se il delegato può soddisfare la richiesta allora riferisce al figlio il risultato. Questa catena può procedere fino al prototipo vuoto e quindi restituire errore.
+			- Ciò vale sia per l'accesso ai campi sia per i metodi.
+		- _un oggetto basato su prototipi può cambiare il delegato al tempo di esecuzione_
+			- ![[Pasted image 20250828154637.png|500]]
+	- ## Incapsulamento e interfacce:
+		- I linguaggi OO permettono di definire un oggetto nascondendone delle parti
+		- ### Vista privata:
+			- Tutti i metodi e i campi sono visibili
+		- ### Vista pubblica:
+			- Fa vedere solo le parti dell'oggetto che sono state rese esplicitamente visibili nella definizione dell'oggetto.
+			- Solitamente viene chiamata _interfaccia_ contenente _i metodi e campi_ che il codice client può usare per interagire con il valore di un certo tipo.
+		- Le interfacce fanno da ponte tra le classi e i tipi, per questo la definizione di una classe è accompagnata da una implicita per l'interfaccia della vista pubblica di quella classe che a sua volta la implementa stabilendo una relazione di _sottotipaggio_
+			- ![[Pasted image 20250828160749.png|400]]
+	- ## Sottotipi:
+		- _Le classi possono essere considerate come i tipi degli oggetti che fanno parte dell'insieme identificato_, nei linguaggi tipizzati una definizione di classe introduce anche una definizione di tipo i cui valori sono le istanze della classe.
+		- Il sottotipaggio in OO si può vedere come una relazione di compatibilità $S<:T$ dove il tipo associato alla classe $S$ è un sottotipo di quello associato alla classe $T$, quindi quando il codice client si aspetta di lavorare con oggetti di tipo $T$ potrà lavorare anche con oggetti di tipo $S$.
+		- ## Principio di sostituzione di Liskov:
+			- Sia $p(o)$ una proprietà dimostrabile per qualsiasi oggetto $o$ di tipo $T$ e sia $S$ un suo sottotipo, allora per qualsiasi oggetto $o'$ di tipo $S$, $p(o')$ è dimostrabile.
+			- Concretamente ciò vuol dire che si può accedere ai campi di $S$ disponibili in $T$ e invocare metodi di $S$ disponibili in $T$
+			- In un _sistema di tipi strutturale_ ciò si riduce ad un controllo di corrispondenza tra elementi di $S$ rispetto a quelli di $T$ 
+			- Di solito si adotta uno stile di [[algebra dei tipi#^73b2a9|equivalenza nominale]] e ciò fa si che l'utente debba specificare _le relazioni di sottotipaggio previste tra i tipi_ in modo che il linguaggio possa verificare che le proprietà siano valide.
+		- ### Ereditarietà:
+			- Per specificare il sottotipaggio c'è un altro modo oltre a _interfaccia-classe_ ad esempio `Counter implements CounterInterface` comporta:
+				- La definizione di una classe che _implementa_ l'interfaccia associata `Counter_Interface`
+				- La dichiarazione che `Counter_Interface` è e deve essere un sottotipo di `CounterInterface`
+			- Quando si applica il sottotipaggio a livello di classi si _applica l'idea di estensione da interfaccia a interfaccia per coprirne anche lo stato, i vincoli di incapsulamento e l'implementazione dei metodi delle classi_; questa relazione è chiamata ___Ereditarietà___ visto che il sottotipo _eredita tutte queste caratteristiche_.
+				- ![[Pasted image 20250828161528.png|400]]
+			- #### Shadowing delle variabili:
+				- _indica che una sottoclasse può mascherare i campi della sua superclasse definendo campi con lo stesso nome (ma non necessariamente con gli stessi tipi)_
+				- Deriva dalle [[Regole di Scope]] a livello di blocco, considerando la superclasse come blocco esterno di cui la sottoclasse può mascherare qualsiasi variabile.
+				- Lo shadowing viene risolto staticamente
+				- ![[Pasted image 20250828164413.png|400]]
+			- #### Overriding dei metodi:
+				- Consiste sostanzialmente nel sovrascirvere le implementazioni dei metodi della superclasse
+				- è possibile farlo anche grazie al principio di astrazione che permette di cambiare le implementazioni purché rispettino le interfacce.
+				- Viene risolto dinamicamente
+				- Quando si fa l'overriding _la classe dell'oggetto determina a quale metodo verrà inviata l'invocazione_
+				- ![[Pasted image 20250828164432.png|400]]
+			- #### Raffinamento visibilità:
+				- A volte si necessita di rendere l'incapsulamento _semi-opaco_, per esempio per consentire alle sottoclassi di vedere metodi e campi delle loro superclassi, ciò viene permesso dai modificatori `package` e `protected`
+				- ##### Package:
+					- Estende la visibilità a tutte le classi che appartengono allo stesso modulo di quella classe
+				- ##### Protected:
+					- Estende il caso package per consentire a qualsiasi sottoclasse di interagire con i campi/metodi _protetti_ della superclasse
+	- ## Classi astratte:
+		- Sono una via di mezzo tra interfacce e classi, visto che possono definire campi e implementazioni di metodi, ma anche lasciare alcuni metodi astratti come le interfacce che le sottoclassi dovrebbero implementare/sovrascrivere.
+	- ## Relazione di sottotipaggio:
+		- ### Top:
+			- Sappiamo che la relazione tra sottotipi è un [[algebra dei tipi#^c16d0f|preordine parziale]] 
+			- Se definissi dei cicli come $T<: R, \ S<: T, R<:S$ l'antisimmetria lo invaliderebbe, quindi la relazione di sottotipaggio è a forma di [[Grafi#^49f05c|grafo aciclico]] tra tipi 
+			- Ciò non garantisce la presenza di un singolo elemento massimo chiamato _Top_ il quale è senza _super-tipo_ ed è padre di tutti gli altri tipi, a volte volte è utile averlo.
+			- Molti linguaggi ne impongono l'esistenza, in [[Java]] _Top_ è `Object` da cui tutte le altre classi ereditano.
+			- ![[Pasted image 20250828165711.png]]
+		- ### Tipi intersezione:
+			- Visto che viene descritto un DAG è possibile esprimere $S<: T \wedge S <: R$ visualmente si sta facendo convergere la parte che riguarda $T,R$ verso $S$
+			- Ciò prende il nome di _tipo intersezione_ scritto: $S<: T \wedge R$, quando i valori di quei due tipi si sovrappongono (anche parzialmente) $S$ indica l'intersezione dei valori che abitano sia $T$ che $R$
+			- Nel caso non si sovrappongano $S$ sarà una sorta di unione delle capacità dei due tipi.
+			- #### ES:
+				- Il tipo $RW$ che è sottotipo di (R)eader e (W)riter 
+				- ![[Pasted image 20250828170213.png]]
+	- ## Costruttori:
+		- Sono procedure per istanziare/creare un oggetto
+		- Sono metodi speciali che possono accettare parametri e restituire un oggetto istanziato di quella classe.
+		- ## Scegliere un costruttore:
+			- Le classi possono fornire diversi costruttori tra cui il compilatore/interprete deve scegliere  
+		- ![[Pasted image 20250828170740.png|300]]
+	- ## Ereditarietà multipla:
+		- In alcuni linguaggi una classe può ereditare metodi da diverse _superclassi_ la gerarchia è a DAG e si parla di ereditarietà multipla.
+		- Questo tipo di ereditarietà comporta problemi concettuali e di implementazione.
+			- Problemi di conflitto tra i nomi di metodi ereditati da due classi diverse ma con la stessa firma.
+		- Per risolvere questi problemi ci sarebbero delle soluzioni parziali:
+			- _vietare sintatticamente i conflitti_
+			- Chiedere allo sviluppatore di risolvere questi conflitti
+			- Stabilire delle convenzioni per risolvere i conflitti per esempio dichiarare "vincente" il metodo della classe a sinistra che compare nella clausola di estensione.
+		- Nella pratica esiste un problema chiamato _Deadly-Diamond-of-Death_ chiamato in questo modo per:
+			- la forma assunta dall'ereditarietà di due classi $B$ e $C$ che ereditano da $A$ e la classe $D$ che eredita sia da $B$ che da $C$ 
+			- C'è un metodo in $A$ sovrascritto da $B$ e $C$ ma non da $D$
+			- ![[Pasted image 20250828174036.png|300]]
+			- Ci si chiede quale metodo erediterà $D$.
+			- Le soluzioni eliminano il problema in maniera architetturale ma rimane il problema di risolvere i conflitti ed eseguire l'implementazione corretta.
+			- ### Dispatch dinamico dei metodi:
+				- Una classe ridefinisce l'implementazione di un metodo, in modo che il codice eseguito dipenda dal tipo dell'oggetto che riceve il [[Message passing|messaggio]]; Dinamico perché si sa il tipo effettivo solo a tempo di esecuzione.
+				- ![[Pasted image 20250828174541.png|400]]
+			- ### Overloading:
+				- Come l'overriding risolve una situazione di ambiguità in cui lo stesso nome può avere significati diversi.
+				- #### Early binding:
+					- Si usano le informazioni statiche per legare il nome al significato.
+				- #### Late binding: ^b44058
+					- Le info sono disponibili sono a tempo di esecuzione.
+			- ### Metodi statici:
+				- Alcuni linguaggi li forniscono come modo _per indicare i metodi che il compilatore può risolvere staticamente_ perché indipendenti dagli stati e dalla classe effettiva di un dato oggetto.
+				- Non è possibile farne l'override o overload, ma lo shadowing si accoppiandoli con il sottotipaggio 
+				- ![[Pasted image 20250828175254.png|500]]
+	- ## Aspetti implementativi:
+		- Per implementare semplicemente le classi e l'ereditarietà si usa un _elenco concatenato_ dove ogni elemento:
+			- Rappresenta una classe e contiene l'implementazione di tutti i metodi Esplicitamente definiti o ridefiniti in quella classe
+			- Punta alla sua Immediata super-classe.
+		- Per implementare il _dispatch dinamico_ uso il puntatore di un oggetto alla sua classe per verificare se ne contiene l'implementazione e in caso lo esegue altrimenti si risale la catena delle _superclassi_ 
+		- ### late self binding:
+			- I metodi devono accedere anche alle variabili di istanza dell'oggetto su cui sono invocati, il cui indirizzo è noto solo a _runtime_ 
+			- il compilatore può definire l'accesso ai campi di istanza _non come un offset Dallo stack frame ma come l'offset dato Dall'indirizzo dell'oggetto corrente (`this`) più l'offset (specifico) di ogni campo_, come Dichiarato dalla classe dell'oggetto.
+- # Generics e type erasure:
+	- Scrivendo `Set<T>` si possono usare i _Generics_ per parametrizzare intere classi 
+	- Si può fare grazie alla _type erasure_, in [[Java]] succede che tutte le istanze di una classe generica condividano lo stesso codice, se in fase di compilazione il [[tipi nei linguaggi di programmazione#^5b2524|type-checking]] convalida l'uso dei generics, il compilatore _cancella tutti i parametri di tipo dal codice_ così `Set<T>` diventa il tipo "raw" `Set` e tutti gli oggetti sono quindi diventati istanze del tipo _Top_ `Object`
+	- E in questo modo non c'è bisogno di aggiungere dei [[algebra dei tipi#^4e60bb|casting]] 
+	- ## Type parameter erasure:
+		- Con il type erasure non si può invocare `new T()` perché il compilatore non sa quale oggetto creare; allo stesso modo `instanceof` non è in grado di distinguere tra `Set<Integer>` e `Set<String>` poiché in esecuzione diventano entrambi del tipo  "raw" `Set`
+		- ![[Pasted image 20250828181721.png|400]]
+	- ## Wildcards:
+		- Per poter esprimere annotazioni sui generics si usa `?` che esprime come `T<?>` sia un super-tipo di qualsiasi applicazione del tipo generico `T` 
+		- Si può usare per la [[Tipi polimorfi#^13824c|co(ntro)varianza]] ovvero, il caso `T<? extends S>` consente L'uso di S e dei suoi sottotipi, mentre il caso `T<? Super S>` consente l'uso di S e di tutti i suoi supertipi
+- # Link Utili:
+	- 

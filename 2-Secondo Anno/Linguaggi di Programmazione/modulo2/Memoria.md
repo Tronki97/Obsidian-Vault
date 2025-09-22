@@ -1,0 +1,48 @@
+---
+tags:
+aliases:
+  - record di attivazione
+  - RdA
+  - RdA per blocchi inline
+data: "`2025-08-23 17:35`"
+---
+- # Allocazione:
+	- ## Statica:
+		- Memoria Allocata al tempo della compilazione 
+		- Il [[Struttura di un compilatore|compilatore]] alloca anche lo spazio per le variabili visto che un oggetto avrà un indirizzo assoluto che è mantenuto per tutta l'esecuzione del programma 
+		- Non permette la _ricorsione_ perché a run-time possono esistere diverse istanze della stessa variabile la cui memoria non può essere allocata al tempo della compilazione. 
+	- ## Dinamica:
+		- Memoria allocata al tempo di esecuzione, ciò permette di avere i _record di attivazione_
+		- ## Record di attivazione: ^ba20bb
+			- Spazio di memoria dedicato ad un blocco o ad una procedura, allocato dinamicamente a tempo di esecuzione ogni volta che avviene una chiamata di funzione 
+			- ### Componenti:
+				- Puntatore di catena dinamica/statica
+				- Indirizzo di ritorno
+				- Indirizzo del risultato
+				- Parametri
+				- Variabili locali
+				- Risultati intermedi
+			- ### Gestione della pila:
+				- ![[Pasted image 20250823183055.png]]
+				- Avviene grazie a:
+					- codice eseguito dal chiamante immediatamente prima della chiamata (_sequenza di chiamata_)
+					- _prologo_: codice eseguito all'inizio del blocco
+					- _epilogo_: codice eseguito alla fine del blocco
+					- _sequenza di ritorno_: codice eseguito dal chiamante subito dopo la chiamata.
+			- Ogni istanza di sottoprogramma ha, a run-time, un _RdA_ che contiene le informazioni relative alla specifica istanza, allo stesso modo ogni blocco ha un suo _RdA_.
+		- ## RdA per blocchi in-line:
+			- ### Componenti
+				- _link dinamico_: puntatore al record precedente sullo stack.
+				- _variabili locali_
+				- _risultati intermedi_
+			- ### Operazioni:
+				- _push_: corrisponde all'ingresso nel blocco
+					- link dinamico del _nuovo_ RdA = _SP_;
+					- _SP_ si aggiorna poi al nuovo RdA;
+				- _pop_: uscita dal blocco
+					- Viene eliminato l'RdA puntato da _SP_
+					- _SP_ viene poi aggiornato al link dinamico del RdA tolto dallo stack.
+			- ![[Pasted image 20250823184057.png]]
+		- 
+- # Link Utili:
+	- 
