@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0126f7b05530df46",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Ingegneria del software/prima lezione.md",
+                "file": "3-Terzo anno/Basi di Dati/Gestione delle informazioni.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "prima lezione"
+              "title": "Gestione delle informazioni"
+            }
+          },
+          {
+            "id": "642033daec5be172",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Basi di Dati/Gestione delle informazioni.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Gestione delle informazioni"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -235,19 +260,26 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "immagini/Pasted image 20250922134127.png",
+    "3-Terzo anno/Basi di Dati/introduzione Basi di dati.md",
+    "3-Terzo anno/Basi di Dati/Gestione delle informazioni.md",
+    "3-Terzo anno/Ingegneria del software/GIT.md",
+    "Homepage.md",
+    "Pasted image 20250924104148.png",
+    "3-Terzo anno/Consigli Tesi.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo3/algebra dei tipi.md",
+    "3-Terzo anno/Ingegneria del software/Templates in C++.md",
     "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
     "3-Terzo anno/Ingegneria del software/prima lezione.md",
+    "3-Terzo anno/Materie a scelta interessanti.md",
+    "immagini/Pasted image 20250922134127.png",
     "immagini/Pasted image 20250922135545.png",
     "immagini/Pasted image 20250922135356.png",
     "immagini/Pasted image 20250922135228.png",
     "immagini/Pasted image 20250922134620.png",
     "immagini/Pasted image 20250922134613.png",
-    "Homepage.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Generatori di analizzatori sintattici.md",
     "2-Secondo Anno/Ottimizzazione combinatoria/algoritmi per la programmazione lineare/Tecnica Branch-and-Bound.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
-    "3-Terzo anno/Materie a scelta interessanti.md",
     "immagini/Cookies.webp",
     "3-Terzo anno/Informatica teorica",
     "3-Terzo anno/Fondamenti di cybersecurity",
@@ -256,7 +288,6 @@
     "3-Terzo anno/Basi di Dati",
     "3-Terzo anno",
     "immagini/passaggio-per-nome-chiusura.png",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo3/algebra dei tipi.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Sottoprogrammi.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Top-down Parsing.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Proprietà di chiusura dei linguaggi liberi.md",
@@ -270,12 +301,7 @@
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser Top-down.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/alberi di derivazione/Ambiguità.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Proprietà algoritmiche dei linguaggi regolari.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/Pumping Theorem.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica delle espressioni aritmetiche.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica dei comandi.md",
     "immagini/Pasted image 20250830181003.png",
-    "immagini/Pasted image 20250827200913.png",
     "Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/desktop.ini",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser",

@@ -1,0 +1,4 @@
+- Tirocinio tesi e tutti gli esami devono essere in regola almeno 15 giorni prima della laurea
+	- La tesi bisogna consegnarla almeno 25 giorni prima della laurea
+	- Quindi l'argomento per la tesi deve essere chiesto almeno 6 mesi prima.
+	- 

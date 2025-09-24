@@ -1,0 +1,49 @@
+---
+tags:
+aliases:
+data: "`2025-09-24 14:19`"
+---
+- # Version Control Systems:
+	- Quando si lavora a progetti di grandi dimensioni e durata si necessita di lavorare in gruppo quindi serve avere strumenti per il controllo della versione del codice 
+	- Spesso è difficile recuperare versioni precedenti, che magari ci servono, basandosi sulla data
+	- Si cerca di lavorare con una base di codice condiviso, lavorando quindi in parallelo.
+	- Questo meccanismo serve per gestire il cambiamento dei documenti su cui si sta lavorando.
+	- Le differenze tra i vari sistemi è l'avere un _server centralizzato o condiviso_
+- # GIT:
+	- è praticamente un database distribuito.
+	- ## Repository:
+		- Sono memorizzate tutte le versioni del progetto che si è deciso di memorizzare.
+		- Una sorta di "foto" del progetto
+	- ## Clone:
+	- ## Commit:
+		- Inserire effettivamente le modifiche fatte.
+	- ## Checkout:
+		- Riprendere una versione precedente del progetto
+	- ## Workflow:
+		- Il lavoro fatto si esegue il comando `add` che aggiunge ciò che si vuole alla _staging area_ che poi committando si aggiunge alla repository.
+		- ### Centralized:
+			- Il server su remoto è quello di riferimento
+			- Viene clonato localmente e ogni persona ci lavora individualmente 
+			- Poi si committa e si risolvono i conflitti.
+			- Alla lunga i troppi conflitti danno fastidio e non sfrutta la distribuzione di GIT
+		- ### Gitflow:
+			- Master/main contiene il codice pronto.
+			- Develop è il branch dove si lavora e si sviluppa software
+				- Da qui derivano altri branch ognuno con i suoi obbiettivi:
+					- #### Feature :
+						- si sviluppa una funzionalità
+					- #### Hotfix :
+						- si ripara ad errori che sono stati scoperti in master da poi mergiare in master o _develop_
+					- #### Release :
+						- in preparazione del rilascio, la si riunisce in _develop_ e poi in _master_
+			- Ideale quando ci sono dei rilasci regolari
+			- Il problema è la history del programma che diventa illeggibile a causa di tutti i `merge` 
+		- ### Feature branch:
+			- La repo remota è il server di riferimento
+			- Ogni sviluppatore forka la repo
+			- Ogni volta che si vuole pushare serve fare il controllo da parte di un superiore.
+		- 
+- # Gitlab:
+	- è interamente opensource come alternativa a _GitHub_ disponibile in locale, preferito dalle aziende che necessitano di privacy per i dati.
+- # Link Utili:
+	- 

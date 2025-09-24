@@ -117,7 +117,7 @@ data: "`2025-04-30 11:35`"
 				- ![[Pasted image 20250827195408.png]]
 				- Il parametro `'l` lega insieme le durate di `a` e `b` 
 				- La specifica del parametro di ritorno serve a dire che _il riferimento restituito è preso in prestito dall'argomento con la stessa annotazione_ quindi `a` o `b`
-		- Per quanto riguarda i _riferimenti mutabili_, la lifetime può sovrapporsi solo a un riferimento preso in prestito dal riferimento mutabile stesso
+		- Per quanto riguarda i _riferimenti mutabili_, la lifetime può sovrapporsi solo a un riferimento preso in prestito dal riferimento mutabile stesso ^7637a8
 			- ![[Pasted image 20250827200913.png]]
 			- Nell'esempio la regola viene violata prendendo in prestito sia il riferimento mutabile sia quello immutabile a `greet`, il prestito sarebbe illegale anche dal punto di vista di un _riferimento condiviso_ in quanto dovrebbe essere di sola lettura e li lo stiamo andando a modificare.
 	- ## Riassunto sull'ownership:
