@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Basi di Dati/Gestione delle informazioni.md",
+                "file": "3-Terzo anno/Basi di Dati/introduzione Basi di dati.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Gestione delle informazioni"
+              "title": "introduzione Basi di dati"
             }
           },
           {
@@ -55,8 +55,7 @@
               "title": "Gestione delle informazioni"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -258,10 +257,10 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "3-Terzo anno/Basi di Dati/introduzione Basi di dati.md",
     "3-Terzo anno/Basi di Dati/Gestione delle informazioni.md",
+    "3-Terzo anno/Basi di Dati/introduzione Basi di dati.md",
     "3-Terzo anno/Ingegneria del software/GIT.md",
     "Homepage.md",
     "Pasted image 20250924104148.png",

@@ -14,7 +14,7 @@ data: "`2025-09-24 17:16`"
 		- Rappresentazione tramite grafici o disegni
 	- Queste informazioni hanno diversi modi per essere immagazzinate:
 		- Cartelle, quaderni, hard disk, 
-	- Nei _sistemi informatici_ le informazioni sono espresse sostanzialmente attraverso _dati_.
+	- Nei [[introduzione Basi di dati#^e4d89c|sistemi informatici]]  le informazioni sono espresse sostanzialmente attraverso _dati_.
 		- ### Informazione:
 			- Un fatto fornito o appreso riguardo qualcosa o qualcuno.
 		- ### Dato:

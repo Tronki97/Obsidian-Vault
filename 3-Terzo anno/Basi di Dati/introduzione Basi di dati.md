@@ -8,6 +8,8 @@ aliases:
   - DBMS grande
   - DBMS condiviso
   - DBMS persistente
+  - sistemi informativi
+  - sistemi informatici
 data: "`2025-09-24 09:11`"
 ---
 - # Obiettivi:
@@ -44,7 +46,7 @@ data: "`2025-09-24 09:11`"
 						- Si rendono disponibili i dati ad altre persone, li si comunicano in un certo modo e li si scambia per altri dati o soldi anche.
 				- _Questa idea di sistema informativo è indipendente da una qualsiasi automazione di computer_
 					- Quindi alcune compagnie hanno il compito di gestire i dati (come i servizi bancari, il censo, catasto, ecc...)
-			- #### Sistema informatico:
+			- #### Sistema informatico: ^e4d89c
 				- Porzione automatizzata del sistema informativo.
 				- ![[Pasted image 20250924104148.png|400]]
 	- ## Definizioni:
