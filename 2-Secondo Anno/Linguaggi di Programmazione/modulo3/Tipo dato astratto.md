@@ -131,7 +131,7 @@ data: "`2025-05-07 11:42`"
 			- Concretamente ciò vuol dire che si può accedere ai campi di $S$ disponibili in $T$ e invocare metodi di $S$ disponibili in $T$
 			- In un _sistema di tipi strutturale_ ciò si riduce ad un controllo di corrispondenza tra elementi di $S$ rispetto a quelli di $T$ 
 			- Di solito si adotta uno stile di [[algebra dei tipi#^73b2a9|equivalenza nominale]] e ciò fa si che l'utente debba specificare _le relazioni di sottotipaggio previste tra i tipi_ in modo che il linguaggio possa verificare che le proprietà siano valide.
-		- ### Ereditarietà:
+		- ### Ereditarietà: ^9a1851
 			- Per specificare il sottotipaggio c'è un altro modo oltre a _interfaccia-classe_ ad esempio `Counter implements CounterInterface` comporta:
 				- La definizione di una classe che _implementa_ l'interfaccia associata `Counter_Interface`
 				- La dichiarazione che `Counter_Interface` è e deve essere un sottotipo di `CounterInterface`

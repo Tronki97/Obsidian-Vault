@@ -1,0 +1,63 @@
+---
+tags:
+aliases:
+  - restrizioni inter-relazionali
+  - restrizioni intra-relazionali
+  - restrizione intra-relazionali
+  - restrizione inter-relazionali
+  - vincoli di integrità
+  - integrità referenziale
+  - violazione di vincoli
+  - violazione di restrizioni
+data: "`2025-10-01 17:23`"
+---
+- # Restrizioni (vincoli) di integrità:
+	- Alcune istanze di DB anche se sintatticamente corretti potrebbero non rappresentare informazioni utili per l'applicazione in cui lo usiamo.
+	- Danno una migliore descrizione dello scenario reale supportando la _qualità dei dati_
+	- Le restrizioni corrispondono a proprietà del mondo reale modellate nel [[introduzione Basi di dati|database]].
+	- ## rappresentazione sbagliata:
+		- ![[Pasted image 20251001102117.png]]
+		- Mettere la lode con un voto < 30 è sbagliato
+		- Mettere un voto >30 è sbagliato
+		- Ci sono 2 studenti con la matricola uguale.
+	- Per evitare queste rappresentazioni sbagliate si possono usare delle funzioni booleane (_predicati_) che associa ad ogni istanza un valore booleano _T/F_
+	- I [[introduzione Basi di dati#^7f1908|DBMS]] non supportano tutti i tipi di restrizioni quindi si necessita di programmare queste restrizioni fuori dal DBMS.
+	- ## Tipi di restrizioni:
+		- ### Intra-relazionali:
+			- Un valore può essere tale se in altri campi alcuni valori rispettano una condizione
+			- Sui valori o sulle [[Modello dati relazionale#^e8f57b|tuple di un database]]
+		- ### Inter-relazionali:
+			- Un valore può essere tale se in un'altra tabella alcuni valori rispettano una condizione
+		- ![[Pasted image 20251001103930.png|450]]
+		- ### Sulle tuple:
+			- Un'espressione booleana fatta di "atomi" e ogni "atomo" può comparare
+			- ![[Pasted image 20251001104135.png]]
+				- Il vincolo viene controllato riga per riga 
+				- Se nell'ultima riga ci fosse scritto $50'000$ sarebbe sbagliato in quanto ci sarebbe una violazione di quella restrizione
+	- Le restrizioni sono modellate attraverso uno schema preciso il quale potrebbe averne un insieme.
+	- Una tupla è da essere considerata corretta se soddisfa tutti i vincoli di uno schema.
+	- ## Integrità referenziale: ^c7cc1f
+		- Per vincoli inter-relazionali
+		- Informazioni legate a relazioni diverse da valori comuni
+		- In particolare i valori delle [[Chiave e superchiavi#^ef193d|chiavi primarie]] 
+		- ### ES:
+			- ![[Pasted image 20251001113236.png|450]]
+		- è definito anche come _foreign key_ FK tra gli attributi $X$ di $R_{1}$ e $R_{2}$ e si assicura che i valori di $X$ in $R_{1}$ appaiano come valori nella chiave primaria di $R_{2}$ 
+			- L'attributo $A$ ha lo stesso dominio della _chiave primaria_ dell'attributo di $R_{2}$
+			- Un valore di $A$ nella tupla $t_{1}$ di $R_{1}$ o è NULL o appare come valore per qualche tupla $t_{2}$ in $R_{2}$ tale che $t_{1}[A]=t_{2}[PK]$
+		- ### Violazioni:
+			- Si potrebbero gestire la violazione di questo vincolo con azioni compensative
+				- Per esempio si cancella per sbaglio una tupla e ciò causa la violazione di un vincolo
+				- Normalmente si rifiuterebbe quest'azione per evitare questa violazione
+				- Oppure si può fare:
+					- #### Rimozione a cascata
+						- ![[Pasted image 20251001114711.png|450]]
+					- #### Mettere valori a NULL:
+						- ![[Pasted image 20251001114728.png|450]]
+			- Quando appaiono dei valori NULL questo vincolo potrebbe essere rilassato:
+				- ![[Pasted image 20251001114119.png|450]]
+			- Vincoli su vari attributi potrebbero causare una violazione:
+				- ![[Pasted image 20251001114904.png|500]]
+				- Un veicolo non presente nel database _Car_ 
+- # Link Utili:
+	- 

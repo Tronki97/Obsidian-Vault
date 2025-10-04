@@ -1,0 +1,48 @@
+---
+tags:
+aliases:
+data: "`2025-10-01 14:13`"
+---
+- # icona della classe:
+	- Rettangolo diviso in 3 slot 
+		- Il nome (in UpperCamelCase)
+		- Attributi/proprietà (in lowerCamelCase)
+		- Operazioni/metodi (in lowerCamelCase)
+		- ![[Pasted image 20251001141655.png|200]]
+	- ## Attributi e metodi:
+		- ### Formato attributi:
+			- `visibility name multiplicity:Type = InitialValue`
+		- ### Formato operazioni:
+			- `visibility name(parameterName: parameterType, ...) :ReturnType`
+- # Icona degli oggetti:
+	- Istanza di una classe notazione simile con stessa struttura ma hanno tutto il contenuto <u>sottolineato</u> con il formato 
+		- <u>Name : ClassName</u> 
+	- Legame tra oggetto e classe indicato tramite $<<instance \ of>>$
+- # Diagrammi Use Case:
+	- Esprime un comportamento desiderato o offerto
+	- Identifica chi o cosa interagisce col sistema e cosa il sistema può fare.
+	- Gli attori specificano un ruolo:
+		- Di solito sono umani o altri programmi esterni al sistema 
+	- Si identificano gli attori e si identifica cosa devono fare.
+		- Chi usa il sistema?
+		- Che ruolo ha?
+		- I che parte dell'organizzazione è usato il sistema?
+		- Chi fa partire il sistema?
+		- Ci sono più attori con lo stesso ruolo?
+		- ...
+	- Il caso d'uso è una _specifica di una sequenza di azioni_
+		- Descrive qualcosa che l'attore vuole far fare al sistema
+			- Dal punto di vista dell'attore
+			- Sempre fatto scattare da un'azione dell'attore che è definito _primario_
+			- La label deve essere un nome o un verbo che esprime un evento.
+	- Come identificarli:
+		- Che funzione ci si aspetta
+		- Quale attore scatena questo caso d'uso 
+		- Quale attore deve ricevere una notifica in seguito al caso d'uso?
+	- Nelle associazioni _attori-use case_ non c'è temporalità senza quindi un ordine forzato.
+- # es 4a:
+	- Fornire una descrizione testuale per lo UC "scegli metodo di pagamento":
+		- Quando l'utente clicca per acquistare un prodotto deve essere indirizzato ad una pagina dove può scegliere che tipo di pagamento vuole usare tra quelli supportati dalla piattaforma e poi in base al metodo scelto inserire i dati specifici di quella metodologia. 
+		- Il sistema poi controlla che i dati inseriti siano corretti, in caso non lo sono viene mostrato un messaggio di errore altrimenti viene mostrato un messaggio con il riepilogo dell'ordine fatto e poi il cliente deciderà se continuare e completare l'ordine o meno
+- # Link Utili:
+	- 

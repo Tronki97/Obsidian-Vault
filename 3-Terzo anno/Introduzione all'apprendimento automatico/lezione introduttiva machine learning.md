@@ -1,0 +1,89 @@
+---
+tags:
+aliases:
+data: "`2025-09-25 13:11`"
+---
+- # Struttura corso:
+	- Parte 1:
+		- Machine learning tradizionale.
+	- Parte 2:
+		- Deep learning.
+	- ## Librerire:
+		- ### tecniche di machine learning:
+			- `scikit-learn`
+		- ### reti neurali e deep learning:
+			- `TensorFlow`
+			- `Keras`
+			- `PyTorch`
+			- `MXNET`
+		- ### Immagini e processare segnali:
+			- `OpenCV`
+			- `Scipy`
+- # problema per l'apprendimento automatico:
+	- Ci sono un sacco di problemi difficili da risolvere algoritmicamente:
+		- Di classificazione di dati complessi e strutturati
+		- spam detection,
+		- Sentiment analisys: capire dal tipo di testo analizzato se l'emozione che si vuole esprimere è positiva o negativa, come in un commento ad una qualche cosa 
+		- Detection di anomalie come un acquisto sospetto con online shop o non.
+		- Generare dati in base a delle distribuzione che la IA ha imparato.
+- # Caratteristiche:
+	- Si usa il machine learning per processare dei dati con certe caratteristiche:
+		- Bassa conoscenza dei dati.
+		- Un grande numero di feature in input, come ogni pixel in un immagine in input.
+			- Ogni pixel da solo non mi dice niente ma devono essere contestualizzati insieme per poter generare una risposta.
+		- Grosso volume di dati per l'addestramento
+- # Approccio:
+	- Definire una classe di funzioni, basata su parametri $\Theta$, al cui interno si suppone di trovare la soluzione del problema che stiamo analizzando.
+		- Classificazione: stabilire un confine per il quale certi dati vengono classificati in un modo piuttosto che un altro.
+			- Per esempio può essere un linea retta e in quel caso si parla di _lineare_
+			- ![[Pasted image 20250925133251.png|400]]
+		- Serve definire una metrica ovvero la distanza tra l'output reale e quello definito dall'insieme delle funzioni stabilite
+		- Infine serve Ottimizzare i parametri $\Theta$ per _minimizzare_ l'errore sul _training set_
+	- ## ES :
+		- Regressione lineare
+		- Si ha un input e un output e quindi si vuole generalizzare una funzione che fitti per tutti quei dati.
+			- ![[Pasted image 20250925134124.png|450]]
+		- Devo decidere quanto complicata sia la linea: per ora una linea retta, quindi una funzione lineare:
+			- $$y=ax+b$$
+			- $a$ e $b$ sono i paramtri del modello 
+		- Poi devo decidere un modo per capire quale delle funzioni scelte sia la migliore tramite l'utilizzo di un tipo di distanza come la _distanza quadratica media_.
+			- ![[Pasted image 20250925134308.png|450]]
+		- Infine devo scegliere i parametri per minimizzare la perdita (_loss_) ovvero, in questo caso, scegliere la retta che minimizza questa distanza.
+			- ![[Pasted image 20250925134428.png|450]]
+- # perché apprendimento:
+	- Si parla di fatto di [[2-Secondo Anno/Calcolo Numerico/Ottimizzazione/problemi di Ottimizzazione|problemi di Ottimizzazione]], la scelta dei parametri ottimali dipende dalle scelte fatte precedentemente di fatto imparando dalle esperienze passate.
+	- La soluzione quindi non si ottiene in forma analitica ma da tecniche iterative approssimando sempre di più il risultato finche non raggiunge un errore tollerabile
+- # Diverse forme di learning:
+	- ## problemi supervisionati:
+		- Si hanno le coppie input/output
+		- 
+	- ## Problemi Non supervisionati:
+		- Si hanno solo gli input
+		- Come avere delle immagini senza informazioni aggiuntive
+	- ## Tecniche A rinforzo:
+		- Si vuole apprendere un comportamento 
+		- Si modellizza un agente che interagisce con un ambiente
+		- L'agente riceve dall'ambiente un certo stato, da queste informazioni decide una azione (discreta o continua) da compiere; ciò è chiamato _comportamento_ l'agente comunica l'azione all'ambiente che cambia quindi lo stato e genera un _reward_ per l'agente.
+		- Non si concentra sul _reward immediato_ ma su un _reward cumulativo_.
+- # Diverse tecniche: 
+	- ## Diversi modi per definire un modello:
+		- _Albero di decisione_
+		- Modelli lineari
+		- _Reti neurali_
+		- ![[Pasted image 20250925141614.png]]
+	- ## Diverse funzioni d'errore:
+		- Distanza quadratica media
+		- Entropia incrociata
+		- Margine massimo.
+		- ![[Pasted image 20250925141625.png]]
+- # Feature:
+	- Sono gli input del processo di apprendimento, non tutte le feature hanno la stessa importanza 
+	- ## ES:
+		- Diagnosi medica: sintomi del paziente, cartella clinica, storia medica del paziente e poi si realizza la diagnosi
+		- Profilazione dell'utente: caratteristiche anagrafiche, che siti frequenta ecc...
+- # Deep learning:
+	- Si danno dei dati _raw_ e lascio alla macchino il compito di sintetizzare nuove feature interessanti da quelle che già ha queste nuove feature sono chiamate _deep features_
+	- Implementato da una rete neurale (_NN_) che è definita deep quando si hanno molti strati nascosti.
+	- La fase di _pre-processing_ non è più fondamentale per il deep learning siccome c'è la possibilità che la macchina lo faccia da sola.
+- # Link Utili:
+	- 

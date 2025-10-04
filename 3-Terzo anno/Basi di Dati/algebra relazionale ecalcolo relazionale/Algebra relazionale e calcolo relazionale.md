@@ -1,0 +1,196 @@
+---
+tags:
+  - TODO
+aliases:
+  - unione
+  - intersezione
+  - differenza
+  - selection
+  - join
+  - rename
+  - renaming
+  - projection
+  - operatori dell'algebra relazionale
+  - full join
+  - theta-join
+  - outer join
+  - left outer join
+  - right outer join
+  - full outer join
+  - prodotto cartesiano
+  - equi-join
+data: "`2025-10-01 11:50`"
+---
+- # Argomento:
+	- L'algebra relazionale è _unisort_ in quanto prende un tipo dal dominio e lo restituisce di quel dominio.
+- # linguaggi Query:
+	- ## Dichiarativi:
+		- Specificano quale risultato si vuole ottenere 
+		- Non si specifica l'algoritmo che fa ottenere il risultato
+	- ## Imperativi procedurali:
+		- Si specifica _come_ il risultato deve essere ottenuto.
+	- ## algebra relazionale:
+		- è procedurale.
+	- ## calcolo relazionale:
+		- Dichiarativa (teorica non implementata)
+	- ## SQL:
+		- Parzialmente dichiarativo
+	- ## QBE:
+		- Dichiarativo implementato
+		- Si fa una query tramite un esempio
+		- Rappresenta praticamente l'interfaccia grafica per esempio per comprare un biglietto.
+- # Operatori Algebra relazionale:
+	- L'algebra relazionale è definita da un insieme di operatori che lavorano sulle [[Modello dati relazionale#^6d97b3|relazioni]] e producono come risultato delle relazioni.
+	- ## Unione, intersezione, differenza: ^55554c
+		- Quelle classiche della teoria degli insiemi
+		- Funzionano solo se sono definite sullo schema di ogni operando
+		- Devono mantenere lo schema identico.
+		- ![[Pasted image 20251002153025.png|450]]
+			- _Unione_
+		- ![[Pasted image 20251002153048.png|450]]
+			- _intersezione_
+		- ![[Pasted image 20251002153114.png|450]]
+			- _differenza_ ^3b76f1
+	- ## Renaming:
+		- Prende un insieme di attributi e cambia il nome di uno di quelli.
+		- Di fatto cambia lo schema mantenendo i dati in quello schema
+			- $$\rho_{NewName\leftarrow OldName}(RELATION)$$
+			- Cambiando il nome dell'attributo da "old" a "new"
+		- ![[Pasted image 20251002153656.png|450]]
+		- ![[Pasted image 20251002153721.png|450]]
+			- Si riesce quindi a fare l'unione di queste 2 relazioni
+	- ## Selezione: ^f5e7ef
+		- Seleziona delle [[Modello dati relazionale#^e8f57b|tuple di un database]] di una relazione
+		- è un operatore unario.
+		- In output ha una relazione con lo stesso schema di quella in entrata ed è un sottoinsieme di quelle in entrata.
+			- $$\sigma_{predicato}(RELATION)$$
+			- _predicato_: è una espressione booleana sulle tuple della relazione
+		- ![[Pasted image 20251002154237.png]]
+			- _Impiegati che guadagnano più di 50:_
+				- $$\sigma_{Salary\ >\ 50}(EMPLOYEE)$$
+					- ![[Pasted image 20251002154338.png]]
+			- _impiegati di milano che guadagnano più di 50_:
+				- $$\sigma_{Salary>50 \ AND\ Office='milan'}$$
+					- ![[Pasted image 20251002154540.png]]
+			- ### Caso NULL:
+				- $$\sigma_{Age>40}(PEOPLE)$$
+				- ![[Pasted image 20251004112735.png|450]]
+					- Nessun valore NULL rispetta la condizione.
+				- Visto che le selezioni sono valutate separatamente:
+					- $$\sigma_{Age >40 \ \wedge\ Age \le 40}(PEOPLE)\ne PEOPLE$$
+					- Il >40 viene rispettato solo da valori non NULL
+				- Quindi per ottenere _PEOPLE_:
+					- $$\sigma_{Age>40 \ \wedge\ Age \le 40 \wedge Age \ IS \ NULL}(PEOPLE)=PEOPLE$$
+	- ## Projection: ^eb237a
+		- Unario
+		- Lo schema dell'output è unn sottoinsieme di quello in input
+		- Si forma l'output usando tutte le tuple in input
+			- $$\Pi_{AttributeList}(RELATION)$$
+		- ![[Pasted image 20251002154839.png]]
+		- _tutti i numeri e cognomi degli impiegati_
+			- $$\Pi_{Number,Surname}(EMPLOYEE)$$
+			- ![[Pasted image 20251002154945.png]]
+		- L'output di una proiezione contiene al massimo lo stesso numero di tuple dell'input, e può contenerne un numero minore e siccome si "filtrano" delle colonne si possono ottenere delle tuple "ripetute" e ciò viola una delle definizioni di relazione
+		- Quindi se $X$ è una [[Chiave e superchiavi]] per $R$ allora $\Pi_{X}(R)$ contiene lo stesso numero di tuple di $R$
+	- ## Join: ^530bb9
+		- è una classe di operatori.
+		- Permette la correlazione tra relazioni con schemi diversi.
+			- ![[Pasted image 20251002160629.png|400]]
+		- ### join naturale:
+			- Operatore binario, fornisce un risultato che è basato su due tabelle diverse con un attributo comune tra le due
+			- Lo schema risultante è l'unione degli attributi dei due schemi in input
+			- Ogni tupla è prodotta andando a combinare ogni tupla da ogni relazione
+				- Dato $R_{1}(X_{1})$ $R_{2}(X_{2})$ 
+					- $R_{1}\bowtie R_{2}$ è la relazione su $X_{1}\cup X_{2}$
+				- $$R_{1} \bowtie R_{2}=\{t\ on \ X_{1}\cup X_{2}| \exists t_{1}\in R_{1}\wedge \exists t_{2}\in R_{2} \ : \ t[X_{1}]=t_{1}\wedge t[X_{2}]=t_{2}\}$$
+			- #### FULL JOIN:
+				- ![[Pasted image 20251002161127.png|450]]
+				- Full perché ogni tupla contribuisce al risultato finale
+			- #### Not Full join:
+				- ![[Pasted image 20251002161552.png|450]]
+			- #### EMPTY:
+				- ![[Pasted image 20251002161859.png|450]]
+			- #### Dimensioni del risultato:
+				- $$0\le |R_{1} \bowtie R_{2}|\le |R_{1}| * |R_{2}|$$
+					- ##### ES:
+						- $|R_{1}|$ e $|R_{2}|$ hanno dimensione 3
+						- La dimensione del join tra queste due relazioni è al massimo $3*3=9$
+						- ![[Pasted image 20251003114417.png|450]]
+							- $$|R_{1} \bowtie R_{2}|=4$$
+				- Se il join coinvolge una [[Chiave e superchiavi|chiave]] da $R_{2}$ allora il numero delle [[Modello dati relazionale#^e8f57b|tuple]] risultanti è:
+					- $$0\le |R_{1} \bowtie R_{2}|\le |R_{1}|$$
+					- ##### ES:
+						- ![[Pasted image 20251003115143.png|450]]
+						- Visto che il valore della chiave è unico, per ogni tupla di $R_{2}$ si può fare match con più tuple di $R_{1}$ e non vice versa
+						- $$|R_{1} \bowtie R_{2}|\le |R_{1}|=2$$
+				- Se il join coinvolge una [[Chiave e superchiavi|chiave]] da $R_{2}$ e una [[Restrizioni di integrità#^c7cc1f||restrizione di integrità referenziale]] allora il numero delle tuple risultanti è:
+					- $$|R_{1} \bowtie R_{2}|=|R_{1}|$$
+					- ##### ES:
+						- Ogni tupla di $R_{1}$ è associata ad almeno una tupla di $R_{2}$
+						- ![[Pasted image 20251003115719.png|450]]
+						- $$|R_{1} \bowtie R_{2}|=|R_{1}|=3$$
+		- ### Outer Join:
+			- Quando si fa il join tra due relazioni spesso alcune tuple non contribuiscono al risultato finale.
+			- #### Left Outer join:
+				- Si indica con il simbolo _⟕_ e mantiene tutte le tuple della relazione sinistra e rimpiazza gli spazi vuoti con `NULL` ($A \ ⟕ \ B$)
+				- ![[Pasted image 20251003120544.png|450]]
+			- #### Right Outer join:
+				- Speculare al _left_ e si indica _⟖_ ($A \ ⟖ \ B$)
+				- ![[Pasted image 20251003120601.png|450]]
+			- #### Full Outer join:
+				- è praticamente l'unione degli ultimi 2 operandi ($A\  ⟗\  B$)
+				- ![[Pasted image 20251003120615.png|450]]
+		- ### prodotto cartesiano:
+			- In pratica è il prodotto cartesiano tra gli insiemi delle tuple delle relazioni prese in considerazione
+			- La dimensione del risultato è uguale al prodotto di quelle degli operandi
+			- ![[Pasted image 20251003120743.png|450]]
+			- Spesso per rendere utile questo operando l'operazione è seguita da una selezione:
+				- $$\sigma_{condition}(R_{1} \bowtie R_{2})$$
+		- ### theta-join: ^73fda7
+			- In pratica è l'operazione prodotto cartesiano seguita dalla selection e definita come:
+				- $$R_{1}\bowtie_{condition} R_{2}$$
+				- La _condition_ è di solito definita come una congiunzione di atomi che esprimono una relazione binaria 
+					- $$A_{1} \mathscr{R}A_{2}$$
+					- $\mathscr{R}$ è un operatore di comparazione (_<, >, =_, ...)
+			- #### Equi-join:
+				- Chiamato cosi se tutti gli $\mathscr{R}$ sono relazioni di equivalenza
+				- ![[Pasted image 20251003121344.png|450]]
+				- Il risultato prodotto è molto simile al risultato ne caso in cui si facesse una join e si rinominasse _Dept con Code_
+					- ![[Pasted image 20251003121500.png|450]]
+	- ## Esercizi:
+		- ![[Pasted image 20251003121606.png|450]]
+		- ### 1°:
+			- Ritornare il _number, name, age, wage_ dei dipendenti che guadagnano più di 40.
+				- $$\sigma_{Wage\ >\ 40}(EMPLOYEE)$$
+		- ### 2°:
+			- Ritornare _number, name, age_ dei dipendenti che guadagnano più di 40:
+				- $$\Pi_{number,\ name,\  age}(\sigma_{Wage\ > \ 40}(EMPLOYEE))$$
+		- ### 3°:
+			- Ritornare _chief_ dei dipendenti che guadagnano più di 40:
+				- $$\Pi_{chief}(SUPERVISOR \bowtie_{employee=number} \sigma_{Wage>40}(EMPLOYEE))$$
+		- ### 4°:
+			- Ritornare _name, wage_ dei capi che hanno dipendenti che guadagnano più di 40:
+				- $$\Pi_{name,wage}(EMPLOYEE \bowtie_{Number=chief}\Pi_{Chief}($$
+				- $$SUPERVISOR \bowtie_{Employee=Number}\sigma_{Wage>40}(EMPLOYEE)))$$
+		- ### 5°:
+			- Ritornare gli impiegati che hanno lo stipendio maggiore di quello del loro capo insieme al _number, name, wage_ di entrambi dipendente e capo.
+			- ![[Pasted image 20251003130040.png]]
+- # Viste:
+	- Diverse rappresentazioni per gli stessi dati
+	- ## Tabelle derivate:
+		- Queste relazioni sono create dalle queries
+		- Possono essere generate da da altre relazioni derivate
+	- ## Tabelle base:
+		- Il contenuto originale
+	- ## ES:
+		- ![[Pasted image 20251004113412.png|450]]
+		- Una vista può essere:
+			- $$SUPERVISOR:= \Pi_{Employee, Chief}(AFFILIATION \bowtie MANAGEMENT)$$
+	- ## Materialized views:
+		- Una vista permanente o temporanea è _immagazzinata fisicamente_ nel [[introduzione Basi di dati|database]] 
+		- In questo modo saranno prontamente disponibili per future queries
+		- Ma c'è una ridondanza dei dati, gli aggiornamenti sono più lenti e i [[introduzione Basi di dati#^7f1908|DBMS]] raramente li supportano.
+	- ## Relazioni virtuali:
+		- Supportate da tutti i DMBS, la query di vista viene trasformata in una query sul database sottostante
+- # Link Utili:
+	- 

@@ -1,0 +1,134 @@
+---
+tags:
+aliases:
+  - database
+  - basi di dati
+  - DBMS
+  - transazione
+  - DBMS grande
+  - DBMS condiviso
+  - DBMS persistente
+  - sistemi informativi
+  - sistemi informatici
+  - architettura di un DBMS
+  - schemi esterni
+  - schema esterno
+  - schema logico
+  - schema interno
+data: "`2025-09-24 09:11`"
+---
+- # Obiettivi:
+	- Acquisire i concetti generali e i principi dei sistemi per la gestione delle basi di dati.
+	- Realizzare una base di dati e capire i vari metodi e aspetti sulla progettazione e sviluppo di basi di dati.
+- # Lezioni:
+	- Modelli e linguaggi relazionali
+	- Progettare un database relazionale.
+	- Tecnologie usate nei database relazionali.
+- # Database (basi di dati): ^87f383
+	- ## Punti di vista:
+		- ### Metodologico :
+			- Come vengono messi insieme questi dati quindi che modello viene usato, 
+			- Come faccio ad usare questi dati e come li recupero all'interno del database in un periodo abbastanza breve.
+			- Come sono fatti i sistemi che gestiscono questi dati.
+				- Serve che questi dati non vengano persi o corrotti, mantenendone _l'integrità_
+			- Quali sono le metodologie per la progettazione di un _database_
+		- ### Tecnologico :
+			- #### Sistema informativo:
+				- Insieme di cose per la gestione delle informazioni.
+				- Dove viene tenuto traccia delle informazioni 
+				- ##### Scopo:
+					- ###### Raccogliere le informazioni:
+						- Semplicemente raccogliere un'informazione qualsiasi
+					- ###### Acquisire l'informazione:
+						- La validi e ti accerti della sua validità
+					- ###### Memorizzazione:
+						- Devo registrare il dato a qualche parte senza per forza garantire la sua presenza nel lungo termine.
+					- ###### Preservazione:
+						- Le informazioni memorizzate devono essere disponibili nel lungo termine per poi essere recuperate.
+					- ###### Elaborazione, trasformazione e produzione:
+						- Dai dati raccolti si fanno certe considerazioni e trasformazioni per poi produrre un risultato basato su quei dati.
+					- ###### Distribuzione, comunicazione e scambio:
+						- Si rendono disponibili i dati ad altre persone, li si comunicano in un certo modo e li si scambia per altri dati o soldi anche.
+				- _Questa idea di sistema informativo è indipendente da una qualsiasi automazione di computer_
+					- Quindi alcune compagnie hanno il compito di gestire i dati (come i servizi bancari, il censo, catasto, ecc...)
+			- #### Sistema informatico: ^e4d89c
+				- Porzione automatizzata del sistema informativo.
+				- ![[Pasted image 20250924104148.png|400]]
+	- ## Definizioni:
+		- ### Generale:
+			- è un insieme organizzato di dati raccolti per supportare una attività specifica all'interno di un ambiente
+			- I dati raccolti hanno una certa finalità.
+		- ### Specifica:
+			- Insieme di dati gestiti da un sistema software DBMS (Database management system)
+	- ## DBMS: ^7f1908
+		- Un qualsiasi sistema di gestione dati che è:
+			- ### Grande
+				- Molto più grosso della memoria centrale del computer.
+					- 1-5 TB (dati transazionali)
+						- Memorizzano operazioni fatte su un magazzino per esempio
+					- 30-50 TB  (dati decisionali):
+						- Dat raccolti per prendere decisioni riguardo decisioni di mercato da effettuare
+					- 500-800 TB (dati scientifici):
+						- Come l'analisi di fenomeni scientifici da studiare come l'analisi metereologica.
+			- ### Persistente :
+				- Il dato deve sopravvivere a vari problemi, senza corrompersi, che possono accadere al database come guasti ai dischi, ai software, ecc...
+				- La loro aspettativa di vita è indipendente dalla [[Sicurezza della memoria#^7637a8|lifetime]] del processo che li sta usando.
+			- ### Condiviso:
+				- Tra vari utenti e applicazioni, quindi la possibilità di poter leggere gli stessi dati insieme al molte altre persone
+				- Causa problemi nel caso di scrittura e lettura contemporanea quindi necessitando che ci siano accessi [[Concorrenza||concorrenti]]
+				- #### Transazione:
+					- Insieme di operazioni raggruppate non decomponibile ed eseguite in modo atomico.
+					- Quindi garantendo la persistenza del dato e che le operazioni eseguite lo siano correttamente.
+					- Le transazioni dono da eseguire _concorrentemente_
+					- Post transazione i dati devono essere coerenti.
+					- L'effetto della transazione è permanente e l'esito sia tracciato in un _log_ anche in caso la transazione sia fallita.
+		- Garantisce:
+			- ### Segretezza (privacy):
+				- Servono meccanismi di permesso all'accesso e modifica di determinati dati.
+			- ### Affidabilità
+				- Spesso si misura in un periodo in cui il DBMS è fuori attività
+				- Deve essere tollerante a guasti hardware e software
+				- Si necessita che i dati nel database rimangono intatti per molto tempo che varia in base al tipo di dato.
+			- ### Efficienza:
+				- Il servizio che bisogna erogare deve essere eseguito in un tempo breve
+				- Dipende anche dalla qualità del software usato.
+			- ### Efficacia:
+				- L'utilizzo di un determinato DBMS deve dare un vantaggio a chi lo usa. 
+				- Devono provvedere funzionalità flessibili.
+		- Il DBMS può anche essere visto come uno strato tra l'applicazione e il _file system_ che gestisce le _transazioni_, la [[Concorrenza]] e altro per l'accesso ai dati;
+		- ### Comportamenti procedurali:
+			- Comportamenti fissi attuati dalle applicazioni quando cercano di accedere a dei dati
+			- Questi comportamenti, se comuni a molte applicazioni possono essere gestiti dal DBMS invece che dalle app stesse. 
+			- Avendo così delle _procedure memorizzate_ che però non sono standardizzate e soffrono di problemi legati al linguaggio usato per esprimerle
+			- Per risolvere si usano delle regole specifiche (_triggers_) rendendo così i DBMS _attivi_ 
+			- _Grazie a tutte queste fattorizzazioni si ha meno codice da scrivere per lo sviluppatore dell'applicazione_
+		- ### Architettura semplificata:
+			- ![[Pasted image 20250925192211.png||200]]
+			- Lo _schema logico_ descrive la struttura del database attraverso un [[Descrivere i dati#^bfe78d|modello logico]] 
+			- Lo _schema interno_ (o fisico) rappresenta lo schema logico a livello del magazzino usando delle specifiche strutture dati _raw_ 
+		- ### Architettura ANSI/SPARC: ^923390
+			- ![[Pasted image 20250925192521.png|450]]
+			- #### Information overloading:
+				- Avere accesso a molte più informazioni di quelle che ci interessano realmente 
+				- Come per esempio in una homepage avere un sacco di bottoni che portano ad uno store online del quale non ci interessa.
+			- Si può evitare l'information overloading dividendo lo schema logico in diversi _schemi esterni_ ognuno dei quali ha diversi target e rappresentano diverse _viste_ dello schema logico ^40cfe6
+			- #### Viste:
+				- ![[Pasted image 20250925192912.png|500]]
+				- 
+	- ## Problemi:
+		- Ridondanza dei dischi ([[RAID]])
+			- Stesso dato appare più volte
+			- Positivo per l'_affidabilità_ ma negativa per l'_efficienza_
+			- Può causare _inconsistenze_ con diverse descrizioni che non coincidono.
+		- Visto che i dati sono condivisi come conseguenze potrebbe accadere che si richiedano meccanismi di permessi di accesso e modifica di questi dati; inoltre serve un controllo della [[Concorrenza]] per questi dati.
+- # Attori e utenti:
+	- ## DBMS designer:
+		- Progetta e sviluppa DBMS
+	- ## DB designer:
+		- Progetta i DB per varie compagnie
+	- ## DBA (admin):
+		- Amministra i dati e regola l'accesso ad essi in maniera centralizzata 
+		- Spesso lo progettano anche 
+	-  
+- # Link Utili:
+	- 

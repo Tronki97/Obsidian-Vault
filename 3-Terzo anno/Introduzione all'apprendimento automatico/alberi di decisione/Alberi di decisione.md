@@ -1,0 +1,94 @@
+---
+tags:
+aliases:
+  - spazio delle ipotesi
+  - espressività degli alberi di decisione
+  - entropia
+  - teoria dei codici
+  - guadagno informativo
+data: "`2025-09-26 13:09`"
+---
+- # Argomento:
+	- è un modello abbastanza vecchio ma comunque utilizzato.
+	- Si tratta di approssimazione di funzioni con un _dataset supervisionato_ con:
+		- $$(x^{(i)}, y^{(i)})$$
+			- $i$ indice dell'istanza 
+			- $x^{(i)}\in X$ insieme degli input
+			- $y^{(i)} \in Y$ insieme degli output
+				- Dipende dai contesti 
+				- Possono essere feature continue o discrete.
+					- $Y$ discreto rappresenta _problemi di classificazione_
+					- $Y$ continue è un _problema di regressione_
+	- ## Spazio delle ipotesi:
+		- Insieme delle funzioni all'interno del quale ci si aspetta di trovare il risultato che meglio approssima i _dati di addestramento_
+	- Un modo concreto per calcolare queste funzioni è un modello e l'_albero di decisione_ è uno di questi modelli
+	- Capire se i modelli sono abbastanza per esprime tutte le funzioni del nostro spazio 
+	- Possono esserci molti modelli che esprimono lo stesso spazio di funzioni.
+	- ## ES:
+		- è  un buon giorno per giocare a tennis?
+		- $H:$ Outlook x humidity x wind x temp $\to$ play tennis?
+		- ### Data set:
+			- ![[Pasted image 20250926132514.png|500]]
+		- ![[Pasted image 20250926132707.png]]
+			- Ad ogni nodo è associata una label se non è una foglia, altrimenti è una decisione del problema poi ad ogni arco è associato un valore della determinata label. 
+				- La risposta può anche solo esprimere una probabilità $P(Y|X)$
+- # Espressività:
+	- Sia dato $X=X_{1} \times... \times X_{n}$ di valori booleani
+	- Con gli alberi è possibile esprimere un insieme delle risposte $Y=X_{1} \wedge X_{5}$ 
+	- Qualunque sia il training set, se è coerente, posso fare un albero che mi faccia una classificazione perfetta.
+	- _L'albero di decisione non è unico per ogni funzione_
+	- Per scegliere un particolare albero di decisione posso sperare in un albero meno profondo o in un albero _albero bilanciato_
+- # Costruzione top down:
+	- Assegno al nodo corrente l'attributo migliore $X_{i}$
+	- Creo un nodo figlio per ogni valore di $X_{i}$ e propago in basso a seconda del valore 
+	- Per ogni figlio se tutti i dati associati hanno la stessa etichetta $y$ allora marco il nodo come foglia $y$ 
+	- ![[Pasted image 20250926134543.png]]
+	- Non per forza devo arrivare ad una foglia ma posso anche considerare un nodo come una probabilità di ricevere una risposta positiva o negativa.
+	- Si cerca di bilanciare l'albero e fare in modo che la feature separi bene le classi ma che i figli siano sbilanciati al loro interno.
+		- Di fatto $A$ sembra essere migliore 
+- # Entropia:
+	- $H(X)$ è una [[Variabili aleatorie#^62da4f|variabile aleatoria discreta]] $X$:
+		- $$H(X)=-\sum\limits_{i=1}^{n}P(X=i)\log_{2}(P(X=i))$$
+		- Con $n$ che è il numero di valori assumibili da $X$
+		- Sostanzialmente una somma pesata sulle probabilità
+		- Misura il grado di disordine dell'informazione è massima quando $X$ è [[Distribuzioni notevoli di variabili aleatorie discrete#^ea723d|uniformemente distribuita]] tra tutti i suoi $n$ valori e minima quando si concentra su un singolo valore:
+			- ![[Pasted image 20250926135752.png]]
+- # Teoria dell'informazione:
+	- L'entropia può anche essere definita come _la quantità media di informazione prodotta da una certa sorgente stocastica di dati_.
+	- L'informazione è associata alla probabilità di ogni dato, un evento con probabilità certa non trasmette informazione:
+		- $$I(1)=0$$
+	- Due [[Indipendenza di eventi|eventi indipendenti]] con probabilità $p_{1},p_{2}$ la loro probabilità congiunta è $p_{1}p_{2}$ ma l'informazione acquisita è la somma della loro informazione:
+		- $$I(p_{1}p_{2})=I(p_{1})+I(p_{2})$$
+	- L'informazione è antimonotona rispetto alla probabilità:
+		- $$I(p)=-log(p)$$
+- # Teoria dei codici:
+	- Suppongo di avere $n$ eventi con la stessa probabilità occorrono quindi $log(n)$ bit per poter rappresentare ogni risultato.
+	- Calcolo l'entropia quindi il caso pessimo:
+		- $$H(X)=-\sum\limits_{i=1}^{n}P(X=i)\log_{2}(P(X=i))=-\sum\limits_{i=1}^{n} \frac{1}{n}\log_{2}(\frac{1}{n})=\log_{2}(n)$$
+		- Se gli eventi non hanno distribuzione uniforme si può migliorare la codifica di fatto diminuendo la quantità di bit per dei risultati che accadono con più probabilità
+- # Guadagno informativo:
+	- Dato uno specifico $Y=v$ che condiziona $X$
+		- $$H(X|Y=v)=-\sum\limits_{i=1}^{n}P(X=i|Y=v)\log_{2}(P(X=i|Y=v))$$
+	- Ora calcolo l'entropia di $X$ conoscendo $Y$
+		- $$H(X|Y)=-\sum\limits_{i=1}^{n}P(Y=v)\log_{2}(P(X|Y=v))$$
+	- Il guadagno informativo tra $X$ e $Y$ è:
+		- $$I(X,Y)=H(X)-H(X|Y)=H(Y)-H(Y|X)$$
+- # Decidere quale albero è il migliore:
+	- ![[Pasted image 20250926143901.png]]
+	- Si misura la riduzione dell'entropia di $Y$ conoscendo qualche attributo di $X$, in sostanza calcolo il guadagno informativo tra $Y$ e $X$ 
+	- Si cerca quindi di trovare l'albero che massimizza il guadagno informativo e che osservandolo si massimizza la riduzione dell'entropia.
+	- Infatti l'entropia $H(Y|A)$ risulta minore di $H(Y|B)$ di fatto avendo un'entropia minore osservando l'albero.
+- # Il caso continuo:
+	- Bisogna discretizzare le features quindi mi chiedo a che intervallo appartiene il valore di $A$
+		- ![[Pasted image 20250926145329.png]]
+		- Si confrontano le varie soglie $\Theta$ in base al loro guadagno informativo
+- # Aspetti positivi:
+	- Facili da capire, e facile da spiegare in quanto si fanno decisioni interpretabili.
+	- Utilizzabile con feature discrete e continue
+	- Serve poco pre-processing , ma c'è il problema del bilanciamento delle classi. 
+- # Aspetti negativi:
+	- Alto rischio di [[Overfitting]] perché sono _modelli espressivi_, quindi molto capaci di adattarsi ai dati.
+	- Una selezione degli attributi instabile riducendo un po la facilità della spiegabilità
+	- Tipos
+- # Link Utili:
+	- 

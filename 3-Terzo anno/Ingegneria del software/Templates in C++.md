@@ -1,7 +1,6 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
 data: "`2025-09-22 16:04`"
 ---
 - # problema:
@@ -12,7 +11,6 @@ data: "`2025-09-22 16:04`"
 	- Una classe template è:
 		- Un nome che indica un modello sulla base del quale genero del codice.
 		- La dichiarazione sta all'interno del file `.h`
-		- 
 - # Funzioni template:
 	- Non sono compilate finché non sono istanziate esplicitamente
 - # Classi template:

@@ -1,0 +1,42 @@
+---
+tags:
+aliases:
+  - early stopping
+  - post pruning
+  - evitare overfitting
+data: "`2025-10-02 13:16`"
+---
+- # pre:
+	- Laboratori di apprendimento automatico
+		- 17/10 30/10 14/11 28/11
+- # Overfitting:
+	- Si cerca di risolvere un problema con dei dati di training che sono osservazioni che possono essere significative come non (sensori con degli errori, difettosi, ecc...), quindi non avendo una generalizzazione fedele all'ambiente che si sta analizzando.
+	- ## Idea:
+		- Considero l'errore relativo all'ipotesi $h\in H$
+			- Sul training set $error_{train}(h)$
+			- Sul dataset $error_{D}(h)$
+		- $h$ quindi _overfitta_ (quindi è troppo fedele ai dati di training) il training set se esiste un'altra ipotesi $h':$
+			- $$error_{train}(h)<error_{train}(h')$$
+			- $$error_{D}(h)>error_{D}(h')$$
+		- ![[Pasted image 20251002133257.png|700]]
+	- ## Problema:
+		- Non conosciamo l'insieme dei dati veri $D$ 
+		- Quindi per affrontare il problema si dividono i _training data_
+			- Una parte per fare training (_training set_)
+				- Praticamente quelli per costruire l' [[Alberi di decisione]] e scegliere $h$
+			- Una parte per fare testing (_validation set_)
+				- Usati per misurare la precisione e l'_overfitting_ $h$
+	- ## Tecniche per evitare overfitting:
+		- ### Early stopping:
+			- Interrompo la costruzione dell'albero ad un certo punto
+			- Mi interrompo magari perché il guadagno informativo è così piccolo che tanto vale non considerarlo oppure il numero di dati relativo al nodo è troppo piccolo
+			- Magari si può anche aspettare quindi avendo _pazienza_ e vedere se dopo tot epoche il guadagno informativo rimane basso e in quel caso interrompere.
+		- ### Post pruning:
+			- Costruisco l'albero completo per il _training set_ e poi provo a ritagliare alcuni rami dell'albero ritenendoli non utili o dannosi.
+			- Per ogni sotto-albero valuto l'impatto della sua rimozione tramite il _validation set_
+		- ### Altri metodi:
+			- Sennò si aggiungono delle regolarizzazioni ovvero delle regole per evitare che il modello diventi troppo bravo e segua troppo bene il _training set_.
+			- Oppure aggiungere del noise sui dati che si hanno per simulare un po' di più la realtà.
+		- 
+- # Link Utili:
+	- 

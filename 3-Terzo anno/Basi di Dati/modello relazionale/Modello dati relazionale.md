@@ -1,0 +1,80 @@
+---
+tags:
+aliases:
+  - modello relazionale
+  - relazione logica
+  - relazione
+  - schema di una relazione
+  - schema di un database
+  - istanza di relazione
+  - tupla di un database
+  - istanza di un database relazionale
+  - tuple di un database
+data: "`2025-09-26 15:27`"
+---
+- # modello relazionale:
+	-  è un modello della categoria dei [[Descrivere i dati#^bfe78d|modelli logici]] 
+	- Esempio basato su valori:
+		- ![[Pasted image 20250926154106.png|500]]
+		- L'associazione tra i dati è fatta per mezzo della coincidenza tra i valori e le label di ogni colonna.
+	- Questo modello di dati è stato fatto per permettere l' [[Indipendenza dei dati]]  
+	- è basato sulla definizione logica di relazione, che in questo caso coincide con la definizione di tabella.
+- # Relazione logica: ^6d97b3
+	- Deriva dalla teoria degli insiemi.
+	- Si necessita di un dominio $D_{1}=\{a,b\}$ e $D_{2}=\{x,y,z\}$ 
+	- Si fa il prodotto cartesiano $D_{1}\times D_{2}$
+	- Una relazione è definita come un qualunque sottoinsieme del prodotto cartesiano:
+		- $$r\subseteq D_{1} \times D_{2}$$
+	- Si suppone di avere $n$ domini non necessariamente diversi ai quali  si fa il prodotto cartesiano:
+		- La tupla risultante $(d_{1},..., d_{n})$ con $d_{i} \in D_{i}$ 
+	- Una relazione è quindi un insieme, senza quindi un ordine tra le tuple, che sono tutte distinte 
+	- ## ES:
+		- Definisco i _matches_ come sottoinsieme del prodotto cartesiano tra 
+			- $$string \times string \times int \times int$$
+			- ![[Pasted image 20250926155548.png]]
+			- Ogni dominio $string, int$ appare con 2 ruoli distinti e che sono distinguibili dalla loro posizione.
+				- Questa è una _struttura posizionale_.
+			- Ogni nome unico viene associato ad un dominio distinto che gli fornisce quindi un "ruolo"
+				- ![[Pasted image 20250926155833.png]]
+				- In questo modo la posizione non è più rilevante.
+				- Invertendo le colonne dello stesso dominio si rappresenterebbe la stessa situazione.
+					- ![[Pasted image 20250926204613.png|400]]
+	- Tutti gli attributi devono avere nomi diversi
+	- Un dato di una colonna può rappresentare un collegamento verso un'altra tabella 
+		- ![[Pasted image 20250926204741.png]]
+		- E questo collegamento può essere bidirezionale:
+			- "che esami ha fatto lo studente 3456" e "chi è lo studente che ha fatto determinati esami".
+	- Visto che non si usa un approccio con i puntatori ma basato sui valori delle tuple, si garantisce un certo livello di indipendenza dei dati rispetto ad altre tabelle permettendo agli utenti di accedervi anche se non hanno accesso anche alle altre tabelle, ed inoltre il problema di avere i puntatori sarebbe il dover immagazzinare 2 direzioni.
+	- ## Schema di una relazione:
+		- Una relazione $R$ con un insieme di attributi $A_{1},...,A_{n}$:
+			- $$R(A_{1},...,A_{n})$$
+		- ### ES:
+			- $$STUDENTS(Number, Surname, Name, Year \ of \ Birth)$$
+		- _Possono esistere anche schemi di relazione con un solo attributo_, soprattutto se fanno riferimento a qualcos'altro:
+			- ![[Pasted image 20250926210519.png]]
+			- Si sarebbe potuta aggiungere un'altra colonna alla tabella _student_ ma sarebbe stata riempita con dei si/no in questo casi si risparmia anche spazio creando una nuova tabella con solo informazioni interessanti. 
+	- ## Schema di un database:
+		- Un insieme di schemi di relazioni:
+			- $$R=\{R_{1}(X_{1}),...,R_{n}(X_{n})\}$$
+		- ### ES:
+			- $$R=\{STUDENTS(Number, Surname, Name, Year \ of \ Birth),$$
+			- $$EXAMS(Student, Grade,Lecture), LECTURES(Code, Name, Lecturer)\}$$
+	- ## Tupla di un database: ^e8f57b
+		- Una tupla su di un insieme di attributi $X$ è una mappatura da ogni attributo $A\in X$ ad un valore del suo _dominio_
+		- $t[A]$ esprime il valore di una tupla $t$ su di un attributo $A$
+		- ### ES:
+			- Se $t$ fosse la prima tupla nella tabella degli _STUDENTS_
+				- $$t[Name]=Mario$$
+	- ## Istanza di relazione:
+		- è un insieme di tuple aventi uno schema $R(X)$ con $X=$ insieme di attributi
+		- ![[Pasted image 20250926210234.png]]
+		- La parte blu rappresenta l'istanza mentre la parte sopra rappresenta lo schema.
+	- ## Istanza di un database relazionale:
+		- Su uno schema $R=\{R_{1}(X_{1}),...,R_{n}(X_{n})\}$ è un insieme di istanze di relazioni $r=\{r_{1},...,r_{n}\}$ avendo che $r_{1}$ è una relazione sullo schema $R_{1}$
+- 
+- # Identificare le tuple:
+	- ![[Pasted image 20251001104423.png]]
+	- Il _number_ è unico per ogni riga quindi non ci saranno mai delle righe che coincideranno in quel valore, infatti le prime 2 coincidono per _nome, cognome_ ma non per il _number_ 
+	- 
+- # Link Utili:
+	- 

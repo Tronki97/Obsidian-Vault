@@ -1,0 +1,156 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-09-29 11:06`"
+---
+- # perché:
+	- Per permettere alle persone di "capirsi", eliminando l'ambiguità
+	- Implica anche un modo particolare di pensare per instaurare un modo di lavorare specifico unificato.
+	- Si cerca di formalizzare le idee base dell'object oriented.
+	- ## Perché OO:
+		- Creato per velocizzare il workflow
+		- Permette di facilitare l'implementazione successiva di alcune funzionalità.
+		- Permette di creare un modello falsificato, falsificando modelli matematici con la quale è possibili rappresentare ciò che ci circonda.
+		- Si associa ciascun oggetto ad una funzionalità.
+- # Idea di fondo:
+	- Si rappresenta il mondo come insieme di oggetti interagenti.
+	- ## Modello ad oggetti semplice:
+		- ![[Pasted image 20250929120110.png]]
+		- Ogni oggetto ha attributi e possono esistere delle relazioni tra oggetti e posso rappresentare questi oggetti attraverso delle istanze (_Joe, Porsche_)
+	- ## Modello ad oggetti:
+		- ![[Pasted image 20250929120254.png]]
+		- L'istanza di un oggetto eredita una serie di attributi senza la necessità di ridefinirli.
+	- ## Processo di un progetto per un modello ad oggetti:
+		- ![[Pasted image 20250929120731.png]]
+		- Un sistema software si considera terminato quando il cliente riceve quello che gli serve che fa quello che vuole e quindi smette di pagare oppure si rompe il cazzo e se ne va smettendo di pagarti.
+- # UML:
+	- Vari modi per definire un UML sono: classi, nodi, interfacce, tipi di dati, componenti...
+	- ## Diagrammi strutturali:
+		- Descrivono la struttura dei sistemi software
+		- _di classe, oggetto, componente, dispiegamento_
+	- ## Diagrammi comportamentali:
+		- _Use case, sequenziali, di collaborazione, di stato, di attività_
+	- ## Modello ad oggetti con use case:
+		- Si descrive un flusso d'uso per un sistema, raccogliendo storie di funzionamento ovvero le cose specifiche che il sistema deve fare.
+		- Si può usare il concetto di fenomenologia dove ci si immerge nel mondo che si vuole comprendere.
+		- ### Use case:
+			- Uno use case descrive uno scenario d'uso (_interazione tra attori e sistema_) che deve dare un valore atomico all'utente finale.
+				- Ogni volta che faccio qualcosa nello stage di sviluppo software questo qualcosa deve dare valore perché mi permette di ricevere un feedback e avere quindi un'interazione col cliente e capire se quel qualcosa è giusto o sbagliato.
+			- #### ES:
+				- Prendo in esame un _word processor_
+				- Rendere un testo in grassetto, creare un indice, cancellare una parola
+			- Quando si sviluppa uno _use case_ serve sapere:
+				- Se l'attore informerà il sistema sui cambiamenti nell'ambiente esterno
+				- Che informazioni l'attore desidera ricevere dal sistema.
+				- Se l'attore vuole essere informato su dei cambiamenti inattesi.
+			- #### Diagramma:
+				- ![[Pasted image 20250929191850.png]]
+			- #### Attori:
+				- Definisce il _ruolo_ che un utente gioca in uno use case.
+				- Deve ottenere un valore concreto atomico da uno use case.
+				- Gli use case devono avere una _descrizione testuale_ tra gli attori e gli use case
+					- I nomi devono avere un significato che sia sempre quello e quel significato deve essere solo suo.
+			- #### Relazione di estensione
+				- Uno _use case_ è simile ad un altro ma fa un po' di più
+				- ![[Pasted image 20250929192522.png|200]]
+			- #### Relazione di inclusione:
+				- Usato quando un pezzo del comportamento di uno _Use case_ è simile a quello di molti altri.
+				- ![[Pasted image 20250929192511.png|300]]
+		- ## estrazione delle classi:
+			- Parto dal testo ed elenco tutti i nomi e li identifico come gli oggetti principali (possono anche essere degli attributi).
+			- ![[Pasted image 20250930112240.png||500]]
+			- ### Diagramma ad oggetti:
+				- Raccogliendo tutti gli elementi del "mondo" ne creo un modello concettuale per poi scriverne un codice che implementi i concetti che mi servono.
+		- L'usare UML permette di non limitarsi nell'utilizzo di alcune funzionalità che in certi linguaggi non sarebbero presenti (come l'usare _GO_ non permette di usare l'ereditarietà).
+	- ## Classe:
+		- Definisce _nomi, attributi e metodi_ quindi una particolare implementazione per un tipo.
+		- Le classi sono connesse tra di loro tramite le _associazioni_
+			- Lo studente è registrato al corso mentre il professore lo insegna.
+		- ### Diagramma di classe:
+			- Mostra la struttura statica del sistema con i _tipi degli oggetti_ e le _relazioni_ (_associazioni, sottotipi, dipendenze_)
+			- ![[Pasted image 20250929153720.png|500]]
+			- Una classe può appartenere a più diagrammi visto che i diagrammi ne illustrano aspetti specifici:
+				- Non troppe classi e associazioni
+			- #### Sequenza di prospettive:
+				- ##### Concettuale (OOA):
+					- Mostra i concetti del dominio
+					- Non dipende dall'implementazione.
+				- ##### specificazione (OOD):
+					- Struttura generale del sistema in esecuzione
+					- Interfaccia del software
+				- ##### implementazione (OOP):
+					- Dettagli dell'implementazione
+					- Spesso questa è l'unica usata.
+		- ### Associazione:
+			- è la relazione tra istanze di una classe
+			- Freccia con nome dell'associazione e eventualmente la direzione.
+				- ![[Pasted image 20250930112926.png|500]]
+					- L'ordine arriva da un cliente e un cliente può fare più ordini
+			- #### Nominare le associazioni:
+				- Si danno dei nomi sensati, non ovvi.
+				- Le convenzioni sui nomi ci fanno capire il ruolo di queste associazioni.
+					- Per esempio gli attributi si indicano con il _camelCase_
+					- Mentre il nome delle classe partono con la _maiuscola_.
+			- #### Ruolo:
+				- Il nome che una delle 2 associazioni ha nella relazione
+				- Obbligatorio quando ci sono associazioni tra oggetti della stessa classe
+				- ![[Pasted image 20250930113220.png|150]]
+					- _line item_ indica il ruolo 
+			- #### Molteplicità:
+				- Numero di elementi che partecipano a una relazione
+				- $*$ indica $[0, +\infty)$
+				- Se non è specificata indica 1
+			- #### Responsabilità:
+				- ![[Pasted image 20250930113407.png|400]]
+					- Il cliente specifica gli ordini 
+					- Gli ordini elencano il cliente
+			- #### Aggregazioni:
+				- è un tipo speciale di associazione
+				- Un oggetto è formato da un particolare altro oggetto come:
+					- Una macchina è formata da altri oggetti come _ruota e motore_
+				- Per essere indicate si usa il _diamantino vuoto_
+				- ![[Pasted image 20250930114336.png|450]]
+				- ##### ES:
+					- ![[Pasted image 20250930114402.png|500]]
+					- Una _compagnia_ è formata da 0 o più _unità_ le quali sono formate da 0 o più _dipartimenti_ i quali a loro volta sono formati da 0 o più _gruppi_
+			- #### Composizione:
+				- Definisce parti che vivono solo nel contesto dell'oggetto creato
+					- Non possono quindi essere create senza quell'oggetto.
+				- Entità con valore ridotto rispetto all'oggetto a cui fanno riferimento.
+				- Indicate con il _diamantino pieno_
+				- _Per esempio_: la texture di un'oggetto senza l'oggetto stesso non esiste
+		- ### Operazioni:
+			- Processi che una classe deve portare avanti
+			- Corrisponde al messaggio della classe
+			- Non vanno mostrate le operazioni che manipolano gli attributi???.
+			- #### Sintassi:
+				- ![[Pasted image 20250930113717.png]]
+					- Per la visibilità: "+" indica pubblica, "#" indica protetto, "-" privato anche se l'interpretazione dipende dal linguaggio, a livello concettuale non serve.
+					- Il _name_ è una _stringa_
+					- _parameter list_: sono gli argomenti con la sintassi degli attributi
+					- _return-type-expreesion_: specifiche dipendenti dal linguaggio.
+			- #### Tpi di operazioni:
+				- _Query_: ritornano un valore senza modificare lo stato interno della classe.
+					- Possono essere eseguite in un qualsiasi ordine
+				- _modifier_: cambiano lo stato interno
+				- _ricevere e impostare dei messaggi_: 
+					- Ricevere: _query_
+					- impostare: _modifier_
+		- ### Generalizzazioni e estensioni:
+			- Si parla di sottoinsiemi
+			- #### ES:
+				- Macchina:
+					- Camion
+					- Autobus
+					- Station wagon
+				- Andando verso il basso si _estende_ il significato di macchina agli altri oggetti
+				- Mentre andando verso l'alto si _generalizza_ dicendo che quegli oggetti sono macchine
+		- ### Istanziazione e generalizzazione:
+			- ![[Pasted image 20250930115257.png|350]]
+			- Risulta che l'istanziazione non è una relazione transitiva: 
+				- _shep_ è una istanza di _border collie_, Il _border collie_ è un'istanza di _razza_ ma _shep_ non è una istanza di _razza_
+			- La generalizzazione è transitiva:
+				- _shep_ è _border collie_, _border collie_ sono generalizzabili come _cani_ quindi _shep_ è generalizzabile come _cane_.
+- # Link Utili:
+	- 

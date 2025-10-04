@@ -7,7 +7,7 @@ aliases:
   - distribuzione di poisson
 data: "`2025-04-03 16:09`"
 ---
-- # Distribuzione uniforme (Discreta):
+- # Distribuzione uniforme (Discreta): ^ea723d
 	- Avendo una struttura di supporto $S_{X}=\{x_{1},...,x_{n}\}$ finito con relativa tabella di densità:
 		- $$\begin{array}{|c|c|c|c|c|c|c|} \hline x & x_{1} & ... & x_{n}&{///}\\ \hline \mathbb{P}(X=x) & \frac{1}{n} & ... & \frac{1}{n}&1 \\ \hline \end{array}$$
 	- $\mathbb{P}(x_{i})=\frac{1}{n}\ \ \ \forall x_{i} \in S_{X}$

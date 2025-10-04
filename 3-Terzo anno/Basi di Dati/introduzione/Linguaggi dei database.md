@@ -1,0 +1,31 @@
+---
+tags:
+aliases:
+  - DDL
+  - DML
+  - SQL
+data: "`2025-09-25 19:36`"
+---
+- # linguaggi:
+	-  l'efficacia di un [[introduzione Basi di dati|database]] è influenzata dalla disponibilità dei linguaggi e interfacce con le quali si può accedere ai dati.
+	- ## SQL:
+		- Linguaggio per le interrogazioni strutturate
+		- ![[Pasted image 20250925193901.png|600]]
+			- Questo è il mio database e mi serve ottenere "tutte le lezioni che si tengono al piano terra".
+			- ![[Pasted image 20250925194000.png|400]]
+				- Questa è l'interrogazione al database che restituirà come risposta:
+					- ![[Pasted image 20250925194035.png|400]]
+	- ## costrutti SQL iniettati in un linguaggio ospite:
+		- ![[Pasted image 20250925194124.png|400]]
+	- ## Costrutti SQL iniettati in linguaggi ad hoc:
+		- ![[Pasted image 20250925194158.png|500]]
+	- ## Interfacce user friendly:
+		- ![[Pasted image 20250925194226.png]]
+- # separare i dati dal software:
+	- ## DDL (data definition languages):
+		- è usato per definire gli [[Descrivere i dati#^495371|schemi]] di vario tipo e le loro operazioni
+		- ![[Pasted image 20250925194533.png|300]]
+	- ## DML (data manipulation languages):
+		- Linguaggi per la manipolazione, interrogazione e modifica dei dati
+- # Link Utili:
+	- 

@@ -1,0 +1,39 @@
+---
+tags:
+aliases:
+  - type constructor
+  - modello concettuale
+  - modello logico
+  - schema
+  - schemi
+data: "`2025-09-25 19:04`"
+---
+- # intro:
+	-  la struttura con cui sono organizzati i dati all'interno di un database può essere contenuta nel [[introduzione Basi di dati#^7f1908|DBMS]].
+	- I dati sono descritti con diversi livelli di astrazione 
+		- _I dati non dipendono dalla loro rappresentazione fisica_
+			- Visto che i programmi usano una rappresentazione ad alto livello dei dati, un cambiamento nel livello più basso non implica un cambiamento nel programma.
+	- Tutto ciò è espresso meglio nel concetto di _modello dei dati_.
+- # Modello dei dati:
+	- è un insieme di costrutti  che descrive i dati e il loro comportamento.
+	- ## Type constructor:
+		- Fornisce una struttura ai dati.
+	- Il modello dei dati fornisce dei data type constructor di default 
+	- ## Modello relazionale:
+		- In ogni [[introduzione Basi di dati#^87f383|database]] c'è:
+			- ### _schema_:  ^495371
+				- che descrive la struttura dei dati ed è immutabile spesso.
+			- ### _istanza_:
+				- che rappresenta un valore che può cambiare
+		- è un modello di tipo _logico_.
+		- ![[Pasted image 20250925191324.png|400]]
+	- ## Modello concettuale:
+		- Rappresenta i dati indipendentemente da ogni sistema specifico
+		- Descrive concetti del mondo reale
+		- Usato in fasi preliminari di un progetto
+		- Quello più usato è il _entity-relationship_
+	- ## Modello logico: ^bfe78d
+		- Usato dai [[introduzione Basi di dati#^7f1908|DBMS]] per immagazzinare e organizzare i dati
+		- Lo sono i modelli relazionali, _reticolari (a grafo)_, _gerarchici (ad albero)_, ad oggetti e semi-strutturati come XML.
+- # Link Utili:
+	- 

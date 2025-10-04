@@ -1,0 +1,44 @@
+---
+tags:
+aliases:
+  - information hiding
+  - low coupling
+  - refactoring
+data: "`2025-09-29 10:37`"
+---
+- # sotto sistemi:
+	- Ci si concentra sull'aspetto dinamico di funzionamento.
+	- Si possono identificare certi insiemi di procedure che fanno cose
+- # Moduli:
+	- Insieme di funzioni o librerie che servono a ottenere una certa funzionalità .
+	- Avendo quindi un aspetto statico.
+	- ## Information hiding:
+		- Concetto fondante della programmazione.
+		- Serve separare l'implementazione dall'interfaccia separando il "cosa fa" dal "come lo fa".
+		- Modificando l'implementazione e non l'interfaccia la semantica rimane la stessa cambiando quindi il procedimento ma non il risultato.
+		- L'_implementazione_ non viene nascosta ma utilizzata per capire meglio cosa fa l'_interfaccia_, separando queste due devo però garantire che le persone riescano a collegare le due.
+			- O si usa la documentazione ma risulta un arma a doppio taglio
+			- O l'implementazione stessa diventa un modo per descrivere il codice.
+				- _Reading the code must explain the code_
+	- ## Low coupling:
+		- Dividere il codice in porzioni meno interdipendenti possibile ma che rimangano coese tra di loro.
+		- Qualche dipendenza risulta obbligatoria.
+		- La presenza di una grande gerarchia di classi crea una forte dipendenza e bassa leggibilità, dopo il 4° livello di [[Tipo dato astratto#^9a1851|ereditarietà]] si aumenta esponenzialmente la probabilità di errori
+	- ## Coesione:
+		- Avere un alta coesione vuol dire organizzare i moduli in modo che tutto il contenuto del modulo serva per ottenere un obiettivo specifico.
+		- Per aumentarlo si può:
+			- Coesione coincidentale:
+			- Coesione temporale: parti processate entro lo stesso tempo limite.
+			- ... Procedurale:
+			- Comunicazioni:
+			- Sequenziale: l'output di una parte è l'input di un altra.
+			- Di informazioni: accesso alla stessa struttura dati.
+	- ## Semplicità:
+		- Buildare solo il codice necessario, non si anticipano le possibili richieste future.
+			- Altrimenti si rischia di implementare delle funzioni che non serviranno mai, perdendo tempo e aumentando il peso del codice.
+		- ### Refactoring:
+			- Si ristruttura il codice facendo funzionare il sistema ma semplificando l'implementazione
+			- Utile visto che codice più semplice è più facile da _debuggare_
+		- Si cerca anche di ridurre il più possibile la dimensione di un _metodo_, minimizzare le informazioni condivise, evitare di duplicare del codice
+- # Link Utili:
+	- 

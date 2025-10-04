@@ -7,21 +7,21 @@ E# Vault Info
 ## Ultimi modificati:
 <!-- QueryToSerialize: LIST FROM Primo Anno/Analisi -->
 
-<!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" SORT file.mtime DESC LIMIT 10 -->
+<!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
 <!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" SORT file.mtime DESC LIMIT 10 -->
 
-| File                                                                                                                                                             | Materia                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| [[Classe di una grammatica]]                 | Linguaggi di Programmazione |
-| [[Parser Top-down]]                                                                         | Linguaggi di Programmazione |
-| [[Parser bottom-up]]                                                                       | Linguaggi di Programmazione |
-| [[Top-down Parsing]]                                 | Linguaggi di Programmazione |
-| [[Linguaggio libero deterministico]] | Linguaggi di Programmazione |
-| [[Bottom-up parsing]]                               | Linguaggi di Programmazione |
-| [[Automi finiti deterministici]]                            | Linguaggi di Programmazione |
-| [[Laboratorio SO]]                                                                        | Sistemi Operativi           |
-| [[lab C 12_12_24]]                                                                        | Sistemi Operativi           |
-| [[Sicurezza nei sistemi operativi]]                           | Sistemi Operativi           |
+| File                                                                                                                                                           | Materia                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [[Homepage]]                                                                                                                                      | Homepage.md                               |
+| [[Algebra relazionale e calcolo relazionale]] | Basi di Dati                              |
+| [[Modello dati relazionale]]                                                        | Basi di Dati                              |
+| [[Linguaggi dei database]]                                                                   | Basi di Dati                              |
+| [[Approccio probabilistico]]                                               | Introduzione all'apprendimento automatico |
+| [[Foreste(Random Forests)]]                             | Introduzione all'apprendimento automatico |
+| [[Alberi di decisione]]                                     | Introduzione all'apprendimento automatico |
+| [[Overfitting]]                                                     | Introduzione all'apprendimento automatico |
+| [[lezione introduttiva machine learning]]                     | Introduzione all'apprendimento automatico |
+| [[esercitazioni UML]]                                                                               | Ingegneria del software                   |
 <!-- SerializedQuery END -->
 
 ## Ultime lezioni da finire:
@@ -29,6 +29,7 @@ E# Vault Info
 ```dataview
 TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia 
 FROM #TODO
+WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")
 SORT file.ctime DESC
 LIMIT 15
 ```
@@ -37,6 +38,7 @@ LIMIT 15
 ```dataview
 TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia
 FROM #TODO
+WHERE file.path !="template/Modello appunti.md"
 SORT data
 ```
 
