@@ -1,16 +1,21 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - selection a cascata
+  - idempotenza della projection
+  - distributività della selection
+  - distributività della projection
+  - distributività del join
+  - equivalenza espressioni dell'algebra relazionale
 data: "`2025-10-04 10:33`"
 ---
 - # Definizione:
-	- Due espressioni dell' [[Algebra relazionale e calcolo relazionale]] $E_{1},E_{2}$ non _equivalenti_ se forniscono lo stesso risultato indipendentemente dallo stato del [[introduzione Basi di dati|database]], ma potrebbero dipendere dallo schema.
+	- Due espressioni dell' [[Algebra relazionale]] $E_{1},E_{2}$ non _equivalenti_ se forniscono lo stesso risultato indipendentemente dallo stato del [[introduzione Basi di dati|database]], ma potrebbero dipendere dallo schema.
 	- Le regole di equivalenza sono importanti perché i [[introduzione Basi di dati#^7f1908|DBMS]] moderni provano a riscrivere le query in altre equivalenti ma più efficienti.
 - # Casi vari:
-	- ## [[Algebra relazionale e calcolo relazionale#^f5e7ef|selection]] a cascata:
+	- ## [[Algebra relazionale#^f5e7ef|selection]] a cascata:
 		- $$\sigma_{C1\wedge C2}(R)=\sigma_{C1}(\sigma_{C2}(R))$$
-	- ## Idempotenza della [[Algebra relazionale e calcolo relazionale#^eb237a|projection]]:
+	- ## Idempotenza della [[Algebra relazionale#^eb237a|projection]]:
 		- $$\Pi_{X}(R)=\Pi_{X}(\Pi_{X,Y}(R))$$
 			- Con $X,Y\in$ schema di $R$
 	- ## ordine di Proiezione e selezione:
@@ -22,8 +27,8 @@ data: "`2025-10-04 10:33`"
 	- ## Anticipare le proiezioni:
 		- $$\Pi_{X1,Y2}(R_{1} \bowtie R_{2})=R_{1} \bowtie \Pi_{Y2}(R_{2})$$
 		- $R1$ ha come schema $X1$ e $R2$ ha come schema $X2$
-		- Se $Y2\subseteq (X1 \cap X2)$ gli attributi $X2 -Y2$ non sono compresi nel [[Algebra relazionale e calcolo relazionale#^530bb9|join]] e quindi l'equivalenza è valida.
-	- ## Usare la definizione di [[Algebra relazionale e calcolo relazionale#^73fda7|theta-join]]:
+		- Se $Y2\subseteq (X1 \cap X2)$ gli attributi $X2 -Y2$ non sono compresi nel [[Algebra relazionale#^530bb9|join]] e quindi l'equivalenza è valida.
+	- ## Usare la definizione di [[Algebra relazionale#^73fda7|theta-join]]:
 		- $$\sigma_{C}(R_{1} \bowtie R_{2})=R_{1} \bowtie_{C} R_{2}$$
 		- ![[Pasted image 20251004104920.png]]
 	- ## distributività di selection e projection:
@@ -36,7 +41,6 @@ data: "`2025-10-04 10:33`"
 		- $$\sigma_{C1\vee C2}(R)=\sigma_{C1}(R)\cup \sigma_{C2}(R)$$
 		- $$\sigma_{C1\wedge C2}(R)=\sigma_{C1}(R)\cap \sigma_{C2}(R)$$
 		- $$\sigma_{C1\wedge \neg C2}(R)=\sigma_{C1}(R)- \sigma_{C2}(R)$$
-	- In generale le proprietà _Associative e commutative_ si applicano a tutti gli operatori binari tranne la [[Algebra relazionale e calcolo relazionale#^3b76f1|differenza]]
-	- 
+	- In generale le proprietà _Associative e commutative_ si applicano a tutti gli operatori binari tranne la [[Algebra relazionale#^3b76f1|differenza]]
 - # Link Utili:
 	- 

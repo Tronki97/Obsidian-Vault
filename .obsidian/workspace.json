@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Basi di Dati/algebra relazionale ecalcolo relazionale/espressioni dell'algebra relazionale equivalenti.md",
+                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/Regressione logistica.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "espressioni dell'algebra relazionale equivalenti"
+              "title": "Regressione logistica"
             }
           },
           {
-            "id": "3973b06388978246",
+            "id": "992af34577f4110f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Basi di Dati/algebra relazionale ecalcolo relazionale/Algebra relazionale e calcolo relazionale.md",
+                "file": "Architettura dei DBMS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Algebra relazionale e calcolo relazionale"
+              "title": "Architettura dei DBMS"
+            }
+          },
+          {
+            "id": "7f309933c5d1745b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "transazioni.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "transazioni"
+            }
+          },
+          {
+            "id": "99b22f34478dfeab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Basi di Dati/introduzione/introduzione Basi di dati.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "introduzione Basi di dati"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -76,7 +124,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Esplora risorse"
@@ -88,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "DDL",
+                "query": "distribuzione congiunta",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -260,52 +308,52 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Pasted image 20251004113412.png",
-    "Pasted image 20251004112735.png",
-    "3-Terzo anno/Basi di Dati/algebra relazionale ecalcolo relazionale/espressioni dell'algebra relazionale equivalenti.md",
-    "Pasted image 20251004104920.png",
-    "Pasted image 20251004104904.png",
-    "3-Terzo anno/Basi di Dati/algebra relazionale ecalcolo relazionale/Algebra relazionale e calcolo relazionale.md",
-    "Homepage.md",
+    "Pasted image 20251016201035.png",
+    "3-Terzo anno/Basi di Dati/introduzione/introduzione Basi di dati.md",
+    "transazioni.md",
+    "Pasted image 20251016193402.png",
+    "Architettura dei DBMS.md",
+    "Hash-Match-Join-Looping-1.gif",
+    "Nested-Loop-Join-50fps-1.gif",
+    "immagini/Pasted image 20251016151932.png",
+    "immagini/Pasted image 20251016154035.png",
+    "immagini/Pasted image 20251016153211.png",
+    "immagini/Pasted image 20251016153153.png",
+    "immagini/Pasted image 20251016152443.png",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/Regressione logistica.md",
     "3-Terzo anno/Consigli Tesi.md",
-    "3-Terzo anno/Materie a scelta interessanti.md",
-    "immagini/Pasted image 20251003114417.png",
-    "immagini/Pasted image 20251003130040.png",
-    "immagini/Pasted image 20251003121606.png",
-    "immagini/Pasted image 20251003121500.png",
-    "immagini/Pasted image 20251003121344.png",
-    "immagini/Pasted image 20251003120743.png",
-    "immagini/Pasted image 20251003120615.png",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/Approccio probabilistico.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione/Foreste(Random Forests).md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione/Alberi di decisione.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione/Overfitting.md",
-    "Senza nome.base",
-    "3-Terzo anno/Basi di Dati/introduzione/Linguaggi dei database.md",
-    "3-Terzo anno/Basi di Dati/modello relazionale/Modello dati relazionale.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/lezione introduttiva machine learning.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Naive Bayes.md",
+    "immagini/Pasted image 20251013195324.png",
+    "immagini/Pasted image 20251016145826.png",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Distribuzione congiunta.md",
+    "Homepage.md",
+    "3-Terzo anno/Basi di Dati/algebra relazionale/Algebra relazionale.md",
     "3-Terzo anno/Ingegneria del software/esercitazioni UML.md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
-    "3-Terzo anno/Basi di Dati/introduzione/Indipendenza dei dati.md",
-    "3-Terzo anno/Basi di Dati/modello relazionale/Chiave e superchiavi.md",
-    "3-Terzo anno/Basi di Dati/modello relazionale/Restrizioni di integrità.md",
-    "3-Terzo anno/Basi di Dati/algebra relazionale ecalcolo relazionale",
-    "3-Terzo anno/Basi di Dati/modello relazionale/strutture dati annidate.md",
-    "3-Terzo anno/Basi di Dati/modello relazionale/informazioni parziali.md",
-    "3-Terzo anno/Basi di Dati/modello relazionale",
-    "template/Modello appunti.md",
-    "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
-    "3-Terzo anno/Ingegneria del software/GIT.md",
-    "3-Terzo anno/Ingegneria del software/prima lezione.md",
+    "3-Terzo anno/Basi di Dati/calcolo relazionale/Calcolo relazionale.md",
+    "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
+    "3-Terzo anno/Basi di Dati/calcolo relazionale/Datalog.md",
+    "3-Terzo anno/Basi di Dati/calcolo relazionale",
+    "3-Terzo anno/Basi di Dati/algebra relazionale/espressioni dell'algebra relazionale equivalenti.md",
+    "3-Terzo anno/Basi di Dati/algebra relazionale/Viste.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/problema di classificazione.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico",
+    "3-Terzo anno/Ingegneria del software/Design pattern.md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
     "3-Terzo anno/Ingegneria del software/Templates in C++.md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
+    "3-Terzo anno/Ingegneria del software/prima lezione.md",
+    "3-Terzo anno/Ingegneria del software/GIT.md",
+    "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
+    "3-Terzo anno/Ingegneria del software/esercitazioni OO design.md",
+    "1-Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
+    "3-Terzo anno/Basi di Dati/SQL",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione/Overfitting.md",
+    "3-Terzo anno/secondo semestre",
+    "3-Terzo anno/primo semestre",
+    "Senza nome.base",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione",
+    "3-Terzo anno/Basi di Dati/algebra relazionale",
+    "3-Terzo anno/Basi di Dati/modello relazionale",
     "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software",
-    "3-Terzo anno/Basi di Dati/introduzione",
-    "3-Terzo anno/Informatica teorica",
-    "3-Terzo anno/Fondamenti di cybersecurity",
-    "3-Terzo anno/Introduzione all'apprendimento automatico",
-    "3-Terzo anno/Ingegneria del software",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

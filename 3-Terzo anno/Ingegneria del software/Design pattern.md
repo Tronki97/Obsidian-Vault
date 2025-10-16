@@ -1,0 +1,33 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-10-13 10:52`"
+---
+- # intro:
+	- Non posso supporre che il software sia solo un processo da input a output
+	- Quindi il design pattern è una struttura vista in passato che si è visto funzionare quindi si replica per il progetto attuale.
+	- Portano ad una comprensione del problema simile al modo in cui lavorano le persone di solito.
+- # Def:
+	- Descrivono un problema che capita in continuazione e forniscono uno scheletro per risolvere la situazione che con _ragionamento per analogia_ può aiutare a risolvere problemi simili.
+	- ## nello sviluppo software:
+		- Quindi è un insieme di oggetti e le loro relazioni 
+- # Approcci Gamma:
+	- ## Creazionali:
+		- Modalità che uso per creare oggetti.
+		- 
+	- ## strutturali:
+		- 
+	- ## comportamentali:
+	- ## ES:
+		- Si vuole avere Una sola istanza di un oggetto:
+			- Metto il costruttore di un oggetto privato cossicché non possa essere chiamato ne da sotto-classi ne da altri
+			- Metto come `static` la definizione dell'oggetto
+			- ![[Pasted image 20251013161812.png|450]]
+			- Quindi lo si trasforma nel _singleton pattern_:
+				- ![[Pasted image 20251013162009.png|450]]
+		- Come organizzare la struttura gerarchica degli account:
+			- ![[Pasted image 20251013162231.png|600]]
+			- 
+- # Link Utili:
+	- 

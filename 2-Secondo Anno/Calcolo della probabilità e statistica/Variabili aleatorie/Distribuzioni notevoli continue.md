@@ -52,7 +52,7 @@ data: "`2025-04-11 13:33`"
 		- $$var(X)=\mathbb{E}[X^{2}]-\mathbb{E}[X]^{2}=\int_{0}^{\infty} x^{2} \lambda e^{-\lambda x} dx - \left( \frac{1}{\lambda} \right)^{2}=$$
 		- $$= \left( [-x^{2}e ^{-\lambda x}]_{0}^{\infty} + \frac{2}{\lambda} \int _{0}^{\infty}\lambda x e^{-\lambda x} dx \right) - \frac{1}{\lambda^{2}}=$$
 		- $$\left( 0+\frac{2}{\lambda^{2}} \right)-\frac{1}{\lambda^{2}}= \frac{1}{\lambda^{2}}$$
-- # Distribuzione normale o Gaussiana:
+- # Distribuzione normale o Gaussiana: ^68d52e
 	- $X\sim N(\mu, \sigma^{2})$
 		- Con $\mu = \mathbb{E}[X]$  
 		- $\sigma^{2}= Var(X)$.

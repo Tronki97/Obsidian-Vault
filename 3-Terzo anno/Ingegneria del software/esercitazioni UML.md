@@ -44,5 +44,6 @@ data: "`2025-10-01 14:13`"
 	- Fornire una descrizione testuale per lo UC "scegli metodo di pagamento":
 		- Quando l'utente clicca per acquistare un prodotto deve essere indirizzato ad una pagina dove può scegliere che tipo di pagamento vuole usare tra quelli supportati dalla piattaforma e poi in base al metodo scelto inserire i dati specifici di quella metodologia. 
 		- Il sistema poi controlla che i dati inseriti siano corretti, in caso non lo sono viene mostrato un messaggio di errore altrimenti viene mostrato un messaggio con il riepilogo dell'ordine fatto e poi il cliente deciderà se continuare e completare l'ordine o meno
+- ![[Pasted image 20251015144103.png]]
 - # Link Utili:
 	- 

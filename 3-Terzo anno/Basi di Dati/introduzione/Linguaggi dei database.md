@@ -22,10 +22,10 @@ data: "`2025-09-25 19:36`"
 	- ## Interfacce user friendly:
 		- ![[Pasted image 20250925194226.png]]
 - # separare i dati dal software:
-	- ## DDL (data definition languages):
+	- ## DDL (data definition languages): ^0f194a
 		- è usato per definire gli [[Descrivere i dati#^495371|schemi]] di vario tipo e le loro operazioni
 		- ![[Pasted image 20250925194533.png|300]]
-	- ## DML (data manipulation languages):
+	- ## DML (data manipulation languages): ^3a024b
 		- Linguaggi per la manipolazione, interrogazione e modifica dei dati
 - # Link Utili:
 	- 

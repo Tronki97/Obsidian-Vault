@@ -2,34 +2,14 @@
 cssclasses:
   - dashboard
 ---
-E# Vault Info
-
-## Ultimi modificati:
-<!-- QueryToSerialize: LIST FROM Primo Anno/Analisi -->
-
-<!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
-<!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" SORT file.mtime DESC LIMIT 10 -->
-
-| File                                                                                                                                                           | Materia                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| [[Homepage]]                                                                                                                                      | Homepage.md                               |
-| [[Algebra relazionale e calcolo relazionale]] | Basi di Dati                              |
-| [[Modello dati relazionale]]                                                        | Basi di Dati                              |
-| [[Linguaggi dei database]]                                                                   | Basi di Dati                              |
-| [[Approccio probabilistico]]                                               | Introduzione all'apprendimento automatico |
-| [[Foreste(Random Forests)]]                             | Introduzione all'apprendimento automatico |
-| [[Alberi di decisione]]                                     | Introduzione all'apprendimento automatico |
-| [[Overfitting]]                                                     | Introduzione all'apprendimento automatico |
-| [[lezione introduttiva machine learning]]                     | Introduzione all'apprendimento automatico |
-| [[esercitazioni UML]]                                                                               | Ingegneria del software                   |
-<!-- SerializedQuery END -->
+# Vault Info
 
 ## Ultime lezioni da finire:
 
 ```dataview
 TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia 
 FROM #TODO
-WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")
+WHERE file.path !="template/Modello appunti.md"
 SORT file.ctime DESC
 LIMIT 15
 ```
@@ -39,8 +19,29 @@ LIMIT 15
 TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia
 FROM #TODO
 WHERE file.path !="template/Modello appunti.md"
-SORT data
+SORT Materia 
 ```
+
+## Ultimi modificati:
+<!-- QueryToSerialize: LIST FROM Primo Anno/Analisi -->
+
+<!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
+<!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
+
+| File                                                                                                                                                                                            | Materia                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [[Homepage]]                                                                                                                                                                       | Homepage.md                               |
+| [[problema di classificazione]]                                                                          | Introduzione all'apprendimento automatico |
+| [[Distribuzione congiunta]]                                                         | Introduzione all'apprendimento automatico |
+| [[Naive Bayes]]                                                                                 | Introduzione all'apprendimento automatico |
+| [[Design pattern]]                                                                                                                      | Ingegneria del software                   |
+| [[Design OO in UML]]                                                                               | Ingegneria del software                   |
+| [[Controllo]]                                                                                                                  | Linguaggi di Programmazione               |
+| [[Algebra relazionale]]                                                                              | Basi di Dati                              |
+| [[Distribuzioni notevoli continue]]                                               | Calcolo della probabilità e statistica    |
+| [[Distribuzioni notevoli di variabili aleatorie discrete]] | Calcolo della probabilità e statistica    |
+<!-- SerializedQuery END -->
+<!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
 
 # Primo Anno
 

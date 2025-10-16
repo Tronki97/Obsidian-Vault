@@ -1,0 +1,48 @@
+---
+tags:
+aliases:
+  - bag of words
+  - log likelihood
+  - correlazione
+  - vettore spettrale
+data: "`2025-10-10 13:42`"
+---
+- # Bag of words:
+	- Si suppone che i documenti siano sequenze di parole quindi una certa parola $X$ appare nella posizione $i$ 
+		- $$\theta_{i,word, l}=P(X_{1}=word| Y=l)$$
+		- La parola $word$ sia in posizione $i$ nel documento di categoria $l$
+	- Tutti gli eventi sono indipendenti tra di loro.
+		- $$\theta_{i,word,l}=\theta_{j,word,l}=\theta_{word,l}$$
+	- ## Training:
+		- Per tutti i valori di $y_{k}$ di $Y$ devo stimare l'appartenenza alla categoria $y_{k}$:
+			- $$\pi_{k}=P(Y=y_{k})$$
+		- Per ogni $x_{ij}$ di $X_{i}$ devo stimare:
+			- $$\theta_{ijk}=P(X_{i}=x_{ij}|Y=y_{k})$$
+		- Classifico quindi $a^{new}=<a_{1},...,a_{n}>$
+			- ![[Pasted image 20251010135040.png|550]]
+	- Si fa poi la _MLE_ stimando 
+		- $\pi_{k}$ 
+		- $\theta_{i, word, k}=\theta_{word, k}=P(X=word|Y=y_{k})$
+		- E poi si cerca di calcolare la _log likelyhood_ e farne la derivata per trovare il valore che la massimizza.
+		- ### log likelihood:
+			- Invece di dover calcolare questo:
+				- $$\begin{array}{}Y^{new}=\arg \max_{y_{k}} P(Y=y_{k})*\prod_{i}P(X_{i}=w_{j}|Y=y_{k})=\\  \\= \arg \max_{k} \pi_{i} * \prod_{i} \theta_{ijk} \end{array}$$
+			- Si può calcolare:
+				- $$\begin{array}{}Y^{new}=\arg \max_{y_{k}} \log(P(Y=y_{k})*\prod_{i}P(X_{i}=w_{j}|Y=y_{k}))=\\ \\ = \arg \max_{k} \log(\pi_{i} )+ \sum\limits_{i}\log( \theta_{ijk}) \end{array}$$
+			- E supponendo che la posizione delle parole non serva al contesto quindi  $\theta_{ijk}=\theta_{i'jk}=\theta_{jk}$ è possibile calcolare:
+				- $$\sum\limits_{i}\log(\theta_{ijk})=\sum\limits_{j}n_{j}*\log(\theta_{jk})$$
+				- Con $n_{j}$ che rappresenta il numero di occorrenze della parola $w_{j}$ nel documento da classificare
+	- ## Correlazione:
+		- Si considerano dei vettori lunghi quanto il vocabolario
+		- ### Training:
+			- Per ogni categortia $k$ dei documenti si costruisce un _vettore spettrale_
+				- $$s_{k}=\langle \log(\theta_{jk}) \rangle_{j\in words}$$
+				- Con $\theta_{jk}$ come la frequenza della parola $j$ nei documenti della categoria $k$
+		- ## Classificazione:
+			- Dato un nuovo documento calcolo il vettore:
+				- $$d=\langle n_{j}\rangle_{j\in words}$$
+				- E classifico il documento in cui la categoria e lo "spettro" sono maggiormente correlati:
+					- $$\arg  \max_{k} \ d*s_{k}=\sum\limits_{j} d_{j}*s_{jk}$$
+					- Dove $d*s_{k}$ è detta _correlazione_
+- # Link Utili:
+	- 

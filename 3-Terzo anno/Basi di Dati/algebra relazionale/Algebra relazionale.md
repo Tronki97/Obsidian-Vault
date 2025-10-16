@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - unione
   - intersezione
@@ -46,12 +45,12 @@ data: "`2025-10-01 11:50`"
 		- Funzionano solo se sono definite sullo schema di ogni operando
 		- Devono mantenere lo schema identico.
 		- ![[Pasted image 20251002153025.png|450]]
-			- _Unione_
+			- _Unione_ ^a71ae1
 		- ![[Pasted image 20251002153048.png|450]]
 			- _intersezione_
 		- ![[Pasted image 20251002153114.png|450]]
 			- _differenza_ ^3b76f1
-	- ## Renaming:
+	- ## Renaming: ^94bc77
 		- Prende un insieme di attributi e cambia il nome di uno di quelli.
 		- Di fatto cambia lo schema mantenendo i dati in quello schema
 			- $$\rho_{NewName\leftarrow OldName}(RELATION)$$
@@ -142,7 +141,7 @@ data: "`2025-10-01 11:50`"
 				- ![[Pasted image 20251003120615.png|450]]
 		- ### prodotto cartesiano:
 			- In pratica è il prodotto cartesiano tra gli insiemi delle tuple delle relazioni prese in considerazione
-			- La dimensione del risultato è uguale al prodotto di quelle degli operandi
+			- La dimens ione del risultato è uguale al prodotto di quelle degli operandi
 			- ![[Pasted image 20251003120743.png|450]]
 			- Spesso per rendere utile questo operando l'operazione è seguita da una selezione:
 				- $$\sigma_{condition}(R_{1} \bowtie R_{2})$$
@@ -152,7 +151,7 @@ data: "`2025-10-01 11:50`"
 				- La _condition_ è di solito definita come una congiunzione di atomi che esprimono una relazione binaria 
 					- $$A_{1} \mathscr{R}A_{2}$$
 					- $\mathscr{R}$ è un operatore di comparazione (_<, >, =_, ...)
-			- #### Equi-join:
+			- #### Equi-join: ^98889e
 				- Chiamato cosi se tutti gli $\mathscr{R}$ sono relazioni di equivalenza
 				- ![[Pasted image 20251003121344.png|450]]
 				- Il risultato prodotto è molto simile al risultato ne caso in cui si facesse una join e si rinominasse _Dept con Code_
@@ -175,22 +174,5 @@ data: "`2025-10-01 11:50`"
 		- ### 5°:
 			- Ritornare gli impiegati che hanno lo stipendio maggiore di quello del loro capo insieme al _number, name, wage_ di entrambi dipendente e capo.
 			- ![[Pasted image 20251003130040.png]]
-- # Viste:
-	- Diverse rappresentazioni per gli stessi dati
-	- ## Tabelle derivate:
-		- Queste relazioni sono create dalle queries
-		- Possono essere generate da da altre relazioni derivate
-	- ## Tabelle base:
-		- Il contenuto originale
-	- ## ES:
-		- ![[Pasted image 20251004113412.png|450]]
-		- Una vista può essere:
-			- $$SUPERVISOR:= \Pi_{Employee, Chief}(AFFILIATION \bowtie MANAGEMENT)$$
-	- ## Materialized views:
-		- Una vista permanente o temporanea è _immagazzinata fisicamente_ nel [[introduzione Basi di dati|database]] 
-		- In questo modo saranno prontamente disponibili per future queries
-		- Ma c'è una ridondanza dei dati, gli aggiornamenti sono più lenti e i [[introduzione Basi di dati#^7f1908|DBMS]] raramente li supportano.
-	- ## Relazioni virtuali:
-		- Supportate da tutti i DMBS, la query di vista viene trasformata in una query sul database sottostante
 - # Link Utili:
 	- 

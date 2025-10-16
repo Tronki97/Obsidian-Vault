@@ -1,0 +1,63 @@
+---
+tags:
+aliases:
+  - DRC
+  - dichiarazione di range
+  - chiusura transitiva
+data: "`2025-10-08 10:39`"
+---
+- # Intro:
+	- Rappresentano una famiglia di linguaggi derivati dalla logica del primo 
+- # calcoli relazionali sui domini:
+	- ## Sintassi:
+		- $$\{A_{1}:x_{1},..., A_{k}:x_{k}|f\}$$
+		- $A_{1}:x_{1},..., A_{k}:x_{k}$ è la lista obiettivo
+			- $A_{1},...,A_{k}$ sono degli attributi
+			- $x_{1},...,x_{k}$ sono delle variabili associate
+		- $f$ è la formula logica con operatori e quantificatori booleani
+	- ## Semantica:
+		- Si cerca una risposta sulla relazione $A_{1},...,A_{k}$ che contengono le [[Modello dati relazionale#^e8f57b|tuple di un database]] di valori $x_{1},...,x_{k}$ che soddisfano la formula $f$
+	- Non sono presenti dei simboli di funzione, la notazione è _non-posizionale_.
+	- ## ES:
+		- $$EMPLOYEE(\underline{Number}, Name, Age, Wage)$$
+		- $$SUPERVISOR(Chief, \underline{Employee})$$
+		- Ritornare tutti gli attributi dell'impiegati con _Wage>40_
+			- ![[Pasted image 20251008105316.png]]
+	- ## Pros:
+		- Non necessita di una soluzione algoritmica
+	- ## Cons:
+		- è verboso in quanto si necessita di usare molte variabili
+		- Alcune espressioni non hanno senso:
+			- ![[Pasted image 20251008111010.png]]
+			- Queste espressioni _dipendono dal dominio_ e andrebbero evitate
+	- ## relazione con l'[[Algebra relazionale]]
+		- Per ogni espressione DRC (domain relational calculi) indipendente dal dominio ne esiste una equivalente in AR e viceversa
+- # calcolo relazionale su tuple con dichiarazioni di range:
+	- Si deve cercare di ridurre il numero delle variabili e per farlo si restringono le variabili per rappresentare tuple invece di valori.
+	- Per essere sicuri che i valori provengano dal database si usano le _dichiarazioni di range_
+	- ## Sintassi:
+		- $$\{TargetList| RangeList| Formula\}$$
+			- _TargetList_: ha elementi come $Y:x.Z$
+			- _RangeList_: indica le variabili libere nella _Formula_ 
+			- _Formula_: 
+				- ha atomi di comparazione $x.A \ \mathscr{R} \ c, x.A \ \mathscr{R}\ y.B$
+				- Connettivi logici
+				- Dei quantificatori che associano un range sulle variabili:
+					- $$\exists\ x(R)(f)\ \ \ \ \forall x(R)(f)$$
+	- Una limitazione è che non può esprimere interrogazioni che richiedono l' [[Algebra relazionale#^a71ae1|unione]] di più relazioni
+	- ## ES:
+		- Ritornare il nome e salario del capo avente dipendenti che guadagnano più di 40:
+			- ![[Pasted image 20251013195324.png|550]]
+	- ## chiusura transitiva:
+		- è la più piccola relazione su $X$ che contiene $R$ ed è _transitiva_
+		- Data una relazione $R$ su $A \times A$ la chiusura transitiva è $R^{+}$:
+			- ![[Pasted image 20251009151843.png]]
+		- ### ES 1:
+			- Se $X$ è l'insieme di aeroporti e $x \ R\ y$ vuol dire: "c'è un volo diretto da $x$ a $y$" la chiusura transitiva $R^{+}$ significa: "è possibile volare da $x$ a $y$ in più di un volo"
+		- ### ES 2:
+			- Si richiede di ritornare gli impiegati e tutti i loro capi anche con più livelli di gerarchia
+			- ![[Pasted image 20251013200423.png|450]]
+		- In sostanza si prende la tabella si mette in [[Algebra relazionale#^98889e|equi-join]] un numero arbitrario di volte per trovare la chiusura transitiva.
+		- Questa chiusura non è possibile farla in [[Algebra relazionale]] perché richiederebbe un loop di durata indefinita
+- # Link Utili:
+	- 

@@ -1,0 +1,47 @@
+---
+tags:
+aliases:
+  - materialized views
+  - relazioni virtuali
+data: "`2025-10-13 19:38`"
+---
+- # Viste:
+	- Diverse rappresentazioni per gli stessi dati
+	- ## Tabelle derivate:
+		- Queste relazioni sono create dalle queries
+		- Possono essere generate da da altre relazioni derivate
+	- ## Tabelle base:
+		- Il contenuto originale
+	- ## ES:
+		- ![[Pasted image 20251004113412.png|450]]
+		- Una vista può essere:
+			- $$SUPERVISOR:= \Pi_{Employee, Chief}(AFFILIATION \bowtie MANAGEMENT)$$
+	- ## Materialized views:
+		- Una vista permanente o temporanea è _immagazzinata fisicamente_ nel [[introduzione Basi di dati|database]] 
+		- In questo modo saranno prontamente disponibili per future queries
+		- Ma c'è una ridondanza dei dati, gli aggiornamenti sono più lenti e i [[introduzione Basi di dati#^7f1908|DBMS]] raramente li supportano.
+	- ## Relazioni virtuali:
+		- Supportate da tutti i [[introduzione Basi di dati#^7f1908|DBMS]], la query di vista viene trasformata in una query sul database sottostante
+		- ![[Pasted image 20251008101720.png|500]]
+	- ## Il perché delle visite:
+		- Riprendendo gli [[introduzione Basi di dati|schemi esterni]] gli utenti non possono vedere tutte le informazioni del database ma solo appunto alcune _viste_
+		- Quindi per ogni utente bisogna decidere ciò che ha il permesso di vedere.
+		- Sono importanti come strumento di programmazione perché:
+			- Si possono semplificare delle query dividendole in sotto-query ripetute che vanno ad agire su _viste_ intermedie.
+			- Si possono usare anche su software esistenti per fare refactoring degli schemi
+		- Fare interrogazioni sulle viste o su viste sopra altre viste non intacca l'efficienza di queste interrogazioni.
+	- ## Aggiornare le viste:
+		- ![[Pasted image 20251008102834.png|450]]
+		- Serve aggiungere che "bruni è il capo di Lupi" e "falchi è il capo di Belli"
+		- _Aggiornare le viste è consentito solo se è possibile aggiornare anche quelle di base_
+			- In questo caso non avendo il dipartimento a cui la gente appartiene non si può aggiornare ne quelle di base ne le viste.
+		- Ogni aggiornamento su una vista deve corrispondere a quelli sulle tabelle di base.
+- # convenzioni e notazioni:
+	- ![[Pasted image 20251008103529.png]]
+	- Per evitare di mischiare gli attributi si fa la [[Algebra relazionale#^94bc77|rename]].
+	- Si può assegnare impiegato a capo:
+		- $$CHIEF := EMPLOYEE$$
+	- E si può usare la _dot notation_ per indicare a quale "vista appartiene un attributo"
+		- ![[Pasted image 20251008103901.png]]
+- # Link Utili:
+	- 

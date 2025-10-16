@@ -14,7 +14,7 @@ data: "`2025-04-03 16:09`"
 	- $X\sim Unif(\{x_{1},...,x_{n}\})$ ovvero ha legge uniforme.
 	- $$\mathbb{E}[X]=\frac{1}{n}\sum\limits_{i=1}^{n}x_{i}$$
 	- $$var(X)=\sum\limits_{x_{i}\in S_{X}}(x_{i}-\mathbb{E}[X])^{2}p_{X}(x_{i})=\frac{1}{n}\sum\limits_{i=1}^{n}(x_{i}-\mathbb{E}[X])^{2}$$
-- # Distribuzione di Bernoulli di parametro:
+- # Distribuzione di Bernoulli di parametro: ^45a12b
 	- $p\in [0,1]$:
 		- $S_{X}=\{0,1\}$
 		- $$\begin{array}{|c|c|c|c|c|c|c|} \hline x & 0&1&{///}\\ \hline \mathbb{P}(X=x) &1-p &p&1 \\ \hline \end{array}$$

@@ -35,7 +35,7 @@ data: "`2025-02-27 13:39`"
 				- se faccio `MAXINT+1` ottengo un overflow 
 					- per sapere se un espressione da overflow è importante sapere l’associatività degli operatori.
 					- `MAXINT+1-2` potrebbe non dare overflow se letto con l’associatività a destra.
-			- #### Effetti collaterali (side effect):
+			- #### Effetti collaterali (side effect): ^5c1456
 				- `(a + f(b) ) * (c + f(b) )` il risultato potrebbe cambiare in base alla lettura nel caso in cui `f(b)` abbia _effetti collaterali_ ovvero cambiasse il valore di `b`.
 			- #### Operandi non definiti:
 				- `a == 0 ? b : b/a` questa scrittura presuppone una valutazione _lazy_ ovvero solo degli operandi strettamente necessari.

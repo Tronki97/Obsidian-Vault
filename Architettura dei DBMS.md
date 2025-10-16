@@ -1,0 +1,62 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-10-16 15:16`"
+---
+- # Argomento:
+	- Il DBMS si trova tra la query effettuata e il risultato ottenuto 
+	- ![[Pasted image 20251016151932.png]]
+	- L'utente non può interagire direttamente con la [[Memoria secondaria]] quindi ci sono tutti questi livelli per gestire una richiesta al database
+	- ## processore delle query:
+		- Impatta maggiormente la velocità delle risposte
+		- ### compilatore:
+			- Trasforma la query da SQL a un linguaggio più a basso livello tramite:
+				- #### Parsing:
+					- Costruisce l'albero di struttura 
+				- #### Pre-processing:
+					- Da query SQL a [[Algebra relazionale]]
+				- #### Ottimizzazione:
+					- Ottimizza le query cosi che siano più veloci
+		- ### Motore:
+			- Esegue tutti gli step messi giù dal compilatore per dare un risultato
+		- ### ES:
+			- ![[Pasted image 20251016152443.png|650]]
+	- ## manager delle risorse:
+		- Avendo fatto una query si fa richiesta su delle relazioni ma il processore delle query non sa quali siano quelle relazioni e a fornirgliele è il _manager delle risorse_.
+		- ### index/record manager:
+			- Conosce lo schema del database e le strutture dati che supportano un accesso ai dati efficiente.
+		- ### Buffer manager:
+			- Partiziona la memoria principale in blocchi più piccoli che velocizzano l'accesso a cerit dati
+		- ### Storage manager:
+			- Tiene traccia della posizione dei file sul disco.
+		- ### ES:
+			- ![[Pasted image 20251016153211.png|600]]
+			- E si fa lo stesso per le altre operazioni, _da notare_ come per l' ultima [[Algebra relazionale#^f5e7ef|selection]] e [[Algebra relazionale#^eb237a|projection]] non si necessita di riprendere la relazione che ci serve visto che è già presente nel buffer.
+	- ## Manager delle transazioni:
+		- Una transazione è un blocco di istruzioni che deve essere eseguito come una unica query
+		- Quindi quando succede un problema in mezzo ad una transazione si fa il ripristino del database ad appena prima dell'inizio della transazione.
+		- ![[Pasted image 20251016154035.png]]
+		- ### Logging and recovery:
+			- Ogni volta che modifico il database scrivo tutte le informazioni necessarie su un _Log_
+			- Si scrive il log sul buffer per poi scrivere su disco le modifiche fatte
+			- Nel caso di errore il recovery manager esamina il log e ripristina il database a prima delle operazioni indicate sul log
+		- ### Concurrency control:
+			- Le azioni di tutte le transazioni devono avere lo stesso effetto sia se le eseguo in parallelo sia se le eseguo in serie.
+			- In caso di deadlock il transaction manager ha il compito di fare _rollback_ o _abort_ di alcune operazioni per permettere ad altre di proseguire.
+	- ## Implementazioni sul Join:
+		- ### Nested-loop:
+			- $R$ _outer tabel_; $S$ _inner table_
+			- Si fa il controllo per vedere i match di R su ogni valore di S in maniera esponenziale $O(n*m)$
+			- ![[Nested-Loop-Join-50fps-1.gif]]
+		- ### Single-loop:
+			- C'è un indice che velocizza il processo ad ogni controllo dove si chiede il primo indice di ogni tipo di dato e si continua finche il dato è di quel tipo. 
+			- 
+		- ### sort-merge:
+			- Entrambe S e R vengono ordinate per poi venire scansionate e fare il join degli attributi che hanno gli stessi valori 
+			- L'ottimizzatore potrebbe decidere di fare questo tipo di join quando si ha a che fare con grandi tabelle.
+		- ### hash-based:
+			- Alle tabelle viene applicata la stessa [[Tabelle Hash#^01153a|funzione hash]]
+			- ![[Hash-Match-Join-Looping-1.gif|700]]
+- # Link Utili:
+	- 

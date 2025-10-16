@@ -1,0 +1,34 @@
+---
+tags:
+aliases:
+  - classificatori byessiani
+  - MNIST
+  - mnist
+data: "`2025-10-13 19:10`"
+---
+- # Distribuzione congiunta:
+	- Si costruisce una tabella con tutte le possibili combinazioni di valori delle features
+	- Poi si stima la probabilità di ogni combinazione di valori.
+		- ![[Pasted image 20251009132523.png|450]]
+		- Con $n$ features booleane bisogna stimare $2^{n}-1$ parametri
+	- Data la distribuzione congiunta si può trovare la probabilità di qualsiasi evento che si può esprimere come combinazione di logica di features:
+		- $$P(E)=\sum _{row\in E}P(row)$$
+	- ## ES:
+		- ![[Pasted image 20251009133401.png|450]]
+	- ## Problemi di complessità:
+		- In generale non è gestibile 
+		- $P(Y=wealth|X_{1}=gender,X_{2}=erelav.)$
+		- ![[Pasted image 20251009133613.png]]
+		- Per riempire la tabella serve stimare $4=2^{2}$ parametri
+		- Quindi il problema risiede nel dover _calcolare un numero esponenziale di parametri_
+		- ### ES (MNIST):
+			- Un esempio è il caso _mnist_ del riconoscere i numeri 
+				- ![[Pasted image 20251009133819.png|450]]
+				- Dove si hanno immagini di $28 \times28$ pixel avendo $784$ features quindi $2^{784}$ parametri da stimare
+		- ### Usare classificatori bayesiani:
+			- Si possono usare ma comporta comunque il dover calcolare un sacco di parametri 
+				- ![[Pasted image 20251009134353.png]]
+			- Supponendo che $Y$ assuma $k$ valori si necessiterebbe di calcolare $k^{n}$ valori.
+			- La soluzione è usare una forma più semplice chiamata [[Naive Bayes]]
+- # Link Utili:
+	- 

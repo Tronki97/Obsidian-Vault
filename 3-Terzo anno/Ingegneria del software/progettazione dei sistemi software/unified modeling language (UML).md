@@ -1,7 +1,16 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - modello ad oggetti
+  - UML
+  - use case
+  - casi d'uso
+  - attori
+  - attore
+  - diagramma di classe
+  - aggregazione
+  - ereditarietà virtuale
 data: "`2025-09-29 11:06`"
 ---
 - # perché:
@@ -70,8 +79,12 @@ data: "`2025-09-29 11:06`"
 		- ### Diagramma di classe:
 			- Mostra la struttura statica del sistema con i _tipi degli oggetti_ e le _relazioni_ (_associazioni, sottotipi, dipendenze_)
 			- ![[Pasted image 20250929153720.png|500]]
-			- Una classe può appartenere a più diagrammi visto che i diagrammi ne illustrano aspetti specifici:
-				- Non troppe classi e associazioni
+			- #### Crearlo:
+				- Una classe può appartenere a più diagrammi visto che i diagrammi ne illustrano aspetti specifici:
+					- Non troppe classi e associazioni
+				- Bisogna limitare la classe al problema che ci viene posto, questo ci viene dato dai metodi di sviluppo _agile_ dove ogni giorno bisogna fare un _commit_ e tutto ciò che non riesco a finire in una giornata lavorativa deve essere buttato.
+				- Bisogna iniziare semplici nella costruzione.
+				- Una classe più essere parte di diversi diagrammi
 			- #### Sequenza di prospettive:
 				- ##### Concettuale (OOA):
 					- Mostra i concetti del dominio
@@ -146,11 +159,35 @@ data: "`2025-09-29 11:06`"
 					- Station wagon
 				- Andando verso il basso si _estende_ il significato di macchina agli altri oggetti
 				- Mentre andando verso l'alto si _generalizza_ dicendo che quegli oggetti sono macchine
+					- In pratica si genera un sottoclasse.
+					- Si fanno operazioni che aggiungono caratteristiche alle classi.
 		- ### Istanziazione e generalizzazione:
 			- ![[Pasted image 20250930115257.png|350]]
 			- Risulta che l'istanziazione non è una relazione transitiva: 
 				- _shep_ è una istanza di _border collie_, Il _border collie_ è un'istanza di _razza_ ma _shep_ non è una istanza di _razza_
 			- La generalizzazione è transitiva:
 				- _shep_ è _border collie_, _border collie_ sono generalizzabili come _cani_ quindi _shep_ è generalizzabile come _cane_.
+		- ### come capire a quale classe appartiene un oggetto:
+			- Si usano vari criteri
+			- Ogni volta che si crea un oggetto gli do un tipo che lo lega ad una classe.
+			- A volte però l'appartenenza è definita da regole implicite
+				- Se un oggetto ha un certo nome appartiene ad una classe.
+					- Per esempio tutti i numeri appartengono alla classe `Comparable`
+		- ### Cambiare classe durante esecuzione:
+			- In UML è possibile 
+			- In linguaggi ad oggetti si usano le sottoclassi 
+		- ### ereditarietà multipla:
+			- Implementarla richiede di tenere traccia di vari rapporti di ereditarietà che potrebbero essere in conflitto.
+			- #### Ereditarietà virtuale:
+				- Avere più classi su catene diverse che ereditano dalla stessa base
+				- Una classe è virtuale quando la classe base è condivisa tra tutte le derivazioni virtuali
+				- ![[Pasted image 20251006111318.png|450]]
+				- ![[Pasted image 20251006111333.png|450]]
+			- #### Come evitarla:
+				- è una questione implementativa e quindi come pensare al modello.
+				- Uso tecnica di aggregazione e delega:
+					- Creando oggetti complessi evitando l'ereditarietà aggregando delle caratteristiche 
+						- ![[Pasted image 20251006111600.png|]]
+							- In questo modo però non posso sfruttare il polimorfismo.
 - # Link Utili:
 	- 

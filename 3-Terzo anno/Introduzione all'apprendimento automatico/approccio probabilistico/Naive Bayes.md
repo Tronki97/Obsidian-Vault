@@ -1,0 +1,124 @@
+---
+tags:
+  - TODO
+aliases:
+  - MLE
+  - maximul likelihood estimates
+  - naive bayes lineare
+  - linearità di naive bayes
+  - naive bayes gaussiano
+data: "`2025-10-02 14:24`"
+---
+- # Naive Bayes:
+	- Si suppone che 
+		- $$P(X_{1},...,X_{n}|Y)=\prod_{i}P(X_{1}|Y)$$
+			- Ovvero tutti i parametri sono indipendenti tra di loro.
+	- In questo modo si riesce ad approssimare la distribuzione congiunta.
+	- Se suppongo di nuovo avere Y booleano dovrò calcolare al massimo $2n-1$
+	- ## fittare sul dataset di training:
+		- Per tutti i valori di $y_{k}$ di $Y$ devo stimare:
+			- $\pi_{k}=P(Y=y_{k})$
+		- Per ogni $x_{ij}$ di $X_{i}$ devo stimare:
+			- $$\theta_{ijk}=P(X_{i}=x_{ij}|Y=y_{k})$$
+		- Classifico quindi $a^{new}=<a_{1},...,a_{n}>$
+	- ## MLE (MAXIMUM LIKELIHOOD ESTIMATES):
+		- Si usa per stimare i dati di training, e quindi la probabilità a priori ovvero 
+			- $$\pi_{k}=P(Y=y_{k})= \frac{\#D\{Y=y_{k}\}}{|D|}$$
+		- $$\theta_{ijk}=P(X_{i}=x_{ij}|Y=y_{k})=\frac{\#D\{X_{i}=x_{ij} \wedge Y=y_{k}\}}{\#D\{Y=y_{k}\}}$$
+		- ### ES:
+			- Lancio una moneta 10 volte, risultano 6T e 4C
+			- Quindi $P(T)=0.6$ e $P(C)=0.4$
+			- Suppongo che ci siano 2 possibilità:
+				- La moneta è regolare quindi 50% per ogni outcome
+				- La moneta è falsa e $P(T)=0.7$ e $P(C)=0.3$
+			- Mi chiedo quindi di che tipo sia la moneta ovvero _quale dei due modelli è più likely_ in base alle osservazioni 
+			- Siamo in una situazione di [[Distribuzioni notevoli di variabili aleatorie discrete#^45a12b|distribuzione di bernoulli]] con i lanci indipendenti uno dall'altro, con $n$ lanci si ha quindi una distribuzione:
+				- $$P(X^{n}=\alpha_{0}| \theta)=\binom{n}{\alpha_{0}}*\theta^{\alpha_{0}}*(1-\theta)^{\alpha_{1}}$$
+				- Con $X_{n}$ il numero di C in una sequenza di lanci
+			- adesso quindi si può rispondere alla domanda di prima.
+				- _Supponendo che non sia truccata_:
+					- $$P(X^{n}=6 | \theta)=\binom{10}{6}*\left( \frac{1}{2} \right)^{2}*\left( \frac{1}{2} \right)^{4}=0.205$$
+				- _Se invece fosse truccata_:
+					- $$P(X^{n}=6 | \theta)=\binom{10}{6}*(0.7)^{6}*(0.3)^{4}=0.2$$
+				- _Quindi è leggermente più probabile che la moneta sia regolare_
+		- ### Calcolo MLE:
+			- $$\hat{\theta}= \arg \max_{\theta} P(X^{n}=\alpha_{0}|\theta)=\theta^{\alpha_{0}}*(1-\theta)^{\alpha_{1}}$$
+			- Vuol dire dover trovare il $\theta$ che massimizzi:
+				- $$\ln(\theta^{\alpha_{0}}*(1-\theta)^{\alpha_{1}})=\alpha_{0} \ln(\theta)+\alpha_{1}\ln (1-\theta)$$
+				- Basta fare la derivata rispetto a $\theta$:
+					- $$\frac{\alpha_{0}}{\theta}-\frac{\alpha_{1}}{1-\theta}=\frac{\alpha_{0}-\alpha_{0}\theta-\alpha_{1}\theta }{\theta*(1-\theta)}$$
+					- Che si annulla per:
+						- $$\theta=\frac{\alpha_{0}}{\alpha_{0}+\alpha_{1}}=\frac{\alpha_{0}}{n}$$
+	- ## ES:
+		- ![[Pasted image 20251009141507.png|450]]
+		- Calcolo le probabilità a priori $\pi_{yes}=\frac{9}{14}$ e $\pi_{no}=\frac{5}{14}$
+		- Si divide in subset:
+			- Giorni _yes_
+				- ![[Pasted image 20251009141701.png|450]]
+				- E si calcolano tutti i $\theta_{i,yes}$
+					- ![[Pasted image 20251009141808.png|600]]
+			- Giorni _no_:
+			- ![[Pasted image 20251009142009.png|600]]
+		- Una volta calcolati tutti i parametri del modello, quindi aver fittato sul dataset e quindi si può cominciare a fare predizioni:
+			- Provo su una _istanza_ _outlook=sunny, temp=cool, humidity=high, wind=strong_
+			- E quindi si calcola:
+				- $$arg\ max_{y\in yes,no}P(y)*P(sunny|y)*P(cool|y)*P(high|y)*P(strong|y)$$
+				- Ovvero equivale a confrontare:
+					- $$\pi_{yes}*\theta_{ij}=0.0053$$
+					- $$\pi_{no}*\theta_{ij}=0.0205$$
+		- La risposta quindi è _NO_ "non è una buona giornata per giocare a tennis"
+	- ## Approccio generativo:
+		- Bayes permette di stimare la distribuzione data la categoria 
+	- ## Lineare:
+		- Le feature di input sono valutate con dei pesi lineari.
+		- Considero il caso booleano $X_{i}, Y$ booleani
+		- Classifico $\vec{x}=\langle x_{1},...,x_{n}\rangle$
+			- ![[Pasted image 20251010143632.png|650]] 
+			- Ho che $f(x)=x*f(1)+(1-x)*f(0)$
+			- Posto $\theta_{ik}=P(X_{i}=1|y=k)$ e quindi la disequazione diventa:
+				- ![[Pasted image 20251010143906.png]]
+		- In questo modo ogni caratteristica $x_{i}$ contribuisce in _maniera indipendente dalle altre al risultato in maniera lineare_ con un determinato peso, ed è proprio questo peso che deve essere stimato
+	- ## Gaussiano:
+		- Siamo nella situazione in cui le feature $X_{i}$ sono continue.
+		- Suppongo quindi che $P(X_{i}|Y)$ abbia [[Distribuzioni notevoli continue#^68d52e|distribuzione normale gaussiana]]
+			- Questa distribuzione è interessante perché molti fenomeni da analizzare tendono ad avere questa distribuzione e può anche essere vista come caso limite della binomiale dove si aumenta di molto il numero di lanci.
+		- ### N.B:
+			- L'integrale della distribuzione è 1
+		- ![[Pasted image 20251016132242.png|450]]
+			- Si decide la boundary che di solito dovrebbe trovarsi a metà tra i due picchi.
+			- Qualunque dato si trovi a sinistra o destra si classificherà in un certo modo e ciò può causare degli errori.
+			- _FN_: classificato come femmina ma in realtà è maschio
+			- _FP_: classificato come maschio ma in realtà femmina
+			- _TN_ e _TP_ classificazioni giuste
+		- ### Accuratezza:
+			- Istanze classificate correttamente
+			- $$accuratezza= \frac{TP+TN}{All}$$
+			- Può essere fuorviante nel caso si ha un dataset sbilanciato
+			- 
+		- ### Precisione:
+			- Precisione sulla classificazione dei positivi 
+			- $$Precisione= \frac{TP}{TP+FP}$$
+		- ### Richiamo:
+			- Percentuale di positivi recuperata
+			- Quanti tra gli elementi che volevo individuare il modello è riuscito ad individuare.
+			- $$richiamo=\frac{TP}{TP+FN}$$
+		- ### Recupero:
+			- Media armonica tra _precisione_ e _richiamo_
+			- $$F1=2*\frac{Precisione*Richiamo}{Precisione+Richiamo}$$
+		- ### Parametri descrittivi:
+			- Vista la distribuzione gaussiana si necessita di calcolare i valori dei paramtri $\mu_{ik}, \sigma_{ik}$ e 
+				- $$\pi_{k}=P(Y=y_{k})$$
+			- #### Classificazione:
+				- $x^{new}=\langle a_{1},...,a_{n} \rangle$
+				- ![[Pasted image 20251016141936.png]]
+		- ### Calcolo MLE:
+			- $\mu_{ik}$ è il _valore medio di $X_{i}$ per i dati con etichetta $Y=y_{k}$ _
+				- ![[Pasted image 20251016142133.png]]
+				- Con $j$ che varia sulle istanze del training set e 
+					- ![[Pasted image 20251016142208.png]]
+			- $\sigma_{ik}^{2}$ _è la varianza di $X_{i}$ per le istanze con etichetta $Y=y_{k}$ _
+				- ![[Pasted image 20251016142339.png]]
+		- 
+- # Link Utili:
+	- Mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+	- Aaaaaaaaaaaaaaaauuuuuuuuuuuuuggggggggggggghhhhhhhhhh

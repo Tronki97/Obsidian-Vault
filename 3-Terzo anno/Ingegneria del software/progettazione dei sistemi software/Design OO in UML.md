@@ -1,0 +1,132 @@
+---
+tags:
+  - TODO
+aliases:
+  - decomponibilità
+  - componibilità
+  - diagramma a oggetti
+  - diagramma di stato
+  - diagramma di attività
+  - diagramma di interazione
+  - diagramma di sequenza
+  - stato di un oggetto
+data: "`2025-10-06 11:45`"
+---
+- # Problemi:
+	- ## Decomponibilità:
+		- Come posso scomporre un problema grande in tanti sotto-problemi più semplici
+		- Non è detto io possa farlo, a volte la soluzione intera è l'unica possibile.
+		- Si cerca sempre di semplificare il problema per renderlo più semplice.
+	- ## Componibilità:
+		- Far crescere gli aspetti di una soluzione per unirli ad altri e costruire il sistema finale.
+		- Tenere la parti singole semplici serve per semplificare questo procedimento.
+	- ## Comprensibilità:
+		- Il sistema deve essere leggibile, la documentazione è ottima ma meglio se si usa il codice come documentazione. (_reading the code explains the code_)
+	- ## Continuità:
+		- Il codice deve essere prodotto in modo incrementale.
+	- ## Protezione:
+		- Serve ridurre la propagazione degli errori dividendo a compartimenti stagni le parti del codice.
+- # design vs analisi:
+	- Ci sono più dettagli, rimangono i diagrammi a classe ma sono raffinati in:
+		- Diagrammi _strutturali_ e _comportamentali_.
+- # Diagrammi strutturali:
+	- ## A oggetti:
+		- Riguardano le istanze delle classi.
+- # Diagrammi comportamentali:
+	- ## Di stato
+		- Dimostrano come un oggetto evolva nel suo stato e lo possa cambiare
+		- Possono fare riferimento anche a sotto-sistemi
+	- ## Di attività:
+		- Descrivono il workflow, simili alle _reti di Petri_
+		- ![[Pasted image 20251006123603.png|300]]
+		- La prima barra è il _fork_ e la seconda è il _join_
+		- Le attività possono quindi essere eseguite parallelamente
+		- Per continuare dopo il join si necessita che tutte le attività entranti abbiano finito di eseguire.
+		- ### Condizioni:
+			- Si possono aggiungere delle condizioni per far si che alcune azione vengano eseguite con determinate condizione.
+			- ![[Pasted image 20251006135752.png|500]]
+	- ## Di interazione:
+		- Si concentrano su oggetti e entità reali.
+		- Descrivono come gli oggetti comunicano tra di loro.
+		- Con 2 tipi di viste: _time-based_ e _organization-based_
+	- ## Di sequenza:
+		- Mostrano le interazioni tra oggetti organizzati in una timeline 
+		- Rappresentano gli scambi dei messaggi che generano degli eventi.
+		- Gli oggetti sono organizzati in una linea orizzontale e gli eventi in una linea temporale verticale.
+		- ![[Pasted image 20251006141523.png|600]]
+		- Le sequenze di messaggi sono difficili da interpretare.
+	- ## Di collaborazione:
+		- Mostrano come oggetti interagiscono rispetto all'organizzazione in cui si trovano 
+		- Le sequenze temporali sono presenti tramite delle sequenze numeriche ma non graficamente.
+		- ![[Pasted image 20251006161918.png|550]]
+		- 
+- # Stato di un oggetto:
+	- Quelle caratteristiche che univocamente permettono di definire in modo univoco il comportamento di un oggetto.
+	- Come per esempio i _valori dei campi_ anche se a volte sono sovrabbondanti quindi non sempre necessari.
+	- ## Cambiamenti di stato:
+		- Alcuni eventi possono causare il cambio dello stato oppure mantenerlo uguale
+		- ### ES:
+			- ![[Pasted image 20251006120254.png|500]] 
+	- ## Diagramma:
+		- ![[Pasted image 20251006120338.png]]
+			- ### Entry:
+				- L'azione eseguita quando si entra nello stato
+			- ### do:
+				- Un azione continua fatta finché sono nello stato
+			- ### on:
+				- Azione fatta in occasione di un evento specifico
+				- Questa azione può anche portare a cambiare stato e quindi obbligarti ad eseguire l'azione di _Exit_.
+			- ### Exit:
+				- L'azione fatta all'uscita dallo stato.
+- # Progettazione del sistema:
+	- Progettare parti specifiche del sistema che fanno determinati servizi definite come _sottosistemi_.
+	- ## Contratto:
+		- Indica quali caratteristiche sono in un sistema e quali vincoli sono presenti.
+	- ## Come dividere in sottosistemi:
+		- Si usa un approccio ad oggetti dividendo un prodotto in _package_ e _componenti_
+		- ### Package:
+			- Unità di deployment, la dimensione è dettata dalla richiesta del cliente
+			- Vengono mostrate le dipendenze
+			- ![[Pasted image 20251006163511.png|450]]
+			- La complessità di interfaccia dei package si può ridurre?
+				- Si può definire una classe che definisce il comportamento pubblico del package
+			- Si cerca di evitare di usare strutture cicliche e di ridurre le dipendenze.
+	- ## Componenti:
+		- Rappresentati simili ai chip integrati in quanto si ha degli input e si restituiscono degli output
+			- ![[Pasted image 20251013110046.png|650]]
+			- Gli output sono rappresentati dalle interfacce.
+		- Utili per rappresentare le collaborazioni con altri componenti:
+			- ![[Pasted image 20251013110131.png|650]]
+		- ### Realizzazioni e dipendenze:
+			- ![[Pasted image 20251013110609.png|450]]
+		- Un componente può anche avere più classi e/o essere sottoclasse di classi diverse.
+		- ### Stereotipo:
+			- Un tag che do ad ogni componente per dire cosa dovrebbe rappresentare non deve essere per forza una scritta ma può anche essere un immagine.
+				- In generale è il modo che uso per dire cosa un determinato componente rappresenta.
+			- ![[Pasted image 20251013110914.png|650]]
+	- ## Nodi:
+		- Sono elementi fisici/virtuali in cui avviene la computazione rappresentati con dei _cubi_ a cui si possono affibbiare degli stereotipi e inserire dei componenti al loro interno 
+- # Real time UML:
+	- Un sistema che risponde agli input in maniera tale da influenzare gli input successivi
+	- Permette di gestire cambi, temporalizzazione di eventi e la gestione di limiti di tempo.
+	- _when_ è un evento di cambio 
+		- `when (12:00AM) / goForLunch()`
+	- Stessa cosa per _after_:
+		- `after(5 minutes) / put the egg in the pot`
+	- ## Limiti di tempo:
+		- ![[Pasted image 20251013152137.png]]
+	- ## ROOM:
+		- Aggiunge dei vincoli che rendono più visibile la visione in real-time
+	- ## OCL:
+		- Permette di aggiungere semantica.
+		- Può dare vincoli ai diagrammi [[unified modeling language (UML)|UML]] ed è puro quindi non genera [[Controllo#^5c1456|side effect]] 
+		- Non può essere eseguito
+		- Definisco quindi tutte le azioni e interazioni possibili
+		- Le espressioni sono _fortemente tipate_
+		- Le _pre_ e _post_ condizioni sono assegnate alle operazioni:
+			- ![[Pasted image 20251013152816.png]] 
+- # Refactoring:
+	- Si cerca di migliorare la qualità del codice senza modificarne il comportamento 
+	- Ad un certo punto della scrittura del codice mi fermo e mi metto a semplificare il codice scritto.
+- # Link Utili:
+	- 

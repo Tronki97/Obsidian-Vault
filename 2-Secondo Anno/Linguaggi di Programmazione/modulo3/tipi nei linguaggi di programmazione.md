@@ -26,7 +26,7 @@ data: "`2025-04-02 11:17`"
 		- Facendo il _type-checking_ quindi trovando gli errori usando i tipi prima ancora di far girare il programma. Più facile da gestire rispetto all’analizzare lo stack trace degli errori, anche in quanto le segnalazioni derivate sono più accurate  ^5b2524
 		- I tipi sono utili anche per fare il _refactoring_ di un codice in quanto basta modificare la dichiarazione di una struttura dati per poi, grazie al _type-checker_, individuare dove quel tipo viene usato nel modo errato.
 		- ### Safety: ^75d594
-			- Capacità di un linguaggio di Garantire l’integrità delle sue astrazioni, e di quelle di livello superiore i linguaggi con questa caratteristica sono anche detti: _strongly typed_.
+			- Capacità di un linguaggio di Garantire l’integrità delle sue astrazioni, e di quelle di livello superiore i linguaggi con questa caratteristica sono anche detti: _strongly typed_. ^f76e46
 			- #### Es:
 				- se un linguaggio mi fa definire un [[Array]] con tutte le su operazioni e caratteristiche tra cui la dimensione, quando vado fuori dal limite dell’array mi dovrebbe arrivare un errore.
 			- Con la _type-safety_ si possono anche avere dei controlli a run-time che rilevano operazioni non consentite nell'ambito dei tipi che formano gli operandi e che quando accadono generano errori o sollevano eccezioni.

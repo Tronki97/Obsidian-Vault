@@ -1,0 +1,42 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-10-16 19:30`"
+---
+- # intro:
+	- Spesso un programma può essere rappresentato come una sequenza di _read(x)_ e _write(x)_
+	- Quindi una transizione rappresenta l'esecuzione di un _programma utente_ in un [[introduzione Basi di dati#^7f1908|DBMS]] che include una o più read/write
+- # Problemi:
+	- ![[Pasted image 20251016193402.png]]
+	- Cosa succederebbe se allo stesso tempo un altro utente volesse trasferire soldi ([[Concorrenza]]) o ci fosse un errore (_recovery_)
+	- Quindi l'utente non deve accorgersi dell'esecuzione in parallelo di molteplici altre transazioni e il DBMS deve assicurare che le altre transazioni non vengano influenzate da una esecuzione incorretta di una. 
+- # ACID:
+	- Esistono un insieme di proprietà che assicurano l'esecuzione sicura delle transazioni e un eventuale recupero. 
+	- ## Atomicity:
+		- Una transizione è una unità atomica quindi o vengono eseguite tutte le operazioni oppure nessuna.
+		- Non deve esserci uno stato in cui una transazione è parzialmente completata.
+		- Garantita dal DBMS tramite dei _file di log di tutte le operazioni mai fatte_
+			- In caso di annullamento il database controlla il file di log e fa un _rollback_ all'ultimo stato consistente prima dell'annullamento della transazione. 
+	- ## Consistency:
+		- Tutte le transazioni devono mantenere la _consistenza del database_ ovvero i vincoli sulle relazioni
+		- Deve essere garantita dall'utente che sta implementando quella transazione
+		- Una transazione annullata potrebbe portare a uno stato del DB inconsistente
+		- _una transizione parte sempre da uno stato consistente e finisce in uno stato consistente_:
+			- Può passare da stati inconsistenti
+			- ![[Pasted image 20251016201035.png|550]]
+	- ## Isolation:
+		- Ogni transazione deve apparire come se venisse eseguita da sola senza altre transazioni contemporanee  
+		- Deve apparire come se l'esecuzione di transazioni in parallelo fosse identica all'esecuzione delle stesse in serie.
+	- ## Durability:
+		- Quando la transazione cambia il database serve che che modifiche fatte non vengano mai perse a causa di fallimenti successivi.   
+	- Il DBMS però non garantisce che le transazioni siano eseguite in un determinato ordine.
+- # Casi di annullamento:
+	- ## Anomalia interna:
+		- Causata dall'esecuzione, quindi il DBMS interrompe la transizione.
+	- ## Condizioni d'eccezione:
+		- Individuate dalla transazione che si sospenderà da sola.
+	- ## System crash:
+		- Può accadere per vari motivi.
+- # Link Utili:
+	- 

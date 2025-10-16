@@ -4,7 +4,6 @@ aliases:
   - database
   - basi di dati
   - DBMS
-  - transazione
   - DBMS grande
   - DBMS condiviso
   - DBMS persistente
@@ -79,7 +78,7 @@ data: "`2025-09-24 09:11`"
 				- #### Transazione:
 					- Insieme di operazioni raggruppate non decomponibile ed eseguite in modo atomico.
 					- Quindi garantendo la persistenza del dato e che le operazioni eseguite lo siano correttamente.
-					- Le transazioni dono da eseguire _concorrentemente_
+					- Le transazioni sono da eseguire _concorrentemente_
 					- Post transazione i dati devono essere coerenti.
 					- L'effetto della transazione è permanente e l'esito sia tracciato in un _log_ anche in caso la transazione sia fallita.
 		- Garantisce:
