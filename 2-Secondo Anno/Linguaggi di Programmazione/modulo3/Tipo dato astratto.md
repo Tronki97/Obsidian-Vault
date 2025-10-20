@@ -176,7 +176,7 @@ data: "`2025-05-07 11:42`"
 		- ## Scegliere un costruttore:
 			- Le classi possono fornire diversi costruttori tra cui il compilatore/interprete deve scegliere  
 		- ![[Pasted image 20250828170740.png|300]]
-	- ## Ereditarietà multipla:
+	- ## Ereditarietà multipla: ^7786ca
 		- In alcuni linguaggi una classe può ereditare metodi da diverse _superclassi_ la gerarchia è a DAG e si parla di ereditarietà multipla.
 		- Questo tipo di ereditarietà comporta problemi concettuali e di implementazione.
 			- Problemi di conflitto tra i nomi di metodi ereditati da due classi diverse ma con la stessa firma.
@@ -193,7 +193,7 @@ data: "`2025-05-07 11:42`"
 			- ### Dispatch dinamico dei metodi:
 				- Una classe ridefinisce l'implementazione di un metodo, in modo che il codice eseguito dipenda dal tipo dell'oggetto che riceve il [[Message passing|messaggio]]; Dinamico perché si sa il tipo effettivo solo a tempo di esecuzione.
 				- ![[Pasted image 20250828174541.png|400]]
-			- ### Overloading:
+			- ### Overloading: ^a3f555
 				- Come l'overriding risolve una situazione di ambiguità in cui lo stesso nome può avere significati diversi.
 				- #### Early binding:
 					- Si usano le informazioni statiche per legare il nome al significato.

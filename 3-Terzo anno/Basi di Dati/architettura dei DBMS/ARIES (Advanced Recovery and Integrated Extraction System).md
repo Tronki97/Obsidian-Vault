@@ -1,0 +1,78 @@
+---
+tags:
+aliases:
+  - Write-Ahead logging
+  - Repeat History During Redo
+  - Logging Changes During Undo
+  - File di log
+  - log file
+  - Dirty Page table
+  - Transaction Table
+  - Log file record
+  - checkpoint
+data: "`2025-10-18 18:58`"
+---
+- # ARIES:
+	- è un algoritmo di recupero eseguito dal [[Architettura dei DBMS#^0c2387|logging and recovery]] manager sui crash di sistema.
+	- è composto da 3 fasi:
+		- ## Analisi:
+			- Identifica le _dirty pages_ sul buffer (ovvero i cambiamenti non ancora scritti su disco) e le _transazioni attive al tempo del crash_
+		- ## Redo:
+			- Partendo da un _checkpoint_ nel file di log, ripete tutte le operazioni e riporta il DB allo stato in cui era prima del crash
+		- ## Undo:
+			- Cancella le operazioni di transazioni che erano attive al tempo del crash ma che _non avevano committato_ in ordine inverso.
+- # Principi ARIES:
+	- ## Write-Ahead logging:
+		- Ogni cambiamento agli oggetti del DB deve essere segnato nel file di log che poi deve essere scritto sulla [[Memoria secondaria]], infine le pagine modificate corrispondenti devono essere aggiornate   
+	- ## Repeat History During Redo:
+		- Al riavvio dopo il crash il sistema è riportato allo stato in cui era prima del crash quindi le operazioni delle transazioni attive al tempo del crash vengono cancellate 
+	- ## Logging Changes During Undo:
+		- I cambiamenti fatti al DB durante l'annullamento delle transazioni sono _loggate_ per assicurare che tale azione non sia ripetuta nel caso di un altro crash o riavvio.
+- # File di log:
+	- Tengono traccia di tutte le azioni fatte dal DBMS 
+	- è organizzato in records immagazzinati in uno storage stabile il quale si assume resistere a dei crash o fallimenti hardware
+	- I record sono ordinati in sequenza con un ID unico chiamato _LSN_ (Log Sequence Number)
+	- La parte più recente del file chiamata _log-tail_ è tenuta in un _log buffer_ e salvata periodicamente in uno storage stabile.
+	- ## Strutture dati di logging:
+		- ### Dirty Page table:
+			- Tiene traccia di tutt gli ID delle pagine modificate ma non ancora scritte nello storage stabile, e del primo LSN che ha reso quelle pagine dirty
+		- ### Transaction Table:
+			- Tiene traccia di tutti gli ID delle [[transazioni]] che stanno venendo eseguite, e dell'LSN dell'ultimo log che hanno causato.
+		- ### Log file record:
+			- `<LSN, Transaction ID, Page ID, Redo, Undo, Previous LSN>`
+				- _Transaction ID_ e _Page ID_: identificano la transizione e la pagina
+				- _Redo, Undo_: mantengono informazioni riguardo i cambiamenti che il _log record_ si salva e come annullarli
+				- _Previous LSN_: è un riferimento al precedente _log record_ che è stato creato per la stessa transazione. Permette di fare _rollback_ su transazioni annullate facilmente. 
+			- #### Creazione:
+				- Un record viene scritto nel _log file_ per ogniuno di questi eventi:
+					- ##### aggiornamento di pagina:
+						- Il record va scritto prima di cambiare effettivamente i dati della pagina
+						- Mantiene i valori nuovi e vecchi per facilitare un _undo_ e _redo_
+					- ##### Commit:
+						- Il record tiene traccia di una transazione completata con successo e la _log-tail_ è stata scritta sullo storage stabile
+					- ##### Abort:
+						- Tiene traccia che una transazione è stata annullata e che l'_undo_ è iniziato
+					- ##### Fine:
+						- Dopo un _commit/abort_ alcune operazioni sono necessarie dopo le quali un _end record_ viene scritto
+					- ##### Undoing operations:
+						- Durante un _recovery_ o durante l'_undoing_ un log speciale viene scritto chiamato _CLR_(compensation log record) che non viene mai invertito e traccia che una operazione è già stata annullata. 
+	- ## Checkpoint:
+		- è una _istantanea dello stato del DB_
+		- Riduce il tempo di recovery in quanto basta tornare indietro fino al checkpoint invece di scorrere tutto il file.
+		- ARIES crea un checkpoint in 3 passi:
+			- Si scrive un _checkpoint d'inizio_
+			- Un _checpoint di fine_ che contiene la _dirty page table_ e la _transaction table_ è scritto
+			- Dopo che il _checpoint di fine_ viene scritto sullo storage stabile un _master record_ che contiene il _LSN_ del _checkpoint d'inizio_ viene scritto in un posto conosciuto in uno _storage stabile_
+		- Ciò viene chiamato _fuzzy checkpoint_ e non interrompe le normali operazioni del [[introduzione Basi di dati#^7f1908|DBMS]] e non richiede la scrittura di pagine sul _buffer_ 
+- # Crash recovery:
+	- 3 fasi:
+	- ## Analisi:
+		- Si determina la posizione del _log file_ dal quale inizia la fase di _redo_ 
+		- Si determina quali pagine del buffer contengono i dati modificati che non erano ancora stati scritti al tempo del crash
+		- Si identifica quale transazione era in esecuzione in quel momento
+	- ## Redo:
+		- Dalla _dirty page table_ ARIES identifica l'_LSN minimale_ di una dirty page. Da li comincia a rifare le azioni fino al crash in caso non fossero già state salvate.
+	- ## Undo:
+		- I cambiamenti di transazioni _non committate_ devono essere disfatti per riportare il DB ad uno stato consistente.
+- # Link Utili:
+	- 

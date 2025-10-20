@@ -102,7 +102,7 @@ data: "`2025-10-01 11:50`"
 				- Dato $R_{1}(X_{1})$ $R_{2}(X_{2})$ 
 					- $R_{1}\bowtie R_{2}$ è la relazione su $X_{1}\cup X_{2}$
 				- $$R_{1} \bowtie R_{2}=\{t\ on \ X_{1}\cup X_{2}| \exists t_{1}\in R_{1}\wedge \exists t_{2}\in R_{2} \ : \ t[X_{1}]=t_{1}\wedge t[X_{2}]=t_{2}\}$$
-			- #### FULL JOIN:
+			- #### FULL JOIN: ^0c9bee
 				- ![[Pasted image 20251002161127.png|450]]
 				- Full perché ogni tupla contribuisce al risultato finale
 			- #### Not Full join:
@@ -139,7 +139,7 @@ data: "`2025-10-01 11:50`"
 			- #### Full Outer join:
 				- è praticamente l'unione degli ultimi 2 operandi ($A\  ⟗\  B$)
 				- ![[Pasted image 20251003120615.png|450]]
-		- ### prodotto cartesiano:
+		- ### prodotto cartesiano: ^dd2800
 			- In pratica è il prodotto cartesiano tra gli insiemi delle tuple delle relazioni prese in considerazione
 			- La dimens ione del risultato è uguale al prodotto di quelle degli operandi
 			- ![[Pasted image 20251003120743.png|450]]

@@ -1,0 +1,165 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-10-16 19:30`"
+---
+- # intro:
+	- Spesso un programma può essere rappresentato come una sequenza di _read(x)_ e _write(x)_
+	- Quindi una transizione rappresenta l'esecuzione di un _programma utente_ in un [[introduzione Basi di dati#^7f1908|DBMS]] che include una o più read/write
+- # Problemi:
+	- ![[Pasted image 20251016193402.png]]
+	- Cosa succederebbe se allo stesso tempo un altro utente volesse trasferire soldi ([[Concorrenza]]) o ci fosse un errore (_recovery_)
+	- Quindi l'utente non deve accorgersi dell'esecuzione in parallelo di molteplici altre transazioni e il DBMS deve assicurare che le altre transazioni non vengano influenzate da una esecuzione incorretta di una. 
+- # ACID:
+	- Esistono un insieme di proprietà che assicurano l'esecuzione sicura delle transazioni e un eventuale recupero. 
+	- ## Atomicity:
+		- Una transizione è una unità atomica quindi o vengono eseguite tutte le operazioni oppure nessuna.
+		- Non deve esserci uno stato in cui una transazione è parzialmente completata.
+		- Garantita dal DBMS tramite dei _file di log di tutte le operazioni mai fatte_
+			- In caso di annullamento il database controlla il file di log e fa un _rollback_ all'ultimo stato consistente prima dell'annullamento della transazione. 
+	- ## Consistency:
+		- Tutte le transazioni devono mantenere la _consistenza del database_ ovvero i vincoli sulle relazioni
+		- Deve essere garantita dall'utente che sta implementando quella transazione
+		- Una transazione annullata potrebbe portare a uno stato del DB inconsistente
+		- _una transizione parte sempre da uno stato consistente e finisce in uno stato consistente_:
+			- Può passare da stati inconsistenti
+			- ![[Pasted image 20251016201035.png|550]]
+	- ## Isolation:
+		- Ogni transazione deve apparire come se venisse eseguita da sola senza altre transazioni contemporanee  
+		- Deve apparire come se l'esecuzione di transazioni in parallelo fosse identica all'esecuzione delle stesse in serie.
+	- ## Durability:
+		- Quando la transazione cambia il database serve che che modifiche fatte non vengano mai perse a causa di fallimenti successivi.   
+	- Il DBMS però non garantisce che le transazioni siano eseguite in un determinato ordine.
+- 
+- # Schedule:
+	- Una schedule $S$ è una sequenza di azioni prese da un insieme di transazioni, l'ordine delle azioni dentro $S$ è lo stesso delle transazioni di cui facevano parte.
+		- Ogni transizione deve specificare la sua azione finale:
+			- _commit_: transazione completata con successo
+			- _abort_: terminazione o annullamento di azioni fatte.
+	- ## ES:
+		- Relazioni $A,\ B,\ C$ alcune transazioni possono essere:
+			- $T_{1}: read_{1}(A),write_{1}(A), read_{1}(C), write_{1}(C)$
+			- $T_{2}: read_{2}(B),write_{2}(B)$
+		- La cui possibile schedule può essere:
+			- $$S:read_{1}(A),write_{1}(A),read_{2}(B),write_{2}(B),read_{1}(C),write_{1}(C)$$
+	- Di fatto una schedule descrive l'esecuzione intermittente di transazioni in competizione 
+	- ## schedule completa:
+		- Include anche le operazioni _commit_ e _abort_ per ogni transazione coinvolta
+	- ## Schedule seriale:
+		- Per ogni transazione tutte le operazioni sono eseguite in sequenza quindi una sola transazione è attiva alla volta.
+	- ## Schedule serializzabile:
+		- L'effetto su una qualsiasi istanza di un DB è garantito essere identico a quello di uno _schedule completo seriale_
+	- ## ES:
+		- ![[Pasted image 20251018163640.png|500]]
+			- $S_{1}$ è _seriale_ in quanto le transazioni sono eseguite una dopo l'altra senza guardare l'ordine.
+		- ![[Pasted image 20251018170533.png|500]]
+			- $S_{3}$ è _serializzabile_ ma non è _seriale_ i suoi effetti sullo stato del DB sono gli stessi di una qualche schedule seriale. 
+		- ![[Pasted image 20251018172051.png|500]]
+			- $S_{4}$ non è _serializzabile_
+- # Anomalie nelle esecuzioni alternanti:
+	- Una esecuzione alternata di 2 _transazioni committate e consistenti_ ($T_{1},T_{2}$) può far finire il DB in uno _stato inconsistente_ e ci possono quindi essere 3 tipi di conflitti:
+		- ## Write-Read: 
+			- Anche detto _dirty read_
+			- $T_{2}$ _legge_ un oggetto _scritto_ da $T_{1}$ ma che _non è ancora stato committato_
+			- ![[Pasted image 20251018172803.png|250]]
+				- $T_{1}: A:=A+100, \ \ B:=B-100$ 
+				- $T_{2}: A:=A*1.06,\ \ B:=B*1.06$
+				- Il problema sta nel fatto che $T_{1}$ _scrive_ $A$ poi $T_{2}$ la legge prima che $T_{1}$ abbia committato e ciò potrebbe rendere il DB _inconsistente_
+		- ## Read-Write:
+			- Anche detto _unrepeatable reads_
+			- $T_{2}$ _scrive_ un oggetto _letto_ da $T_{1}$ ma non ancora _committato_ da $T_{1}$
+			- ![[Pasted image 20251018173253.png|250]]
+				- $T_{1}:A:=A+1$
+				- $T_{2}: A:=A-1$
+				- Il problema sta nel fatto che $T_{1}$ _legge_ A che poi verrà _letta e modificata_ da $T_{2}$ prima che $T_{1}$ abbia committato
+		- ## Write-Write:
+			- Anche detto _lost update_
+			- $T_{2}$ _scrive_ un oggetto _scritto_ da $T_{1}$ ma non ancora _committato_
+			- ![[Pasted image 20251018173450.png|250]]
+				- $T_{1}:A:=1000, B:=1000$
+				- $T_{2}: A:=2000, B:=2000$
+				- Il problema sta nella modifica di $A,B$ fatta da $T_{2}$ prima che $T_{1}$ abbia committato.
+	- ## Anomalie fantasma:
+		- Accade quando una transazione legge un oggetto 2 volte e lo trova diverso la seconda volta
+		- ![[Pasted image 20251018173812.png|400]]
+- # Annullamento delle transazioni:
+	- Di principio tutte le azioni di una transazione vanno cancellate in caso di _abort_ ma non sempre è possibile
+	- ## ES:
+		- ![[Pasted image 20251018174013.png|250]]
+		- $T_{2}$ legge il valore di $A$ che non avrebbe dovuto leggere a causa di un conflitto _read-write_
+		- Una soluzione non soddisfacente sarebbe annullare anche $T_{2}$ ma violerebbe il principio di _durability_ _ACID_
+		- ## Casi di annullamento:
+			- ### Anomalia interna:
+				- Causata dall'esecuzione, quindi il DBMS interrompe la transizione.
+			- ### Condizioni d'eccezione:
+				- Individuate dalla transazione che si sospenderà da sola.
+			- ### System crash:
+				- Può accadere per vari motivi.
+- # Parametri delle transazioni:
+	- ## ACCESS MODE:
+		- Setta i permessi per modificare le tabelle usate nelle transazioni e possono essere `READ ONLY` e `WRITE ONLY`
+	- ## STATEMENT MODE:
+		- Specifica l'azione da fare quando una transazione finisce.
+	- ## ISOLATION LEVEL:
+		- Specifica come gestire le transazioni che modificano il database, spaziando da un basso a un alto livello di isolamento. $\downarrow$
+		- ### READ UNCOMMITTED:
+			- La transizione richiede dei _locks_ per scrivere oggetti ma non per leggerli, la transazione potrebbe leggere dei cambiamenti fatti ma non _committati_ da altre transazioni 
+		- ### READ COMMITTED:
+			- La transizione richiede dei _locks_ per scrivere oggetti e dei _lock condivisi_ per la lettura.
+			- Garantisce che ogni dato letto viene _committato_ al momento della lettura
+		- ### REPEATABLE READS:
+			- La transazione richiede dei _locks_ per _leggere e scrivere_ qualsiasi oggetto e li rilascia solo quando _committa_. 
+			- Non permette ai _blocchi a livello di tabella_ di scansionarla
+		- ### SERIALIZABLE:
+			- Come quella precedente ma comprende i _blochi a livello di tabella_
+		- ![[Pasted image 20251018180444.png|650]]
+- # Approcci nel controllo della concorrenza:
+	- ## Restrittivi:
+		- Si cerca uno scheduling serializzabile che eviti i conflitti attraverso _protocolli di blocco dei dati_
+		- Il [[introduzione Basi di dati#^7f1908|DBMS]] deve assicurare l'_assenza di conflitti_ e il _rollback di azioni annullate_
+		- ### Strict 2 Phase locking (Strict 2PL):
+			- Se una transizione vuole _leggere/scrivere un oggetto_ allora deve richiederne l'_accesso esclusivo_
+			- Dopo il rilascio di un _lock_ la transazione non può acquisirne altri
+			- Quando la transazione _committa_ rilascia tutti gli accessi esclusivi
+			- In questo modo si garantisce la _serializzabilità_ in particolare:
+				- Se le transazioni accedono a _diversi oggetti_ potrebbero _alternarsi liberamente_
+				- Altrimenti se vogliono accedere allo stesso oggetto dovranno eseguire in maniera seriale.
+				- Il _lock manager_ tiene traccia per ogni oggetto nel DB dell'_accesso esclusivo_ in una _lock table_
+			- #### ES:
+				- $S(A)$ è il _lock condiviso_ per leggere $A$
+					- Se una transazione vuole leggere $A$ allora necessita del _lock condiviso_
+					- Questo lock blocca le richieste per _lock esclusivi_ da altre transazioni ma non per _lock condivisi_
+				- $X(A)$ è il _lock esclusivo_ per scrivere $A$
+					- Se una transazione vuole scrivere $A$ allora necessita del _lock esclusivo_
+					- Questo lock blocca qualsiasi richiesta per _lock esclusivi/condivis_
+				- Tutti i _lock vengono rilasciati dopo il commit_
+		- ### Deadlock prevention:
+			- Un controllo basato sui _lock_ può causare dei [[Proprietà di un programma#^2a9ed1|deadlock]] che devono essere evitati o risolti dal DBMS
+			- I DBMS assegnano di solito una priorità ad ogni transazione in base al tempo d'inizio
+			- Suppongo che $T_{i}$ richieda accesso a un lock detenuto da $T_{j}$; Il _lock manager_ potrebbe implementare due politiche:
+				- #### Wait-die:
+					- Se $T_{i}$ è la transazione più vecchia allora aspetta, altrimenti la si _killa_ e la si fa ripartire dopo con un delay random ma con lo stesso _tempo di inizio_
+				- #### Wound-Wait:
+					- Se $T_{i}$ è la transazione più vecchia $T_{j}$ è _killato_ e fatto ripartire dopo con un delay random ma con lo stesso _tempo di inizio_ altrimenti $T_{i}$ aspetta
+		- ### deadlock detection and resolution:
+			- Se i deadlock sono rari il DBMS potrebbe decidere di farli accadere per poi risolverli 
+			- Ci sono due approcci comuni che il DBMS può adottare:
+				- Il _lock manager_ mantiene una struttura chiama _grafo waits-for_ che è usato per identificare i _cicli di deadlock_ il quale viene periodicamente analizzato e i cicli vengono risolti annullando alcune transizioni
+				- Se una transazione è in attesa da più di un certe periodo di tempo dato, il _lock manager_ assume sia in deadlock e lo annulla.
+	- ## Ottimistici:
+		- Fa eseguire tutte le transazioni concorrentemente, _controllando i conflitti prima del commit_
+		- Di base assume che le transazioni non abbiano conflitti 
+		- ### Validation:
+			- Le transazioni hanno il permesso di accedere ai dati senza _lock_ o tempistiche appropriate, controlla che le transizioni si siano comportate in maniera _serializzabile_
+		- Le transazioni sono eseguite in 3 fasi:
+			- _lettura_: si leggono i dati dal DBMS e si scrivono in un'area privata 
+			- _validation_: prima del commit si controlla che non siano accaduti dei conflitti, se così non è si annulla la transazione e la si fa ripartire in automatico
+			- _scrittura_: se la validazione ha avuto successo i dati scritti nell'area privata vengono copiati nel DBMS 
+	- ## Timestamping:
+		- Assegna dei _timestamps_ alle transazioni che hanno _letto o scritto_ oggetti e compara questi valori per determinare l'_ordine_ delle operazioni nello scheduling.
+		- Per ogni operazione $a_{i}$ fatta da $T_{i}$ 
+			- Se l'operazione $a_{i}$ va in conflitto con l'operazione $a_{j}$ di $T_{j}$ e $TS_{i} < TS_{j}$ allora _$a_{i}$ deve essere fatta prima di $a_{j}$_
+			- Se una operazione fatta da $T$ viola questo ordine _la transazione $T$ è annullata e fatta ripartire con un $TS$ maggiore_
+- # Link Utili:
+	- 

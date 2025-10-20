@@ -1,7 +1,19 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - processore delle query
+  - manager delle risorse
+  - index manager
+  - record manager
+  - buffer manager
+  - storage manager
+  - manager delle transizioni
+  - logging and recovery
+  - concurrency control
+  - nested-loop join
+  - Single-loop join
+  - sort-merge join
+  - hash-based join
 data: "`2025-10-16 15:16`"
 ---
 - # Argomento:
@@ -37,7 +49,7 @@ data: "`2025-10-16 15:16`"
 		- Una transazione è un blocco di istruzioni che deve essere eseguito come una unica query
 		- Quindi quando succede un problema in mezzo ad una transazione si fa il ripristino del database ad appena prima dell'inizio della transazione.
 		- ![[Pasted image 20251016154035.png]]
-		- ### Logging and recovery:
+		- ### Logging and recovery: ^0c2387
 			- Ogni volta che modifico il database scrivo tutte le informazioni necessarie su un _Log_
 			- Si scrive il log sul buffer per poi scrivere su disco le modifiche fatte
 			- Nel caso di errore il recovery manager esamina il log e ripristina il database a prima delle operazioni indicate sul log

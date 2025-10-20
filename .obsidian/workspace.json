@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/Regressione logistica.md",
+                "file": "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Regressione logistica"
+              "title": "Design OO in UML"
             }
           },
           {
-            "id": "992af34577f4110f",
+            "id": "ecf5ca4499d6dda1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Architettura dei DBMS.md",
+                "file": "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Architettura dei DBMS"
+              "title": "unified modeling language (UML)"
             }
           },
           {
-            "id": "7f309933c5d1745b",
+            "id": "0bf03b947ec30254",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "transazioni.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,16 +76,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "transazioni"
+              "title": "Homepage"
             }
           },
           {
-            "id": "99b22f34478dfeab",
+            "id": "bd50c46a0d8dd264",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Basi di Dati/introduzione/introduzione Basi di dati.md",
+                "file": "3-Terzo anno/Ingegneria del software/Design pattern.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,11 +100,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "introduzione Basi di dati"
+              "title": "Design pattern"
+            }
+          },
+          {
+            "id": "f282d02c572e5b9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "architettura dei software.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "architettura dei software"
+            }
+          },
+          {
+            "id": "612b01365c437472",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Ingegneria del software/esercitazioni UML.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "esercitazioni UML"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -136,7 +184,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "distribuzione congiunta",
+                "query": "Implementazione",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -308,52 +356,52 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Pasted image 20251016201035.png",
+    "3-Terzo anno/Ingegneria del software/Design pattern.md",
+    "architettura dei software.md",
+    "3-Terzo anno/Ingegneria del software/architettura dei software",
+    "Pasted image 20251020121558.png",
+    "Pasted image 20251020120907.png",
+    "Homepage.md",
+    "3-Terzo anno/Ingegneria del software/esercitazioni UML.md",
+    "Pasted image 20251020120212.png",
+    "Pasted image 20251020115753.png",
+    "Pasted image 20251020114806.png",
+    "Pasted image 20251020114740.png",
+    "Pasted image 20251020114626.png",
+    "Pasted image 20251020112933.png",
+    "Pasted image 20251020112237.png",
+    "Pasted image 20251020111249.png",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
+    "3-Terzo anno/Basi di Dati/architettura dei DBMS/transazioni.md",
+    "3-Terzo anno/Basi di Dati/architettura dei DBMS/ARIES (Advanced Recovery and Integrated Extraction System).md",
+    "3-Terzo anno/Basi di Dati/architettura dei DBMS/Architettura dei DBMS.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio machine learning.md",
+    "3-Terzo anno/Basi di Dati/architettura dei DBMS",
+    "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
     "3-Terzo anno/Basi di Dati/introduzione/introduzione Basi di dati.md",
-    "transazioni.md",
-    "Pasted image 20251016193402.png",
-    "Architettura dei DBMS.md",
-    "Hash-Match-Join-Looping-1.gif",
-    "Nested-Loop-Join-50fps-1.gif",
-    "immagini/Pasted image 20251016151932.png",
-    "immagini/Pasted image 20251016154035.png",
-    "immagini/Pasted image 20251016153211.png",
-    "immagini/Pasted image 20251016153153.png",
-    "immagini/Pasted image 20251016152443.png",
     "3-Terzo anno/Introduzione all'apprendimento automatico/Regressione logistica.md",
     "3-Terzo anno/Consigli Tesi.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Naive Bayes.md",
-    "immagini/Pasted image 20251013195324.png",
-    "immagini/Pasted image 20251016145826.png",
     "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Distribuzione congiunta.md",
-    "Homepage.md",
     "3-Terzo anno/Basi di Dati/algebra relazionale/Algebra relazionale.md",
-    "3-Terzo anno/Ingegneria del software/esercitazioni UML.md",
     "3-Terzo anno/Basi di Dati/calcolo relazionale/Calcolo relazionale.md",
-    "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
     "3-Terzo anno/Basi di Dati/calcolo relazionale/Datalog.md",
     "3-Terzo anno/Basi di Dati/calcolo relazionale",
     "3-Terzo anno/Basi di Dati/algebra relazionale/espressioni dell'algebra relazionale equivalenti.md",
     "3-Terzo anno/Basi di Dati/algebra relazionale/Viste.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/problema di classificazione.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico",
-    "3-Terzo anno/Ingegneria del software/Design pattern.md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
     "3-Terzo anno/Ingegneria del software/Templates in C++.md",
     "3-Terzo anno/Ingegneria del software/prima lezione.md",
     "3-Terzo anno/Ingegneria del software/GIT.md",
     "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
-    "3-Terzo anno/Ingegneria del software/esercitazioni OO design.md",
-    "1-Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Cammini minimi.md",
     "3-Terzo anno/Basi di Dati/SQL",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione/Overfitting.md",
     "3-Terzo anno/secondo semestre",
     "3-Terzo anno/primo semestre",
     "Senza nome.base",
     "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione",
     "3-Terzo anno/Basi di Dati/algebra relazionale",
-    "3-Terzo anno/Basi di Dati/modello relazionale",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

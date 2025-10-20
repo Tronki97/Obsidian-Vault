@@ -122,5 +122,43 @@ data: "`2025-10-09 15:50`"
 		- Rimuove l'intera istanza di una tabella insieme agli schema e ai dati
 		- ### ES:
 			- `DROP TABLE OFFENCES`
+- # Definire gli indici:
+	- Rendono più veloce l'accesso quando si cerca di accedere e cercare i dati che possono essere creati associandoli alle tabelle.
+	- Lavora a livello fisico dei dati non a quello logico
+	- Aggiungere altri elementi dopo l'indicizzazione potrebbe portare ad un rallentamento in quanto si necessita di aggiornare ogni volta l'indice.
+	- ## ES:
+		- ![[Pasted image 20251017153207.png|450]]
+- # Operazioni sui dati:
+	- ## Interrogazione
+		- ### Select:
+			- ![[Pasted image 20251018102335.png]]
+			- Le parti riguardanti `FROM` e `WHERE` si chiamano _clausole_
+			- La semantica è: seleziono una lista di attributi dalla `TableList` che rispetti determinate condizioni
+			- Si può usare nell' `attributeList` il `*` per indicare tutti gli attributi
+			- #### ES:
+				- ![[Pasted image 20251018102711.png|650]]
+				- ![[Pasted image 20251018102728.png|650]]
+			- #### Renaming:
+				- ![[Pasted image 20251018102847.png|650]]
+				- Permette di cambiare il nome degli attributi o relazioni in output mettendo il nome che vogliamo vedere dopo l' `AS`
+			- #### LIKE:
+				- `WHERE Name LIKE 'J_m%'` indica che l'attributo `Name` deve rispettare la condizione dove: la prima lettera è una "J" la terza è una "m" e il resto della stringa va bene qualunque sia (anche vuota)
+			- #### Valori NULL:
+				- Si usa il controllo `IS NULL`
+			- è possibile anche usare delle espressioni nella _target list_ come:
+				- `SELECT Income/2 AS HalvedIncome`
+				- In questo modo si avrà come attributo in output `HalvedIncome` che sarà generato a partire dall'espressione usata. 
+				- Ciò fa capire come SQL sia più espressivo dell' [[Algebra relazionale]] e del [[Calcolo relazionale]]
+		- ### Projection:
+			- A differenza dell' [[Algebra relazionale]] che lavora sugli insiemi fare una proiezione avendo come risultato delle tuple identiche non porterà ad un collasso delle tuple ma verranno indicati i duplicati. Per far si che non appaiano si necessita di usare `SELECT DISTINCT`:
+				- ![[Pasted image 20251018103433.png|650]]
+		- ### Join:
+			- Usare più relazioni dopo un  `FROM` porterà ad un [[Algebra relazionale#^0c9bee|join]] 
+			- A volte si potrebbe necessitare una rename nel [[Algebra relazionale#^dd2800|prodotto cartesiano]] e nella _target list_
+			- Le join possono essere _implicite_ o _esplicite_
+				- ![[Pasted image 20251018103828.png|500]]
+			- La sintassi è:
+				- ![[Pasted image 20251018103907.png|500]]
+	- ## Modifica:
 - # Link Utili:
 	- 
