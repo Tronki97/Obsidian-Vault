@@ -1,0 +1,44 @@
+---
+tags:
+aliases:
+  - Singleton pattern
+  - Singleton
+  - Builder pattern
+  - Builder
+  - Abstract factory
+  - Abstract factory pattern
+  - Factory method
+  - Prototype pattern
+data: "`2025-10-20 19:43`"
+---
+- # Pattern creazionali:
+	-  Modalità che uso per creare oggetti.
+	- ## Singleton:
+		- Si vuole avere Una sola istanza di un oggetto
+		- Metto il costruttore di un oggetto privato cosicché non possa essere chiamato ne da sotto-classi ne da altri
+		- Metto come `static` la definizione dell'oggetto
+		- ![[Pasted image 20251013161812.png|450]]
+			- Un altro modo sarebbe fare l' [[Tipo dato astratto#^a3f555|overloading]] dell'operatore `new`
+		- Quindi lo si trasforma nel _singleton pattern_:
+			- ![[Pasted image 20251013162009.png|450]]
+	- ## Builder:
+		- Usato per creare oggetti complessi legando la creazione ad un'oggetto chiamato direttore che tiene traccia di tutti gli oggetti da creare.
+		- ![[Pasted image 20251020110757.png|600]]
+		- Il _costruttore_ può esserne un esempio in quanto se un oggetto è composto da altri oggetti, il costruttore chiama tutti i costruttori degli oggetti che lo compongono
+	- ## Abstract factory:
+		- Devo creare famiglie di oggetti coerenti che dipendono da una scelta iniziale
+		- Un problema è la creazione di una interfaccia grafica del sistema:
+			- ![[Pasted image 20251020111043.png|600]]
+			- Per farlo bisogna creare una abstract factory che gestisca tutti i componenti di una determinata famiglia e per farlo si specifica una determinata famiglia di factory.
+			- ![[Pasted image 20251020111249.png|500]]
+			- ### Factory method:
+				- Metodo usato per creare un oggetto quando le info necessarie per farlo sono disponibili solo a _runtime_
+				- Grazie a questo si possono creare _interfacce_ per creare un oggetto e lasciare le sottoclassi decidere quali classi istanziare.
+				- ![[Pasted image 20251020190413.png|500]]
+	- ## Prototype pattern:
+		- Si crea un oggetto copiandone uno esistente
+		- Utile perché a runtime posso non sapere la struttura di un oggetto ma posso averne una istanza già presente e per capire di che tipo è si interroga quella istanza per leggerne il tipo 
+		- In [[Java]] c'è il `clone` 
+		- ![[Pasted image 20251020112237.png|600]]
+- # Link Utili:
+	- 

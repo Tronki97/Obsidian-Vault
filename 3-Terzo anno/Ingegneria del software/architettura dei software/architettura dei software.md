@@ -1,0 +1,34 @@
+---
+tags:
+aliases:
+  - garland e shaw
+  - pipe e filters
+data: "`2025-10-20 12:23`"
+---
+- # stili di architettura di Garland e Shaw:
+	- Riguarda la divisione del sistema in sottosistemi a diversi livelli
+		- Sia hardware, database e altro...
+	- Nello specifico lo stile dell'architettura definisce un _vocabolario di componenti e tipi di connettori_ e un _insieme di vincoli_ e come possono essere combinati
+	- ## Pipe e Filters
+		- Ogni componente ha un set di input e output 
+		- I componenti leggono dei flussi di input che vengono trasformati e il cui output inizia prima che tutto l'input venga consumato
+		- I componenti sono chiamati _filters_ e devono essere entità indipendenti, i connettori sono chiamati _pipes_ 
+		- ![[Pasted image 20251020184239.png|600]]
+	- ## sistemi stratificati:
+		- Si separa visioni di alto livello da quelle di basso per facilitarne la programmazione e ciò può minarne le performance e a volte alcuni stati si saltano
+		- ![[Pasted image 20251020184316.png|500]]
+	- ## A eventi:
+		- Il sistema aspetta che avvenga un evento e chi causa non sa chi eventualmente reagirà
+		- Un esempio sono i sistemi reattivi.
+	- ## A repositories:
+		- Diviso in due categorie
+			- _database_ : Si ha un database con le [[transazioni]] che eseguono.
+			- _Blackboard_: composte da 
+				- una fonte di conoscenza che applicato agli LLM è la lista di file da cui dovrebbe attingere
+				- La sua struttura dati
+				- Il controllo
+				- ![[Pasted image 20251020185120.png|500]]
+	- ## Interpreti:
+		- Modelli in cui il sistema è così complesso che devo creare un interprete che risolva il problema in maniera più semplice.
+- # Link Utili:
+	- 

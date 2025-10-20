@@ -13,54 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Design OO in UML"
-            }
-          },
-          {
-            "id": "ecf5ca4499d6dda1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "unified modeling language (UML)"
-            }
-          },
-          {
-            "id": "0bf03b947ec30254",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
@@ -78,81 +30,8 @@
               "icon": "lucide-file",
               "title": "Homepage"
             }
-          },
-          {
-            "id": "bd50c46a0d8dd264",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Ingegneria del software/Design pattern.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Design pattern"
-            }
-          },
-          {
-            "id": "f282d02c572e5b9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "architettura dei software.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "architettura dei software"
-            }
-          },
-          {
-            "id": "612b01365c437472",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Ingegneria del software/esercitazioni UML.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "esercitazioni UML"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Implementazione",
+                "query": "storie",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -356,23 +235,30 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "3-Terzo anno/Ingegneria del software/Design pattern.md",
-    "architettura dei software.md",
-    "3-Terzo anno/Ingegneria del software/architettura dei software",
-    "Pasted image 20251020121558.png",
-    "Pasted image 20251020120907.png",
+    "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software.md",
+    "Pasted image 20251020201906.png",
+    "Pasted image 20251020201721.png",
+    "Pasted image 20251020201705.png",
+    "Pasted image 20251020201606.png",
+    "Pasted image 20251020201546.png",
+    "Pasted image 20251020201516.png",
     "Homepage.md",
-    "3-Terzo anno/Ingegneria del software/esercitazioni UML.md",
-    "Pasted image 20251020120212.png",
-    "Pasted image 20251020115753.png",
-    "Pasted image 20251020114806.png",
-    "Pasted image 20251020114740.png",
-    "Pasted image 20251020114626.png",
-    "Pasted image 20251020112933.png",
-    "Pasted image 20251020112237.png",
-    "Pasted image 20251020111249.png",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
     "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
+    "3-Terzo anno/Ingegneria del software/design pattern/Design pattern.md",
+    "3-Terzo anno/Ingegneria del software/design pattern/Pattern strutturali.md",
+    "3-Terzo anno/Ingegneria del software/design pattern/Pattern comportamentali.md",
+    "3-Terzo anno/Ingegneria del software/design pattern/Pattern creazionali.md",
+    "immagini/Pasted image 20251020184239.png",
+    "3-Terzo anno/Ingegneria del software/design pattern",
+    "immagini/Pasted image 20251020194007.png",
+    "immagini/Pasted image 20251020193242.png",
+    "immagini/Pasted image 20251020190413.png",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
+    "3-Terzo anno/Ingegneria del software/architettura dei software/architettura dei software.md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
+    "3-Terzo anno/Ingegneria del software/architettura dei software",
+    "3-Terzo anno/Ingegneria del software/esercitazioni UML.md",
     "3-Terzo anno/Basi di Dati/architettura dei DBMS/transazioni.md",
     "3-Terzo anno/Basi di Dati/architettura dei DBMS/ARIES (Advanced Recovery and Integrated Extraction System).md",
     "3-Terzo anno/Basi di Dati/architettura dei DBMS/Architettura dei DBMS.md",
@@ -388,20 +274,12 @@
     "3-Terzo anno/Basi di Dati/calcolo relazionale/Calcolo relazionale.md",
     "3-Terzo anno/Basi di Dati/calcolo relazionale/Datalog.md",
     "3-Terzo anno/Basi di Dati/calcolo relazionale",
-    "3-Terzo anno/Basi di Dati/algebra relazionale/espressioni dell'algebra relazionale equivalenti.md",
-    "3-Terzo anno/Basi di Dati/algebra relazionale/Viste.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/problema di classificazione.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico",
-    "3-Terzo anno/Ingegneria del software/Templates in C++.md",
-    "3-Terzo anno/Ingegneria del software/prima lezione.md",
-    "3-Terzo anno/Ingegneria del software/GIT.md",
-    "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
     "3-Terzo anno/Basi di Dati/SQL",
     "3-Terzo anno/secondo semestre",
     "3-Terzo anno/primo semestre",
     "Senza nome.base",
     "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione",
-    "3-Terzo anno/Basi di Dati/algebra relazionale",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

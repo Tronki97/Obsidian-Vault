@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - modello ad oggetti
   - UML
@@ -11,6 +10,13 @@ aliases:
   - diagramma di classe
   - aggregazione
   - ereditarietà virtuale
+  - associazione
+  - composizione
+  - relazione di inclusione
+  - inclusione
+  - estensione
+  - relazione di estensione
+  - responsabilità
 data: "`2025-09-29 11:06`"
 ---
 - # perché:
@@ -114,7 +120,7 @@ data: "`2025-09-29 11:06`"
 				- Numero di elementi che partecipano a una relazione
 				- $*$ indica $[0, +\infty)$
 				- Se non è specificata indica 1
-			- #### Responsabilità:
+			- #### Responsabilità: ^6dd6a6
 				- ![[Pasted image 20250930113407.png|400]]
 					- Il cliente specifica gli ordini 
 					- Gli ordini elencano il cliente
@@ -127,12 +133,13 @@ data: "`2025-09-29 11:06`"
 				- ##### ES:
 					- ![[Pasted image 20250930114402.png|500]]
 					- Una _compagnia_ è formata da 0 o più _unità_ le quali sono formate da 0 o più _dipartimenti_ i quali a loro volta sono formati da 0 o più _gruppi_
-			- #### Composizione:
-				- Definisce parti che vivono solo nel contesto dell'oggetto creato
-					- Non possono quindi essere create senza quell'oggetto.
-				- Entità con valore ridotto rispetto all'oggetto a cui fanno riferimento.
-				- Indicate con il _diamantino pieno_
-				- _Per esempio_: la texture di un'oggetto senza l'oggetto stesso non esiste
+				- #### Composizione:
+					- è un caso speciale di aggregazione.
+					- Definisce parti che vivono solo nel contesto dell'oggetto creato
+						- Non possono quindi essere create senza quell'oggetto.
+					- Entità con valore ridotto rispetto all'oggetto a cui fanno riferimento.
+					- Indicate con il _diamantino pieno_
+					- _Per esempio_: la texture di un'oggetto senza l'oggetto stesso non esiste
 		- ### Operazioni:
 			- Processi che una classe deve portare avanti
 			- Corrisponde al messaggio della classe

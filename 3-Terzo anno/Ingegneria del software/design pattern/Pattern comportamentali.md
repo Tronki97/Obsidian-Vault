@@ -1,0 +1,35 @@
+---
+tags:
+aliases:
+  - iterator patern
+  - Visitor pattern
+  - Strategy pattern
+  - Chains of responsability pattern
+  - Mediator pattern
+data: "`2025-10-20 19:48`"
+---
+- # Pattern comportamentali:
+	- Riguardano funzioni e responsabilità gestiti dagli oggetti
+	- ## Iterator pattern:
+		- ![[Pasted image 20251020110426.png|550]]
+		- L'iteratore permette di fare uno scan su tutti gli elementi di una struttura dati organizzata in maniera sequenziale 
+	- ## Visitor:
+		- Permette di fare una _nuova_ operazione su elementi di una struttura senza cambiare gli elementi della struttura su cui opera. 
+		- è l'oggetto visitato a decidere che attività deve essere fatta
+		- ![[Pasted image 20251020120212.png|500]]
+	- ## Strategy:
+		- Parametrizza degli oggetti con comportamenti multipli a _runtime_
+		- Utile per evitare di usare dei case per il comportamento di un oggetto così in caso dovessi aggiungere un nuovo comportamento basterebbe aggiungere una nuova strategia.
+		- ![[Pasted image 20251020120907.png|600]]
+	- ## Chains of responsability:
+		- Vari oggetti possono rispondere a delle richieste ma non si sa a priori quale dia la risposta giusta quindi si passa ogni volta la responsabilità di rispondere ad un altro 
+		- come nel [[DNS]]
+		- ![[Pasted image 20251020121558.png|550]]
+	- ## Mediator:
+		- Usato quando più oggetti complessi devono comunicare tra loro
+		- Ogni oggetto definisce il proprio stato e il _mediatore_ ha il compito di tradurre le operazioni degli oggetti per farle interagire con altri.
+		- In questo modo si centralizza il controllo e si condivide la conoscenza 
+		- Il mediatore ha un insieme di _primitive_ e per partecipare a questa "discussione" gli oggetti coinvolti devono conoscerle 
+		- ![[Pasted image 20251020194007.png|450]]
+- # Link Utili:
+	- 

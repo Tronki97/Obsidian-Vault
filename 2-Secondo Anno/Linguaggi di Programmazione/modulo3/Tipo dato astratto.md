@@ -142,7 +142,7 @@ data: "`2025-05-07 11:42`"
 				- Deriva dalle [[Regole di Scope]] a livello di blocco, considerando la superclasse come blocco esterno di cui la sottoclasse può mascherare qualsiasi variabile.
 				- Lo shadowing viene risolto staticamente
 				- ![[Pasted image 20250828164413.png|400]]
-			- #### Overriding dei metodi:
+			- #### Overriding dei metodi: ^83e9b7
 				- Consiste sostanzialmente nel sovrascirvere le implementazioni dei metodi della superclasse
 				- è possibile farlo anche grazie al principio di astrazione che permette di cambiare le implementazioni purché rispettino le interfacce.
 				- Viene risolto dinamicamente

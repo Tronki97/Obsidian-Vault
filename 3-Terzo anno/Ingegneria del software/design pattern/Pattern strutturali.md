@@ -1,0 +1,34 @@
+---
+tags:
+aliases:
+  - strutturali
+  - Composite pattern
+  - Adapter and bridge
+  - Decorator pattern
+  - Proxy pattern
+data: "`2025-10-20 19:46`"
+---
+- # Pattern strutturali:
+	-  Come io organizzo la mia struttura dati e usano l'[[Tipo dato astratto#^9a1851|ereditarietà]]
+	- ## Composite pattern:
+		- ![[Pasted image 20251020105627.png|550]]
+		- Una sorta di struttura ricorsiva da pensare come una [[Visione Utente#^889353|directory]] di _UNIX_ con un _component_ che ha due tipi di sottoclassi una delle quali è composta da $n$ altri _component_ che sono figli del _composite_.
+	- ## Adapter and bridge:
+		- Separano l'interfaccia della classe con la sua implementazione
+		- _adapter_: creo una funzione intermedia che faccia adattare una struttura dati ad una determinata funzione
+			- ![[Pasted image 20251020112933.png|500]]
+			- Si può fare senza [[Tipo dato astratto#^7786ca|ereditarietà multipla]] usando delle aggregazioni.
+		- _bridge_:
+			- Separo interfaccia e implementazione visto che in [[Java]] sono presenti le interfacce il bridge è meno critico
+			- ![[Pasted image 20251020193242.png|650]]
+	- ## Decorator:
+		- Aggiungo [[unified modeling language (UML)#^6dd6a6|responsabilità]] ad un oggetto dinamicamente è possibile con questo aggiungere sottoclassi all'infinito
+		- Il decoratore è i suoi componenti non sono identici
+		- Si può usare come alternativa alle sottoclassi per quanto riguarda funzionalità estese
+			- ![[Pasted image 20251020114806.png|500]]
+	- ## Proxy:
+		- Come il bridge ma permette accessi _remoti_ o _virtuali_ implementato in [[Java]] con il RMIC per poter invocare metodi di oggetti sparsi sull'internet che crea un proxy di un oggetto remoto.
+		- Un esempio di questo possono essere le richieste [[HTTP]] alle [[API REST]] 
+		- ![[Pasted image 20251020115753.png|500]]
+- # Link Utili:
+	- 

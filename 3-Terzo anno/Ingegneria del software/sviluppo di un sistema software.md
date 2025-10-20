@@ -1,0 +1,42 @@
+---
+tags:
+  - TODO
+aliases:
+  - nested class
+  - inner class
+  - local class
+data: "`2025-10-20 15:22`"
+---
+- # Argomento:
+	-  la programmazione ad oggetti era pensata come il trasformare qualsiasi cosa in un oggetto che poi venisse valutato.
+	- In C++ e java è possibile definire classi dentro ad altre classi
+		- In C++ è fatto per motivi di visibilità e naming
+		- In Java ci sono 3 motivi:
+			- ## Nested class:
+				- Per rendere una classe visibile solo in un certo punto del codice in quanto visibile solo all'interno della classe in cui si trova.
+				- Possono raggruppare classi che hanno la stessa visibilità e controlli
+				- E si possono avere oggetti della classe _nested_ senza che necessariamente esistano oggetti della classe che contengono.
+			- ## Inner class:
+				- Un oggetto può esistere solo all'interno di un oggetto della classe di cui fa parte e se c'è una classe esterna che lo contiene.
+				- Ogni istanza ha una classe che la include ogni classe inner può accedere a tutti i membri delle classi che le incapsulano.
+			- ## Local class:
+				- Rafforzano l'incapsulamento 
+	- ## Interfacce:
+		- Hanno una implementazione
+			- ![[Pasted image 20251020201516.png|550]]
+		- I metodi di istanza sono preferiti rispetto ai metodi di default.
+			- ![[Pasted image 20251020201546.png|550]]
+			- ![[Pasted image 20251020201606.png|550]]
+				- Di fatto il metodo `Pegasus.identifyMyself()` ritorna la stringa "I am a horse"
+		- I metodi già [[Tipo dato astratto#^83e9b7|overridden]] da altri sono ignorati.
+			- ![[Pasted image 20251020201705.png|550]]
+			- ![[Pasted image 20251020201721.png|550]]
+				- Il metodo `Dragon.identifyMyself()` ritorna “I am able to Lay eggs”
+		- Se due metodi definiti indipendentemente hanno un conflitto allora il compilatore di Java produrrà un errore. In caso necessito di aggiungere `super` alla chiamata del metodo.
+		- ![[Pasted image 20251020201906.png|650]]
+	- ## Classi anonime:
+		- Rendono il codice al loro interno più conciso.
+		- Si può dichiarare una classe e istanziarla allo stesso tempo
+		- Come le classi locali ma non possiedono un nome.
+- # Link Utili:
+	- 

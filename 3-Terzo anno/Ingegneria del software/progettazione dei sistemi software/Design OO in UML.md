@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - decomponibilità
   - componibilità
@@ -10,6 +9,17 @@ aliases:
   - diagramma di interazione
   - diagramma di sequenza
   - stato di un oggetto
+  - entry
+  - do
+  - on
+  - exit
+  - componenti
+  - stereotipo
+  - stereotipi
+  - componente
+  - nodo
+  - nodi
+  - OCL
 data: "`2025-10-06 11:45`"
 ---
 - # Problemi:
@@ -59,7 +69,6 @@ data: "`2025-10-06 11:45`"
 		- Mostrano come oggetti interagiscono rispetto all'organizzazione in cui si trovano 
 		- Le sequenze temporali sono presenti tramite delle sequenze numeriche ma non graficamente.
 		- ![[Pasted image 20251006161918.png|550]]
-		- 
 - # Stato di un oggetto:
 	- Quelle caratteristiche che univocamente permettono di definire in modo univoco il comportamento di un oggetto.
 	- Come per esempio i _valori dei campi_ anche se a volte sono sovrabbondanti quindi non sempre necessari.
