@@ -1,7 +1,23 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - ACID
+  - atomicity
+  - consistency
+  - isolation
+  - atomicità
+  - consistenza
+  - isolamento
+  - durability
+  - durabilità
+  - schedule completa
+  - schedule seriale
+  - schedule serializzabile
+  - Strict 2PL
+  - wait-die
+  - wound-wait
+  - validation
+  - timestamping
 data: "`2025-10-16 19:30`"
 ---
 - # intro:
@@ -31,7 +47,6 @@ data: "`2025-10-16 19:30`"
 	- ## Durability:
 		- Quando la transazione cambia il database serve che che modifiche fatte non vengano mai perse a causa di fallimenti successivi.   
 	- Il DBMS però non garantisce che le transazioni siano eseguite in un determinato ordine.
-- 
 - # Schedule:
 	- Una schedule $S$ è una sequenza di azioni prese da un insieme di transazioni, l'ordine delle azioni dentro $S$ è lo stesso delle transazioni di cui facevano parte.
 		- Ogni transizione deve specificare la sua azione finale:
