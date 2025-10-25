@@ -47,7 +47,7 @@ data: "`2024-08-31 20:05`"
 		- suppongo che sia $X$ che $Y$ abbiano lo stesso numero di cifre 
 		- divido la sequenza di cifre in due parti uguali $$X=X_{1}\times{10}^{\frac{n}{2}}+X_{0}$$
 		  $$Y=Y_{1}\times{10}^{\frac{n}{2}}+Y_{0}$$
-		- Il prodotto può quindi essere calcolato come:$$X\times Y=(X_{1}\times{10}^{\frac{n}{2}}+X_{0})\times (Y_{1}\times{10}^{\frac{n}{2}}+Y_{0})=$$$$=(X_{1}Y_{1})\times 10^{n}+(X_{1}Y_{0}+X_{0}Y_{1})\times 10^{\frac{n}{2}}+X_{0}Y_{0}$$
+		- Il prodotto può quindi essere calcolato come: $$\begin{array} X\times Y=(X_{1}\times{10}^{\frac{n}{2}}+X_{0})\times (Y_{1}\times{10}^{\frac{n}{2}}+Y_{0})= \\ \\ =(X_{1}Y_{1})\times 10^{n}+(X_{1}Y_{0}+X_{0}Y_{1})\times 10^{\frac{n}{2}}+X_{0}Y_{0}\end{array} $$
 		- #### OSS: 
 		  $$X\times Y=(\underline{X_{1}Y_{1}})\times 10^{n}+(\underline{{X_{1}Y_{0}}}+\underline{X_{0}Y_{1}})\times 10^{\frac{n}{2}}+\underline{X_{0}Y_{0}}$$
 			- La moltiplicazione per $10^{n}$ richiede tempo $O(n)$ 

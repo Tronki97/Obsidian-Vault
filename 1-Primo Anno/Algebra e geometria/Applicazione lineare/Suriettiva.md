@@ -4,7 +4,8 @@ aliases:
   - suriettività
 data: "`2024-08-31 20:05`"
 ---
-- Una funzione si dice _suriettiva_ se ogni elemento del codominio è immagine di almeno un elemento del dominio. Rispettando la legge:$$\forall c \in C |\exists d\in D:f(d)=c$$
+- Una funzione si dice _suriettiva_ se ogni elemento del codominio è immagine di almeno un elemento del dominio. Rispettando la legge:
+	- $$\forall c \in C |\exists d\in D:f(d)=c$$
 - Una funzione suriettiva viene indicata con $su$
 	- ![[Pasted image 20240701173132.png]]
 - ## ES:

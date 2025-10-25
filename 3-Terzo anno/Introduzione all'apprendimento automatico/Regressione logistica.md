@@ -1,11 +1,12 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - funzione logistica
 data: "`2025-10-16 14:24`"
 ---
 - # Intro:
 	- Ogni neurone in una rete neurale calcola una _regressione logistica_
+	- Per quanto la regressione serva per approssimare un valore in questo caso è una tecnica di classificazione 
 - # Idea:
 	- In [[Naive Bayes]] si cerca di calcolare $P(Y|X)$ dopo aver appreso $P(Y)$ e $P(X|Y)$
 	- Ora si cerca di calcolare direttamente $P(Y|X)$
@@ -14,7 +15,7 @@ data: "`2025-10-16 14:24`"
 	- $X_{i}$ indipendenti data $Y$
 	- $Y$ [[Variabili aleatorie#^a7a7e4|V.A di bernoulli]] 
 	- $$P(Y=1|X=\langle x_{1},...,x_{n}\rangle)=\frac{1}{1+exp(w_{0}+\sum\limits_{i} w_{i}*x_{i})}$$
-	- Si cercano di stimare i parametri $w_{i}$ e la funzione:
+	- Si cercano di stimare i parametri $w_{i}$ e la funzione: ^57cf6b
 		- $$\sigma(x)=\frac{1}{1+e^{-x}}$$
 		- Si chiama _funzione logistica_
 		- ![[Pasted image 20251016144832.png]]

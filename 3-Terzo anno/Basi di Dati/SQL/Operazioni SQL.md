@@ -1,0 +1,144 @@
+---
+tags:
+aliases:
+  - nested query
+  - interrogazione annidata
+  - interrogazioni annidate
+  - ANY
+  - ALL
+  - IN
+  - EXISTS
+  - funzioni aggregate
+  - aggregate functions
+  - COUNT
+  - AVG
+  - GROUP BY
+  - INSERT
+  - DELETE
+  - insert
+  - delete
+  - group by
+  - update
+  - UPDATE
+data: "`2025-10-24 18:30`"
+---
+- # Interrogazione
+	- ## Select:
+		- ![[Pasted image 20251018102335.png]]
+		- Le parti riguardanti `FROM` e `WHERE` si chiamano _clausole_
+		- La semantica è: seleziono una lista di attributi dalla `TableList` che rispetti determinate condizioni
+		- Si può usare nell' `attributeList` il `*` per indicare tutti gli attributi
+		- ### ES:
+			- ![[Pasted image 20251018102711.png|500]]
+			- ![[Pasted image 20251018102728.png|500]]
+		- ### Renaming:
+			- ![[Pasted image 20251018102847.png|500]]
+			- Permette di cambiare il nome degli attributi o relazioni in output mettendo il nome che vogliamo vedere dopo l' `AS`
+		- ### LIKE:
+			- `WHERE Name LIKE 'J_m%'` indica che l'attributo `Name` deve rispettare la condizione dove: la prima lettera è una "J" la terza è una "m" e il resto della stringa va bene qualunque sia (anche vuota)
+		- ### Valori NULL:
+			- Si usa il controllo `IS NULL`
+		- è possibile anche usare delle espressioni nella _target list_ come:
+			- `SELECT Income/2 AS HalvedIncome`
+			- In questo modo si avrà come attributo in output `HalvedIncome` che sarà generato a partire dall'espressione usata. 
+			- Ciò fa capire come SQL sia più espressivo dell' [[Algebra relazionale]] e del [[Calcolo relazionale]]
+	- ## Projection:
+		- A differenza dell' [[Algebra relazionale]] che lavora sugli insiemi fare una proiezione avendo come risultato delle tuple identiche non porterà ad un collasso delle tuple ma verranno indicati i duplicati. Per far si che non appaiano si necessita di usare `SELECT DISTINCT`:
+			- ![[Pasted image 20251018103433.png|650]]
+	- ## Join:
+		- Usare più relazioni dopo un  `FROM` porterà ad un [[Algebra relazionale#^0c9bee|join]] 
+		- A volte si potrebbe necessitare una rename nel [[Algebra relazionale#^dd2800|prodotto cartesiano]] e nella _target list_
+		- Le join possono essere _implicite_ o _esplicite_
+			- ![[Pasted image 20251018103828.png|500]]
+		- La sintassi è:
+			- ![[Pasted image 20251018103907.png|500]]
+		- ### Natural join:
+			- Non c'è bisogno di dire la condizione del join ma serve che le tabelle condividano almeno un attributo.
+			- ![[Pasted image 20251022094634.png]]
+		- ### Outer Join:
+			- Usati per evitare la perdita di informazioni a causa del collasso di alcune tuple
+			- ![[Pasted image 20251022094927.png]]
+	- ## Ordinre le risposte:
+		- ![[Pasted image 20251022095653.png]]
+			- Ritorna `Name` e `Income` dalla relazione `PEOPLE` con età < 30 e li ordina in ordine alfabetico ascendente 
+		- L'opzione può essere sia `ASC` che `DESC`
+			- ![[Pasted image 20251022100111.png]]
+		- Ciò riafferma il fatto che SQL è più espressivo dell' [[Algebra relazionale]] che del [[Calcolo relazionale]]
+	- ## Unione:
+		- ![[Pasted image 20251022100255.png]]
+			- I risultati sono unici a meno che non si usi l'opzione `ALL` dove si otterrebbero i duplicati senza che collassino
+		- ![[Pasted image 20251022100359.png|400]]
+		- ### Notazione posizionale:
+			- Quando due tabelle hanno schema diverso è importante la posizione e l'ordine con cui si scrive una query
+			- ![[Pasted image 20251022100639.png]]
+				- Se si invertisse `Mother` e `Child` si mischierebbero i `Child`
+				- Il risultato è comunque sbagliato in quanto si mischiano due attributi con semantica diversa ed è quindi necessario fare delle _rename_
+	- ## Differenza:
+		- ![[Pasted image 20251022100912.png]]
+	- ## Intersezione:
+		- ![[Pasted image 20251022101001.png]]
+		- Che è uguale a mettere una condizione dove `E.Name = F.Surname` in una selezione normale
+	- ## Interrogazioni annidate:
+		- All'interno della clausola `WHERE` è possibile mettere un'altra sotto-interrogazione
+		- ![[Pasted image 20251022101313.png]]
+			- Più efficiente rispetto all'uso del [[Algebra relazionale#^dd2800|prodotto cartesiano]] in quanto non bisogna creare un'altra tabella più grande, ma la sotto-query produce una sola tupla  
+		- Le sotto-query non possono esprimere operazioni di insiemistica 
+		- ### ANY e ALL:
+			- `ANY`:
+				- `Attribute op ANY(Expr)` risulta vero se _una qualsiasi tupla_ restituita da `Expr` rispetta la condizione 
+			- `ALL`: 
+				- Uguale ad `ANY` tranne che _tutte le tuple_ devono rispettare la condizione
+		- ### IN:
+			- `Attribute IN (Expr)`
+				- Risulta vero se i valori in `Attribute` sono contenuti nelle tuple ritornate da `Expr`
+		- ### Visibilità
+			- è importante da capire come ogni livello della query vede solo i valori selezionati dalla sotto-query del livello immediatamente sotto.
+		- ### EXISTS:
+			- Ritorna vero se la sotto-query restituisce _almeno una tupla_ 
+				-  ![[Pasted image 20251022103725.png]]
+	- ## Aggregate Functions: ^20d224
+		- Usate per fare delle computazioni semplici da un insieme di tuple 
+			- `Aggr: COUNT | MIN | MAX | AVG | SUM`
+			- ![[Pasted image 20251022112117.png]]
+			- ### COUNT:
+				- Usato per contare il numero di righe
+				- ![[Pasted image 20251022112201.png]]
+					- Ed è buona norma rinominare il risultato ottenuto altrimenti il sistema lo chiamerà `COUNT(*)`
+				- #### Analisi computazionale
+					- Prima si calcola l'interrogazione senza la COUNT per poi applicarla una volta ottenuto il risultato.
+				- Si può aggiungere l'opzione `DISTINCT` per contare quelle diverse
+				- #### Con valore nullo:
+					- Facendo la `COUNT` su un attributo con valori NULL non verrà contato nemmeno se si usasse `DISTINCT`
+					- ![[Pasted image 20251022112825.png|400]]
+			- ### AVG:
+				- Fa la media aritmetica dei valori dell'attributo specificato 
+				- Se tra i valori è presente un `NULL` non vien contato.
+		- ## GROUP BY:
+			- Un costrutto che raggruppa in una certa tabella i valori in basi a vari attributi
+				- `GROUP BY AttrList`
+			- ![[Pasted image 20251022113427.png]]
+			- ### Semantica:
+				- Prima si esegue la query senza le operazioni di aggregazione, poi si esegue la `GROUP BY` e poi si eseguono le _aggregate functions_
+			- ### Condizioni sui gruppi:
+				- ![[Pasted image 20251022114324.png|450]]
+				- `HAVING` si usa quando si deve applicare un operatore aggregato ad un gruppo di righe 
+			- ### Interazione con NULL:
+				- ![[Pasted image 20251022114931.png|500]]
+- # Modifica:
+	- ## INSERT ^42f891
+		- `INSERT INTO Table [(AttList)] VALUES (Vals)` - è il classico inserimento da data entry
+		- `INSERT INTO Table [(AttList)] SELECT ...` - inseriamo in `Table` il risultato della `SELECT`
+		- l'ordine e il valore degli attributi è rilevante, e le cardinalità di `AttList` (se messa) e `Vals` deve coincidere
+		- ### ES:
+			- ![[Pasted image 20251024183446.png|450]]
+	- ## DELETE
+		- `DELETE FROM Table [WHERE Condition]`
+		- attenzione ai vincoli di integrità referenziale! `ON DELETE CASCADE`
+			- Si possono cancellare cose anche in altre tabelle...
+		- ![[Pasted image 20251024184321.png|400]]
+	- ## UPDATE ^32c749
+		- `UPDATE Table SET Attribute = <Expr | SELECT ... | NULL | DEFAULT> [WHERE Condition]`
+		- ![[Pasted image 20251024184358.png|400]]
+		- ![[Pasted image 20251024184425.png|400]]
+- # Link Utili:
+	- 

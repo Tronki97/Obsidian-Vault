@@ -4,15 +4,36 @@ aliases:
 data: "`2024-08-31 20:05`"
 ---
 - # Def: 
-	- Il teorema afferma che dati $V, W$ [[Spazio vettoriale||spazi vettoriali]], con $\beta = v_1,...,v_n$ [[Base]] di V e $w_1,...,w_{n}\in W$ vettori non per forza distinti, allora si ha che esiste un'unica [[Applicazione lineare]] $f: V \rightarrow W$ t.c:$$f(v_{1})=w_{1},...,f(v_{n})=w_{n}$$
+	- Il teorema afferma che dati $V, W$ [[Spazio vettoriale||spazi vettoriali]], con $\beta = v_1,...,v_n$ [[Base]] di V e $w_1,...,w_{n}\in W$ vettori non per forza distinti, allora si ha che esiste un'unica [[Applicazione lineare]] $f: V \rightarrow W$ t.c:
+		- $$f(v_{1})=w_{1},...,f(v_{n})=w_{n}$$
 	- ## Dimostrazione
 		- ## Esistenza:
 			- so che $V$ e $W$ sono due spazi vettoriali, che $\beta = v_1,...,v_n$ è una base di V e che $w_1,...,w_{n}\in W$. Devo quindi dimostrare che $\exists f:V\rightarrow W|f(v_{1})=w_{1},...,f(v_{n})=w_{n}$ 
-			- Scelgo allora come funzione una che proietta le [[Coordinate rispetto a una base]] $\beta$ di $v \in V$ a un vettore $w \in W$. Ovvero che prendendo $v=\lambda_1 v_1+...+\lambda_n v_n$, possibile perché $v_1,...,v_n$ base e quindi $v_{\beta}=(\lambda_{1},...,\lambda_{n})$ posso definire $f$ come:$$f(v)=\lambda_1 w_1+...+\lambda_n w_{n}$$Dimostro allora che $f$ è lineare:
-			- Per prima cosa dimostro che $f$ rispetta la somma; prendo 2 vettori $v, u \in V$ t.c $v=\lambda_1 v_1+...+\lambda_n v_n$ e  $u=\mu_1 v_1+...+\mu_n v_n$ e dimostro $f(u+v)=f(u)+f(v)$ ed ho che:$$u+v= \lambda_1 v_1+...+\lambda_n v_{n}+ \mu_1 v_1+...+\mu_n v_n=$$$$=(\lambda_{1}+\mu_{1})v_{1}+(\lambda_{n}+\mu_{n})v_{n}$$Per cui $(u+v)_{\beta}=(\lambda_{1}+\mu_{1},...,\lambda_{n}+\mu_{n})$ e allora:$$f(u+v)=(\lambda_{1}+\mu_{1})w_{1}+(\lambda_{n}+\mu_{n})w_{n}=$$$$= \lambda_1 w_1+...+\lambda_n w_{n}+ \mu_1 w_1+...+\mu_n w_n$$Per dimostrare che rispetta il prodotto scalare prendo un vettore $v\in V$ t.c $v=\lambda_1 v_1+...+\lambda_n v_n$ e uno scalare $\mu \in \mathbb{R}$ e dimostro che $f(\mu v)=\mu f(v)$ avendo quindi: $$\mu v= \mu\lambda_1 v_1+...+\mu\lambda_n v_{n}$$Per cui $(\mu v)_{\beta}=(\mu \lambda_{1},...,\mu \lambda_{n})$ e allora:$$f(\mu v)= \mu\lambda_1 w_1+...+\mu\lambda_n w_{n}=$$$$=\mu(\lambda_1 w_1+...+\lambda_n w_{n})=\mu f(v)$$ 
+			- Scelgo allora come funzione una che proietta le [[Coordinate rispetto a una base]] $\beta$ di $v \in V$ a un vettore $w \in W$. Ovvero che prendendo $v=\lambda_1 v_1+...+\lambda_n v_n$, possibile perché $v_1,...,v_n$ base e quindi $v_{\beta}=(\lambda_{1},...,\lambda_{n})$ posso definire $f$ come:
+				- $$f(v)=\lambda_1 w_1+...+\lambda_n w_{n}$$
+			- Dimostro allora che $f$ è lineare:
+				- Per prima cosa dimostro che $f$ rispetta la somma; prendo 2 vettori $v, u \in V$ t.c $v=\lambda_1 v_1+...+\lambda_n v_n$ e  $u=\mu_1 v_1+...+\mu_n v_n$ e dimostro $f(u+v)=f(u)+f(v)$ ed ho che: 
+					- $$\begin{array}\ u+v= \lambda_1 v_1+...+\lambda_n v_{n}+ \mu_1 v_1+...+\mu_n v_{n}=\\ \\ =(\lambda_{1}+\mu_{1})v_{1}+(\lambda_{n}+\mu_{n})v_{n} \end{array} $$
+				- Per cui $(u+v)_{\beta}=(\lambda_{1}+\mu_{1},...,\lambda_{n}+\mu_{n})$ e allora: 
+					- $$\begin{array}\ f(u+v)=(\lambda_{1}+\mu_{1})w_{1}+(\lambda_{n}+\mu_{n})w_{n}=\\ \\ = \lambda_1 w_1+...+\lambda_n w_{n}+ \mu_1 w_1+...+\mu_n w_{n}\end{array}$$ 
+				- Per dimostrare che rispetta il prodotto scalare prendo un vettore $v\in V$ t.c $v=\lambda_1 v_1+...+\lambda_n v_n$ e uno scalare $\mu \in \mathbb{R}$ e dimostro che $f(\mu v)=\mu f(v)$ avendo quindi: 
+					- $$\mu v= \mu\lambda_1 v_1+...+\mu\lambda_n v_{n}$$
+				- Per cui $(\mu v)_{\beta}=(\mu \lambda_{1},...,\mu \lambda_{n})$ e allora: 
+					- $$\begin{array}\ f(\mu v)= \mu\lambda_1 w_1+...+\mu\lambda_n w_{n}=\\ \\  =\mu(\lambda_1 w_1+...+\lambda_n w_{n})=\mu f(v) \end{array} $$
 		- ### Unicità:
 			- Per dimostrare che questa $f$ è unica suppongo di avere un'altra funzione lineare $g: V\rightarrow W|g(v_{1})=w_{1},...,g(v_{n})=w_{n}$ e dimostro che $g=f$ e quindi che $g-f=\underline{0}$ 
-			- definisco una funzione $h:V\rightarrow W$ definita come $v \rightarrow g(v)-f(v)$ e dimostro che $ker(h)=V$. fissato un $v\in V$ devo dimostrare che $v\in ker(h)$, il che è sufficiente perché per definizione di _kernel_ so che $ker(h)\subseteq V$. Definisco $v=\lambda_1 v_1+...+\lambda_n v_n$ e dimostro $$h(\lambda_1 v_1+...+\lambda_n v_n)=\underline{0}$$Che sapendo $h$ essere lineare in quanto composizione di due funzioni lineari $g,f$, diventa:$$h(\lambda_{1}v_{1})+...+h(\lambda_{n}v_{n})=\underline{0}$$ ora so che $h(v)=g(v)-f(v)$ e dimostro $$g(\lambda_{1}v_{1})-f(\lambda_{1}v_{1})+...+g(\lambda_{n}v_{n})-f(\lambda_{n}v_{n})=\underline{0}$$Uso la linearità di $g$ ed $f$ per ottenere:$$\lambda_{1}g(v_{1})-\lambda_{1}f(v_{1})+...+\lambda_{n}g(v_{n})-\lambda_{n}f(v_{n})=$$$$=\lambda_{1}(g(v_{1})-f(v_{1}))+...+\lambda_{n}(g(v_{n})-f(v_{n}))=\underline{0}$$Per ipotesi so che $g(v_{1})=w_{1},...,g(v_{n})=w_{n}$ e $f(v_{1})=w_{1},...,f(v_{n})=w_{n}$ quindi ottengo che:$$\lambda_{1}(w_{1}-w_{1})+...+\lambda_{n}(w_{n}-w_{n})=\lambda_{1}\underline{0}+...+\lambda_{n}\underline{0}=\underline{0}$$Ho ottenuto allora che $ker(h)=V$, e perciò che $h(v)=g(v)-f(v)=\underline{0}\ \ \forall v \in V$ e quindi che $f-g=\underline{0}$ da cui: $$f=g$$
+			- definisco una funzione $h:V\rightarrow W$ definita come $v \rightarrow g(v)-f(v)$ e dimostro che $ker(h)=V$. fissato un $v\in V$ devo dimostrare che $v\in ker(h)$, il che è sufficiente perché per definizione di _kernel_ so che $ker(h)\subseteq V$. Definisco $v=\lambda_1 v_1+...+\lambda_n v_n$ e dimostro 
+				- $$h(\lambda_1 v_1+...+\lambda_n v_n)=\underline{0}$$
+			- Che sapendo $h$ essere lineare in quanto composizione di due funzioni lineari $g,f$, diventa: 
+				- $$h(\lambda_{1}v_{1})+...+h(\lambda_{n}v_{n})=\underline{0}$$
+			- ora so che $h(v)=g(v)-f(v)$ e dimostro 
+				- $$g(\lambda_{1}v_{1})-f(\lambda_{1}v_{1})+...+g(\lambda_{n}v_{n})-f(\lambda_{n}v_{n})=\underline{0}$$
+			- Uso la linearità di $g$ ed $f$ per ottenere: 
+				- $$\begin{array}\ \lambda_{1}g(v_{1})-\lambda_{1}f(v_{1})+...+\lambda_{n}g(v_{n})-\lambda_{n}f(v_{n})=\\ \\ =\lambda_{1}(g(v_{1})-f(v_{1}))+...+\lambda_{n}(g(v_{n})-f(v_{n}))=\underline{0} \end{array} $$
+			- Per ipotesi so che $g(v_{1})=w_{1},...,g(v_{n})=w_{n}$ e $f(v_{1})=w_{1},...,f(v_{n})=w_{n}$ quindi ottengo che: 
+				- $$\lambda_{1}(w_{1}-w_{1})+...+\lambda_{n}(w_{n}-w_{n})=\lambda_{1}\underline{0}+...+\lambda_{n}\underline{0}=\underline{0}$$
+			- Ho ottenuto allora che $ker(h)=V$, e perciò che $h(v)=g(v)-f(v)=\underline{0}\ \ \forall v \in V$ e quindi che $f-g=\underline{0}$ da cui: 
+				- $$f=g$$
 	- ## Corollario:
 		- Ciò ci dice che: se di un'[[Applicazione lineare]] $f:V\rightarrow W$ conosco le immagini della base, canonica o meno, conosco direttamente tutta $f$. Riassunto in:
 			- Siano $V, W$ due spazi vettoriali. Se due applicazioni lineari $T,S: V\rightarrow W$ coincidono su di una base di V, allora coincidono su tutto V.

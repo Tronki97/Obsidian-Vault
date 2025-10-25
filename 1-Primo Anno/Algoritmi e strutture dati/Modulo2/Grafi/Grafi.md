@@ -129,7 +129,7 @@ data: "`2024-08-31 20:05`"
 	- Un grafo non orientato è _aciclico_ se è senza cicli semplici 
 	- Un grafo orientato è _aciclico_ se è privo di cicli ^49f05c
 	- ### NOTA:
-		- un grafico orientato aciclico è chiamato _DAG_
+		- un grafico orientato aciclico è chiamato _DAG_ ^993ecb
 - ## Grafo completo 
 	- Un grafo non orientato _completo_ è un grafo non orientato che ha un arco tra ogni coppia di vertici.
 	- in un grafo non orientato _completo_ ha $\begin {pmatrix} n\\2 \end {pmatrix}= \frac{n(n-1)}{2}= \frac{|V|(|V|-1)}{2}$ 

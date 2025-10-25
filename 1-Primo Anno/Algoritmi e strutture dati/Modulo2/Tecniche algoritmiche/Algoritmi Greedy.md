@@ -57,7 +57,7 @@ data: "`2024-08-31 20:05`"
 		- ##### Codici di lunghezza variabile 
 			- caratteri: 'a',   'b',     'c',     'e',     'f'
 			- codifica:  0,   101,   100,   111,   1101,   1100
-			- costo totale: $$(0.45*1+0.13*3+0.12*3+0.16*3+$$$$+0.09*4+0.05*4)*n=2.24n$$
+			- costo totale: $$\begin{array} (0.45*1+0.13*3+0.12*3+0.16*3+ \\ \\ +0.09*4+0.05*4)*n=2.24n \end{array}$$
 			- Codice "a prefisso" (senza prefissi):
 				- nessun codice è un prefisso di un altro codice 
 				- il che è una condizione richiesta per permettere la decodifica durante la lettura bit-dopo-bit.

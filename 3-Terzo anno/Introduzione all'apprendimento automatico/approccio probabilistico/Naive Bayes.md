@@ -1,12 +1,15 @@
 ---
 tags:
-  - TODO
 aliases:
   - MLE
   - maximul likelihood estimates
   - naive bayes lineare
   - linearità di naive bayes
   - naive bayes gaussiano
+  - accuratezza
+  - precisione
+  - richiamo
+  - recupero
 data: "`2025-10-02 14:24`"
 ---
 - # Naive Bayes:
@@ -106,13 +109,13 @@ data: "`2025-10-02 14:24`"
 			- Media armonica tra _precisione_ e _richiamo_
 			- $$F1=2*\frac{Precisione*Richiamo}{Precisione+Richiamo}$$
 		- ### Parametri descrittivi:
-			- Vista la distribuzione gaussiana si necessita di calcolare i valori dei paramtri $\mu_{ik}, \sigma_{ik}$ e 
+			- Vista la distribuzione gaussiana si necessita di calcolare i valori dei parametri $\mu_{ik}, \sigma_{ik}$ e 
 				- $$\pi_{k}=P(Y=y_{k})$$
 			- #### Classificazione:
 				- $x^{new}=\langle a_{1},...,a_{n} \rangle$
 				- ![[Pasted image 20251016141936.png]]
 		- ### Calcolo MLE:
-			- $\mu_{ik}$ è il _valore medio di $X_{i}$ per i dati con etichetta $Y=y_{k}$ _
+			- $\mu_{ik}$ è il _valore medio di $X_{i}$ per i dati con etichetta $Y=y_{k}$_
 				- ![[Pasted image 20251016142133.png]]
 				- Con $j$ che varia sulle istanze del training set e 
 					- ![[Pasted image 20251016142208.png]]

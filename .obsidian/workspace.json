@@ -30,8 +30,81 @@
               "icon": "lucide-file",
               "title": "Homepage"
             }
+          },
+          {
+            "id": "46ce12f7de3251d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0-Mostarda/Analisi matematica.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Analisi matematica"
+            }
+          },
+          {
+            "id": "094b1a962cc26a29",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Basi di Dati/SQL/SQL avanzato.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "SQL avanzato"
+            }
+          },
+          {
+            "id": "3b6c032331f49d91",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Operazioni SQL"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -63,7 +136,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "storie",
+                "query": "bayes",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -209,7 +282,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 422.5
+    "width": 430.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,51 +308,51 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "3-Terzo anno/Basi di Dati/architettura dei DBMS/transazioni.md",
-    "Homepage.md",
-    "immagini/Pasted image 20251020201516.png",
-    "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software.md",
-    "immagini/Pasted image 20251020201906.png",
-    "immagini/Pasted image 20251020201721.png",
-    "immagini/Pasted image 20251020201705.png",
-    "immagini/Pasted image 20251020201606.png",
-    "immagini/Pasted image 20251020201546.png",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Design pattern.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Pattern strutturali.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Pattern comportamentali.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Pattern creazionali.md",
-    "immagini/Pasted image 20251020184239.png",
-    "3-Terzo anno/Ingegneria del software/design pattern",
-    "immagini/Pasted image 20251020194007.png",
-    "immagini/Pasted image 20251020193242.png",
-    "immagini/Pasted image 20251020190413.png",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
-    "3-Terzo anno/Ingegneria del software/architettura dei software/architettura dei software.md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi polimorfi.md",
-    "3-Terzo anno/Ingegneria del software/architettura dei software",
-    "3-Terzo anno/Ingegneria del software/esercitazioni UML.md",
-    "3-Terzo anno/Basi di Dati/architettura dei DBMS/ARIES (Advanced Recovery and Integrated Extraction System).md",
-    "3-Terzo anno/Basi di Dati/architettura dei DBMS/Architettura dei DBMS.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio machine learning.md",
-    "3-Terzo anno/Basi di Dati/architettura dei DBMS",
+    "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
+    "3-Terzo anno/Basi di Dati/SQL/SQL avanzato.md",
     "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
-    "3-Terzo anno/Basi di Dati/introduzione/introduzione Basi di dati.md",
+    "Pasted image 20251025121615.png",
+    "Pasted image 20251025120222.png",
+    "Homepage.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/Regressione logistica.md",
-    "3-Terzo anno/Consigli Tesi.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Naive Bayes.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Distribuzione congiunta.md",
-    "3-Terzo anno/Basi di Dati/algebra relazionale/Algebra relazionale.md",
-    "3-Terzo anno/Basi di Dati/calcolo relazionale/Calcolo relazionale.md",
-    "3-Terzo anno/Basi di Dati/calcolo relazionale/Datalog.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/Tecnica del gradiente.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
+    "Pasted image 20251025112304.png",
+    "Pasted image 20251025112236.png",
+    "0-Mostarda/Analisi matematica.md",
+    "0-Mostarda/Architettura degli Elaboratori.md",
+    "0-Mostarda/Calcolo delle probabilità e statistica.md",
+    "0-Mostarda/Calcolo numerico.md",
+    "0-Mostarda/Home.md",
+    "0-Mostarda/Linguaggi di Programmazione.md",
+    "0-Mostarda/Logica per l'informatica.md",
+    "0-Mostarda/Ottimizzazione combinatoria.md",
+    "0-Mostarda/Primo anno.md",
+    "0-Mostarda/Programmazione.md",
+    "0-Mostarda/Reti di Calcolatori.md",
+    "0-Mostarda/Secondo anno.md",
+    "0-Mostarda/Tecnologie Web.md",
+    "0-Mostarda/Sistemi Operativi.md",
+    "Modelli generativi e discriminativi.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
+    "Pasted image 20251024190457.png",
+    "immagini/Pasted image 20251022143349.png",
+    "appunti di DB da recuperare.md",
+    "immagini/Pasted image 20251024190047.png",
+    "immagini/Pasted image 20251024185826.png",
+    "immagini/Pasted image 20251024185651.png",
+    "immagini/Pasted image 20251024185241.png",
+    "Appunti di ML da recuperare.md",
+    "3-Terzo anno/Ingegneria del software/design pattern",
+    "3-Terzo anno/Ingegneria del software/architettura dei software",
+    "3-Terzo anno/Basi di Dati/architettura dei DBMS",
     "3-Terzo anno/Basi di Dati/calcolo relazionale",
     "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico",
     "3-Terzo anno/Basi di Dati/SQL",
     "3-Terzo anno/secondo semestre",
     "3-Terzo anno/primo semestre",
     "Senza nome.base",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

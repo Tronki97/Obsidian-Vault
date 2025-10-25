@@ -1,0 +1,37 @@
+---
+tags:
+  - TODO
+aliases:
+  - neurone
+  - neurone artificiale
+  - layer
+  - feed-forward
+data: "`2025-10-25 11:18`"
+---
+- # Idea:
+	- Consistono nel riprocessare più volte le features in input 
+	- Composte da vari layer a loro volta formati da _neuroni artificiali_ 
+	- ![[Pasted image 20251025112236.png|450]]
+- # Neurone artificiale:
+	- ![[Pasted image 20251025112304.png|450]]
+	- Ogni neurone ha multipli input e produce un singolo output
+	- Implementa una [[Regressione logistica]]:
+		- $$\sigma(wx+b)$$
+	- Le _activation function_ devono essere _non lineari_ altrimenti basterebbe solo aumentare il numero di input per ottenere un modello più complesso
+- # Topologie:
+	- ## Feed-forward:
+		- Sono acicliche come un [[Grafi#^993ecb|DAG]] chiamate così perché portano i risultati delle computazioni sempre avanti
+		- ### Layer:
+			- In questa topologia le reti sono organizzate a layer di neuroni, con ogni neurone al layer $k-1$ collegato ad ogni neurone al layer $k$:
+				- $$I^{n}*W^{n}+B^{1}=O^{1}$$
+					- $I$: vettore degli input 
+					- $W$: vettore dei pesi
+					- $B$: bias del neurone
+					- $O$: output del neurone
+			- Questa operazione può essere _vettorizzata_ per produrre $m$ output:
+				- $$I^{n}*W^{n \times m}+B^{m}=O^{m}$$
+			- L'ordine degli elementi in input è _irrilevante_
+	- ## Ricorrenti:
+		- Presentano dei cicli che permettono a un singolo neurone o layer di riprocessare i risultati ottenuti
+- # Link Utili:
+	- 

@@ -19,8 +19,10 @@ data: "`2024-08-31 20:05`"
 	- la trasposta di una matrice una matrice dove l'elemento $a_{ji}$ diventa l'elemento $a_{ij}$
 		- quindi una matrice di 4 righe e 3 colonne avrà la trasposta di 3 righe e 4 colonne.
 - # Prodotto tra matrici: ^f58df4
-	- date una riga $1\times n$ e una colonna $m\times1$ aventi la stessa lunghezza il loro prodotto è: $$\begin{pmatrix}a_{11}&a_{12} &a_{1m}\end{pmatrix}   \cdot\begin{pmatrix}b_{11}\\b_{12}\\ b_{1m}\end{pmatrix}= a_{11}*b_{11}+a_{12}*b_{12}...a_{1m}*b_{1m} \in R$$
-	- date due matrici (A e B)$_{mxn}$  il loro prodotto è una matrice $C_{mxn}$ di righe i di A e colonne j di B  $$\begin{pmatrix}a_{11} &a_{12} &a_{13}\\ {a_{21}} &a_{22} &a_{23} \\ a_{31} &a_{32} &a_{33}\end{pmatrix} \cdot \begin{pmatrix}b_{11} &b_{12}\\ {b_{21}} &b_{22} \\ b_{31} &b_{32}\end{pmatrix} = \begin{pmatrix}a_{11}*b_{11}+a_{12}*b_{21}+a_{13}*b_{31} &{...}\\ {{...}} &{...} \\ {...} &{...}\end{pmatrix}$$^4f234f
+	- date una riga $1\times n$ e una colonna $m\times1$ aventi la stessa lunghezza il loro prodotto è: 
+		- $$\begin{pmatrix}a_{11}&a_{12} &a_{1m}\end{pmatrix}   \cdot\begin{pmatrix}b_{11}\\b_{12}\\ b_{1m}\end{pmatrix}= a_{11}*b_{11}+a_{12}*b_{12}...a_{1m}*b_{1m} \in R$$
+	- date due matrici (A e B) $_{mxn}$  il loro prodotto è una matrice $C_{mxn}$ di righe i di A e colonne j di B  
+		- $$\begin{pmatrix}a_{11} &a_{12} &a_{13}\\ {a_{21}} &a_{22} &a_{23} \\ a_{31} &a_{32} &a_{33}\end{pmatrix} \cdot \begin{pmatrix}b_{11} &b_{12}\\ {b_{21}} &b_{22} \\ b_{31} &b_{32}\end{pmatrix} = \begin{pmatrix}a_{11}*b_{11}+a_{12}*b_{21}+a_{13}*b_{31} &{...}\\ {{...}} &{...} \\ {...} &{...}\end{pmatrix}$$ ^4f234f
 	- Quindi in pratica il valore di $c_{11}$ è uguale al prodotto della prima riga con la prima colonna, e $c_{12}$ è il prodotto tra la prima riga con la seconda colonna:
 		- In sostanza: $c_{ij}=RIGA(i)\cdot COLONNA(j)$   
 			- ES:

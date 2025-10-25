@@ -11,7 +11,7 @@ aliases:
   - violazione di restrizioni
 data: "`2025-10-01 17:23`"
 ---
-- # Restrizioni (vincoli) di integrità:
+- # Restrizioni (vincoli) di integrità: ^b66d88
 	- Alcune istanze di DB anche se sintatticamente corretti potrebbero non rappresentare informazioni utili per l'applicazione in cui lo usiamo.
 	- Danno una migliore descrizione dello scenario reale supportando la _qualità dei dati_
 	- Le restrizioni corrispondono a proprietà del mondo reale modellate nel [[introduzione Basi di dati|database]].

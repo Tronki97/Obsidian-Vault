@@ -6,7 +6,7 @@ aliases:
   - errore di arrotondamento
   - errore di misura
   - errore di troncamento
-data: "`<% tp.file.creation_date() %>`"
+data: "`2025-10-21 17:57`"
 ---
 - # Base-N e binario
 	- il calcolatore usa la base binaria e ogni base è una rappresentazione a se: 

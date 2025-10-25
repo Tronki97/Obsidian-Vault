@@ -25,11 +25,11 @@ $f_B(n)=10^-2*n^2$
 	- Data una funzione di costo g(n) definiamo l’insieme di funzioni per cui g(n) rappresenta un limite asintotico superiore come:
 	- $$O(g(n)) = {f (n) | ∃c > 0, n_0 ≥ 0\ : \ ∀n ≥ n_0, f (n) ≤ cg(n)}$$
 	- il rate di crescita di f non sarà mai più grande di quello di g al massimo sarà uguale 
-- #### Definizione ($\ohm-grande$)
+- #### Definizione ( $\ohm-grande$ )
 	- Data una funzione di costo g(n) definiamo l’insieme di funzioni per cui g(n)
 	- rappresenta un limite asintotico inferiore come
 	- $Ω(g(n)) = \{f (n) | ∃c > 0, n_{0} ≥ 0 \ :\  ∀n ≥ n_0, f (n) ≥ cg(n)\}$ 
-	- una funzione può essere $\ohm-grande$ di se stessa.
+	- una funzione può essere $\ohm - grande$ di se stessa.
 - #### Definizione($\Theta$)
 	- Data una funzione di costo g(n) definiamo l’insieme di funzioni asintoticamente equivalenti a g(n) come
 	- $$Θ(g(n))=\{f (n)|∃c_1,c_2>0,n_0≥0 t.c. ∀n≥n_0,c_{1}g(n)≤f (n)≤c_{2}g(n)\}$$
@@ -37,7 +37,7 @@ $f_B(n)=10^-2*n^2$
 		- $log \ (n^{2})=\Theta(log \ n)$ calcolo il lim del rapporto:$$\lim_{n->\infty}{ \frac{log \ n^2}{log \ n}}=\lim_{n->\infty}{ \frac{2log \ n}{log \ n}}=2>0$$che implica $log \ (n^{2})=\Theta(log \ n)$ 
 - #### Definizione (o-piccolo)
 	- data una funzione $g(n)$ si definiscono le funzioni che sono _dominate asintoticamente_ da $g(n)$ come:$$o(g(n))=f(n)|\forall c >0,\exists n_{0}\geq 0:\forall n\geq n_{0},f(n)<cg(n)$$
-		- Per ogni funzione di costo $g(n)\ne o(g(n))$$n^{2}\ne o(n^{2})$, $n^{2}=O(n^{2})$
+		- Per ogni funzione di costo $g(n) \ne o(g(n))$ $n^{2}\ne o(n^{2})$, $n^{2}=O(n^{2})$
 		- per definizione, se $f(n)=o(g(n)) \implies f(n)=O(g(n))$ 
 			- il contrario di solito è non vero
 - #### Definizione ($\omega-piccolo$)

@@ -1,0 +1,103 @@
+---
+tags:
+  - TODO
+aliases:
+  - CHECK
+  - asserzioni
+  - assertions
+  - with check option
+  - local
+  - cascaded
+  - query ricorsive
+  - with recursive
+  - funzioni scalari
+  - coalesce
+  - nullif
+  - case
+data: "`2025-10-24 18:48`"
+---
+- # CHECK
+	- Definisce dei vincoli di integrità
+	- Può essere complesso
+	- ![[Pasted image 20251024185059.png|450]]
+		- ![[Pasted image 20251024185121.png]]
+			- Non viene specificato il `Gender`
+		- ![[Pasted image 20251024185153.png]]
+			- `Net` viene impostato a 80 ma non è uguale a 100-10 come specificato nel vincolo.
+		- ![[Pasted image 20251024185241.png]]
+			- Questo [[Operazioni SQL#^42f891|INSERT]] è permesso
+- # Asserzioni
+	- Sono un modo per definire dinamicamente dei vincoli
+	- Sono vincoli aggiunti dopo, non in fase di creazione della tabella 
+		- perché questo vincolo non potrebbe essere soddisfatto se non dopo aver fatto qualche operazione di inserimento
+	- gli si dà un nome, e ci si associa un `CHECK`
+		- ![[Pasted image 20251024185651.png|450]]
+- # Viste
+	- `CREATE VIEW ViewName [(AttList)] AS SELECT ... [WITH [LOCAL | CASCADED] CHECK OPTION]`
+		- ![[Pasted image 20251024185826.png|450]]
+	- se abbiamo bisogno di annidare [[Operazioni SQL#^20d224|funzioni aggregate]] creiamo una vista altrimenti non si può fare.
+	- ## Aggiornamenti della vista
+		- Gli aggiornamenti sulle viste sono consentite solo sulle viste di una sola tabella
+		- `WITH CHECK OPTION` 
+			- ci consente di aggiornare la vista, ma solo se la [[Modello dati relazionale#^e8f57b|tupla]] inserita appartiene alla vista
+			- ![[Pasted image 20251024190047.png|450]]
+		- `LOCAL` 
+			- caso di viste costruite sopra altre viste, l'aggiornamento delle tuple dev'essere eseguito solo sull'ultimo livello della vista;
+		- `CASCADED`
+			- caso opposto a `LOCAL`, l'aggiornamento delle tuple è propagato a cascata sulle viste e relazioni su cui è basata quella vista
+- # Query ricorsive
+	- Si usa `with recursive`
+	- ![[Pasted image 20251024190457.png|450]]
+		- In questo modo `with` definisce la vista `ANCESTORS` che è costruita ricorsivamente usando `FATHERHOOD`
+		- E seleziono tutti gli `Ancestor` dei `Father`
+- # Funzioni scalari
+	- Funzioni a livello delle tuple che ritornano un singolo valore per ogni tupla
+	- ## Temporali:
+		- `current_date()`
+		- `extract(yearExpression)` estrae parte di una data data l'espressione.
+	- ## modifica delle stringhe:
+		- `char_length` ritorna la lunghezza della stringa
+		- `lower` converte tutti i caratteri in minuscolo (immagino esista anche la controparte `upper`)
+	- ## Espressioni condizionali:
+		- `coalesce`: restituisce il primo elemento di una lista di attributi non nullo
+			- Usabile per ottenere dei valori di default in una `SELECT`
+		- `nullif`: restituisce `NULL` se il primo argomento è uguale al secondo altrimenti ritorna il valore del primo argomento
+			- ![[Pasted image 20251025120222.png|450]]
+			- In questo esempio sto ottenendo i `Surname` e i `Dept` degli impiegati, in questo modo otterrò `NULL` se il valore dei `Dept` sarà `Unknown` altrimenti otterrò il valore adeguato.
+		- `case`: permette di specificare strutture condizionali, usato per ottenere una struttura `if-then-else` in _SQL_
+			- ![[Pasted image 20251025121615.png|450]]
+- # Sicurezza nei database
+	- SQL permette di definire dei privilegi (permessi) per certi utenti su certe tabelle o sull'intero DB
+	- I privilegi possono essere assegnati alle _relazioni, attributi, viste o domini_
+	- esiste almeno un admin, `_system`, che ha tutti i privilegi garantiti
+	- Un privilegio è descritto da:
+		- Una risorsa specifica
+		- L'utente che lo garantisce
+		- L'utente a cui è garantito il privilegio
+		- Un'operazione specifica
+		- Se l'utente può propagare il privilegio o meno
+	- ## Tipi di privilegio
+		- _insert_
+		- _update_
+		- _delete_
+		- _select_:
+			- Permette di leggere una risorsa
+		- _references_: 
+			- Permette di definire [[Restrizioni di integrità#^c7cc1f|vincoli di integrità referenziale]]
+		- _usage_:
+			- Permette di usare una definizione, come ad esempio un tipo di dato _custom_
+	- ## Comandi
+		- `GRANT <Privileges | ALL PRIVILEGES> ON Resource TO Users [WITH GRANT OPTION]`
+			- `GRANT OPTION` consente proprio di propagare il privilegio ad altri utenti
+		- `REVOKE Privileges ON Resource FROM Users [RESTRICT | CASCADE]`
+			- `RESTRICT` lo tolgo all'utente ma non a quello cui l'ha dato
+			- `CASCADE`, _pericolosa_, la revoca è estesa a cascata a tutte le persone a cui l'utente ha garantito i privilegi
+	- modello `RBAC`:
+		- _Role Based Access Control_
+		- Introdotto da SQL-3.0 -> non do più permessi agli utenti precisi, ma ai ruoli che ricoprono
+		- `CREATE ROLE Name`
+		- `SET ROLE Name`: imposta il ruolo `Name` all'utente corrente
+			- o `GRANT Name TO User`
+
+- # Link Utili:
+	- 

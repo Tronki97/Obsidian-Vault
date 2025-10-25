@@ -1,6 +1,8 @@
 ---
 tags: []
-aliases: 
+aliases:
+  - regola di bayes
+  - bayes
 data: "`2025-03-04 14:21`"
 ---
 - # Formula:
