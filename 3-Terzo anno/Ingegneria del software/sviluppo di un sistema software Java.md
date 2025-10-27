@@ -1,0 +1,60 @@
+---
+tags:
+  - TODO
+aliases:
+  - nested class
+  - inner class
+  - local class
+data: "`2025-10-20 15:22`"
+---
+- # Argomento:
+	-  la programmazione ad oggetti era pensata come il trasformare qualsiasi cosa in un oggetto che poi venisse valutato.
+	- In C++ e java è possibile definire classi dentro ad altre classi
+		- In C++ è fatto per motivi di visibilità e naming
+		- In Java ci sono 3 motivi:
+			- ## Nested class:
+				- Per rendere una classe accessibile solo in un certo punto del codice in quanto visibile solo all'interno della classe in cui si trova.
+					- Per non poterci accedere con una sintassi specifica. 
+				- Possono raggruppare classi che hanno la stessa visibilità e controlli
+				- E si possono avere oggetti della classe _nested_ senza che necessariamente esistano oggetti della classe che contengono.
+			- ## Inner class:
+				- Un oggetto può esistere solo all'interno di un oggetto della classe di cui fa parte e se c'è una classe esterna che lo contiene.
+				- Ogni istanza ha una classe che la include ogni classe inner può accedere a tutti i membri delle classi che le incapsulano. 
+				- Il nome della classe deve essere diverso da quella che la include.
+				- _non può avere attributi `static` _ 
+					- Altrimenti si necessiterebbe di avere tanti `class.Attr` quante sono le istanze di `class` 
+				- #Esempi
+			- ## Local class:
+				- In c++ e java è possibile definire una classe dentro una funzione
+				- Queste classi sono utili per qualcosa di molto specifico ma che siano meno visibili
+					- Rafforzano l'incapsulamento 
+				- Se una classe locale è dentro ad uno scope allora ne ha lo stesso livello di accesso.
+				- In java La classe locale è visibile solo nel blocco di codice in cui è definita
+					- Utile come classe helper, quindi usata per poco tempo e di solito avente un solo metodo.
+					- Non può dichiarare membri public protected o static a meno che non siano `const/final`
+					- Può accedere ai membri della classe che la include
+						- Può accedere ai metodi solo se `final` o `effectively final`
+							- Quindi posso accedere solo a quelle cose che sono costanti o paragonabili a tali e quindi non modificabili.
+							- _effectively final_ vale solo all'interno delle funzioni.
+							- Il compilatore procede a creare una copia di ciascuna di quelle variabili.
+	- ## Interfacce:
+		- Hanno una implementazione
+			- ![[Pasted image 20251020201516.png|550]]
+		- I metodi di istanza sono preferiti rispetto ai metodi di `default`.
+			- ![[Pasted image 20251020201546.png|550]]
+			- ![[Pasted image 20251020201606.png|550]]
+				- Di fatto il metodo `Pegasus.identifyMyself()` ritorna la stringa "I am a horse"
+		- I metodi già [[Tipo dato astratto#^83e9b7|overridden]] da altri sono ignorati.
+			- ![[Pasted image 20251020201705.png|550]]
+			- ![[Pasted image 20251020201721.png|550]]
+				- Il metodo `Dragon.identifyMyself()` ritorna “I am able to Lay eggs”
+		- Se due metodi definiti indipendentemente hanno un conflitto allora il compilatore di Java produrrà un errore. In caso necessito di aggiungere `super` alla chiamata del metodo.
+		- ![[Pasted image 20251020201906.png|650]]
+	- ## Classi anonime:
+		- Rendono il codice al loro interno più conciso.
+		- Si può dichiarare una classe e istanziarla _allo stesso tempo_
+		- Come le classi locali ma non possiedono un nome.
+			- Usate quando devo usare una classe locale ma solo una volta
+			- Un esempio può essere un event listener per un `button`
+- # Link Utili:
+	- 

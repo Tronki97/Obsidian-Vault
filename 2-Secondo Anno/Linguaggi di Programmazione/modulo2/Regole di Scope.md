@@ -10,6 +10,7 @@ aliases:
   - catena statica
 data: "`2025-02-26 12:00`"
 ---
+- Lo scope rappresenta dove una variabile è visibile all'interno del codice
 - # Scope statico:
 	- Un nome non locale è risolto nel blocco che testualmente lo racchiude:
 		- ![[Pasted image 20250823170023.png]]

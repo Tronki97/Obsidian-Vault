@@ -31,14 +31,14 @@ data: "`2025-09-29 11:06`"
 - # Idea di fondo:
 	- Si rappresenta il mondo come insieme di oggetti interagenti.
 	- ## Modello ad oggetti semplice:
-		- ![[Pasted image 20250929120110.png]]
+		- ![[Pasted image 20250929120110.png|500]]
 		- Ogni oggetto ha attributi e possono esistere delle relazioni tra oggetti e posso rappresentare questi oggetti attraverso delle istanze (_Joe, Porsche_)
 	- ## Modello ad oggetti:
-		- ![[Pasted image 20250929120254.png]]
+		- ![[Pasted image 20250929120254.png|600]]
 		- L'istanza di un oggetto eredita una serie di attributi senza la necessità di ridefinirli.
 	- ## Processo di un progetto per un modello ad oggetti:
-		- ![[Pasted image 20250929120731.png]]
-		- Un sistema software si considera terminato quando il cliente riceve quello che gli serve che fa quello che vuole e quindi smette di pagare oppure si rompe il cazzo e se ne va smettendo di pagarti.
+		- ![[Pasted image 20250929120731.png|600]]
+		- Un sistema software si considera terminato quando il cliente riceve quello che gli serve che fa quello che vuole e quindi smette di pagare oppure si rompe il _cazzo_ e se ne va smettendo di pagarti.
 - # UML:
 	- Vari modi per definire un UML sono: classi, nodi, interfacce, tipi di dati, componenti...
 	- ## Diagrammi strutturali:
@@ -70,10 +70,10 @@ data: "`2025-09-29 11:06`"
 				- Uno _use case_ è simile ad un altro ma fa un po' di più
 				- ![[Pasted image 20250929192522.png|200]]
 			- #### Relazione di inclusione:
-				- Usato quando un pezzo del comportamento di uno _Use case_ è simile a quello di molti altri.
+				- Usato quando un pezzo del comportamento di uno _Use case_ è simile a quello di molti altri e deve esserci stato il comportamento che è incluso.
 				- ![[Pasted image 20250929192511.png|300]]
 		- ## estrazione delle classi:
-			- Parto dal testo ed elenco tutti i nomi e li identifico come gli oggetti principali (possono anche essere degli attributi).
+			- Parto dal testo ed elenco tutti i _nomi_ e li identifico come gli oggetti principali (possono anche essere degli attributi).
 			- ![[Pasted image 20250930112240.png||500]]
 			- ### Diagramma ad oggetti:
 				- Raccogliendo tutti gli elementi del "mondo" ne creo un modello concettuale per poi scriverne un codice che implementi i concetti che mi servono.
