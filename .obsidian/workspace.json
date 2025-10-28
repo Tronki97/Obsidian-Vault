@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "89fe2348a86d1770",
+            "id": "85f80b85f299844a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
+                "file": "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software Java.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "unified modeling language (UML)"
+              "title": "sviluppo di un sistema software Java"
+            }
+          },
+          {
+            "id": "e0e02c4a52474cd1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Regole di Scope"
             }
           }
         ],
@@ -260,19 +284,29 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
+    "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software Java.md",
+    "Pasted image 20251028180747.png",
+    "Pasted image 20251028175824.png",
+    "Pasted image 20251028175040.png",
+    "Pasted image 20251028174641.png",
+    "Homepage.md",
+    "1-Primo Anno/Algebra e geometria/Cambio di base.md",
+    "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
     "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
+    "3-Terzo anno/Consigli Tesi.md",
+    "2-Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Antenne.md",
+    "2-Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
+    "1-Primo Anno/programmazione/c++/sintassi(programmazione).md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
     "3-Terzo anno/Ingegneria del software/design pattern/Pattern comportamentali.md",
     "3-Terzo anno/Ingegneria del software/design pattern/Design pattern.md",
     "3-Terzo anno/Ingegneria del software/architettura dei software/architettura dei software.md",
-    "Homepage.md",
-    "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software Java.md",
     "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software in python.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo3/Tipi base.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
     "immagini/Pasted image 20251024190457.png",
     "3-Terzo anno/Basi di Dati/SQL/SQL avanzato.md",
-    "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
     "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
     "immagini/Pasted image 20251025121615.png",
     "immagini/Pasted image 20251025120222.png",
@@ -285,18 +319,7 @@
     "0-Mostarda/Analisi matematica.md",
     "0-Mostarda/Architettura degli Elaboratori.md",
     "0-Mostarda/Calcolo delle probabilità e statistica.md",
-    "0-Mostarda/Calcolo numerico.md",
-    "0-Mostarda/Home.md",
-    "0-Mostarda/Linguaggi di Programmazione.md",
-    "0-Mostarda/Logica per l'informatica.md",
-    "0-Mostarda/Ottimizzazione combinatoria.md",
-    "0-Mostarda/Primo anno.md",
-    "0-Mostarda/Programmazione.md",
     "immagini/Pasted image 20251022143349.png",
-    "immagini/Pasted image 20251024190047.png",
-    "immagini/Pasted image 20251024185826.png",
-    "immagini/Pasted image 20251024185651.png",
-    "immagini/Pasted image 20251024185241.png",
     "3-Terzo anno/Ingegneria del software/design pattern",
     "3-Terzo anno/Ingegneria del software/architettura dei software",
     "3-Terzo anno/Basi di Dati/architettura dei DBMS",

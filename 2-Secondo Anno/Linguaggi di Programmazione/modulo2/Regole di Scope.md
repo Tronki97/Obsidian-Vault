@@ -8,6 +8,7 @@ aliases:
   - scope dinamico
   - display
   - catena statica
+  - scope
 data: "`2025-02-26 12:00`"
 ---
 - Lo scope rappresenta dove una variabile è visibile all'interno del codice

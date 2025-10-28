@@ -14,29 +14,47 @@ data: "`2025-10-20 15:22`"
 		- In Java ci sono 3 motivi:
 			- ## Nested class:
 				- Per rendere una classe accessibile solo in un certo punto del codice in quanto visibile solo all'interno della classe in cui si trova.
-					- Per non poterci accedere con una sintassi specifica. 
+					- Per non poterci accedere con una sintassi specifica.
+					- Dichiarata con `private static class name`
 				- Possono raggruppare classi che hanno la stessa visibilità e controlli
 				- E si possono avere oggetti della classe _nested_ senza che necessariamente esistano oggetti della classe che contengono.
+				- ![[Pasted image 20251028174641.png]]
+					- In questo modo i clients non possono vedere l'implementazione di `Entry`
+				- Per accedere a membri o metodi della classe esterna si necessita che siano `static`
 			- ## Inner class:
-				- Un oggetto può esistere solo all'interno di un oggetto della classe di cui fa parte e se c'è una classe esterna che lo contiene.
-				- Ogni istanza ha una classe che la include ogni classe inner può accedere a tutti i membri delle classi che le incapsulano. 
+				- _Un oggetto può esistere solo all'interno di un oggetto della classe di cui fa parte e se c'è una classe esterna che lo contiene_.
+				- Ogni istanza ha una classe che la include ogni classe _inner_ può accedere a tutti i membri delle classi che le incapsulano. 
 				- Il nome della classe deve essere diverso da quella che la include.
-				- _non può avere attributi `static` _ 
+				- _non può avere attributi_ `static` 
 					- Altrimenti si necessiterebbe di avere tanti `class.Attr` quante sono le istanze di `class` 
-				- #Esempi
+				- ![[Pasted image 20251028175040.png|600]]
+					- In questo modo ogni istanza di `Incrementer` è legata ad una istanza della classe contenitrice `Counter`
 			- ## Local class:
 				- In c++ e java è possibile definire una classe dentro una funzione
 				- Queste classi sono utili per qualcosa di molto specifico ma che siano meno visibili
-					- Rafforzano l'incapsulamento 
+					- _Rafforzano l'incapsulamento_ 
 				- Se una classe locale è dentro ad uno scope allora ne ha lo stesso livello di accesso.
 				- In java La classe locale è visibile solo nel blocco di codice in cui è definita
-					- Utile come classe helper, quindi usata per poco tempo e di solito avente un solo metodo.
-					- Non può dichiarare membri public protected o static a meno che non siano `const/final`
+					- Utile come classe _helper_, quindi usata per poco tempo e di solito avente un solo metodo.
+					- Non può avere membri `public` `protected` o `static` a meno che non siano `const/final`
 					- Può accedere ai membri della classe che la include
 						- Può accedere ai metodi solo se `final` o `effectively final`
 							- Quindi posso accedere solo a quelle cose che sono costanti o paragonabili a tali e quindi non modificabili.
-							- _effectively final_ vale solo all'interno delle funzioni.
-							- Il compilatore procede a creare una copia di ciascuna di quelle variabili.
+							- `effectively final` vale solo all'interno delle funzioni.
+						- Il motivo di tutto ciò è perché queste classi potrebbero vivere di più di quelle che le contengono quindi Il compilatore procede a creare una _copia di ciascuna_ di quelle variabili per _assicurarsi che rimangano consistenti per tutta la durata_.
+							- Per le `effectively final` è uguale siccome il compilatore vede che non le viene assegnato nessun _Lvalue_ quindi per tutto il codice non verrà modificata
+				- ![[Pasted image 20251028180747.png|600]]
+					- `n` non viene definita come `final` ma siccome il suo valore non cambia mai nello [[Regole di Scope|scope]] in cui è contenuta allora diventa `effectively final` 
+			- ## Contesto non-statico:
+				- è del codice che esegue con un `this` associato alla classe che lo contiene
+				- In questo contesto una _inner class_ può accedere ai _membri di istanza_ della classe esterna
+				- ![[Pasted image 20251028175824.png|650]]
+			- ## Classi anonime:
+				- Rendono il codice al loro interno più conciso.
+				- Si può dichiarare una classe e istanziarla _allo stesso tempo_
+				- Come le classi locali ma non possiedono un nome.
+					- Usate quando devo usare una classe locale ma solo una volta
+					- Un esempio può essere un event listener per un `button`
 	- ## Interfacce:
 		- Hanno una implementazione
 			- ![[Pasted image 20251020201516.png|550]]
@@ -50,11 +68,6 @@ data: "`2025-10-20 15:22`"
 				- Il metodo `Dragon.identifyMyself()` ritorna “I am able to Lay eggs”
 		- Se due metodi definiti indipendentemente hanno un conflitto allora il compilatore di Java produrrà un errore. In caso necessito di aggiungere `super` alla chiamata del metodo.
 		- ![[Pasted image 20251020201906.png|650]]
-	- ## Classi anonime:
-		- Rendono il codice al loro interno più conciso.
-		- Si può dichiarare una classe e istanziarla _allo stesso tempo_
-		- Come le classi locali ma non possiedono un nome.
-			- Usate quando devo usare una classe locale ma solo una volta
-			- Un esempio può essere un event listener per un `button`
+	- 
 - # Link Utili:
 	- 
