@@ -32,5 +32,6 @@
   "dataview-serializer",
   "obsidian-image-layouts",
   "obsidian-spaced-repetition",
-  "unicode-search"
+  "unicode-search",
+  "jupymd"
 ]

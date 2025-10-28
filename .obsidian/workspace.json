@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
-            }
-          },
-          {
-            "id": "85f80b85f299844a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software Java.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "sviluppo di un sistema software Java"
-            }
-          },
-          {
-            "id": "e0e02c4a52474cd1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Regole di Scope"
+              "title": "decision_tree_sample"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -284,13 +235,19 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
-    "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software Java.md",
-    "Pasted image 20251028180747.png",
-    "Pasted image 20251028175824.png",
-    "Pasted image 20251028175040.png",
-    "Pasted image 20251028174641.png",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/tree.dot",
     "Homepage.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample_OB.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample_OB.ipynb",
+    "immagini/Pasted image 20251028180747.png",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample.ipynb",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo",
+    "immagini/Pasted image 20251028174641.png",
+    "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software Java.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
+    "immagini/Pasted image 20251028175824.png",
+    "immagini/Pasted image 20251028175040.png",
     "1-Primo Anno/Algebra e geometria/Cambio di base.md",
     "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
     "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
@@ -310,15 +267,13 @@
     "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
     "immagini/Pasted image 20251025121615.png",
     "immagini/Pasted image 20251025120222.png",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/Regressione logistica.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/Tecnica del gradiente.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Regressione logistica.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Tecnica del gradiente.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning",
     "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
     "immagini/Pasted image 20251025112304.png",
     "immagini/Pasted image 20251025112236.png",
     "0-Mostarda/Analisi matematica.md",
-    "0-Mostarda/Architettura degli Elaboratori.md",
-    "0-Mostarda/Calcolo delle probabilità e statistica.md",
     "immagini/Pasted image 20251022143349.png",
     "3-Terzo anno/Ingegneria del software/design pattern",
     "3-Terzo anno/Ingegneria del software/architettura dei software",
@@ -326,9 +281,6 @@
     "3-Terzo anno/Basi di Dati/calcolo relazionale",
     "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico",
     "3-Terzo anno/Basi di Dati/SQL",
-    "3-Terzo anno/secondo semestre",
-    "3-Terzo anno/primo semestre",
-    "Senza nome.base",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

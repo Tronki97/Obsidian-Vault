@@ -66,7 +66,7 @@ data: "`2025-09-26 13:09`"
 	- Calcolo l'entropia quindi il caso pessimo:
 		- $$H(X)=-\sum\limits_{i=1}^{n}P(X=i)\log_{2}(P(X=i))=-\sum\limits_{i=1}^{n} \frac{1}{n}\log_{2}(\frac{1}{n})=\log_{2}(n)$$
 		- Se gli eventi non hanno distribuzione uniforme si può migliorare la codifica di fatto diminuendo la quantità di bit per dei risultati che accadono con più probabilità
-- # Guadagno informativo:
+- # Guadagno informativo: ^b53b4a
 	- Dato uno specifico $Y=v$ che condiziona $X$
 		- $$H(X|Y=v)=-\sum\limits_{i=1}^{n}P(X=i|Y=v)\log_{2}(P(X=i|Y=v))$$
 	- Ora calcolo l'entropia di $X$ conoscendo $Y$
