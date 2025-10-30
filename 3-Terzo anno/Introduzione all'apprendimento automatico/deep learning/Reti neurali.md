@@ -18,6 +18,7 @@ data: "`2025-10-25 11:18`"
 	- Implementa una [[Regressione logistica]]:
 		- $$\sigma(wx+b)$$
 	- Le _activation function_ devono essere _non lineari_ altrimenti basterebbe solo aumentare il numero di input per ottenere un modello più complesso
+		- ![[Pasted image 20251029182444.png|600]]
 - # Topologie:
 	- ## Feed-forward:
 		- Sono acicliche come un [[Grafi#^993ecb|DAG]] chiamate così perché portano i risultati delle computazioni sempre avanti

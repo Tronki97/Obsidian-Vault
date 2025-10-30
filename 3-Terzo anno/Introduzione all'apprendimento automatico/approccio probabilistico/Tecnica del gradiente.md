@@ -15,7 +15,7 @@ data: "`2025-10-24 18:06`"
 		-  _se la loss function è convessa allora c'è solo un minimo_
 	- Nel nostro caso la funzione è una [[Regressione logistica#^57cf6b|funzione logistica]] la cui derivata è una gaussiana.
 	- Un problema che si può riscontrare è nel caso dei _plateau_ ovvero delle ampie zone piatte con gradiente 0.
-- # Batch:
+- # Batch: ^dd071f
 	- Spesso invece di calcolare l'errore e il suo gradiente su tutti i miei dati (_full batch_) e quindi essendo lento lo si calcola su un sottoinsieme di dati detto _mini-batch_
 	- Un altro metodo è quello di calcolarlo su un'istanza del training set alla volta.
 		- Ciò risulta veloce ma poco preciso

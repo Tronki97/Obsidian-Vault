@@ -81,7 +81,7 @@ data: "`2025-10-02 14:24`"
 			- Posto $\theta_{ik}=P(X_{i}=1|y=k)$ e quindi la disequazione diventa:
 				- ![[Pasted image 20251010143906.png]]
 		- In questo modo ogni caratteristica $x_{i}$ contribuisce in _maniera indipendente dalle altre al risultato in maniera lineare_ con un determinato peso, ed è proprio questo peso che deve essere stimato
-	- ## Gaussiano:
+	- ## Gaussiano: ^3fb98d
 		- Siamo nella situazione in cui le feature $X_{i}$ sono continue.
 		- Suppongo quindi che $P(X_{i}|Y)$ abbia [[Distribuzioni notevoli continue#^68d52e|distribuzione normale gaussiana]]
 			- Questa distribuzione è interessante perché molti fenomeni da analizzare tendono ad avere questa distribuzione e può anche essere vista come caso limite della binomiale dove si aumenta di molto il numero di lanci.

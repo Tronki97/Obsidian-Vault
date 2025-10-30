@@ -21,7 +21,7 @@ data: "`2025-10-13 19:10`"
 		- ![[Pasted image 20251009133613.png]]
 		- Per riempire la tabella serve stimare $4=2^{2}$ parametri
 		- Quindi il problema risiede nel dover _calcolare un numero esponenziale di parametri_
-		- ### ES (MNIST):
+		- ### ES (MNIST): ^869936
 			- Un esempio è il caso _mnist_ del riconoscere i numeri 
 				- ![[Pasted image 20251009133819.png|450]]
 				- Dove si hanno immagini di $28 \times28$ pixel avendo $784$ features quindi $2^{784}$ parametri da stimare
