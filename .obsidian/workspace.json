@@ -104,13 +104,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Flashcard/Flashcard Reti.md",
+                "file": "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Flashcard Reti"
+              "title": "Struttura di sviluppo di un sistema software in python"
             }
           },
           {
@@ -129,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Flashcard/Flashcard Reti.md",
+                "file": "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a Flashcard Reti"
+              "title": "Riferimenti a sviluppo di un sistema software in python"
             }
           },
           {
@@ -233,7 +233,7 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
     "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software Java.md",
     "Homepage.md",

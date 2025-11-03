@@ -38,6 +38,13 @@ data: "`2025-10-27 12:22`"
 	- Scoping:
 		- è possibile usare `global x` per dire che nel blocco corrente `x` è da considerarsi globale
 		- Allo stesso modo si usa `non local x` per dire che nel blocco corrente la  `x` usata fa riferimento alla prima definizione esterna al blocco corrente.
-	- 
+	- Moduli:
+		- Ogni file è un modulo e ogni modulo è un oggetto
+		- Senza l'estensione `.py` il nome del file viene salvato nella variabile `__name__` 
+		- Per accedervi si usa `import module`  
+		- Per importare tutti i nomi (funzioni) di un modulo si usa `from module import *` che li importerà tutti tranne quelli che cominciano con `_` in quel caso serve farlo esplicitamente.
+			- In quanto sono protetti (`_`) e privati (`__`) 
+	- Namespace: 
+		- Definisce tutti i nomi associati con un modulo. 
 - # Link Utili:
 	- 
