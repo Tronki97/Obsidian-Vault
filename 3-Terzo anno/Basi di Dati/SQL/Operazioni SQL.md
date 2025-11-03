@@ -58,7 +58,7 @@ data: "`2025-10-24 18:30`"
 		- ### Outer Join:
 			- Usati per evitare la perdita di informazioni a causa del collasso di alcune tuple
 			- ![[Pasted image 20251022094927.png]]
-	- ## Ordinre le risposte:
+	- ## Ordinare le risposte:
 		- ![[Pasted image 20251022095653.png]]
 			- Ritorna `Name` e `Income` dalla relazione `PEOPLE` con età < 30 e li ordina in ordine alfabetico ascendente 
 		- L'opzione può essere sia `ASC` che `DESC`

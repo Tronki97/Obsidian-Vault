@@ -1,0 +1,43 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-10-27 12:22`"
+---
+- # Argomento:
+	- linguaggio visibile come di scripting, object oriented, funzionale.
+	- Ha una caratteristica chiamata _referential transparency_ ereditata dai linguaggi funzionali.
+		- Ovvero il risultato non cambia modificando l'ordine delle operazioni
+			- Quindi le variabili non cambiano valore
+		- Python eredita ciò avendo _entità immutabili_
+			- Si necessita quindi crearne un altro basandosi su quello che si vorrebbe "modificare"
+	- Ciò però non vale per le liste che sono _mutabili_:
+		- _shallow copy_: condividere il puntatore della lista e assegnarlo ad un'altra variabile.
+	- Tuple:
+		- Sono immutabili, ordinate e hanno una sintassi come quella delle liste
+		- Se la tupla contiene una lista è possibile modificare la lista in se e la tupla di fatto non cambia visto che riferimento alla stesso elemento 
+		- Si possono concatenare le tuple solo alla creazione.
+		- Non può usare la _shallow copy_ ma la _deep_ si.
+	- Insiemi:
+		- Non possono avere come elementi quelli mutabili 
+	- Dizionari:
+		- Collezioni ordinate di coppie (key, element) con ogni chiave che può apparire massimo una volta. 
+	- Loop:
+		- Si hanno 3 modi per continuare o uscire dai loop
+		- _break_...
+		- _continue_:
+		- _pass_: permette di skippare un blocco di indentazione
+			- ![[Pasted image 20251103122831.png]]
+				- Non viene stampata la riga dopo il pass ma esce dal suo blocco e va in quello successivo 
+	- Iteratore:
+		- Mi permette di estrarre l'iteratore da un oggetto e usarlo per iterare sull'oggetto
+		- Con il `next` permette di andare al prossimo elemento 
+			- ![[Pasted image 20251103123026.png|300]]
+		- Questo è fattibile su oggetti che discendono dalla classe `iterable`
+		- Ciò è fatto implicitamente nei `for` loop 
+	- Scoping:
+		- è possibile usare `global x` per dire che nel blocco corrente `x` è da considerarsi globale
+		- Allo stesso modo si usa `non local x` per dire che nel blocco corrente la  `x` usata fa riferimento alla prima definizione esterna al blocco corrente.
+	- 
+- # Link Utili:
+	- 

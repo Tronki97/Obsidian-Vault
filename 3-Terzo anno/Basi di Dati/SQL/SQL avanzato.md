@@ -54,7 +54,7 @@ data: "`2025-10-24 18:48`"
 	- Funzioni a livello delle tuple che ritornano un singolo valore per ogni tupla
 	- ## Temporali:
 		- `current_date()`
-		- `extract(yearExpression)` estrae parte di una data data l'espressione.
+		- `YEAR | MONTH | DAY (attr)` estrae parte di una data data l'espressione.
 	- ## modifica delle stringhe:
 		- `char_length` ritorna la lunghezza della stringa
 		- `lower` converte tutti i caratteri in minuscolo (immagino esista anche la controparte `upper`)

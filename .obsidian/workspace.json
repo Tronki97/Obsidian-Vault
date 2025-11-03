@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione/Alberi di decisione.md",
+                "file": "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,155 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Alberi di decisione"
-            }
-          },
-          {
-            "id": "4b72fd4dc134984a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Regressione logistica.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Regressione logistica"
-            }
-          },
-          {
-            "id": "372c37ebc2276a24",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Reti neurali"
-            }
-          },
-          {
-            "id": "0637a8c7ce0c6697",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/demo/mnistDense.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "mnistDense"
-            }
-          },
-          {
-            "id": "b200befaca9d2076",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/demo/gaussian_as_limit_of_uniforms.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "gaussian_as_limit_of_uniforms"
-            }
-          },
-          {
-            "id": "40cb6fcc9db0068d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/demo/naive_bayes_mnist_.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "naive_bayes_mnist_"
-            }
-          },
-          {
-            "id": "a83209f42f73e5aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/demo/logistic_regression_animation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "logistic_regression_animation"
+              "title": "sviluppo di un sistema software in python"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -380,52 +235,52 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/naive_bayes_mnist_.md",
+    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software Java.md",
+    "Homepage.md",
+    "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Controllo.md",
+    "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
+    "3-Terzo anno/Basi di Dati/SQL/SQL avanzato.md",
+    "3-Terzo anno/Basi di Dati/algebra relazionale/Viste.md",
+    "3-Terzo anno/Ingegneria del software/prima lezione.md",
+    "3-Terzo anno/Ingegneria del software/laboratorio/esercitazioni UML.md",
+    "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
+    "3-Terzo anno/Ingegneria del software/Templates in C++.md",
+    "3-Terzo anno/Ingegneria del software/software development",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/linear_regression.md",
+    "3-Terzo anno/Ingegneria del software/laboratorio",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/mnistDense.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/linear_regression.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/logistic_regression_animation.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/gaussian_as_limit_of_uniforms.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample.md",
+    "immagini/Pasted image 20251029182444.png",
+    "immagini/Pasted image 20251103123026.png",
+    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
+    "immagini/Pasted image 20251103122831.png",
+    "3-Terzo anno/Ingegneria del software/design pattern/Design pattern.md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
+    "3-Terzo anno/Ingegneria del software/design pattern/Pattern creazionali.md",
+    "3-Terzo anno/Ingegneria del software/design pattern/Pattern comportamentali.md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/naive_bayes_mnist_.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/logistic_regression_animation.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/naive_bayes_mnist__tmp_jupytext_29668.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/gaussian_as_limit_of_uniforms.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/naive_bayes_mnist_.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/mnistDense.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/gaussian_as_limit_of_uniforms.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/mnistDense_tmp_jupytext_5820.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
-    "Pasted image 20251029182444.png",
     "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Regressione logistica.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/mnistDense.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione/Alberi di decisione.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/Visualization_of_regression_weights.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/Visualization_of_regression_weights.ipynb",
-    "Homepage.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/tree.dot",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample_OB.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample_OB.ipynb",
     "immagini/Pasted image 20251028180747.png",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/decision_tree_sample.ipynb",
     "immagini/Pasted image 20251028174641.png",
-    "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software Java.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo2/Regole di Scope.md",
     "immagini/Pasted image 20251028175824.png",
     "immagini/Pasted image 20251028175040.png",
-    "1-Primo Anno/Algebra e geometria/Cambio di base.md",
-    "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
-    "3-Terzo anno/Consigli Tesi.md",
-    "2-Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Antenne.md",
-    "2-Secondo Anno/Reti di Calcolatori/(7) Livello applicativo/Caching.md",
-    "1-Primo Anno/programmazione/c++/sintassi(programmazione).md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Pattern comportamentali.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Design pattern.md",
-    "3-Terzo anno/Ingegneria del software/architettura dei software/architettura dei software.md",
-    "3-Terzo anno/Ingegneria del software/sviluppo di un sistema software in python.md",
     "immagini/Pasted image 20251024190457.png",
     "immagini/Pasted image 20251025121615.png",
     "immagini/Pasted image 20251025120222.png",
-    "immagini/Pasted image 20251025112304.png",
-    "immagini/Pasted image 20251025112236.png",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",
