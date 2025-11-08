@@ -34,5 +34,45 @@ data: "`2025-10-25 11:18`"
 			- L'ordine degli elementi in input è _irrilevante_
 	- ## Ricorrenti:
 		- Presentano dei cicli che permettono a un singolo neurone o layer di riprocessare i risultati ottenuti
+- # Applicazioni di successo:
+	- ## Image processing:
+		- Classificazione e detection di immagini, object detection, trasferimento di stile
+		- _ImageNet_ è un dataset per la _classificazione di immagini_ contenente 15 milioni di immagini che copre più di 20k categorie diverse di immagini
+			- C'era una competizione con questo dataset dove si doveva indovinare il label dell'immagine e la razza dell'animale; _tutto ciò prima del deep learning_
+			- Nel 2012 per la prima volta un modello _deep learning_ batte tutti gli altri modelli 
+			- _imageNet_ rimane importante sicome molto grande e ancora utilizzabile per allenare modelli
+		- ### Image detection:
+			- Determinare cosa si vede e dove lo si sta vedendo.
+				- ![[Pasted image 20251106134238.png]]
+					- Si determina la più piccola _bounding box_ che contiene il soggetto che si sta individuando.
+		- ### Image segmentation:
+			- All'interno dell'immagine si determinano categorie diverse
+			- A differenza delle _bounding box_ si fa una classificazione a livello di pixel dove si stabilisce _a quale categoria appartiene un pixel_
+				- ![[Pasted image 20251106134559.png]]
+			- Può essere visto come un processo di trasformazione di immagine in un'altra con colori diversi
+		- ### Key points detection:
+			- Praticamente la motion capture dove si impostano dei punti chiave di alcuni soggetti dentro alle immagini.
+			- 
+		- ### generative modeling:
+			- Si cerca di costruire un generatore capace di fare sampling di punti secondo una determinata distribuzione appresa.
+			- Si parte da una distribuzione di probabilità nota e si trasforma in una attesa $P(X)$.
+			- Partendo da una info latente $z$ si cerca di imparare la distribuzione $P(X|z)$
+				- Con $z$ che sarebbe una sorta di rappresentazione di $X$ che è condensata e implicita
+			- #### spazio latente:
+				- 
+	- ## natural language processing
+		- Language modelling, text processing
+		- ### sentiment analisys:
+			- Si ha un testo in linguaggio naturale e si cerca di classificare delle informazioni come il sentimento del testo
+		- ### Modelling:
+			- Come riassumere un testo, interessante perché il modello deve classificare quali informazioni sono utili e quali tralasciare
+			- Generare dialoghi rimanendo coerenti con l'intera durata del 
+		- ### Embedding:
+			- Ogni task di questa categoria richiede il trasformare le parole in _token_ mappando le parole in spazi vettoriali con grande [[Dimensione]] e questi vettori dovrebbero riuscire per esempio a trasformare delle parole dal femminile al maschile dentro agli _spazi latenti_ 
+		- ### CLIP:
+			- Permette di creare un ponte tra il dominio testuale e il dominio delle immagini.
+			- 
+	- ## Generative modelling:
+		- 
 - # Link Utili:
 	- 

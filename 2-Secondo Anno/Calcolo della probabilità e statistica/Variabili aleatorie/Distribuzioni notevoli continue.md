@@ -58,7 +58,7 @@ data: "`2025-04-11 13:33`"
 		- $\sigma^{2}= Var(X)$.
 	- $$f_{X}(x)=\frac{1}{\sqrt{2\pi \sigma^{2}}} e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$
 	- $$F_{X}(x)= \int _{-\infty}^{x} \frac{1}{\sqrt{2\pi \sigma^{2}}}  e^{-\frac{(y-\mu)^{2}}{2\sigma^{2}}} dy$$
-- # Distribuzione normale standard:
+- # Distribuzione normale standard: ^cc21f1
 	- $Z\sim N(0,1)$
 		- $$\phi_{X}(x)=\frac{1}{\sqrt{2\pi}} e^{-\frac{x^{2}}{2}}$$
 		- $$\Phi_{X}(x)= \int _{-\infty}^{x} \frac{1}{\sqrt{2\pi}}  e^{-\frac{y^{2}}{2}} dy$$

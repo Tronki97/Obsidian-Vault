@@ -1,10 +1,11 @@
 ---
 tags:
-  - TODO
 aliases:
   - nested class
   - inner class
   - local class
+  - interfacce
+  - classe anonima
 data: "`2025-10-20 15:22`"
 ---
 - # Argomento:

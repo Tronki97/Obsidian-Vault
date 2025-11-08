@@ -1,0 +1,114 @@
+---
+tags:
+  - TODO
+aliases:
+  - entità
+  - associazioni
+  - modello E-R
+  - modello ER
+  - diagramma ER
+  - diagramma E-R
+  - identificatore interno
+  - identificatore esterno
+data: "`2025-11-05 17:28`"
+---
+- # # motivazioni:
+	- Evita di partire direttamente dal [[Descrivere i dati#^bfe78d|modello logico]], e il [[Modello dati relazionale#^d88ce7|modello relazionale]] risulta troppo rigido
+	- Il più usato è il modello _Entity-Relationship_
+- # Modello entità-associazione
+	- ## Entità:
+		- Classe di un oggetto (cose, persone, posti) appartengono ad una realtà di interesse, condividendo alcune proprietà e hanno un'esistenza autonoma
+		- _schema_: una classe uniforme di oggetti
+		- _istanza_: un elemento della classe
+		- Le entità un modello _E-R_ non rappresentano ogni possibile istanza
+		- ![[Pasted image 20251105173411.png|400]]
+			- Ogni entità ha un nome unico nello schema
+				- _nomi significativi_
+				- _nomi pragmatici_
+	- ## Associazioni:
+		- Si stabiliscono _associazioni_ tra 2 o più tipi di entità entro il modello del dominio
+		- ### ES:
+			- _residenza_ (tra _persone_ e _città_)
+			- _esame_ (tra _studente_ e _corso_)
+			- ![[Pasted image 20251105173725.png|450]]
+				- Ogni associazioni ha nomi unici nello schema:
+					- _nomi significativi_
+					- _nomi pragmatici_ (invece dei verbi)
+		- ### Tipologie di relazioni:
+			- _Binarie_: ovvero una coppia di istanze di entità, una per ogni entità coinvolta
+			- _n-aria_: una tupla di istanze di entità, una per ogni entità coinvolta
+				- ![[Pasted image 20251106153213.png|400]]
+			- _non ci possono essere istanze ripetute all'interno di una associazione_
+		- ### trasformare associazioni in entità:
+			- ![[Pasted image 20251106153013.png|450]]
+				- In questo modo si rappresenta come entità e la si collega alle altre entità tramite due associazioni
+		- Con 2 entità è possibile avere molteplici associazioni:
+			- ![[Pasted image 20251106153146.png|400]]
+		- ### Associazioni ricorsive:
+			- Ovvero associazioni che coinvolgono la stessa entità 2 volte
+				- ![[Pasted image 20251106153419.png|400]]
+	- ## Attributo:
+		- è una proprietà che appartiene o all'entità o all'associzione, mette in relazione ogni E/R con un valore presente in un insieme detto _dominio_
+			- ![[Pasted image 20251106154124.png|400]]
+		- ### Composti:
+			- Raggruppano attributi per la stessa entità.
+	- ## Cardinalità:
+		- Sulle associazioni è una coppia di valori collegata ad ogni entità coinvolte
+			- Indica il numero massimo/minimo di occorrenze legate ad ogni E-R
+				- ![[Pasted image 20251106155626.png]]
+					- Quindi ogni _employee_ può essere assegnato massimo a 5 _job_ 
+					- Ogni _job_ può avere dagli 0 ai 50 _employee_
+			- ### minime:
+				- _0_ indica che la partecipazione è opzionale,
+				- 1 partecipazione obbligatoria
+			- ### Massime:
+				- _N_ non impone una restrizione
+		- Le cardinalità permettono di avere diversi tipi di associazioni:
+			- _one-to-one_
+				- ![[Pasted image 20251108165111.png|450]]
+			- _one-to-many_
+				- ![[Pasted image 20251108164957.png|450]]
+			- _many-to-many_
+				- ![[Pasted image 20251108164937.png|450]]
+		- E cardinalità possono essere associate anche agli attributi
+			- Per indicare _facoltatività_ o avere _attributi multivaluta_
+			- ![[Pasted image 20251108165257.png|450]]
+	- ## Identificatori delle entità:
+		- Un modo per identificare in maniera unica l'occorrenza di una entità
+		- ### identificatori interni
+			- Attributi delle entità
+			- ![[Pasted image 20251108165603.png]]
+				- `Plate`, che rappresenta la targa, è un _identificatore interno_ siccome può rappresentare una certa istanza di macchina visto che non ci possono essere due macchine diverse con la stessa targa.
+			- ![[Pasted image 20251108165746.png|400]]
+				- Possono anche essere degli attributi _composti_
+		- ### identificatori esterni
+			- Entità esterne raggiungibili grazie alle associazioni 
+				- ![[Pasted image 20251108165828.png|450]]
+				- `number` e l'entità `University` formano un _identificatore esterno_ perché possono esserci studenti con lo stesso numero ma appartenenti a una diversa università
+			- è possibile solo tramite una associazione alla quale l'identità da identificare ci partecipa (una _cardinalità_ 1,1)
+		- _Ogni entità deve avere almeno un identificatore_
+	- ## generalizzazione:
+		- Mette in relazione una o più entità $E_{1},...,E_{n}$ con un'altra entità $E$ avente $E_{i}-s$ cime casi specifici
+			- $E$ è una _generalizzazione_ di $E_{1},...,E_{n}$
+				- ![[Pasted image 20251108170745.png|400]]
+			- $E_{1},...,E_{n}$ è una _specializzazione_ di $E$ 
+		- ### Proprietà:
+			- Se $E$ (genitore) è una generalizzazione di $E_{1},...,E_{n}$ (figli)
+				- Ogni proprietà in $E$ è significativa anche per $E_{1},...,E_{n}$
+				- Ogni occorrenza di $E_{1},...,E_{n}$ lo anche di $E$
+			- ![[Pasted image 20251108171124.png|450]]
+			- _una generalizzazione con un solo figlio è definita sottoinsieme_
+		- ### Ereditarietà:
+			- Tutte le proprietà delle entità genitore sono _ereditate_ dalle entità figlie e non verranno rappresentate esplicitamente.
+		- ### Tipologie di generalizzazioni:
+			- #### Totali:
+				- Se ogni occorrenza dell'entità padre è occorrenza di almeno uno dei figli, altrimenti è detta _parziale_
+			- #### Disgiunte:
+				- Se ogni occorrenza del padre è un'occorrenza di al massimo una dei figli, altrimenti è detta _sovrapposta_
+			- #### ES:
+				- ![[Pasted image 20251108171728.png|400]]
+					- _generalizzazione disgiunta parziale_
+				- ![[Pasted image 20251108171826.png|400]]
+					- _generalizzazione disgiunta totale_
+- # Link Utili:
+	- 

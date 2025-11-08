@@ -1,0 +1,49 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2025-11-05 17:06`"
+---
+- # information system life cycle:
+	- Questa task appartiene al processo di sviluppo del _information system_
+		- Il cui _life cycle_ è rappresentato dall'insieme di operazioni fatte sequenzialmente da utenti sia nel campo di sviluppo che dell'uso
+			- ![[Pasted image 20251105171243.png|450]]
+		- _cicli_: task iterative
+	- ## fasi del life cycle di un software:
+		- ### Feasable study:
+			- Definizione di costi e priorità
+		- ### requirement colection and analisys:
+			- L'analisi delle proprietà del sistema
+		- ### Design: 
+			- Dei dati e dei metodi 
+			- Comprende 2 aspetti 
+		- ### Implementazione:
+		- ### validazione:
+			- Controllo del modello e debugging
+		- ### deployment:
+			- Il sistema è nello stato di running
+- # design:
+	- Comprende il _design dei dati_ e l'_application program design_
+	- ## Metodologie:
+		- Consistono in:
+			- Definire task separate
+			- Criteri di selezione
+			- Modelli di rappresentazione
+			- Soluzioni generali e l'essere user-friendly
+	- ## Modello di dati:
+		- Una collezione di componenti usata per categorizzare dati rilevanti e crearne operazioni che ci vanno ad agire sopra
+		- I _costruttori_ sono cruciali 
+			- Hanno lo stesso ruolo delle definizioni di tipi di dato nei [[Linguaggi di Programmazione]]
+		- ### Schemi e istanze:
+			- Lo _schema_ non varia nel tempo e descrive la struttura dei dati
+				- Nel [[Modello dati relazionale|modello relazionale]] sono gli attributi delle relazioni
+			- Una _istanza_ è il valore corrente che può cambiare nel tempo 
+				- Nel [[Modello dati relazionale|modello relazionale]] sono i valori delle tuple
+		- Esistono 2 tipi di modelli:
+			- ### modelli logici:
+				- Organizzano i dati nei [[introduzione Basi di dati#^7f1908|DBMS]]
+				- A livello dell'astrazione dei dati usata dai software 
+				- è indipendente dal design fisico
+			- [[modello dati concettuale]]
+- # Link Utili:
+	- 

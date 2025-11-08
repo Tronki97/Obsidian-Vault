@@ -12,7 +12,7 @@ aliases:
   - tuple di un database
 data: "`2025-09-26 15:27`"
 ---
-- # modello relazionale:
+- # modello relazionale: ^d88ce7
 	-  è un modello della categoria dei [[Descrivere i dati#^bfe78d|modelli logici]] 
 	- Esempio basato su valori:
 		- ![[Pasted image 20250926154106.png|500]]
