@@ -48,7 +48,6 @@ data: "`2025-10-09 15:50`"
 		- ### BLOB, CLOB:
 			- Che rappresentano collezioni di dati di grandi dimensioni.
 			- Possono essere testuali o meno.
-		- 
 	- ## Custom:
 		- ### CREATE DOMAIN:
 			- Ogni tipo di dati custom potrebbe essere usato per definire nuove relazioni, con relativi vincoli e valori predefiniti.

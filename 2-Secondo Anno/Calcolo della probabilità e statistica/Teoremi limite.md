@@ -22,7 +22,7 @@ XSA- # Argomento:
 				- $X= \mathbb{1}_{A}: \mathbb{E}[X]=\mathbb{P}(A)$ 
 			- Voglio dimostarre cje $\bar x_{n}$ è una buona stima di $\mathbb{E}[X]$
 	- ## Teorema legge dei grandi numeri (LGN):
-		- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a _iid_  con $\mu=\mathbb{E}[X]$ e $\sigma^{2}=Var(x)$
+		- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a _iid_  con $\mu=\mathbb{E}[X]$ e $\sigma^{2}=Var(x)$ ^e7ebba
 			- $$\bar x_{n}: \frac{x_{1},...,x_{n}}{n}$$
 			- $$\mathbb{P}(|\bar X_{n}-\mu|>\epsilon)\le \frac{\sigma^{2}}{x \epsilon^{2} }$$
 			- In particolare:

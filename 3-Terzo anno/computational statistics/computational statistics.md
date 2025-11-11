@@ -1,0 +1,68 @@
+---
+tags:
+  - TODO
+aliases:
+  - varianza di montecarlo
+  - metodi di montecarlo
+  - ACF
+data: "`2025-11-10 09:19`"
+---
+- # Intro:
+	- Materia molto teorica 
+	- In teoria detto da lui studiare dalle slide dovrebbe essere sufficiente.
+	- Esame da 90 m, fare l'esame su R e poi copiare le risposte su carta.
+	- No esercizi sulla ottimizzazione. Non è open-book
+	- Usare le simulazioni per risolvere problemi di analisi
+- # Random variable generation:
+	- Tutti i metodi per risolvere questi problemi cadono sotto la terminologia di _metodi di Montecarlo_ e si usano appunto numeri generati casualmente per risolvere questi problemi che però non sono casuali.  
+		- Possono essere usati anche per problemi non di statistica
+	- ## Simulation:
+		- ### Sampling:
+			- Disegnare valori basati su una _distribuzione di probabilità_
+	- ## Integration:
+		- ### Expectations
+	- ## Optimization:
+		- Come i [[2-Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione|Problemi di ottimizzazione]] 
+- # metodi di montecarlo:
+	-  si usano numeri generati casualmente per risolvere certe categorie di problemi che però non sono casuali.
+	- ## ES:
+		- Si ha un campo con una area definita, all'interno del campo c'è un lago con una forma irregolare con una sua area definita.
+		- Come si computa/calcola/stima l'area del lago? Non riusciremo mai a calcolare l'area precisa del lago ma si può stimare con un certo errore e per farlo si usano i numeri generati casualmente.
+		- Si lanciano delle palle a caso nel campo e si segna se è caduta in acqua o meno.
+			- 1 se colpisce l'acqua 0 altrimenti
+		- Si avrà quindi una sequenza di 0 e 1 che però non sono deterministici qui appunto entra in atto la casualità di questi valori in quanto casuali.
+			- $X$ quindi è sequenza di [[Variabili aleatorie#^a7a7e4|variabili aleatorie di Bernoulli]] che descrive se si ha colpito o meno l'acqua.  
+				- $X_{1},...,X_{n}=\{1,0\}$
+				- $\forall i \ \ P(X_{i}=1)=P(X=1)$
+					- Quindi risultano essere [[Teoremi limite#^e7ebba|iid]] visto anche che saprò il valore delle variabili solo quando avrò finito l'esperimento.
+			- La probabilità di colpirà l'acqua è $∝\frac{Area \ lago}{ area\ campo}$
+			- $$\text{Area del lago }\simeq \text{area del lago} * \text{prob di colpire l'acqua}$$
+				- Visto che si ha una sequenza di _bernoulli_:
+					- $$\frac{0+0+1+...+1+0}{n}$$
+					- è chiamata _sample proportion_ si indica con $\hat{p}$  
+						- E per essere buona si necessita di avere una buona quantità di samples
+						- Se si ha una sequenza di dati piccola la risposta che si potrà dare non sarà accurata 
+						- Fare diversi esperimenti uguali restituirà valori diversi quindi si potrebbe prendere la media di questi risultati. 
+				- $X \sim Bernoulli(p)$ $X\in \{0,1\}$ $p=P(X=1)$
+				- E la sua distribuzione è: [[Distribuzioni notevoli di variabili aleatorie discrete#^45a12b|distribuzione di bernoulli]]
+					- $P(X=x)=p^{x}(1-p)^{1-x}$ è discreta quindi è detta _probability mass function_
+	- ## N .B:
+		- _Fintanto che si è in grado di generare valori [[Teoremi limite#^e7ebba|iid]] allora si possono usare i metodi di Montecarlo per risolvere questi problemi deterministici_ 
+	- `Sample`: usato per un set finito di elementi che gli devi fornire, e poi quanti di quei valori vuoi ottenere e in sostanza prende a caso da quel set di elementi un certo numero di valori senza reintroduzione usando la flag `replace = TRUE` c'è la reintroduzione 
+	- ## varianza di Montecarlo:
+		- Caratteristica che implica che non si riuscirà quasi mai ad ottenere il valore esatto ma sarà abbastanza vicina e con una sequenza abbastanza grande ci si avvicinerà sempre di più a quel valore effettivamente _convergendo_ su quel valore.
+	- ## uniform random values:
+		- Avendo un generatore di sequenze di questi valori si è in grado di utilizzare i metodi di Montecarlo per risolvere certi problemi, questa sequenza deve poter essere grande quando ci pare.
+		- Quindi si necessita della [[Distribuzioni notevoli di variabili aleatorie discrete|distribuzione uniforme discreta]]
+		- ### In R:
+			- Esiste la funzione `rgamma()` per la gamma e `rnorm()` per la gaussiana.
+		- ### ACF :
+			- _Autocerralation function_: usato per misurare la correlazione di una sequenza di tempo 
+			- Ad ogni valore del grafico si guarda la correlazione del vettore shiftando i valori di una certa posizione in base al grafico.
+				- Alla posizione zero si confronta il vettore con se stesso 
+				- Alla posizione 1 si confronta il vettore con se stesso ma shiftato di un valore 
+				- E così via per ogni valore 
+			- Se questo grafico risulta avere un andamento noto vuol dire spesso che esiste una correlazione temporale tra i dati del vettore.
+			- ![[Pasted image 20251111104414.png|500]]
+- # Link Utili:
+	- 
