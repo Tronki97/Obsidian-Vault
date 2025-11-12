@@ -134,16 +134,11 @@ Per questo esiste il:
 
 ## Master Theorem
 
-![teo](masterTheo.png)
-
 - $a$ sono i sotto-problemi in cui è stato diviso il problema(Numero di chiamate ricorsive in una chiamata a funzione)
 - $\frac{n}{b}$ dimensione dei sottoproblemi
 - $f(n)$ costo di ogni chiamata ricorsiva
 
 Molto complesso, per questo esiste la versione semplificata:
-
-
-![dda](Theosempl.png)
 
 Funziona però solo quando $f(n)$ è un polinomio.
 

@@ -31,9 +31,8 @@ Genera una stringa R random di lunghezza k
 Dai al primo  officer la stringa $S_1$=R 
 e al secondo $S_2 = R \oplus S$  (xor) 
 - ricostruisce il segreto con $S1 \oplus S_2$ 
-![[Pasted image 20250515152603.png|400]]
+
 Questo schema soddisfa confidenzialità e disponibilità 
-![[Pasted image 20250515152740.png|350]] 
 
 Questo schema può essere esteso a ***n-way sharing*** 
 - con: nessun sottoinsieme di m officers può risalire a S 
@@ -70,9 +69,8 @@ una retta intercetta x = 0 in S e ha pendenza definita da a
 g(x)  =(ax +S) mod p 
 Dati due pezzi del segreto originale, S3 e S7 
 - è possibile trovare solo un S che sta in x = 0
-![[Pasted image 20250515153853.png|200]]
+
 Se do solo un punto S7
 - ci sono infinite rette che passano per quel punto quindi sticazzi non riesci a trovare S 
-![[Pasted image 20250515153906.png|300]]
 
 Tutte le slide dopo sono state saltate 

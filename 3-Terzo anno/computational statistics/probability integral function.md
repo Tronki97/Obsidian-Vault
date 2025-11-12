@@ -13,5 +13,45 @@ data: "`2025-11-11 11:55`"
 	- Si setta poi $U=F(X)$ ovvero si applica ad X la propria funzione di ripartizione
 		- $X=...$
 	- _Si necessita però che $F(X)$ sia invertibile_ 
+	- ## ES:
+		- Per qualsiasi [[Variabili aleatorie|V.A]] continua $X$ con [[Funzione di ripartizione]] $F_{X}(x)$ l'inversa generalizzata è:
+			- $$F^{-1}(u)=\inf\{x; F(x)\ge u\}$$
+		- Dobbiamo dimostrare che se $U\sim Unif(0,1)$ allora $F^{-1}(U)=X$ 
+			- Si sa che $F_{X}(x)=P(X\le x)=\int_{- \infty}^{x}f_{X}(t)dt$
+				- Vero per qualsiasi [[Variabili aleatorie|V.A]]
+				- La funzione risulta monotona non-decrescente, continua
+				- #grafico
+		- _L'idea è quindi fare sampling dalla probabilità risultante e ottenere quindi in valore facendo l'inversa_
+		- Se $U\sim Unif(0,1)$ $P(U\le u)=F_{U}(u)=u$
+			- Questa proprietà è valida solo per le distribuzioni uniformi.
+	- ## Dim:
+		- Dimostrare quindi $F_{X}^{-1}(U)=X$ e calcolare quindi:
+			- $$\begin{array}\ F_{X}^{-1}(U)= P(F_{X}^{-1}(U)\le x)=P(F_{X}(F_{X}^{-1}(U))\le F_{X}(x ))=P(U\le F_{X}(x))= F_{X}(x) \end{array}$$
+	- ## ES 2.1:
+		- $X\sim \exp(1)$
+		- $$F_{X}(x)=P(X\le x)=1-e^{-x}$$
+		- $$U=1-e^{-X} \implies 1-U = e^{-X} \implies \ln (1-U)=-X \implies -\ln (1-U)=X$$
+			- Visto che $U$ è uniforme $1-U$ è equivalente a $U$ quindi risulta che:
+		- $$X= -\log(U)$$
+			- Visto che $U$ è uniforme in $(0,1)$ il valore del logaritmo sarà negativo e quindi $X$ sarà sicuramente positiva, _rimanendo coerente con il suo dominio_
+	- ## ES:
+		- Faccio la stessa cosa con altre due distribuzioni:
+			- ### _logisitic_ :
+				- $X\sim logistic(\mu, \beta)$
+				- $$F_{X}(x) = \frac{1}{1+e^{-(x-\mu)/\beta} }$$
+				- $$U=F_{X}(x)=\frac{1}{1+e^{-(X-\mu)/\beta} }$$
+				- $$\begin{array}\ U^{-1}=1+e^{-\frac{X-\mu}{\beta} }\implies U^{-1} -1 = e^{-\frac{X-\mu}{\beta} } =\\= - \log(U^{-1}-1)=\frac{X-\mu}{\beta}=X=\mu-\beta*\log\left(\frac{U-1}{U} \right)\end{array}$$
+					- ODDS: $\frac{P(X=1)}{P(X=0)}$ probabilità di vincere diviso quella di perdere.
+			- ### _Cauchy_:
+				- è una distribuzione particolare in quanto non ha un [[Media|valore atteso]] e [[Varianza]] ma non è un problema in quanto la P.I.T necessita solo delle _densità_ e _Fdr_
+				- $X\sim Cauchy(\mu, \sigma)$
+				- $$F_{X}(x)=\frac{1}{2} + \frac{1}{\pi}*\arctan\left( \frac{x-\mu}{\sigma} \right)$$
+				- $$\begin{array}\ U=\frac{1}{2} + \frac{1}{5}*\arctan\left( \frac{X-\mu}{\sigma} \right) \implies \pi\left( U- \frac{1}{2} \right) = \arctan \left( \frac{X-\mu}{\sigma} \right) \\  \tan\left[ \pi*\left( U - \frac{1}{2} \right) \right]=\frac{X-\mu}{ \sigma}\implies X= \mu + \sigma * \tan[\pi*(U-\frac{1}{2})]\end{array}$$
+	- ## empirical cdf:
+		- $(X_{1}, ...,X_{n} )$ [[Teoremi limite#^e7ebba|iid]]
+		- $$\hat{F}_{X}(x)=\frac{1}{n}* \sum\limits_{i=1}^{n} \mathbb{1}\{X_{i}\le x\}$$
+		- è un unbiased estimator per $F(X)$
+			- E prendendo un insieme di campioni infiniti allora $\hat{F}_{X}(x)$ converge a $F(X)$
+			- _anche una sequenza di 10000 è abbastanza grande per vederlo_
 - # Link Utili:
 	- 

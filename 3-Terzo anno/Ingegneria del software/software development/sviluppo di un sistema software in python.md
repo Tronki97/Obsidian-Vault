@@ -146,15 +146,68 @@ data: "`2025-10-27 12:22`"
 					- `__init__()` usato per inizializzare dati
 				- L'oggetto originale è preso come riferimento
 				- Usare le metaclassi permette di modificare la creazione degli oggetti
-				- Inoltre anche `__call__()` viene usato in quanto viene chiamato ongi volta un oggetto `type` viene invocato per creare un nuovo oggetto 
+				- Inoltre anche `__call__()` viene usato in quanto viene chiamato ogni volta un oggetto `type` viene invocato per creare un nuovo oggetto 
 					- Come in `dog=Dog()` che poi chiamerà anche gli altri due metodi in questo modo imponendo una struttura sui numeri e tipi dei parametri
 	- ## Metaclasse:
 		- Una classe le cui istanze sono ancora classi, un generatore di classi
-			- Quando ne si istanzia una 
-		- `class Animal(metaclass=AnimalType)` l'oggetto associato è una istanza della classe `AnimalType`
+		- La metaclasse di una metaclasse è  `type`
+		- `class Animal(metaclass=AnimalType)` l'oggetto associato è una istanza della classe `AnimalType` e implicitamente derivato dalla classe `object`
 		- Le metaclassi permettono di manipolare la classe come un tutt'uno specialmente il suo processo di creazione. 
-		- Un parametro con `*` davanti indica essere una tupla mentre con `**` un dizionario.
-		- La metaclasse di una metaclasse è un tipo
-		- La metaclasse ha una `__new__()` propria con vari argomenti la stessa cosa vale per `__init__()`
+			- ![[Pasted image 20251112173802.png|600]]
+			- ![[Pasted image 20251112173824.png|600]]
+			- Un parametro con `*` davanti indica essere una tupla mentre con `**` un dizionario.
+			- La metaclasse ha un proprio `__call__(cls, *args, **kwargs)` che viene chiamato quando l'istanza di una metaclasse viene chiamata 
+				- `cls` è il riferimento alla metaclasse
+				- `args` è la lista di argomenti posizionali
+				- `kwargs` è la lista degli argomenti keyword
+			- un proprio `__new__(mcs, name, bases, namspace)`
+				- `mcs` è il riferimento alla metaclasse
+				- `name` è il nome della metaclasse
+				- `bases` è la lista delle superclassi che diventerà l'attributo `__base__` della nuova classe
+				- `namespace` è in forma di dizionario e diverrà l'attributo `__dict__` della nuova classe
+			- Un proprio `__init__(cls, name, bases, namespace, **kwargs)`
+				- `cls` è il riferimento alla metaclasse
+				- `name` è il nome della metaclasse
+				- `bases` è la lista delle superclassi che diventerà l'attributo `__base__` della nuova classe
+				- `namespace` è in forma di dizionario e diverrà l'attributo `__dict__` della nuova classe
+				- `kwargs` è la lista degli argomenti keyword
+			- C'è inoltre un metodo `__prepare__()` chiamato come primo metodo per preparare il `namespace`
+		- ### Singoletto generalizzato:
+			- Con le metaclassi è possibile creare un [[Pattern creazionali#^90ee56|Singleton]] generale per qualsiasi classe
+				- ![[Pasted image 20251112174919.png]]
+	- ## type hints:
+		- è possibile cambiare il tipo delle variabili a runtime siccome python è a [[tipi nei linguaggi di programmazione#^437fb2|tipaggio dinamico]]
+		- I _type hints_ aggiungono una sorta di [[tipi nei linguaggi di programmazione#^f40f7a|tipaggio statico]] per riuscire ad accorgersi prima degli errori 
+			- ![[Pasted image 20251112175634.png]]
+			- Con questa sintassi il parametro `name` e il valore di ritorno della funzione saranno di tipo `str`
+		- L'interprete però ignora il type hints per verificarli bisogna usare un type-checker statico come `mypy` che però è _third-party_
+			- ![[Pasted image 20251112175947.png]]
+		- Si può aggiungere il _type hint_ anche quando si definisce una variabile spesso non necessario in quanto il type checker statico inferirà il tipo dal valore assegnatogli
+			- ![[Pasted image 20251112180145.png]]
+		- Usando `Union` è possibile creare un type hint che accetta vari tipi
+			- ![[Pasted image 20251112180258.png]]
+		- Si possono anche creare degli alias di tipo per fare type hinting
+			- ![[Pasted image 20251112180341.png]]
+	- ## Riflessione e introspezione:
+		- _introspezione_: l'abilità di scoprire informazioni riguardo un oggetto a runtime
+		- _riflessione_: estende l'introspezione permettendo una modifica di un oggetto a runtime
+		- `type()` permette di ottenere la classe dell'argomento passato
+			- ![[Pasted image 20251112180857.png]]
+		- `instance()` controlla se un oggetto è istanza di una classe:
+			- ![[Pasted image 20251112180952.png]]
+		- Detto ciò è possibile anche modificare o creare oggetti e classi dinamicamente:
+			- ![[Pasted image 20251112181114.png]]
+		- E visto che i metodi sono attributi speciali si possono aggiungere anche quelli dinamicamente
+			- ![[Pasted image 20251112181151.png]]
+		- Si può anche modificare il codice di una funzione modificando il suo attributo `__code__()`
+			- ![[Pasted image 20251112181251.png]]
+		- Creare una classe a runtime con `type(name, bases, dict)`
+			- `name` è una stringa che rappresenta il nome della classe
+			- `bases` tupla delle superclassi
+			- `dict` dizionario degli attributi e metodi
+			- ![[Pasted image 20251112181445.png]]
+	- ## Decoratori:
+		- Funzioni di ordine superiore che alterano dinamicamente il comportamento di funzioni o classi wrappandole in un altro invocabile
+			- ![[Pasted image 20251112181639.png|700]]
 - # Link Utili:
 	- 

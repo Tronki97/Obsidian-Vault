@@ -38,10 +38,10 @@ data: "`2025-04-02 11:17`"
 		- Si usano algoritmi di controllo dei tipi in strumenti di analisi dei programmi diversi da [[Struttura di un compilatore|compilatori]] 
 		- Usati nei database ad esempio sotto forma di _document type definitions_ (XML, JSON)
 	- ## Tipaggio statico e dinamico:
-		- ### Statico:
+		- ### Statico: ^f40f7a
 			- Detto così se è possibile controllare i tipi sul testo del programma senza eseguirlo quindi eliminando dal codice generato le annotazioni di tipo (a meno che il run-time non necessiti di informazioni a livello dei tipi)
 			- Inoltre elimina tutti i controlli a run-time.
-		- ### Dinamico:
+		- ### Dinamico: ^437fb2
 			- Il controllo viene effettuato durante l’esecuzione del programma e ciò richiede che ogni valore abbia un descrittore di Esecuzione che ne specifichi il tipo e che, a ogni operazione, il _runtime_ verifichi Che il programma esegua operazioni solo su operandi del tipo corretto e ciò rallenta di molto l’esecuzione del programma.
 		- Quindi la scelta del tipaggio di un linguaggio è influenzata dalla correttezza, le prestazioni e l'espressività del programma.
 		- Il tipaggio statico è si più veloce ma potrebbe portare ad errori che non verrebbero sollevati dal tipaggio dinamico un es:

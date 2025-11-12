@@ -13,7 +13,7 @@ data: "`2025-10-20 19:43`"
 ---
 - # Pattern creazionali:
 	-  Modalità che uso per creare oggetti.
-	- ## Singleton:
+	- ## Singleton: ^90ee56
 		- Si vuole avere Una sola istanza di un oggetto
 		- Metto il costruttore di un oggetto privato cosicché non possa essere chiamato ne da sotto-classi ne da altri
 		- Metto come `static` la definizione dell'oggetto
