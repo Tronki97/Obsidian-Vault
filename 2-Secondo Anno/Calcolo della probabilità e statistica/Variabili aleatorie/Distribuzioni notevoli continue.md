@@ -70,7 +70,7 @@ data: "`2025-04-11 13:33`"
 		- $$\int_{-\infty}^{+\infty} e^{-z^{2}} dz = \sqrt{\pi}$$
 		- Si può dimostrare che se $X\sim N(\mu, \sigma^{2})$ allora:
 		- $$Z:= \frac{X- \mu}{\sigma}\sim N(0,1)$$
-		- ### Standardizzazione:
+		- ### Standardizzazione: ^6d3ace
 			- Qualunque sia la legge di $X$ con $\mathbb{E}[X]=\mu$ e $Var(X)=\sigma^{2}$
 			- $$Z:= \frac{X- \mu}{\sigma}$$
 				- è detta _standardizzante_ con le sue proprietà sulla [[Media]] e [[Varianza]]

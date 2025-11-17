@@ -66,7 +66,7 @@ XSA- # Argomento:
 					- $$\mathbb{E}[|\bar X_{n}-\mu|]\approx \frac{1}{\sqrt{n}}$$
 				- Questo è una conseguenza del _teorema limite centrale_ _TLC_
 - # Teorema limite centrale:
-	- Se prendo una successione di variabili aleatorie _iid_ con $\mu$ e $\sigma^{2}>0$
+	- Se prendo una successione di variabili aleatorie _iid_ con $\mu$ e $\sigma^{2}>0$ ^cb1c57
 	- $$Z_{n}:=\frac{\bar X_{n}- \mu}{\frac{\sigma}{\sqrt{n}}}$$
 		- Si osserva che $\mathbb{E}[Z_{n}]=0, Var(Z_{n})=1$
 	- Allora:

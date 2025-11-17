@@ -1,0 +1,68 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-11-17 16:22`"
+---
+- # Argomento:
+	- Se di ha una sequenza di [[Variabili aleatorie|V.A]] [[Teoremi limite#^e7ebba|iid]] di distribuzione $Exp(1)$ si possono derivare 3 diverse distribuzioni standard:
+		- $$Y = 2\sum\limits_{j=1}^{\nu} X_{j} \sim \chi_{2\nu}^{2} \ \ \nu\in \mathbb{N}^{*}$$
+			- Con $\nu$ il numero di variabili nella sequenza
+		- $$Y=\beta \sum\limits_{j=1}^{a}X_{j}\sim G(a,\beta)\ \ \ a\in \mathbb{N}^{*}$$
+			- $a$ è il numero di variabili 
+			- $G(a,\beta)$ distribuzione _gamma_ di valori $a,\beta$
+		- $$Y=\frac{\sum\limits_{j=1}^{a} X_{j}}{\sum\limits_{j=1}^{a+b} X_{j}}\sim Be(a,b)\ \ a,b \in \mathbb{N}^{*}$$
+			- $Be(a,b)$ distribuzione _beta_ 
+			- Consiste quindi nel dividere una somma di una parte del vettore delle v.a per la somma di tutte
+- # algoritmo di box-muller:
+	- Visto che la [[Funzione di ripartizione]] di una gaussiana è una integrale senza valore finito non si può applicare la [[probability integral function|pit]] in quanto non si riuscirebbe a calcolarne l'inversa, quindi si introduce questo algoritmo per generare due _normali_ partendo da due _uniformi_  
+	- Sempre considerato come metodo di trasformazione diretta
+	- Se $U_{1}$ e $U_{2}$ sono [[Teoremi limite#^cb1c57|iid]] $U[0,1]$ le variabili $X_{1}$ e $X_{2}$:
+		- $$\begin{array}\ X_{1}= \sqrt{-2\log(U_{1})}\cos(2 \pi U_{2})  \\ X_{2}= \sqrt{-2\log(U_{1})}\sin(2 \pi U_{2})\end{array}$$
+	- è un algoritmo esatto i quanto produce esattamente dei valori di una gaussiana non una approssimazione.
+	- In R questo generatore non è implementato in questo modo ma usa _PIT_ facendo però uso anche di valori approssimati
+- # Gaussiane multivalori:
+	- Invece di avere una variabile singola $X\sim N(\mu, \sigma^{2})$ si ha un vettore di variabili:
+		- $$\begin{pmatrix}X_{1} \\ \vdots \\ X_{p}\end{pmatrix}\sim N_{p}(\mu[p], \Sigma)$$
+		- $\mu[p]$ è il vettore delle [[Media|medie]] di lunghezza $p$
+		- Mentre $\Sigma$ è la [[vettori aleatori (bidimensionali) discreti#^f27b35|matrice delle covarianze]], sulla diagonale avente le varianze delle V.A e sul resto le covarianze, ha tutti gli [[Autovalore]] maggiori di 0
+		- ## N.B:
+			- Sapendo che la distribuzione congiunta di questo vettore è gaussiana allora anche quelle marginali lo sono 
+			- Ma non è detto il contrario.
+		- ## de-standardizzare:
+			- L'inversa della [[Distribuzioni notevoli continue#^6d3ace|standardizzazione]] avendo $Z\sim (0,1)$:
+				- $$Z*\sigma+\mu=X\sim N(\mu, \sigma^{2})$$
+			- Ma siccome ci si trova in una situazione avente un vettore di v.a si incappa nel problema di dover fare _la radice quadrata delle varianza_ che però è una matrice in questo caso, per risolvere si usa [[Risoluzione di un sistema lineare#^c7c2d7|cholesky]] 
+				- $\Sigma = AA'$
+				- $$Y\sim N_{p}(0,I) \implies AY \sim N_{p}(0,\Sigma)$$
+- # risultato generale:
+	- Suppongo $X\sim f_{X}(x)$ e definisco $Z= g(X): X=g^{-1}(Z)$ ovvero $g$ è invertibile
+	- $$f_{Z}(z)= f_{X}(g^{-1}(z))*|\frac{dg^{-1}(z)}{dz}|$$
+	- Valido per [[Variabili aleatorie|V.A]] continue 
+	- ## ES 1:
+		- Si ha $U\sim Unif(0,1)$ la cui 
+			- $$f_{U}(u)=\begin{cases} 0 & u\notin [0,1]\\ 1& altrimenti\end{cases}$$
+		- La trasformazione è ottenuta per esempio:
+			- $X=(b-a)*U+a$ ci si chiede quindi qual è la sua densità
+				- $a,b \in \mathbb{R}: b>a$
+			- Da cui si ottiene $U=\frac{X-a}{b-a}=g^{-1}(.)$
+		- La derivata di $g^{-1}(X)$ sarà quindi:
+			- $$\frac{d\left( \frac{X-a}{b-a} \right)}{dx}=\frac{d\left( \frac{X}{b-a} -\frac{a}{b-a}\right)}{dx}=\frac{d\left( \frac{X}{b-a} \right)}{dx}=\frac{1}{b-a}$$
+		- $$f_{X}(x)=f_{U}\left(\frac{x-a}{b-a} \right)* \frac{1}{b-a}=\begin{cases}0 & x\notin [a.b]\\ \frac{1}{b-a}& x\in [a,b]\end{cases}$$
+		- E ciò porta a dire che $X\sim Unif(a,b)$
+	- ## ES 2:
+		- $X\sim N(\mu, \sigma^{2})$ avendo anche $Z=\frac{X-\mu}{\sigma}=g(X)$
+		- Come visto prima $X=Z*\sigma +\mu = g^{-1}(X)$
+		- La derivata di $g^{-1}(X)$ è semplicemente $\sigma$ 
+		- $$f_{Z}(z)= f_{X}(g^{-1}(z))*\sigma= \frac{1}{\sigma\sqrt{2 \pi}}*\exp\left\{ -\frac{(z*\sigma+\mu-\mu)^{2}}{2\sigma^{2}} \right\}*\sigma= \frac{1}{\sqrt{2 \pi}}*\exp\left\{ -\frac{z^{2}}{2} \right\}$$
+			- E risulta essere appunto la densità di una normale standard ($N(0,1)$) 
+- # Distribuzioni discrete:
+	- Hanno una [[Funzione di ripartizione]] $F_{X}(x)=P(X\le x)=\sum\limits_{t\le x}P(X=t)$ che è non continua in ogni punto rendendola non derivabile
+		- ![[Pasted image 20251117190527.png|600]]
+	- Quindi per generare [[Variabili aleatorie|V.A]] discrete si una un algoritmo che richiede di segnarsi un vettore di probabilità 
+		- $$p_{0}=P_{\theta}(X\le 0), p_{1}=P_{\theta}(X\le 1),...$$
+		- Poi si fa sampling da una uniforme $U\sim U[0,1]$ e si prende:
+			- $X=k$ se $p_{k-1}<U<p_{k}$
+			- Ovvero se il valore ottenuto è compreso $k-1$ e $k$ allora vuol dire che si sta facendo sampling da $k$ 
+- # Link Utili:
+	- 

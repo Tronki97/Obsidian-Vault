@@ -1,0 +1,60 @@
+---
+tags:
+aliases:
+  - instance of
+  - part of
+  - storicizzazione
+  - schema corretto
+  - schema chiaro
+  - schema completo
+  - schema minimale
+data: "`2025-11-13 15:39`"
+---
+- Quello che si fa è una analisi dei requisiti e quindi capire che entità relazioni, attributi e caratteristiche il database deve avere 
+- # ES:
+	- Una azienda vuole un DB che provveda i corsi per i quali si vuole gestire lezioni e insegnanti
+	- Ci sono 5000 studenti con ID, Tax, cognome, età, sesso...
+	- ...
+	- In questa analisi dei requisiti si può produrre un glossario:
+		- ![[Pasted image 20251113154330.png|450]]
+- # Instance of:
+	- A volte due entità distinte sono necessarie, una che coinvolge una rappresentazione astratta e una immagazzina un pezzo di informazione
+		- ![[Pasted image 20251113155803.png|400]]
+- # Part of:
+	- Relazioni $(1,N)$ potrebbero rappresentare parti di una associazione, rappresentando di fatto delle _composizioni_
+		- ![[Pasted image 20251113155947.png|400]]
+- # casi specifici:
+	- Ci possono essere delle generalizzazioni singole usate per definire un caso specifico
+		- ![[Pasted image 20251113184403.png]]
+- # Storicizzazione:
+	- Definire delle entità o relazioni aggiuntive per definire una cronologia di eventi o cambiamenti del database
+		- ![[Pasted image 20251113184534.png|600]]
+- # estendere un concetto:
+	- La generalizzazione può essere usata per estendere l'implementazione corrente quando il progetto è già attivo
+	- ![[Pasted image 20251113184723.png]]
+- # mappare i requisiti in un [[modello dati concettuale|diagramma ER]]
+	- ## Strategia top-down:
+		- Si crea una bozza di schema, lo si raffina e infine si crea lo schema che contiene solo i requisiti che servono.
+			- ![[Pasted image 20251113161838.png|400]]
+				- Esame viene raffinato da entità a relazione.
+			- ![[Pasted image 20251113161917.png|400]]
+				- All'inizio sembra che impiegato non necessiti di attributi però continuando a leggere requisiti li si trovano.
+	- ## Strategia bottom-up:
+		- Utile se i requisiti sono tanti, e quindi si dividono i requisiti in pezzi più piccoli indipendenti che poi andranno combinati per andare a creare lo schema finale.
+	- ## inside out:
+		- Parto dalle entità definisco i loro attributi e poi creo le associazioni che servono continuando via via a cambiare gli attributi (se defirli chiavi interne/esterne) o le associazioni 
+		- <video src="inside-out_ER.mp4" controls height="500" controls width="500"></video>
+	- Spesso però si tende a usare uno stile che mischi gli altri creando prima uno schema scheletro per poi decomporlo e raffinare ognuno dei pezzi creati facendolo crescere e poi ricomporre tutti questi pezzi.
+		- All'inizio identifico le entità più importanti creando uno schema ER di base facendo l'analisi dei requisiti seguita dalla creazione di un caso base che verrà poi raffinato aggiungendo concetti e descrivendo certi requisiti, infine facendo un'analisi della qualità
+- # qualità di uno schema:
+	- Segue certe caratteristiche
+	- ## correttezza:
+		- Deve seguire i requisiti senza averne in più che possono anche centrare con quelli che sono richiesti; in sostanza non bisogna mettere cose in più.
+	- ## completezza:
+		- Deve rispettare tutti i requisiti senza mettere cose in meno
+	- ## chiarezza:
+		- Rappresentare bene i concetti che sono chiesti di modellare
+	- ## minimalità:
+		- Deve essere della dimensione più piccola possibile che poi se vengono le prime 2 caratteristiche allora sarà rispettato anche questo 
+- # Link Utili:
+	- 

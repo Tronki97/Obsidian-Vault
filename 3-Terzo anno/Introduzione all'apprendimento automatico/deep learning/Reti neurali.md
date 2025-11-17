@@ -12,7 +12,7 @@ data: "`2025-10-25 11:18`"
 	- Consistono nel riprocessare più volte le features in input 
 	- Composte da vari layer a loro volta formati da _neuroni artificiali_ 
 	- ![[Pasted image 20251025112236.png|450]]
-- # Neurone artificiale:
+- # Neurone artificiale: ^e64770
 	- ![[Pasted image 20251025112304.png|450]]
 	- Ogni neurone ha multipli input e produce un singolo output
 	- Implementa una [[Regressione logistica]]:

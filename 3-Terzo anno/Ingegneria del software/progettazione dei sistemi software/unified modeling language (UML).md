@@ -133,8 +133,8 @@ data: "`2025-09-29 11:06`"
 				- ##### ES:
 					- ![[Pasted image 20250930114402.png|500]]
 					- Una _compagnia_ è formata da 0 o più _unità_ le quali sono formate da 0 o più _dipartimenti_ i quali a loro volta sono formati da 0 o più _gruppi_
-				- #### Composizione:
-					- è un caso speciale di aggregazione.
+				- ##### Composizione:
+					- _è un caso speciale di aggregazione_.
 					- Definisce parti che vivono solo nel contesto dell'oggetto creato
 						- Non possono quindi essere create senza quell'oggetto.
 					- Entità con valore ridotto rispetto all'oggetto a cui fanno riferimento.

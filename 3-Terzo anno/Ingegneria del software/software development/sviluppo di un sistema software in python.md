@@ -1,213 +1,237 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - referential transparency
+  - lazy evaluation
+  - yield
+  - metaclasse
+  - type hints
+  - riflessione
+  - introspezione
+  - decoratori
 data: "`2025-10-27 12:22`"
 ---
-- # Argomento:
-	- linguaggio visibile come di scripting, object oriented, funzionale.
+- # Intro:
+	- linguaggio interpretabile come di scripting, object oriented e funzionale.
 	- Ha una caratteristica chiamata _referential transparency_ ereditata dai linguaggi funzionali.
-		- Ovvero il risultato non cambia modificando l'ordine delle operazioni
+		- Ovvero _il risultato non cambia modificando l'ordine delle operazioni_
 			- Quindi le variabili non cambiano valore
 		- Python eredita ciò avendo _entità immutabili_
-			- Si necessita quindi crearne un altro basandosi su quello che si vorrebbe "modificare"
-	- Ciò però non vale per le liste che sono _mutabili_:
+			- Si necessita quindi crearne un altra basandosi su quello che si vorrebbe "modificare"
+- # Liste:
+	- sono collezioni _mutabili_ di elementi 
 		- _shallow copy_: condividere il puntatore della lista e assegnarlo ad un'altra variabile.
-	- Tuple:
-		- Sono immutabili, ordinate e hanno una sintassi come quella delle liste
-		- Se la tupla contiene una lista è possibile modificare la lista in se e la tupla di fatto non cambia visto che riferimento alla stesso elemento 
-		- Si possono concatenare le tuple solo alla creazione.
-		- Non può usare la _shallow copy_ ma la _deep_ si.
-	- Insiemi:
-		- Non possono avere come elementi quelli mutabili 
-	- Dizionari:
-		- Collezioni ordinate di coppie (key, element) con ogni chiave che può apparire massimo una volta. 
-	- Loop:
-		- Si hanno 3 modi per continuare o uscire dai loop
-		- _break_...
-		- _continue_:
-		- _pass_: permette di skippare un blocco di indentazione
-			- ![[Pasted image 20251103122831.png]]
-				- Non viene stampata la riga dopo il pass ma esce dal suo blocco e va in quello successivo 
-	- Iteratore:
-		- Mi permette di estrarre l'iteratore da un oggetto e usarlo per iterare sull'oggetto
+			- ![[Pasted image 20251116173006.png|200]]
+		- _deep copy_: si crea un puntatore che punta alla struttura che viene copiata.
+			- ![[Pasted image 20251116173149.png|400]]
+- # Tuple:
+	- Sono _immutabili_, ordinate e hanno una sintassi come quella delle liste
+	- Se la tupla contiene una lista è possibile modificare la lista in se e la tupla di fatto non cambia visto che fa riferimento alla stesso elemento 
+	- Si possono concatenare le tuple solo alla creazione.
+	- Non può usare la _shallow copy_ ma la _deep_ si.
+- # Insiemi :
+	- Sono collezioni non ordinate di elementi che però _non possono essere mutabili_
+		- ![[Pasted image 20251116173421.png|400]]
+- # Dizionari :
+	- Collezioni ordinate di coppie (key, element) con ogni chiave che può apparire massimo una volta. 
+		- ![[Pasted image 20251116173447.png|700]]
+- # Loop :
+	- Si hanno 3 modi per continuare o uscire dai loop
+	- _break_: esce dal blocco corrente
+	- _continue_: sospende l'iterazione corrente e salta direttamente alla prossima
+	- _pass_: permette di skippare un blocco di indentazione
+		- ![[Pasted image 20251103122831.png]]
+			- Non viene stampata la riga dopo il pass ma esce dal suo blocco e va in quello successivo 
+- # Caratteristiche imperative:
+	- ## Iteratore :
+		- `iterator` è una classe che supporta le iterazioni sulle collezioni di elementi
+		- `__iter__()` Mi permette di estrarre l'iteratore da un oggetto e usarlo per iterare sull'oggetto
 		- Con il `next` permette di andare al prossimo elemento 
 			- ![[Pasted image 20251103123026.png|300]]
 		- Questo è fattibile su oggetti che discendono dalla classe `iterable`
 		- Ciò è fatto implicitamente nei `for` loop 
-	- Scoping:
+	- ## Scoping :
 		- è possibile usare `global x` per dire che nel blocco corrente `x` è da considerarsi globale
-		- Allo stesso modo si usa `non local x` per dire che nel blocco corrente la  `x` usata fa riferimento alla prima definizione esterna al blocco corrente.
-	- Moduli:
+		- Allo stesso modo si usa `nonlocal x` per dire che nel blocco corrente la  `x` usata fa riferimento alla prima definizione esterna al blocco corrente.
+		- Definire una variabile con lo stesso nome di una esterna al blocco corrente la nasconderà ma se il valore viene cambiato dentro lo scope verrà sollevato un errore.
+			- ![[Pasted image 20251116174316.png|500]]
+	- ## Parametri di default:
+		- Sono valutati una sola volta, alla prima chiamata
+		- Sono come variabili locali statiche in C
+		- Se i default sono oggetti mutabili possono succedere cose inaspettate:
+			- ![[Pasted image 20251116181049.png|400]]
+			- ![[Pasted image 20251116181108.png|400]]
+	- ## Moduli:
 		- Ogni file è un modulo e ogni modulo è un oggetto
 		- Senza l'estensione `.py` il nome del file viene salvato nella variabile `__name__` 
 		- Per accedervi si usa `import module`  
 		- Per importare tutti i nomi (funzioni) di un modulo si usa `from module import *` che li importerà tutti tranne quelli che cominciano con `_` in quel caso serve farlo esplicitamente.
 			- In quanto sono protetti (`_`) e privati (`__`) 
-	- Namespace: 
+	- ## Namespace : 
 		- Insieme di tutti i nomi associati ad oggetti visibili ad un certo punto 
-		- Quello corrente è visibilie usando `dir()`; mettendoci il nome di un modulo come parametro è possibile vedere il _namespace_ di quello 
-	- packages:
+		- Quello corrente è visibile usando `dir()`; mettendoci il nome di un modulo come parametro è possibile vedere il _namespace_ di quello 
+	- ## packages :
 		- Collezioni di moduli, è considerabile come un oggetto. 
 		- Da un punto di vista di sistema è considerabile come una [[Visione Utente#^889353|directory]]
 		- Quando si fa l'import da un package o modulo si sta di fatto importando un oggetto in quanto in python _le funzioni sono oggetti_
-	- ## Caratteristiche funzionali:
-		- Oggetti immutabili, variabili globali non cambiabili
-		- ### Overloading delle funzioni:
-			- Se una funzione viene definita più volte quella valida è l'ultima.
-				- ![[Pasted image 20251111164518.png]]
-				- Darà errore siccome l'ultima definizione di `f()` ha due parametri
-			- Il modo standard per farlo è attraverso le classi
-			- Oppure usando il decorator `@dispatch`
-				- ![[Pasted image 20251111164617.png|500]]
-	- Funzioni come parametri:
-		- `filter` funzione che passata una funzione e una lista di valori ritorna quelli che restituiscono vero se dati come parametri alla funzione di input.
-			- Usare le lambda functions risulta molto utile qui dentro
-			- ![[Pasted image 20251111165733.png|500]]
-		- `reduce` comprime gli elementi di un iteratore in un solo elemento, ha due parametri dove il secondo deve essere di tipo degli elementi dell'iteratore
-			- ![[Pasted image 20251111170046.png|500]]
-		- `map` come parametri ha una lista di elementi ai quali viene applicata una funzione passata come parametro 
-			- ![[Pasted image 20251111165550.png]]
-			- Questa funzione può essere eseguita in _tempo costante_ dati abbastanza processori
-	- ## lazy evaluation:
-		- Yield:
-			- Quando chiedo l'elemento successivo lo genererò al momento.
-			- Usato per fornire un grande flusso di data un elemento alla volta invece di usare `return`
-			- Simile a come gli elementi di una lista vengono acceduti tramite iterazione
-			- Si possono espandere usando le _tuple_ ma in quel caso i valori vengono _consumati_
-			- 
-			- ![[Pasted image 20251111171002.png|400]]
-	- ## DS comprehension:
-		- Applicato a `List, Dict, Set`
-		- Si possono generare queste strutture dati "al volo" 
-		- ![[Pasted image 20251111171222.png|500]]
-			- Per le liste
-		- ![[Pasted image 20251111171252.png|600]]
-			- `zip()` ritorna un iteratore per le tuple
-	- ## Caratteristiche OO
-		- Metodi di istanza richiedono il parametro `self`, che viene spesso omesso quando sono chiamate
-		- L'inizializzatore è `__init__`
-			- Al cui interno sono definite le variabili di istanza
-			- ![[Pasted image 20251111180612.png]]
-		- Le variabili di classe sono definite globalmente nella classe 
-		- Class e static sono differenti in python 
-		- Usando il decoratore `@classmethod` si può accedere alle variabili della classe usando anche la dot notation di `cls.`
-			- ![[Pasted image 20251111180716.png]]
-		- Per metodi o variabili protette (`_`) e privati (`__`) 
-			- Ma si può accedere a questi fuori dalla classe mettendo come prefisso al nome `_ClassName`
-			- ![[Pasted image 20251111181028.png]]
-			- ![[Pasted image 20251111181041.png|600]]
-			- ![[Pasted image 20251111181114.png|500]]
-		- ### Ereditarietà:
-			- Si identifica mettendo la classe da cui si eredita tra parentesi: `class Dog(Animal)`
-			- Quando si crea un nuovo oggetto il metodo inizializzato `__init__` viene invocato 
-				- Ma l'inizializzazione di una classe derivata non triggera l' `__init__` della classe base
-					- Ma se non c'è l' `__init__` nella classe derivata allora il sistema andrà a cercare quello più vicino salendo la gerarchia 
-			- Ogni classe senza una _superclasse_ è implicitamente derivata dalla classe `object`
-				- ![[Pasted image 20251111181335.png]]
-		- ### Overloading degli operatori:
-			- Ad Alcuni operatori può essere fatto l'overloading di fatto cambiando la loro definizione e quindi quello che ritornano
-			- ![[Pasted image 20251111181617.png]]
-				- Quello che ritornerà l'operazione con `+` è una concatenazione di stringhe come specificato nell'overloading
-			- C'è una lista di operatori ai quali si può fare l'overloading:
-				- ![[Pasted image 20251111181742.png|300]]
-				- ![[Pasted image 20251111181751.png|300]]
-			- La stessa cosa vale per altri operatori speciali come:
-				- `__getitem__(self,index)`: ovvero l'indexing di una lista per esempio `x= Obj[i]`
-				- `__setitem__(self, index)`: per settare una cella ad un valore `Obj[i]=x`
-				- `__contains__(self, index)` per l'operatore `in`
-				- `__repr__(self)` per convertire un oggetto in una stringa usata implicitamente nelle print
-				- `__iter__(self)`: per generare un iterabile 
-				- `__call__(self, w)` per _oggetti funzionali_ e gestire strutture come `anObject(w)`
-				- `__new__(...)`: per allocare spazio per un oggetto
-				- `__init__(...)`: per inizializzare oggetti
-		- ### Oggetti in python:
-			- Gli oggetti hanno: _identità, stato definito dagli attributi, un tipo, una o più basi_
-				- ![[Pasted image 20251111182549.png|300]]
-				- `object` ha un tipo e lo stesso vale per `type`
-					- ![[Pasted image 20251111182642.png]]
-			- Tutto è un derivato di `object` tutti gli `object` hanno un `type`, un `type` è un oggetto e deriva da `object`
-			- Il tipo è definito dall'attributo `__base__` 
-			- La classe base è identificata dall'attributo `__class__`
-			- #### Istanziare nuovi oggetti:
-				- Si fa riferimento al _clone_ [[Design pattern]], i nuovi oggetti vengono creati tramite _sottoclassaggio_
-					- ![[Pasted image 20251111183135.png]]
-						- Un nuovo oggetto di tipo `type` è istanziato con classe base `object`
-						- Nuovi oggetti possono essere creati applicando l'operatore `()` ad un oggetto di tipo `type`
-						- ![[Pasted image 20251111183330.png]]
-			- #### Istanziare nuovi tipi:
-				- Possono essere creati "al volo" 
-					- ![[Pasted image 20251111183426.png|500]]
-				- Si possono anche ritornare i tipi dalle funzioni:
-					- ![[Pasted image 20251111183625.png|500]]
-			- #### Creazione di un oggetto:
-				- Ci sono vari passi
-					- `__new__()` usato per allocare la memoria
-					- `__init__()` usato per inizializzare dati
-				- L'oggetto originale è preso come riferimento
-				- Usare le metaclassi permette di modificare la creazione degli oggetti
-				- Inoltre anche `__call__()` viene usato in quanto viene chiamato ogni volta un oggetto `type` viene invocato per creare un nuovo oggetto 
-					- Come in `dog=Dog()` che poi chiamerà anche gli altri due metodi in questo modo imponendo una struttura sui numeri e tipi dei parametri
-	- ## Metaclasse:
-		- Una classe le cui istanze sono ancora classi, un generatore di classi
-		- La metaclasse di una metaclasse è  `type`
-		- `class Animal(metaclass=AnimalType)` l'oggetto associato è una istanza della classe `AnimalType` e implicitamente derivato dalla classe `object`
-		- Le metaclassi permettono di manipolare la classe come un tutt'uno specialmente il suo processo di creazione. 
-			- ![[Pasted image 20251112173802.png|600]]
-			- ![[Pasted image 20251112173824.png|600]]
-			- Un parametro con `*` davanti indica essere una tupla mentre con `**` un dizionario.
-			- La metaclasse ha un proprio `__call__(cls, *args, **kwargs)` che viene chiamato quando l'istanza di una metaclasse viene chiamata 
-				- `cls` è il riferimento alla metaclasse
-				- `args` è la lista di argomenti posizionali
-				- `kwargs` è la lista degli argomenti keyword
-			- un proprio `__new__(mcs, name, bases, namspace)`
-				- `mcs` è il riferimento alla metaclasse
-				- `name` è il nome della metaclasse
-				- `bases` è la lista delle superclassi che diventerà l'attributo `__base__` della nuova classe
-				- `namespace` è in forma di dizionario e diverrà l'attributo `__dict__` della nuova classe
-			- Un proprio `__init__(cls, name, bases, namespace, **kwargs)`
-				- `cls` è il riferimento alla metaclasse
-				- `name` è il nome della metaclasse
-				- `bases` è la lista delle superclassi che diventerà l'attributo `__base__` della nuova classe
-				- `namespace` è in forma di dizionario e diverrà l'attributo `__dict__` della nuova classe
-				- `kwargs` è la lista degli argomenti keyword
-			- C'è inoltre un metodo `__prepare__()` chiamato come primo metodo per preparare il `namespace`
-		- ### Singoletto generalizzato:
-			- Con le metaclassi è possibile creare un [[Pattern creazionali#^90ee56|Singleton]] generale per qualsiasi classe
-				- ![[Pasted image 20251112174919.png]]
-	- ## type hints:
-		- è possibile cambiare il tipo delle variabili a runtime siccome python è a [[tipi nei linguaggi di programmazione#^437fb2|tipaggio dinamico]]
-		- I _type hints_ aggiungono una sorta di [[tipi nei linguaggi di programmazione#^f40f7a|tipaggio statico]] per riuscire ad accorgersi prima degli errori 
-			- ![[Pasted image 20251112175634.png]]
-			- Con questa sintassi il parametro `name` e il valore di ritorno della funzione saranno di tipo `str`
-		- L'interprete però ignora il type hints per verificarli bisogna usare un type-checker statico come `mypy` che però è _third-party_
-			- ![[Pasted image 20251112175947.png]]
-		- Si può aggiungere il _type hint_ anche quando si definisce una variabile spesso non necessario in quanto il type checker statico inferirà il tipo dal valore assegnatogli
-			- ![[Pasted image 20251112180145.png]]
-		- Usando `Union` è possibile creare un type hint che accetta vari tipi
-			- ![[Pasted image 20251112180258.png]]
-		- Si possono anche creare degli alias di tipo per fare type hinting
-			- ![[Pasted image 20251112180341.png]]
-	- ## Riflessione e introspezione:
-		- _introspezione_: l'abilità di scoprire informazioni riguardo un oggetto a runtime
-		- _riflessione_: estende l'introspezione permettendo una modifica di un oggetto a runtime
-		- `type()` permette di ottenere la classe dell'argomento passato
-			- ![[Pasted image 20251112180857.png]]
-		- `instance()` controlla se un oggetto è istanza di una classe:
-			- ![[Pasted image 20251112180952.png]]
-		- Detto ciò è possibile anche modificare o creare oggetti e classi dinamicamente:
-			- ![[Pasted image 20251112181114.png]]
-		- E visto che i metodi sono attributi speciali si possono aggiungere anche quelli dinamicamente
-			- ![[Pasted image 20251112181151.png]]
-		- Si può anche modificare il codice di una funzione modificando il suo attributo `__code__()`
-			- ![[Pasted image 20251112181251.png]]
-		- Creare una classe a runtime con `type(name, bases, dict)`
-			- `name` è una stringa che rappresenta il nome della classe
-			- `bases` tupla delle superclassi
-			- `dict` dizionario degli attributi e metodi
-			- ![[Pasted image 20251112181445.png]]
-	- ## Decoratori:
-		- Funzioni di ordine superiore che alterano dinamicamente il comportamento di funzioni o classi wrappandole in un altro invocabile
-			- ![[Pasted image 20251112181639.png|700]]
+- # Caratteristiche funzionali:
+	- Oggetti immutabili, variabili globali non cambiabili
+	- ## Overloading delle funzioni:
+		- Se una funzione viene definita più volte quella valida è l'ultima.
+			- ![[Pasted image 20251111164518.png]]
+			- Darà errore siccome l'ultima definizione di `f()` ha due parametri
+		- Il modo standard per farlo è attraverso le classi
+		- Oppure usando il decorator `@dispatch`
+			- ![[Pasted image 20251111164617.png|500]]
+- # Funzioni come parametri:
+	- `filter` funzione che passata una funzione e una lista di valori ritorna quelli che restituiscono vero se dati come parametri alla funzione di input.
+		- Usare le lambda functions risulta molto utile qui dentro
+		- ![[Pasted image 20251111165733.png|500]]
+	- `reduce` comprime gli elementi di un iteratore in un solo elemento, ha due parametri dove il secondo deve essere di tipo degli elementi dell'iteratore
+		- ![[Pasted image 20251111170046.png|500]]
+	- `map` come parametri ha una lista di elementi ai quali viene applicata una funzione passata come parametro 
+		- ![[Pasted image 20251111165550.png]]
+		- Questa funzione può essere eseguita in _tempo costante_ dati abbastanza processori
+- # lazy evaluation:
+	- ## Yield :
+		- Quando chiedo l'elemento successivo lo genererò al momento.
+		- Usato per fornire un grande flusso di data un elemento alla volta invece di usare `return`
+		- Simile a come gli elementi di una lista vengono acceduti tramite iterazione
+		- Si possono espandere usando le _tuple_ ma in quel caso i valori vengono _consumati_
+		- 
+		- ![[Pasted image 20251111171002.png|400]]
+- # DS comprehension:
+	- Applicato a `List, Dict, Set`
+	- Si possono generare queste strutture dati "al volo" 
+	- ![[Pasted image 20251111171222.png|500]]
+		- Per le liste
+	- ![[Pasted image 20251111171252.png|600]]
+		- `zip()` ritorna un iteratore per le tuple
+- # Caratteristiche OO
+	- Metodi di istanza richiedono il parametro `self`, che viene spesso omesso quando sono chiamate
+	- L'inizializzatore è `__init__`
+		- Al cui interno sono definite le variabili di istanza
+		- ![[Pasted image 20251111180612.png]]
+	- Le variabili di classe sono definite globalmente nella classe 
+	- Class e static sono differenti in python 
+	- Usando il decoratore `@classmethod` si può accedere alle variabili della classe usando anche la dot notation di `cls.`
+		- ![[Pasted image 20251111180716.png]]
+	- Per metodi o variabili protette (`_`) e privati (`__`) 
+		- Ma si può accedere a questi fuori dalla classe mettendo come prefisso al nome `_ClassName`
+		- ![[Pasted image 20251111181028.png]]
+		- ![[Pasted image 20251111181041.png|600]]
+		- ![[Pasted image 20251111181114.png|500]]
+	- ## Ereditarietà:
+		- Si identifica mettendo la classe da cui si eredita tra parentesi: `class Dog(Animal)`
+		- Quando si crea un nuovo oggetto il metodo inizializzato `__init__` viene invocato 
+			- Ma l'inizializzazione di una classe derivata non triggera l' `__init__` della classe base
+				- Ma se non c'è l' `__init__` nella classe derivata allora il sistema andrà a cercare quello più vicino salendo la gerarchia 
+		- Ogni classe senza una _superclasse_ è implicitamente derivata dalla classe `object`
+			- ![[Pasted image 20251111181335.png]]
+	- ## Overloading degli operatori:
+		- Ad Alcuni operatori può essere fatto l'overloading di fatto cambiando la loro definizione e quindi quello che ritornano
+		- ![[Pasted image 20251111181617.png]]
+			- Quello che ritornerà l'operazione con `+` è una concatenazione di stringhe come specificato nell'overloading
+		- C'è una lista di operatori ai quali si può fare l'overloading:
+			- ![[Pasted image 20251111181742.png|300]]
+			- ![[Pasted image 20251111181751.png|300]]
+		- La stessa cosa vale per altri operatori speciali come:
+			- `__getitem__(self,index)`: ovvero l'indexing di una lista per esempio `x= Obj[i]`
+			- `__setitem__(self, index)`: per settare una cella ad un valore `Obj[i]=x`
+			- `__contains__(self, index)` per l'operatore `in`
+			- `__repr__(self)` per convertire un oggetto in una stringa usata implicitamente nelle print
+			- `__iter__(self)`: per generare un iterabile 
+			- `__call__(self, w)` per _oggetti funzionali_ e gestire strutture come `anObject(w)`
+			- `__new__(...)`: per allocare spazio per un oggetto
+			- `__init__(...)`: per inizializzare oggetti
+	- ## Oggetti in python:
+		- Gli oggetti hanno: _identità, stato definito dagli attributi, un tipo, una o più basi_
+			- ![[Pasted image 20251111182549.png|300]]
+			- `object` ha un tipo e lo stesso vale per `type`
+				- ![[Pasted image 20251111182642.png]]
+		- Tutto è un derivato di `object` tutti gli `object` hanno un `type`, un `type` è un oggetto e deriva da `object`
+		- Il tipo è definito dall'attributo `__base__` 
+		- La classe base è identificata dall'attributo `__class__`
+		- ### Istanziare nuovi oggetti:
+			- Si fa riferimento al _clone_ [[Design pattern]], i nuovi oggetti vengono creati tramite _sottoclassaggio_
+				- ![[Pasted image 20251111183135.png]]
+					- Un nuovo oggetto di tipo `type` è istanziato con classe base `object`
+					- Nuovi oggetti possono essere creati applicando l'operatore `()` ad un oggetto di tipo `type`
+					- ![[Pasted image 20251111183330.png]]
+		- ### Istanziare nuovi tipi:
+			- Possono essere creati "al volo" 
+				- ![[Pasted image 20251111183426.png|500]]
+			- Si possono anche ritornare i tipi dalle funzioni:
+				- ![[Pasted image 20251111183625.png|500]]
+		- ### Creazione di un oggetto:
+			- Ci sono vari passi
+				- `__new__()` usato per allocare la memoria
+				- `__init__()` usato per inizializzare dati
+			- L'oggetto originale è preso come riferimento
+			- Usare le metaclassi permette di modificare la creazione degli oggetti
+			- Inoltre anche `__call__()` viene usato in quanto viene chiamato ogni volta un oggetto `type` viene invocato per creare un nuovo oggetto 
+				- Come in `dog=Dog()` che poi chiamerà anche gli altri due metodi in questo modo imponendo una struttura sui numeri e tipi dei parametri
+- # Metaclasse:
+	- Una classe le cui istanze sono ancora classi, un generatore di classi
+	- La metaclasse di una metaclasse è  `type`
+	- `class Animal(metaclass=AnimalType)` l'oggetto associato è una istanza della classe `AnimalType` e implicitamente derivato dalla classe `object`
+	- Le metaclassi permettono di manipolare la classe come un tutt'uno specialmente il suo processo di creazione. 
+		- ![[Pasted image 20251112173802.png|600]]
+		- ![[Pasted image 20251112173824.png|600]]
+		- Un parametro con `*` davanti indica essere una tupla mentre con `**` un dizionario.
+		- La metaclasse ha un proprio `__call__(cls, *args, **kwargs)` che viene chiamato quando l'istanza di una metaclasse viene chiamata 
+			- `cls` è il riferimento alla metaclasse
+			- `args` è la lista di argomenti posizionali
+			- `kwargs` è la lista degli argomenti keyword
+		- un proprio `__new__(mcs, name, bases, namspace)`
+			- `mcs` è il riferimento alla metaclasse
+			- `name` è il nome della metaclasse
+			- `bases` è la lista delle superclassi che diventerà l'attributo `__base__` della nuova classe
+			- `namespace` è in forma di dizionario e diverrà l'attributo `__dict__` della nuova classe
+		- Un proprio `__init__(cls, name, bases, namespace, **kwargs)`
+			- `cls` è il riferimento alla metaclasse
+			- `name` è il nome della metaclasse
+			- `bases` è la lista delle superclassi che diventerà l'attributo `__base__` della nuova classe
+			- `namespace` è in forma di dizionario e diverrà l'attributo `__dict__` della nuova classe
+			- `kwargs` è la lista degli argomenti keyword
+		- C'è inoltre un metodo `__prepare__()` chiamato come primo metodo per preparare il `namespace`
+	- ## Singoletto generalizzato:
+		- Con le metaclassi è possibile creare un [[Pattern creazionali#^90ee56|Singleton]] generale per qualsiasi classe
+			- ![[Pasted image 20251112174919.png]]
+- # type hints:
+	- è possibile cambiare il tipo delle variabili a runtime siccome python è a [[tipi nei linguaggi di programmazione#^437fb2|tipaggio dinamico]]
+	- I _type hints_ aggiungono una sorta di [[tipi nei linguaggi di programmazione#^f40f7a|tipaggio statico]] per riuscire ad accorgersi prima degli errori 
+		- ![[Pasted image 20251112175634.png]]
+		- Con questa sintassi il parametro `name` e il valore di ritorno della funzione saranno di tipo `str`
+	- L'interprete però ignora il type hints per verificarli bisogna usare un type-checker statico come `mypy` che però è _third-party_
+		- ![[Pasted image 20251112175947.png]]
+	- Si può aggiungere il _type hint_ anche quando si definisce una variabile spesso non necessario in quanto il type checker statico inferirà il tipo dal valore assegnatogli
+		- ![[Pasted image 20251112180145.png]]
+	- Usando `Union` è possibile creare un type hint che accetta vari tipi
+		- ![[Pasted image 20251112180258.png]]
+	- Si possono anche creare degli alias di tipo per fare type hinting
+		- ![[Pasted image 20251112180341.png]]
+- # Riflessione e introspezione:
+	- _introspezione_: l'abilità di scoprire informazioni riguardo un oggetto a runtime
+	- _riflessione_: estende l'introspezione permettendo una modifica di un oggetto a runtime
+	- `type()` permette di ottenere la classe dell'argomento passato
+		- ![[Pasted image 20251112180857.png]]
+	- `instance()` controlla se un oggetto è istanza di una classe:
+		- ![[Pasted image 20251112180952.png]]
+	- Detto ciò è possibile anche modificare o creare oggetti e classi dinamicamente:
+		- ![[Pasted image 20251112181114.png]]
+	- E visto che i metodi sono attributi speciali si possono aggiungere anche quelli dinamicamente
+		- ![[Pasted image 20251112181151.png]]
+	- Si può anche modificare il codice di una funzione modificando il suo attributo `__code__()`
+		- ![[Pasted image 20251112181251.png]]
+	- Creare una classe a runtime con `type(name, bases, dict)`
+		- `name` è una stringa che rappresenta il nome della classe
+		- `bases` tupla delle superclassi
+		- `dict` dizionario degli attributi e metodi
+		- ![[Pasted image 20251112181445.png]]
+- # Decoratori:
+	- Funzioni di ordine superiore che alterano dinamicamente il comportamento di funzioni o classi wrappandole in un altro invocabile
+		- ![[Pasted image 20251112181639.png|700]]
 - # Link Utili:
 	- 

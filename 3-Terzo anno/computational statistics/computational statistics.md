@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - varianza di montecarlo
   - metodi di montecarlo

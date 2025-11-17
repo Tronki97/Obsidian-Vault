@@ -1,6 +1,8 @@
 ---
 tags: []
-aliases: 
+aliases:
+  - matrice delle covarianze
+  - covarianza
 data: "`2025-05-29 11:52`"
 ---
 - # intro:
@@ -90,7 +92,7 @@ data: "`2025-05-29 11:52`"
 	- $(X, Y)$ vettore aleatorio discreto 
 	- ## Vettore delle medie:
 		- $$\begin{pmatrix}\mathbb{E}[X]\\ \mathbb{E}[Y]\end{pmatrix}\in \mathbb{R}^{2}$$
-	- ## Matrice delle covarianze:
+	- ## Matrice delle covarianze: ^f27b35
 		- $$\begin{pmatrix}Var (X) & Cov (X, Y) \\ Cov (Y, X)& Var (Y)\end{pmatrix}\in \mathbb{R}^{2 \times 2}$$
 		- ### OSS:
 			- 1) $Var (X)=Cov (X, X)$

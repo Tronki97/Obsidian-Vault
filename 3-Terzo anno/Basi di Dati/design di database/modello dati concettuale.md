@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - entità
   - associazioni
@@ -10,6 +9,9 @@ aliases:
   - diagramma E-R
   - identificatore interno
   - identificatore esterno
+  - many to one
+  - one to many
+  - many to many
 data: "`2025-11-05 17:28`"
 ---
 - # # motivazioni:

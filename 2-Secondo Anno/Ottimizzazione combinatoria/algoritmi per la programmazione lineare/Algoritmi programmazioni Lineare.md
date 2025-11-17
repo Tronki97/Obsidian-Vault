@@ -30,7 +30,7 @@ data: "`2025-04-09 10:02`"
 		- ### OSS:
 			- Se mancasse il vincolo $x\le 3$ si avrebbe un [[2-Secondo Anno/Ottimizzazione combinatoria/Problemi e modelli/Problemi di ottimizzazione#^1429ac|problema illimitato]] e l’algoritmo progettato se ne renderebbe conto e lo riconoscerebbe. 
 - # Nozioni preliminari:
-	- ## Iperpiano:
+	- ## Iperpiano: ^d5e023
 		- Equivalente di una retta 
 		- $$\{x\in \mathbb{R}^{n}|ax=b\}$$
 			- Ovvero le soluzioni dell'equazione $ax=b$ con $a\in \mathbb{R}^{2}$ e $b\in \mathbb{R}$

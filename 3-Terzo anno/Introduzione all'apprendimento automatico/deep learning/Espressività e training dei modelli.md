@@ -1,0 +1,65 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-11-13 13:19`"
+---
+- # Argomento:
+	-  riguardano istanze dei modelli
+- # espressività:
+	- Si vuole capire quali tipi di funzioni si vuole calcolare usando [[Reti neurali]] e con quali limiti bisogna lavorare.
+		- E più che altro è possibile calcolare tutte le funzioni con un singolo [[Reti neurali#^e64770|neurone]]
+		- Input discreti e f.d.a binaria:
+			- ![[Pasted image 20251113132736.png]]
+			- Si calcola poi una [[Combinazione lineare]] usando anche i bias verificando siano maggiori di $-b$ che rappresenta l'opposto del threshold
+			- Quando si è sul confine ovvero:
+				- $$\sum\limits_{i} w_{i}x_{i} +b =0$$
+			- Ci si trova su un [[Algoritmi programmazioni Lineare#^d5e023|iperpiano]] e in base a dove ci troviamo rispetto all'iperpiano si classifica l'output
+	- Mettiamo noi dei pesi al modello che ci permettono di calcolare queste funzioni
+	- ## Calcolare connettivi logigici
+		- ### NAND:
+			- ![[Pasted image 20251113133206.png|150]]
+			- Ciò è calcolabile anche solo con un neurone o una [[Regressione logistica]]
+				- ![[Pasted image 20251113133319.png|400]]
+				- E quello che serve è calcolare $w_{1}, w_{2},b$ tali chela funzione rispetti ciò che vogliamo.
+			- #### Rappresentazione grafica:
+				- ![[Pasted image 20251113133601.png|250]]
+				- Il punto rosso è quello con output 0
+				- I pesi risultano $-1$ e il bias $\ge 1$ ma $2 \ge$
+			- ![[Pasted image 20251113133912.png|450]]
+		- Non è possibile però rappresentare tutte le porte logiche
+			- Per esempio la _XOR_ in quanto non è possibile tracciare un piano che divida in insiemi con stesso output
+			- ![[Pasted image 20251113134205.png|250]]
+			- _ciò rappresenta una limitazione dei sistemi lineari e della regressione logistica_
+			- E quindi _i perceptrons a layer singolo non sono completi_ 
+	- ## multi-layer perceptrons:
+		- Si mettono in cascata i perceptors e quindi si possono calcolare i mancanti connettivi logici come lo XOR
+			- ![[Pasted image 20251113134707.png|650]]
+			- Il mettere due layer basta di fatto per poter calcolare tutte le funzioni continue
+				- Queste reti sono dette _shallow_ e sono già _complete_.
+	- Serve capire anche quanto profonde devono essere le reti in termini di layer per calcolare una qualche espressione logica.
+		- Andando più in profondità è possibile calcolare le stesse funzioni ma con _meno neuroni_ risultando quindi più conveniente.
+		- Ma comunque si necessita di avere funzioni di attivazione in quanto sono le uniche fonti che permettono di ottenere _non linearità_ in quanto combinando funzioni lineari si ottiene sempre una funzione lineare.
+	- 
+- Training:
+	- Supponendo certi pesi esistano, si riesce a fare training per arrivare ad una configurazione ottimale.
+	- ## Current loss:
+		- Supponendo di avere una rete con una certa configurazione di parametri $\theta$
+			- ![[Pasted image 20251113142033.png]]
+		- Si può prendere un _batch_ di dati, passarli in parallelo nella rete, computare l'output e calcolare la _current loss_ relativa a $\theta$  
+			- Si calcola la derivata parziale della loss e dei parametri di tutto il modello e poi quindi si può usare la tecnica della discesa del gradiente.
+		- Questo è un _forward pass_ attraverso la rete il cui costo è uguale alla _backward pass_ 
+		- ### update dei parametri:
+			- Per diminuire la _current loss_ si cerca di aggiustare i parametri, nel caso del _backward_ si necessita di ricordare tutti i valori intermedi e questo causa un consumo di memoria superiore.
+			- Per fare questo aggiustamento si calcola il gradiente.
+				- Per farlo serve una la _chain rule_ 
+		- ### Chain rule:
+			- Date due funzioni $f,g$ con derivate $f',g'$ la derivata della funzione composita $h$:
+				- $$h'(x)=f'(g(x))*g'(x)$$
+			- Quindi con vari layer l'output della funzione del primo layer sarà l'input del secondo e così via, necessitando quindi di ricordarsi dei valori intermedi.
+				- Il neurone al layer $l$ computa la funzione:
+					- $$a^{l}=\sigma(b^{l}+w^{l}*x^{l})$$
+						- $a^{l}$ vettore di attivazione al layer $l$
+						- $z=b^{l}+w^{l}*x^{l}$ è l'input pesato al layer $l$ 
+- # Link Utili:
+	- 

@@ -30,8 +30,117 @@
               "icon": "lucide-file",
               "title": "Homepage"
             }
+          },
+          {
+            "id": "014f64849992b7ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/computational statistics/probability integral function.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "probability integral function"
+            }
+          },
+          {
+            "id": "579580648dfc2485",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "metodi di trasformazione generali"
+            }
+          },
+          {
+            "id": "d532b096b3c5cbd2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Risoluzione di un sistema lineare"
+            }
+          },
+          {
+            "id": "cdbd3f59be6a7dc2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Distribuzioni notevoli continue"
+            }
+          },
+          {
+            "id": "65f34995c9904217",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "latexsheet-a4.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "latexsheet-a4"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -235,52 +344,52 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "1-Primo Anno/Algoritmi e strutture dati/Modulo1/Analisi di costo/Analisi ammortizzata.md",
-    "2-Secondo Anno/Sistemi Operativi/Condivisione del segreto e Key Escrow.md",
-    "Pasted image 20250515152603.png.md",
-    "teorema di permanenza del segno.md",
-    "Pasted image 20250515153906.png.md",
-    "masterTheo.png.md",
-    "Theosempl.png.md",
-    "immagini/Pasted image 20251112181639.png",
-    "immagini/Pasted image 20251112181151.png",
-    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
-    "immagini/Pasted image 20251112181445.png",
-    "immagini/Pasted image 20251112181251.png",
-    "immagini/Pasted image 20251112181114.png",
-    "immagini/Pasted image 20251112180952.png",
-    "immagini/Pasted image 20251112180857.png",
-    "immagini/Pasted image 20251112180341.png",
-    "immagini/Pasted image 20251112180258.png",
-    "immagini/Pasted image 20251112180145.png",
-    "Homepage.md",
-    "3-Terzo anno/computational statistics/probability integral function.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
-    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software Java.md",
-    "3-Terzo anno/computational statistics/computational statistics.md",
+    "Pasted image 20251117190527.png",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzione (o legge) di una variabile aleatoria.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/vettori aleatori (bidimensionali) discreti.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/Vettori aleatori.md",
+    "2-Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Approssimazione dei dati.md",
+    "2-Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
+    "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
+    "3-Terzo anno/computational statistics/probability integral function.md",
+    "latexsheet-a4.pdf",
+    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
+    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software Java.md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
+    "3-Terzo anno/Ingegneria del software/laboratorio/esercitazioni UML.md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
+    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
+    "3-Terzo anno/Ingegneria del software/architettura dei software/architettura dei software.md",
+    "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
+    "3-Terzo anno/Materie a scelta interessanti.md",
+    "3-Terzo anno/Consigli Tesi.md",
+    "immagini/Pasted image 20251116182706.png",
+    "3-Terzo anno/Basi di Dati/design di database/requisiti per la progettazione di un DB.md",
+    "3-Terzo anno/Basi di Dati/design di database/modello dati concettuale.md",
+    "3-Terzo anno/Basi di Dati/design di database/database design.md",
+    "3-Terzo anno/computational statistics/computational statistics.md",
+    "Homepage.md",
+    "immagini/Pasted image 20251116173006.png",
+    "immagini/Pasted image 20251116181108.png",
+    "immagini/Pasted image 20251116181049.png",
+    "immagini/Pasted image 20251116174316.png",
+    "immagini/Pasted image 20251116173447.png",
+    "immagini/Pasted image 20251116173421.png",
+    "immagini/Pasted image 20251116173149.png",
     "Troubleshooting.md",
+    "immagini/Pasted image 20251113142033.png",
+    "immagini/inside-out_ER.mp4",
+    "Progetto senza titolo.png",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Espressività e training dei modelli.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
     "3-Terzo anno/computational statistics/desktop.ini",
     "3-Terzo anno/computational statistics",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
-    "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
-    "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio machine learning.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Naive Bayes.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Distribuzione congiunta.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Modelli generativi e discriminativi.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/problema di classificazione.md",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Regressione logistica.md",
     "3-Terzo anno/Basi di Dati/design di database",
     "3-Terzo anno/Ingegneria del software/software development",
     "3-Terzo anno/Ingegneria del software/laboratorio",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/linear_regression.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/logistic_regression_animation.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/naive_bayes_mnist__tmp_jupytext_29668.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/naive_bayes_mnist_.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/gaussian_as_limit_of_uniforms.ipynb",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

@@ -1,7 +1,15 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - ecdf
+  - empirical cdf
+  - distribuzione logistica
+  - distribuzione cauchy
+  - P.I.T
+  - PIT
+  - pit
+  - p.i.t
 data: "`2025-11-11 11:55`"
 ---
 - # Probability integral function (P.I.T):
@@ -20,7 +28,7 @@ data: "`2025-11-11 11:55`"
 			- Si sa che $F_{X}(x)=P(X\le x)=\int_{- \infty}^{x}f_{X}(t)dt$
 				- Vero per qualsiasi [[Variabili aleatorie|V.A]]
 				- La funzione risulta monotona non-decrescente, continua
-				- #grafico
+				- ![[Pasted image 20251116182706.png]]
 		- _L'idea è quindi fare sampling dalla probabilità risultante e ottenere quindi in valore facendo l'inversa_
 		- Se $U\sim Unif(0,1)$ $P(U\le u)=F_{U}(u)=u$
 			- Questa proprietà è valida solo per le distribuzioni uniformi.
@@ -48,6 +56,7 @@ data: "`2025-11-11 11:55`"
 				- $$F_{X}(x)=\frac{1}{2} + \frac{1}{\pi}*\arctan\left( \frac{x-\mu}{\sigma} \right)$$
 				- $$\begin{array}\ U=\frac{1}{2} + \frac{1}{5}*\arctan\left( \frac{X-\mu}{\sigma} \right) \implies \pi\left( U- \frac{1}{2} \right) = \arctan \left( \frac{X-\mu}{\sigma} \right) \\  \tan\left[ \pi*\left( U - \frac{1}{2} \right) \right]=\frac{X-\mu}{ \sigma}\implies X= \mu + \sigma * \tan[\pi*(U-\frac{1}{2})]\end{array}$$
 	- ## empirical cdf:
+		- è una funzione di ripartizione empirica
 		- $(X_{1}, ...,X_{n} )$ [[Teoremi limite#^e7ebba|iid]]
 		- $$\hat{F}_{X}(x)=\frac{1}{n}* \sum\limits_{i=1}^{n} \mathbb{1}\{X_{i}\le x\}$$
 		- è un unbiased estimator per $F(X)$
