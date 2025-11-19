@@ -155,7 +155,7 @@ data: "`2025-03-11 13:23`"
 		- $f_{X}$ può anche essere illimitata.
 	- ## Def:
 		- Sia $(\Omega, \mathbb{P})$ uno spazio di probabilità e $X$ una [[Variabili aleatorie|V.A]] allora si dice che:
-			- $X$ è _continua_ se 
+			- $X$ è _continua_ se  ^426fb1
 				- $$\exists f_{X}: \mathbb{P}(a\le X\le b)=\int_{a}^{b}f_{X}(x)\ dx$$
 		- E appunto si dice continua perché assume valori su un insieme continuo e la sua funzione di ripartizione è definita continua _non a scalini_.
 	- ## Richiamo:

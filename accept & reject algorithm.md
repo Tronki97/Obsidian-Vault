@@ -1,0 +1,52 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-11-19 09:12`"
+---
+- # preconcetti:
+	- ## teorema di Bayes:
+		- Si hanno 2 eventi $A,B$ e $P(B)\ne 0$, 
+		- $P(A|B)$ 
+			- Nel nostro caso si ha che B sono i dati e A sono le conoscenze sull'argomento
+		- $$P(A|B)=\frac{P(A)*P(B|A)}{P(B)}=\frac{P(A\cap B)}{P(B)}=\frac{P(A)*P(B|A)}{\sum\limits_{a\in A}P(A\cap B)}=\frac{P(A)*P(B|A)}{\sum\limits_{a\in A}P(A=a)*P(B|A=a)}$$
+			- $P(A)$ le conoscenze a priori
+			- $P(B)$ le prove e quindi la probabilità dei dati.
+			- $P(B|A)$ la likelihood
+		- Questo teorema funziona anche per le [[Variabili aleatorie#^426fb1|V.A continue]] $X,Y$
+			- $f_{X|Y=y}(x)$ con $X|Y=y$ che rimane una variabile aleatoria
+			- $$f_{X|Y=y}(x)=\frac{f_{X,Y}(x,y)}{f_{Y}(y)}=\frac{f_{Y|X=x}(y)*f_{X}(x)}{f_{Y}(y)}=\frac{f_{X,Y}(x,y)}{\int_{Y}f_{X,Y}(x,u)\ du}$$
+			- ## N .B: 
+				- per spostare una variabile a sinistra della condizione si divide per la marginale e per spostarla a destra si moltiplica
+					- $f_{X,Y}(x,y) \implies f_{Y|X=x}(y)*f_{X}(x)$
+					- $f_{X|Y=y}(x)=\frac{f_{X,Y}(x,y)}{f_{Y}(y)}$
+				- Fare l'integrale significa marginalizzare, quindi fregarsene di una delle due variabili, eliminando una delle dimensioni di fatto.  
+	- ## Media:
+		- $X$ continua $X\sim f_{X}(x)$ come densità
+		- $$\mathbb{E}_{X}[X]=\int_{D_{X}}x*f_{X}(x)\ dx$$
+			- La X come pedice mi sta a dire di quale variabile andrò a usare la densità
+		- Quindi significa che posso anche usare una densità diversa
+		- $$\mathbb{E}_{Y}(f_{X|Y}(X|Y))=\int_{D_{Y}}f_{Y}(y)*f_{X|Y}(x|y)\ dy=\int_{D_{Y}}f_{X,Y}(X,Y) \ dy=f_{X}(x)$$
+- # Algoritmo A.R:
+	- è un metodo indiretto per fare sampling da una distribuzione.
+	- Indiretto perché si fa sampling da una distribuzione diversa e trovare i valori di un'altra seguendo delle condizioni.
+	- Si richiede quindi una densità $f:$ _target_ e una $g:$ _candidato_ 
+		- Dobbiamo fare sampling da $f_{X}(x)$ ma risulta più facile farlo da $g_{Y}(y)$ 
+	- Quello che si fa è generare un numero dalla distribuzione candidata: $g_{Y}(y)\sim y$ e si controlla che $u\le \frac{f_{X}(x)}{M*g_{Y}(y)}$ e se risulta vera allora $y$ può provenire da $f_{X}$ e quindi la si _accetta_ altrimenti la si _rifiuta_, si continua con il ciclo; $u$ proviene da una uniforme.
+	- Ci sono dei vincoli da soddisfare dopo aver scelto la densità candidata:
+		- $f$ e $g$ devono avere una struttura di supporto compatibile, la struttura di supporto della candidata può anche essere più grande tanto quei valori li andranno scartati.
+			- $g(x)>0$ e $f(x)>0$
+		- Deve esistere una costante $M:\frac{f(x)}{g(x)}\le M \ \ \forall x$  
+			- Agisce come una retta che setta il limite superiore di questa divisione quindi per avere il giusto impatto M idealmente dovrebbe essere $\max \frac{f(x)}{g(x)}\ \ \forall x$
+	- Se la condizione $U\le \frac{f(Y)}{Mg(Y)}$ è rispettata allora si setta $X=Y$ e si accetta $y$
+	- La probabilità di accettare un valore è: $P(accept)=\frac{1}{M}$ e il tempo di attesa medio per accettare un valore è $M$ ovvero il numero di tentativi da fare prima di accettare un valore.
+	- ## Dimostrazione:
+		- Per capire se funziona, ci si chiede se tutti i valori accettati arrivino da $f_{X}(x)$ e per capirlo si guarda la distribuzione dei valori accettati, e quindi quale è la [[Funzione di ripartizione]] 
+		- $A=$ accettare un valore
+			- $$Y|U \le \frac{1}{M}* \frac{f(Y)}{g(Y)} \implies P(Y\le x | U\le  \frac{1}{M}* \frac{f(Y)}{g(Y)})=$$
+			- $$= \frac{P\left(  Y\le x , U \le  \frac{1}{M}* \frac{f(Y)}{g(Y)} \right)}{P\left( U\le  \frac{1}{M}* \frac{f(Y)}{g(Y)} \right)}= \frac{\int_{-\infty}^{x} [\int _{-\infty}^{ \frac{1}{M}* \frac{f(Y)}{g(Y)}} 1*\ du]*g_{Y}(y)\ dy }{\int_{-\infty}^{\infty}[\int_{-\infty}^{ \frac{1}{M}* \frac{f(Y)}{g(Y)}} du]g_{Y}(y)\ dy}=$$
+			- $$=\frac{\int_{-\infty}^{x} \frac{1}{M}* \frac{f(Y)}{g(Y)}*g_{Y}(y) \ dy}{\int _{-\infty}^{\infty} \frac{1}{M}* \frac{f(Y)}{g(Y)}*g_{Y}(y)\ dy}= \frac{\int_{-\infty}^{x} f_{X}(Y)}{\int _{-\infty}^{\infty}f_{X}(y)}=\frac{P(X\le x)}{1}$$
+		- Quindi la distribuzione dei valori accettati segue la funzione di ripartizione $F_{X}(x)$
+		- 
+- # Link Utili:
+	- 

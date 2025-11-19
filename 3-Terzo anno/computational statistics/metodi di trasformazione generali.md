@@ -64,5 +64,19 @@ data: "`2025-11-17 16:22`"
 		- Poi si fa sampling da una uniforme $U\sim U[0,1]$ e si prende:
 			- $X=k$ se $p_{k-1}<U<p_{k}$
 			- Ovvero se il valore ottenuto è compreso $k-1$ e $k$ allora vuol dire che si sta facendo sampling da $k$ 
+	- ## ES:
+		- Per generare $X\sim Bin(10,0.3)$ 
+			- Con k = 10  $p_{X}(x)=P(X=x)=\binom{10}{x}*p^{x}(1-p)^{10-x}$
+		- Per ottenere su R 10 valori generati: `pbinom(k, 10, 0.3)` 
+	- Alcuni algoritmi risultano più efficienti:
+		- Per esempio se si vuole generare da una [[Distribuzioni notevoli di variabili aleatorie discrete#^afac0a|distribuzione di poisson]] con $\lambda=100$
+		- ### Overdistribution:
+			- Una cosa da ricordare è che nella realtà il fatto che la media e varianza di questa distribuzione sia uguale non corrisponde quindi è buona cosa tenere conto:
+				- $Var(X)>>\mathbb{E}[X]$
+		- ### N.B:
+			- $Poi(\lambda)\rightarrow^{\lambda \to \infty} N(\lambda,\lambda)$
+			- E quando $\lambda>50$ la maggior parte della probabilità della  [[Variabili aleatorie|V.A]] è nel range $\lambda ± 3\sqrt{\lambda}$
+		- L'intervallo quindi sarà $(70,130)$, 
+- Se si vuole comparare funzione di ripartizione lo si fa con la [[probability integral function#^f2cc73|ecdf]]
 - # Link Utili:
 	- 

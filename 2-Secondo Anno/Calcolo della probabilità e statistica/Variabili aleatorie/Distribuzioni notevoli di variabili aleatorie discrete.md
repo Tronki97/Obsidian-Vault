@@ -55,7 +55,7 @@ data: "`2025-04-03 16:09`"
 		- $$=n(n-1)p^{2}$$
 		- Quindi:
 			- $$var(Y)=n(n-1)*p^{2}+np-n^{2}p^{2}=np-np^{2}=np*(1-p)$$
-- # Distribuzione di Poisson:
+- # Distribuzione di Poisson: ^afac0a
 	- è un caso limite della _distribuzione binomiale_ 
 		- $n\to \infty,\ \ p\to 0,\ \ \ np\to \lambda>0$
 	- $X\sim Poi(\lambda), \ \ \lambda>0$

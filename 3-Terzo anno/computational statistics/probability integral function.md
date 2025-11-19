@@ -15,7 +15,7 @@ data: "`2025-11-11 11:55`"
 - # Probability integral function (P.I.T):
 	- Permette di trasformare una uniforme in una qualsiasi [[Variabili aleatorie]] 
 	- è una trasformazione inversa
-		- Si prende l'inversa di una funzione ne si fa l'integrale???
+		- Si prende l'inversa di una [[Funzione di ripartizione]] e ne si fa l'integrale.
 	- Se $X$ ha densità $f$ e [[Funzione di ripartizione]] $F$ 
 		- $$F(x)=\int_{- \infty}^{x} f(t) dt$$
 	- Si setta poi $U=F(X)$ ovvero si applica ad X la propria funzione di ripartizione
@@ -55,7 +55,7 @@ data: "`2025-11-11 11:55`"
 				- $X\sim Cauchy(\mu, \sigma)$
 				- $$F_{X}(x)=\frac{1}{2} + \frac{1}{\pi}*\arctan\left( \frac{x-\mu}{\sigma} \right)$$
 				- $$\begin{array}\ U=\frac{1}{2} + \frac{1}{5}*\arctan\left( \frac{X-\mu}{\sigma} \right) \implies \pi\left( U- \frac{1}{2} \right) = \arctan \left( \frac{X-\mu}{\sigma} \right) \\  \tan\left[ \pi*\left( U - \frac{1}{2} \right) \right]=\frac{X-\mu}{ \sigma}\implies X= \mu + \sigma * \tan[\pi*(U-\frac{1}{2})]\end{array}$$
-	- ## empirical cdf:
+	- ## empirical cdf: ^f2cc73
 		- è una funzione di ripartizione empirica
 		- $(X_{1}, ...,X_{n} )$ [[Teoremi limite#^e7ebba|iid]]
 		- $$\hat{F}_{X}(x)=\frac{1}{n}* \sum\limits_{i=1}^{n} \mathbb{1}\{X_{i}\le x\}$$

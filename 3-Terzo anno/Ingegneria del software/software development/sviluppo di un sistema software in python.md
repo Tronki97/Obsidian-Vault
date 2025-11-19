@@ -233,5 +233,46 @@ data: "`2025-10-27 12:22`"
 - # Decoratori:
 	- Funzioni di ordine superiore che alterano dinamicamente il comportamento di funzioni o classi wrappandole in un altro invocabile
 		- ![[Pasted image 20251112181639.png|700]]
+	- Sostanzialmente funzionano prendendo una funzione ne ritornano una nuova e quella originale viene rimpiazzata:
+		- ![[Pasted image 20251118182527.png|250]]
+	- I decoratori possono essere applicati anche a:
+		- ## Metodi:
+			- ![[Pasted image 20251118182646.png|700]]
+		- ## Classi:
+			- ![[Pasted image 20251118182713.png|700]]
+	- ## Decoratori built-in
+		- `@staticmethod`:
+			- In cui il metodo non dipende dall'istanza
+			- ![[Pasted image 20251118182822.png|500]]
+			- Wrappa una funzione che deve essere chiamata senza istanza o classe:
+				- ![[Pasted image 20251118183014.png|500]]
+		- `@classmethod`:
+			- Il metodo funziona con la classe stessa e non l'istanza
+			- ![[Pasted image 20251118182857.png|500]]
+			- Passa la classe come primo argomento del metodo:
+				- ![[Pasted image 20251118183113.png|500]]
+		- `@property`:
+			- Serve per avere dei _getter/setter_ per il controllo d'accesso agli attributi
+				- ![[Pasted image 20251118183234.png|700]]
+			- Risulta migliore di un accesso diretto perché permette di fare dei controlli quando si assegna un valore ad un attributo cosa non possibile implicitamente senza questo decoratore:
+				- ![[Pasted image 20251118183553.png|400]]
+			- In sostanza trasforma un metodo in una proprietà permettendo di accederci come fosse un attributo 
+		- _questi decoratori built-in sono solo zucchero sintattico in quanto sono implementati come classi invocabili_
+	- ## Decorator chaining:
+		- Si mettono i decoratori uno dopo l'altro per sequenzializzare il loro funzionamento
+			- Da notare che visto che sono in serie l'ordine con cui li si applica conta
+			- ![[Pasted image 20251118184709.png|250]]
+			- ![[Pasted image 20251118184724.png|250]]
+	- ## Abstract Methods:
+		- Dalla libreria `abc` si possono importare una classe `ABC` e un decoratore `@abstractmethod`
+			- Usati per forzare le implementazioni e assicurare una struttura consistente tra le classi
+			- ![[Pasted image 20251118184923.png|400]]
+			- `Animal` è astratta quindi non potrà essere istanziata, mentre `sound` dovrà essere implementato dalle sottoclassi.
+		- Una classe rimane astratta fintanto che non implementa i metodi decorati con `@abstractmethod`, ma quando la sottoclasse li [[Tipo dato astratto#^83e9b7|overrida]] tutti allora quella sottoclasse diventa concreta e istanziabile, a sua volta la sottoclasse può usare di nuovo il decoratore.
+			- ![[Pasted image 20251118185336.png|400]]
+		- Si possono concatenare `@property` e `@abstractmethods` per rendere un metodo un attributo astratto chiamabile solo se implementato.
+			- ![[Pasted image 20251118185539.png|400]]
+		- Le classi con metodi astratti non possono essere istanziate direttamente:
+			- ![[Pasted image 20251118185638.png|400]]
 - # Link Utili:
 	- 
