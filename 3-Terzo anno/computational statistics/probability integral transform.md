@@ -12,7 +12,7 @@ aliases:
   - p.i.t
 data: "`2025-11-11 11:55`"
 ---
-- # Probability integral function (P.I.T):
+- # Probability integral transform (P.I.T):
 	- Permette di trasformare una uniforme in una qualsiasi [[Variabili aleatorie]] 
 	- è una trasformazione inversa
 		- Si prende l'inversa di una [[Funzione di ripartizione]] e ne si fa l'integrale.

@@ -1,0 +1,46 @@
+---
+tags:
+aliases:
+  - lazy evaluation
+  - yield
+  - Yield
+  - zip()
+  - filter()
+  - reduce()
+  - map()
+data: "`2025-11-19 20:06`"
+---
+- Oggetti immutabili, variabili globali non cambiabili
+- # Overloading delle funzioni:
+	- Se una funzione viene definita più volte quella valida è l'ultima.
+		- ![[Pasted image 20251111164518.png]]
+		- Darà errore siccome l'ultima definizione di `f()` ha due parametri
+	- Il modo standard per farlo è attraverso le classi
+	- Oppure usando il decorator `@dispatch`
+		- ![[Pasted image 20251111164617.png|500]]
+- # Funzioni come parametri:
+	- `filter` funzione che passata una funzione e una lista di valori ritorna quelli che restituiscono vero se dati come parametri alla funzione di input.
+		- Usare le lambda functions risulta molto utile qui dentro
+		- ![[Pasted image 20251111165733.png|500]]
+	- `reduce` comprime gli elementi di un iteratore in un solo elemento, ha due parametri dove il secondo deve essere di tipo degli elementi dell'iteratore
+		- ![[Pasted image 20251111170046.png|500]]
+	- `map` come parametri ha una lista di elementi ai quali viene applicata una funzione passata come parametro 
+		- ![[Pasted image 20251111165550.png]]
+		- Questa funzione può essere eseguita in _tempo costante_ dati abbastanza processori
+- # lazy evaluation:
+	- ## Yield :
+		- Quando chiedo l'elemento successivo lo genererò al momento.
+		- Usato per fornire un grande flusso di data un elemento alla volta invece di usare `return`
+		- Simile a come gli elementi di una lista vengono acceduti tramite iterazione
+		- Si possono espandere usando le _tuple_ ma in quel caso i valori vengono _consumati_
+		- 
+		- ![[Pasted image 20251111171002.png|400]]
+- # DS comprehension:
+	- Applicato a `List, Dict, Set`
+	- Si possono generare queste strutture dati "al volo" 
+	- ![[Pasted image 20251111171222.png|500]]
+		- Per le liste
+	- ![[Pasted image 20251111171252.png|600]]
+		- `zip()` ritorna un iteratore per le tuple
+- # Link Utili:
+	- 

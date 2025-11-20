@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "795b14fb850c0cb0",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "5286d70a30791dd3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,105 +30,8 @@
               "icon": "lucide-file",
               "title": "Homepage"
             }
-          },
-          {
-            "id": "33ac3990365126fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "accept & reject algorithm.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "accept & reject algorithm"
-            }
-          },
-          {
-            "id": "e18650478e880e8e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Funzione di ripartizione"
-            }
-          },
-          {
-            "id": "bcd7efb7c4a2e55f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Distribuzioni notevoli continue"
-            }
-          },
-          {
-            "id": "58d7cbaaff5f41b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Media"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -332,16 +235,32 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Funzione di ripartizione.md",
-    "accept & reject algorithm.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-    "Homepage.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Pattern strutturali.md",
+    "0-Mostarda/Ingegneria del software.md",
+    "0-Mostarda/Fondamenti di cybersecurity.md",
+    "0-Mostarda/Basi di Dati.md",
+    "0-Mostarda/Informatica teorica.md",
     "3-Terzo anno/Ingegneria del software/design pattern/Design pattern.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Pattern creazionali.md",
+    "0-Mostarda/Computational statistics.md",
+    "0-Mostarda/introduzione all'apprendimento automatico.md",
+    "Homepage.md",
+    "3-Terzo anno/Ingegneria del software/architettura dei software/architettura dei software.md",
+    "0-Mostarda/Calcolo delle probabilità e statistica.md",
+    "0-Mostarda/Ottimizzazione combinatoria.md",
+    "0-Mostarda/Calcolo numerico.md",
+    "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
+    "3-Terzo anno/Ingegneria del software/design pattern/Pattern comportamentali.md",
+    "3-Terzo anno/Ingegneria del software/prima lezione.md",
+    "0-Mostarda/Home.md",
     "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
+    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software Java.md",
+    "3-Terzo anno/computational statistics/probability integral transform.md",
+    "3-Terzo anno/Ingegneria del software/software development/Caratteristiche Object Oriented di python.md",
+    "3-Terzo anno/Ingegneria del software/software development/Caratteristiche funzionali di python.md",
+    "3-Terzo anno/Ingegneria del software/software development/Caratteristiche imperative di python.md",
+    "0-Mostarda/Tecnologie Web.md",
+    "0-Mostarda/Algebra e Geometria.md",
+    "0-Mostarda/Secondo anno.md",
+    "3-Terzo anno/Ingegneria del software/design pattern/Pattern strutturali.md",
     "immagini/Pasted image 20251117190527.png",
     "immagini/Pasted image 20251118185638.png",
     "immagini/Pasted image 20251118185539.png",
@@ -352,23 +271,7 @@
     "immagini/Pasted image 20251118183553.png",
     "immagini/Pasted image 20251118183234.png",
     "immagini/Pasted image 20251118183113.png",
-    "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
-    "3-Terzo anno/computational statistics/probability integral function.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/vettori aleatori (bidimensionali) discreti.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/Vettori aleatori.md",
-    "2-Secondo Anno/Calcolo Numerico/Approssimazione dei dati/Approssimazione dei dati.md",
-    "2-Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
     "latexsheet-a4.pdf",
-    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software Java.md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/unified modeling language (UML).md",
-    "3-Terzo anno/Ingegneria del software/laboratorio/esercitazioni UML.md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Sistemi software.md",
-    "3-Terzo anno/Ingegneria del software/progettazione dei sistemi software/Design OO in UML.md",
-    "3-Terzo anno/Ingegneria del software/architettura dei software/architettura dei software.md",
-    "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
-    "3-Terzo anno/Materie a scelta interessanti.md",
-    "3-Terzo anno/Consigli Tesi.md",
-    "3-Terzo anno/Basi di Dati/design di database/requisiti per la progettazione di un DB.md",
     "immagini/inside-out_ER.mp4",
     "3-Terzo anno/computational statistics/desktop.ini",
     "3-Terzo anno/computational statistics",

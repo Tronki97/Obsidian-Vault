@@ -1,0 +1,42 @@
+---
+tags:
+aliases:
+  - iteratore
+  - scoping di python
+  - parametri di default
+  - packages
+data: "`2025-11-19 20:04`"
+---
+- # Iteratore :
+	- `iterator` è una classe che supporta le iterazioni sulle collezioni di elementi
+	- `__iter__()` Mi permette di estrarre l'iteratore da un oggetto e usarlo per iterare sull'oggetto
+	- Con il `next` permette di andare al prossimo elemento 
+		- ![[Pasted image 20251103123026.png|300]]
+	- Questo è fattibile su oggetti che discendono dalla classe `iterable`
+	- Ciò è fatto implicitamente nei `for` loop 
+- # Scoping :
+	- è possibile usare `global x` per dire che nel blocco corrente `x` è da considerarsi globale
+	- Allo stesso modo si usa `nonlocal x` per dire che nel blocco corrente la  `x` usata fa riferimento alla prima definizione esterna al blocco corrente.
+	- Definire una variabile con lo stesso nome di una esterna al blocco corrente la nasconderà ma se il valore viene cambiato dentro lo scope verrà sollevato un errore.
+		- ![[Pasted image 20251116174316.png|500]]
+- # Parametri di default:
+	- Sono valutati una sola volta, alla prima chiamata
+	- Sono come variabili locali statiche in C
+	- Se i default sono oggetti mutabili possono succedere cose inaspettate:
+		- ![[Pasted image 20251116181049.png|400]]
+		- ![[Pasted image 20251116181108.png|400]]
+- # Moduli:
+	- Ogni file è un modulo e ogni modulo è un oggetto
+	- Senza l'estensione `.py` il nome del file viene salvato nella variabile `__name__` 
+	- Per accedervi si usa `import module`  
+	- Per importare tutti i nomi (funzioni) di un modulo si usa `from module import *` che li importerà tutti tranne quelli che cominciano con `_` in quel caso serve farlo esplicitamente.
+		- In quanto sono protetti (`_`) e privati (`__`) 
+- # Namespace : 
+	- Insieme di tutti i nomi associati ad oggetti visibili ad un certo punto 
+	- Quello corrente è visibile usando `dir()`; mettendoci il nome di un modulo come parametro è possibile vedere il _namespace_ di quello 
+- # packages :
+	- Collezioni di moduli, è considerabile come un oggetto. 
+	- Da un punto di vista di sistema è considerabile come una [[Visione Utente#^889353|directory]]
+	- Quando si fa l'import da un package o modulo si sta di fatto importando un oggetto in quanto in python _le funzioni sono oggetti_
+- # Link Utili:
+	- 

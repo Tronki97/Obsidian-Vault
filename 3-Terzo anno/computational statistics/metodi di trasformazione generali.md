@@ -15,7 +15,7 @@ data: "`2025-11-17 16:22`"
 			- $Be(a,b)$ distribuzione _beta_ 
 			- Consiste quindi nel dividere una somma di una parte del vettore delle v.a per la somma di tutte
 - # algoritmo di box-muller:
-	- Visto che la [[Funzione di ripartizione]] di una gaussiana è una integrale senza valore finito non si può applicare la [[probability integral function|pit]] in quanto non si riuscirebbe a calcolarne l'inversa, quindi si introduce questo algoritmo per generare due _normali_ partendo da due _uniformi_  
+	- Visto che la [[Funzione di ripartizione]] di una gaussiana è una integrale senza valore finito non si può applicare la [[probability integral transform|pit]] in quanto non si riuscirebbe a calcolarne l'inversa, quindi si introduce questo algoritmo per generare due _normali_ partendo da due _uniformi_  
 	- Sempre considerato come metodo di trasformazione diretta
 	- Se $U_{1}$ e $U_{2}$ sono [[Teoremi limite#^cb1c57|iid]] $U[0,1]$ le variabili $X_{1}$ e $X_{2}$:
 		- $$\begin{array}\ X_{1}= \sqrt{-2\log(U_{1})}\cos(2 \pi U_{2})  \\ X_{2}= \sqrt{-2\log(U_{1})}\sin(2 \pi U_{2})\end{array}$$
@@ -77,6 +77,6 @@ data: "`2025-11-17 16:22`"
 			- $Poi(\lambda)\rightarrow^{\lambda \to \infty} N(\lambda,\lambda)$
 			- E quando $\lambda>50$ la maggior parte della probabilità della  [[Variabili aleatorie|V.A]] è nel range $\lambda ± 3\sqrt{\lambda}$
 		- L'intervallo quindi sarà $(70,130)$, 
-- Se si vuole comparare funzione di ripartizione lo si fa con la [[probability integral function#^f2cc73|ecdf]]
+- Se si vuole comparare funzione di ripartizione lo si fa con la [[probability integral transform#^f2cc73|ecdf]]
 - # Link Utili:
 	- 

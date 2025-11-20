@@ -1,0 +1,101 @@
+---
+tags:
+aliases:
+  - overloading degli operatori
+  - operator overloading
+  - oggetti in python
+  - metaclasse
+data: "`2025-11-19 20:06`"
+---
+- Metodi di istanza richiedono il parametro `self`, che viene spesso omesso quando sono chiamate
+- L'inizializzatore è `__init__`
+	- Al cui interno sono definite le variabili di istanza
+	- ![[Pasted image 20251111180612.png]]
+- Le variabili di classe sono definite globalmente nella classe 
+- _Class_ e _static_ sono differenti in python 
+- Usando il decoratore `@classmethod` si può accedere alle variabili della classe usando anche la _dot notation_ di `cls.`
+	- ![[Pasted image 20251111180716.png]]
+- Per metodi o variabili protette (`_`) e privati (`__`) 
+	- Ma si può accedere a questi fuori dalla classe mettendo come prefisso al nome `_ClassName`
+	- ![[Pasted image 20251111181028.png]]
+	- ![[Pasted image 20251111181041.png|600]]
+	- ![[Pasted image 20251111181114.png|600]]
+- # Ereditarietà:
+	- Si identifica mettendo la classe da cui si eredita tra parentesi: `class Dog(Animal)`
+	- Quando si crea un nuovo oggetto il metodo inizializzato `__init__` viene invocato 
+		- Ma l'inizializzazione di una classe derivata non triggera l' `__init__` della classe base
+			- Ma se non c'è l' `__init__` nella classe derivata allora il sistema andrà a cercare quello più vicino salendo la gerarchia 
+	- Ogni classe senza una _superclasse_ è implicitamente derivata dalla classe `object`
+		- ![[Pasted image 20251111181335.png]]
+- # Overloading degli operatori:
+	- Ad Alcuni operatori può essere fatto l'overloading di fatto cambiando la loro definizione e quindi quello che ritornano
+	- ![[Pasted image 20251111181617.png]]
+		- Quello che ritornerà l'operazione con `+` è una concatenazione di stringhe come specificato nell'overloading
+	- C'è una lista di operatori ai quali si può fare l'overloading:
+		- ![[Pasted image 20251111181742.png|300]]
+		- ![[Pasted image 20251111181751.png|300]]
+	- La stessa cosa vale per altri operatori speciali come:
+		- `__getitem__(self,index)`: ovvero l'indexing di una lista per esempio `x= Obj[i]`
+		- `__setitem__(self, index)`: per settare una cella ad un valore `Obj[i]=x`
+		- `__contains__(self, index)` per l'operatore `in`
+		- `__repr__(self)` per convertire un oggetto in una stringa usata implicitamente nelle print
+		- `__iter__(self)`: per generare un iterabile 
+		- `__call__(self, w)` per _oggetti funzionali_ e gestire strutture come `anObject(w)`
+		- `__new__(...)`: per allocare spazio per un oggetto
+		- `__init__(...)`: per inizializzare oggetti
+- # Oggetti in python:
+	- Gli oggetti hanno: _identità, stato definito dagli attributi, un tipo, una o più basi_
+		- ![[Pasted image 20251111182549.png|300]]
+		- `object` ha un tipo e lo stesso vale per `type`
+			- ![[Pasted image 20251111182642.png]]
+	- Tutto è un derivato di `object` tutti gli `object` hanno un `type`, un `type` è un oggetto e deriva da `object`
+	- Il tipo è definito dall'attributo `__base__` 
+	- La classe base è identificata dall'attributo `__class__`
+	- ## Istanziare nuovi oggetti:
+		- Si fa riferimento al _clone_ [[Design pattern]], i nuovi oggetti vengono creati tramite _sottoclassaggio_
+			- ![[Pasted image 20251111183135.png]]
+				- Un nuovo oggetto di tipo `type` è istanziato con classe base `object`
+				- Nuovi oggetti possono essere creati applicando l'operatore `()` ad un oggetto di tipo `type`
+				- ![[Pasted image 20251111183330.png]]
+	- ## Istanziare nuovi tipi:
+		- Possono essere creati "al volo" 
+			- ![[Pasted image 20251111183426.png|500]]
+		- Si possono anche ritornare i tipi dalle funzioni:
+			- ![[Pasted image 20251111183625.png|500]]
+	- ## Creazione di un oggetto:
+		- Ci sono vari passi
+			- `__new__()` usato per allocare la memoria
+			- `__init__()` usato per inizializzare dati
+		- L'oggetto originale è preso come riferimento
+		- Usare le metaclassi permette di modificare la creazione degli oggetti
+		- Inoltre anche `__call__()` viene usato in quanto viene chiamato ogni volta un oggetto `type` viene invocato per creare un nuovo oggetto 
+			- Come in `dog=Dog()` che poi chiamerà anche gli altri due metodi in questo modo imponendo una struttura sui numeri e tipi dei parametri
+- # Metaclasse:
+	- Una classe le cui istanze sono ancora classi, un generatore di classi
+	- La metaclasse di una metaclasse è  `type`
+	- `class Animal(metaclass=AnimalType)` l'oggetto associato è una istanza della classe `AnimalType` e implicitamente derivato dalla classe `object`
+	- Le metaclassi permettono di manipolare la classe come un tutt'uno specialmente il suo processo di creazione. 
+		- ![[Pasted image 20251112173802.png|600]]
+		- ![[Pasted image 20251112173824.png|600]]
+		- Un parametro con `*` davanti indica essere una tupla mentre con `**` un dizionario.
+		- La metaclasse ha un proprio `__call__(cls, *args, **kwargs)` che viene chiamato quando l'istanza di una metaclasse viene chiamata 
+			- `cls` è il riferimento alla metaclasse
+			- `args` è la lista di argomenti posizionali
+			- `kwargs` è la lista degli argomenti keyword
+		- un proprio `__new__(mcs, name, bases, namspace)`
+			- `mcs` è il riferimento alla metaclasse
+			- `name` è il nome della metaclasse
+			- `bases` è la lista delle superclassi che diventerà l'attributo `__base__` della nuova classe
+			- `namespace` è in forma di dizionario e diverrà l'attributo `__dict__` della nuova classe
+		- Un proprio `__init__(cls, name, bases, namespace, **kwargs)`
+			- `cls` è il riferimento alla metaclasse
+			- `name` è il nome della metaclasse
+			- `bases` è la lista delle superclassi che diventerà l'attributo `__base__` della nuova classe
+			- `namespace` è in forma di dizionario e diverrà l'attributo `__dict__` della nuova classe
+			- `kwargs` è la lista degli argomenti keyword
+		- C'è inoltre un metodo `__prepare__()` chiamato come primo metodo per preparare il `namespace`
+	- ## Singoletto generalizzato:
+		- Con le metaclassi è possibile creare un [[Pattern creazionali#^90ee56|Singleton]] generale per qualsiasi classe
+			- ![[Pasted image 20251112174919.png]]
+- # Link Utili:
+	- 
