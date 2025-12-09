@@ -19,7 +19,7 @@ data: "`2025-11-19 20:06`"
 	- Oppure usando il decorator `@dispatch`
 		- ![[Pasted image 20251111164617.png|500]]
 - # Funzioni come parametri:
-	- `filter` funzione che passata una funzione e una lista di valori ritorna quelli che restituiscono vero se dati come parametri alla funzione di input.
+	- `filter` funzione che passata una funzione e una lista di valori e ritorna quelli che restituiscono vero se dati come parametri alla funzione di input.
 		- Usare le lambda functions risulta molto utile qui dentro
 		- ![[Pasted image 20251111165733.png|500]]
 	- `reduce` comprime gli elementi di un iteratore in un solo elemento, ha due parametri dove il secondo deve essere di tipo degli elementi dell'iteratore

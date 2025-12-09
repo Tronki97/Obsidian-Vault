@@ -15,7 +15,7 @@ data: "`2025-09-22 10:09`"
 	- Si può anche fare dei progetti che possono ridurre le domande dello scritto.
 - # Contenuto:
 	- Principalmente ci si concentra sui linguaggi orientati agli [[Tipo dato astratto|oggetti]] dove la computazione si concentra.
-		- Questi oggetti sono struddure dati contenenti:
+		- Questi oggetti sono strutture dati contenenti:
 			- _Dati_ (campi) 
 			- _Metodi_
 	- La computazione procede grazie all'interazione tra questi oggetti.
@@ -25,7 +25,7 @@ data: "`2025-09-22 10:09`"
 			- _programmazione ad attori o ad agenti_
 	- ## Alternative:
 		- _imperativo_: si definiscono passi sequenziali che svolgono un compito
-		- _funzionale_: il programma si pasa sul computare un _input_ in un _output_
+		- _funzionale_: il programma si basa sul computare un _input_ in un _output_
 	- Mentre quelli ad oggetti hanno oggetti che collaborano tra di loro per trovare la soluzione.
 	- ## Caratteristiche comuni dei linguaggi OOP:
 		- ### Classe:

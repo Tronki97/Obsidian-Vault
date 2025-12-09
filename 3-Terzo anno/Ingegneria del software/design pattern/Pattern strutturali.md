@@ -20,15 +20,15 @@ data: "`2025-10-20 19:46`"
 			- Si può fare senza [[Tipo dato astratto#^7786ca|ereditarietà multipla]] usando delle aggregazioni.
 		- _bridge_:
 			- Separo interfaccia e implementazione visto che in [[Java]] sono presenti le interfacce il bridge è meno critico
-			- ![[Pasted image 20251020193242.png|650]]
+			- ![[structure-en.png]]
 	- ## Decorator:
 		- Aggiungo [[unified modeling language (UML)#^6dd6a6|responsabilità]] ad un oggetto dinamicamente è possibile con questo aggiungere sottoclassi all'infinito
-		- Il decoratore è i suoi componenti non sono identici
+		- Il decoratore e i suoi componenti non sono identici
 		- Si può usare come alternativa alle sottoclassi per quanto riguarda funzionalità estese
 			- ![[Pasted image 20251020114806.png|500]]
 	- ## Proxy:
 		- Come il bridge ma permette accessi _remoti_ o _virtuali_ implementato in [[Java]] con il RMIC per poter invocare metodi di oggetti sparsi sull'internet che crea un proxy di un oggetto remoto.
 		- Un esempio di questo possono essere le richieste [[HTTP]] alle [[API REST]] 
-		- ![[Pasted image 20251020115753.png|500]]
+		- ![[structure.png]]
 - # Link Utili:
 	- 

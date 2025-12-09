@@ -1,0 +1,158 @@
+---
+tags:
+  - TODO
+aliases:
+  - clustering
+  - undersampling
+  - oversampling
+  - RMSE
+  - punteggio R2
+  - cross-validation
+  - k-fold
+  - centroid based
+  - kmeans
+  - density based
+  - distributon based
+  - hierarchical
+  - PCA
+data: "`2025-10-17 13:29`"
+---
+- # scikit-learn:
+	- Apprendimento supervisionato
+		- Si fa imparare all'algoritmo lo svolgimento di un problema
+		- Regressione:
+			- Si devono prevedere valori numerici continui
+		- Classificazione:
+			- Si prevedono valori categorici quindi dire se una figura è un triangolo o altro.
+	- ## Regressione:
+		- Trovare la funzione che meglio approssima la relazione tra variabile x e y
+			- $$f(x)=xw+b$$
+		- ### ES:
+			- Predire il valore di una casa tramite un dataset e la libreria `pandas`
+			- Tra tutte le features che ci sono si cerca di prevedere _MEDV_
+			- Per normalizzare i dati si possono usare diverse funzioni:
+				- `MinMaxScale` si riportano le feature in un range $[0,1]$
+				- `MaxAbsScale` riporta i valori in $[-1,1]$ utile se i valori devono concentrarsi sullo 0
+			- _Standardizzazione_:
+				- Si convertono i dati in una [[Distribuzioni notevoli continue#^cc21f1|distribuzione normale standard]] 
+			- Dopo aver predetto i risultati si calcolano gli errori come la media _quadratica degli errori_, 
+- # RMSE: 
+	- Root mean square error
+	- In pratica indica di quanto si sbaglia il modello nelle sue predizioni rispetto ai dati di test.
+- # Punteggio R2:
+	- Anche detto coefficiente di indeterminazione
+	- Può essere visto come una versione standardizzata del _MSE_ ed è un valore compreso tra 0 e 1
+		- $0.3 < R2<0.5$ il modello è scarso
+		- $0.5<R2<0.7$ il modello è discreto
+		- $0.7<R2<0.9$ il modello è buono 
+		- $R2=1$ probabilmente c'è un errore.
+- # Undersampling:
+	- Usato nei problemi di classificazione per ridurre in quantità i dati della classe maggioritaria.
+	- ![[Senza titolo 5.png]]
+- # Oversampling:
+	- Aumenta la quantità dei dati della classe minoritaria.
+	- ![[Senza titolo-1.png|]]
+		- _ADASYN_ e _SMOTE_ sono due algoritmi che generano dati sintetici 
+- # Cross-Validation:
+	- Tecnica di classificazione che consiste nel dividere il dataset in vari sottoinsiemi detti _fold_ e addestrare il modello su diverse combinazioni di essi. 
+	- ## K-fold:
+		- Una tecnica di Cross-Validation che consiste nel dividere il dataset in $k$ _fold_ uguali, addestra il modello su $k-1$ _folds_ e lo testa su uno, ripetendo il tutto $k$ volte 
+		- ### K-fold stratificato:
+			- Una variante dove si cerca di mantenere la proporzionalità delle classi in ogni _fold_
+			- ![[Senza titolo 1 1.png|600]]
+		- ![[Senza titolo-1 1.png]]
+- # Clustering:
+	- Metodo di analisi in cui si raggruppano dati simili in gruppi e si cerca di avere dati molto diversi in gruppi separati usato in vari campi:
+		- Costumer Segmentation
+		- Ricerca di mercato 
+		- Analisi delle recensioni online
+		- Raggruppamento di documenti o immagini in base al contenuto.
+	- ## Centroid-based:
+		- Ogni cluster è rappresentato da un "centroide" ovvero il punto medio/centro geometrico di tutti gli oggetti nel cluster che vengono assegnati in base al cluster più vicino.
+		- Un esempio di questo tipo di algoritmo è il _KMeans_
+		- ### Kmeans:
+			- ![[Senza titolo 2.png]]
+			- Si hanno questi 8 punti, per prima cosa si sceglie il numero di cluster $k$
+			- 2) si scelgono $k$ punti casuali dai dati come centroidi
+			- 3) si sceglie casualmente il centroide per ogni cluster 
+				- ![[Senza titolo 3.png]]
+				- In questo caso $k=2$ 
+			- 4) si assegna ogni punto al centroide più vicino.
+				- ![[Senza titolo-1 2.png]]
+			- 5) si ricalcola il centroide 
+				- ![[Senza titolo 4.png]]
+			- 6) si ripetono i punti 4 e 5:
+				- ![[Senza titolo-1 3.png]]
+			- #### Criteri di arresto:
+				- Se i centroidi non cambiano ad una siccessiva iterazione
+				- Se tutti i punti rimangono nello stesso cluster
+				- è stato raggiunto il numero massimo di iterazioni.
+			- Questo algoritmo ha una complessità di $O(n*k*i*d)$ dove $k$ sono i "centroidi" $i$ le iterazioni, $d$ la dimensione dei dati. 
+	- ## Density-based:
+		- Un'alta densità in una certa regione è caratterizzata da un presenza abbastanza grande di dati vicini e ciò potrebbe suggerire la presenza di un cluster
+		- Questo tipo di clustering collega regioni di elevata densità che avranno forma arbitraria 
+		- Questi algoritmi hanno problemi con dati di dimensioni elevate e densità variabile.
+			- ![[uc 2.png|500]]
+		- Ha una complessità computazionale di $O(n*\log(n))$ ma se i dati sono molto densi diventa $O(N^{2})$ dove $n$ è il numero dei dati. 
+	- ## Distribution-based:
+		- Assume che i dati seguano una determinata distribuzione.
+		- Assegna gli oggetti ai cluster in base alla distribuzione che seguono 
+		- ![[uc-1.png|500]]
+			- In questo caso si assume che i dati abbiano distribuzione gaussiana
+			- All'aumentare dalla distanza dal centro diminuisce la probabilità che un punto appartenga alla distribuzione 
+			- Però se non si conosce la distribuzione è meglio usare un altro algoritmo.
+	- ## Hierarchical:
+		- Si crea una gerarchia di cluster in cui quelli più piccoli sono combinati per formare quelli più grandi 
+		- ![[uc 1.png|700]]
+- # PCA:
+	- Principal component analisys
+	- Serve a diminuire la dimensionalità dello spazio dei dati, cattura le strutture più significative nei dati preservando il più possibile la variabilità.
+	- Si identificano le componenti principali in cui i dati variano di più, le stesse componenti principali risultano essere [[Combinazione lineare]] delle caratteristiche originali che essendo ortogonali tra loro garantiscono la non ridondanza
+	- ![[Senza titolo 5.png]]
+	- Il PCA si può leggere in vari modi:
+		- ![[Senza titolo 1 1.png]]
+			- _Da ciascun componente_: in questo caso avevamo 4 features ridotte a 2 risultando quindi in una varianza rappresentata da un grafo a 2 barre dove ogni barra indica quanto un componente riesce a rappresentare gli esempi rappresentati dalle 4 features, con il primo componente che cattura il $70\%$ della varianza totale e il secondo $30\%$ 
+			- _Cumulativa_: ordinando e sommando le componenti ad ogni somma si ha la varianza spiegata dalle prime $n$ componenti rispetto a quella totale _avendo quindi una visione collettiva_ 
+- # Anomaly detection:
+	- Utile per la rilevazione dello spam, transazioni fraudolente, controllo qualità...
+	- L'obiettivo è quello di identificare eventi o osservazioni inusuali 
+	- ## Anomalie: 
+		- Possono essere dati isolati che discostano dai punti circostanti, sequenze o cluster di dati insoliti.
+	- Le tecniche per rilevare queste anomalie includono: _statistica descrittiva_, _metodi basati su soglie_, _isoation forest_, _one-class SVM_, _autoencoder_
+- # Reti neurali:
+	- ## Tensorflow:
+		- Contiene metodi per preparare e caricare i dati, metodi per costruire modelli di ML, metodi per il deploy di ML e metodi per mettere in produzione un modello
+		- Tra i vantaggi c'è che può lavorare sulle GPU, CPU e TPU; calcola il gradiente di espressioni differenziabili arbitrarie, riesce a scalare su cluster di centinaia di CPU
+	- ## Keras:
+		- Permette di costruire, addestrare e valutare [[Reti neurali]] in modo efficiente, flessibile e con una UI ad altro livello
+		- è l' [[API REST|API]] di tensorflow e ciò vuol dire che quando si sta creando una rete con keras si sta creando un modello su tensorflow
+	- _initializer_ : determinano come vengono inizializzati i pesi della rete e quindi influenzano la convergenza dell'addestramento 
+	- _regulizer_ : controllano l' [[Overfitting]] nei modelli neurali, ad esempio aggiungendo una penalità nei pesi della rete durante l'addestramento modificando l'output rendendolo più generale
+	- _constraints_: possono migliorare la stabilità del modello
+	- ## overfitting:
+		- Avviene quando un modello addestrato ha una prestazione che eccelle rispetto ai dati di addestramento risultando troppo specializzato su di essi perdendo la capacità di generalizzazione su nuovi dati; tra le possibili cause:
+			- Modello troppo intelligente, si richiede di ridurne la complessità
+			- Scarso volume di dati
+			- Scarsa qualità dei dati, troppo rumore o errori
+	- ## Training:
+		- Richiede la _loss function_ ovvero una funzione che serve a comparare i valori target con l'output del modello e determina l'errore che l'_ottimizzatore_ cerca di minimizzare
+			- _ottimizzatore_: determina le regole secondo cui si fa l'update ai pesi del modello durante il training
+		- L'aggiornamento dei pesi secondo l'_ottimizzatore_ può basarsi su varie tecniche:
+			- _SGD_: discesa del gradiente stocastica
+			- _Adam_: adaptive moment estimation
+			- _RMSProp_: propagazione RMS
+- # Reti neurali convolutive:
+	- Usate molto nel riconoscimento di pattern nelle immagini.
+	- Usa un insieme di filtri (kernel) per eseguire la [[Imaging#^41f31a|convoluzione]] sull'input; questo filtro scorre su una finestra eseguendo la moltiplicazione elemento per elemento; successivamente si applica una [[Reti neurali#^98f9bf|funzione di attivazione]], infine l'output viene appiattito in un vettore unidimensionale per essere poi usato come input per i layer successivi.
+		- ![[convolution.jpg]]
+	- ## Dropout:
+		- Tecnica che cerca di prevenire l' [[Overfitting]], consiste nel selezionare casualmente i neuroni da ignorare durante il training; facendo ciò si rimuove temporaneamente il contributo all'attivazione di quei neuroni e non si aggiornano i loro pesi nel caso di _backpropagation_, migliorando di fatto la generalizzazione
+		- ![[dropout.jpg|450]]
+- # image segmentation:
+	- Assegna una classe ad ogni pixel di una immagine, utile per:
+		- Conoscere la shape dell'oggetto nell'immagine
+		- Capire se un pixel appartiene ad un oggetto
+		- Estrarre info a partire da un pixel
+	- ![[uc 2.png]]
+- # Link Utili:
+	- 

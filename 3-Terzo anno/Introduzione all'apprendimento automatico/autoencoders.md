@@ -1,0 +1,49 @@
+---
+tags:
+  - TODO
+aliases:
+  - encoder
+  - decoder
+data: "`2025-12-01 13:00`"
+---
+- # Autoencoder:
+	- è una [[Reti neurali|rete]] in grado di ricostruire un input da una rappresentazione interna
+	- Quindi si cerca di allenare un'altra rete e di farle ricostruire la rappresentazione usando l' [[Reti neurali#^e8677f|embedding]]: 
+		- Nello [[modelli generativi#^f2280d|spazio latente]] sono contenute le informazioni interessanti e serve un modo per tirarle fuori
+		- Gli _embedding_ sono delle visioni dell'informazioni che sono state guidate da un certo obiettivo
+	- ![[Pasted image 20251209150316.png|600]]
+	- ## Compressione:
+		- è possibile grazie alla presenza di correlazioni o regolarità tra le features 
+		- Se l'input avesse una struttura randomica, quindi un'alta [[Alberi di decisione#^eef29d|entropia]], non sarebbe possibile
+		- ### tipi:
+			- _data specific_: funziona solo su dati con forti correlazioni
+			- _lossy_: l'output viene degradato rispetto l'input 
+			- _directly trained_: su campioni senza labels, siamo nell'ambito dell'auto-supervisione
+	- Risulta un modello praticamente _non supervisionato_ in quanto l'output risulta essere simile al suo input 
+		- Ha una caratteristica della supervisione, ovvero si ha un output obiettivo
+		- Ma l'output è uguale all'input 
+	- ## Applicazioni:
+		- Data denoising
+			- Se passiamo in input all'_autoencoder_ un'immagine che non è proprio quella del dataset con cui è stato allenato, il modello cerca di produrre in output un qualcosa che lui conosce; in sostanza ricostruisce l'input senza il rumore 
+		- Anomaly detection
+			- Dando come input qualcosa di completamente diverso dal suo training l'errore restituito dal modello sarà molto più alto di quello standard; riconoscendo quindi una anomalia
+		- Feature extraction (generalizzazione del PCA)
+		- Generative models ([[modelli generativi#^036a8a|VAE]])
+	- ![[autoencoder.webp]]
+		- ## encoder:
+			- mappa i dati in input $xxx$ in una rappresentazione compressa (_spazio latente_) una sorta di riduzione della dimensionalità che porta ovviamente alla perdita di informazioni
+			- $$h= f(Wx+b)$$
+				- $h$: rappresentazione latente
+				- $W,b$: parametri imparabili
+				- $f$ : [[Reti neurali#^98f9bf|funzione di attivazione]]
+		- ## decoder
+			- prende lo spazio latente $hhh$ e prova a ricostruire l'input originale
+			- $$\hat{x}=g(W'h+b)$$
+			- $\hat{x}$: input ricostruito
+			- $g$: funzione di attivazione
+		- L'obiettivo sta nel ridurre il più possibile l'errore 
+		- Encoder e decoder possono non essere identici:
+			- L'importante è che l'output dell'encoder sia l'input del decoder, e che l'input dell'encoder sia l'output del decoder!
+		- Vengono allenati contemporaneamente e poi una volta messi in successione e formato l'_autoencoder_ lo alleno come se fosse un modello normale di classificazione avendo come output obiettivo lo stesso input 
+- # Link Utili:
+	- 

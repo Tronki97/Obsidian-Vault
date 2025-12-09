@@ -31,15 +31,15 @@ data: "`2025-11-19 09:12`"
 	- è un metodo indiretto per fare sampling da una distribuzione.
 	- Indiretto perché si fa sampling da una distribuzione diversa e trovare i valori di un'altra seguendo delle condizioni.
 	- Si richiede quindi una densità $f:$ _target_ e una $g:$ _candidato_ 
-		- Dobbiamo fare sampling da $f_{X}(x)$ ma risulta più facile farlo da $g_{Y}(y)$ 
+		- _Dobbiamo fare sampling_ da $f_{X}(x)$ ma risulta _più facile_ farlo da $g_{Y}(y)$ 
 	- Quello che si fa è generare un numero dalla distribuzione candidata: $g_{Y}(y)\sim y$ e si controlla che $u\le \frac{f_{X}(x)}{M*g_{Y}(y)}$ e se risulta vera allora $y$ può provenire da $f_{X}$ e quindi la si _accetta_ altrimenti la si _rifiuta_, si continua con il ciclo; $u$ proviene da una uniforme.
 	- Ci sono dei vincoli da soddisfare dopo aver scelto la densità candidata:
-		- $f$ e $g$ devono avere una struttura di supporto compatibile, la struttura di supporto della candidata può anche essere più grande tanto quei valori li andranno scartati.
+		- $f$ e $g$ devono avere una struttura di supporto compatibile, _la struttura di supporto della candidata può anche essere più grande_ tanto quei valori li andranno scartati.
 			- $g(x)>0$ e $f(x)>0$
-		- Deve esistere una costante $M:\frac{f(x)}{g(x)}\le M \ \ \forall x$  
+		- Deve esistere una costante $M:\frac{f_{X}(x)}{g_{Y}(x)}\le M \ \ \forall x$  
 			- Agisce come una retta che setta il limite superiore di questa divisione quindi per avere il giusto impatto M idealmente dovrebbe essere $\max \frac{f(x)}{g(x)}\ \ \forall x$
 	- Se la condizione $U\le \frac{f(Y)}{Mg(Y)}$ è rispettata allora si setta $X=Y$ e si accetta $y$
-	- La probabilità di accettare un valore è: $P(accept)=\frac{1}{M}$ e il tempo di attesa medio per accettare un valore è $M$ ovvero il numero di tentativi da fare prima di accettare un valore.
+	- _La probabilità di accettare un valore_ è: $P(accept)=\frac{1}{M}$ e il tempo di attesa medio per accettare un valore è $M$ ovvero il numero di tentativi da fare prima di accettare un valore.
 	- ## Dimostrazione:
 		- Per capire se funziona, ci si chiede se tutti i valori accettati arrivino da $f_{X}(x)$ e per capirlo si guarda la distribuzione dei valori accettati, e quindi quale è la [[Funzione di ripartizione]] 
 		- $A=$ accettare un valore
@@ -47,6 +47,48 @@ data: "`2025-11-19 09:12`"
 			- $$= \frac{P\left(  Y\le x , U \le  \frac{1}{M}* \frac{f(Y)}{g(Y)} \right)}{P\left( U\le  \frac{1}{M}* \frac{f(Y)}{g(Y)} \right)}= \frac{\int_{-\infty}^{x} [\int _{-\infty}^{ \frac{1}{M}* \frac{f(Y)}{g(Y)}} 1*\ du]*g_{Y}(y)\ dy }{\int_{-\infty}^{\infty}[\int_{-\infty}^{ \frac{1}{M}* \frac{f(Y)}{g(Y)}} du]g_{Y}(y)\ dy}=$$
 			- $$=\frac{\int_{-\infty}^{x} \frac{1}{M}* \frac{f(Y)}{g(Y)}*g_{Y}(y) \ dy}{\int _{-\infty}^{\infty} \frac{1}{M}* \frac{f(Y)}{g(Y)}*g_{Y}(y)\ dy}= \frac{\int_{-\infty}^{x} f_{X}(Y)}{\int _{-\infty}^{\infty}f_{X}(y)}=\frac{P(X\le x)}{1}$$
 		- Quindi la distribuzione dei valori accettati segue la funzione di ripartizione $F_{X}(x)$
-		- 
+	- ## Passi dell'algoritmo:
+		- 1) estraggo $y$ da $g_{Y}(y)$
+		- 2) estraggo $u$ in maniera indipendente da una uniforme $U(0,1)$
+		- 3) controllo se $u\le \frac{1}{M}* \frac{f(y)}{g(y)}$ 
+			- Se rispettata accetto il valore di $y$ altrimenti rifiuto
+			- Per questo passaggio si potrebbe anche fare il controllo $u*M \le \frac{f(y)}{g(y)}$ ma questo è equivalente a fare $u' \le \frac{f(y)}{g(y)}$ dove $u'$ è un valore di una uniforme $U(0,M)$
+	- ## balnket:
+		- ![[Pasted image 20251125123022.png|500]]
+		- Una cosa da considerare quando si sceglie una $g$ candidata è che abbia un andamento il possibile simile a quella bersaglio in modo tale da poi ottenere una sorta di funzione "blanket" ottenuta da $M*g_{Y}(y)$
+			- Quindi per fa si che si avvicini quanto più possibile a $f_{Y}(y)$ si necessita scegliere una $M$ più appropriata possibile che rispetti il rapporto $\frac{f_{Y}(y)}{g_{Y}(y)}$
+			- Oppure semplicemente una $M$ che sia il $\max f_{Y}(y)$
+				- ![[Pasted image 20251125123516.png|500]]
+		- Scegliere questi valori per $M$ è molto importante perché riducono di molto la probabilità di estrarre valori che verranno rifiutati dall'algoritmo. 
+- # Es 2.5:
+	- Dimostrare che $P(accept)=\frac{1}{M}$ e $M\ge \frac{f}{g}$
+	- Qualsiasi funzione non negativa può essere una _densità_
+	- Si può calcolare la costante di normalizzazione $k$ per $\tilde{f}$ ovvero una densità non normalizzata.
+	- Si ricorda che si accetta un valore $y$ quando:
+		- $$U\le  \frac{1}{M}*\frac{f_{X}(y)}{g_{Y}(y)}$$
+	- Si può quindi riscrivere come:
+		- $$U\le \frac{1}{M}  \frac{f_{X}(y)}{g_{Y}(y)} | Y=y$$
+		- Ovvero sapendo di aver estratto $y$ 
+	- $$P(accept)=\int \left[ \int_{-\infty}  \frac{1}{M}*\frac{f_{X}(y)}{g_{Y}(y)}du \right]*g_{Y}(y) \ dy=$$
+	- $$=\int_{-\infty}^{\infty} \frac{1}{M}*\frac{f_{X}(y)}{g_{Y}(y)}*g_{Y}(y) \ dy=\frac{1}{M}*\int_{-\infty}^{\infty}f_{X}(y)\ dy= \frac{1}{M}$$
+		- $\int_{-\infty}^{\infty}f_{X}(y)\ dy = 1$ per definizione di densità 
+	- Per quanto riguarda $\tilde{f}_{X}(x)$ con $\tilde{f}_{X}(x) \ge 0\ \ \forall x$ e soprattutto:
+		- $$\int_{-\infty}^{\infty} \tilde{f}_{X}(x)\ne 1$$
+			- In quanto è una densità non normalizzata.
+			- Però l'integrale rimane definita.
+		- $f_{X}(x)=k*\tilde{f}_{X}(x)$
+			- $$\frac{f_{X}(y)}{g_{Y}(y)}= k*\frac{\tilde{f}_{X}(y)}{\tilde{g}_{Y}(y)}$$
+			- E siccome $\tilde{f}_{X}(x)\ne f_{X}(x)$ allora:
+				- $$\frac{\tilde{f}_{X}(y)}{\tilde{g}_{Y}(y)}\le \tilde{M}\ \ \ \ \tilde{M}\ne M$$
+		- $$P(accept)= P\left( U\le \frac{1}{\tilde{M}} * \frac{\tilde{f}(Y)}{\tilde{g}(Y)}\right)=$$
+		- $$=\int_{-\infty}^{\infty}\left[ \int_{-\infty}^{\frac{1}{\tilde{M}} * \frac{\tilde{f}_{X}(y)}{\tilde{g}_{Y}(y)}}  du \right]*g_{Y}(y)=\frac{1}{\tilde{M}} \int_{-\infty}^{\infty}\frac{\tilde{f}_{X}(y)}{\tilde{g}_{Y}(y)}*g_{Y}(y)\  dy$$
+		- $$=\frac{1}{\tilde{M}} \int_{-\infty}^{\infty} \frac{1}{k}* \frac{f_{X}(y)}{g_{Y}(y)}*g_{Y}(y)\  dy= \frac{1}{\tilde{M}} \int_{-\infty}^{\infty} \frac{1}{k}*f_{X}(y)\ dy = \frac{1}{\tilde{M}*k}$$
+			- $$k=\frac{1}{\tilde{M}*P(accept)}$$
+				- E da ricordare come $k$ sia anche il risultato dell'integrale:
+					- $$\int_{-\infty}^{\infty} \tilde{f}_{X}(y) dy$$
+					- Quindi _si stanno usando numeri randomici per calcolare il risultato deterministico di un'integrale_
+				- Mentre per $P(accept)$ si può stimare usando $\tilde{\alpha}$ che è il rapporto di accettazione empirico
+			- $$\hat{k}=\frac{1}{\tilde{M}*\tilde{\alpha}}$$
+				- In _R_ si può usare la funzione `integrate` per calcolarlo
 - # Link Utili:
 	- 

@@ -12,6 +12,7 @@ aliases:
   - many to one
   - one to many
   - many to many
+  - schema concettuale
 data: "`2025-11-05 17:28`"
 ---
 - # # motivazioni:

@@ -20,5 +20,6 @@ data: "`2025-10-24 18:06`"
 	- Un altro metodo è quello di calcolarlo su un'istanza del training set alla volta.
 		- Ciò risulta veloce ma poco preciso
 	- Una combinazione dei precedenti viene usata dal _SGD_(stochastic gradient descent) che usa un _mini-batch_ che cambia ad ogni iterazione.
+		- Se si aumenta la dimensione del mini-batch si andrà a calcolare il gradiente su più campioni ottenendo una stima migliore ma ci saranno meno aggiornamenti ad ogni iterazione ma _non andrà a diminuire l'_ [[Overfitting]]     
 - # Link Utili:
 	- 

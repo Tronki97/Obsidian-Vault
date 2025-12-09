@@ -1,0 +1,33 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-12-04 15:19`"
+---
+- # Normalizzazione:
+	- Tutte le tabelle del database devono essere normalizzate ovvero non devono accadere certi problemi causati dalle ridondanze.
+	- ## Dipendenze funzionali:
+		- è un particolare vincolo di integrità, che descrive i limiti funzionali tra gli attributi di una certa relazione
+		- ### Idea:
+			- Ogni impiegato ha lo stesso stipendio 
+			- Ogni progetto ha  lo stesso budget
+			- Ogni impiegato 
+		- ### Def:
+			- Data una relazione $r$ con schema $R(X)$ e dati due sottoinsiemi di $X$ detti $Y,Z$
+			- Una dipendenza funzionale esiste tra $Y$ e $Z$ 
+				- Per ogni coppia di tuple $t_{1}$ e $t_{2}$ avente gli stessi valori su $Y$ risulta che $t_{1},t_{2}$ hanno gli stessi valori anche su $Z$ 
+				- $Y\to Z$
+				- $employee\to Wage$; $Project\to Budget$
+				- ![[Pasted image 20251204153914.png]]
+		- Una DF $Y\to A$ non è triviale se:
+			- $A$ è un attributo e $\notin Y$
+			- $A$ è un  insieme di attributi e nessuno di quelli appartiene ad $Y$
+	- ## BCNF :
+		- Una forma normale ha delle proprietà utili che sono soddisfatte dall'assenza di anomalie definendo delle  dipendenze funzionali
+		- ### Def:
+			- Data $r$ per ogni dipendenza funzionale non triviale $X\to Y$ definita su $r$ $X$ ha una chiave $k$ di $r$ che è una superchiave per $r$
+		- Se una tabella non è in BCNF si può normalizzare rimpiazzandola con 2 o più relazioni che siano BCNF
+	- Terza forma normale:
+		- Se $K\subset X$ e $X$ è una superchiave di $r$ oppure ogni attributo $Y$ è in almeno una delle chiavi di $r$
+- # Link Utili:
+	- 

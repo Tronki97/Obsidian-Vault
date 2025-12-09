@@ -24,14 +24,14 @@ data: "`2025-10-20 15:22`"
 				- Per accedere a membri o metodi della classe esterna si necessita che siano `static`
 			- ## Inner class:
 				- _Un oggetto può esistere solo all'interno di un oggetto della classe di cui fa parte e se c'è una classe esterna che lo contiene_.
-				- Ogni istanza ha una classe che la include ogni classe _inner_ può accedere a tutti i membri delle classi che le incapsulano. 
+				- Ogni istanza ha una classe che la include, ogni classe _inner_ può accedere a tutti i membri delle classi che le incapsulano. 
 				- Il nome della classe deve essere diverso da quella che la include.
 				- _non può avere attributi_ `static` 
 					- Altrimenti si necessiterebbe di avere tanti `class.Attr` quante sono le istanze di `class` 
 				- ![[Pasted image 20251028175040.png|600]]
 					- In questo modo ogni istanza di `Incrementer` è legata ad una istanza della classe contenitrice `Counter`
 			- ## Local class:
-				- In c++ e java è possibile definire una classe dentro una funzione
+				- In C++ e java è possibile definire una classe dentro una funzione
 				- Queste classi sono utili per qualcosa di molto specifico ma che siano meno visibili
 					- _Rafforzano l'incapsulamento_ 
 				- Se una classe locale è dentro ad uno scope allora ne ha lo stesso livello di accesso.

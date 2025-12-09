@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "795b14fb850c0cb0",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "5286d70a30791dd3",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/autoencoders.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "autoencoders"
+            }
+          },
+          {
+            "id": "181b627e4dbcadc7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Reti neurali"
+            }
+          },
+          {
+            "id": "b82990da965e3d62",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/reti convoluzionali.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "reti convoluzionali"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -63,8 +112,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
-                "matchingCase": true,
+                "query": "scomparsa ",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -235,52 +284,52 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "0-Mostarda/Ingegneria del software.md",
-    "0-Mostarda/Fondamenti di cybersecurity.md",
-    "0-Mostarda/Basi di Dati.md",
-    "0-Mostarda/Informatica teorica.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Design pattern.md",
-    "0-Mostarda/Computational statistics.md",
-    "0-Mostarda/introduzione all'apprendimento automatico.md",
+    "Pasted image 20251209165417.png",
+    "Pasted image 20251209164740.png",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/reti convoluzionali.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/Modelli di diffusione.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Espressività e training dei modelli.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/autoencoders.md",
+    "Pasted image 20251209150316.png",
     "Homepage.md",
-    "3-Terzo anno/Ingegneria del software/architettura dei software/architettura dei software.md",
-    "0-Mostarda/Calcolo delle probabilità e statistica.md",
+    "Troubleshooting.md",
+    "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/modelli generativi.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/lezione introduttiva machine learning.md",
+    "lezione 4-12-25 DB.md",
+    "immagini/Pasted image 20251208125536.png",
+    "immagini/Pasted image 20251204140135.png",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/Lecture 05122025131733.md",
+    "immagini/Pasted image 20251208124704.png",
+    "immagini/Pasted image 20251208124216.png",
+    "immagini/Pasted image 20251208124107.png",
+    "immagini/Pasted image 20251208123207.png",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Tecnica del gradiente.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Naive Bayes.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/alberi di decisione/Alberi di decisione.md",
+    "immagini/Pasted image 20251204153914.png",
+    "3-Terzo anno/Basi di Dati/progettazione logica.md",
+    "immagini/Pasted image 20251204145202.png",
+    "3-Terzo anno/computational statistics/accept & reject algorithm.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/autoencoder.ipynb",
+    "Lecture 28112025131810.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/laboratorio machine learning.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
+    "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/laboratorio 1.ipynb",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/laboratorio3_reti_neurali.ipynb",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/lab2_nonsupervisionati.ipynb",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/laboratorio4.ipynb",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/Numpy e Elaborazione di Immagini.ipynb",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/Nuova cartella",
+    "0-Mostarda/Reti di Calcolatori.md",
+    "2-Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/autenticazione.md",
     "0-Mostarda/Ottimizzazione combinatoria.md",
-    "0-Mostarda/Calcolo numerico.md",
-    "3-Terzo anno/Ingegneria del software/Funzioni virtuali.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Pattern comportamentali.md",
-    "3-Terzo anno/Ingegneria del software/prima lezione.md",
-    "0-Mostarda/Home.md",
-    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
-    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software Java.md",
-    "3-Terzo anno/computational statistics/probability integral transform.md",
-    "3-Terzo anno/Ingegneria del software/software development/Caratteristiche Object Oriented di python.md",
-    "3-Terzo anno/Ingegneria del software/software development/Caratteristiche funzionali di python.md",
-    "3-Terzo anno/Ingegneria del software/software development/Caratteristiche imperative di python.md",
-    "0-Mostarda/Tecnologie Web.md",
-    "0-Mostarda/Algebra e Geometria.md",
-    "0-Mostarda/Secondo anno.md",
-    "3-Terzo anno/Ingegneria del software/design pattern/Pattern strutturali.md",
-    "immagini/Pasted image 20251117190527.png",
-    "immagini/Pasted image 20251118185638.png",
-    "immagini/Pasted image 20251118185539.png",
-    "immagini/Pasted image 20251118185336.png",
-    "immagini/Pasted image 20251118184923.png",
-    "immagini/Pasted image 20251118184724.png",
-    "immagini/Pasted image 20251118184709.png",
-    "immagini/Pasted image 20251118183553.png",
-    "immagini/Pasted image 20251118183234.png",
-    "immagini/Pasted image 20251118183113.png",
+    "2-Secondo Anno/Ottimizzazione combinatoria/Introduzione al Corso.md",
+    "immagini/convolutional.mp4",
     "latexsheet-a4.pdf",
-    "immagini/inside-out_ER.mp4",
-    "3-Terzo anno/computational statistics/desktop.ini",
-    "3-Terzo anno/computational statistics",
-    "3-Terzo anno/Basi di Dati/design di database",
-    "3-Terzo anno/Ingegneria del software/software development",
-    "3-Terzo anno/Ingegneria del software/laboratorio",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/linear_regression.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/logistic_regression_animation.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/naive_bayes_mnist__tmp_jupytext_29668.ipynb",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

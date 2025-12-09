@@ -6,6 +6,11 @@ aliases:
   - neurone artificiale
   - layer
   - feed-forward
+  - funzione di attivazione
+  - fda
+  - f.d.a
+  - activation function
+  - embedding
 data: "`2025-10-25 11:18`"
 ---
 - # Idea:
@@ -17,8 +22,9 @@ data: "`2025-10-25 11:18`"
 	- Ogni neurone ha multipli input e produce un singolo output
 	- Implementa una [[Regressione logistica]]:
 		- $$\sigma(wx+b)$$
-	- Le _activation function_ devono essere _non lineari_ altrimenti basterebbe solo aumentare il numero di input per ottenere un modello più complesso
-		- ![[Pasted image 20251029182444.png|600]]
+	- ## funzione di attivazione: ^98f9bf
+		- Le _activation function_(funzioni di attivazione) devono essere _non lineari_ altrimenti basterebbe solo aumentare il numero di input per ottenere un modello più complesso
+			- ![[Pasted image 20251029182444.png|600]]
 - # Topologie:
 	- ## Feed-forward:
 		- Sono acicliche come un [[Grafi#^993ecb|DAG]] chiamate così perché portano i risultati delle computazioni sempre avanti
@@ -56,23 +62,23 @@ data: "`2025-10-25 11:18`"
 		- ### generative modeling:
 			- Si cerca di costruire un generatore capace di fare sampling di punti secondo una determinata distribuzione appresa.
 			- Si parte da una distribuzione di probabilità nota e si trasforma in una attesa $P(X)$.
+			- In sostanza si generano nuovi dati simili a quelli di training
 			- Partendo da una info latente $z$ si cerca di imparare la distribuzione $P(X|z)$
 				- Con $z$ che sarebbe una sorta di rappresentazione di $X$ che è condensata e implicita
 			- #### spazio latente:
-				- 
+				- è uno spazio contenente un insieme di oggetti che più hanno caratteristiche simili più sono posizionati vicini tra di loro 
+				- La sua dimensione di solito è minore di quella dello spazio delle feature, rendendolo come una sorta di compressione dei dati  
+				- ![[Pasted image 20251126171745.png]]
 	- ## natural language processing
 		- Language modelling, text processing
 		- ### sentiment analisys:
 			- Si ha un testo in linguaggio naturale e si cerca di classificare delle informazioni come il sentimento del testo
 		- ### Modelling:
 			- Come riassumere un testo, interessante perché il modello deve classificare quali informazioni sono utili e quali tralasciare
-			- Generare dialoghi rimanendo coerenti con l'intera durata del 
-		- ### Embedding:
+			- Generare dialoghi rimanendo coerenti con l'intera durata del testo
+		- ### Embedding: ^e8677f
 			- Ogni task di questa categoria richiede il trasformare le parole in _token_ mappando le parole in spazi vettoriali con grande [[Dimensione]] e questi vettori dovrebbero riuscire per esempio a trasformare delle parole dal femminile al maschile dentro agli _spazi latenti_ 
 		- ### CLIP:
 			- Permette di creare un ponte tra il dominio testuale e il dominio delle immagini.
-			- 
-	- ## Generative modelling:
-		- 
 - # Link Utili:
 	- 

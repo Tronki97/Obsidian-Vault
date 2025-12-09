@@ -46,7 +46,7 @@ data: "`2025-10-27 12:22`"
 - # Derivazioni di python:
 	- Questo linguaggio visto che prende da molti altri ha sia:
 		- [[Caratteristiche imperative di python|caratteristiche imperative]], 
-		- [[Caratteristiche funzionali di python|| funzionali]]
+		- [[Caratteristiche funzionali di python||funzionali]]
 		- [[Caratteristiche Object Oriented di python||object oriented]]
 - # type hints:
 	- è possibile cambiare il tipo delle variabili a runtime siccome python è a [[tipi nei linguaggi di programmazione#^437fb2|tipaggio dinamico]]

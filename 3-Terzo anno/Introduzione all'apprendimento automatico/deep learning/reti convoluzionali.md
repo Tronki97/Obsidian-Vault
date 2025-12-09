@@ -1,0 +1,108 @@
+---
+tags:
+aliases:
+  - stride
+  - padding
+  - blurring
+  - tensori
+  - pooling
+  - alexNet
+  - VGG
+  - inception
+  - ResNet
+  - link residuale
+  - skip connection
+  - campo ricettivo
+  - transfer learning
+data: "`2025-11-20 13:15`"
+---
+- # intro:
+	- Un filtro convolutivo è una sorta di finestra con dei pesi che analizza l'input in varie posizioni diverse, la finestra scorre sull'input e in ogni posizione si esegue una certa operazione: di base un [[Prodotto scalare Euclideo]]
+		- ![[Pasted image 20251120131826.png|500]]
+		- Spostare il filtro per posizionarne il centro in ogni casella di cui vogliamo vedere il risultato
+	- ## ES:
+		- <video src="convolutional.mp4" controls height="500" controls width="500"></video>
+	- _Il filtro di solito segue un pattern che permette di riottenere delle caratteristiche dell'input che stiamo cercando_, col filtro precedente stavamo cercando una zona col punto centrale con valore decisamente minore di quelli adiacenti.
+	- Diversi tipi di filtri:
+		- Somma dei pesi 1 sono filtri di trasformazione.
+		- Somma dei pesi 0
+	- _I filtri possono essere di qualsiasi grandezza e anche multidimensionali_.
+	- ### Stride:
+		- numero di passi di cui voglio spostare il filtro
+		- Più aumento il numero stride più ottengo un _downsampling_ dell'input e quindi è come se diminuissi la dimensione dell'input.
+	- ### padding:
+		- si usa per centrare i anche le zone ai bordi dell'input aggiungendo casella con input 0
+	- Quando si definisce un layer di solito si associa:
+		- Il numero di filtri da definire
+		- La grandezza es: $3 \times3$
+		- Se si usano dei bias
+		- Padding che di default è valid ovvero si applica il filtro solo nelle posizioni valide senza mettere il padding
+	- Quando si fa il reshape ci si aspetta 4 dimensioni (la dimensione di batch, le due spaziali, i canali)
+		- I canali ci dicono a che dimensione deve fare l'output nell'esempio da $28 \times 28$ diventa $28 \times 28 \times 1$
+			- Se le immagini fossero a colori i canali sarebbero 3 (RGB)
+		- Mettendo 5 filtri uno dopo l'altro sarebbe come avere 5 canali siccome ogni filtro genera una mappa delle feature diversa.
+	- Proprietà delle convoluzioni:
+		- Mettere un 1 e -1 in posizioni opposte praticamente si sta applicando due kernel per poi farne la differenza.
+			- E in sostanza mette in risalto zone in cui il contrasto di colore risulta più evidente.
+	- ## Blurring:
+		- Inizializzo un kenrel solo di 1 e lo si divide per 9 per far si che la somma sia 1
+		- Applicando il kernel all'immagine si ha che ogni pixel risulta essere la media di tutti quelli a cui applico il filtro.
+- # tensori:
+	- Le reti convoluzionali processa dei tensori che _in sostanza sono degli array multidimensionali_ di float; di solito hanno 4 dimensioni:
+		- $$(batch \times width \times height \times channels )$$
+		- Di solito il filtro lavora su tutti i canali in input in parallelo
+	- La dimensione dell'output è data da: 
+		- $$\frac{W_{in}+P-K}{S}+1$$
+		- $P:$ padding
+		- $K$ dimensione kernel 
+		- $S$ lo stride
+		- Si aggiunge l'1 perché è la posizione iniziale del kernel 
+		- Quindi il risultato finale sarà la dimensione dell'output basata sugli spostamenti fatti dal filtro
+- # pooling:
+	- Permette di ridurre la dimensione spaziale dell'input/aumentare il campo ricettivo dei neuroni 
+	- In un _pooling layer_ ogni neurone prende la _media_ o il _massimo_(maxpooling) nella sua regione del kernel
+		- Lo stride di default per questi layer è la dimensione spaziale del kernel 
+	- è possibile dopo averlo fatto riallargare l'immagine 
+- # Architetture di reti neurali convolutive:
+	- ## AlexNet:
+		- Vincitrice del NIPS nel 2012
+		- Applicando varie volte il max pooling e per compensare si cerca di aumentare a via via il numero di canali.
+		- _Embedding_: visione interna dell'informazione.
+		- Usa un kernel $11 \times 11$ che risulta essere un po datato perché ora si userebbero vari layer di kernel $3 \times3$ in cascata.
+		- Tutte le reti di classificazione che vennero dopo sono basate su questa.
+	- ## VGG:
+		- Si aumenta il numero di canali con livelli convolutivi, si fa max pooling riducendo la dimensione ma compensando raddoppiando il numero di canali, lo si fa per varie volte 
+		- Però risulta molto pesante
+	- ## Inception:
+		- Parte iniziale di convoluzioni e parte finale densa
+		- In mezzo ci sono degli inception modules che prendono dei tensori e li trasformano mantenedone la dimensione
+			- Ogni inception module trasforma in modo diverso l'input e poi li concatena 
+			- Si cerca di forzare la parte che mi interessa evidenziando le parti che si stanno analizzando.
+	- ## ResNet:
+		- _Link residuale_: permette di prendere l'informazione residua e ricollegarla al flusso tramite, di solito, una somma.
+			- Da non pensare come link aggiuntivi ma come il flusso principale:
+				- ![[Pasted image 20251121143054.png|500]]
+			- Si spera che il _weight layer_ riesca a migliorare il segnale in ingresso aggiungendolo ad esso; in questo modo si ha un percorso più diretto per il calcolo del gradiente e ci si assicura che anche i layer più profondi ricevano un segnale di errore significativo cercando di evitare la [[Espressività e training dei modelli#^cd0afe|scomparsa del gradiente]]
+			- Questo salto o scorciatoia viene chiamato _skip connection_
+		- Reti molto profonde che per questo non possono usare le _RELU_ 
+- # Campo ricettivo:
+	- La zona massima che un [[Reti neurali|neurone]] riesce a vedere 
+	- Avere un solo kernel di dimensione maggiore risulta più espressivo di due kernel più piccoli in cascata ma con quei due è possibile avere delle non linearità, di fatto rendendo le due cose non confrontabili.
+- # Transfer learning:
+	- Un modello viene addestrato riutilizzando come come base un altro modello addestrato per un'altra attività
+	- Utile quando la le due attività sono correlate o quando i dati per la nuova rete sono limitati
+	- In questo modo il modello riesce ad adattarsi in modo più efficiente al nuovo compito accelerando l'apprendimento e migliorando le prestazioni 
+	- Riduce il rischio di [[Overfitting]] poiché il modello vecchio incorpora delle features generalizzabili anche per il secondo compito.
+	- ![[transfer learning.webp|450]]
+	- ![[Pasted image 20251209164740.png|450]]
+- # Visualizzazione dei layer nascosti:
+	- Ovvero cercare di visualizzare il tipo di pattern che attiva un particolare [[Reti neurali#^e64770|neurone]] 
+	- La funzione di loss $L(\theta,x)$ dipende dai parametri $\theta$ e dall'input $x$ che viene aggiustato durante il training e viene calcolata la derivata parziale di $L(\theta, x)$ rispetto a $\theta$ per modificarlo e così facendo diminuire la _loss_, allo stesso modo si aggiusta $\theta$ e si usa la _derivata parziale rispetto ai pixel in input_ per _sintetizzare_ le immagini minimizzando la _loss_
+	- ## tecnica di "ascesa del gradiente":
+		- Si parte da una immagine casuale:
+			- ![[Pasted image 20251209165417.png]]
+		- Si esegue un forward pass usando l'immagine $x$ come input della rete e si calcola l'attivazione $a_{i}(x)$ 
+		- Si fa un backward pass per calcolare il gradiente $\  \frac{∂a_{i}(x)}{∂x}$ rispetto a _ogni pixel_ dell'input
+		- Si modifica l'immagine aggiungendo una piccola percentuale del gradiente e ripetendo il procedimento finché non si ottiene un'attivazione sufficientemente alta del neurone 
+- # Link Utili:
+	- 

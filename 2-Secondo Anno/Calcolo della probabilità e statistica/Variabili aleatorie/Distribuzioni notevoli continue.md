@@ -66,7 +66,7 @@ data: "`2025-04-11 13:33`"
 	- ## Media e varianza:
 		- $\mathbb{E}[Z]=0$
 		- $var(Z)=1$
-	- ## Integrale di Gauss:
+	- ## Integrale di Gauss: ^8e1cb6
 		- $$\int_{-\infty}^{+\infty} e^{-z^{2}} dz = \sqrt{\pi}$$
 		- Si può dimostrare che se $X\sim N(\mu, \sigma^{2})$ allora:
 		- $$Z:= \frac{X- \mu}{\sigma}\sim N(0,1)$$

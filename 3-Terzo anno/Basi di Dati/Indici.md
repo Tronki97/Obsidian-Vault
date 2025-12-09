@@ -1,0 +1,52 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-11-21 15:17`"
+---
+- # indice:
+	- è una coppia (chiave valore) che viene usata quando dalla chiave k si vuole accedere a tutte le label relative a quella chiave.
+- # Labels:
+	- Si associa sempre una chiave ad una o più labels
+	- Le labels possono essere:
+		- I dati stessi 
+			- ![[Pasted image 20251121152037.png]]
+			- La dimensione dell'indice è uguale alla dimensione dei dati 
+				- In questo caso ci sono 2 righe quindi 2 chiave
+		- Un identificatore del record $RID$ con chiave k
+			- ![[Pasted image 20251121152050.png]]
+		- Una lista di RID 
+			- ![[Pasted image 20251121152101.png]]
+			- Le label possono avere dimensione variabile
+- # Sequential file index:
+	- Si hanno due file uno con gli indici e uno con i dati 
+	- Quello con gli indici li ha divisi in blocchi
+	- Un indice primario è un indice che include una chiave primaria con i dati ordinati sullo stesso attributo, se non la contiene o non sono irdinati è detta secondaria
+	- Denso: ha almeno una chiave di ricerca per ogni valore di chiave nel file dei dati altrimenti è detto sparso
+		- Ricerca: 
+	- Clustered: se l'ordine dei dati è lo stesso o simile al record delle label 
+	- ## ES:
+		- ![[Pasted image 20251121153322.png]]
+			- Denso e clustered
+		- ![[Pasted image 20251121153337.png]]
+			- Sparso e clustered
+				- 
+		- ![[Pasted image 20251121153401.png]]
+			- Secondario denso e unclustered
+				- Alcune chiavi appaiono più volte ogni chiave è puntata da un indice, e non le chiavi non sono ordinate come gli indici
+- # B+ trees:
+	- Avere più livelli di indici è utile per velocizzare le query 
+	- Ogni blocco è sempre pieno più di metà 
+	- ![[Pasted image 20251121155834.png|600]]
+	- Le chiavi nelle foglie sono copie dei dati 
+	- La radice ha almeno 2 puntatori usati, tutti i puntatori puntano ad un livello sotto e almeno la metà arrotondata per eccesso, dei puntatori, deve essere usata
+		- Mentre _nelle foglie_ l'ultimo puntatore punta ad un'altra foglia mentre più della metà punta a dei dati 
+		- Il puntatore alla foglia successiva serve per poter cercare valori che rispettino una condizione di maggioranza
+	- ## Inserimento ed eliminazione:
+		- ![[Pasted image 20251121161209.png]]
+			- Si può far collassare l'albero siccome nel nodo di sinistra c'è spazio per una chiave e quello di destra ha una sola chiave quindi si può collassare
+		- ![[Pasted image 20251121161318.png]]
+			- Si necessita di aggiungere un altro blocco per aggiungere l'altra chiave alla foglia 
+		- 
+- # Link Utili:
+	- 

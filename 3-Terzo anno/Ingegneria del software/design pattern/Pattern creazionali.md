@@ -28,13 +28,15 @@ data: "`2025-10-20 19:43`"
 	- ## Abstract factory:
 		- Devo creare famiglie di oggetti coerenti che dipendono da una scelta iniziale
 		- Un problema è la creazione di una interfaccia grafica del sistema:
-			- ![[Pasted image 20251020111043.png|600]]
+			- ![[Pasted image 20251121103134.png]]
 			- Per farlo bisogna creare una abstract factory che gestisca tutti i componenti di una determinata famiglia e per farlo si specifica una determinata famiglia di factory.
-			- ![[Pasted image 20251020111249.png|500]]
-			- ### Factory method:
-				- Metodo usato per creare un oggetto quando le info necessarie per farlo sono disponibili solo a _runtime_
-				- Grazie a questo si possono creare _interfacce_ per creare un oggetto e lasciare le sottoclassi decidere quali classi istanziare.
-				- ![[Pasted image 20251020190413.png|500]]
+				- ![[Pasted image 20251121103402.png]]
+				- In questo caso per la creazione di un bottone si ha come prima cosa l'istanziazione a runtime di che tipo di _factory_ usare (in base al S.O) per poi istanziare l'applicazione stessa con quel tipo di factory in modo tale che venga utilizzata quella al momento della creazione di un componente richiesto 
+	- ## Factory method:
+		- Metodo usato per creare un oggetto quando le info necessarie per farlo sono disponibili solo a _runtime_
+		- Grazie a questo si possono creare _interfacce_ per creare un oggetto e lasciare le sottoclassi decidere quali classi istanziare.
+		- ![[Pasted image 20251121104145.png]]
+		- ![[Pasted image 20251121104445.png]]
 	- ## Prototype pattern:
 		- Si crea un oggetto copiandone uno esistente
 		- Utile perché a runtime posso non sapere la struttura di un oggetto ma posso averne una istanza già presente e per capire di che tipo è si interroga quella istanza per leggerne il tipo 

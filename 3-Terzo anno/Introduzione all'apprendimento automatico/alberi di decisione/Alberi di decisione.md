@@ -46,7 +46,7 @@ data: "`2025-09-26 13:09`"
 	- Non per forza devo arrivare ad una foglia ma posso anche considerare un nodo come una probabilità di ricevere una risposta positiva o negativa.
 	- Si cerca di bilanciare l'albero e fare in modo che la feature separi bene le classi ma che i figli siano sbilanciati al loro interno.
 		- Di fatto $A$ sembra essere migliore 
-- # Entropia:
+- # Entropia: ^eef29d
 	- $H(X)$ è una [[Variabili aleatorie#^62da4f|variabile aleatoria discreta]] $X$:
 		- $$H(X)=-\sum\limits_{i=1}^{n}P(X=i)\log_{2}(P(X=i))$$
 		- Con $n$ che è il numero di valori assumibili da $X$

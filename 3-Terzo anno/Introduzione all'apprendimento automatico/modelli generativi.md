@@ -1,0 +1,60 @@
+---
+tags:
+  - TODO
+aliases:
+  - latent-variable
+  - spazio latente
+  - VAE
+  - variational autoencoder
+  - GAN
+  - mode collapse
+  - training instability
+data: "`2025-12-04 13:44`"
+---
+- # intro:
+	- Un modello che cerca di indovinare la distribuzione di un insieme di dati
+	- Si prova a creare un generatore che generi dati randomici che dovrebbero appartenere alla distribuzione
+	- Le applicazioni sono dei problemi nei quali non esiste un'unica soluzione 
+	- Si vuole generare quindi una soluzione tra quelle plausibili.
+- # modelli latent-variable:
+	- $$P(X)=\int P(X|z)*P(z)\ dz$$
+	- Avendo $P(z)$ come _prior distribution_ sulle variabili latenti tipicamente una [[Distribuzioni notevoli continue#^8e1cb6|distribuzione  gaussiana]]
+	- $P(X|z)$ è la _funzione di likelihood_ approssimata da un 
+- # Spazio latente: ^f2280d
+	- Contiene informazioni complete per la creazione di dati obiettivo.
+- # Allenare il generatore:
+	- Bisogna modellare $P(X|z)$ 
+	- ## Variational autoencoders (VAE): ^036a8a
+		- Si accoppia il generatore ad un'altra componente di solito un _encoder_ e si vuole apprendere sia il mapping $z \to X$ e $X\to z$ quindi sia _encoder_ che _decoder_ però non si ha la certezza che le $z$ siano distribuite bene nello spazio latente
+			- ![[Pasted image 20251204140135.png]]
+		- La _loss function_ vuole minimizzare l'errore tra l'input $X$ e output $\hat{X}$
+		- Si cerca di forzare la distribuzione nello spazio latente ad essere una _gaussiana_ e per farlo si aggiungono componenti alla _loss_ 
+		- All'encoder serve anche far imparare la [[Varianza]] della distribuzione che viene forzata 
+		- Regolarizzare troppo lo spazio può portare ad una mancanza nella generatività dallo spazio latente.
+		- Un problema che può sussistere è il _blurring_ definito da una perdita della varianza:
+			- 
+	- ## GAN:
+		- Il generatore è accoppiato con un discriminatore che si deve rendere conto quali siano dati finti prodotti dal generatore e quali no
+			- ![[Pasted image 20251204145202.png]]
+		- Il generatore non sa cosa deve generare ma se ha fatto bene il discriminatore gli manda un feedback e in base a quello cambia i pesi  
+			- In un certo senso il generatore potrebbe mentire per far passare i test.
+		- ### Training:
+			- Si alternano _discriminatore_ e _generatore_ "congelando" i pesi di quello inattivo essendo in una situazione dei _MinMax_:
+				- Il discriminatore vuole massimizzare la somma
+				- Il generatore la vuole minimizzare
+			- Da notare però che solo il secondo termine della somma si può minimizzare
+			- Il _generatore_ quindi deve minimizzare $\log{(1 - D(G(Z)))}$
+				- Cercando quindi di _massimizzare_ $\log{(D(G(Z)))}$
+		- ### Problemi:
+			- Visto che devono passare i test del discriminatore, quindi non necessariamente apprendere la distribuzione, esso si concentrerà maggiormente sui punti che hanno maggiore probabilità
+			- Per questo motivo _sono molto buone per creare persone_ producendo le cose più probabili, quindi se nel dataset ci sono poche persone col cappello allora le immagini create di persone col cappello saranno molto rare
+				- Generando quindi dati tendenzialmente probabili avendo quindi output molto condizionati dal training
+		- La Data augmentation si fa solo sui dati di training
+		- All'apparenza le GAN risultano migliori di altri modelli come i _VAE_ perché:
+			- Se si guarda l'esempio dell'erba la GAN sceglie una immagine dell'erba e si allena a farla perfettamente per ingannare il _discriminatore_
+		- ### Soluzioni:
+			- _mode collapse_: si penalizza (modificando la loss) il modello spingendolo a generare cose sempre più diverse
+			- _weak feedback to the generator_: se il discriminatore è molto bravo, soprattutto all'inizio, il gradiente passato al generatore è basso in questo modo non saprà in che direzione muoversi
+			- _training instability_: la GAN spesso oscilla o diverge facilmente durante il training 
+- # Link Utili:
+	- 

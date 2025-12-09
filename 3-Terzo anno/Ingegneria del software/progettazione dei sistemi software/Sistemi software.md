@@ -4,6 +4,7 @@ aliases:
   - information hiding
   - low coupling
   - refactoring
+  - basso accoppiamento
 data: "`2025-09-29 10:37`"
 ---
 - # sotto sistemi:
@@ -27,14 +28,22 @@ data: "`2025-09-29 10:37`"
 	- ## Coesione:
 		- Avere un alta coesione vuol dire organizzare i moduli in modo che tutto il contenuto del modulo serva per ottenere un obiettivo specifico.
 		- Per aumentarlo si può:
-			- Coesione coincidentale:
-			- Coesione temporale: parti processate entro lo stesso tempo limite.
-			- ... Procedurale:
-			- Comunicazioni:
-			- Sequenziale: l'output di una parte è l'input di un altra.
-			- Di informazioni: accesso alla stessa struttura dati.
+			- ### coincidentale:
+				- parti sono raggruppate per caso
+			- ### logica: 
+				- Parti logicalmente legate senza altre interazioni
+			- ### temporale: 
+				- parti processate entro lo stesso tempo limite.
+			- ### Procedurale :
+				- Il controllo scorre da una parte all'altra
+			- ### Comunicazionale :
+				- Parti in relazione grazie allo stesso _I/O_
+			- ### Sequenziale : 
+				- l'output di una parte è l'input di un altra.
+			- ### Di informazioni:
+				- accesso alla stessa struttura dati.
 	- ## Semplicità:
-		- Buildare solo il codice necessario, non si anticipano le possibili richieste future.
+		- Scrivere solo il codice necessario, non si anticipano le possibili richieste future.
 			- Altrimenti si rischia di implementare delle funzioni che non serviranno mai, perdendo tempo e aumentando il peso del codice.
 		- ### Refactoring:
 			- Si ristruttura il codice facendo funzionare il sistema ma semplificando l'implementazione

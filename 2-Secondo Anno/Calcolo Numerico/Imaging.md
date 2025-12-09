@@ -35,7 +35,7 @@ data: "`2024-11-11 13:40`"
     - ne segue che la sotto matrice $W_{(1,3)}$ è:
         - $$W=\begin{pmatrix}3&4&5\\8&9&10\\13&14&15\end{pmatrix}$$
         - il cui centro è $B_{(2,4)}$ 
-- # Convoluzione:
+- # Convoluzione: ^41f31a
 	- operazione fra una matrice $A:M \times N$ (_l’immagine_) e una di [[Dimensione]] $D \times D$ con $D$ dispari (_kernel_).
 	- il risultato ha le stesse dimensioni di $A$ si chiama $C$ 
 		- $$C=[K*A|B]$$

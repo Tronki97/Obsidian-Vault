@@ -18,7 +18,7 @@ data: "`2025-10-20 12:23`"
 		- Si separa visioni di alto livello da quelle di basso per facilitarne la programmazione e ciò può minarne le performance e a volte alcuni stati si saltano
 		- ![[Pasted image 20251020184316.png|500]]
 	- ## A eventi:
-		- Il sistema aspetta che avvenga un evento e chi causa non sa chi eventualmente reagirà
+		- Il sistema aspetta che avvenga un evento l'annunciatore lo manderà in broadcast e non sa chi eventualmente reagirà
 		- Un esempio sono i sistemi reattivi.
 	- ## A repositories:
 		- Diviso in due categorie

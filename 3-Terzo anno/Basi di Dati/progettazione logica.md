@@ -1,0 +1,48 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-11-20 15:16`"
+---
+- # Argomento:
+	- Rappresenta _come_ un sistema debba fare una certa cosa
+	- Prende uno [[modello dati concettuale|schema concettuale]] e ne restituisce uno _logico_
+	- Quindi si cerca di rappresentare gli stessi dati in maniera efficiente
+	- Input:
+		- Schema concettuale
+		- Info sul carico di lavoro di quel DB
+		- Modello logico
+	- Output:
+		- Lo schema logico 
+		- Una documentazione associata 
+	- Passare da concettuale a logico non è semplice visto che alcuni aspetti del modello concettuale non possono essere rappresentati in quello logico 
+		- Per prima cosa si ristruttura lo schema ER in modo tale da poterlo poi tradurre in uno adatto per la traduzione in uno schema logico.
+	- Tutto questo si cerca di farlo per mantenere delle buone performance nel database.
+		- Quindi si fanno certe approssimazioni sulle performance avendo certi indicatori per approssimarle:
+			- _spazio_: numero di istanze immagazzinate che ci si aspetta
+			- _tempo_: numero di istanze visitate durante una operazione
+		- è utile quindi creare una tabella dei volumi indicando circa quante entità e relazioni possono essere istanziate in questo DB
+			- In caso aumentasse il volume di entità o associazioni il sistema funzionerebbe comunque ma non sarebbe ottimizzato per quella quantità
+- # Ristrutturazione:
+	- Analisi delle ridondanze
+		- In questa fase si decide se tenerle o rimuoverle, inoltre si decide se crearne altre
+		- _vantaggi_: di solito semplificano le query e possibilmente velocizzarle
+		- _svantaggi_: durante un update bisogna ripetere l'azione per ogni ridondanza ed inoltre occupano più spazio.
+		- ## tipi di ridondanze;
+			- Attributi derivabili da altri attributi all'interno della stessa (o altra) entità o assicazioni
+			- Associazioni derivabili da composizioni di diverse associazioni
+	- Cancellazione delle generalizzazioni
+		- Visto che il modello relazionale non le supporta
+		- Si fa embedding delle entità figlie in quelle genitore oppure il contrario
+		- Si rimpiazza il costrutti di generalizzazione con quello di associazione
+		- 
+	- Partizionare o raggruppare entità e associazioni
+		- Si ristruttura gli attributi:
+			- Anche solo riducendo il numero di accessi
+			- Attributi acceduti in maniera separata vengono divisi in gruppi dove si è soliti accedere a quegli attributi insieme.
+				- ![[Pasted image 20251120165108.png|500]]
+				- ![[Pasted image 20251120165124.png|500]]
+				- 
+	- Identificare le chiavi primarie.
+- # Link Utili:
+	- 

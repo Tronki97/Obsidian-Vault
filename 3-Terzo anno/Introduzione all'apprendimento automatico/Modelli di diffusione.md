@@ -1,0 +1,59 @@
+---
+tags:
+aliases:
+  - ddpm
+  - ddim
+  - stable diffusion
+  - diffusione stabile
+data: "`2025-12-08 12:20`"
+---
+- # intro:
+	- Al momento sono i più utilizzati anche se stanno nascendo nuovi modelli chiamati _rectified flows_ anch'essi buoni
+- # Processi:
+	- ## forward:
+		- Si introduce progressivamente del rumore gaussiano all'immagine di partenza
+	- ## reverse:
+		- Inverte il _forward_, quindi dall'immagine rumorosa si cerca di togliere il rumore per tornare all'immagine naturale reiniettando del rumore e ripetendo il tutto.
+		- ![[Pasted image 20251208124704.png|600]]
+	- ## Denoising:
+		- Come vedere l'immagine dal noise:
+			- Il sample noise è un punto nello spazio in cui abbiamo anche le immagini reali, quindi da quel punto vado verso l'immagine reale, del dataset, più vicina. Questo è proprio il processo di _denoising_
+			- Facendo ciò stiamo esattamente facendo l'opposto delle VAE e GAN, cercando di ingigantire lo spazio latente aggiungendo noise all'immagine spargendo gli oggetti al suo interno 
+		- ![[Pasted image 20251208123207.png|700]]
+		- Come togliere il rumore:
+			- Da una immagine nel processo _reverse_ tolgo tutto il rumore con un normale _denoising_
+				- Il che non restituirà buoni risultati con immagini molto rumorose
+			- Successivamente si inietta un po' di rumore _meno_ di quello che c'era prima
+			- Per fare il _denoising_ si allena un'unica rete: 
+				- Prende in input l'immagine con il rumore, e il noise rate (per fare il denoising, così sa quanto togliere)
+				- Il modello cerca di trovare l'errore nell'immagine, ossia il rumore
+					- Alcune reti fanno l'opposto, ossia cercano di distinguere l'immagine reale dal rumore 
+					- $\epsilon_{\theta}(x_{t},\alpha_{t})$ è il rumore che viene predetto 
+						- $x_{t}$ immagine in input
+						- $\alpha_{t}$ _signal rate_ che esprime la quantità di del segnale originale che rimane nell'immagine rumorosa
+				- Successivamente si sottrae il rumore trovato:
+					- $$\hat{x}_{0}^{t}=\frac{x_{t}-\sqrt{1-\alpha_{t}}*\epsilon_{\theta}(x_{t}, \alpha_{t})}{\sqrt{\alpha_{t}}}$$
+				- ### pseudocodice per il training:
+					- ![[Pasted image 20251208124107.png]]
+				- ### pseudocodice per il sampling:
+					- ![[Pasted image 20251208124216.png]]
+- # Classi del modello:
+	- ## DDPM:
+		- Probabilistica, ogni volta si inventa un nuovo rumore 
+		- Di conseguenza richiede molte iterazioni
+	- ## DDIM:
+		- è deterministico in quanto si reinietta nell'immagine lo stesso rumore che ho tolto (un po' di meno di quanto ce n'era)
+			- Sono molto efficienti
+- # diffusione stabile:
+	- Si basa sull'obiettivo di voler ridurre il numero di iterazioni necessarie ad architettura _U-Net_
+	- Composto da 2 passi:
+		- Ho una VAE che si allena con l'obiettivo di ridurre un po la dimensione dei dati 
+			- Visto che oggi si generano immagini 5000 x 5000 è necessaria una VAE
+			- Lo spazio latente non deve essere troppo piccolo circa 1000 di dimensione è suffciente per codificare quasi tutto con alta qualità
+		- Il secondo modello genera immagini a partire dalla loro rappresentazione nello spazio latente (_denoiser_)
+			- Mira quindi ad imparare la distribuzione delle variabili all'interno dello spazio latente 
+		- Di solito si allena prima la VAE poi si freezza
+		- Il testo in input è il condizionamento del modello essendo quindi una guida per la fase di _denoising_ all'interno dell'architettura. 
+	- ![[Pasted image 20251208125536.png|600]]
+- # Link Utili:
+	- 

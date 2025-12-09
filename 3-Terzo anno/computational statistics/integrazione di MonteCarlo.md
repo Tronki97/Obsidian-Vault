@@ -1,0 +1,89 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-12-01 09:10`"
+---
+- # Preconcetti:
+	- ## LLN:
+		- Law of large numbers (_legge dei grandi numeri_)
+		- Si ha una sequenza di [[Variabili aleatorie|V.A]] [[Teoremi limite#^e7ebba|iid]] $X_{1},...,X_{n}$
+		- E si assume che $\forall i \ \ \mathbb{E}[X_{i}]=\mu$ che è un valore finito
+		- $$\frac{1}{n}*\sum_{i=1}^{n}X_{i} \to_{n=\infty}\mu$$
+			- $\frac{1}{n}*\sum_{i=1}^{n}X_{i}=\bar{X}$
+		- E se la $Var(X_{i})<\infty$ allora $Var(\bar{X})=\frac{\sigma^{2}}{n}$ e in sostanza se $n\to \infty$ allora $Var(X_{i})=\sigma^{2}$
+		- 
+	- ## teorema del limite centrale:
+		- $\bar{X}\sim N$
+		- E se $X_{i}\sim Poi(\lambda)$ con $n\to \infty$ $\bar{X}\sim N\left( \lambda, \frac{\lambda}{n} \right)$ centrato quindi su $\lambda$
+- # Intro:
+	- Ci si concentra su integrali che possono essere scritti in questo modo:
+		- $$\int_{X}h(x)f(x)dx$$
+		- Quindi l'integrando può essere scritto come prodotto di due funzioni 
+		- Almeno uno dei due ($f$) deve essere una _densità_ che potrebbe anche essere _non normalizzata_
+	- $$\int_{X}h(x)f(x)dx=\mathbb{E}_{f}[h(x)]$$
+	- ## il metodo di montecarlo:
+		- 1) si genera un sample $(x_{1},...,x_{n})$ dalla densità $f$ e l'integrale può essere approssimata come:
+			- $$\bar{h}_{n}=\frac{1}{n}\sum\limits_{j=1}^{n}h(x_{j})$$
+			- Grazie alla _legge dei grandi numeri_ converge:
+				- $$\bar{h}_{n}\to \mathbb{E}_{f}[h(X)]=\int_{X}h(x)f(x)dx$$
+			- ### ES:
+				- $h(X)=X$
+				- $$\mathbb{E}_{f}[h(X)]=\mathbb{E}_{f}[X]=\int_{X}x*f(x)\ dx$$
+					- $$\bar{X}_{n}=\frac{1}{n}*\sum_{i=1}^{n}X_{i}=\frac{1}{n}*\sum\limits_{i=1}^{n}h(X_{i})\to \mathbb{E}_{f}[X]$$
+			- ### Misurare la precisione della stima
+				- $$\bar{h}_{n}=\frac{1}{n}*\sum\limits_{i=1}^{n}h(X_{i})$$
+				- $$Var(\bar{h}_{n})=\mathbb{E}[(\bar{h}_{n}-\mathbb{E}[\bar{h}_{n}])^{2}]=\int_{X}[\bar{h}_{n}-\mathbb{E}_{f}(\bar{h}_{n})]^{2}*f(x)\ dx= \mathbb{E}_{f}[t(x)]$$
+					- Questo si può risolvere con integrazione di Montecarlo perché si può vedere come:
+						- $$\int_{X}t(x)f(x)dx$$
+						- Con  $t(x)=[\bar{h}_{n}-\mathbb{E}_{f}(\bar{h}_{n})]^{2}$
+				- Avendo quindi l'_intervallo di confidenza_ come: $\bar{h}_{n}± 2*\sqrt{v_{n}}$
+					- Con $\sqrt{v_{n}}$ la _deviazione standard_
+	- ## R:
+		- Un approccio deterministico numerico sarebbe usare le funzioni `integrate()` e  `area()` per calcolare il risultato di integrali però possono essere usate solo su funzioni ad una variabile
+	- 
+- # ES 3.1:
+	- Si usa la funzione `integrate()` per calcolare:
+		- $$\Gamma(\lambda)=\int_{0}^{\infty}x^{\lambda-1}*e^{-x} dx$$
+	- E si vuole confrontare il risultato delle funzioni `integrate()` e `gamma()` ma l'ultima funzione cresce troppo velocemente quindi se usa una versione logaritmica.
+	- ![[Pasted image 20251201102617.png|600]]
+		- Risultano quasi uguali
+- # ES 3.2:
+	- $n=10$ samples da una $Cauchy$ di parametro $\theta=350$
+	- $X_{1},...,X_{10}\sim Cauchy(\theta=350)$
+	- Ci si chiede quindi la probabilità della sequenza: $P(X_{1},...,X_{n})=$
+		- $$=\int_{H}P(X_{1},...,X_{n}|\theta)P(\theta)\ d\theta=$$
+			- Si fa così per marginalizzare il parametro $\theta$ e si ha che $P(\theta)∝ 1$ è il _prior_ e risulta quindi piatto 
+		- $$=\int_{-\infty}^{\infty}P(X_{1},...,X_{n}|\theta)\ d \theta = $$
+			- Si assume che le [[Variabili aleatorie|V.A]] sono [[Teoremi limite#^e7ebba|iid]]
+		- $$=\int_{-\infty}^{\infty}\prod_{i=1}^{n}P(X_{i}|\theta)\ d \theta=\int_{\infty}^{\infty} \prod_{i=1}^{n} \frac{1}{\pi}* \frac{1}{1+(X_{i}-\theta)^{2}} \ d \theta$$
+- # importance sampling:
+	- _Campionamento di importanza_
+	- Si basa una alterazione della [[Teoremi limite#^c4bbb8|legge dei grandi numeri]]
+	- $$\mathbb{E}_{f}[h(X)]=\int_{X}h(x)* \frac{f(x)}{g(x)}*g(x)\ dx$$
+		- Avendo $g(x)$ come distribuzione candidata e $f(x)$ quella obiettivo
+		- $h(x)* \frac{f(x)}{g(x)}=h'(x)$ 
+	- Così da rendere l'integrale:
+		- $$\int_{X}h'(x)*g(x)=\mathbb{E}_{g}\left[ \frac{h(X)*f(X)}{g(X)} \right]$$
+		- Facendo così _si riesce a cambiare la funzione da cui si sta estraendo i valori_
+	- Inoltre la [[Media]] $\mathbb{E}_{f}[h(X)]$ è calcolabile come:
+		- $$\frac{1}{n} \sum\limits_{i=1}^{n} \frac{f(x_{i})}{g(x_{i})}*h(x_{i})$$
+		- Però deve rispettare che:
+			- $Var\left( \frac{h(X)*f(X)}{g(X)} \right)<\infty$ ovvero $g(x_{i})=0 \implies f(x_{i})=0$
+			- Il supporto di $(h \times f)$ è contenuto in quello di $g$ 
+	- Risultando molto simile ad [[accept & reject algorithm]] riuscendo a estrarre da $g(x)$ e trasformando 
+		- $$\frac{f(x)}{g(x)}*h(x)=w*h(x)$$
+		- $w$ definito come _importance weight_ 
+	- Se presi su una sequenza di valori i pesi saranno definiti come:
+		- $$w_{i}=\frac{f(x_{i})}{g(x_{i})}$$
+- # esponenziale troncata:
+	- $Exp(1,a)$ è una esponenziale che parte dal valore $a$, è utile per calcolare le _tail probabilites_ perché si necessita che le "code" delle distribuzioni devono decrescere altrimenti non rispetterebbero le proprietà delle densità che la loro integrale sia finita
+		- #immagine
+	- Si prende quindi una densità esponenziale: 
+		- $$g(y|y>a)=\frac{g(y,y>a)}{g(y>a)}=\frac{g(y)}{g(y>a)}=\frac{e^{-y}}{1-F(a)}=\frac{e^{-y}}{1-[1-e^{-a}]}=e^{-(y-a)}$$
+	- Quindi si campiona da una troncata e poi li si shifta di un certo valore.
+		- Quando si guarda la densità per calcolare i pesi si necessita di riportare i valori al range iniziale 
+			- `y= rexp(n)+a`
+			- `w= dnorm(y)/dexp(y-a)`
+- # Link Utili:
+	- 
