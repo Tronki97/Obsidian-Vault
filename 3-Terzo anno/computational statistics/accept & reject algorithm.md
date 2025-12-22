@@ -49,13 +49,13 @@ data: "`2025-11-19 09:12`"
 		- Quindi la distribuzione dei valori accettati segue la funzione di ripartizione $F_{X}(x)$
 	- ## Passi dell'algoritmo:
 		- 1) estraggo $y$ da $g_{Y}(y)$
-		- 2) estraggo $u$ in maniera indipendente da una uniforme $U(0,1)$
+		- 2) estraggo $u$ in maniera indipendente da una uniforme $U(0,1)$ 
 		- 3) controllo se $u\le \frac{1}{M}* \frac{f(y)}{g(y)}$ 
 			- Se rispettata accetto il valore di $y$ altrimenti rifiuto
 			- Per questo passaggio si potrebbe anche fare il controllo $u*M \le \frac{f(y)}{g(y)}$ ma questo è equivalente a fare $u' \le \frac{f(y)}{g(y)}$ dove $u'$ è un valore di una uniforme $U(0,M)$
-	- ## balnket:
+	- ## Blanket:
 		- ![[Pasted image 20251125123022.png|500]]
-		- Una cosa da considerare quando si sceglie una $g$ candidata è che abbia un andamento il possibile simile a quella bersaglio in modo tale da poi ottenere una sorta di funzione "blanket" ottenuta da $M*g_{Y}(y)$
+		- Una cosa da considerare quando si sceglie una $g$ candidata è che abbia un andamento il più possibile simile a quella bersaglio in modo tale da poi ottenere una sorta di funzione "blanket" ottenuta da $M*g_{Y}(y)$
 			- Quindi per fa si che si avvicini quanto più possibile a $f_{Y}(y)$ si necessita scegliere una $M$ più appropriata possibile che rispetti il rapporto $\frac{f_{Y}(y)}{g_{Y}(y)}$
 			- Oppure semplicemente una $M$ che sia il $\max f_{Y}(y)$
 				- ![[Pasted image 20251125123516.png|500]]
@@ -69,12 +69,12 @@ data: "`2025-11-19 09:12`"
 	- Si può quindi riscrivere come:
 		- $$U\le \frac{1}{M}  \frac{f_{X}(y)}{g_{Y}(y)} | Y=y$$
 		- Ovvero sapendo di aver estratto $y$ 
-	- $$P(accept)=\int \left[ \int_{-\infty}  \frac{1}{M}*\frac{f_{X}(y)}{g_{Y}(y)}du \right]*g_{Y}(y) \ dy=$$
+	- $$P(accept)=\int \left[ \int_{-\infty}^{\frac{1}{M}*\frac{f_{X}(y)}{g_{Y}(y)}}du \right]*g_{Y}(y) \ dy=$$
 	- $$=\int_{-\infty}^{\infty} \frac{1}{M}*\frac{f_{X}(y)}{g_{Y}(y)}*g_{Y}(y) \ dy=\frac{1}{M}*\int_{-\infty}^{\infty}f_{X}(y)\ dy= \frac{1}{M}$$
-		- $\int_{-\infty}^{\infty}f_{X}(y)\ dy = 1$ per definizione di densità 
+		- $\int_{-\infty}^{\infty}f_{X}(y)\ dy = 1$ per _definizione di densità_
 	- Per quanto riguarda $\tilde{f}_{X}(x)$ con $\tilde{f}_{X}(x) \ge 0\ \ \forall x$ e soprattutto:
 		- $$\int_{-\infty}^{\infty} \tilde{f}_{X}(x)\ne 1$$
-			- In quanto è una densità non normalizzata.
+			- In quanto è una densità _non normalizzata._
 			- Però l'integrale rimane definita.
 		- $f_{X}(x)=k*\tilde{f}_{X}(x)$
 			- $$\frac{f_{X}(y)}{g_{Y}(y)}= k*\frac{\tilde{f}_{X}(y)}{\tilde{g}_{Y}(y)}$$
@@ -90,5 +90,15 @@ data: "`2025-11-19 09:12`"
 				- Mentre per $P(accept)$ si può stimare usando $\tilde{\alpha}$ che è il rapporto di accettazione empirico
 			- $$\hat{k}=\frac{1}{\tilde{M}*\tilde{\alpha}}$$
 				- In _R_ si può usare la funzione `integrate` per calcolarlo
+- # ES:
+	- Simulare dati da una v.a con densità 
+		- $$f_{X}(x)∝e^{-x^{2}*\sqrt{x}}*\sin(x)^{2}$$
+	- E bisogna considerare tre diversi algoritmi A.R:
+		- $$g_{1}(x)=\frac{1}{2}e^{|x|}$$
+		- $$g_{2}(x)=\frac{1}{2 \pi} *\frac{1}{1+\frac{x^{2}}{4}}$$
+		- $$g_{3}(x)=\frac{1}{\sqrt{2 \pi}}*e^{-x^{2}/2}$$
+	- A) quindi si deve produrre valori dalla densità e calcolare la acceptance probability e una stima della costante di normalizzazione
+	- B) dato un supporto per $X$ proporre una densità candidata migliore $g_{4}(x)$
+	- C) usare [[integrazione di MonteCarlo#^8f0978|importance sampling]] per approssimare $\mathbb{E}_{f}[X]$ (usando $g_{1,...,4}$)
 - # Link Utili:
 	- 

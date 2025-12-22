@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - encoder
   - decoder
@@ -44,6 +43,6 @@ data: "`2025-12-01 13:00`"
 		- L'obiettivo sta nel ridurre il più possibile l'errore 
 		- Encoder e decoder possono non essere identici:
 			- L'importante è che l'output dell'encoder sia l'input del decoder, e che l'input dell'encoder sia l'output del decoder!
-		- Vengono allenati contemporaneamente e poi una volta messi in successione e formato l'_autoencoder_ lo alleno come se fosse un modello normale di classificazione avendo come output obiettivo lo stesso input 
+		- Vengono allenati contemporaneamente e poi una volta messi in successione e formato l'_autoencoder_ lo alleno come se fosse un modello normale di generazione avendo come output obiettivo lo stesso input 
 - # Link Utili:
 	- 

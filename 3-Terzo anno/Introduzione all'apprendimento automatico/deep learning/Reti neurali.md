@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - neurone
   - neurone artificiale
@@ -46,7 +45,7 @@ data: "`2025-10-25 11:18`"
 		- _ImageNet_ è un dataset per la _classificazione di immagini_ contenente 15 milioni di immagini che copre più di 20k categorie diverse di immagini
 			- C'era una competizione con questo dataset dove si doveva indovinare il label dell'immagine e la razza dell'animale; _tutto ciò prima del deep learning_
 			- Nel 2012 per la prima volta un modello _deep learning_ batte tutti gli altri modelli 
-			- _imageNet_ rimane importante sicome molto grande e ancora utilizzabile per allenare modelli
+			- _imageNet_ rimane importante siccome molto grande e ancora utilizzabile per allenare modelli
 		- ### Image detection:
 			- Determinare cosa si vede e dove lo si sta vedendo.
 				- ![[Pasted image 20251106134238.png]]

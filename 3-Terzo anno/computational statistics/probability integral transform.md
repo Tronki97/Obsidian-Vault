@@ -13,7 +13,7 @@ aliases:
 data: "`2025-11-11 11:55`"
 ---
 - # Probability integral transform (P.I.T):
-	- Permette di trasformare una uniforme in una qualsiasi [[Variabili aleatorie]] 
+	- Permette di trasformare una variabile aleatoria uniforme in una qualsiasi [[Variabili aleatorie]] 
 	- è una trasformazione inversa
 		- Si prende l'inversa di una [[Funzione di ripartizione]] e ne si fa l'integrale.
 	- Se $X$ ha densità $f$ e [[Funzione di ripartizione]] $F$ 
@@ -49,12 +49,12 @@ data: "`2025-11-11 11:55`"
 				- $$F_{X}(x) = \frac{1}{1+e^{-(x-\mu)/\beta} }$$
 				- $$U=F_{X}(x)=\frac{1}{1+e^{-(X-\mu)/\beta} }$$
 				- $$\begin{array}\ U^{-1}=1+e^{-\frac{X-\mu}{\beta} }\implies U^{-1} -1 = e^{-\frac{X-\mu}{\beta} } =\\= - \log(U^{-1}-1)=\frac{X-\mu}{\beta}=X=\mu-\beta*\log\left(\frac{U-1}{U} \right)\end{array}$$
-					- ODDS: $\frac{P(X=1)}{P(X=0)}$ probabilità di vincere diviso quella di perdere.
+					- _ODDS_: $\frac{P(X=1)}{P(X=0)}$ probabilità di vincere diviso quella di perdere.
 			- ### _Cauchy_:
 				- è una distribuzione particolare in quanto non ha un [[Media|valore atteso]] e [[Varianza]] ma non è un problema in quanto la P.I.T necessita solo delle _densità_ e _Fdr_
 				- $X\sim Cauchy(\mu, \sigma)$
 				- $$F_{X}(x)=\frac{1}{2} + \frac{1}{\pi}*\arctan\left( \frac{x-\mu}{\sigma} \right)$$
-				- $$\begin{array}\ U=\frac{1}{2} + \frac{1}{5}*\arctan\left( \frac{X-\mu}{\sigma} \right) \implies \pi\left( U- \frac{1}{2} \right) = \arctan \left( \frac{X-\mu}{\sigma} \right) \\  \tan\left[ \pi*\left( U - \frac{1}{2} \right) \right]=\frac{X-\mu}{ \sigma}\implies X= \mu + \sigma * \tan[\pi*(U-\frac{1}{2})]\end{array}$$
+				- $$\begin{array}\ U=\frac{1}{2} + \frac{1}{\pi}*\arctan\left( \frac{X-\mu}{\sigma} \right) \implies \pi\left( U- \frac{1}{2} \right) = \arctan \left( \frac{X-\mu}{\sigma} \right) \\  \tan\left[ \pi*\left( U - \frac{1}{2} \right) \right]=\frac{X-\mu}{ \sigma}\implies X= \mu + \sigma * \tan[\pi*(U-\frac{1}{2})]\end{array}$$
 	- ## empirical cdf: ^f2cc73
 		- è una funzione di ripartizione empirica
 		- $(X_{1}, ...,X_{n} )$ [[Teoremi limite#^e7ebba|iid]]

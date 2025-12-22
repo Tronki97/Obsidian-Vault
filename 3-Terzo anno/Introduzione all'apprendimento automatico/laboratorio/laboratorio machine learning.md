@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - clustering
   - undersampling
@@ -106,7 +105,7 @@ data: "`2025-10-17 13:29`"
 		- ![[uc 1.png|700]]
 - # PCA:
 	- Principal component analisys
-	- Serve a diminuire la dimensionalità dello spazio dei dati, cattura le strutture più significative nei dati preservando il più possibile la variabilità.
+	- Serve a diminuire la dimensionalità dello spazio dei dati, cattura le strutture più significative nei dati preservando il più possibile la varianza.
 	- Si identificano le componenti principali in cui i dati variano di più, le stesse componenti principali risultano essere [[Combinazione lineare]] delle caratteristiche originali che essendo ortogonali tra loro garantiscono la non ridondanza
 	- ![[Senza titolo 5.png]]
 	- Il PCA si può leggere in vari modi:

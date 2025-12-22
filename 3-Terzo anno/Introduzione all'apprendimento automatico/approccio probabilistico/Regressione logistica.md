@@ -26,6 +26,5 @@ data: "`2025-10-16 14:24`"
 	- E l'obiettivo è quindi trovare i valori dei parametri $w$ che massimizzano questa probabilità
 	- Ovviamente si può passare ai logaritmi e massimizzare:
 		- ![[Pasted image 20251016145826.png|800]]
-	- 
 - # Link Utili:
 	- 

@@ -1,7 +1,11 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - labels
+  - sequential file index
+  - b+ trees
+  - b+ tree
+  - indexing multi-livello
 data: "`2025-11-21 15:17`"
 ---
 - # indice:
@@ -9,22 +13,26 @@ data: "`2025-11-21 15:17`"
 - # Labels:
 	- Si associa sempre una chiave ad una o più labels
 	- Le labels possono essere:
-		- I dati stessi 
+		- _I dati stessi_ 
 			- ![[Pasted image 20251121152037.png]]
 			- La dimensione dell'indice è uguale alla dimensione dei dati 
 				- In questo caso ci sono 2 righe quindi 2 chiave
-		- Un identificatore del record $RID$ con chiave k
+		- Un identificatore del record (_RID_) con chiave k
 			- ![[Pasted image 20251121152050.png]]
-		- Una lista di RID 
+		- _Una lista di RID_ 
 			- ![[Pasted image 20251121152101.png]]
 			- Le label possono avere dimensione variabile
 - # Sequential file index:
-	- Si hanno due file uno con gli indici e uno con i dati 
-	- Quello con gli indici li ha divisi in blocchi
-	- Un indice primario è un indice che include una chiave primaria con i dati ordinati sullo stesso attributo, se non la contiene o non sono irdinati è detta secondaria
-	- Denso: ha almeno una chiave di ricerca per ogni valore di chiave nel file dei dati altrimenti è detto sparso
-		- Ricerca: 
-	- Clustered: se l'ordine dei dati è lo stesso o simile al record delle label 
+	- Si hanno due file uno con gli indici e uno con i dati (Index file e Data file)
+		- Quello con gli indici li ha divisi in blocchi
+	- Un indice primario è un indice che include una chiave primaria con i dati ordinati sullo stesso attributo, se non la contiene o non sono ordinati è detta secondaria
+	- _Denso_: ha almeno una chiave di ricerca per ogni valore di chiave nel _dat file_ altrimenti è detto sparso
+		- Ricerca:
+			- si suppone una relazione di $10^{6}$ tuple in $10^{5}$ blocchi di $4KB$ forse risulta troppo grande da navigare in maniera efficiente nella memoria principale
+			- Suppongo che il cmapo della chiave sia $30B$ e i puntatori $8$ quindi in quei $4KB$ di spazio si potrebbero contenere con un po di margine per gli header $100$ coppie chiave-puntatore
+			- Quindi un indice denso richiederebbe $10^{4}$ blocchi ovvero $40MB$ riducendo quindi la memoria necessaria e usando la ricerca binaria si richiederebbe al massimo di accedere a $13-14$ blocchi ($\log_{2}10^{4}$) 
+			- Necessitando quindi di meno di $14$ operazione I/O sul disco 
+	- _Clustered_: se l'ordine dei dati è lo stesso o simile al record delle label 
 	- ## ES:
 		- ![[Pasted image 20251121153322.png]]
 			- Denso e clustered
@@ -34,19 +42,28 @@ data: "`2025-11-21 15:17`"
 		- ![[Pasted image 20251121153401.png]]
 			- Secondario denso e unclustered
 				- Alcune chiavi appaiono più volte ogni chiave è puntata da un indice, e non le chiavi non sono ordinate come gli indici
+	- ## Indexing multi-livello:
+		- Si può usare degli indici sparsi per ridurre il numero di blocchi necessari per immagazzinare l'offset dei record, usando quindi _indici di indici_
+			- ![[Pasted image 20251219174811.png|500]]
 - # B+ trees:
-	- Avere più livelli di indici è utile per velocizzare le query 
-	- Ogni blocco è sempre pieno più di metà 
-	- ![[Pasted image 20251121155834.png|600]]
-	- Le chiavi nelle foglie sono copie dei dati 
-	- La radice ha almeno 2 puntatori usati, tutti i puntatori puntano ad un livello sotto e almeno la metà arrotondata per eccesso, dei puntatori, deve essere usata
-		- Mentre _nelle foglie_ l'ultimo puntatore punta ad un'altra foglia mentre più della metà punta a dei dati 
-		- Il puntatore alla foglia successiva serve per poter cercare valori che rispettino una condizione di maggioranza
+	- Avere più livelli di indici è utile per velocizzare le query
+	- Possiedono un parametro $n$ che mi da informazioni sulla dimensione di ogni blocco dell'albero ovvero che: ogni blocco deve essere abbastanza grande per contenere $n$ chiavi e $n+1$ puntatori:
+		- Quindi con un blocco da $4096B$ chiavi da $4B$ e puntatori da $8B$; $n$ dovrà essere:
+			- $4n+8(n+1)<4096 \to n=340$
+	- ## Regole:
+		- Ogni blocco è sempre pieno più di metà 
+		- ![[Pasted image 20251121155834.png|600]]
+		- Le chiavi nelle foglie sono copie dei dati 
+		- La radice ha almeno 2 puntatori usati, tutti i puntatori puntano ad un livello sotto e almeno la metà arrotondata per eccesso, dei puntatori, deve essere usata
+			- Mentre _nelle foglie_ l'ultimo puntatore punta ad un'altra foglia mentre più della metà punta a dei dati 
+			- Il puntatore alla foglia successiva serve per poter cercare valori che rispettino una condizione di maggioranza
+		- Un nodo intermedio deve avere tutti i puntatori che puntano ad un blocco del livello inferiore e almeno $\left\lceil  \frac{n+1}{2} \right\rceil$ devono essere usati con $n$ numero di chiavi
 	- ## Inserimento ed eliminazione:
 		- ![[Pasted image 20251121161209.png]]
 			- Si può far collassare l'albero siccome nel nodo di sinistra c'è spazio per una chiave e quello di destra ha una sola chiave quindi si può collassare
 		- ![[Pasted image 20251121161318.png]]
-			- Si necessita di aggiungere un altro blocco per aggiungere l'altra chiave alla foglia 
-		- 
+			- Si necessita di aggiungere un altro blocco per aggiungere l'altra chiave alla foglia, siccome quel blocco non era grande a sufficienza 
+		- ![[Pasted image 20251219180039.png|500]]
+			- Che poi si necessita di aggiungere un altro blocco per far rispettare le regole di ricerca 
 - # Link Utili:
 	- 

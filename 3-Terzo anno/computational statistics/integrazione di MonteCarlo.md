@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - importance sampling
 data: "`2025-12-01 09:10`"
 ---
 - # Preconcetti:
@@ -57,7 +58,7 @@ data: "`2025-12-01 09:10`"
 		- $$=\int_{-\infty}^{\infty}P(X_{1},...,X_{n}|\theta)\ d \theta = $$
 			- Si assume che le [[Variabili aleatorie|V.A]] sono [[Teoremi limite#^e7ebba|iid]]
 		- $$=\int_{-\infty}^{\infty}\prod_{i=1}^{n}P(X_{i}|\theta)\ d \theta=\int_{\infty}^{\infty} \prod_{i=1}^{n} \frac{1}{\pi}* \frac{1}{1+(X_{i}-\theta)^{2}} \ d \theta$$
-- # importance sampling:
+- # importance sampling: ^8f0978
 	- _Campionamento di importanza_
 	- Si basa una alterazione della [[Teoremi limite#^c4bbb8|legge dei grandi numeri]]
 	- $$\mathbb{E}_{f}[h(X)]=\int_{X}h(x)* \frac{f(x)}{g(x)}*g(x)\ dx$$
@@ -85,5 +86,6 @@ data: "`2025-12-01 09:10`"
 		- Quando si guarda la densità per calcolare i pesi si necessita di riportare i valori al range iniziale 
 			- `y= rexp(n)+a`
 			- `w= dnorm(y)/dexp(y-a)`
+- 
 - # Link Utili:
 	- 

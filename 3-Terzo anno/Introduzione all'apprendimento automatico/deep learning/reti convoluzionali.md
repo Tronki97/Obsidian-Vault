@@ -52,7 +52,7 @@ data: "`2025-11-20 13:15`"
 		- $$(batch \times width \times height \times channels )$$
 		- Di solito il filtro lavora su tutti i canali in input in parallelo
 	- La dimensione dell'output è data da: 
-		- $$\frac{W_{in}+P-K}{S}+1$$
+		- $$\frac{W_{in}+2P-K}{S}+1$$
 		- $P:$ padding
 		- $K$ dimensione kernel 
 		- $S$ lo stride

@@ -119,9 +119,8 @@ data: "`2025-10-02 14:24`"
 				- ![[Pasted image 20251016142133.png]]
 				- Con $j$ che varia sulle istanze del training set e 
 					- ![[Pasted image 20251016142208.png]]
-			- $\sigma_{ik}^{2}$ _è la varianza di $X_{i}$ per le istanze con etichetta $Y=y_{k}$ _
+			- $\sigma_{ik}^{2}$ _è la varianza di $X_{i}$ per le istanze con etichetta $Y=y_{k}$_
 				- ![[Pasted image 20251016142339.png]]
-		- 
 - # Link Utili:
 	- Mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 	- Aaaaaaaaaaaaaaaauuuuuuuuuuuuuggggggggggggghhhhhhhhhh

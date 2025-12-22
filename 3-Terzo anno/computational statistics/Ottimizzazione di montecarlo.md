@@ -1,0 +1,47 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-12-11 09:24`"
+---
+- # Argomento:
+	- Si usa una sequenza random per ottenere il massimo valore di una funzione o per trovare un valore che massimizzi una funzione.
+		- Si cerca anche di evitare di rimanere bloccati in un massimo/minimo locale.
+	- Si lavora quindi con una funzione $h(\theta)$ e si cerca di ottimizzarla sul dominio $\Theta$ 
+		- Di solito $\theta \in \mathbb{R}^{P}$ oppure $\theta \in \Theta=$ spazio degli input
+		- $h(\theta)=f_{X}(x,\mu, \sigma^{2})$ con $\theta(\mu, \sigma^{2})$ e $\Theta: \mathbb{R} \times \mathbb{R}^{+}$
+	- In questo caso si cerca di trovare:
+		- $argmin\  h(\theta)$ o $argmax\ h(\theta)$
+	- Trovando questi valori si trovano anche soluzioni implicite ad altri problemi perché trovando max/min vuol dire trovare il valore per cui la derivata è 0 e altro...
+	- Per minimizzare invece si può massimizzare:
+		- $-h(\theta)$
+		- $\frac{1}{h(\theta)}$
+- # Approcci:
+	- ## Deterministico:
+		- Servono funzioni $h$ well-behaved, quindi no cuspidi o comportamenti asintotici che non funzionano...
+		- Servono informazioni riguardanti $h(\theta)$ come la derivata o altro
+	- ## Stocastico:
+		- Si basano meno sulle proprietà delle funzioni, risulta una variante più rumorosa della deterministica
+		- Ed è più facile usarla rispetto alla deterministica quando $\Theta$ è irregolare o $h$ è complessa
+	- Inoltre ci sono 2 opzioni riguardanti $\theta$:
+		- O si cerca di esplorare $\Theta$ per trovare valori che mi servono 
+		- Oppure si cerca di approssimare $h(\theta)$
+- # Ottimizzazione numerica:
+	- In R ci sono funzioni come `optimize` che è quello che si usa nell' [[accept & reject algorithm]] per trovare $M$, questo è un metodo deterministico globale per problemi ad una dimensione
+		- ## ES:
+			- Massimizzare una cauchy likelihood $C(\theta, 1)$
+			- Si estrae quindi da:
+				- $$l(\theta|\ x_{1},...,x_{n})=\frac{1}{\pi}\prod_{i=1}^{n} \frac{1}{1+(x_{i}-\theta)^{2}}$$
+				- Si assume che queste estrazioni siano [[Teoremi limite#^e7ebba|iid]] 
+			- Inoltre trovare il massimo della log-likelihood è equivalente perché il logaritmo è una trasformazione monotòna quindi:
+				- $$argmax\ \log(h(\theta))=\theta^{*}$$
+	- Un altro metodo è `nlm` che implementa il metodo _Newton-Raphson_ un algoritmo iterativo che richiede quindi un criterio d'arresto. 
+		- Si basa sulla relazione di ricorrenza
+			- $$\theta_{i+1}=\theta_{i}-\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}* \frac{dh}{d \theta}(\theta_{i})$$
+			- Dove la matrice delle derivate seconde è chiamata _hessiana_
+			- $\frac{dh}{d \theta}(\theta_{i})$ questo mi dice la direzione della funzione se cresce o decresce dicendomi quindi la direzione da seguire
+			- $\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}$: questo mi dice quanto grande deve essere il passo da fare nella direzione appresa e visto che è l'inversa mi richiede di fare piccoli passi nel caso siamo in discesa con alta inclinazione. 
+		- Se la funzione $h$ è quadratica allora questo metodo restituirà sicuramente il massimo globale.
+		- E se la funzione è altamente non-lineare la complessità computazionale aumenta di molto.
+- # Link Utili:
+	- 

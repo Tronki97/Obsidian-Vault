@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - latent-variable
   - spazio latente
@@ -46,7 +45,7 @@ data: "`2025-12-04 13:44`"
 			- Il _generatore_ quindi deve minimizzare $\log{(1 - D(G(Z)))}$
 				- Cercando quindi di _massimizzare_ $\log{(D(G(Z)))}$
 		- ### Problemi:
-			- Visto che devono passare i test del discriminatore, quindi non necessariamente apprendere la distribuzione, esso si concentrerà maggiormente sui punti che hanno maggiore probabilità
+			- _mode collapse_: Visto che devono passare i test del discriminatore, quindi non necessariamente apprendere la distribuzione, esso si concentrerà maggiormente sui punti che hanno maggiore probabilità
 			- Per questo motivo _sono molto buone per creare persone_ producendo le cose più probabili, quindi se nel dataset ci sono poche persone col cappello allora le immagini create di persone col cappello saranno molto rare
 				- Generando quindi dati tendenzialmente probabili avendo quindi output molto condizionati dal training
 		- La Data augmentation si fa solo sui dati di training

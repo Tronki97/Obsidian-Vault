@@ -1,0 +1,79 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-12-22 16:26`"
+---
+- # Analisi delle ridondanze
+	- _ridondanza_: Informazioni rilevanti ma che possono essere derivate da altre
+	- In questa fase si decide se tenerle o rimuoverle, inoltre si decide se crearne altre
+	- _vantaggi_: di solito semplificano le query e possibilmente velocizzarle
+	- _svantaggi_: durante un update bisogna ripetere l'azione per ogni ridondanza ed inoltre occupano più spazio.
+	- ## tipi di ridondanze;
+		- Attributi derivabili da altri attributi all'interno della stessa (o altra) entità o assocazioni
+			- Per esempio nell'entità stipendio mensile ci fossero attributi: _netto, lordo e trattenute_ ci sarebbe una ridondanza in quanto uno di questi 3 può essere calcolato tramite gli altri
+		- Associazioni derivabili da composizioni di diverse associazioni
+			- ![[Pasted image 20251222155632.png|300]]
+	- ## ES:
+		- ![[Pasted image 20251222155756.png|500]]
+			- Qui gli abitanti di una città possono essere calcolati contando le associazioni _stay_
+		- ![[Pasted image 20251222155851.png|300]]
+			- Tabella di volume
+		- Operazione #1 :
+			- Aggiungere una persona al DB con la sua _città di permanenza_ (500 volte al giorno)
+			- ![[Pasted image 20251222160112.png|450]]
+				- _Con la ridondanza_ si necessita quindi di aggiornare il numero di abitanti della città ad ogni update.
+				- Necessitando quindi di 1500 scritture e 500 letture per un totale di _3500 letture_
+			- ![[Pasted image 20251222160338.png|450]]
+				- _senza ridondanza_ non avendo il numero di abitanti ci si limita ad aggiungere a quale città è in permanenza la persona
+				- 1000 scritture per un totale di _2000 letture_ 
+		- Operazione #2 :
+			- Ritornare tutti i dati di tutte le città incluso il numero degli abitanti (2 volte al giorno)
+			- ![[Pasted image 20251222160129.png]]
+				- _Con la ridondanza_ Basta quindi leggere il numero di abitanti una volta per ottenerlo
+				- 2 letture al giorno avendo quindi un costo irrisorio
+			- ![[Pasted image 20251222160519.png]]
+				- _Senza ridondanza_ si accede alla città e si conta quante associazioni _stay_ sono presenti 
+				- Richiede 10000 letture al giorno 
+	- Risulta quindi che le ridondanze in questa situazione rendono molto più veloci le operazioni  
+- # Cancellazione delle generalizzazioni
+	- Visto che il modello relazionale non le supporta
+	- Si fa embedding delle entità figlie in quelle genitore oppure il contrario
+	- Si rimpiazza il costrutti di generalizzazione con quello di associazione
+	- ## Parent embedding:
+		- ![[Pasted image 20251222161059.png|350]]
+		- ![[Pasted image 20251222161124.png|350]]
+			- In questo caso i figli sono collassati nel genitore
+			- Sarebbe da eseguire quando viene fatto l'accesso ai genitori e i figli allo stesso momento
+	- ## children embedding:
+		- ![[Pasted image 20251222161232.png|350]]
+			- Il genitore viene fatto collassare sui figli 
+			- Da usare quando viene fatto l'accesso ai figli in maniera indipendente rispetto al genitore
+	- ## Uso di relazioni:
+		- ![[Pasted image 20251222161411.png|350]]
+			- Vengono messe delle associazioni al posto delle relazioni di gerarchia
+			- Da usare con le stesse condizioni di quello precedente
+	- ## soluzione ibrida:
+		- ![[Pasted image 20251222161910.png|350]]
+			- Questa è una soluzione ibrida che fa uso sia della prima che della terza soluzione
+- # Partizionare o raggruppare entità e associazioni
+	- Si ristrutturano gli attributi:
+		- Anche solo riducendo il numero di accessi
+		- Attributi a cui viene fatto l'accesso in maniera separata vengono divisi in gruppi dove si è soliti accedere a quegli attributi insieme.
+		- ## Casi principali:
+			- ### Partizionamento verticale delle entità
+				- ![[Pasted image 20251120165108.png|500]]
+				- ![[Pasted image 20251120165124.png|500]]
+			- ### ristrutturazione di attributi multi-valore:
+				- ![[Pasted image 20251222162246.png|450]]
+				- ![[Pasted image 20251222162310.png|450]]
+			- ### Raggruppamento di entità:
+				- ![[Pasted image 20251222162406.png|450]]
+				- ![[Pasted image 20251222162421.png|450]]
+			- ### Partizionamento orizzontale delle associazioni:
+				- ![[Pasted image 20251222162539.png|450]]
+				- ![[Pasted image 20251222162603.png|450]]
+- # Identificare le chiavi primarie:
+	- 
+- # Link Utili:
+	- 

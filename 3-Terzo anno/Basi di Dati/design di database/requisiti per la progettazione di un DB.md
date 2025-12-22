@@ -42,7 +42,7 @@ data: "`2025-11-13 15:39`"
 	- ## Strategia bottom-up:
 		- Utile se i requisiti sono tanti, e quindi si dividono i requisiti in pezzi più piccoli indipendenti che poi andranno combinati per andare a creare lo schema finale.
 	- ## inside out:
-		- Parto dalle entità definisco i loro attributi e poi creo le associazioni che servono continuando via via a cambiare gli attributi (se defirli chiavi interne/esterne) o le associazioni 
+		- Parto dalle entità definisco i loro attributi e poi creo le associazioni che servono continuando via via a cambiare gli attributi (se definirli chiavi interne/esterne) o le associazioni 
 		- <video src="inside-out_ER.mp4" controls height="500" controls width="500"></video>
 	- Spesso però si tende a usare uno stile che mischi gli altri creando prima uno schema scheletro per poi decomporlo e raffinare ognuno dei pezzi creati facendolo crescere e poi ricomporre tutti questi pezzi.
 		- All'inizio identifico le entità più importanti creando uno schema ER di base facendo l'analisi dei requisiti seguita dalla creazione di un caso base che verrà poi raffinato aggiungendo concetti e descrivendo certi requisiti, infine facendo un'analisi della qualità

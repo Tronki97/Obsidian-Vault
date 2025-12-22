@@ -1,0 +1,38 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-12-22 15:34`"
+---
+- # Obiettivo:
+	- "tradurre" lo [[modello dati concettuale|schema concettuale]] in uno schema logico che rappresenti gli stessi dati in una maniera corretta ed efficiente
+		- Questa traduzione non è una di definizione in quanto alcuni aspetti potrebbero non essere rappresentati direttamente 
+		- Bisogna anche tenere conto dell'_efficienza_
+	- ## Input:
+		- Schema concettuale
+		- Informazioni sul carico di lavoro dell'applicazione
+		- [[Descrivere i dati#^bfe78d|modello logico]]
+	- ## Output:
+		- Schema logico (può essere: relazionale, OO, grafico...)
+	- ![[Pasted image 20251222153905.png|350]]
+- # Ristrutturazione del diagramma ER:
+	- Questa operazione è necessaria per semplificare la "traduzione" e anche ottimizzare le _performance_
+	- In questo modo il [[modello dati concettuale|diagramma ER]] non sarà più uno schema concettuale
+	- ## Approssimazione delle performance:
+		- Si hanno 2 indicatori delle performance:
+		- ### Spazio:
+			- Numeri di istanze che ci si aspetta
+		- ### Tempo:
+			- Numeri di istanze (entità e relazioni) visitate durante una operazione
+		- ### ES:
+			- ![[Pasted image 20251222154321.png|500]]
+			- ![[Pasted image 20251222154342.png|300]]
+			- L'operazione richiesta è quella di ritornare tutti i dati degli _employee_ i dati dei _dipartimenti_ a cui appartengono e i dati dei _progetti_ a cui lavorano
+			- Quindi creare una _tabella degli accessi (access table)_ 
+			- #### Access table:
+				- ![[Pasted image 20251222154654.png|400]]
+				- In questo caso si suppone che un _employee_ lavori su 3 progetti
+	- ## Operazioni di ristrutturazione:
+		- 
+- # Link Utili:
+	- 

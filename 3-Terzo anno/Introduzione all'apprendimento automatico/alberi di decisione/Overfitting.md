@@ -37,6 +37,5 @@ data: "`2025-10-02 13:16`"
 		- ### Altri metodi:
 			- Sennò si aggiungono delle regolarizzazioni ovvero delle regole per evitare che il modello diventi troppo bravo e segua troppo bene il _training set_.
 			- Oppure aggiungere del noise sui dati che si hanno per simulare un po' di più la realtà.
-		- 
 - # Link Utili:
 	- 
