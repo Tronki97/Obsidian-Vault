@@ -74,6 +74,39 @@ data: "`2025-12-22 16:26`"
 				- ![[Pasted image 20251222162539.png|450]]
 				- ![[Pasted image 20251222162603.png|450]]
 - # Identificare le chiavi primarie:
-	- 
+	- Questa operazione è obbligatoria da eseguire per la traduzione in un [[Modello dati relazionale#^d88ce7|modello relazionale]]
+	- ## Criteri:
+		- Informazioni obbligatorie
+		- Semplicità
+		- Usate nelle operazioni più recenti/rilevanti
+	- Nel caso nessuno dei criteri precedenti venisse rispettato vengono introdotti nuovi attributi specificamente generati detti _codici_
+	- Nella traduzione le [[modello dati concettuale#^1c8b11|entità]] diventano le tabelle il cui schema corrisponde agli attributi delle entità; mentre le [[modello dati concettuale#^32ee56|associazioni]] diventano le tabelle il cui schema corrisponde agli attributi delle entità con in più l'identificatore esterno per le entità coivolte
+	- ## Associazioni many-to-many:
+		- ![[Pasted image 20251222172329.png|450]]
+		- [[Restrizioni di integrità#^c7cc1f|integrità referenziale]] tra:
+			- `Number` in `ENROLLMENT` e la chiave di `EMPLOYEE`
+			- `Code` in `ENROLLMENT` e la chiave di `PROJECT`
+		- Per le chiavi esterne si dovrebbero usare nomi _più espressivi_:
+			- ![[Pasted image 20251222172721.png|400]]
+	- ## Associazioni ricorsive:
+		- ![[Pasted image 20251222172813.png|400]]
+	- ## Associazioni N-arie:
+		- ![[Pasted image 20251222172923.png|450]]
+	- ## Associazioni One-to-Many:
+		- ![[Pasted image 20251222173001.png|450]]
+		- Si potrebbe unire le tabelle `PLAYER` e `AGREEMENT` per diminuire di un pò la ridondanza
+			- ![[Pasted image 20251222173127.png|450]]
+			- In questo modo si avrebbe un vincolo di [[Restrizioni di integrità#^c7cc1f|integrità referenziale]] tra `Team` in `PLAYER` e la chiave di `TEAM` 
+			- Però nel caso la cardinalità minima sia 0 si necessita che `Team` in `PLAYER` ammetta in valori `NULL` 
+	- ## Entità con identificatore esterno:
+		- ![[Pasted image 20251222173429.png|450]]
+		- vincolo: ogni studente è iscritto ad una sola università
+	- ## Associazioni One-to-One:
+		- ![[Pasted image 20251222173543.png]]
+		- Ci sono diverse opzioni:
+			- _unire_ un'entità con una associazione
+			- _unire tutto insieme_
+			- ![[Pasted image 20251222173710.png|450]]
+		- 
 - # Link Utili:
 	- 

@@ -15,11 +15,11 @@ aliases:
   - schema concettuale
 data: "`2025-11-05 17:28`"
 ---
-- # # motivazioni:
+- # Motivazioni:
 	- Evita di partire direttamente dal [[Descrivere i dati#^bfe78d|modello logico]], e il [[Modello dati relazionale#^d88ce7|modello relazionale]] risulta troppo rigido
 	- Il più usato è il modello _Entity-Relationship_
 - # Modello entità-associazione
-	- ## Entità:
+	- ## Entità: ^1c8b11
 		- Classe di un oggetto (cose, persone, posti) appartengono ad una realtà di interesse, condividendo alcune proprietà e hanno un'esistenza autonoma
 		- _schema_: una classe uniforme di oggetti
 		- _istanza_: un elemento della classe
@@ -28,7 +28,7 @@ data: "`2025-11-05 17:28`"
 			- Ogni entità ha un nome unico nello schema
 				- _nomi significativi_
 				- _nomi pragmatici_
-	- ## Associazioni:
+	- ## Associazioni: ^32ee56
 		- Si stabiliscono _associazioni_ tra 2 o più tipi di entità entro il modello del dominio
 		- ### ES:
 			- _residenza_ (tra _persone_ e _città_)
