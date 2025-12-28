@@ -18,7 +18,7 @@ data: "`2025-11-05 17:28`"
 - # Motivazioni:
 	- Evita di partire direttamente dal [[Descrivere i dati#^bfe78d|modello logico]], e il [[Modello dati relazionale#^d88ce7|modello relazionale]] risulta troppo rigido
 	- Il più usato è il modello _Entity-Relationship_
-- # Modello entità-associazione
+- # Modello entità-associazione ^d1bc89
 	- ## Entità: ^1c8b11
 		- Classe di un oggetto (cose, persone, posti) appartengono ad una realtà di interesse, condividendo alcune proprietà e hanno un'esistenza autonoma
 		- _schema_: una classe uniforme di oggetti

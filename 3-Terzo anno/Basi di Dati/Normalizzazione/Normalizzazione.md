@@ -1,0 +1,138 @@
+---
+tags:
+aliases:
+  - forme normali
+  - anomalie
+  - dipendenze funzionali
+  - DF
+  - D.F
+  - BCNF
+  - Boyce-Codd normal form
+  - scomposizione
+  - scomposizione senza perdite
+  - join senza perdite
+  - condizione di assenza di perdite
+  - scomposizioni che preservano dipendenze
+  - qualità delle scomposizioni
+  - 3NF
+  - terza forma normale
+  - scomposizione 3NF
+data: "`2025-12-04 15:19`"
+---
+- # Forme normali:
+	- Una "forma normale" è una proprietà di un database relazionale che ne garantisce la qualità e quindi non fa accadere certi problemi
+	- Non contiene _ridondanze_ e non avrà comportamenti inaspettati durante gli [[Operazioni SQL#^32c749|update]]
+	- Queste forme sono definite nel [[Modello dati relazionale|modello relazionale]] ma hanno anche senso in altri contesti come il [[modello dati concettuale#^d1bc89|modello ER]]
+	- Tutte le tabelle del database devono essere normalizzate 
+	- La normalizzazione deve essere usata come una _tecnica di verifica_ per testare il risultato del design di un database
+- # Anomalie:
+	- ![[Pasted image 20251227163916.png|500]]
+		- Questa è una [[Modello dati relazionale#^151d5b|relazione]] con presenti delle anomalie
+	- ## Ridondanze:
+		- Il `Wage` di ogni `Employee` è ripetuto su tutta la relazione
+	- ## Anomalie di update:
+		- Quando il `wage` di un  `Employee` cambia allora si dovranno cambiare tutte le sue occorrenze
+	- ### Anomalie di cancellazione:
+		- Quando un `Employee` smette di partecipare in tutti i suoi `Project` viene completamente rimosso dal database
+	- ### Anomalie di inserimento:
+		- Non si può creare un `Employee` senza un `Project` associato
+	- Questa situazione non va bene perché si stanno rappresentando diversi tipi di [[Gestione delle informazioni#^1d5a5c|informazione]] nella stessa relazione
+- ## Dipendenze funzionali: ^f90483
+	- è un particolare vincolo di integrità, che descrive i limiti funzionali tra gli attributi di una certa relazione
+	- ### Idea:
+		- Ogni `Employee` ha lo stesso `stipendio` 
+		- Ogni `project` ha lo stesso `budget`
+		- Ogni `Employee` in ogni `project` ha lo stesso `role`
+	- ### Def:
+		- Data una relazione $r$ con schema $R(X)$ e dati $Y,Z \subset X$
+		- Una dipendenza funzionale esiste tra $Y$ e $Z$ se:
+			- Per ogni coppia di tuple $t_{1}$ e $t_{2}$ di $r$ avente gli stessi valori sugli attributi di $Y$ risulta che $t_{1},t_{2}$ hanno gli stessi valori anche sugli attributi di $Z$ 
+	- ### Notazione
+		- $Y\to Z$
+	- ### ES:
+		- (rosso) $employee\to Wage$; 
+		- (lilla) $Project\to Budget$;
+			- Queste prime due causano anomalie siccome contengono alcune informazioni collegate a una chiave e altre collegate ad attributi che non compongono una chiave.
+		- $Employee \ Project \to Role$
+		- ![[Pasted image 20251204153914.png]]
+	- ### Proprietà:
+		- $Employee \ Project \to Project$
+			- è una D.F. triviale 
+		- Una DF $Y\to A$ _non è triviale_ se:
+			- $A$ è un attributo e $\notin Y$
+			- $A$ è un insieme di attributi e nessuno di quelli appartiene ad $Y$
+		- Le anomalie dipendono da alcune DF:
+			- `Employee` devono avere solo un `Wage`
+				- $Employee \to Wage$
+			- `Projects` devono avere solo un `Budget`
+				- $Project \to Budget$
+		- Non tutte le D.F provocano Anomalie:
+			- In ogni `Project` un `Employee` ha un solo `Role`
+				- $Employee \ Project \to Role$
+			- Questo vincolo viene sempre soddisfatto perché `Employee Project` è una [[Chiave e superchiavi#^1aadaa|chiave]] 
+	- ### Implicazioni:
+		- Da una D.F valida si possono determinare altre dipendenze dicendo quindi che la prima implica la seconda:
+			- Dato Un insieme di D.F $F:$ $F \implies f$ se ogni relazione che soddisfa tutte le dipendenze in $F$ soddisfa anche quelle di $f$  
+		- #### ES:
+			- ![[Pasted image 20251227174701.png|500]]
+- ## BCNF: ^3f92c9
+	- _Forma normale di Boyce-Codd_
+	- Una forma normale ha delle proprietà utili che sono soddisfatte dall'assenza di anomalie definendo delle dipendenze funzionali
+	- ### Def:
+		- Una relazione $r$ è in BCNF se:
+			- per ogni dipendenza funzionale (non triviale) $X\to Y$ definita su $r$, $X$ ha una chiave $K$ di $r$ che è una superchiave per $r$
+	- ### Scomposizione:
+		- _Se una tabella non è in BCNF si può normalizzare rimpiazzandola con 2 o più relazioni che siano BCNF_
+			- Ciò si basa sul criterio che se una relazione rappresenta più di un concetto dipendente allora deve essere scomposto in relazioni più piccole, una per ogni concetto.
+		- #### ES:
+			- ![[Pasted image 20251227170357.png|500]]
+			- ![[Pasted image 20251227170418.png|500]]
+			- Certe scomposizioni però possono avvenire con qualche perdita:
+				- ![[Pasted image 20251227170515.png|500]]
+			- Se si provasse a ricostruire la tabella principale:
+				- ![[Pasted image 20251227170607.png|500]]
+	- ### Scomposizione senza perdite:
+		- #### Join senza perdite:
+			- Una relazione $r$ può essere scomposta senza perdite in due relazioni $q(X)$ e $s(X)$ se il [[Algebra relazionale#^0c9bee|join]] della [[Algebra relazionale#^eb237a|projection]] di $r$ su $X$ e $Y$ è uguale ad $r$:
+				- $$\Pi_{X}(r) ⨝ \Pi_{Y}(r)=r$$
+			- Questa proprietà è verificata se gli attributi comuni contengono una chiave per almeno ona delle relazioni scomposte
+		- #### Condizione di assenza di perdite:
+			- Data una relazione $r(X)$ e $X_{1},X_{2} \subset X$ tali che $X_{1} \cup X_{2} =X$ e dato $X_{0}=X_{1}\cap X_{2}$
+			- $r(X)$ può essere _scomposta senza perdite_ in due relazioni $q(X_{1})$ e $s(X_{2})$ se:
+				- $X_{0} \to X_{1} \vee X_{0}\to X_{2}$
+		- ![[Pasted image 20251227172200.png|500]]
+		- #### ES:
+			- Si suppone di inserire una nuova tupla:
+			- ![[Pasted image 20251227172304.png|500]]
+			- ![[Pasted image 20251227172458.png|500]]
+	- ### Scomposizioni che preservano dipendenze:
+		- Una scomposizione preserva le dipendenze se ogni D.F dello schema originale coinvolge attributi che appaiono insieme in uno degli schemi scomposti
+			- Nell'ultimo esempio $Project \to Office$ non viene rispettata
+	- ### Qualità delle composizioni:
+		- Questo processo di normalizzazione attraverso le scomposizioni deve confermare la presenza di proprietà aggiuntive che lo schema relazionale deve avere:
+			- _Join senza perdite_ in modo che si riesca a ricomporre l'informazione originale
+			- _preservazione delle dipendenze_ che si assicura il mantenimento dei [[Restrizioni di integrità|vincoli di integrità]] originali
+	- ### Problemi delle scomposizioni:
+		- ![[Pasted image 20251227173232.png|300]]
+			- Una relazione in forma non-normale
+		- Visto che che $Project\  Office\to Chief$ comprende tutti gli attributi non esiste una scomposizione che preserverebbe le dipendenze quindi in certi casi BCNF non può essere raggiunta
+- ## Terza forma normale (3NF): ^28cbaa
+	- Una relazione è nella 3FN se per ogni D.F (non triviale) $X\to Y$ su $r$:
+		- Se $K\subset X$ e $X$ è una superchiave di $r$ _oppure_ ogni attributo $Y$ è in almeno una delle chiavi di $r$
+	- ### Comparazione con BCNF:
+		- _3NF_ ammette delle relazioni con delle anomalie e può essere sempre raggiunta 
+		- Se una relazione ha solo una chiave allora sarà in _BCNF_ sse è in _3NF_
+	- ### Scomposizione 3NF:
+		- ![[Pasted image 20251227173823.png|400]]
+		- Si crea una relazione per ogni insieme di attributi coinvolti in una D.F
+		- Si controlla che alla fine almeno una relazione abbia una chiave della relazione originale
+		- Di solito si scompone in _3NF_ e si controlla se lo schema risultante è in _BCNF_; in molti casi scomporre in _3NF_ permette anche di raggiungere la _BCNF_
+- ## Riorganizzazione:
+	- ![[Pasted image 20251227173232.png|300]]
+		- Questa relazione non può essere BCNF
+	- Una possibile riorganizzazione sarebbe:
+		- ![[Pasted image 20251227174235.png|400]]
+	- Che scomposta diventa:
+		- ![[Pasted image 20251227174258.png|500]]
+- # Link Utili:
+	- 

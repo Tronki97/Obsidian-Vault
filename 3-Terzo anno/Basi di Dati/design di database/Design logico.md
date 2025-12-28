@@ -1,7 +1,7 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - ristrutturazione di un diagramma ER
 data: "`2025-12-22 15:34`"
 ---
 - # Obiettivo:
@@ -32,7 +32,10 @@ data: "`2025-12-22 15:34`"
 			- #### Access table:
 				- ![[Pasted image 20251222154654.png|400]]
 				- In questo caso si suppone che un _employee_ lavori su 3 progetti
-	- ## Operazioni di ristrutturazione:
-		- 
+	- ## [[Operazioni di ristrutturazione di un diagramma ER]]:
+		- [[Operazioni di ristrutturazione di un diagramma ER#^b400bf|analisi delle ridondanze]]
+		- [[Operazioni di ristrutturazione di un diagramma ER#^8ea9ba|cancellazione delle generalizzazioni]]
+		- [[Operazioni di ristrutturazione di un diagramma ER#^870cc2|Partizionare o raggruppare entità e associazioni]]
+		- [[Operazioni di ristrutturazione di un diagramma ER#^1de3dc|identificare le chiavi primarie]]
 - # Link Utili:
 	- 

@@ -23,7 +23,7 @@ data: "`2025-09-26 15:27`"
 	- Deriva dalla teoria degli insiemi.
 	- Si necessita di un dominio $D_{1}=\{a,b\}$ e $D_{2}=\{x,y,z\}$ 
 	- Si fa il prodotto cartesiano $D_{1}\times D_{2}$
-	- Una relazione è definita come un qualunque sottoinsieme del prodotto cartesiano:
+	- Una relazione è definita come un qualunque sottoinsieme del prodotto cartesiano: ^151d5b
 		- $$r\subseteq D_{1} \times D_{2}$$
 	- Si suppone di avere $n$ domini non necessariamente diversi ai quali  si fa il prodotto cartesiano:
 		- La tupla risultante $(d_{1},..., d_{n})$ con $d_{i} \in D_{i}$ 

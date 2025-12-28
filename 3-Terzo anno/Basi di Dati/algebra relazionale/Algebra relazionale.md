@@ -154,7 +154,7 @@ data: "`2025-10-01 11:50`"
 			- #### Equi-join: ^98889e
 				- Chiamato cosi se tutti gli $\mathscr{R}$ sono relazioni di equivalenza
 				- ![[Pasted image 20251003121344.png|450]]
-				- Il risultato prodotto è molto simile al risultato ne caso in cui si facesse una join e si rinominasse _Dept con Code_
+				- Il risultato prodotto è molto simile al risultato nel caso in cui si facesse una join e si rinominasse _Dept con Code_
 					- ![[Pasted image 20251003121500.png|450]]
 	- ## Esercizi:
 		- ![[Pasted image 20251003121606.png|450]]

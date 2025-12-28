@@ -1,10 +1,19 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - ridondanza
+  - analisi delle ridondanze
+  - cancellazione delle generalizzazioni
+  - children embedding
+  - parent embedding
+  - entity partitioning
+  - relationship partitioning
+  - entity grouping
+  - relationship grouping
+  - identificare le chiavi primarie
 data: "`2025-12-22 16:26`"
 ---
-- # Analisi delle ridondanze
+- # Analisi delle ridondanze ^b400bf
 	- _ridondanza_: Informazioni rilevanti ma che possono essere derivate da altre
 	- In questa fase si decide se tenerle o rimuoverle, inoltre si decide se crearne altre
 	- _vantaggi_: di solito semplificano le query e possibilmente velocizzarle
@@ -36,7 +45,7 @@ data: "`2025-12-22 16:26`"
 				- _Senza ridondanza_ si accede alla città e si conta quante associazioni _stay_ sono presenti 
 				- Richiede 10000 letture al giorno 
 	- Risulta quindi che le ridondanze in questa situazione rendono molto più veloci le operazioni  
-- # Cancellazione delle generalizzazioni
+- # Cancellazione delle generalizzazioni ^8ea9ba
 	- Visto che il modello relazionale non le supporta
 	- Si fa embedding delle entità figlie in quelle genitore oppure il contrario
 	- Si rimpiazza il costrutti di generalizzazione con quello di associazione
@@ -56,7 +65,7 @@ data: "`2025-12-22 16:26`"
 	- ## soluzione ibrida:
 		- ![[Pasted image 20251222161910.png|350]]
 			- Questa è una soluzione ibrida che fa uso sia della prima che della terza soluzione
-- # Partizionare o raggruppare entità e associazioni
+- # Partizionare o raggruppare entità e associazioni ^870cc2
 	- Si ristrutturano gli attributi:
 		- Anche solo riducendo il numero di accessi
 		- Attributi a cui viene fatto l'accesso in maniera separata vengono divisi in gruppi dove si è soliti accedere a quegli attributi insieme.
@@ -73,7 +82,7 @@ data: "`2025-12-22 16:26`"
 			- ### Partizionamento orizzontale delle associazioni:
 				- ![[Pasted image 20251222162539.png|450]]
 				- ![[Pasted image 20251222162603.png|450]]
-- # Identificare le chiavi primarie:
+- # Identificare le chiavi primarie: ^1de3dc
 	- Questa operazione è obbligatoria da eseguire per la traduzione in un [[Modello dati relazionale#^d88ce7|modello relazionale]]
 	- ## Criteri:
 		- Informazioni obbligatorie

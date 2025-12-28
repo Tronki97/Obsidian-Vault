@@ -1,0 +1,55 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2025-12-27 18:27`"
+---
+- # Database Passivi:
+	- Le strategie di reazione nei [[Restrizioni di integrità|vincoli di integrità]] sono il primo esempio della necessità di introdurre un comportamento _reattivo_ nei database:
+		- ![[Pasted image 20251227182911.png|400]]
+	- Si vuole quindi introdurre _costrutti linguistici_ specifici per questo obiettivo
+	- Questi costrutti sono chiamati _regole attive_ che gestiscono una parte del comportamento procedurale di una applicazione
+	- Essendo a livello database questo comportamento verrà condiviso tra molte applicazioni, ottenendo quindi l' [[Indipendenza dei dati]]
+- # Database attivi:
+	- Questo tipo di database ha un componente che gestisce le _regole attive_ del tipo _evento-condizione-azione_:
+		- Gli _eventi_ sono cambiamenti nel database
+		- Una _condizione_ è verificata basandosi su un valore booleano
+		- Le _azioni_ vengono eseguite
+	- Questi database avendo un comportamento _reattivo_ eseguono oltre alle [[transazioni]] anche le _regole_
+	- [[Linguaggi dei database#^c2285e|SQL]] usa i _triggers_ per specificare le regole come quelle nella definizione di uno schema
+- # Procedure immagazzinate:
+	- Sono state introdotte per condividere comportamenti procedurali tra software diversi
+	- Non sono standardizzate e sono soggette al problema della mancata corrispondenza dell'impedenza con il linguaggio usato per esprimere queste procedure
+	- Quindi sono state introdotte delle _regole_ specifiche per modellare il comportamento procedurale condiviso tra software diversi e vengono gestite dal [[introduzione Basi di dati#^7f1908|DBMS]]
+- # Trigger:
+	- Basati sul paradigma _ECA_(event-condition-action)
+		- _event_: scatenato da azioni come: `insert, delete, update`
+		- _Condition_ (opzionale) è un predicato SQL
+		- _Action_: una sequenza di istruzioni SQL 
+	- Ogni trigger si riferisce a una tabella bersaglio e risponde ad eventi relativi ad essa
+	- ## Granularità:
+		- Su tuple (_row-level_): si attiva per ogni tupla coinvolta nella operazione
+		- Su operazioni (_statement-level_): solo una attivazione per una istruzione SQL, con riferimento a tutte le tuple coinvolte
+	- ## Modalità:
+		- ### Immediata:
+			- Appena dopo l'evento
+		- ### Deferita:
+			- Al momento del commit
+- # Modello computazionale:
+	- Sia $T^{U}=U_{1},...,U_{n}$ la transazione dell'utente
+	- Se le regole di $P$ hanno forma $E$, $C\to A$ allora:
+		- La semantica _immediata_ genera:
+			- $T^{I}=U_{1};\underline{U^{P}_{1}};...;U_{n};\underline{U^{P}_{n}};$
+		- La semantica _deferita_ genera:
+			- $T^{D}=U_{1};...;U_{n};\underline{U^{P}_{1}};...;\underline{U^{P}_{n}}$
+		- Dove $\underline{U}_{i}^{P}$ rappresenta la sequenza di _azioni_ indotta da $U_{i}$ su $P$
+- # Tipi di eventi:
+	- ## Prima:
+		- Il trigger è considerato e possibilmente eseguito prima dell'evento
+		- Usato per verificare una cambiamento prima che accada e modificarlo
+	- ## Dopo:
+		- Il trigger è considerato ed eseguito dopo l'evento
+		- è la modalità più usata
+- # 
+- # Link Utili:
+	- 

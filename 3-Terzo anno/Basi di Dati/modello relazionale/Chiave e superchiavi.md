@@ -4,7 +4,7 @@ aliases:
   - chiave primaria
 data: "`2025-10-01 10:45`"
 ---
-- # Chiavi:
+- # Chiavi: ^1aadaa
 	- Un insieme di attributi che identifica univocamente le [[Modello dati relazionale#^e8f57b|tuple]] dentro una relazione ovvero:
 		- _Una superchiave è quindi un insieme $K$ di attributi su $r$, se non ci sono 2 tuple distinte $t_{1}$ e $t_{2}$ in $r$ tali che $t_{1}[K]=t_{2}[K]$ _
 		- Una _chiave_ è una superchiave minimale  

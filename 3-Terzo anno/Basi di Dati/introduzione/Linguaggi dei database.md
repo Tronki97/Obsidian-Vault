@@ -8,7 +8,7 @@ data: "`2025-09-25 19:36`"
 ---
 - # linguaggi:
 	-  l'efficacia di un [[introduzione Basi di dati|database]] è influenzata dalla disponibilità dei linguaggi e interfacce con le quali si può accedere ai dati.
-	- ## SQL:
+	- ## SQL: ^c2285e
 		- Linguaggio per le interrogazioni strutturate
 		- ![[Pasted image 20250925193901.png|600]]
 			- Questo è il mio database e mi serve ottenere "tutte le lezioni che si tengono al piano terra".
