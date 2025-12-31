@@ -1,7 +1,7 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - trigger
 data: "`2025-12-27 18:27`"
 ---
 - # Database Passivi:
@@ -35,21 +35,51 @@ data: "`2025-12-27 18:27`"
 			- Appena dopo l'evento
 		- ### Deferita:
 			- Al momento del commit
-- # Modello computazionale:
-	- Sia $T^{U}=U_{1},...,U_{n}$ la transazione dell'utente
-	- Se le regole di $P$ hanno forma $E$, $C\to A$ allora:
-		- La semantica _immediata_ genera:
-			- $T^{I}=U_{1};\underline{U^{P}_{1}};...;U_{n};\underline{U^{P}_{n}};$
-		- La semantica _deferita_ genera:
-			- $T^{D}=U_{1};...;U_{n};\underline{U^{P}_{1}};...;\underline{U^{P}_{n}}$
-		- Dove $\underline{U}_{i}^{P}$ rappresenta la sequenza di _azioni_ indotta da $U_{i}$ su $P$
-- # Tipi di eventi:
-	- ## Prima:
-		- Il trigger è considerato e possibilmente eseguito prima dell'evento
-		- Usato per verificare una cambiamento prima che accada e modificarlo
-	- ## Dopo:
-		- Il trigger è considerato ed eseguito dopo l'evento
-		- è la modalità più usata
-- # 
+	- 
+	- # Modello computazionale:
+		- Sia $T^{U}=U_{1},...,U_{n}$ la transazione dell'utente
+		- Se le regole di $P$ hanno forma $E$, $C\to A$ allora:
+			- La semantica _immediata_ genera:
+				- $T^{I}=U_{1};\underline{U^{P}_{1}};...;U_{n};\underline{U^{P}_{n}};$
+			- La semantica _deferita_ genera:
+				- $T^{D}=U_{1};...;U_{n};\underline{U^{P}_{1}};...;\underline{U^{P}_{n}}$
+			- Dove $\underline{U}_{i}^{P}$ rappresenta la sequenza di _azioni_ indotta da $U_{i}$ su $P$
+	- # Tipi di eventi:
+		- ## Prima:
+			- Il trigger è considerato e possibilmente eseguito prima dell'evento
+			- Usato per verificare una cambiamento prima che accada e modificarlo
+		- ## Dopo:
+			- Il trigger è considerato ed eseguito dopo l'evento
+			- è la modalità più usata
+	- # granularità:
+		- ## modalità a livello di statement:
+			- 2 tabelle di transizione (_old table_ e _new table_) contengono i valori precedenti e successivi delle tuple modificate dallo _statement_
+				- Le 
+		- ## modalità a livello di righe:
+			- Due variabili di transizione (_old_ e _new_) rappresentano i valori prima e dopo la modifica di una tupla
+		- _old_ e _old table_ non sono presenti all'evento _insert_
+		- _new_ e _new table_ non sono presenti all'evento _delete_
+	- ## Trigger in Oracle:
+		- ### Sintassi:
+			- ![[Pasted image 20251230162923.png]]
+			- `{before | after}`: tipo di evento 
+			- `event`: può essere `insert, delete, update`
+			- Per ogni riga si specifica la _granularità_
+			- `reference`: permette di definire il nome delle variabili
+				- `old as OldVariable | new as NewVariable`
+		- ### Semantica:
+			- Modalità _immediata_: sia prima che dopo
+			- esecuzione:
+				- Si triggera il _before statement_
+				- Per ogni tupla coinvolta:
+					- Si triggera la riga _before_
+					- Avviene l'esecuzione e il controllo dei vincoli
+				- Si triggera il _after statement_
+			- Nel caso di un errore tutto viene scartato
+			- La priorità nei trigger si rappresenta con i _timestamp_
+			- Si possono attivare massimo 32 trigger in cascata.
+		- ### ES:
+			- ![[Pasted image 20251230163657.png|500]]
+			- ![[Pasted image 20251230163801.png|500]]
 - # Link Utili:
 	- 

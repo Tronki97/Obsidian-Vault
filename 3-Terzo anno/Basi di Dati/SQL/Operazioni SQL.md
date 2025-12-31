@@ -134,7 +134,7 @@ data: "`2025-10-24 18:30`"
 	- ## DELETE
 		- `DELETE FROM Table [WHERE Condition]`
 		- attenzione ai vincoli di integrità referenziale! `ON DELETE CASCADE`
-			- Si possono cancellare cose anche in altre tabelle...
+			- Si possono cancellare cose anche in altre tabelle in quanto il sistema per mantenere certi vincoli cancellerà altre tuple.
 		- ![[Pasted image 20251024184321.png|400]]
 	- ## UPDATE ^32c749
 		- `UPDATE Table SET Attribute = <Expr | SELECT ... | NULL | DEFAULT> [WHERE Condition]`

@@ -82,7 +82,7 @@ data: "`2025-10-01 11:50`"
 					- $$\sigma_{Age>40 \ \wedge\ Age \le 40 \wedge Age \ IS \ NULL}(PEOPLE)=PEOPLE$$
 	- ## Projection: ^eb237a
 		- Unario
-		- Lo schema dell'output è unn sottoinsieme di quello in input
+		- Lo schema dell'output è un sottoinsieme di quello in input
 		- Si forma l'output usando tutte le tuple in input
 			- $$\Pi_{AttributeList}(RELATION)$$
 		- ![[Pasted image 20251002154839.png]]
@@ -90,13 +90,14 @@ data: "`2025-10-01 11:50`"
 			- $$\Pi_{Number,Surname}(EMPLOYEE)$$
 			- ![[Pasted image 20251002154945.png]]
 		- L'output di una proiezione contiene al massimo lo stesso numero di tuple dell'input, e può contenerne un numero minore e siccome si "filtrano" delle colonne si possono ottenere delle tuple "ripetute" e ciò viola una delle definizioni di relazione
+			- Quindi nel caso gli attributi su cui si vuole fare una proiezione non formino una [[Chiave e superchiavi|chiave]] allora potrebbe succedere che il risultato abbia meno tuple della relazione di partenza
 		- Quindi se $X$ è una [[Chiave e superchiavi]] per $R$ allora $\Pi_{X}(R)$ contiene lo stesso numero di tuple di $R$
 	- ## Join: ^530bb9
 		- è una classe di operatori.
 		- Permette la correlazione tra relazioni con schemi diversi.
 			- ![[Pasted image 20251002160629.png|400]]
 		- ### join naturale:
-			- Operatore binario, fornisce un risultato che è basato su due tabelle diverse con un attributo comune tra le due
+			- Operatore binario, fornisce un risultato che è basato su due tabelle diverse con un attributo comune tra le due, gode delle proprietà _commutativa_ e _associativa_ 
 			- Lo schema risultante è l'unione degli attributi dei due schemi in input
 			- Ogni tupla è prodotta andando a combinare ogni tupla da ogni relazione
 				- Dato $R_{1}(X_{1})$ $R_{2}(X_{2})$ 

@@ -1,0 +1,166 @@
+---
+tags:
+aliases:
+  - hashing statico
+  - hashing lineare
+  - hashing estensibile
+data: "`2025-12-30 16:40`"
+---
+- # Argomento:
+	- L'hashing mappa direttamente una chiave di ricerca sul page ID della pagina che la contiene
+	- Sono il meglio per ricerche di _uguaglianza_ e non supportano ricerche sui range efficienti
+	- Ci sono tecniche sia statiche che dinamiche:
+		- ## hashing statico:
+			- Per dati di dimensione fissa non mutabili
+			- Coinvolge $N$ _secchi_ e una [[Tabelle Hash#^01153a|funzione hash]] che mappa la chiave di ricerca in un range tra 0 e $N-1$
+			- Nell'esempio uso una funzione $H_{i}$ che ritorna il primi o ultimi $i$ bits dell'encoding binario di una chiave di ricerca
+				- Con chiave $K$ si immagazzina quindi il record in un _secchio_ numerato $H(K)$
+				- Le chiavi saranno già convertite in binario
+					- ![[Pasted image 20251230164936.png|200]]
+					- $i=1$; $N=2^{i}=2$ e ogni _secchio_ contiene un blocco
+			- ### Ricerca:
+				- La funzione calcola l'indirizzo del secchio dove si trova il data record con una data chiave di ricerca $K_{2}=1100$
+					- ![[Pasted image 20251230165210.png|350]]
+					- ![[Pasted image 20251230165245.png|350]]
+					- ![[Pasted image 20251230165303.png|350]]
+			- ### Inserimento:
+				- Questa tecnica non può cambiare il numero dei _secchi_ può variarne la dimensione usando una _catena di blocchi di overflow_
+					- ![[Pasted image 20251230165441.png|400]]
+						- Si vuole inserire la chiave $1010$
+					- ![[Pasted image 20251230165508.png|400]]
+					- ![[Pasted image 20251230165530.png|400]]
+			- ### Cancellazione:
+				- Delle lunghe catene di blocchi di overflow rallentano le performance
+				- Cancellare le chiavi può portare a cancellare certi blocchi
+				- ![[Pasted image 20251230165718.png|500]]
+					- Si vuole cancellare $1100$
+				- ![[Pasted image 20251230165744.png|500]]
+				- ![[Pasted image 20251230165805.png|500]]
+			- ### Efficienza:
+				- Visto che la funzione hash può essere cambiata dinamicamente per adattare il numero di _secchi_ alla dimensione del file dati si cerca di mantenere il numero di blocchi per secchio basso
+		- ## hashing estensibile:
+			- Quando entrambi, i dati e la loro dimensione potrebbero variare nel tempo
+			- L'hashing estensibile usa una _directory di puntatori ai blocchi_ la cui dimensione è sempre una potenza di 2 e può crescere.
+				- Raddoppiando la dimensione della directory il numero dei _secchi_ raddoppia
+			- Alcuni _secchi_ possono condividere un blocco
+			- Non si usano i blocchi di overflow
+			- La funzione hash ritorna gli $i$ bit più significativi della chiave
+			- Ogni blocco ha una variabile che indica _quanti bit sono usati per l'indicizzazione_
+			- ### Ricerca:
+				- ![[Pasted image 20251230170851.png|500]]
+				- ![[Pasted image 20251230170941.png|300]]
+				- ![[Pasted image 20251230170958.png|300]]
+			- ### Inserimento:
+				- Per inserire un dato con chiave di ricerca $K$ si prendono i primi $i$ bit di $H_{i}(K)$ per identificare il _bucket_ nella directory,
+					- se c'è spazio nel blocco lo si inserisce li
+					- Se non c'è spazio in base ad un numero $j$, che indica il numero corrente di bit da indicizzare che coinvolge il blocco $B$, si scelgono 2 alternative:
+						- $j<i$
+							- Si divide in 2 (_halving_) il blocco $B$
+							- I dati in $B$ sono distribuiti nei nuovi blocchi in base al valore dei loro $j+1$ bit
+							- $j++$
+							- La directory è aggiornata coi puntatori al nuovo blocco 
+						- $j=i$
+							- $i++$ (_doubling_)
+							- Si raddoppia la directory in modo tale che un'entrata indicizzata dalla sequenza di bit $w$ lunga $i$ produca 2 entrate $w_{0}$ e $w_{1}$
+							- E si ripete il caso precedente.
+				- ![[Pasted image 20251230171729.png|500]]
+					- Si cerca il blocco con chiave $1010$
+				- ![[Pasted image 20251230171759.png|500]]
+				- Si controllano ora i valori di $i$ e $j$
+					- ![[Pasted image 20251230171843.png|300]]
+					- Che sono uguali
+				- ![[Pasted image 20251230171908.png|300]]
+					- Sia aumenta quindi il valore di $i$ e di conseguenza cambia la funzione hash
+				- ![[Pasted image 20251230171952.png|300]]
+				- Si raddoppia la directory:
+					- ![[Pasted image 20251230172033.png|300]]
+					- E si ottiene che $j<i$
+				- ![[Pasted image 20251230172119.png|300]]
+					- Dividendo in 2 quindi il blocco $B$
+				- ![[Pasted image 20251230172208.png|300]]
+					- Si separano i dati contenuti nel blocco in base ai primi $i$ bit
+					- Si fa poi $j+1 = 2$
+					- E infine si aggiornano i puntatori in base ai bit.
+				- Ora si vuole aggiungere la chiave $0100$
+					- ![[Pasted image 20251230172437.png|300]]
+						- C'è spazio
+					- ![[Pasted image 20251230172504.png|300]]
+				- Ora si vuole aggiungere $0101$, ma non c'è spazio
+					- ![[Pasted image 20251230172558.png|300]]
+						- Controllando si vede che $j<1$ quindi si divide il blocco in due e si fa lo stesso procedimento di prima.
+				- Cercando di aggiungere la chiave $1000$ si arriverà a raddoppiare di nuovo la dimensione della direcotry e a cambiare la funzione hash per farle prendere i primi $i=3$ bit
+					- ![[Pasted image 20251230172807.png|300]]
+			- ### Osservazioni:
+				- Visto che non ci sono blocchi di overflow se la directory sta nella memoria centrale, una ricerca di uguaglianza si risolve in 1/2 accessi al disco
+				- Se la ridistribuzione di dati è sfortunata potrebbe accadere di dover dividere di nuovo il blocco in 2 
+				- Se la distribuzione dell'hashing è sbilanciata potrebbe accadere di dover aumentare la dimensione della directory di molto lasciando certi puntatori inutilizzati
+					- E più che altro la sua crescita esponenziale rischia di complicare la gestione dello spazio nella memoria centrale
+		- ## Hashing lineare:
+			- Non necessita di una directory e riesce a gestire il problema delle catene di blocchi di overflow
+			- Il numero di _bucket_ aumenta linearmente e succede quando un blocco di overflow viene creato o quando un certo _limite_ viene superato
+				- Questo _limite_ è il rapporto record-bucket si addotta la regola di scegliere $n$ bucket in modo tale che non ci siano più di $1.7*n$ record
+			- La funzione hash $H_{i}(K)$ ritorna gli $i$ bit _meno_ significativi
+			- ### Ricerca:
+				- ![[Pasted image 20251230183355.png|500]]
+					- Si cerca la chiave $0101$
+					- $n$ = numero dei bucket con $2^{i-1}< n \le 2^{i}$  n=3
+						- Se $H_{i}(K)=m <n$ allora la chiave è nel bucket $m$
+						- Altrimenti si troverà nel bucket $m-2^{i-1}$
+					- $m=H_{2}(0101)=01_{2}=1_{10}$ quindi $m<n$
+					- Quindi la chiave sarà nel bucket $01$
+					- ![[Pasted image 20251230183749.png|300]]
+				- Ora si vuole trovare la chiave $1111$
+				- $m=H_{2}(1111)=11_{2}=3_{10}$ quindi $m\ge n$
+				- La chiave si troverà quindi nel bucket $3-2^{2-1}=1_{10}=01_{2}$
+					- ![[Pasted image 20251230184028.png|300]]
+			- ### Inserimento:
+				- #### Passaggi:
+					- Si conta il numero di record $r$ e il numero di bucket $n$
+					- Se $\frac{r}{n}\ge 1.7$ si divide un bucket aggiungendo quello $n+1$ -esimo
+					- Usando la funzione hash $H_{i}$ tutti i bucket fino al $2^{i-1}$ -esimo vengono divisi mantenendo l'ordinamento e indipendentemente da quale bucket ha causato la divisione
+					- Se $n>2^{i}$ $H_{i}$ diventa $H_{i+1}$ e la divisione riparte dal primo bucket
+					- $H_{i}(K)=m <n$:
+						- La chiave viene inserita nel bucket $m$ se non c'è spazio si crea un blocco di overflow
+					- $H_{i}(K)=m \ge n$
+						- La chiave viene inserita nel bucket $m-2^{i-1}$, se non c'è spazio si crea un blocco di overflow
+					- Si aumenta poi $r$ e se il rapporto $\frac{r}{n}>1.7$
+						- Se $n=2^{i}$ allora $i++$
+						- Si aggiunge l'n-esimo bucket
+						- Si spostano tutti i record dal blocco $m$ avente il $i$ -esimo bit più a destra uguale a 1 nel blocco $n$
+						- Si fa $n++$
+				- Si cerca la chiave $0101$
+					- ![[Pasted image 20251230184852.png|500]]
+						- $m=H_{2}(0101)=01 = 1 < n$
+				- Si inserisce nel bucket m
+					- ![[Pasted image 20251230185014.png|500]]
+					- Però Il rapporto $\frac{r}{n}=2 >1.7$
+				- Si esegue quindi il _load balancing_
+					- $n=2^{i}$ quindi $i++$ 
+					- Si cancella il primo bit di $n$ e lo si mette in $m=00$ 
+						- ![[Pasted image 20251230185340.png|500]]
+					- Si aggiunge l' $n$ -esimo bucket con $n_{2}=10$ e si spostano tutti i records dal bucket $m$ avente il bit $i$ -esimo più a destra uguale a 1
+						- ![[Pasted image 20251230185617.png|500]]
+					- Si fa poi $n++$ e si verifica che il rapporto sia rispettato:
+						- ![[Pasted image 20251230185702.png|200]]
+				- Si vuole inserire $0001$
+					- ![[Pasted image 20251230185740.png|500]]
+				- $m$ risulta $1<n$ ma siccome non c'è spazio per inserire si crea un blocco di overflow:
+					- ![[Pasted image 20251230190133.png|500]]
+					- Il rapporto rimane rispettato essendo $\frac{r}{n}=1.66 <1.7$
+				- Ora si vuole inserire $0110$
+					- ![[Pasted image 20251230190301.png|500]]
+					- Risulta $m=2 < n$
+				- Si inserisce in:
+					- ![[Pasted image 20251230190346.png|500]]
+				- Ma il rapporto diventa $>1.77$
+					- E visto che $n\ne 2^{i}$ non si aumenta $i$; $n_{2}=11$ e $m_{2}=01$
+					- Si aggiunge quindi il bucket $n_{2} = 11$
+					- Si spostano i record aventi il bit $i$ -esimo più a destra uguale a 1
+					- ![[Pasted image 20251230190715.png|500]]
+					- Così facendo si riesce anche a rimuovere il blocco di overflow
+					- Si fa poi $n++$
+					- E il rapporto è rispettato
+					- ![[Pasted image 20251230190836.png]]
+- 
+- # Link Utili:
+	- 

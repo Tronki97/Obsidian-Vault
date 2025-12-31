@@ -1,0 +1,46 @@
+---
+tags:
+aliases:
+  - indici inversi
+  - preprocessing linguistico
+  - normalizzazione dei token
+  - stop words
+  - stemming
+data: "`2025-12-31 15:04`"
+---
+- # Intro:
+	- Si tratta di trovare materiale senza una struttura che soddisfi una necessità di informazioni da una grande collezione
+	- Questo con una data keyword è uno dei più grandi problemi dei database
+	- Si possono usare gli [[Indici]] per recuperare questi documenti contenenti il testo che ci interessa.
+- # Indici inversi:
+	- Usati per risolvere efficientemente questo problema 
+	- 2 tipi di query che ci interessano:
+		- Ritornare tutti i documenti _contenenti un dato insieme di keywords_ $K_{1,...,n}$
+		- Ritornare tutti i documenti che contengano una _data sequenza di keyword_ $K_{1,...,n}$
+	- Gli indici inversi sono utilizzati siccome invece di creare un indice separato per ogni attributo, si rappresentano tutti i documenti in cui una specifica parola appare.
+	- ## Costruzione:
+		- ![[Pasted image 20251230191734.png|500]]
+			- Si segna in che posizione una determinata parola appare
+		- ![[Pasted image 20251230191824.png|500]]
+			- Si crea un indice inverso dove la parola è la chiave e i valori sono le coppie (documento, posizione)
+	- ## Preprocessing linguistico:
+		- Per massimizzare l'efficienza ci sono varie tecniche:
+			- ### Normalizzazione dei token:
+				- Le parole vengono normalizzate in modo tale da far accadere dei match tra parole con differenze superficiali 
+				- Per esempio _Cane_ e _cane_ matcheranno
+			- ### Stemming:
+				- Si rimuove il suffisso per trovare lo _stem_ di ogni parola prima di inserire la sua occorrenza nell'indice 
+				- Per esempio i nomi plurali o verbi simili tipo: _fishing, fished, fisher_ verranno ridotti allo _stem_ _fish_ 
+			- ### Stop words:
+				- Le parole più comuni come: _il_ o _e_ vengono chiamate _stop words_ e spesso escluse da questi indici inversi in quanto appaino in troppi documenti per essere definite come utili e inoltre togliendo queste parole si riduce la dimensione dell'indice.
+				- ![[Pasted image 20251230192808.png|700]]
+	- ## Query con indici inversi:
+		- Ritornare i documenti con entrambe le parole "Brutus" e "Caesar"
+			- ![[Pasted image 20251230192947.png|500]]
+		- Ritornare tutti i documenti con la sequenza "a valley"
+			- ![[Pasted image 20251230193036.png|500]]
+		- Ritornare i documenti con la sequenza "a clear"
+			- ![[Pasted image 20251230193141.png|500]]
+			- Risulta trovata in quanto distano di una posizione l'una dall'altra
+- # Link Utili:
+	- 

@@ -39,7 +39,7 @@ data: "`2025-10-16 15:16`"
 		- ### index/record manager:
 			- Conosce lo schema del database e le strutture dati che supportano un accesso ai dati efficiente.
 		- ### Buffer manager:
-			- Partiziona la memoria principale in blocchi più piccoli che velocizzano l'accesso a cerit dati
+			- Partiziona la memoria principale in blocchi più piccoli che velocizzano l'accesso a certi dati
 		- ### Storage manager:
 			- Tiene traccia della posizione dei file sul disco.
 		- ### ES:
@@ -63,7 +63,6 @@ data: "`2025-10-16 15:16`"
 			- ![[Nested-Loop-Join-50fps-1.gif]]
 		- ### Single-loop:
 			- C'è un indice che velocizza il processo ad ogni controllo dove si chiede il primo indice di ogni tipo di dato e si continua finche il dato è di quel tipo. 
-			- 
 		- ### sort-merge:
 			- Entrambe S e R vengono ordinate per poi venire scansionate e fare il join degli attributi che hanno gli stessi valori 
 			- L'ottimizzatore potrebbe decidere di fare questo tipo di join quando si ha a che fare con grandi tabelle.
