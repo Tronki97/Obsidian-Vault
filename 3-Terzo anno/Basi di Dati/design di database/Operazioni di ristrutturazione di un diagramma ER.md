@@ -79,6 +79,7 @@ data: "`2025-12-22 16:26`"
 			- ### Raggruppamento di entità:
 				- ![[Pasted image 20251222162406.png|450]]
 				- ![[Pasted image 20251222162421.png|450]]
+				- Questa operazione potrebbe portare all'affermarsi di ridondanze su entità legate da una associazione [[modello dati concettuale#^d216f4|one to many]]
 			- ### Partizionamento orizzontale delle associazioni:
 				- ![[Pasted image 20251222162539.png|450]]
 				- ![[Pasted image 20251222162603.png|450]]
@@ -92,7 +93,7 @@ data: "`2025-12-22 16:26`"
 	- Nella traduzione le [[modello dati concettuale#^1c8b11|entità]] diventano le tabelle il cui schema corrisponde agli attributi delle entità; mentre le [[modello dati concettuale#^32ee56|associazioni]] diventano le tabelle il cui schema corrisponde agli attributi delle entità con in più l'identificatore esterno per le entità coivolte
 	- ## Associazioni many-to-many:
 		- ![[Pasted image 20251222172329.png|450]]
-		- [[Restrizioni di integrità#^c7cc1f|integrità referenziale]] tra:
+		- [[Vincoli di integrità#^c7cc1f|integrità referenziale]] tra:
 			- `Number` in `ENROLLMENT` e la chiave di `EMPLOYEE`
 			- `Code` in `ENROLLMENT` e la chiave di `PROJECT`
 		- Per le chiavi esterne si dovrebbero usare nomi _più espressivi_:
@@ -105,7 +106,7 @@ data: "`2025-12-22 16:26`"
 		- ![[Pasted image 20251222173001.png|450]]
 		- Si potrebbe unire le tabelle `PLAYER` e `AGREEMENT` per diminuire di un pò la ridondanza
 			- ![[Pasted image 20251222173127.png|450]]
-			- In questo modo si avrebbe un vincolo di [[Restrizioni di integrità#^c7cc1f|integrità referenziale]] tra `Team` in `PLAYER` e la chiave di `TEAM` 
+			- In questo modo si avrebbe un vincolo di [[Vincoli di integrità#^c7cc1f|integrità referenziale]] tra `Team` in `PLAYER` e la chiave di `TEAM` 
 			- Però nel caso la cardinalità minima sia 0 si necessita che `Team` in `PLAYER` ammetta in valori `NULL` 
 	- ## Entità con identificatore esterno:
 		- ![[Pasted image 20251222173429.png|450]]

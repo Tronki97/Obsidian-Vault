@@ -67,7 +67,7 @@ data: "`2025-10-09 15:50`"
 			- Permette ad un valore di essere presente se è compreso tra 18 e 30
 	- ## Vincoli integrità referenziale
 		- `REFERENCES` and `FOREIGN KEY`:
-		- Definiscono i vincoli di [[Restrizioni di integrità#^c7cc1f|integrità referenziale]]
+		- Definiscono i vincoli di [[Vincoli di integrità#^c7cc1f|integrità referenziale]]
 		- Possono essere definiti su singoli o multipli oggetti
 		- ### ES:
 			- ![[Pasted image 20251009191530.png|450]]

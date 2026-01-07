@@ -23,23 +23,23 @@ data: "`2025-11-21 15:17`"
 - # Sequential file index:
 	- Si hanno due file uno con gli indici e uno con i dati (Index file e Data file)
 		- Quello con gli indici li ha divisi in blocchi
-	- Un indice primario è un indice che include una chiave primaria con i dati ordinati sullo stesso attributo, se non la contiene o non sono ordinati è detta secondaria
-	- _Denso_: ha almeno una chiave di ricerca per ogni valore di chiave nel _dat file_ altrimenti è detto sparso
-		- Ricerca:
-			- si suppone una relazione di $10^{6}$ tuple in $10^{5}$ blocchi di $4KB$ forse risulta troppo grande da navigare in maniera efficiente nella memoria principale
-			- Suppongo che il cmapo della chiave sia $30B$ e i puntatori $8$ quindi in quei $4KB$ di spazio si potrebbero contenere con un po di margine per gli header $100$ coppie chiave-puntatore
-			- Quindi un indice denso richiederebbe $10^{4}$ blocchi ovvero $40MB$ riducendo quindi la memoria necessaria e usando la ricerca binaria si richiederebbe al massimo di accedere a $13-14$ blocchi ($\log_{2}10^{4}$) 
-			- Necessitando quindi di meno di $14$ operazione I/O sul disco 
-	- _Clustered_: se l'ordine dei dati è lo stesso o simile al record delle label 
-	- ## ES:
-		- ![[Pasted image 20251121153322.png]]
-			- Denso e clustered
-		- ![[Pasted image 20251121153337.png]]
-			- Sparso e clustered
-				- 
-		- ![[Pasted image 20251121153401.png]]
-			- Secondario denso e unclustered
-				- Alcune chiavi appaiono più volte ogni chiave è puntata da un indice, e non le chiavi non sono ordinate come gli indici
+	- ## Tipologia di indice
+		- Un indice _primario_ è un indice che include una chiave primaria con i dati ordinati sullo stesso attributo, se non la contiene o non sono ordinati è detta _secondaria_
+		- _Denso_: ha almeno una chiave di ricerca per ogni valore di chiave nel _data file_ altrimenti è detto _sparso_
+		- _Clustered_: se l'ordine dei dati è lo stesso o simile a quello dei record delle label 
+		- ### ES:
+			- ![[Pasted image 20251121153322.png]]
+				- Denso e clustered
+			- ![[Pasted image 20251121153337.png]]
+				- _Sparso e clustered_
+			- ![[Pasted image 20251121153401.png]]
+				- _Secondario denso e unclustered_
+					- Alcune chiavi appaiono più volte ogni chiave è puntata da un indice, e non le chiavi non sono ordinate come gli indici
+	- ## Ricerca :
+		- si suppone una relazione di $10^{6}$ tuple in $10^{5}$ blocchi di $4KB$ forse risulta troppo grande da navigare in maniera efficiente nella memoria principale
+		- Suppongo che il cmapo della chiave sia $30B$ e i puntatori $8$ quindi in quei $4KB$ di spazio si potrebbero contenere con un po di margine per gli header $100$ coppie chiave-puntatore
+		- Quindi un indice denso richiederebbe $10^{4}$ blocchi ovvero $40MB$ riducendo quindi la memoria necessaria e usando la ricerca binaria si richiederebbe al massimo di accedere a $13-14$ blocchi ($\log_{2}10^{4}$) 
+		- Necessitando quindi di meno di $14$ operazione I/O sul disco 
 	- ## Indexing multi-livello:
 		- Si può usare degli indici sparsi per ridurre il numero di blocchi necessari per immagazzinare l'offset dei record, usando quindi _indici di indici_
 			- ![[Pasted image 20251219174811.png|500]]

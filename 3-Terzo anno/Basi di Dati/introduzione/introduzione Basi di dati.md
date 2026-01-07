@@ -70,7 +70,7 @@ data: "`2025-09-24 09:11`"
 					- 500-800 TB (dati scientifici):
 						- Come l'analisi di fenomeni scientifici da studiare come l'analisi metereologica.
 			- ### Persistente :
-				- Il dato deve sopravvivere a vari problemi, senza corrompersi, che possono accadere al database come guasti ai dischi, ai software, ecc...
+				- Il dato deve sopravvivere, senza corrompersi, a vari problemi che possono accadere al database come guasti ai dischi, ai software, ecc...
 				- La loro aspettativa di vita è indipendente dalla [[Sicurezza della memoria#^7637a8|lifetime]] del processo che li sta usando.
 			- ### Condiviso:
 				- Tra vari utenti e applicazioni, quindi la possibilità di poter leggere gli stessi dati insieme al molte altre persone
@@ -113,7 +113,6 @@ data: "`2025-09-24 09:11`"
 			- Si può evitare l'information overloading dividendo lo schema logico in diversi _schemi esterni_ ognuno dei quali ha diversi target e rappresentano diverse _viste_ dello schema logico ^40cfe6
 			- #### Viste:
 				- ![[Pasted image 20250925192912.png|500]]
-				- 
 	- ## Problemi:
 		- Ridondanza dei dischi ([[RAID]])
 			- Stesso dato appare più volte

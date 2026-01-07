@@ -111,7 +111,7 @@ data: "`2025-12-04 15:19`"
 	- ### Qualità delle composizioni:
 		- Questo processo di normalizzazione attraverso le scomposizioni deve confermare la presenza di proprietà aggiuntive che lo schema relazionale deve avere:
 			- _Join senza perdite_ in modo che si riesca a ricomporre l'informazione originale
-			- _preservazione delle dipendenze_ che si assicura il mantenimento dei [[Restrizioni di integrità|vincoli di integrità]] originali
+			- _preservazione delle dipendenze_ che si assicura il mantenimento dei [[Vincoli di integrità|vincoli di integrità]] originali
 	- ### Problemi delle scomposizioni:
 		- ![[Pasted image 20251227173232.png|300]]
 			- Una relazione in forma non-normale

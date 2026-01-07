@@ -82,7 +82,7 @@ data: "`2025-10-24 18:48`"
 		- _select_:
 			- Permette di leggere una risorsa
 		- _references_: 
-			- Permette di definire [[Restrizioni di integrità#^c7cc1f|vincoli di integrità referenziale]]
+			- Permette di definire [[Vincoli di integrità#^c7cc1f|vincoli di integrità referenziale]]
 		- _usage_:
 			- Permette di usare una definizione, come ad esempio un tipo di dato _custom_
 	- ## Comandi

@@ -90,14 +90,15 @@ data: "`2025-10-01 11:50`"
 			- $$\Pi_{Number,Surname}(EMPLOYEE)$$
 			- ![[Pasted image 20251002154945.png]]
 		- L'output di una proiezione contiene al massimo lo stesso numero di tuple dell'input, e può contenerne un numero minore e siccome si "filtrano" delle colonne si possono ottenere delle tuple "ripetute" e ciò viola una delle definizioni di relazione
-			- Quindi nel caso gli attributi su cui si vuole fare una proiezione non formino una [[Chiave e superchiavi|chiave]] allora potrebbe succedere che il risultato abbia meno tuple della relazione di partenza
-		- Quindi se $X$ è una [[Chiave e superchiavi]] per $R$ allora $\Pi_{X}(R)$ contiene lo stesso numero di tuple di $R$
+			- Nel caso gli attributi su cui si vuole fare una proiezione non formino una [[Chiave e superchiavi|chiave]] allora potrebbe succedere che il risultato abbia meno tuple della relazione di partenza
+		- Quindi se $X$ è una [[Chiave e superchiavi|chiave]] per $R$ allora $\Pi_{X}(R)$ contiene lo stesso numero di tuple di $R$
 	- ## Join: ^530bb9
 		- è una classe di operatori.
 		- Permette la correlazione tra relazioni con schemi diversi.
 			- ![[Pasted image 20251002160629.png|400]]
 		- ### join naturale:
-			- Operatore binario, fornisce un risultato che è basato su due tabelle diverse con un attributo comune tra le due, gode delle proprietà _commutativa_ e _associativa_ 
+			- Operatore binario, fornisce un risultato che è basato su due tabelle diverse con _un attributo comune_ tra le due 
+			- Gode delle proprietà _commutativa_ e _associativa_ 
 			- Lo schema risultante è l'unione degli attributi dei due schemi in input
 			- Ogni tupla è prodotta andando a combinare ogni tupla da ogni relazione
 				- Dato $R_{1}(X_{1})$ $R_{2}(X_{2})$ 
@@ -123,7 +124,7 @@ data: "`2025-10-01 11:50`"
 						- ![[Pasted image 20251003115143.png|450]]
 						- Visto che il valore della chiave è unico, per ogni tupla di $R_{2}$ si può fare match con più tuple di $R_{1}$ e non vice versa
 						- $$|R_{1} \bowtie R_{2}|\le |R_{1}|=2$$
-				- Se il join coinvolge una [[Chiave e superchiavi|chiave]] da $R_{2}$ e una [[Restrizioni di integrità#^c7cc1f||restrizione di integrità referenziale]] allora il numero delle tuple risultanti è:
+				- Se il join coinvolge una [[Chiave e superchiavi|chiave]] da $R_{2}$ e una [[Vincoli di integrità#^c7cc1f||restrizione di integrità referenziale]] allora il numero delle tuple risultanti è:
 					- $$|R_{1} \bowtie R_{2}|=|R_{1}|$$
 					- ##### ES:
 						- Ogni tupla di $R_{1}$ è associata ad almeno una tupla di $R_{2}$

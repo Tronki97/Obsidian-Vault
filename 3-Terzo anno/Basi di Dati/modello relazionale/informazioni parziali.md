@@ -3,7 +3,7 @@ tags:
 aliases:
 data: "`2025-10-01 17:20`"
 ---
-- # # Informazioni parziali:
+- # Informazioni parziali:
 	- Non tutte le [[Modello dati relazionale#^e8f57b|tuple]] sono accettate dal sistema relazionale ma serve che abbiano un certo schema.
 	- ## ES:
 		- ![[Pasted image 20251001100202.png]]

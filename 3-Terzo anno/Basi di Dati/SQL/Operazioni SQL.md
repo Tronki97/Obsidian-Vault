@@ -113,6 +113,8 @@ data: "`2025-10-24 18:30`"
 			- ### AVG:
 				- Fa la media aritmetica dei valori dell'attributo specificato 
 				- Se tra i valori è presente un `NULL` non vien contato.
+			- ### N.B:
+				- Non possono essere usate negli `ORDER BY`
 		- ## GROUP BY:
 			- Un costrutto che raggruppa in una certa tabella i valori in basi a vari attributi
 				- `GROUP BY AttrList`
@@ -131,6 +133,8 @@ data: "`2025-10-24 18:30`"
 		- l'ordine e il valore degli attributi è rilevante, e le cardinalità di `AttList` (se messa) e `Vals` deve coincidere
 		- ### ES:
 			- ![[Pasted image 20251024183446.png|450]]
+		- ### N.B:
+			- Nonostante nella query sia presente il `WHERE` esso non è associato all'operazione `INSERT` ma piuttosto alla `SELECT` fatta per ottenere le tuple da inserire nella destinazione della `INSERT`
 	- ## DELETE
 		- `DELETE FROM Table [WHERE Condition]`
 		- attenzione ai vincoli di integrità referenziale! `ON DELETE CASCADE`

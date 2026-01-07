@@ -69,7 +69,7 @@ data: "`2025-11-05 17:28`"
 		- Le cardinalità permettono di avere diversi tipi di associazioni:
 			- _one-to-one_
 				- ![[Pasted image 20251108165111.png|450]]
-			- _one-to-many_
+			- _one-to-many_ ^d216f4
 				- ![[Pasted image 20251108164957.png|450]]
 			- _many-to-many_
 				- ![[Pasted image 20251108164937.png|450]]
@@ -106,7 +106,7 @@ data: "`2025-11-05 17:28`"
 		- ### Tipologie di generalizzazioni:
 			- #### Totali:
 				- Se ogni occorrenza dell'entità padre è occorrenza di almeno uno dei figli, altrimenti è detta _parziale_
-			- #### Disgiunte:
+			- #### Disgiunte (esclusive):
 				- Se ogni occorrenza del padre è un'occorrenza di al massimo una dei figli, altrimenti è detta _sovrapposta_
 			- #### ES:
 				- ![[Pasted image 20251108171728.png|400]]

@@ -10,6 +10,7 @@ data: "`2025-12-30 16:40`"
 	- L'hashing mappa direttamente una chiave di ricerca sul page ID della pagina che la contiene
 	- Sono il meglio per ricerche di _uguaglianza_ e non supportano ricerche sui range efficienti
 	- Ci sono tecniche sia statiche che dinamiche:
+	- I _bucket_ (o secchi) sono ciò che divide i blocchi e sono rappresentati a un indice mentre i _blocchi_ sono contenuti nei _bucket_ e contengono i record 
 		- ## hashing statico:
 			- Per dati di dimensione fissa non mutabili
 			- Coinvolge $N$ _secchi_ e una [[Tabelle Hash#^01153a|funzione hash]] che mappa la chiave di ricerca in un range tra 0 e $N-1$
@@ -91,7 +92,7 @@ data: "`2025-12-30 16:40`"
 				- Cercando di aggiungere la chiave $1000$ si arriverà a raddoppiare di nuovo la dimensione della direcotry e a cambiare la funzione hash per farle prendere i primi $i=3$ bit
 					- ![[Pasted image 20251230172807.png|300]]
 			- ### Osservazioni:
-				- Visto che non ci sono blocchi di overflow se la directory sta nella memoria centrale, una ricerca di uguaglianza si risolve in 1/2 accessi al disco
+				- Visto che non ci sono blocchi di overflow se la directory sta nella memoria centrale, una ricerca di uguaglianza si risolve in 1 o 2 accessi al disco
 				- Se la ridistribuzione di dati è sfortunata potrebbe accadere di dover dividere di nuovo il blocco in 2 
 				- Se la distribuzione dell'hashing è sbilanciata potrebbe accadere di dover aumentare la dimensione della directory di molto lasciando certi puntatori inutilizzati
 					- E più che altro la sua crescita esponenziale rischia di complicare la gestione dello spazio nella memoria centrale
@@ -136,9 +137,9 @@ data: "`2025-12-30 16:40`"
 					- Però Il rapporto $\frac{r}{n}=2 >1.7$
 				- Si esegue quindi il _load balancing_
 					- $n=2^{i}$ quindi $i++$ 
-					- Si cancella il primo bit di $n$ e lo si mette in $m=00$ 
+					- Si imposta il valore del primo bit di $n$ a 0 e lo si assegna a $m=00$ 
 						- ![[Pasted image 20251230185340.png|500]]
-					- Si aggiunge l' $n$ -esimo bucket con $n_{2}=10$ e si spostano tutti i records dal bucket $m$ avente il bit $i$ -esimo più a destra uguale a 1
+					- Si aggiunge l' $n$ -esimo bucket con $n_{2}=10$ e si spostano tutti i records dal bucket $m$ avente il bit $i$ -esimo più a destra uguale a 1 (in questo caso il 2° bit meno significativo)  
 						- ![[Pasted image 20251230185617.png|500]]
 					- Si fa poi $n++$ e si verifica che il rapporto sia rispettato:
 						- ![[Pasted image 20251230185702.png|200]]
@@ -161,6 +162,5 @@ data: "`2025-12-30 16:40`"
 					- Si fa poi $n++$
 					- E il rapporto è rispettato
 					- ![[Pasted image 20251230190836.png]]
-- 
 - # Link Utili:
 	- 

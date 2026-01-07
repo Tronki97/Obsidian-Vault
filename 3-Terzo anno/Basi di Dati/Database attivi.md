@@ -5,7 +5,7 @@ aliases:
 data: "`2025-12-27 18:27`"
 ---
 - # Database Passivi:
-	- Le strategie di reazione nei [[Restrizioni di integrità|vincoli di integrità]] sono il primo esempio della necessità di introdurre un comportamento _reattivo_ nei database:
+	- Le strategie di reazione nei [[Vincoli di integrità|vincoli di integrità]] sono il primo esempio della necessità di introdurre un comportamento _reattivo_ nei database:
 		- ![[Pasted image 20251227182911.png|400]]
 	- Si vuole quindi introdurre _costrutti linguistici_ specifici per questo obiettivo
 	- Questi costrutti sono chiamati _regole attive_ che gestiscono una parte del comportamento procedurale di una applicazione

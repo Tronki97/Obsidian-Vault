@@ -31,18 +31,18 @@ SORT Materia
 <!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
 <!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
 
-| File                                                                                                                                                  | Materia                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| [[Homepage]]                                                                                                                             | Homepage.md                               |
-| [[Linguaggi di Programmazione]]                                                                            | 0-Mostarda/Linguaggi di Programmazione.md |
-| [[sviluppo di un sistema software in python]] | Ingegneria del software                   |
-| [[Caratteristiche funzionali di python]]           | Ingegneria del software                   |
-| [[sviluppo di un sistema software Java]]           | Ingegneria del software                   |
-| [[architettura dei software]]                            | Ingegneria del software                   |
-| [[Pattern comportamentali]]                                           | Ingegneria del software                   |
-| [[Pattern strutturali]]                                                   | Ingegneria del software                   |
-| [[Indici]]                                                                                                       | Basi di Dati                              |
-| [[reti convoluzionali]]                                  | Introduzione all'apprendimento automatico |
+| File                                                                                                                                                     | Materia                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| [[Homepage]]                                                                                                                                | Homepage.md                |
+| [[Basi di Dati]]                                                                                                             | 0-Mostarda/Basi di Dati.md |
+| [[introduzione Basi di dati]]                                                       | Basi di Dati               |
+| [[Algebra relazionale]]                                                            | Basi di Dati               |
+| [[Vincoli di integrità]]                                                          | Basi di Dati               |
+| [[Operazioni di ristrutturazione di un diagramma ER]] | Basi di Dati               |
+| [[SQL avanzato]]                                                                                          | Basi di Dati               |
+| [[Basic SQL]]                                                                                                | Basi di Dati               |
+| [[Normalizzazione]]                                                                        | Basi di Dati               |
+| [[Database attivi]]                                                                                        | Basi di Dati               |
 <!-- SerializedQuery END -->
 <!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
 
@@ -50,53 +50,86 @@ SORT Materia
 - [[Analisi matematica]]
 	- [x] Passato
 	- Voto: 24
+	- Tentativi: 1
 - [[Logica per l'informatica]]
 	- [x] Passato
 	- Voto: 19
+	- Tentativi: 1
 - [[Architettura degli Elaboratori]]
 	- [x] Passato
 	- Voto: 24
+	- Tentativi: 2
 - [[Programmazione]]
 	- [x] Passato
 	- Voto: 25
+	- Tentativi: 2
 - [[Algebra e Geometria]]
 	- [ ] Passato
+	- Voto:
+	- Tentativi: 2
 - [[Algoritmi e strutture dati]]
 	- [x] Passato
 	- Voto: 20
+	- Tentativi: 1
 # Secondo Anno
 - [[Calcolo numerico]]
 	- [x] Passato
 	- Voto: 23
+	- Tentativi: 1
 - [[Tecnologie Web]]
 	- [x] Passato
-	- Voto: 25
+	- Scritto: 24
+	- Progetto: 26
+	- Totale: 25
+	- Tentativi: 1
 - [[Sistemi Operativi]]
 	- [x] Passato
-	- Voto: 23
+	- Parziale 1: 26
+	- Parziale 2: 24
+	- Pratico: 14
+	- Progetto: 30
+	- Totale: 23
+	- Tentativi: 2
 - [[Linguaggi di Programmazione]]
 	- [ ] Passato
+	- Voto: 
+	- Tentativi: 
 - [[Reti di Calcolatori]]
 	- [ ] Passato
+	- Voto:
+	- Tentativi: 1
 - [[Ottimizzazione combinatoria]]
 	- [x] Passato
 	- Voto: 21
+	- Tentativi: 1
 - [[Calcolo delle probabilità e statistica]]
 	- [x] Passato
 	- Voto: 27
+	- Tentativi: 1
 # Terzo Anno
 - [[Ingegneria del software]]
 	- [x] Passato
 	- Voto: 23
+	- Tentativi: 1
 - [[Basi di Dati]]
 	- [ ] Passato
+	- Voto: 
+	- Tentativi:
 - [[introduzione all'apprendimento automatico]]
 	- [ ] Passato
+	- Quiz: 25
+	- Progetto: 
+	- Totale: 
+	- Tentativi: 1
 - [[0-Mostarda/Computational statistics|Computational statistics]]
 	- [ ] Passato
+	- Voto: 
+	- Tentativi:
 - [[Informatica teorica]]
 	- [ ] Passato
+	- Tentativi:
 - [[Fondamenti di cybersecurity]]
 	- [ ] Passato
+	- Tentativi: 
 
 
