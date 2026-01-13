@@ -103,8 +103,10 @@ data: "`2025-12-30 16:40`"
 			- La funzione hash $H_{i}(K)$ ritorna gli $i$ bit _meno_ significativi
 			- ### Ricerca:
 				- ![[Pasted image 20251230183355.png|500]]
+					- $r$ = _numero di record_
+					- $i$ = _profondità degli indici_.
 					- Si cerca la chiave $0101$
-					- $n$ = numero dei bucket con $2^{i-1}< n \le 2^{i}$  n=3
+					- $n$ = _numero dei bucket_ con $2^{i-1}< n \le 2^{i}$  n=3
 						- Se $H_{i}(K)=m <n$ allora la chiave è nel bucket $m$
 						- Altrimenti si troverà nel bucket $m-2^{i-1}$
 					- $m=H_{2}(0101)=01_{2}=1_{10}$ quindi $m<n$

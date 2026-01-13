@@ -108,7 +108,7 @@ data: "`2025-12-04 15:19`"
 	- ### Scomposizioni che preservano dipendenze:
 		- Una scomposizione preserva le dipendenze se ogni D.F dello schema originale coinvolge attributi che appaiono insieme in uno degli schemi scomposti
 			- Nell'ultimo esempio $Project \to Office$ non viene rispettata
-	- ### Qualità delle composizioni:
+	- ### Qualità delle scomposizioni:
 		- Questo processo di normalizzazione attraverso le scomposizioni deve confermare la presenza di proprietà aggiuntive che lo schema relazionale deve avere:
 			- _Join senza perdite_ in modo che si riesca a ricomporre l'informazione originale
 			- _preservazione delle dipendenze_ che si assicura il mantenimento dei [[Vincoli di integrità|vincoli di integrità]] originali

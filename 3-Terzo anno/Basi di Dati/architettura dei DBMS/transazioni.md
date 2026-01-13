@@ -127,7 +127,7 @@ data: "`2025-10-16 19:30`"
 			- La transazione richiede dei _locks_ per _leggere e scrivere_ qualsiasi oggetto e li rilascia solo quando _committa_. 
 			- Non permette ai _blocchi a livello di tabella_ di scansionarla
 		- ### SERIALIZABLE:
-			- Come quella precedente ma comprende i _blochi a livello di tabella_
+			- Come quella precedente ma comprende i _blocchi a livello di tabella_
 		- ![[Pasted image 20251018180444.png|650]]
 - # Approcci nel controllo della concorrenza:
 	- ## Restrittivi:

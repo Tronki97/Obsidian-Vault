@@ -19,7 +19,7 @@ data: "`2025-12-22 16:26`"
 	- _vantaggi_: di solito semplificano le query e possibilmente velocizzarle
 	- _svantaggi_: durante un update bisogna ripetere l'azione per ogni ridondanza ed inoltre occupano più spazio.
 	- ## tipi di ridondanze;
-		- Attributi derivabili da altri attributi all'interno della stessa (o altra) entità o assocazioni
+		- Attributi derivabili da altri attributi all'interno della stessa (o altra) entità o associazioni
 			- Per esempio nell'entità stipendio mensile ci fossero attributi: _netto, lordo e trattenute_ ci sarebbe una ridondanza in quanto uno di questi 3 può essere calcolato tramite gli altri
 		- Associazioni derivabili da composizioni di diverse associazioni
 			- ![[Pasted image 20251222155632.png|300]]

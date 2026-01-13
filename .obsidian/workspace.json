@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-Mostarda/Basi di Dati.md",
+                "file": "3-Terzo anno/computational statistics/Ottimizzazione di montecarlo.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,179 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Basi di Dati"
-            }
-          },
-          {
-            "id": "6e6ae34d2fe67dc1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Basi di Dati/Indici/Indici.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Indici"
-            }
-          },
-          {
-            "id": "a6489eb8d0c38adb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Basi di Dati/algebra relazionale/espressioni dell'algebra relazionale equivalenti.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "espressioni dell'algebra relazionale equivalenti"
-            }
-          },
-          {
-            "id": "a1ce6c50581278b9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Basi di Dati/algebra relazionale/Algebra relazionale.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Algebra relazionale"
-            }
-          },
-          {
-            "id": "247edc9b23eb4c83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Basi di Dati/architettura dei DBMS/Architettura dei DBMS.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Architettura dei DBMS"
-            }
-          },
-          {
-            "id": "0c51ea2f11ccce05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Basi di Dati/design di database/modello dati concettuale.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "modello dati concettuale"
-            }
-          },
-          {
-            "id": "7bb0ff6c9b20627f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Operazioni SQL"
-            }
-          },
-          {
-            "id": "677d40060ee766ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Basi di Dati/SQL/SQL avanzato.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "SQL avanzato"
+              "title": "Ottimizzazione di montecarlo"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -232,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "grouping",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -378,11 +209,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 430.5
+    "width": 526.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
+      "bases:Crea nuova Base": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "3d-graph:3D Graph": false,
@@ -404,33 +235,35 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "Pasted image 20260113163106.png",
+    "Pasted image 20260113162533.png",
+    "Pasted image 20260113160048.png",
+    "Homepage.md",
+    "3-Terzo anno/computational statistics/Ottimizzazione di montecarlo.md",
+    "3-Terzo anno/Basi di Dati/Normalizzazione/Normalizzazione.md",
     "0-Mostarda/Basi di Dati.md",
+    "3-Terzo anno/Basi di Dati/design di database/Operazioni di ristrutturazione di un diagramma ER.md",
+    "3-Terzo anno/Basi di Dati/design di database/Design logico.md",
+    "3-Terzo anno/Basi di Dati/design di database/modello dati concettuale.md",
+    "3-Terzo anno/Basi di Dati/design di database/requisiti per la progettazione di un DB.md",
+    "3-Terzo anno/Basi di Dati/architettura dei DBMS/transazioni.md",
+    "3-Terzo anno/Basi di Dati/SQL/SQL avanzato.md",
+    "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
+    "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
+    "3-Terzo anno/Basi di Dati/introduzione/introduzione Basi di dati.md",
+    "3-Terzo anno/Basi di Dati/introduzione/Indipendenza dei dati.md",
+    "3-Terzo anno/Basi di Dati/architettura dei DBMS/ARIES (Advanced Recovery and Integrated Extraction System).md",
+    "3-Terzo anno/Basi di Dati/Indici/indici basati sull'hashing.md",
+    "Troubleshooting.md",
+    "immagini/Pasted image 20260102172908.png",
+    "3-Terzo anno/Basi di Dati/Indici/Indici.md",
     "3-Terzo anno/Basi di Dati/algebra relazionale/espressioni dell'algebra relazionale equivalenti.md",
     "3-Terzo anno/Basi di Dati/algebra relazionale/Algebra relazionale.md",
     "3-Terzo anno/Basi di Dati/architettura dei DBMS/Architettura dei DBMS.md",
-    "3-Terzo anno/Basi di Dati/design di database/modello dati concettuale.md",
-    "3-Terzo anno/Basi di Dati/SQL/Operazioni SQL.md",
-    "3-Terzo anno/Basi di Dati/design di database/Design logico.md",
-    "3-Terzo anno/Basi di Dati/SQL/SQL avanzato.md",
-    "Homepage.md",
-    "3-Terzo anno/Basi di Dati/Indici/indici basati sull'hashing.md",
-    "3-Terzo anno/Basi di Dati/introduzione/Indipendenza dei dati.md",
     "3-Terzo anno/Basi di Dati/modello relazionale/Chiave e superchiavi.md",
     "0-Mostarda/Calcolo delle probabilità e statistica.md",
-    "3-Terzo anno/Basi di Dati/architettura dei DBMS/transazioni.md",
-    "3-Terzo anno/Basi di Dati/design di database/Operazioni di ristrutturazione di un diagramma ER.md",
     "3-Terzo anno/Basi di Dati/modello relazionale/Modello dati relazionale.md",
-    "3-Terzo anno/Basi di Dati/SQL/Basic SQL.md",
     "3-Terzo anno/Basi di Dati/modello relazionale/Vincoli di integrità.md",
-    "Pasted image 20260102172908.png",
-    "3-Terzo anno/Basi di Dati/modello relazionale/informazioni parziali.md",
-    "3-Terzo anno/Basi di Dati/design di database/database design.md",
-    "3-Terzo anno/Basi di Dati/introduzione/Descrivere i dati.md",
-    "3-Terzo anno/Basi di Dati/introduzione/Gestione delle informazioni.md",
-    "3-Terzo anno/Basi di Dati/introduzione/Linguaggi dei database.md",
-    "3-Terzo anno/Basi di Dati/introduzione/introduzione Basi di dati.md",
-    "3-Terzo anno/Basi di Dati/calcolo relazionale/Datalog.md",
-    "3-Terzo anno/Basi di Dati/calcolo relazionale/Calcolo relazionale.md",
     "3-Terzo anno/Basi di Dati/Indici/Senza nome",
     "immagini/Pasted image 20251227182911.png",
     "immagini/Pasted image 20251230162923.png",
@@ -439,8 +272,6 @@
     "immagini/Pasted image 20251230192947.png",
     "immagini/Pasted image 20251230192808.png",
     "immagini/Pasted image 20251230191824.png",
-    "immagini/Pasted image 20251230191734.png",
-    "immagini/Pasted image 20251230190836.png",
     "3-Terzo anno/Basi di Dati/Indici",
     "3-Terzo anno/Basi di Dati/Normalizzazione",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/autoencoder.ipynb",

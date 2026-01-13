@@ -3,7 +3,7 @@ tags:
 aliases:
 data: "`2025-09-26 10:12`"
 ---
-- # Problemi programazione:
+- # Problemi programmazione:
 	- Non mi mostrava l'env corrente di _Conda_ sul terminale di windows e mi mostrava l'errore:
 	  
 		```BASH

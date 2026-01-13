@@ -31,18 +31,18 @@ SORT Materia
 <!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
 <!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
 
-| File                                                                                                                                                     | Materia                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
-| [[Homepage]]                                                                                                                                | Homepage.md                |
-| [[Basi di Dati]]                                                                                                             | 0-Mostarda/Basi di Dati.md |
-| [[introduzione Basi di dati]]                                                       | Basi di Dati               |
-| [[Algebra relazionale]]                                                            | Basi di Dati               |
-| [[Vincoli di integrità]]                                                          | Basi di Dati               |
-| [[Operazioni di ristrutturazione di un diagramma ER]] | Basi di Dati               |
-| [[SQL avanzato]]                                                                                          | Basi di Dati               |
-| [[Basic SQL]]                                                                                                | Basi di Dati               |
-| [[Normalizzazione]]                                                                        | Basi di Dati               |
-| [[Database attivi]]                                                                                        | Basi di Dati               |
+| File                                                                                                                                                     | Materia                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| [[Homepage]]                                                                                                                                | Homepage.md              |
+| [[Ottimizzazione di montecarlo]]                                                  | computational statistics |
+| [[Operazioni di ristrutturazione di un diagramma ER]] | Basi di Dati             |
+| [[transazioni]]                                                                          | Basi di Dati             |
+| [[Normalizzazione]]                                                                        | Basi di Dati             |
+| [[Troubleshooting]]                                                                                                                  | Troubleshooting.md       |
+| [[indici basati sull'hashing]]                                                           | Basi di Dati             |
+| [[Indici]]                                                                                                   | Basi di Dati             |
+| [[modello dati concettuale]]                                                   | Basi di Dati             |
+| [[Operazioni SQL]]                                                                                      | Basi di Dati             |
 <!-- SerializedQuery END -->
 <!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
 
@@ -65,7 +65,7 @@ SORT Materia
 	- Tentativi: 2
 - [[Algebra e Geometria]]
 	- [ ] Passato
-	- Voto:
+	- Voto: ~~10~~, ~~14~~, 
 	- Tentativi: 2
 - [[Algoritmi e strutture dati]]
 	- [x] Passato
@@ -112,9 +112,9 @@ SORT Materia
 	- Voto: 23
 	- Tentativi: 1
 - [[Basi di Dati]]
-	- [ ] Passato
-	- Voto: 
-	- Tentativi:
+	- [x] Passato
+	- Voto: 27
+	- Tentativi: 1
 - [[introduzione all'apprendimento automatico]]
 	- [ ] Passato
 	- Quiz: 25

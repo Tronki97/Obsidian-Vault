@@ -8,7 +8,7 @@ data: "`2025-12-11 09:24`"
 	- Si usa una sequenza random per ottenere il massimo valore di una funzione o per trovare un valore che massimizzi una funzione.
 		- Si cerca anche di evitare di rimanere bloccati in un massimo/minimo locale.
 	- Si lavora quindi con una funzione $h(\theta)$ e si cerca di ottimizzarla sul dominio $\Theta$ 
-		- Di solito $\theta \in \mathbb{R}^{P}$ oppure $\theta \in \Theta=$ spazio degli input
+		- Di solito $\theta \in \mathbb{R}^{P}$ oppure $\theta \in \Theta=$ spazio degli input o dei parametri
 		- $h(\theta)=f_{X}(x,\mu, \sigma^{2})$ con $\theta(\mu, \sigma^{2})$ e $\Theta: \mathbb{R} \times \mathbb{R}^{+}$
 	- In questo caso si cerca di trovare:
 		- $argmin\  h(\theta)$ o $argmax\ h(\theta)$
@@ -16,6 +16,7 @@ data: "`2025-12-11 09:24`"
 	- Per minimizzare invece si può massimizzare:
 		- $-h(\theta)$
 		- $\frac{1}{h(\theta)}$
+	- In sostanza si sta esplorando $\Theta$ 
 - # Approcci:
 	- ## Deterministico:
 		- Servono funzioni $h$ well-behaved, quindi no cuspidi o comportamenti asintotici che non funzionano...
@@ -26,22 +27,92 @@ data: "`2025-12-11 09:24`"
 	- Inoltre ci sono 2 opzioni riguardanti $\theta$:
 		- O si cerca di esplorare $\Theta$ per trovare valori che mi servono 
 		- Oppure si cerca di approssimare $h(\theta)$
-- # Ottimizzazione numerica:
-	- In R ci sono funzioni come `optimize` che è quello che si usa nell' [[accept & reject algorithm]] per trovare $M$, questo è un metodo deterministico globale per problemi ad una dimensione
-		- ## ES:
-			- Massimizzare una cauchy likelihood $C(\theta, 1)$
-			- Si estrae quindi da:
-				- $$l(\theta|\ x_{1},...,x_{n})=\frac{1}{\pi}\prod_{i=1}^{n} \frac{1}{1+(x_{i}-\theta)^{2}}$$
-				- Si assume che queste estrazioni siano [[Teoremi limite#^e7ebba|iid]] 
-			- Inoltre trovare il massimo della log-likelihood è equivalente perché il logaritmo è una trasformazione monotòna quindi:
-				- $$argmax\ \log(h(\theta))=\theta^{*}$$
-	- Un altro metodo è `nlm` che implementa il metodo _Newton-Raphson_ un algoritmo iterativo che richiede quindi un criterio d'arresto. 
-		- Si basa sulla relazione di ricorrenza
-			- $$\theta_{i+1}=\theta_{i}-\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}* \frac{dh}{d \theta}(\theta_{i})$$
-			- Dove la matrice delle derivate seconde è chiamata _hessiana_
-			- $\frac{dh}{d \theta}(\theta_{i})$ questo mi dice la direzione della funzione se cresce o decresce dicendomi quindi la direzione da seguire
-			- $\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}$: questo mi dice quanto grande deve essere il passo da fare nella direzione appresa e visto che è l'inversa mi richiede di fare piccoli passi nel caso siamo in discesa con alta inclinazione. 
-		- Se la funzione $h$ è quadratica allora questo metodo restituirà sicuramente il massimo globale.
-		- E se la funzione è altamente non-lineare la complessità computazionale aumenta di molto.
+- # Ottimizzazione numerica deterministica:
+	- ## Optimize:
+		- In R ci sono funzioni come `optimize` che è quello che si usa nell' [[accept & reject algorithm]] per trovare $M$, questo è un metodo _deterministico globale_ per problemi ad una dimensione
+			- _globale_ perché guarda all'intera funzione e non a regioni specifiche
+			- ### ES:
+				- Massimizzare una cauchy likelihood $C(\theta, 1)$
+				- Si estrae quindi da:
+					- $$l(\theta|\ x_{1},...,x_{n})=\frac{1}{\pi}\prod_{i=1}^{n} \frac{1}{1+(x_{i}-\theta)^{2}}$$
+					- Si assume che queste estrazioni siano [[Teoremi limite#^e7ebba|iid]] 
+				- Inoltre trovare il massimo della log-likelihood è equivalente perché il logaritmo è una trasformazione monotòna quindi:
+					- $$argmax\ \log(h(\theta))=\theta^{*}$$
+	- ## Newton-Raphson:
+		- Un altro metodo è `nlm` che implementa il metodo _Newton-Raphson_ un algoritmo iterativo che richiede quindi un criterio d'arresto. 
+			- Questo algoritmo è sempre _deterministico_ ma _locale_ 
+			- Si basa sulla relazione di ricorrenza
+				- $$\theta_{i+1}=\theta_{i}-\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}* \frac{dh}{d \theta}(\theta_{i})$$
+				- Dove la matrice delle derivate seconde è chiamata _hessiana_
+				- $\frac{dh}{d \theta}(\theta_{i})$ questo mi dice la direzione della funzione se cresce o decresce dicendomi quindi la direzione da seguire
+				- $\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}$: questo mi dice quanto grande deve essere il passo da fare nella direzione appresa e visto che è l'inversa mi richiede di fare piccoli passi nel caso siamo in discesa con alta inclinazione. 
+			- ### N.B:
+				- Si rischia di rimanere bloccati in un _ottimo locale_ però risultano più veloci.
+			- Se la funzione $h$ è quadratica allora questo metodo restituirà sicuramente il massimo globale.
+			- E se la funzione è altamente non-lineare la complessità computazionale aumenta di molto.
+			- Questo algoritmo dipende molto dal punto di partenza $\theta_{0}$ quando $h$ ha diversi punti di minimo/massimo.
+				- Un modo per ovviare a queto problema è quello di usare un approccio _multi-start_ avendo quindi un insieme di punti di partenza.
+			- ## ES 5.2:
+				- $$\mathscr{L}(\mu_{1}, \mu_{2}, x)=\frac{1}{4}N(\mu_{1},1)+ \frac{3}{4}N(\mu_{2},1)$$
+				- Per massimizzare questa funzione si mette il meno davanti alla _log-likelihood_
+					- $-\log(\mathscr{L}(\mu_{1},\mu_{2},x))$
+				- Partire da diversi punti in questo esercizio porta a diversi massimi/minimi i quanto si potrebbe bloccare negli _ottimi locali_ con anche un diverso numero di passi necessari per arrivare ad essi.
+					- ![[Pasted image 20260113160048.png]]
+			- ## OSS:
+				- Se $\theta^{*}$ è valore che massimizza $h(\theta^{*})$ allora $\theta^{*}$ massimizza $g(h(\theta^{*}))$ se $g$ è una trasformazione monotona (come il $\log$) 
+				- Ma l'algoritmo Newton-Raphson è sensibile a queste trasformazioni.
+					- In maniera positiva se essa migliora lo spazio da visitare 
+					- Altrimenti lo potrebbe far divergere.
+- # Ottimizzazione numerica Stocastica:
+	- ## Globale:
+		- ### Ricerca stocastica: soluzione basica
+			- Si ha $h(\theta)$ e $\theta \in \Theta$ 
+			- Si estraggono un po' di $\theta$ da una densità $f_\theta(\theta)$ definita su $\Theta$
+				- Scegliere $f_{\theta}$ è un passo importante in quanto si cerca di sceglierne una con una probabilità di restituire $\theta$ vicini alle zone di massimo che si stanno cercando più alta rispetto agli altri punti.
+			- Si calcolano poi tutti questi $h(\theta_{1})...h(\theta_{n})$, si trova il massimo e si ottiene quindi $\theta_{i}$ che massimizza la funzione.
+			- #### ES 5.3:
+				- $h(x)= (\cos(50x)+\sin(20x))^{2}$
+					- Si cerca quindi il _massimo_
+				- Si estraggono $10^{4}$ valori $\in$ $[0,1]$
+				- Li si applicano alla funzione $h()$ -> `h.theta = h(samples)`
+				- Si fa `max(h.theta)` per ottenere il massimo della funzione basata sui valori estratti
+				- Infine si trova il $\theta$ che ha causato quel massimo
+				- ![[Pasted image 20260113162533.png]]
+			- #### OSS:
+				- Questa soluzione è _stocastica_ quindi per trovare la soluzione giusta servirà un certo numero di valori estratti, troppo pochi possono portare a trovare il valore ottimo sbagliato. 
+					- ![[Pasted image 20260113163106.png]]
+					- Più il numero di iterazioni aumenta più si restringe il range di valori ottenibili da questa ricerca.
+					- 1000 estrazioni garantiscono di trovare il massimo.
+		- ### Multivariate:
+			- Si può trasformare $\max h(\theta)$ in un problema dove si cerca la _moda_ di $h(\theta)$ 
+				- _questo si può fare se_ $h(\theta)$ _è una densità_.
+			- Invece di estrarre da $f_{\theta}(\theta)$ sconnessa da $h(\theta)$ (per esempio la uniforme) si potrebbe estrarre da una densità più vicina a $h(\theta)$:
+				- Se $h(\theta)$ è non negativa $\forall \theta \in \Theta$ e $\int_{\Theta} h(\theta) \ d \theta < \infty$ 
+				- Allora $h(\theta)$ _è una densità_ che può essere normalizzata o meno.
+			- Posso definire $H(\theta)$ una densità proporzionale a una esponenziale $\exp\left( \frac{h(\theta)}{T} \right)$ 
+				- Con $T>0$ costante viene anche chiamata _temperature_
+				- Fintanto che $h(\theta)$ permette di avere un integrale definito allora si può avere questa densità $H(\theta)$ che risulta essere molto simile a $h(\theta)$ 
+				- Inoltre non cambia il problema perché le trasformazioni monotone di densità non cambiano le _mode_ di $h(\theta)$
+			- Quindi ora si estrae $\theta_{1,...,n}$ da $H(\theta)$; si calcola $h(\theta_{0,...,n})$ e si trova il max di questi risultati.
+			- #### ES 5.6:
+				- Si vuole minimizzare su $\mathbb{R}^{2}$ la funzione:
+					- $$\begin{array} \ h(x,y)=(x*\sin(20y)+y*\sin(20x))^{2}*\cosh(\sin(10x)*x)+ \\+(x\cos(10y)-y\sin(10x))^{2}*\cosh(\cos(20y)*y)\end{array}$$
+					- Il cui vero minimo globale è:
+						- $$h(x=0, y=0)=0$$
+				- Il problema si shifta verso il dover estrarre da $H(\theta)$:
+					- $$H(x,y)∝ \exp\left( -\frac{h(x,y)}{T} \right)$$
+					- Il che non sappiamo fare.
+				- Quindi si usa l' [[accept & reject algorithm]] e scegliere di conseguenza la _proposal distribution_
+					- E l'unica che funziona sempre è la uniforme, ma così si ritornerebbe alla versione basica
+				- 
+	- ## Locale:
+		- ### metodo del gradiente stocastico:
+			- Ogni punto $\theta_{j+1}=\theta_{j}+\epsilon_{j}$ che è quindi una sequenza di valori dipendenti in una _forma lineare_
+				- $\epsilon_{j}$ è la componente randomica che per questa sua caratteristica fa produrre alla relazione precedente una [[Catene di Markov]]
+			- Si può decidere di associare la probabilità che $\epsilon_{j}$ abbia un certo valore a:
+				- $P(\epsilon_{j})=N(0, \sigma^{2})$
+				- 
+		- ### Simulated annealing:
+			- 
 - # Link Utili:
 	- 
