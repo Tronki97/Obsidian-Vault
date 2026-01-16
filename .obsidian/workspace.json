@@ -13,6 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Homepage.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Homepage"
+            }
+          },
+          {
+            "id": "24b4ecd1b8fe14e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0-Mostarda/Computational statistics.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Computational statistics"
+            }
+          },
+          {
+            "id": "1b120648cc42ad5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "3-Terzo anno/computational statistics/Ottimizzazione di montecarlo.md",
                 "mode": "source",
                 "source": false,
@@ -30,8 +78,105 @@
               "icon": "lucide-file",
               "title": "Ottimizzazione di montecarlo"
             }
+          },
+          {
+            "id": "6f2fd57ccfaceef2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "metodi di trasformazione generali"
+            }
+          },
+          {
+            "id": "3ff2afbdef204f56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "integrazione di MonteCarlo"
+            }
+          },
+          {
+            "id": "cf73990067cef279",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/computational statistics/computational statistics.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "computational statistics"
+            }
+          },
+          {
+            "id": "5aa5716789788571",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/computational statistics/probability integral transform.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "probability integral transform"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -235,11 +380,21 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Pasted image 20260113163106.png",
-    "Pasted image 20260113162533.png",
-    "Pasted image 20260113160048.png",
+    "3-Terzo anno/computational statistics/accept & reject algorithm.md",
+    "3-Terzo anno/computational statistics/computational statistics.md",
+    "3-Terzo anno/computational statistics/probability integral transform.md",
+    "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
+    "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
+    "0-Mostarda/Computational statistics.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
     "Homepage.md",
+    "3-Terzo anno/computational statistics/Notes_Slides.pdf",
     "3-Terzo anno/computational statistics/Ottimizzazione di montecarlo.md",
+    "immagini/Pasted image 20260113160048.png",
+    "immagini/Pasted image 20260114154829.png",
+    "immagini/Pasted image 20260113163106.png",
+    "immagini/Pasted image 20260113162533.png",
     "3-Terzo anno/Basi di Dati/Normalizzazione/Normalizzazione.md",
     "0-Mostarda/Basi di Dati.md",
     "3-Terzo anno/Basi di Dati/design di database/Operazioni di ristrutturazione di un diagramma ER.md",
@@ -257,21 +412,12 @@
     "Troubleshooting.md",
     "immagini/Pasted image 20260102172908.png",
     "3-Terzo anno/Basi di Dati/Indici/Indici.md",
-    "3-Terzo anno/Basi di Dati/algebra relazionale/espressioni dell'algebra relazionale equivalenti.md",
-    "3-Terzo anno/Basi di Dati/algebra relazionale/Algebra relazionale.md",
-    "3-Terzo anno/Basi di Dati/architettura dei DBMS/Architettura dei DBMS.md",
-    "3-Terzo anno/Basi di Dati/modello relazionale/Chiave e superchiavi.md",
-    "0-Mostarda/Calcolo delle probabilità e statistica.md",
-    "3-Terzo anno/Basi di Dati/modello relazionale/Modello dati relazionale.md",
-    "3-Terzo anno/Basi di Dati/modello relazionale/Vincoli di integrità.md",
     "3-Terzo anno/Basi di Dati/Indici/Senza nome",
     "immagini/Pasted image 20251227182911.png",
     "immagini/Pasted image 20251230162923.png",
     "immagini/Pasted image 20251230193141.png",
     "immagini/Pasted image 20251230193036.png",
     "immagini/Pasted image 20251230192947.png",
-    "immagini/Pasted image 20251230192808.png",
-    "immagini/Pasted image 20251230191824.png",
     "3-Terzo anno/Basi di Dati/Indici",
     "3-Terzo anno/Basi di Dati/Normalizzazione",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/autoencoder.ipynb",
@@ -280,7 +426,6 @@
     "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/lab2_nonsupervisionati.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/laboratorio4.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/Numpy e Elaborazione di Immagini.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

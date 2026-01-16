@@ -1,7 +1,13 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - optimize
+  - newton-raphson
+  - nlm
+  - ricerca stocastica
+  - multivariate
+  - discesa del gradiente stocastica
+  - simulated annealing
 data: "`2025-12-11 09:24`"
 ---
 - # Argomento:
@@ -104,15 +110,60 @@ data: "`2025-12-11 09:24`"
 					- Il che non sappiamo fare.
 				- Quindi si usa l' [[accept & reject algorithm]] e scegliere di conseguenza la _proposal distribution_
 					- E l'unica che funziona sempre è la uniforme, ma così si ritornerebbe alla versione basica
-				- 
 	- ## Locale:
 		- ### metodo del gradiente stocastico:
 			- Ogni punto $\theta_{j+1}=\theta_{j}+\epsilon_{j}$ che è quindi una sequenza di valori dipendenti in una _forma lineare_
 				- $\epsilon_{j}$ è la componente randomica che per questa sua caratteristica fa produrre alla relazione precedente una [[Catene di Markov]]
 			- Si può decidere di associare la probabilità che $\epsilon_{j}$ abbia un certo valore a:
-				- $P(\epsilon_{j})=N(0, \sigma^{2})$
-				- 
+				- $P(\epsilon_{j})=N(0, \sigma^{2})$ che la rende quindi una _passeggiata aleatoria_
+			- Tutto ciò fa si che non ci si muoverà sempre vero la direzione migliore ma piuttosto verso una casuale il che, controintuitivamente, porta benefici.
+			- #### Variazione:
+				- Si potrebbe anche usare una versione di Newton-Raphson
+					- $$\theta_{j+1}=\theta_{j}+\alpha_{j}*\nabla h(\theta_{j})\ \ \ \alpha_{j}>0$$
+						- Con $\nabla h(\theta_{j})$ il gradiente
+						- $\alpha_{j}$ è lo step-size
+				- Se $\Theta \subset \mathbb{R}^{P}$ allora il metodo del gradiente converge alla _soluzione esatta_
+				- Si necessita anche che $h(\theta)$ sia _convessa_
+			- #### Caratteristica stocastica:
+				- In problemi difficili la sequenza dei gradienti si potrebbe bloccare in un estremo locale di $h$; ma questa è una caratteristica di tutti i problemi locali.
+				- Per rendere il gradiente stocastico si approssima $\nabla h(\theta_{j})$ a:
+					- $$\nabla h(\theta_{j}) \simeq \frac{h(\theta_{j}+\beta_{j}c_{j})-h(\theta_{j}-\beta_{j}c_{j})}{2\beta_{j}}*c_{j}=\frac{\nabla h(\theta_{j}, \beta_{j}c_{j})}{2\beta_{j}}*c_{j}$$
+						- $c_{j}$ è un valore random uniforme che deriva da una sfera unità $||c||=1$
+				- Infine si ha quindi:
+					- $$\theta_{j+1}=\theta_{j}+\frac{\alpha_{j}}{2\beta_{j}}*\nabla h(\theta_{j}, \beta_{j}c_{j})*c_{j}$$
+					- Basando quindi lo spostamento si basa non sul gradiente ma su una sua approssimazione formata anche da un valore random $c_{j}$ che permette di non rimanere bloccati su un ottimo locale ma di _randomizzare la direzione di movimento_.
+					- $\alpha_{j}= \frac{1}{1+j}$
+					- $\beta_{j}=\frac{1}{\sqrt{1+j}}$
 		- ### Simulated annealing:
-			- 
+			- Si ha una sequenza di temperature: $T_{1,...,t}$ anche detto _scheduling_
+			- Si cerca di trovare un modo per connettere l'idea delle [[Catene di Markov]] e un metodo stocastico locale con l'idea che:
+				- Trovare la moda di $H(\theta)$ sia lo stesso di trovare l' $\arg \max h(\theta)$ 
+			- #### Def:
+				- Si parte da una densità $\pi_{0}$ con una _temperatura iniziale_ $T_{0}$ e si _estrae un valore inziale_ $\theta_{0}$
+				- Si aggiorna poi la densità in $\pi_{1}$ e la sua temperatura $T_{1}$ e estraggo $\theta_{1}$
+				- Si ripete il passo precedente 
+				- $\pi_{0,...,n }$ sono una sequenza di densità le cui _mode_ verranno saranno [confondenti](https://it.wikipedia.org/wiki/Confondente) con l' $\arg \max h(\theta)$ 
+			- #### Es:
+				- ![[Pasted image 20260114154829.png]]
+				- Ad ogni iterazione e quindi modifica della densità $\pi_{i}$ l'estrazione di $\theta_{i}$ (che tende ad essere la moda) si avvicinerà sempre di più al $\arg \max h(\theta)$ 
+			- #### Punti principali:
+				- _Come definire la sequenza di temperature_ $T$:
+					- Purtroppo dipende dal problema che si sta analizzando
+					- Spesso conviene usare una discesa lineare $T_{t}=\frac{1}{t}$ 
+					- Oppure $T_{t}=\frac{1}{\sqrt{t}}$
+				- Come estrarre da $\pi_{t}$ che continuerà a cambiare
+					- Come prima cosa serve conoscere queste densità
+					- $$\pi_{t}=H(\theta)\to \pi_{t}(\theta) ∝ e^{\frac{h(\theta)}{T_{t}}}$$
+						- Quindi l'unica cosa che fa cambiare le densità è la temperatura $T_{t}$
+						- Con una temperatura alta si avrà una densità abbastanza diffusa e con lo scendere di questa aumenterà il valore dell' $\exp$ risultando quindi in estrazioni concentrate sulla _moda_
+						- Questo tipo di trasformazioni sono chiamate _trasformazioni boltzman-gibbs_
+			- #### Algoritmo di Metropolis-Hasting:
+				- Si genera $c$ da una densità simmetrica $g$, anche chiamata _proposal_, che verrà accetta o rigettata
+					- $g$ deve essere simmetrica per non favorire una direzione piuttosto che un'altra
+				- Il nuovo valore $\theta_{t+1}$ viene generato in questo modo:
+					- $$\theta_{t+1}=\begin{cases}\theta_{t}+c & p=P(\theta_{t}+c)=\min\{\exp\left( \frac{\Delta h}{T_{j}} \right),1\}\\ \theta_{t} & P(\theta_{t})=1-p\end{cases}$$
+						- $\Delta h=h(\theta_{t}+c)-h(\theta_{t})$
+				- Se $h(c)\ge h(\theta_{t})$ allora $\theta_{t}+c$ viene accettato 
+				- Se $h(\theta_{t}+c)< h(\theta_{t})$, $c$ potrebbe comunque essere accettato
 - # Link Utili:
 	- 

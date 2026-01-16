@@ -31,7 +31,7 @@ data: "`2025-11-19 09:12`"
 	- è un metodo indiretto per fare sampling da una distribuzione.
 	- Indiretto perché si fa sampling da una distribuzione diversa e trovare i valori di un'altra seguendo delle condizioni.
 	- Si richiede quindi una densità $f:$ _target_ e una $g:$ _candidato_ 
-		- _Dobbiamo fare sampling_ da $f_{X}(x)$ ma risulta _più facile_ farlo da $g_{Y}(y)$ 
+		- _Dobbiamo estrarre_ da $f_{X}(x)$ ma risulta _più facile_ farlo da $g_{Y}(y)$ 
 	- Quello che si fa è generare un numero dalla distribuzione candidata: $g_{Y}(y)\sim y$ e si controlla che $u\le \frac{f_{X}(x)}{M*g_{Y}(y)}$ e se risulta vera allora $y$ può provenire da $f_{X}$ e quindi la si _accetta_ altrimenti la si _rifiuta_, si continua con il ciclo; $u$ proviene da una uniforme.
 	- Ci sono dei vincoli da soddisfare dopo aver scelto la densità candidata:
 		- $f$ e $g$ devono avere una struttura di supporto compatibile, _la struttura di supporto della candidata può anche essere più grande_ tanto quei valori li andranno scartati.
@@ -63,7 +63,7 @@ data: "`2025-11-19 09:12`"
 - # Es 2.5:
 	- Dimostrare che $P(accept)=\frac{1}{M}$ e $M\ge \frac{f}{g}$
 	- Qualsiasi funzione non negativa può essere una _densità_
-	- Si può calcolare la costante di normalizzazione $k$ per $\tilde{f}$ ovvero una densità non normalizzata.
+	- Si può calcolare la _costante di normalizzazione_ $k$ per $\tilde{f}$ ovvero una densità non normalizzata.
 	- Si ricorda che si accetta un valore $y$ quando:
 		- $$U\le  \frac{1}{M}*\frac{f_{X}(y)}{g_{Y}(y)}$$
 	- Si può quindi riscrivere come:
@@ -100,5 +100,34 @@ data: "`2025-11-19 09:12`"
 	- A) quindi si deve produrre valori dalla densità e calcolare la acceptance probability e una stima della costante di normalizzazione
 	- B) dato un supporto per $X$ proporre una densità candidata migliore $g_{4}(x)$
 	- C) usare [[integrazione di MonteCarlo#^8f0978|importance sampling]] per approssimare $\mathbb{E}_{f}[X]$ (usando $g_{1,...,4}$)
+- # ES. Esame:
+	- $$f(x)∝ \frac{e^{-x^{2}-1}}{\pi(1+\ln(x^{2}+\sqrt{2}))}$$
+	- So che $g(y, \nu)$ è la densità di una variabile aleatoria con distribuzione [t di Student](https://it.wikipedia.org/wiki/Distribuzione_t_di_Student) con $\nu=5$
+	- 2) scrivere l'algoritmo 
+		- calcolo la costante $\tilde{m}$
+			- `m = optimize(f(x)/g(x,5), interval=c(-5,5), maximum=T)$objective`
+		- Scrivo l'algoritmo:
+			- `AR.sampling<-function(n,f,g,rg,m)`
+				- `x<- rep(0,n)` un array di $n$ zeri
+				- `tries<-0` 
+				- `i<-1`
+				- `while(i<n)`
+					- `tries<-tries+1`
+					- `y<-rg(1)` è la funzione per estrarre dalla densità proposta e dipende da quella
+						- In sostanza estrae un valore da quella densità 
+					- `u<- m*runif(1)` si estrae da una uniforme $[0,1]$ e si moltiplica per $\tilde{m}$
+					- `if(u<(f(y)/g(y)))`
+						- `x[i]<-y`
+						- `i<-i+1`
+				- `return list(x=x, tries=tries)`
+			- `x<-AR.sampling(10^4, f, g, rg, m)`
+	- 3) calcolare la costante di normalizzazione $k$ e vedere quanto differisce da un risultato ottenuto con `integrate(f, lower=-5,upper=5)`
+		- `P.accept<- n/x$tries`
+		- `k<-1/(m*P.accept)`
+	- 4) plottare la distribuzione dei valori estratti, la funzione $f$ e la sua versione normalizzata e controllare se i valori sono _iid_
+		- `hist(x$x, freq = F, breaks =30)` plotto i valori estratti e `breaks` mi serve per spargere meglio il grafico
+		- `curve(f(x), c(-5,5), add = T, col="red")` plotto la funzione $f$
+		- `curve(f(x)/k, c(-5,5), add = T, col="blue")` plotto la funzione normalizzata
+		- `Acf (x$x)` plotto la [[3-Terzo anno/computational statistics/computational statistics#^68e289|ACF]] per verificare che i valori estratti siano iid.
 - # Link Utili:
 	- 

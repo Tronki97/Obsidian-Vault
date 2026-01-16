@@ -42,7 +42,6 @@ data: "`2025-12-01 09:10`"
 					- Con $\sqrt{v_{n}}$ la _deviazione standard_
 	- ## R:
 		- Un approccio deterministico numerico sarebbe usare le funzioni `integrate()` e  `area()` per calcolare il risultato di integrali però possono essere usate solo su funzioni ad una variabile
-	- 
 - # ES 3.1:
 	- Si usa la funzione `integrate()` per calcolare:
 		- $$\Gamma(\lambda)=\int_{0}^{\infty}x^{\lambda-1}*e^{-x} dx$$
@@ -60,8 +59,10 @@ data: "`2025-12-01 09:10`"
 		- $$=\int_{-\infty}^{\infty}\prod_{i=1}^{n}P(X_{i}|\theta)\ d \theta=\int_{\infty}^{\infty} \prod_{i=1}^{n} \frac{1}{\pi}* \frac{1}{1+(X_{i}-\theta)^{2}} \ d \theta$$
 - # importance sampling: ^8f0978
 	- _Campionamento di importanza_
+	- è un metodo per stimare la [[Media]] di $h(x)$ rispetto ad un'altra distribuzione $f(x)$ 
+		- Quando campionare da $f(x)$ risulta difficile si usa una terza distribuzione $g(x)$ chiamata _importance function_ o _funzione di importanza_.
 	- Si basa una alterazione della [[Teoremi limite#^c4bbb8|legge dei grandi numeri]]
-	- $$\mathbb{E}_{f}[h(X)]=\int_{X}h(x)* \frac{f(x)}{g(x)}*g(x)\ dx$$
+	- $$\mathbb{E}_{f}[h(X)]=\int_{X}h(x)*f(x)=\int_{X}h(x)* \frac{f(x)}{g(x)}*g(x)\ dx$$
 		- Avendo $g(x)$ come distribuzione candidata e $f(x)$ quella obiettivo
 		- $h(x)* \frac{f(x)}{g(x)}=h'(x)$ 
 	- Così da rendere l'integrale:
@@ -71,12 +72,36 @@ data: "`2025-12-01 09:10`"
 		- $$\frac{1}{n} \sum\limits_{i=1}^{n} \frac{f(x_{i})}{g(x_{i})}*h(x_{i})$$
 		- Però deve rispettare che:
 			- $Var\left( \frac{h(X)*f(X)}{g(X)} \right)<\infty$ ovvero $g(x_{i})=0 \implies f(x_{i})=0$
-			- Il supporto di $(h \times f)$ è contenuto in quello di $g$ 
+			- Il supporto di $(h \times f)$ è contenuto in quello di $g$  
 	- Risultando molto simile ad [[accept & reject algorithm]] riuscendo a estrarre da $g(x)$ e trasformando 
 		- $$\frac{f(x)}{g(x)}*h(x)=w*h(x)$$
 		- $w$ definito come _importance weight_ 
 	- Se presi su una sequenza di valori i pesi saranno definiti come:
 		- $$w_{i}=\frac{f(x_{i})}{g(x_{i})}$$
+	- ## ES. Esame:
+		- $$\mathbb{E}_{f}[h(x)]=\int_{X}e^{-x^{2}+5}* \frac{1}{\pi(1+x^{2})}$$
+		- So che la [[Variabili aleatorie|V.A]] $Y\sim Cauchy(0,1)$ ha densità: $\frac{1}{\pi(1+y^{2})}$
+		- Quindi traggo che:
+			- $f(x)=\frac{1}{\pi(1+x^{2})}$
+			- $h(x)=e^{-x^{2}+5}$
+		- Inoltre come funzione di importanza:
+			- $g(x)$ è una normale $N(0,15)$ 
+		- ### Procedimento:
+			- Estraggo da $g(x)$ ottenendo $y$:
+				- `y=rnorm(n,0,15)` $n$ valori
+			- Calcolo i pesi:
+				- `w=f(x)/g(x)`
+			- Calcolo i pesi di importanza:
+				- `w.imp = w*h(x)`
+			- Eseguo questi 3 passi per n volte per ottenere quindi una sequenza `x` di pesi 
+			- Calcolo il valore atteso approssimato:
+				- `val_att = cumSum(x)/(1:10^4)`
+			- Calcolo l'errore:
+				- `sqrt(cumsum(x-val_att)^2)/(1:10^4)`
+			- Plotto poi il valore atteso con i relativi errori:
+				- `plot(estint, type="l")`
+				- `lines(estint+2*esterr,col="purple",lwd=0.5)`
+				- `lines(estint-2*esterr,col="purple",lwd=0.5)`
 - # esponenziale troncata:
 	- $Exp(1,a)$ è una esponenziale che parte dal valore $a$, è utile per calcolare le _tail probabilites_ perché si necessita che le "code" delle distribuzioni devono decrescere altrimenti non rispetterebbero le proprietà delle densità che la loro integrale sia finita
 		- #immagine

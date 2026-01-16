@@ -55,7 +55,7 @@ data: "`2025-11-10 09:19`"
 		- Quindi si necessita della [[Distribuzioni notevoli di variabili aleatorie discrete|distribuzione uniforme discreta]]
 		- ### In R:
 			- Esiste la funzione `rgamma()` per la gamma e `rnorm()` per la gaussiana.
-		- ### ACF :
+		- ### ACF : ^68e289
 			- _Autocerralation function_: usato per misurare la correlazione di una sequenza di tempo 
 			- Ad ogni valore del grafico si guarda la correlazione del vettore shiftando i valori di una certa posizione in base al grafico.
 				- Alla posizione zero si confronta il vettore con se stesso 

@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - box-muller
 data: "`2025-11-17 16:22`"
 ---
 - # Argomento:
