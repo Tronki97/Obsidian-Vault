@@ -32,7 +32,7 @@
             }
           },
           {
-            "id": "24b4ecd1b8fe14e7",
+            "id": "81e11124502df420",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -56,7 +56,7 @@
             }
           },
           {
-            "id": "1b120648cc42ad5a",
+            "id": "6e2f19868d96a7a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,102 +77,6 @@
               },
               "icon": "lucide-file",
               "title": "Ottimizzazione di montecarlo"
-            }
-          },
-          {
-            "id": "6f2fd57ccfaceef2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "metodi di trasformazione generali"
-            }
-          },
-          {
-            "id": "3ff2afbdef204f56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "integrazione di MonteCarlo"
-            }
-          },
-          {
-            "id": "cf73990067cef279",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/computational statistics/computational statistics.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "computational statistics"
-            }
-          },
-          {
-            "id": "5aa5716789788571",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/computational statistics/probability integral transform.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "probability integral transform"
             }
           }
         ],
@@ -380,17 +284,18 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "Homepage.md",
+    "3-Terzo anno/computational statistics/Ottimizzazione di montecarlo.md",
+    "0-Mostarda/Computational statistics.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
     "3-Terzo anno/computational statistics/accept & reject algorithm.md",
     "3-Terzo anno/computational statistics/computational statistics.md",
     "3-Terzo anno/computational statistics/probability integral transform.md",
     "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
     "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
-    "0-Mostarda/Computational statistics.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
-    "Homepage.md",
     "3-Terzo anno/computational statistics/Notes_Slides.pdf",
-    "3-Terzo anno/computational statistics/Ottimizzazione di montecarlo.md",
     "immagini/Pasted image 20260113160048.png",
     "immagini/Pasted image 20260114154829.png",
     "immagini/Pasted image 20260113163106.png",
@@ -411,7 +316,6 @@
     "3-Terzo anno/Basi di Dati/Indici/indici basati sull'hashing.md",
     "Troubleshooting.md",
     "immagini/Pasted image 20260102172908.png",
-    "3-Terzo anno/Basi di Dati/Indici/Indici.md",
     "3-Terzo anno/Basi di Dati/Indici/Senza nome",
     "immagini/Pasted image 20251227182911.png",
     "immagini/Pasted image 20251230162923.png",

@@ -22,30 +22,6 @@ WHERE file.path !="template/Modello appunti.md"
 SORT Materia 
 ```
 
-
-
-
-## Ultimi modificati:
-<!-- QueryToSerialize: LIST FROM Primo Anno/Analisi -->
-
-<!-- QueryToSerialize: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
-<!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
-
-| File                                                                                                                                                     | Materia                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| [[Homepage]]                                                                                                                                | Homepage.md              |
-| [[Ottimizzazione di montecarlo]]                                                  | computational statistics |
-| [[Operazioni di ristrutturazione di un diagramma ER]] | Basi di Dati             |
-| [[transazioni]]                                                                          | Basi di Dati             |
-| [[Normalizzazione]]                                                                        | Basi di Dati             |
-| [[Troubleshooting]]                                                                                                                  | Troubleshooting.md       |
-| [[indici basati sull'hashing]]                                                           | Basi di Dati             |
-| [[Indici]]                                                                                                   | Basi di Dati             |
-| [[modello dati concettuale]]                                                   | Basi di Dati             |
-| [[Operazioni SQL]]                                                                                      | Basi di Dati             |
-<!-- SerializedQuery END -->
-<!-- SerializedQuery: TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia FROM "" WHERE file.path !=("template/Modello appunti.md" OR "Homepage.md")SORT file.mtime DESC LIMIT 10 -->
-
 # Primo Anno
 - [[Analisi matematica]]
 	- [x] Passato

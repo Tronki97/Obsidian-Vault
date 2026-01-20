@@ -42,6 +42,7 @@ data: "`2025-12-11 09:24`"
 				- Si estrae quindi da:
 					- $$l(\theta|\ x_{1},...,x_{n})=\frac{1}{\pi}\prod_{i=1}^{n} \frac{1}{1+(x_{i}-\theta)^{2}}$$
 					- Si assume che queste estrazioni siano [[Teoremi limite#^e7ebba|iid]] 
+					- Inoltre questa funzione risulta complicata per algoritmi di ottimizzazione siccome la sua derivata contiene molteplici zeri, avendo quindi numerosi estremi locali. 
 				- Inoltre trovare il massimo della log-likelihood è equivalente perché il logaritmo è una trasformazione monotòna quindi:
 					- $$argmax\ \log(h(\theta))=\theta^{*}$$
 	- ## Newton-Raphson:
@@ -51,7 +52,7 @@ data: "`2025-12-11 09:24`"
 				- $$\theta_{i+1}=\theta_{i}-\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}* \frac{dh}{d \theta}(\theta_{i})$$
 				- Dove la matrice delle derivate seconde è chiamata _hessiana_
 				- $\frac{dh}{d \theta}(\theta_{i})$ questo mi dice la direzione della funzione se cresce o decresce dicendomi quindi la direzione da seguire
-				- $\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}$: questo mi dice quanto grande deve essere il passo da fare nella direzione appresa e visto che è l'inversa mi richiede di fare piccoli passi nel caso siamo in discesa con alta inclinazione. 
+				- $\left[ \frac{d^{2}h}{d\theta\ d \theta^{T}}(\theta_{i}) \right]^{-1}$: questo mi dice _quanto grande deve essere il passo_ da fare nella direzione appresa e visto che è l'inversa mi richiede di fare piccoli passi nel caso siamo in discesa con alta inclinazione. 
 			- ### N.B:
 				- Si rischia di rimanere bloccati in un _ottimo locale_ però risultano più veloci.
 			- Se la funzione $h$ è quadratica allora questo metodo restituirà sicuramente il massimo globale.
@@ -165,5 +166,7 @@ data: "`2025-12-11 09:24`"
 						- $\Delta h=h(\theta_{t}+c)-h(\theta_{t})$
 				- Se $h(c)\ge h(\theta_{t})$ allora $\theta_{t}+c$ viene accettato 
 				- Se $h(\theta_{t}+c)< h(\theta_{t})$, $c$ potrebbe comunque essere accettato
+					- Con probabilità: $\exp\left\{ \frac{\Delta h}{T_{j}} \right\}$
+					- Inoltre con una temperatura $T$ alta aumenta la probabilità di accettare queste mosse peggiorative.
 - # Link Utili:
 	- 
