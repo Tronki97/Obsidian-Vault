@@ -14,7 +14,7 @@ data:
 - ## servizi non orientati:
 	- i _protocolli_ permettono la comunicazione nonostante questi servizi non ne siano orientati.
 		- anche quando i pacchetti vengono persi o arrivano duplicati a causa della velocità nella comunicazione di questi dati
-		- ogni elemento intermedio re-instrada il pacchetto e non guarda l'ordine dei pacchetti ma solo il _destinatario finale_ 
+		- ogni elemento intermedio re-instrada il pacchetto e non guarda l'ordine dei pacchetti ma solo il _destinatario finale_
 			- ### Conseguenza: 
 				- i dati è sono garantito che arrivino in ordine.
 			- ### risolvere: 

@@ -1,0 +1,72 @@
+---
+tags:
+aliases:
+  - cyber systems
+  - phishing
+  - social engineering
+  - supply chain
+  - ransomware
+  - zero day vulnerability
+  - window of opportunity
+data: "`2026-02-16 09:08`"
+---
+- # Argomenti:
+	- Criptografia
+		- Chiave simmetrica 
+		- Chiave asimmetrica
+	- Sicurezza di sistema e permessi
+	- Password e autenticazione
+		- Si fa in laboratorio.
+	- Sicurezza su internet, comunicazione anonima, privatezza dei dati
+	- Wireless network security
+	- Software security-buffer overflow
+- # Cybersecurity:
+	- Le pratiche per proteggere gli uomini, sistemi e dati sensibili dagli attacchi informatici usando regole policies e tecnologie vaire
+- # cyber attacco:
+	- Qualcuno che cerca di avere accesso ad un dispositivo o software al quale non ha l'accesso autorizzato con lo scopo di rubare, esporre o eliminare dati o risorse.
+	- ## attacchi più comuni:
+		- ### Phishing e social engineering:
+			- L'attaccante prova a ingannare l'utente per farsi dare password o comunque credenziali per poi poter accedere ai loro account per fare quello che vogliono.
+		- ### rischi interfacciati ad internet:
+			- Tutto quello che riguarda l'accesso ad internet.
+			- Si cerca di accedere ad un servizio cloud che è stato malconfigurato dove i sono infiltrati altri user o dove sono stati impiantati dei malware
+		- ### Password related:
+			- Si usano dei software o altre tecniche per indovinare le password (molto efficace sulle password facili).
+		- ### network-related e man in the middle:
+			- Gli attaccanti cercano di "ascoltare" su di un traffico di dati non correttamente criptato
+		- ### supply chain:
+			- I database di aziende che contengono le credenziali degli utenti vengono colpite e queste informazioni sensibili vengono leakate e in questo modo magari altri software che usano le stesse credenziali possono essere acceduti da attaccanti.
+		- ### DoS:
+			- L'invio di costanti pacchetti di facile invio ad un server per far si che sia sopraffatto dalla mole di pacchetti e quindi non riesca più ad inviarne o a mandarne
+		- ### Ransomware:
+			- Un software attacca il sistema di una organizzazione per evitare che essa abbia accesso ai propri dati e per liberarli serve pagare agli attaccanti un riscatto.
+- # ARPANET:
+	- Prima rete implementata
+	- Dichiarata come non sicura adotta il [[Livello trasporto#^157bc5|TCP]] molti anni dopo la creazione
+	- Viene attaccata dal _Morris' worm_ con il crash di circa il $10\%$ dei computer di _DARPANET_ creando di fatto un attacco _buffer overflow_
+- # Cyber systems:
+	- La cybersecurity non si occupa dei computer singoli ma dei cyber systems che Integrano:
+		- Computer 
+		- Comunicazioni
+		- Persone
+	- ## Definizioni extra:
+		- ### Vulnerabilità:
+			- Una debolezza da sfruttare per causare danni
+			- #### Zero day:
+				- Una vulnerabilità che non si è riusciti a identificare e risolvere
+		- ### Attacco:
+			- Metodo per sfruttare una vulnerabilità
+		- ### Minaccia:
+			- Un avversario motivato e capace che prepara un attacco
+		- ### Window of opportunity:
+			- Tempo da quando un attacco è avvenuto a quando viene rilasciata una patch che fixa la vulnerabilità.
+	- ## Strategie:
+		- Identificare e fixare le vulnerabilità
+		- Identificare gli attacchi e eliminare le vulnerabilità che quegli attacchi sfruttano. 
+- # Cybersicurezza IoT:
+	- Si basa sul rendere sicuri tutti quei dispositivi che si interfacciano su internet che possono essere sensori come altri moduli.
+	- La sicurezza serve per evitare che per esempio i sensori riescano a rilevare i dati correttamente
+	- ## ES:
+		- Si può considerare un sensore che rileva il particolato e si cerca di manometterlo per far si che rilevi male i dati e quindi si riesca a manipolare l'analisi a vantaggio di qualcuno. 
+- # Link Utili:
+	- 

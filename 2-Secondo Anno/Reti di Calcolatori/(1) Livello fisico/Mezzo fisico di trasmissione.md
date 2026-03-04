@@ -11,12 +11,14 @@ data: "`2024-09-25 13:12`"
 	- basso costo, metodo più usato.
 	- un problema è la dispersione di potenza quindi _Effetto Joule_
 	- ![[Pasted image 20240925135730.png]]
+	- Il problema della dispersione fa si che la lunghezza massima dei cavi per le comunicazioni non sia molto alta, infatti con l' [[Livello MAC nelle reti wireless#^0a88ba|ethernet]] si ha una portata massima di 100m senza _ripetitori o switch_
 - ## Fibra ottica
 	- tubi sottili, flessibili con una guaina in plastica nei quali passa _luce_ a una frequenza che viene decisa all'invio del segnale.
 	- Non può entrare _rumore_ (interferenza) dal mondo esterno. 
 	- Ha anche un costo molto alto.
 	- e per realizzarla c'è bisogno di termosaldare il diodo trasmettitore/ricevitore al cavo della fibra ottica.
 	- ![[Pasted image 20240925135715.png]]
+	- Ha una portata maggiore rispetto ai materiali metallici in quanto non subisce dispersioni elevate.
 - ## Wireless ^ddbf07
 	- viaggia senza nessun tipo di supporto alla propagazione (senza contare il campo elettromagnetico)
 	- ![[Pasted image 20240925140120.png]]

@@ -7,7 +7,7 @@ aliases:
 data: "`2024-11-15 13:44`"
 ---
 - # Internet control message protocol:
-	- protocollo per fare dei controlli su internet attraverso messaggi capibili da tutti quelli che usano questo protocollo.
+	- protocollo per _fare dei controlli su internet attraverso messaggi capibili_ da tutti quelli che usano questo protocollo.
 	- questi messaggi contengono notifiche di errore di configurazione e gestione dei cammini e collegamenti sono rappresentati come codici che rappresentano diversi errori:
 		- _rete di destinazione non raggiungibile_.
 			- ovvero il router di quella rete non mi risponde nonostante sia quello contenuto nella destinazione della tabella di [[Instradamento dei pacchetti e Routing|forwarding]] 
@@ -20,6 +20,13 @@ data: "`2024-11-15 13:44`"
 - # Applicazioni:
 	- ## Ping: ^be5400
 		- è un programma che permette di verificare la connessione tra due host.
+		- ### ES:  
+			- ![[Pasted image 20260129185020.png]]
+			- La causa del `no route to host` potrebbe essere la mancanza di un percorso fisico verso l'_IP_ di destinazione nonostante il [[DNS]] abbia un record con la risoluzione del nome e di conseguenza l'IP
+			- Infine il percorso sembra riprendere 
+		- ### ES:
+			- ![[Pasted image 20260129185330.png]]
+			- Potrebbe essere che manchi un [[DNS#^ad3cf8|record DNS]] per `flora.cs.unibo.it` oppure si ha sbagliato a scrivere il nome della macchina da pingare. 
 	- ## Traceroute:
 	    - è un programma che permette di verificare il percorso di un pacchetto da un host a un altro.
 	    - questo percorso non è sempre lo stesso, cambia in base al carico di lavoro dei router.

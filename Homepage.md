@@ -92,19 +92,19 @@ SORT Materia
 	- Voto: 27
 	- Tentativi: 1
 - [[introduzione all'apprendimento automatico]]
-	- [ ] Passato
+	- [x] Passato
 	- Quiz: 25
-	- Progetto: 
-	- Totale: 
+	- Progetto: 28
+	- Totale: 27
 	- Tentativi: 1
 - [[0-Mostarda/Computational statistics|Computational statistics]]
-	- [ ] Passato
-	- Voto: 
-	- Tentativi:
+	- [x] Passato
+	- Voto: 29
+	- Tentativi: 1
 - [[Informatica teorica]]
 	- [ ] Passato
 	- Tentativi:
-- [[Fondamenti di cybersecurity]]
+- [[0-Mostarda/Fondamenti di cybersecurity]]
 	- [ ] Passato
 	- Tentativi: 
 

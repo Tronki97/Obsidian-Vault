@@ -6,7 +6,7 @@ aliases:
   - filtraggio NAT
 data: "`2024-12-18 14:39`"
 ---
-- # Network access translation:
+- # Network address translation:
 	- Quando un router deve farsi vedere da internet deve avere un indirizzo IP pubblico e statico 
 		- ![[NAT1.webp||450]]
 	- Questo router contiene una tabella chiamata _NAT translation table_, che _associa un numero di porta alta ad una macchina che si trova all'interno della rete locale mascherata dal router_.
@@ -17,11 +17,12 @@ data: "`2024-12-18 14:39`"
 		+ ![[NAT2.webp||450]]
 	+ Si _possono avere reti NAT nidificate all'interno di altre reti NAT_.
 		+ Più le reti NAT sono nidificate più layer di mascheramento avremo per le nostre macchine presenti nella rete locale privata.
-	+ Le _reti tipiche di indirizzamento NAT sono la 10... (classe A) e la 192.168... (classe C)_.
+	+ Le _reti tipiche di indirizzamento NAT sono la 10.0.0.0 (classe A) e la 192.168.0.0 (classe C)_.
+		+ questo perché sono reti ad uso privato e non instradabili pubblicamente, quindi sono indirizzi riutilizzabili in milioni di reti private senza creare conflitti su internet.
 	+ Se un _pacchetto destinato alla rete locale privata dovesse uscire per sbaglio dal router dalla rete NAT, esso girerebbe all'infinito in rete_ in quanto non troverebbe mai una destinazione corretta.
 		+ Questo perché le _macchine vengono mascherate_ ed è come se non fossero visibili dall'esterno.
 		+ Questo ovviamente non succede in quanto appena il _Time To Leave (TTL) del pacchetto arriva a $0$ esso viene cestinato_.
-	+ Affinché una macchina all'interno della rete NAT sia visibile dall'esterno, bisogna eseguire il _port mapping_.
+	+ Affinché una macchina all'interno della rete NAT sia visibile dall'esterno, bisogna eseguire il _port forwarding_.
 		+ Come detto prima viene associata una porta ad una macchina, in modo da sapere con chi comunicare di preciso.
 	+ ## Regole di filtraggio:
 		+ Il router può anche applicare delle _regole di filtraggio_.

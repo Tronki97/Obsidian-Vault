@@ -4,8 +4,8 @@ aliases:
 data: "`2025-03-21 20:33`"
 ---
 - # Def :
-	-  Sia $X:\Omega \to \mathbb{R}$ [[Variabili aleatorie#^62da4f|V.A discreta]] con $S_{X}$ la _varianza_ di $X$ è:
-	[[Variabili aleatorie]]	- $$var(X)= \mathbb{E}[(X-\mathbb{E}[X])^{2}]=\sigma^{2}_{X}$$
+	-  Sia $X:\Omega \to \mathbb{R}$ [[Variabili aleatorie#^62da4f|V.A discreta]] con $S_{X}$ la _varianza_ di $X$ è:	
+		- $$var(X)= \mathbb{E}[(X-\mathbb{E}[X])^{2}]=\sigma^{2}_{X}$$
 			- Dove $X$ è una [[Variabili aleatorie|V.A]] e $\mathbb{E}[X]$ è un numero.
 	- Ed è di fatto quanto discosta un valore dalla sua [[Media]].
 	- ## OSS:

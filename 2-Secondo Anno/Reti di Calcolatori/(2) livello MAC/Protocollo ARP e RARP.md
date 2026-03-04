@@ -30,6 +30,13 @@ data: "`2024-11-20 14:04`"
 		- permette di evitare certi tipi di attacco come il _spoofing_.
 			- che consiste nel mandare un pacchetto ARP con l’indirizzo MAC di un’altra macchina ma con lo stesso IP 
 			- grazie all’ARP si nota che l’indirizzo IP è già associato ad un altro MAC e quindi si capisce che c’è qualcosa che non va e quindi si può bloccare il pacchetto.
+	- ## Calcolo latenza:
+		- $$L=Lreq + Lrep$$
+		- Dove $Lreq= T+P+A=Lrep$ 
+			- Con $T=\frac{data}{bandwidth}$: tempo di trasmissione
+			- $P=\frac{d}{C}$ che rappresenta la propagazione del segnale lungo il collegamento alla velocità della luce.
+			- $A$ è l'accodamento
+			- Questi valori possono variare in base a se appartengono alla richiesta o alla risposta.
 - # RARP:
 	- _Reverse Address Resolution Protocol_
 	- permette di associare un indirizzo MAC ad un indirizzo IP.

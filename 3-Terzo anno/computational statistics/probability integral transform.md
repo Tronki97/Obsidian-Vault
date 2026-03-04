@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - ecdf
   - empirical cdf

@@ -13,18 +13,19 @@ data: "`2025-06-24 18:28`"
 	- Un protocollo che sfrutta questo tipo di crittografia è $DES, 1993$
 		- Chiave a $56$ bit, dati suddivisi in blocchi da $64$ bit.
 		- Al giorno d'oggi si potrebbe bucare con un _brute force_ 
+	- Questi tipi di algoritmi risultano essere veloci ed efficienti per cifrare dati di grandi dimensioni 
 - # A chiave asimmetrica:
 	- Detta anche _a chiave pubblica_, esistono 2 chiavi:
 		- Quella _pubblica_ che tutti conoscono
 		- Quella _privata_ che conosce solo chi la genera.
 	- ![[Pasted image 20250714163612.png||400]]
-- # RSA:
+- # RSA: ^8edacb
 	- Sfrutta l' [[Aritmetica modulare]], perché ogni tipo di messaggio criptato o non può essere rappresentato con dei numeri, quindi criptare quel messaggio è criptare quel numero.
 	- ## Creare una coppia di chiavi:
 		- Si scelgono 2 numeri primi molto grandi $p$ e $q$ (es. $1024$ bit l'uno)
 		- $n=pq$  $z=(p-1)(q-1)$
 		- Si sceglie un $e< n$ tale che $e$ e $z$ sono [coprimi](https://it.wikipedia.org/wiki/Interi_coprimi).
-		- Si sceglie $d$ tale che $ed -1$ è esattamente divisibile per $z$
+		- Si sceglie $d$ tale che $ed -1$ è esattamente divisibile per $z$ ($ed \equiv 1\  (mod \  z)$)
 		- $K^{+}_{B}=(n,e)$ (_pubblica_)
 		- $K^{-}_{B}=(n,d)$ (_privata_)
 	- ## Criptare e decriptare:

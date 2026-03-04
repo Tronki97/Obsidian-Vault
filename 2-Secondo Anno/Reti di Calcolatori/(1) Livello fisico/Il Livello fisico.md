@@ -1,5 +1,5 @@
 ---
-tags: 
+tags:
 aliases:
   - throughput
   - narrowband
@@ -10,6 +10,7 @@ aliases:
   - CDMA
   - multiplexing
   - frequency planning
+  - OFDM
 data: "`2024-10-11 13:48`"
 ---
 - # Il livello Fisico:
@@ -24,8 +25,8 @@ data: "`2024-10-11 13:48`"
 	- La trasmissione richiede la codifica e decodifica di dati 
 		- Digitali: bit 
 		- Codifica di dati digitali usando i segnali analogici
-		- La velocità dei segnali è fissa siccome viaggiano sullo spettro elettromagnetico andando (quasi) a quella della luce
-		- Capacità del canale di trasmissione ovvero: il numero massimo di bit al secondo trasmissibili. Ciò che la determina è la lunghezza del canale su cui viaggiano i dati che quindi è l'indice del tempo di descrizione di ogni bit.
+		- La _velocità i trasmissione_ dei segnali è fissa siccome viaggiano sullo spettro elettromagnetico andando (quasi) a quella della luce
+		- _Capacità del canale di trasmissione_: il numero massimo di bit al secondo trasmissibili. Ciò che la determina è la lunghezza del canale su cui viaggiano i dati che quindi è l'indice del tempo di descrizione di ogni bit.
 			- Quindi la limitazione nel trasferire le informazioni spesso è delimitata dalla _capacità di leggerle piuttosto che dal trasferirle_. 
 		- ## Throughput:  ^e14f6f
 			- L'indice che dice quanti _b/s puri di sola informazione_ riesci a trasmettere sul canale 
@@ -34,6 +35,8 @@ data: "`2024-10-11 13:48`"
 		- C'è una sola radiofrequenza concordata per comunicare.
 		- C'è una bassa frequenza di bit trasmessi
 		- Comunicare attraverso frequenze diverse richiede coordinazione
+		- ### Interferenza:
+			- Un interferenza prolungata su quella singola frequenza porterebbe a una totale _perdita della comunicazione_
 	- ## Spread spectrum:
 		- Si usano più frequenze per comunicare.
 		- ### Frequency hopping:
@@ -43,6 +46,7 @@ data: "`2024-10-11 13:48`"
 			- Richiede che entrambi i dispositivi conoscano le stesse frequenze e il modo in cui saltare tra di esse.
 			- Collisioni inevitabili.
 			- ![[Untitled-1 1.webp| 500]]
+			- Un interferenza prolungata su una frequenza specifica potrebbe portare a una perdita parziale di comunicazione.
 		- ### Direct sequence: 
 			- L'informazione è spalmata su tutte le frequenze dell'intervallo.
 			- Si divide il segnale in "_chip_", ovvero frammenti distribuiti nell'intervallo di [[Reti Wireless#^041ebf|frequenza]] 
@@ -54,7 +58,21 @@ data: "`2024-10-11 13:48`"
 				- Si fa lo XOR tra i dati mandati dall'utente e i valori della _chipping sequence_ scegliendo quindi il canale di comunicazione.
 				- Si usa tutto lo spettro di frequenza.
 				- Allungando la _chipping sequence_ si riceve più energia ed è come se chi sta trasmettendo usasse più energia.
-	- 
+				- Questa tecnica migliora la robustezza del segnale, moltiplicandolo per la _chipping sequence_ a velovità più alta, distribuendo così l'informazione su una ampia gamma di frequenze nello stesso momento.
+	- ## CDMA:
+		- Viene implementata insieme al _DSSS_
+		- Si hanno 2 sender A e B ognuno con un messaggio e la propria _chipping sequence_.
+		- Chiave e messaggio vengono codificati con $0=-1$ e $1=+1$
+		- Il segnale da inviare si ottiene facondo lo XOR tra la chipping sequence e il messaggio.
+		- Si sovrappongono i segnali e si sommano le componenti.
+		- Dal segnale risultante si si estrae quello desiderato applicando la chiave giusta e se è positivo o negativo si risale a quale fosse il bit originale.
+		- ### ES:
+			- A vuole inviare `1` e ha codice `010011` mentre B vuole inviare `0` e ha codice `110101` 
+			- Risulta quindi che A invierà `-1 1 -1 -1 1 1` mentre B `-1 -1 1 -1 1 -1` 
+			- Ora sommando i segnali C riceverà `-2 0 -2 -2 2 0` 
+			- Se ora C volesse ricevere solo il segnale di A gli basterebbe fare il [[Prodotto scalare Euclideo]] tra il segnale e il codice di A
+				- $$(-2, 0, -2, -2, 2, 0)*(0,1,0,0,1,1)=6$$
+				- $6>0$ quindi $A$ ha inviato 1 
 - # Multiplexing:
 	- Serve per massimizzare il numero di comunicazioni contemporanee data una banda di frequenza, un tempo, uno spazio e una codifica.
 	- ## Frequency multiplexing:
@@ -64,6 +82,7 @@ data: "`2024-10-11 13:48`"
 		- Ma spreca larghezza di banda se il traffico è distribuito non uniformemente.
 		- _Spazio di guardia_: utile perché bisogna aspettare che la comunicazione sia effettivamente transitata al di fuori dell’area di comunicazione per evitare che quando si trasmette di nuovo ci sia disturbo.
 		- ### OFDM:
+			- _Orthogonal Frequency Division Multiplexing_
 			- Sfrutta i canali adiacenti in una banda.
 			- 20 $MHz$ divisi in sotto-bande; ogni banda divisa in $52$ _subcarriers_ di cui 4 utilizzati per gestione della trasmissione (_pilot_) e 48 utilizzati per trasferire i dati.
 			- Non ci sono spazi di guardia.
@@ -72,6 +91,16 @@ data: "`2024-10-11 13:48`"
 			- Questi segnali sovrapposti sono ortogonali tra loro e quindi non si disturbano.
 			- Permette di trasmettere $250.000$ simboli al secondo
 			- _convoluzione_: rappresenta quanti subcarrier vengono usati effettivamente per trasferire dati.
+			- #### ES:
+				- Suppongo un _OFDM_ con 4 carriers, $1 \frac{sym}{s}$ e modulazione [[Modulazione#^5d7ca9|BPSK]].
+				- I bit da inviare (dopo aver rimpiazzato 0 con -1)
+					- `1 1 -1 -1 1 1 1 -1 1 -1 -1 1`
+				- Questa sequenza la si divide in 4 sottosequenza ogniuna rappresentata da un sub-carrier
+					- _CH 1 (1 Hz)_: `1 1 1`
+					- _CH 2 (2 Hz)_: `1 1 -1`
+					- _CH 3 (3 Hz)_: `-1 1 -1`
+					- _CH 4 (4 Hz)_: `-1 -1 1`
+				- Il segnale inviato sarà la somma dei segnali di ogni canale.
 	- ## Time multiplexing:
 		- Un canale si prende tutto lo spettro per un certo periodo di tempo.
 		- C'è solo un portatore del medium alla volta e il throughput è alto anche per molti utenti.
@@ -87,6 +116,7 @@ data: "`2024-10-11 13:48`"
 		- Tutti i canali usano lo stesso spettro allo stesso tempo.
 		- Non serve coordinazione o sincronizzazione, da una buona protezione contro le interferenze
 		- Ma ha bassi ratei di condivisione di dati e un costo maggiore per la rigenerazione dei segnali.
+		- Permette a più utenti di trasmettere sulla stessa frequenza distinguendo i segnali in codici unici.
 - # Frequency planning:
 	- Si riusano certe frequenze solo in caso ci sia una certa distanza tra le stazioni base
 	- ![[Pasted image 20250415154256.png]]
@@ -97,9 +127,3 @@ data: "`2024-10-11 13:48`"
 		- La stazione base sceglie la [[Reti Wireless#^041ebf|frequenza]] in  base a quelle già usate dalle stazioni vicine
 		- C'è una maggiore capacità in celle con più traffico.
 		- L'assegnamento può essere anche in base alle misure di interferenza.
-- # CDMA:
-	- Si hanno 2 sender A e B ognuno con un messaggio e la propria chipping sequence.
-	- Chiave e messaggio vengono codificati con $0=-1$ e $1=+1$
-	- Il segnale da inviare si ottiene facondo lo XOR tra la chipping sequence e il messaggio.
-	- Si sovrappongono i segnali e si sommano le componenti.
-	- Dal segnale risultante si si estrae quello desiderato applicando la chiave giusta e se è positivo o negativo si risale a quale fosse il bit originale.

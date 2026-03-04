@@ -1,0 +1,67 @@
+---
+tags:
+  - TODO
+aliases:
+  - albero di computazione
+  - classi di calcolabilità
+  - classe R
+  - classe RE
+data: "`2026-03-02 17:11`"
+---
+- # Macchina non deterministica:
+	- Una macchina che per specifiche coppie non specifica un solo passo ma ne specifica un insieme 
+	- ## Def:
+		- $$N=<\Sigma, \Gamma, \not {b}, Q, q_{0}, F, \delta>$$
+			- $\delta: Q \times \Gamma \to 2^{Q \times \Gamma \times \{\leftarrow,\to \}}$
+				- Ovvero si ha un insieme di possibili prossime mosse 
+		- Per definizione le [[Macchina di Turing deterministica||macchine deterministiche]] sono un tipo di macchine _non-deterministiche_ che hanno un insieme di prossime mosse, per ogni coppia, che è di cardinalità 1
+	- ## Computazione:
+		- ![[Pasted image 20260302172321.png|486]]
+		- Prendo come esempio la configurazione $q_{0}01$
+			- Quindi risulta $q_{0}01 \vdash 1q_{0}1\vdash q_{1}10\vdash$
+				- $q_{0}\not{b}10$
+					- Che risulta fermarsi in uno stato non accettante e quindi _rifiuta_
+				- $1q_{1}0$
+					- $q_{0}10\vdash q_{1}\not{b}00\not{b}\vdash q_{2}00$ risulta essere uno _stato accettante_ 
+					- $10q_{1}\not{b}\vdash10\not{b}q_{2}\not{b}$ che risulta essere uno _stato accettante_
+		- Per definizione non possono esistere fisicamente quindi ci si chiede come si può accettare una stringa?
+		- ### Albero di computazione:
+			- è un albero i cui nodi sono tutte le possibili configurazioni che la macchina può osservare nel momento in cui processa la stringa $w$ la radice è la [[Macchina di Turing deterministica#^aa3d99|configurazione iniziale]] e si ha un arco tra una [[Macchina di Turing deterministica#^e7168b|configurazione]] e l'altra se la configurazione figlia è una _legal succsessor_ della padre
+			- _Si accetta la stringa di input quando nell'albero esiste almeno un percorso dalla radice ad una configurazione finale e accettante_
+			- Rifiuta l'input se tutte le possibili computazioni portano ad una configurazione non accettante.
+			- #### ES:
+				- ![[Pasted image 20260302172405.png|421]]
+		- ### Potere espressivo:
+			- è uguale a quello di quelle deterministiche perché basterebbe creare una macchina deterministica che esplora l'albero di computazione per arrivare alla configurazione accettante.
+		- ### ES:
+			- Data $N$ non deterministica se ne vuole ricavare una DET $M$ dove $L(N)=L(M)$
+			- N è mononastro mentre $M$ è [[Macchina di Turing deterministica#^5439ad|multi-nastro]] avendone 2
+			- Sul primo nastro si mette $ID_{0}x$ e sul secondo si ricopia $ID_{0}$ 
+			- Si procede a copiare sul primo nastro i passi successivi a quello che si è appena scritto sul secondo ottenendo quindi $ID_{0}xID_{1}^{'}xID_{1}^{''}x$ si ripete questo per ogni configurazione, di fatto eseguendo una ricerca per larghezza per essere sicuri di non incappare in una computazione infinita e quindi riuscire a raggiungere una computazione che accetta in tempo finito.
+			- Da qui si riesce a comprendere come qualsiasi linguaggio riconosciuto da una macchina non-deterministica può essere riconosciuto da una deterministica.
+		- Ora serve sapere questa simulazione quanto costa in termini di tempo.
+		- ### Analisi dei costi:
+			- Suppongo ci siano $C$ figli nell'albero per ogni nodo arrivando quindi a sapere che dopo $m$ passi ci siano $c^{m}$ figli avendo $O(c^{m})$ che è un costo esponenziale.  
+			- _Non si riesce a sapere se sia possibile ridurre il costo computazionale, ma non si sa nemmeno se sia impossibile_
+	- ## Guess & Check:
+		- è una tecnica di programmazione delle macchine di Turing non-deterministiche dove:
+			- Si fa "indovinare" alla macchina il percorso _giusto_ e poi si _controlla_ sia corretto
+		- ### ES:
+			- $$L=\{ww|w\in (0|1)^{+}\}$$
+- # Tesi di Church-Turing:
+	- Tutto ciò che è calcolabile lo è da una macchina di Turing, rimane tesi perché non si ha una propria definizione di che cos'è calcolabile.
+- # Classi di calcolabilità:
+	- Una classe di calcolabilità è un insieme di linguaggi.
+	- ## RE:
+		- _ricorsivamente enumerabili_
+		- Comprende ciò che c'è dentro R
+		- I linguaggi che sono solo in RE ma non R sono quelli _semi-decidibili_ ovvero che vengono accettati, _ma non decisi_, da una _MdT_
+	- ## R:
+		- è la classe dei linguaggi o [[Introduzione a Informatica Teorica#^dc8067|Problemi]] ricorsivi
+		- Ci sono tutti i linguaggi decisi da una qualche _MdT_
+		- è anche detta classe dei _linguaggi decidibili_ 
+		- Chiamata così per motivi storici.
+		- Tutto ciò che non si trova qui dentro non è decidibile
+	- Al di fuori di queste die classi ci sono quelli non-decidibili
+- # Link Utili:
+	- 

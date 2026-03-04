@@ -1,0 +1,64 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2026-02-17 15:17`"
+---
+ - # Argomento:
+	-  digital cosando LAB
+- # Corrente elettrica:
+	- La misura di una quantità di elettroni che transita in una unità di tempo
+	- L'unità di misura è l'ampere ($A$)
+- # Potenza:
+	- Come unità di misura ha i Watt (W)
+	- $$P=\Delta V*I=R*I^{2}=\frac{V^{2}}{R}$$
+- # differenza di potenziale:
+	- Rappresenta la pressione esercitata dalla corrente elettrica.
+	- Si misura in Volt ($V$) 
+- # convenzione colori:
+	- Poli positivi: Rosso
+	- Poli negativi: Nero
+- # prima legge di Ohm:
+	- $$\Delta V=RI$$
+	- Più la resistenza aumenta più l'intensità di corrente diminuisce e la tensione aumenta.
+- # seconda legge di Ohm:
+	- $$R=\rho * \frac{l}{S}$$
+		- Ovvero la resistenza è uguale alla _resistività_ moltiplicata per la _lunghezza_ del materiale conduttore diviso la _sezione_ di quel materiale. 
+- # Energia 
+	- $E$ si misura in $Ws$
+- # Legge dei nodi:
+	- _prima legge di Kirchoff_
+	- Un punto con n fili ha che la somma di tutte le correnti entranti ed uscenti è uguale a $0$
+- # Legge delle maglie:
+	- _seconda legge di kirchoff_
+	- In una maglia la somma algebrica delle differenze di potenziale su ogni componente è uguale a $0$
+- # Condensatore:
+	- Con corrente continua si comporta da circuito aperto dopo aver raggiunto la saturazione
+	- è composto da due lamine metalliche che non si toccano con un dielettrico in mezzo.
+	- ## Funzionamento:
+		- Quando si applica differenza di potenziale tra le due lamine si accumulano le cariche di un tipo su quelle superfici creando quindi un campo elettrico
+		- Quando la differenza di potenziale viene meno si crea una corrente elettrica che quindi rappresenta la scarica del condensatore
+	- $$C=\epsilon_{0}*\epsilon_{d} \frac{S}{d}$$
+		- $\epsilon_{0}$ costante dielettrica nel vuoto
+		- $\epsilon_{d}$ costante dielettrica del dielettrico nel condensatore
+		- $S$ superficie
+		- $d$ distanza
+	- $$Q(t)=C*V_{c}(t)$$
+	- $$\frac{dQ(t)}{dt}=i(t)=C*\frac{dV_{c}(t)}{dt}$$
+	- Può permettere di selezionare la parte di corrente alternata che ci interessa 
+- # Induttore:
+	- In corrente continua All'inizio fa passare poca corrente per poi condurre come un circuito chiuso. 
+	- è una spirale di filo elettrico attorno un nucleo ferromagnetico.
+	- $$L=\mu_{0}*\mu_{r} \frac{n^{2}A}{l}$$
+		- $n$ numero di spire 
+		- $A$ area della sezione delle spirali
+		- $l$ delle spire
+		- Si misura in _Henry_
+	- $$\Phi(t)=L*i(t)$$
+		- La variazione di un flusso magnetico genera una differenza di potenziale
+	- $$\frac{d\Phi(t)}{dt}=V(t)=L* \frac{di(t)}{dt}$$
+- # Valore tensione efficace:
+	- Quello che si legge con un multimetro su una corrente alternata che rappresenta una tensione continua equivalente che è
+		- $$\frac{\max(V_{c}(t))}{\sqrt{2}}$$
+- # Link Utili:
+	- 

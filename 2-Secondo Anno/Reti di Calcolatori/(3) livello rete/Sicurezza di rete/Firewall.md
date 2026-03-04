@@ -30,27 +30,28 @@ data: "`2025-03-10 11:17`"
 		- ### ES:
 			- Blocco di datagrammi in ingresso e uscita con campo di protocollo IP = 17 e con porta di ingresso e destinazione = 23
 			- Succede che tutti i flussi UDP in ingresso e uscita sono bloccati
-		- 
+		- Questo tipo di firewall è sensibile ad attacchi DoS con rateo basso (i pacchetti sono inviati lentamente)
+			- In quanto richiede al firewall di ricordare i pacchetti inviati in precedenza e quindi di riconoscere un pattern particolare.
 	- ## Stateful packet filter:
 		- Tengono traccia dello stato delle connessioni TCP e permettono di fare regole più complesse.
 			- Se ho già un [[Livello trasporto#^297138|socket]] aperto con un certo ip allora posso aprire un altro socket con lo stesso ip.
 			- Se una connessione ha raggiunto il timeout allora non viene permesso nessun pacchetto in arrivo da quella connessione. 
 		- Si usa una ACL con un campo in più che indica lo stato della connessione. 
-		- 
 	- ## application gateways:
 		- Filtrano il traffico in base al tipo di applicazione.
 			- Come il sistema antispam che filtra le mail.
 		- Richiede ad ogni utente di istanziare una connessione telnet solo attraverso il gateway
 		- Per utenti autorizzati il gateway apre una connessione telnet con l’host di destinazione
 		- Il Router filtra bloccando tutte le connessioni telnet che non originano per il gateway
+		- Lavora a [[Livello applicazione]] quindi è più lento in quanto, agendo come un [[Caching#^ddc180|proxy server]], deve terminare la connessione attualmente attiva, ispezionare il contenuto dei pacchetti e crearne infine una nuova.
 - # Limitazioni:
-	- _ip spoofing_: Il router non riesce a controllare che il mandante di un pacchetto dati sia effettivamente chi dice di essere 
+	- _ip spoofing_: Il router non riesce a controllare che il mittente di un pacchetto dati sia effettivamente quello indicato sul pacchetto inviato.
 	- Ogni applicazione necessita del proprio gateway
 	- _tradeoff_: tra sicurezza e flessibilità 
 	- Il sistemista deve quindi continuare ad aggiornare le ACL per mantenere la sicurezza
 - # Intrusion detection systems (IDS):
 	- A differenza dei packet filtering che lavorano sugli header TCP/IP, non guarda la correlazione tra diverse sessioni
-	- Gli IDS guardano il contenuto dei pacchetti e cercano di capire se sono pericolosi o meno.
+	- Gli IDS _guardano il contenuto dei pacchetti e cercano di capire se sono pericolosi o meno_.
 	- Guardano la correlazione tra diversi pacchetti:
 		- [[NAT#^100d60|port scanning]] 
 		- Network mapping

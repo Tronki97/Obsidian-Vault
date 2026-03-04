@@ -11,10 +11,28 @@ data: "`2024-12-20 13:48`"
 	- può causare problemi per la sicurezza per chi ci accede e può leggere le richieste e ricerche fatte. A differenza dei cookies non necessità l’autorizzazione dell’utente. 
 	- ## Caching:
 		- utilizzato per connessioni a internet nel caso in cui il canale “access link” sia molto più piccolo della LAN in quanto immagazzina l’accesso a certe informazioni che quando chieste di nuovo saranno più veloci ad accederci
-- # Proxy servers:
+- # Proxy servers: ^ddc180
 	- La cache lato utente per non doversi interfacciare all'_origin server_ per ogni richiesta.
 	- Il browser manda tutte le richieste a lui, e se può soddisfarle manda lui le risposte, altrimenti vengono mandate, le richieste, all'origin server.
 	- Utile oltre ad accorciare i tempi anche per diminuire il carico sul server originario. 
 - # ES:
 	- Se un proxy può soddisfare metà delle richieste vuol dire che un browser per ottenere una risposta impiegherà il tempo per far arrivare la richiesta al proxy, mentre se non può soddisfarla dovrà interfacciarsi all'origin il che impiegherà più tempo.  
 	- $$X*9ms + (1-X)*309ms=97ms \implies X(9 - 309) = 97 -309 \implies X= \frac{212}{300}=70,7\%$$
+- # Cache control:
+	- Per controllare la validità dei dati in cache, HTTP-1 introduce 2 meccanismi di controllo:
+		- ## Server-specified expiration:
+			- Il **server indica una scadenza della risorsa**, usando l'header _Expires_ o _Cache-Control_.
+			- ### Expires:
+				- Se la data di scadenza è già passata, la richiesta deve essere rivalidata.
+				- Tuttavia, in caso la richiesta accetti risposte scadute o l'_origin server_ non può essere raggiunto, la cache può rispondere con la risposta scaduta ma con il codice di ritorno `110` (_Response is stale_).
+			- ### Cache-Control:
+				- Permette di controllare altri comportamenti della cache, specificando delle direttive:
+					- `must-revalidate`:
+						- la risposta scaduta non può mai essere rispedita --> la risorsa dev'essere presa dall'origin server, e in caso di mancata risposta la cache deve rispondere con `504` (_Gateway timeout_);
+					- `no-cache`:
+						- La richiesta deve sempre essere rivalidata;
+- # Validazione:
+	- Nella maggior parte dei casi, anche dopo la scadenza della risorsa, questa _non sarà stata modificata_, e quindi _tecnicamente la cache potrebbe continuare a servirla_.
+	- Ci sono 2 modi per verificarlo:
+		- usare `HEAD`: la cache fa la richiesta, e verifica l'ultima data di modifica (richiede una richiesta in più);
+		- _usare una richiesta condizionale con appositi header_ (`If-Modified-Since` e `If-None-Match`): se la risorsa è stata modificata, il server risponderà con un `200 OK` e la risorsa aggiornata, altrimenti con un `304 Not Modified` e il body vuoto, riducendo il numero di richieste.

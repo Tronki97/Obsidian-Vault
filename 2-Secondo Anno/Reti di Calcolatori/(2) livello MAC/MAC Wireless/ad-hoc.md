@@ -26,6 +26,7 @@ data: "`2025-06-28 11:42`"
 				- _DIFS_ (distributed): dopo i quali qualsiasi stazione può trasmettere.
 			- ![[Untitled 3 1.webp]]
 		- ### DCF:
+			- _distibuted coordination function_
 			- Il modello di accesso al canale è [[time domain first#^6bda93|CSMA]] 
 				- _Carrier sensing_
 				- [[time domain first#^7657bf|backoff]] esponenziale basato sugli slot

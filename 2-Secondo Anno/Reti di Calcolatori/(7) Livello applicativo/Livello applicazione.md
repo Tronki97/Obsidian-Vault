@@ -16,6 +16,13 @@ data: "`2025-06-26 11:11`"
 		- tutti gli host sono contemporaneamente sia client che server
 		- ogni host cerca di soddisfare le richieste ricevute e agisce da client quando spedisce ad altri host delle richieste
 		- è un'architettura scalabile in quanto l'aumento dei peer aumenta sia la capacità del servizio che la domanda.
+		- La formula del tempo di distribuzione risulta essere:
+			- $$T_{P2P} \ge \max\left\{ \frac{F}{u_{s}}, \frac{F}{d_{min}}, \frac{N*F}{u_{s}+\sum u_{i}} \right\}$$
+				- Dove $F$ è la dimensione del file
+				- $N$ è il numero di clienti a cui bisogna distribuire i dati
+				- $u_{s}$ è la capacità di upload del server
+				- $d_{min}$ è la velocità minima di download tra quelle di tutti gli utenti
+				- $\sum\limits u_{i}$ è la somma di tutte le capacità di upload di tutti gli utenti. 
 	- I vari processi possono essere _Client_ che inizializzano la comunicazione e _server_ che aspettano di essere contattati. Questi processi mandano e ricevono messaggi dai propri [[Livello trasporto#^297138|socket]].
 - # Protocolli:
 	- gestiscono l’invio e la ricezione di richieste e risposte, definendo i campi dei vari messaggi e il significato delle informazioni che è necessario includere
@@ -24,7 +31,7 @@ data: "`2025-06-26 11:11`"
 	- ## Proprietari:
 		- sviluppati e controllati da specifiche aziende o entità e non standardizzati ma relegati a uno specifico servizio proprietario.
 - # Cenni HTTP:
-	- è un protocollo stateless basato sul concetto di client/server, le cui connessioni possono essere:
+	- è un protocollo _stateless_ basato sul concetto di client/server, le cui connessioni possono essere:
 		- ## Persistenti:
 			- Si possono inviare molti oggetti sulla stessa connessione [[Livello trasporto#^157bc5|TCP]]
 			- Rimane aperto anche dopo la risposta del server.
@@ -37,3 +44,9 @@ data: "`2025-06-26 11:11`"
 	- Piccoli file di testo che vengono inviati dal server al client e memorizzati localmente che servono a riconoscere un client, è un modo per rendere [[HTTP]] stateful.
 	- Sono salvati lato utente e contengono: autorizzazioni, carrelli, stato della connessione...
 	- ![[Cookies.webp||400]]
+- # MIME:
+	- Multipurpose Internet Mail Extensions.
+	- MIME ridefinisce il formato del corpo di RFC 822 per permettere:
+		- L'invio di messaggi con _testo in formato non ASCII_
+		- _Un insieme estensibile di formati per messaggi non testuali_ (come immagini, video...)
+		- Messaggi multi-parte

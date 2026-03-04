@@ -9,6 +9,7 @@ data: "`2025-04-24 16:48`"
 - [[Architettura protocolli di internet]]
 - [[Architettura standard dei protocolli]]
 - [[Protocolli di rete organizzati a livelli]]
+- [[ACKNOWLEDGEMENT]]
 - [[Il Livello fisico]]
 	- [[Mezzo fisico di trasmissione]]
 	- [[Reti Wireless]]
@@ -34,7 +35,6 @@ data: "`2025-04-24 16:48`"
 	- [[Indirizzamento IPv4]], [[IPv6 e tunneling IPv4]]
 		- [[Sottoreti]]
 	- [[Instradamento dei pacchetti e Routing]]
-	- [[NAT]]
 	- [[Protocollo ICMP]]
 	- [[SDN]]
 	- [[DHCP]]
@@ -48,8 +48,8 @@ data: "`2025-04-24 16:48`"
 		- [[Secure E-mail]]
 		- [[Firewall]]
 - [[Livello trasporto]]
+	- [[NAT]]
 - [[Livello applicazione]]
 	- [[DNS]]
 	- [[Caching]]
-- 
 # Link Utili:

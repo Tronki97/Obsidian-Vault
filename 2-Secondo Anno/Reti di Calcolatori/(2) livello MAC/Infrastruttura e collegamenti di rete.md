@@ -42,4 +42,4 @@ aliases:
 		- ES: 
 			- [[Mezzo fisico di trasmissione#^ddbf07||Wi-Fi]] e cavo [[Topologia di rete#^0240d4||Ethernet]]
 				- però con questi non è possibile implementare il protocollo [[Topologia di rete#^4bad82||token ring]] 
-		
+		- _A questo livello il broadcast serve per poter comunicare con tutti i router adiacenti_.		

@@ -13,5 +13,6 @@ data: "`2025-09-26 10:12`"
 - # problemi stampa 3D:
 	- Mettendo l'SVG a livello del layer più alto non risultava visibile il disegno che mi serviva
 	- Per risolverlo ho dovuto aggiustare la colorazione dell'SVG o qualcosa del genere devo ancora riuscire a replicare il problema
+		- Principalmente devo cambiare il colore dall'impostazione laterale dell'oggetto. Credo...
 - # Link Utili:
 	- 

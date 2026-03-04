@@ -29,12 +29,12 @@ data: "`2024-11-29 15:33`"
 		- ### DNS iterativo:
 			- quando il client manda una richiesta che il DNS server non conosce lui manda la richiesta ad un altro server che si trova ad un livello superiore di quello che ha ricevuto la richiesta.
 			- N.B: è sempre il client a mandare la richiesta.
-			- ![[Untitled 1 1.webp|350]]
+			- ![[Untitled 1 1.webp|250]]
 		- ### DNS ricorsivo:
 			- il client manda la richiesta al server DNS e il server DNS si occupa di fare tutte le richieste necessarie per trovare l'indirizzo IP.
 			- in questo modo si alleggerisce il carico del client.
-			- ![[DNS Ricorsivo.webp||350]]
-	- ## Record DNS:
+			- ![[DNS Ricorsivo.webp||250]]
+	- ## Record DNS: ^ad3cf8
 		- Visto che il DNS è fondamentalmente un database distribuito con i nomi e gli indirizzi IP associati, ci sono diversi tipi di record DNS che sono chiamati RR(_record di risorse_).
 		- ### I più comuni sono:
 			- _A_ (address record): associa un nome a un [[Indirizzamento IPv4|IPv4]].
@@ -51,7 +51,7 @@ data: "`2024-11-29 15:33`"
 				- Value: nome dell’host del server autoritativo del dominio.
 		- ### Esempio di inserimento:
 			- Il registrar DNS (organizzazione che gestisce la registrazione dei nomi di dominio) inserisce due RR nel server del _TLD.com_ per il _dominio networkuptopia.com_:
-				- 1. Un record _NS_ collega il dominio al nome del server DNS autoritativo `ns.networkuptopia.com`.
+				- 1. Un record _NS_ collega il dominio al nome del server DNS autoritativo `ns.networkuptopia.com`. ^2567ab
 					- RR: `networkuptopia.com`, `dns1.networkuptopia.com`.
 				- 2. Un record _A_ che collega il nome del server DNS autoritativo con l'indirizzo IP corrispondente 
 					- nel RR: `dns1.networkuptopia.com`, `212.212.212.1`
@@ -65,7 +65,7 @@ data: "`2024-11-29 15:33`"
 	- _DDoS_:
 		- Si bombarda un server DNS di richieste inutili e facili da spedire rendendo inaccessibile quel server per il traffico legittimo.
 - # ES:
-	- ![[Pasted image 20241129154611.png]]
+	- ![[Pasted image 20241129154611.png|350]]
 - # Importante:
 	- _non è necessario avere il DNS per poter navigare su internet_ ma è molto più comodo.
 	- DNS sfrutta principalmente [[Livello trasporto#^bd8258|UDP]] per le richieste quando invece un pacchetto di risposta è troppo grande oppure ci sono fallimenti nelle richieste viene impiegato il [[Livello trasporto#^157bc5|TCP]].

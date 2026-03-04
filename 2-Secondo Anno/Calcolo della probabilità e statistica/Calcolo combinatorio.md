@@ -107,7 +107,7 @@ data: "`2025-03-04 13:37`"
 			- Urna con 90 numeri. Estrazione di 5 numeri senza ripetizione.
 			- $\Omega=D_{90,5}$ e $|\Omega|=\frac{90!}{85!}=90*89*88*87*86=$ numero di combinazioni possibili.
 			- $$\mathbb{P}(\{w\})=\frac{1}{|\Omega|}=\frac{85!}{90!}$$
-	- ## Permutazioni:
+	- ## Permutazioni: ^96af78
 		- $P_{n}:=D_{n,n}$ e $|P_{n}|=n!$
 	- ## Combinazioni:
 		- Dato un insieme $E$ di $n$ elementi, si indica con $C_{n,k}$ la classe dei sottoinsiemi di $E$ contenenti $k$ elementi ovvero:

@@ -8,6 +8,7 @@ aliases:
   - IPsec
   - SSL
   - nonce
+  - master secret
 data: "`2025-02-25 17:00`"
 ---
 - # Intro:
@@ -38,8 +39,8 @@ data: "`2025-02-25 17:00`"
 		- per evitare che l’attaccante registri tutti quanti i record si usa una _nonce_.
 			- _Ovvero un numero usato una volta sola generato a caso_ 
 	- ## Control information:
-		- a volte l’attaccante effettua un attacco di troncamento, fingendo un segmento di chiusura TCP e quindi gli utenti pensano ci siano meno dati di quelli effettivi. 
-		- per evitare ciò si aggiunge un campo di _type.
+		- a volte l’attaccante effettua un _attacco di troncamento_, fingendo un segmento di chiusura TCP e quindi gli utenti pensano ci siano meno dati di quelli effettivi. 
+		- per evitare ciò si aggiunge un campo di _type_ che di fatto mi dice a cosa serve quel segmento che sta venendo letto (chiusura, dati, ecc...) 
 			- ![[Pasted image 20250225172924.png]]
 			- $$MAC=MAC(M_{X}, \text{sequence||type||data})$$
 	-  ![[Pasted image 20250225173051.png||400]]
@@ -65,12 +66,19 @@ data: "`2025-02-25 17:00`"
 	- Gli IP rimangono visibili esternamente per garantire il traffico di dati attraverso i router ma esiste comunque una parte cifrata con i veri indirizzi IP. 
 	- ![[Pasted image 20250627115039.png|500]]
 - # Ipsec
+	- Si colloca tra il [[livello Rete]] e il [[Livello trasporto]]
+	- Garantisce:
+		- [[Sicurezza Di Rete#^cb41ce|integrità]]
+		- [[autenticazione]]
+		- Prevenzione verso un _attacco replay_
+		- [[Sicurezza Di Rete#^92bd4c|confidenzialità]]
 	- Ha due modalità di funzionamento:
-		- Trasporto dove il datagramma è emesso e ricevuto da un sistema finale e protegge i protocolli di livello superiore.
+		- Trasporto:  dove il datagramma è emesso e ricevuto da un sistema finale e protegge i protocolli di livello superiore.
 			- ![[Pasted image 20250627120824.png|500]]
 		- Tunneling:
 			- ![[Pasted image 20250627120853.png|500]]
-	- utilizza due protocolli:
+			- Incapsula l'intero pacchetto IP originale in uno nuovo 
+	- utilizza due modelli:
 		- ## AH (authentication header):
 			- autentica i pacchetti IP e quindi verifica che non siano stati modificati. 
 			- ma non garantisce la [[Sicurezza Di Rete#^92bd4c|confidenzialità]]

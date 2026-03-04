@@ -1,0 +1,133 @@
+---
+tags:
+aliases:
+  - configurazione
+  - configurazione accettante
+  - configurazione finale
+  - successore valido di una configurazione
+  - linguaggio di una macchina di turing
+  - memoria nello stato
+  - macchina multi-traccia
+  - macchina multi-nastro
+  - running time
+  - configurazione iniziale
+data: "`2026-02-23 16:10`"
+---
+- # Preconcetti:
+	- ## Analisi linguaggi:
+		- Si suppone di avere il problema del grafo $<G,s,t>$
+			- $s,t\in G$ e esiste un percorso da $s$ a $t$
+		- Da qui si può definire in linguaggio associato 
+	- ## Linguaggi:
+		- Sia $\Sigma = \{a,b,...\}$ definito come _alfabeto_
+		- Una _stringa_ $w$ su $\Sigma$ se è un concatenamento di $0$ o più simboli $\in \Sigma$
+		- Si denota con $\Sigma^{*}$ l'insieme di tutte le stringhe che possono essere composte da $0$ o più simboli $\in \Sigma$
+		- $L$ è un linguaggio su $\Sigma$ se $L \subseteq \Sigma^{*}$ 
+		- ### Problema di Decidere un linguaggio:
+			- Dato un linguaggio $L$ fissato per una stringa $w$ decidere se $w\in L$ o meno 
+			- In questo caso l'input di questo [[Introduzione a Informatica Teorica#^dc8067|Problema]] è solamente la stringa $w$ in quanto $L$ risulta essere già fissato.
+	- ## Automa:
+		- Sono strutture che cambiano comportamento in base agli stimoli che riceve.
+		- Sono in grado di risolvere il problema della decisione dei linguaggi.
+		- Gli automi visti finora non sono in grado di riconoscere i linguaggi più sofisticati.
+- # Macchina di Turing:
+	- è una macchina caratterizzata da un nastro con delle posizioni con delle cellette che possono contenere dei simboli, è un nastro infinito nelle due direzioni (destra e sinistra)
+	- La macchina ha una testina posizionata sul nastro ed è in grado di leggere il simbolo della celletta su cui è posizionato.
+		- La testina può spostarsi a destra o a sinistra in maniera tale da poter _rileggere un simbolo su cui era già passata senza consumare quel simbolo_.
+	- _il programma di una macchina di Turing è fissato non può fare altro oltre a quello per cui è stata progettata_
+	- La macchina può anche scrivere su di una cella sovrascrivendola.
+	- Può essere vista come algoritmo perché essendo un automa si può trovare in vari stati di funzionamento e in base allo stato in cui è sovrascrive qualcosa e si sposta verso un altro stato di funzionamento (che può essere anche lo stesso) andando avanti cercando di decidere un determinato linguaggio. 
+	- ## ES:
+		- Si suppone di avere un linguaggio $L=\{a^{m},b^{m}|m\ge 0\}$ e si vuole progettare una _macchina di turing_ che riconosca questo linguaggio. 
+		- Se la macchina si ferma su uno stato accettante allora la macchina risponderà di _si_ altrimenti se si arresta in uno stato non accettante allora dirà di _no_
+		- ![[Pasted image 20260220185219.png|500]]
+	- ## Formalizzazione:
+		- $$M=<Q, q_{0}, F, \Sigma, \Gamma, \not{b}, \delta >$$
+		- $\Gamma$:  insieme di tutti i simboli che possono apparire sul nastro e $\Sigma \subseteq \Gamma$ e $\not{b}\in \Gamma$
+		- $\delta: Q \times \Gamma \to Q \times \Gamma \times \{\to, \leftarrow \}$
+		- $F$ sono gli stati finali e accettanti
+		- ### Configurazione: ^e7168b
+			- Oppure ID (_instantaneous description_)
+			- è una fotografia dello stato corrente di configurazione della macchina:
+				- _Cosa c'è sul nastro_, _dove è la testina_, _qual è lo stato in cui si trova la macchina_
+			- è una stringa come $aq_{1}abb$
+				- Sul nastro c'è $aabb$
+				- Si è nello stato $q_{1}$
+				- E la testina è sul simbolo a destra dello stato quindi la seconda "a"
+		- ### Configurazione iniziale: ^aa3d99
+			- La configurazione in cui si trova la macchina nel momento in cui la si accende. 
+		- ### Configurazione accettante:
+			- Si dice accettante quando al suo interno compare uno stato accettante
+		- ### Configurazione finale:
+			- Quando dallo stato in cui si trova la macchina essa non può fare altri passi
+		- ### Successore valido di una configurazione:
+			- Sia $C_{1}$ una configurazione, $C_{2}$ è il successore valido per $C_{1}$ sse:
+				- $$C_{1}\vdash_{M} C_{2}$$
+				- Quindi si può arrivare a $C_{2}$ da $C_{1}$ in un passo
+		- ### Computazione parziale per M:
+			- è una sequenza di configurazione $C_{1},...,C_{n}$ tale che:
+				- $$C_{1}\vdash_{M} C_{2}\vdash_{M}...\vdash_{M} C_{n}$$
+		- ### Computazione di M su w:
+			- $w$ è una sequenza di caratteri.
+			- è una sequenza di configurazioni $C_{1},...,C_{n}$ tali che:
+				- $C_{1}\vdash_{M} C_{2}\vdash_{M}...\vdash_{M} C_{n}$
+			- In cui $C_{1}=q_{0}w_{1},...,w_{2}$
+				- Descrive la configurazione iniziale della macchina quando si accende
+			- E $C_{n}$ è una _configurazione Finale_
+		- La macchina $M$ accetta la stringa $w$ se la computazione se parte da una computazione iniziale si ferma su una configurazione finale e accettante 
+		- Non accetta se non è vero che si arresta su uno stato accettante ovvero: 
+			- Potrebbe fermarsi e dire no
+			- Oppure potrebbe non fermarsi mai
+				- Il che può essere un problema perché di fatto un algoritmo deve fermarsi e non si può sapere quando si ferma un algoritmo 
+	- ## Linguaggio di una macchina di Turing:
+		- $$L(M)=\{w|M(w)=1\}$$
+		- Sia $L$ un linguaggio, $M$ _decide_ $L$ se $\forall w \in \Sigma^{*}$
+			- $w\in L \to M\ accetta \ w$
+			- $w\notin L \to M\ arresta \ e \ dice\  NO$
+		- $M$ _riconosce_ $L$ se $\forall w \in \Sigma^{*}$
+			- $w\in L \to M \ accetta\  w$
+			- $w\notin L\to M \ non \ accetta\  w$
+	- ## ES:
+		- $$L=\{ww^{R}|w\in (0,1)^{*},w^{R} \ è reverse\}$$
+		- ![[Pasted image 20260220185513.png|500]]
+	- ## ES con uso di marcatori:
+		- $$L=\{a^{n}b^{m}|m>n>0\}$$
+		- In pratica al posto di cancellare il simbolo dalla cella che ho letto lo sostituisco con un altro simbolo ($X, Y...$) ciò mi permette  di guardare e marcare i simboli che _non si trovano agli estremi della stringa_ 
+		- ![[Pasted image 20260223162050.png|500]]
+	- ## Memoria nello stato:
+		- $<q_{1},->$. M ha la disponibilità di utilizzare dei registri per memorizzare uno o più simboli.
+		- $q_{1}$ è lo _stato_ e l'altro elemento è la _cella di memoria_ con $-$ indica che è vuota.
+		- La quantità di simboli memorizzabili viene determinato alla progettazione e non può cambiare.
+		- $$L=10^{*}|01^{*}$$
+			- Si parte quindi leggendo $\alpha \in \{0,1\}$ spostandosi nello stato $q_{1}$ e inserendolo nella memoria ovvero $<q_{1}, \alpha>$ 
+			- E si cicla sullo stato $q_{1}$ leggendo $\bar{\alpha}$ che è l'opposto di $\alpha$ e ci si ferma quando si legge $\not b$
+		- _Usando la memoria tuttavia non si ha un modello più potente in quanto basterebbe aggiungere più stati ed archi per ottenere lo stesso potere espressivo._
+			- Hanno quindi come obiettivo la compattezza dei diagrammi.
+	- ## Macchine multitraccia:
+		- Hanno un solo nastro diviso in più tracce che ognuna può contenere simboli diversi.
+		- La testina legge/scrive una colonna su, quindi, più tracce, quando si muove lo fa in blocco leggendo contemporaneamente tutte le tracce.
+		- _Si suppone che all'avvio sulla prima traccia ci sia l'input e le altre siano vuote_.
+		- Il numero di tracce è fissato al momento della progettazione.
+		- #### ES:
+			- $L=\{w\#w|w\in (a|b)^{+}\}$
+			- Al posto che marcare l'input e quindi perderlo si marcano le celle delle tracce sotto quindi nel caso in futuro serva l'input non l'ho perso.
+		- _non risulta più potente in quanto si potrebbe utilizzare un alfabeto di simboli che rappresenta ogni combinazione dei simboli messi sulle varie tracce_
+	- ## Macchine multi-nastro: ^5439ad
+		- è il modello più flessibile che si ha
+		- Possiede più nastri e quindi più testine che si possono muovere indipendentemente
+		- Il numero di nastri e testine è fissato.
+		- L'input si trova sul primo nastro.
+		- Quando non si indica l'azione da fare su un determinato nastro vuol dire che il simbolo su cui era rimane tale e il nastro non si muove.
+		- ### ES:
+			- $$L=\{w|w\in(a|b|c)^{*}, \text{\#a = \#b = \#c}\}$$
+			- Uso un nastro per l'input e uno per ogni lettera leggendo quindi ogni lettera dell'input e inserendoli nei nastri appositi, una volta finito li leggo in contemporanea sugli altri nastri per verificare che siano lo stesso numero.
+		- _non risulta più potente di quella mono-nastro perché potrebbe essere ricondotta ad una macchina multi-traccia con il doppio di tracce rispetto ai nastri_ 
+			- Sulla tracce di indice dispari c'è il contenuto dei nastri 
+			- Su quelle di indice pari ci metti i marcatori che indicano le posizioni delle testine.
+	- ## Running time:
+		- Il numero di passi che fa la macchina prima di fermarsi.
+		- Una macchina multi traccia per fare gli stessi movimenti di quella multi nastro deve farne 
+			- $2m+2m+2k$ dove $m$ è il numero dei passi di quella multi-nastro dalla partenza del cursore e $k$ è il numero di nastri.
+			- $$\sum\limits_{i=1}^{n}4i+2k\le \sum\limits_{i=1}^{n}4n+2k\le n*(4n+2k)=O(n^{2})$$
+- # Link Utili:
+	- 

@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - importance sampling
 data: "`2025-12-01 09:10`"

@@ -68,5 +68,14 @@
       "key": "M"
     }
   ],
-  "easy-typing-obsidian:easy-typing-format-switch": []
+  "easy-typing-obsidian:easy-typing-format-switch": [],
+  "cmenu-plugin:editor:toggle-code": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
+    }
+  ]
 }

@@ -1,0 +1,94 @@
+---
+tags:
+  - TODO
+aliases:
+  - cifrario di cesare
+  - shift cipher
+data: "`2026-02-20 11:50`"
+---
+- # Cifrario di Cesare (shift cipher):
+	- Si tratta di un cifrario di sostituzione 
+	- ![[Pasted image 20260220115146.png|500]]
+		- Ogni lettera viene spostata della stessa posizione.
+	- La chiave risulta essere il numero di shift fatti per ogni lettera quindi in questo caso è $k=3$    
+	- ## Vista matematica:
+		- Si ha un insieme di plaintext $P$ che sono parole sull'alfabeto $\{a,...,z\}$ ai quali si associa un numero $\{0,...,25\}$
+		- Lo spazio delle chiavi $k$ è $\{0,...,25\}$
+		- Sia $P=C=k=Z_{26}$ per $0\le k\le 25$
+		-  $e_{k}(p)=p+k\  mod  \ 26$
+		- $d_{k}(p)=p-k\  mod  \ 26$
+		- Con $p\in P=Z_{26},\ \  c\in C=Z_{26}$
+	- ## Sicurezza del cifrario:
+		- La chiave $k$ può essere trovata facilmente anche solo con un attacco _brute force_ in quanto le chiavi sono massimo $26$ e per trovare la chiave giusta basta trovare un decriptazione del messaggio che abbia senso
+- # Cifrario a sostituzione monoalfabetica:
+	- Lo spazio delle chiavi $K$ è tutte le possibili permutazioni di $\Sigma=\{A,...,Z\}$
+	- Criptazione: Data la chiave (permutazione) $\Pi$:
+		- Ogni lettera $X$ nel plaintext $p$ viene rimpiazzata con $\Pi(X)$
+	- Decriptazione: data la chiave $\Pi$
+		- Ogni lettera $Y$ nel ciphertext $c$ è rimpiazzata con $\Pi^{-1}(Y)$
+	- ![[Pasted image 20260220121024.png|500]]
+	- ## Criptoanalisi:
+		- Con quell'alfabeto si hanno un totale di $26!\simeq 2^{88}$ [[Calcolo combinatorio#^96af78|permutazioni]] 
+		- ![[Pasted image 20260220121735.png|500]]
+		- Le lettere "e", "t", "a" sono quelle più usate nella lingua inglese
+			- Che risultano avere una frequenza del: $12.7\%, 9.1\%, 8.1\%$
+		- Si può anche analizzare la coppia di lettere più usate e poi il trio e così via 
+		- ### ES:
+			- ![[Pasted image 20260220122328.png]]
+			- In questo esempio $B$ risulta esserci più volte e quindi potrebbe risultare come $E$
+- # Cifrario Affine:
+	- Un caso speciale del cifrario di sostituzione dove la _funzione di criptazione_ è:
+		- $$e(x)=ax+b(mod\ 26)$$
+			- Con $e(x), x,a,b\in \mathbb{Z}_{26}$
+	- Se avessi $a=1$ avrei di nuovo un _shift chipher_
+	- Ripasso su [[Aritmetica modulare]]
+	- La decriptazione di questo cifrario è possivbile se l afunzione $e(x)$ è [[iniettiva]]
+	- Per qualsiasi $y\in \mathbb{Z}_{26}$ si vuole la congruenza 
+		- $$ax+b\equiv y(mod\ 26)= ax\equiv y-b (mod\ 26)$$
+		- Per avere quindi una _soluzione unica_ per $x$ e sarà così sse $MCD(a,26)=1$
+	- ## ES:
+		- Si suppone che $MCD(a,26)=d>1$ e che $MCD(4,26)=2$
+		- Si ha che $e(x)=4x+7\ mod\ 26$ non è valido perché per esempio le lettere "a" ed "n" entrambe vengono criptate in "H"
+		- ![[Pasted image 20260220125908.png]]
+	- ## Esercizio:
+		- $$e(x)=ax+b(mod\ 26)$$
+			- Con $a=5$ e $b=4$
+		- 1) $a=5$ è una scelta valida?
+			- Risulta di si perchè $MCD(5,26)=1$
+		- 3) cifrare la parola "sicurezza"
+			- ![[Pasted image 20260220130335.png]]
+			- Per ogni lettera devo fare $5*x+4$ dove $x$ è il numero della lettera
+			- $e(s)=16$, $e(i)=18$, $e(c)=14$, $e(u)=0$, $e(r)=11$, $e(e)=24$, $e(z)=$ 
+		- 4) calcolare la funzione di decifratura $d(y)$
+			- $$y=e(x)=5x+4 \implies 5x=y-4 \implies 5^{-1}*5*x=5^{-1}(y-4)\implies x=5^{-1}(y-4)$$
+			- Lo finiremo un altra volta
+- # cifrario di Vigénere:
+	- è un _cifrario di sostituzione polialfabetica_
+	- Data $m$ intero positivo
+	- $P=C=(\mathbb{Z}_{26})^{n}$ 
+	- $K=(k_{1},...,k_{m})$ _parola chiave_
+	- Si definiscono
+		- _criptazione_: 
+			- $$e_{k}(p_{1},...,p_{m})=(p_{1}+k_{1}, p_{2}+k_{2},...,p_{m}+k_{m})(mod\ 26)$$
+		- _decriptazione_:
+			- $$d_{k}(c_{1},...,c_{m})=(c_{1}-k_{1},...,c_{m}-k_{m})(mod\ 26)$$
+		- $p_{i}, c_{i}$ rappresenta un numero intero che corrisponde a una lettera dell'alfabeto
+	- ## ES:
+		- ![[Pasted image 20260220132201.png|500]]
+		- Con $m=6$
+	- ## Criptanalisi:
+		- Serve capire la lunghezza della keyword e quindi trovare $m$.
+		- Si divide il testo cifrato in $m$ criptazioni shift cipher
+		- Si fa quindi un analisi di frequenza su ogni shift cipher.
+- # cifrario Hill:
+	- Sia $m\ge 2$ un intero $P=C=(\mathbb{Z}_{26})^{m}$
+	- $$K=\{m \times m \ \text{matrice invertibile su }Z_{26}\}$$
+	- Per una chiave $K$ si definisce 
+		- $e_{k}(x)=x*K$
+	- Per la decriptazione invece:
+		- $d_{k}(y)=y*K^{-1}$
+	- E tutte le operazioni sono fatte in $\mathbb{Z}_{26}$
+- # rotori:
+	- Si fanno molteplici sostituzioni sulla stessa lettera 
+- # Link Utili:
+	- 

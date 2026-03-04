@@ -1,0 +1,133 @@
+---
+tags:
+  - TODO
+aliases:
+  - rete di Feistel
+data: "`2026-02-27 11:31`"
+---
+- # Motivazioni:
+	-  quando si necessita di inviare i dati con un certo delay
+- # Struttura:
+	- Viene costruito per iterazioni espandendo la chiave in tante sotto-chiavi quante sono le iterazioni fatte.
+	- Si applica una funzione $R$ a cui si passa il _plaintext_ e la chiave $k_{1}$ che genera $m_{2}$ e si ripete il processo $n$ volte `R(k_i, m_i)` fino ad ottenere il _ciphertext_
+	- ![[Pasted image 20260227113822.png|649]]
+- # DES:
+	- Data _encryption_ standard
+	- Si parte con un blocco da 8 byte e una chiave $k$ da $56$ bit
+		- Ciò implica l'avere $2^{56}$ chiavi.
+	- ## Rete di Feistel:
+		- Date delle funzioni $f_{1,...,d}:\{0,1\}^{n} \to \{0,1\}^{n}$ non necessariamente invertibili
+		- L'obiettivo è quello di costruire una rete che se presa come funzione unica sia invertibile $F:\{0,1\}^{2n}\to \{0,1\}^{2n}$
+		- ![[Pasted image 20260227114820.png|808]]
+			- $R_{i}=f_{i}(R_{i-1})\oplus L_{i-1}$
+				- Con $\oplus$ inteso come _XOR_
+			- $L_{i}=R_{i-1}$
+		- ### L'invertibilità della rete:
+			- Si prova a costruire l'inverso
+			- Sapendo che $L_{i}=R_{i-1}$ ottengo che $R_{i}=f_{i}(L_{i})\oplus L_{i-1}$ che posso trasformare in:
+				- $f_{i}(L_{i})\oplus R_{i}=L_{i-1}$
+			- Si è riusciti quindi a ricavare l'inverso di ogni blocco
+			- ![[Pasted image 20260227115926.png|739]]
+		- ### circuito di Decriptazione:
+			- Si applicano le funzioni $f_{1,...,d}$ in ordine inverso.
+			- Questa rete risulta utile per riuscire a creare una funzione invertibile partendo da una serie di funzioni arbitrarie
+			- ![[Pasted image 20260227120147.png]]
+		- ### rete da 16 round:
+			- Che è quello usato da _DES_ 
+			- $f_{1,...,16}:\{0,1\}^{32}\to \{0,1\}^{32}$ con $f(x)=F(k_{i},x)$
+				- $k_{i}$ è la sotto-chiave e una certa permutazione di bit selezionati da $k$
+			- ![[Pasted image 20260227120346.png|600]]
+	- ## Lunghezza delle chiavi:
+		- Nella chiave da $8$ Byte per ognuno di essi l'ottavo bit viene usato come [[Correzione di errori#^2d37e7|Bit di parità]] 
+		- Ognuno di quei bit è ottenuto facendo lo XOR dei $7$ bit prima.
+	- ## Generazione della chiave:
+		- Si parte dalla chiave $k$ 
+		- ![[Pasted image 20260227121232.png]]
+		- Si divide la chiave principale $K$ in due sottochiavi temporanee da $28$ bit  usando $PC-1$ 
+		- Con $C_{i}=LS_{i}(C_{i-1})$ 
+		- $D_{i}=LS_{i}(D_{i-1})$
+		- $K_{i}=PC-2(C_{i}D_{i})$
+		- $LS$ significa left shift che appunto shifta di una posizione se $i=1,2,9,16$ altrimenti shifta di 2 posizioni 
+		- $PC-2$ e $PC-1$ sono matrici che sono date dallo standard.
+		- ### Matrici di scelta di permutazione:
+			- #### PC-1
+				- ![[Pasted image 20260227121756.png]]
+					- Questa matrice non comprende i bit di parità della chiave.
+					- Scambiando i bit in maniera casuale in base alle posizioni segnate nelle matrici.
+			- #### PC-2:
+				- ![[Pasted image 20260227121845.png]]
+					- Seleziona la sottochiave da $48$ bit per ogni round dalla chiave da $56$ bit
+					- Facendo lo stesso processo di scambio che si fa con PC-1
+	- ## le funzioni:
+		- Uno schema di rappresentazione delle funzioni $f_{i}(x)=F(k_{i},x)$
+		- ![[Pasted image 20260304094534.png|592]]
+		- ### S-box:
+			- è una funzione, $\{0,1\}^{6}\to \{0,1\}^{4}$
+			- ![[Pasted image 20260304094729.png|635]]
+			- In questo caso la stringa di bit $011011$ verrebbe trasformata in $1001$ perché 
+				- I bit esterni (primo e ultimo) sono $0$ e $1$
+				- Mentre i 4 bit interni sono $1101$ 
+			- Riferirsi all'immagine con la zona evidenziata.
+			- _per scegliere una certa S-box servono determinate regole_ perché farlo a caso risulterebbe in un cifrario non sicuro
+				- _nessun bit di output dovrebbe essere vicino ad una funzione lineare dei bit di input_
+				- _Servono 4 pre-immagini per ottenere un solo output_
+- # Effetto valanga:
+	- Una proprietà desiderabile per algoritmi di criptazione è che una _piccola modifica_, della chiave o del _plaintext_, dovrebbe risultare in un _cambiamento sostanziale_ del _testo cifrato_  
+	- In particolare cambiare un bit della chiave o del plaintext dovrebbe far cambiare molti bit del testo cifrato
+- # Double DES:
+	- Non si usa a causa di un _meet in the middle_ attack
+	- Dato $m$ e $c$ l'obiettivo è quello di trovare $(k_{1},k_{2})$ tali che $E(k_{1}, E(k_{2},m))=c$ o equivalentemente trovare $(k_{1},k_{2})$ tali che $E(k_{2},m)=D(k_{1},c)$ 
+		- ![[Pasted image 20260302093212.png|609]]
+		- Il punto centrale rappresenta il messaggio prima di effettuare la seconda encriptazione
+	- ### M(eet)ITM attack:
+		- Si fa una tabella che si mette in ordine sulla seconda colonna.
+		- ![[Pasted image 20260302093415.png|515]]
+		- Poi per ogni $k\in \{0,1\}^{56}$:
+			- Si testa se $D(k,c)$ è nella seconda colonna della tabella e in tal caso si setta $E(k^{i},m)=D(k,c)\implies (k^{i},k)=(k_{2},k_{1})$
+		- ![[Pasted image 20260302093833.png|671]]
+		- #### Analisi costi:
+			- Tempo per costruire e sortare la tabella: $2^{56}*\log(2^{56})$
+			- Tempo di ricerca nella tabella: $2^{56}*\log(2^{56})$
+			- Il totale è la somma dei due ottenendo un valore $<2^{63}<<2^{112}$ 
+			- 
+- # 3DES:
+	- Blocco da $8$ byte e una chiave da $3*56=168$ bit 
+	- Si fanno 3 operazioni:
+		- $(k_{1},k_{2},k_{3},m)=E(k_{1},D(k_{2}E(k_{3},m)))$
+	- Risulta 3 volte più lento del _DES_ 
+	- Il tempo per bucarlo risulta essere $2^{118}$
+- # DESX:
+	- $EX(k_{1},k_{2},k_{3},m)=k_{1}\oplus E(k_{2},m\oplus k_{3})$
+	- Nel momento in cui uso una stessa chiave più di una volta l'encriptazione non risulta sicura.
+	- Le chiavi sono da $64$ bit tranne $k_{2}$ che è da $56$ 
+- # Criptoanalisi differenziale:
+	- Risulta essere un [[Criptografia#^8d2a6c|Chosen-plaintext]] attack 
+	- Si confronta lo XOR di due plaintext con lo XOR di 2 ciphertext corrispondenti 
+	- $\Delta_{P}=P_{1} \oplus P_{2},\Delta_{C}=C_{1}\oplus C_{2}$
+		- La distribuzione dei delta può rivelare informazioni sulla chiave 
+	- Stranamente _DES_ è resistente 
+- # AES:
+	- Advanced encryption standard
+	- Blocchi da 128 bit e chiavi da $128, 192\ o\  256$ bit
+	- Si vengono a generare 44,52 o 60 sottochiave tutte da $32$ bit 
+	- Ogni round esegue in paralle lo 4 step:
+		- _subBytes_ sostituzione byte per byte usando _S-box_
+		- _ShiftRows_ permutazione che ciclicamente shifta le ultime 3 righe nello stato
+		- _MixColumns_: sostituzione che usa un campo di Galois $GF(2^{8})$
+			- Fa sostituzioni nel set definitio di Galois
+		- _Add round key_ si fa lo XOR bit per bit con una chiave espansa.
+	- ## Parametri:
+		- ![[Pasted image 20260302101722.png|458]]
+		- ### Numero di chiavi:
+			- Con 128 bit si hanno $2^{128}=3.4*10^{38}$ possibili chiavi
+			- Con $192$ si hanno $2^{192}$ 
+			- Con 256 si ha $2^{256}$ 
+	- ## Struttura:
+		- ![[Pasted image 20260302103833.png|611]]
+	- ## Attacchi:
+		- Best key recovery: risulta 4 volte migliore rispetto a ricerca esaustiva.
+		- Related key: dati $2^{99}$ coppie I/O da 4 chiavi correlate si può ricoverare le chiavi in tempo $2^{99}$ 
+- # Trivia:
+	- Potrebbe fare domande sulle reti Feistel e richiede di farle il grafico e determinare output rispetto all'input. 
+- # Link Utili:
+	- 

@@ -1,7 +1,6 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
 data: "`2025-11-19 09:12`"
 ---
 - # preconcetti:

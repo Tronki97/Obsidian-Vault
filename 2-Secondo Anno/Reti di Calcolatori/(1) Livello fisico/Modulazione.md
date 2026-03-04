@@ -20,6 +20,7 @@ data: "`2025-07-01 12:18`"
 	- ## ASK:
 		- ![[Pasted image 20250415161025.png]]
 		- Si prende la frequenza del carrier e se si ha un ampiezza diversa da 0 allora la si chiama simbolo del bit 1.
+		- Risulta vulnerabile alle interferenze in quanto esse possono andare a modificare l'ampiezza del segnale e ciò si riflette sui bit da spedire.
 	- ## FSK:
 		- Usa diversi tipi di frequenza per indicare 1 (la più alta) o 0 (la più bassa) o viceversa dipende dal protocollo applicato.
 		- ![[Pasted image 20250701114847.png]]
@@ -33,8 +34,9 @@ data: "`2025-07-01 12:18`"
 		- 3. Diagramma di statistica di fase e ampiezza rappresentate con le coordinate polari.
 			- Dove ogni simbolo rappresenta un possibile stato della radiofrequenza trasmessa.
 	- La terza rappresentazione si presta per rappresentare codifiche in _PSK_.
-	- ## BPSK:
+	- ## BPSK: ^5d7ca9
 		- Si hanno codifiche diverse per opposizioni di fase (0 e 1) sfrutta però poco lo spettro.
+		- Avendo quindi $1 \frac{b}{sym}$
 	- ## QPSK:
 		- Codifica in 4 fasi (00, 01, 10, 11), _2 bit per simbolo_ ma è più facilmente mal interpretabile.
 		- Si potrebbe ricondurre ad un tiro al bersaglio che in base al quadrante in cui cade lo si riconduce ad uno dei 4 simboli, aumentando l'area associata ad un simbolo si diminuisce la probabilità di errore ma si spreca più banda.
@@ -43,15 +45,26 @@ data: "`2025-07-01 12:18`"
 			- ![[Untitled-1 2.webp]]
 		- ### Calcolo di trasmissione:
 			- Avendo un symbol rate: ($\frac{sym}{s}$) e il numero di simboli per la codifica si può calcolare il tempo di trasmissione:
-				- $$\text{symbol rate}\left( \frac{sym}{s} \right) \ *  \ \text{bit/sym}= \frac{b}{s}$$
+				- $$\text{symbol rate}\left( \frac{sym}{s} \right) \ *  \ \text{bit/sym} *\text{n°Sub-carrier}= \frac{b}{s}$$
 	- ## QAM:
-		- Combinazione di modulazione di ampiezza e fase del segnale per ogni simbolo trasmesso; 
+		- _Combinazione di modulazione di ampiezza e fase del segnale per ogni simbolo trasmesso_; 
 		- Es. 16-QAM (16 symbols, 1 symbol = 4 bit)
 			- ![[Untitled-1 3.webp]]
 			- Più simboli si vogliono rappresentare più l'area di ogni simbolo si riduce.
+		- Risulta essere più veloce in quanto utilizza più simboli ma anche più suscettibile al rumore in quanto l'area per ogni simbolo è molto più piccola  
 - # Modulazione gerarchica:
 	- Si può modulare due diverse sequenze di bit nello stesso segnale e dare una priorità diversa ad ognuna.
 		- ![[Untitled-1 4.webp|300]]
 		- Ogni area grigia contiene 16 simboli (i vari punti) utilizzati per codificare la sequenza a priorità minore
 		- Ogni quadrante invece è etichettato con una sequenza di due bit, quelli a priorità alta 
 		- Quando il canale ha poco rumore, si tende ad avere errori solo sulla parte a bassa priorità, chiaramente se il rumore aumenta è compromessa anche la codifica a priorità alta
+- # Esercizio:
+	- Si hanno $18$ sub-carrier $SC$ ognuno con un $SR$ (symbol rate) di $5*10^{5} \frac{sym}{s}$
+	- Si vuole trasferire un file $F$ da $54Mb$ in meno di 4 secondi, quale schema di modulazione è necessario usare?
+	- Per prima cosa si calcola la velocità totale:
+		- $$V_{t}=SR*SC=5*10^{5}*18=9*10^{9} \frac{sym}{s}$$
+	- Per rimanere sotto i $4s$ di trasmissione serve un throughput $T$:
+		- $$T= \frac{F}{4}=\frac{54}{4}=13.5 \frac{Mb}{s}$$
+	- Ora si calcola quanti bit per simbolo sono necessari per garantire questa velocità:
+		- $$BpS = \frac{T}{V_{t}}=\frac{{13.5*10^{6} \frac{b}{s}}}{9*10^{9} \frac{sym}{s}}=1.5 \frac{b}{sym}$$
+	- Arrotondando a 2 bit per simbolo e lo schema adatto è quello _QPSK_

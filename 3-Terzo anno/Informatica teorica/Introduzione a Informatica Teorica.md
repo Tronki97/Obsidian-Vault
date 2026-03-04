@@ -1,0 +1,92 @@
+---
+tags:
+  - TODO
+aliases:
+  - Calcolabilità
+  - Complessità
+  - Problema
+data: "`2026-02-16 12:03`"
+---
+- # Fonti:
+	- Non ci sono slide, per cercare delle fonti: Calautti note del corso di "computability and computational Complexity" su _GitLab_
+	- Oppure il testo di Hopcroft, "introduction to Automata theory language"
+	- Mette ciò che scrive a lezione su virtuale ma non basta siccome non scrive tutto
+- # Argomenti del corso
+	- ## Cosa:
+		- Continuo sulla calcolabilità e complessità
+		- Dimostrazioni formali
+		- Trattamento di linguaggi più complessi e di [[Fondamenti di calcolabilità#^53f7be|macchina di turing]].
+- # Calcolabilità:
+	- Ci si chiede se per un certo problema esisterà mai un algoritmo in grado di risolverlo.
+	- Cercare quindi di risolvere la decidibilità di un problema. 
+	- Esistono problemi _indecidibili_ ma il cervello non ci si pensa
+		- Come un antivirus che prende in input un algoritmo e che ci dica se presenta codice malevolo dando sempre la risposta corretta. Infatti di solito gli antivirus danno risposte approssimative.
+		- Si può dimostrare che il numero dei problemi è tanto quanto i numeri _Reali_, mentre gli algoritmi sono tanti quanti i numeri _Interi_. Quindi esiste una classe infinita di problemi non decidibili
+			- L'idea è prendere tutti gli algoritmi scritti e ordinarli secondo un criterio, per esempio in ordine alfabetico, e così si dimostra che sono tanti quanti i numeri _interi_.
+	- ## Decidibilità:
+		- Per stabilire se un problema è decidibile serve analizzarne la struttura
+		- Una volta stabilita l'indecidibilità del problema allora rimarrà tale per sempre?????
+			- In teoria si però serve più approfondimento e potrebbe essere che si riesca a cambiare il paradigma e quindi renderlo decidibile.
+- # Complessità:
+	- Non ci si chiede quanto è complesso un algoritmo ma _quanto è complesso un problema_ 
+	- Per certi problemi non esistono soluzioni con una certa complessità computazionale.
+		- Per esempio $EXP$ non potrà mai avere una soluzione polinomiale
+	- Tra i problemi decidibili esistono:
+		- _Problemi facili_: se ammettono una soluzione polinomiale
+		- _Problemi difficili_: se non ammettono una soluzione polinomiale
+- # Problema: ^dc8067
+	- _Una relazione binaria fra stringhe_
+	- Ci si chiede come modellare una soluzione.
+	- ## ES:
+		- Si vuole fare la somma
+		- $x,y: x+y \to z$
+		- $<I, o>$ che ha come esempio $<(2,3),5>$
+			- In prima posizione si ha una stringa che rappresenta l'input del problema
+			- In seconda c'è l'input atteso.
+	- Quando si caratterizza il problema servono 3 elementi:
+		- Cos'è l'input e come è rappresentato
+		- Cos'è l'output e come è rappresentato
+		- Qual è la relazione tra output e input.
+		- _non ci si sta chiedendo come ottenere l'output dall'input_
+	- ## ES:
+		- $<(P, I), Bool>$
+		- L'output sarà 1 se P con $I$ come input si arresta
+		- Altrimenti sarà no se mentre processa $I$ il programma $P$ non si arresta.
+		- Dimostrare che questo problema è _indecidibile_
+			- Si suppone che esista una funzione $H(P,I)$ che risolva il problema $HALT$ 
+			- `Rev(P):`
+				- `Hs = H(P, P)`
+				- `if(HS)`
+					- `while(true)`
+				- `else`
+					- `pass`
+				- Chiamo la stinga composta dal codice della funzione: `CodeRev`
+			- `Rev(CodeRev)`
+				- Si sta quindi chiamando la funzione con il suo stesso codice come input
+			- Suppongo che `Rev` si fermi
+				- Vuol dire che è entrato nel ramo `else` e quindi che `Hs=false` 
+				- Ovvero vuol dire che `H` ci sta dando la risposta sbagliata che _risulta in un assurdo_.
+			- Suppongo che `Rev` vada in loop:
+				- Si ha che `Hs=true` ma ciò voleva dire che il programma sarebbe dovuto fermarsi.
+				- _Quindi si è di nuovo nell'assurdo_.
+			- In sostanza non si può supporre che `H` funzioni quindi non potrà mai esistere un programma che faccia tale cosa.
+	- ## Tipologie:
+		- ### Di ricerca 
+			- Sono dei tipi di problemi per i quali la stringa di output può essere _generica_
+				- Ovvero problemi in cui l'output può essere vario.
+			- #### ES:
+				- Dato $<G, s, t>$
+				- Si vuole sapere se c'è un percorso da $s$ a $t$ nel grafo $G$
+				- Risulta essere un _problema facile_ visto che ha soluzione polinomiale
+			- Dato un problema di ricerca esiste una sua variante _di decisione_ che intuitivamente ha circa la stessa complessità
+		- ### Di decisione:
+			- Sono problemi per i quali il possibile output è un _booleano_.
+			- #### ES:
+				- Dato un grafo $<G>$ è vero che esiste un _ciclo hamiltoniano_
+					- Ovvero un percorso che parte da un nodo e torna a se stesso passando per tutti i nodi del grafo una sola volta.
+			- _L'analisi di questi problemi risulta più facile rispetto a quelli di ricerca quindi ci si concentra su questi_
+			- Una classe di problemi di questo tipo è _l'analisi dei linguaggi_ e quindi capire se una certa stringa appartiene ad un determinato linguaggio.
+				- Si può fare perché tutti i problemi di decisione possono essere ricondotti al riconoscimento di un linguaggio
+- 
+- # Link Utili:
+	- 

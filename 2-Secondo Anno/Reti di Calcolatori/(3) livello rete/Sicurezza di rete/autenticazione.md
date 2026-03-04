@@ -3,6 +3,7 @@ tags: []
 aliases:
   - man in the middle
   - message digest
+  - digest
 data: "`2025-02-24 11:48`"
 ---
 - # Autenticazione:
@@ -17,12 +18,13 @@ data: "`2025-02-24 11:48`"
 		- serve una garanzia che la chiave pubblica che viene ricevuta sia effettivamente quella dell’interlocutore col quale si vuole parlare.
 	- ## Soluzione:
 		- si usa una certification authority. composta da un numero di “persone” che tra di loro si certificano i messaggi.
-- # Message Digest:
+- # Message Digest: ^b4148e
 	- rappresentare delle digestioni di un messaggio attraverso delle [[Tabelle Hash#^01153a|funzioni hash]], 
 		- ![[Pasted image 20250224123617.png]]
 		- ha dimensione compatta, e costante.
 		- ed è infattibile risalire al messaggio originale da quello _hashato_ senza la chiave appropriata.
-			- non è quindi una funzione biettiva creando quindi delle collisioni nell’insieme dei messaggi _hashati_
+			- non è una funzione biettiva creando quindi delle collisioni nell’insieme dei messaggi _hashati_
+		- Inoltre è quasi impossibile ottenere lo stesso hash da un input diverso a causa della proprietà di _collision resistance_, rendendo così sicura la verifica dell'integrità del messaggio. 
 	- l’interesse dell’attaccante è sostituire il messaggio x con un y tale che:
 		- $H(x)=H(y)$
 		- ma è molto difficile da fare e non avrebbe senso cercare un messaggio diverso che magari non ha l’obiettivo che serve.

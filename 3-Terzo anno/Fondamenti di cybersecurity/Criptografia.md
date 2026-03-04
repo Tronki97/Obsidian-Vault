@@ -1,0 +1,83 @@
+---
+tags:
+aliases:
+  - criptoanalisi
+  - principio di Kerckhoffs
+  - Ciphertext-only
+  - Chosen-plaintext
+  - CPA
+  - Chosen-ciphertext
+  - CCA
+data: "`2026-02-16 11:06`"
+---
+- # definizione:
+	- Usare la matematica per oscurare il significato di dati applicandoci trasformazioni che sono poco pratiche o impossibili da invertire
+- # Criptoanalisi:
+	- Rompere la criptazione, codici segreti o messaggi segreti senza conoscere le chiavi 
+- # criptografia:
+	- ![[Pasted image 20260216111507.png|600]]
+	- Encryption e decryption compongono uno schema di criptazione.
+	- ## Obiettivi:
+		- _privacy_(segretezza, confidenzialità): solo il mittente e destinatario devono sapere il contenuto dei messaggi
+		- _autenticità_: il messaggio è mandato effettivamente dal mittente
+		- _non-ripudio_: il mittente non deve riuscire a dire di non aver mandato il messaggio.
+	- ## protocolli:
+		- Devono riuscire a far comunicare in maniera sicura
+		- Proteggere la confidenzialità e l'autenticità dei messaggi
+		- Vincere gli avversari
+		- ### principio di Kerckhoffs:
+			- La sicurezza di un protocollo deve basarsi sul tenere le chiavi al sicuro.
+			- La sicurezza basata sul oscurare i sistemi di criptazione non deve funzionare.
+	- ## modello di minaccia attaccante:
+		- Si assume che l'attaccante conosca l'interezza dell'algoritmo di criptografia (DES, AES, RSA...)
+		- ### Passivo:
+			- L'attaccante osserva e basata e tenta di decriptare i messaggi
+		- ### Attivo:
+			- Oltre all'osservazione tenta anche di modificare i messaggi infrangendo così _integrità_, _confidenzialità_, _autenticità_
+		- ### interazioni con gli algoritmi:
+			- #### Ciphertext-only:
+				- L'attaccante vede i messaggi criptati e basta
+			- #### Chosen-plaintext (CPA):  ^8d2a6c
+				- Sceglie alcuni messaggi plaintext dei quali ottiene solo il messaggio cifrato (_ciphertext_)
+			- #### Chosen-ciphertext (CCA):
+				- Sceglie alcuni messaggi cifrati dei quali ottiene il _plaintext_
+		- Si assume che gli attaccanti abbiano risorse illimitate
+			- In caso un brute force vincerebbe sempre
+		- Con risorse finite _computational security_:
+			- Per decriptare certi messaggi servirebbe un tempo di calcolo molto lungo.
+- # Criptografia simmetrica:
+	- _confidenzialità_
+	- Si usa una sola chiave sia per il mittente che per il destinatario per far si che ciò che viene mandato sul canale non venga intercettato e letto da un terzo.
+		- ![[Pasted image 20260220112245.png|500]]
+		- $m:$ plaintext
+		- $c:$ messaggio cifrato
+		- $E:$ algoritmo di criptazione
+		- $D:$ algoritmo di decriptazione
+		- $E,D$: cifratore
+			- Si usano sempre cifratori con algoritmi conosciuti e quindi mai usare quelli proprietari.
+		- La chiave condivisa ha però bisogno appunto di essere condivisa tra i due quindi prima della comunicazione _c'è bisogno di usare un protocollo per scambiare questa chiave simmetrica_
+	- Si possono generare dei MAC (message authentication code) usando le chiavi simmetriche per garantire quindi che il messaggio inviato sia autentico.
+		- Inviando quindi: $K_{s}(H(m),m)$
+	- ## Casi d'uso:
+		- ### Chiave singola:
+			- Ci sono scenari in cui la chiave $K_{s}$ va rigenerata ogni volta avendo quindi una chiave diversa per ogni messaggio
+		- ### Multi-uso:
+			- La stessa chiave viene usata diverse volte, e necessita l'utilizzo in combo con il _nonce_ o un _initialisation vector_
+- # Criptografia asimmetrica:
+	- Si usano coppie di chiavi: _pubbliche_ e _private_; quelle pubbliche vengono salvate in delle repository pubbliche.
+	- Ogni volta che un utente necessita di inserire una chiave pubblica in questa _repo_ si necessita di autenticare l'utente e verificare che la chiave che si sta inserendo sia effettivamente di quell'utente.
+	- ![[Pasted image 20260220113932.png|500]]
+	- Questo schema garantisce la confidenzialità perché solo bob riuscirà a decriptare il messaggio criptato con la chiave pubblica di bob $K_{B}^{+}$ perché possiede la chiave privata $K_{B}^{-}$
+		- Quindi $K_{B}^{-}(K_{B}^{+}(m))=m$.
+	- Si usa anche per firmare digitalmente un messaggio per far quindi capire che è proprio di quell'utente
+- # Applicazioni:
+	- La criptografia si usa banalmente per la comunicazione sicura in rete
+	- Comunicazione sicura di messaggistica tra telefoni cellulare
+	- Come già detto anche per la firma digitale, che cambia in base al documento.
+	- Si usa anche per la comunicazione anonima
+- # Passi principali della criptografia:
+	- Definire precisamente il modello di minaccia
+	- Proporre il design del _cifrario_
+	- Dimostrare che rompere la soluzione sotto il modello di minaccia risulta un problema _molto difficile_
+- # Link Utili:
+	- 

@@ -1,10 +1,18 @@
 ---
 tags: []
-aliases: 
+aliases:
+  - TTL
+  - fragment offset
+  - time to live
+  - check summ
+  - IP fragmentation
+  - IP reassemble
 data: "`2025-03-17 09:56`"
 ---
 - # datagramma IP:
 	- ## Header:
+		- ## Identificazione (ID):
+			- Permette di capire durante il riassemblaggio quali frammenti fanno parte dello stesso pacchetto originale.
 		- ## bit di versione:
 			- Per indicare lo [[Indirizzamento IPv4|ipv4 o ipv6]]
 		- ## Type of service:
@@ -12,6 +20,7 @@ data: "`2025-03-17 09:56`"
 		- ## Lunghezza del datagramma:
 			- è la lunghezza totale del datagramma in byte.
 			- Utile per far capire ai gestori di memoria.
+			- La dimensione massima è $2^{16}-1$ [[Indirizzamento IPv4|IPv4]]
 		- ## Flag per la frammentazione:
 			- Consente di capire se è un frammento del pacchetto completo.
 		- ## fragment offsett:
@@ -37,15 +46,18 @@ data: "`2025-03-17 09:56`"
 		- 20 bytes per l’IP
 		- In più altri byte per il livello.
 - # Frammentazione e riassemblaggio:
-	- I link spesso non riescono a far passare pacchetti di grandi dimensioni quindi si decide di frammentare in 3 pacchetti più piccoli di quello principale altrimenti si rischia che un bit venga corrotto e il pacchetto cestinato di conseguenza.
-	- In caso uno di questo 3 pacchetti fallisca il viaggio si necessita di rimandare solo quello e non tutto quanto 
-	- I pacchetti vengono riassemblati dal destinatario. 
-	- ## Esempio di frammentazione:
-		- Datagramma da 4000 byte.
-		- MTU = 1500 byte.
-		- Quindi si frammenta in 3 pacchetti da 20 +1480  byte massimo  di cui i primi 20 sono l’header.
-		- L’id di ogni sotto-pacchetto sarà uguale a quello del pacchetto originale.
-		- Il flag di frammentazione sarà settato a 1 per i pacchetti tranne per l’ultimo che è messo a 0 indica appunto che dopo quello non bisogna aspettarne altri.
-		- L’offset indica la posizione del frammento nel pacchetto originale; se è a 0 indica che è la prima parte del pacchetto
-			- Per esempio 185 indica che si parte dal primo bit dopo i primi $185*8$ 
-		- ![[Pasted image 20250317102806.png||400]]
+	- ## IPv4:
+		- I link spesso non riescono a far passare pacchetti di grandi dimensioni quindi si decide di frammentare in 3 pacchetti più piccoli di quello principale altrimenti si rischia che un bit venga corrotto e il pacchetto cestinato di conseguenza.
+		- In caso uno di questo 3 pacchetti fallisca il viaggio si necessita di rimandare solo quello e non tutto quanto 
+		- I pacchetti vengono riassemblati dal destinatario. 
+		- ### Esempio di frammentazione:
+			- Datagramma da 4000 byte.
+			- MTU = 1500 byte.
+			- Quindi si frammenta in 3 pacchetti da 20 +1480  byte massimo  di cui i primi 20 sono l’header.
+			- L’id di ogni sotto-pacchetto sarà uguale a quello del pacchetto originale.
+			- Il flag di frammentazione sarà settato a 1 per i pacchetti tranne per l’ultimo che è messo a 0 indica appunto che dopo quello non bisogna aspettarne altri.
+			- L’offset indica la posizione del frammento nel pacchetto originale; se è a 0 indica che è la prima parte del pacchetto
+				- Per esempio 185 indica che si parte dal primo bit dopo i primi $185*8$ 
+			- ![[Pasted image 20250317102806.png||400]]
+	- ## IPv6:
+		- Con questo protocollo la frammentazione avviene soltanto all'host sorgente rendendo questo processo di fatto end-to-end in questo modo si alleggerisce il carico sui router intermedi che non dovranno _de/frammentare_.

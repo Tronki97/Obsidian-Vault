@@ -1,11 +1,12 @@
 ---
-tags: 
+tags:
 aliases:
   - netmask
   - subnetting
   - classless interdomain routing
   - subnet mask
   - CIDR
+  - supernetting
 data: "`2024-11-06 13:11`"
 ---
 - # Argomento:
@@ -26,9 +27,32 @@ data: "`2024-11-06 13:11`"
 - # Supernetting:
 	- operazione contraria al subnetting che consiste nel regalare bit della rete all’host 
 	- quindi fondendo diverse reti
+	- ## ES:
+		- Si vogliono unire le due sottoreti 
+			- `55.111.11.32`
+			- `55.112.24.97`
+		- E calcolare quale dovrebbe essere la netmask minima necessaria per includerle entrambe
+		- Per prima cosa li si converte in binario:
+			- `00110111.01101111.00001011.00100000`
+			- `00110111.01110000.00011000.01100001`
+		- Si trova il prefisso comune che risulta essere:
+			- `00110111.011`
+		- Quindi per mantenere quello sempre attivo serve una maschera con tutti 1 fino a quel punto ovvero:
+			- `255.224.0.0` o `/11`
+		- Che potrà avere $32-11=21\ bit$ per gli host ovvero $2^{21}=2097152$ host 
+		- Si avrà una rete identificata da `55.96.0.0/11`
+		- Con broadcast: `55.127.255.255`
+		- E default gateway: `55.127.255.254`
 - # Attenzione:
 	- quando si va ad allocare dello spazio per gli host è importante assegnare lo spazio a partire dall’alto e dal blocco più grande. Tutto questo per evitare la frammentazione.
 		- questo perché il subnetting funziona dai bit più significativi.
+- # Calcolo numero di sottoreti:
+	- Dato un indirizzo IP `130.136.0.0` quante sottoreti `/23` si possono ottenere?
+	- Visto che il primo ottetto è $128 \le 148 < 192$ allora la maschera di default sarà `/16` siccome appartiene ad una rete di [[Indirizzamento IPv4#^5f0a49|classe B]] facendo quindi $23-16=7$ si ottengono $2^{7}=128$ sottoreti
+	- Per calcolare poi quanti host utilizzabili ha ogni sottorete basta sapere quanti saranno i bit dedicati agli host: $32-23=9$ bit che corrispondono quindi a $2^{9}-2=510$ host utili per ogni sottorete.
+- # Appartenenza ad una sottorete:
+	- `80.137.0.1/15` a quale sottorete appartiene?
+	- Siccome il secondo ottetto è `137= 10001001` applicandogli la maschera risulta che i suoi primi `7` bit appartengono alla sottorete quindi si ottiene che l'host appartiene alla sottorete `1000100 = 68` quindi alla sottorete $68 \ o\  69°$ 
 - # Esercizio:
 	- ![[Pasted image 20241113151121.png||350]]
 		- 1) so che la rete a disposizione è : $130.136 \ \ \ / 16$ ovvero ho a disposizione tutta la rete.

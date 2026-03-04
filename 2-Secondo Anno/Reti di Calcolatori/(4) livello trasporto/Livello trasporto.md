@@ -25,32 +25,35 @@ data: "`2024-11-27 13:28`"
 			- Serve crittografare i dati, mantenere l'integrità...
 - # UDP: ^bd8258
 	- la rete continua a funzionare in maniera _connectionless_ quindi non affidabile.
-	- Non stabilisce una connessione tra mittente e destinatario quindi non si può sapere il se e il perché un pacchetto non è arrivato.
-	- Però ha bassissima latenza visto che non c'è bisogno di creare la connessione, mandare gli ACK e controllare i flussi e congestione.
+		- Non stabilisce una connessione tra mittente e destinatario quindi non si può sapere il se e il perché un pacchetto non è arrivato.
+	- Però ha bassissima latenza visto che non c'è bisogno di creare la connessione, mandare gli [[ACKNOWLEDGEMENT|ACK]] e controllare i flussi e congestione.
 - # TCP: ^157bc5
 	- ## Affidabilità:
 		- rende la rete affidabile _End-to-End_ ovvero da qualsiasi punto verso qualsiasi destinazione connessa alla rete 
+			- E quindi i protocolli di trasporto vengono applicati solo dai mittenti originali e destinatari finali non coinvolgendo i nodi intermedi. 
 		- configura il numero di porta del _socket TCP_
 		- numera sequenzialmente i segmenti per poi ordinarli ed eliminare duplicati quando arrivano a destinazione.
 			- permette di capire anche quando manca un segmento, siccome sono ordinati. 
 		- i pacchetti non ricevuti, ovvero che non hanno ricevuto l’ack entro il _timeout_, vengono ritrasmessi tutto ciò viene ripetuto finche l’ack non ritorna al mittente 
 		- quindi per garantire l’affidabilità, vengono ritrasmessi i pacchetti e ciò potrebbe creare dei duplicati.
 	- questo protocollo fa anche la gestione del flusso e della congestione. Reso sicuro con [[Secure socket layer (SSL)|SSL]]
-		- ## Gestione flusso:
-			- controllo della dimensione e velocità.
-			- la sliding window viene usata anche per capire quanti segmenti può inviare il mittente che possano essere smaltiti dal destinatario quindi il mittente invia il minimo tra la _sliding window_ per il _flusso_ e per la _congestione_.
-		- ## Gestione congestione:
+		- ## Controllo della congestione:
+			- controllo della dimensione e velocità. 
+			- Cerca quindi di non sovraccaricare la rete intera (che collega mittente e destinatario)
+			- ### Congestion avoidance:
+				- è una fase in cui si aumenta in maniera lineare la velocità di trasmissione dei pacchetti per cercare di evitare il punto di congestione della rete.
+		- ## Controllo del flusso:
 			- il router non riuscire a smaltire i pacchetti di dati in uscita e in arrivo e quindi si accumulano sul buffer 
 			- controllo della velocità di invio dei segmenti.
 			- quindi il router mittente per prevenire la congestione deve regolarsi per mandare meno pacchetti per regolarizzare il traffico.
 	- _questi due controlli sono garantiti da un meccanismo chiamato_:
 		- ## _sliding window_
 			- serve per capire la situazione dei router lungo la strada tra mittente e destinatario quanto siano congestionati.
-			- il mittente manda un pacchetto sonda e in base a quanto ci mette per ricevere l’ack manda proporzionalmente una certa quantità di pacchetti 
-				- la finestra parte da una grandezza di 1 se il pacchetto che invia riceve l’ack duplico la finestra e quindi il numero di pacchetti inviati.
-					- Questo è anche chiamato _slow start_.
-				- appena manca un ack la dimensione della finestra torna a 1.
-				- invece per quanto riguarda le reti senza fili la grandezza della finestra viene solo dimezzata perché la causa di queste perdite di ack potrebbero non essere legate ad una congestione del router ma, per esempio, ad una interferenza.
+			- ### Slow start:
+				- il mittente manda un pacchetto sonda e in base a quanto ci mette per ricevere l’[[ACKNOWLEDGEMENT|ACK]] manda proporzionalmente una certa quantità di pacchetti 
+					- la finestra parte da una grandezza di 1 se il pacchetto che invia riceve l’ack duplico la finestra e quindi il numero di pacchetti inviati.
+					- appena manca un ack la dimensione della finestra torna a 1.
+					- invece per quanto riguarda le reti senza fili la grandezza della finestra viene solo dimezzata perché la causa di queste perdite di ack potrebbero non essere legate ad una congestione del router ma, per esempio, ad una interferenza.
 			- facendo un grafico sulla sliding window che rappresenta l’andamento del flusso si ottiene un andamento a _dente di sega_ e il valore medio è il valore medio della derivata del segnale.
 		- ## finestra di congestione:
 			- è un intero che rappresenta il max numero di segmenti inviabili prima di sapere che fine hanno fatto i precedenti
@@ -58,7 +61,8 @@ data: "`2024-11-27 13:28`"
 		- consente lo smistamento dei pacchetti verso le rispettive applicazioni in ascolto su “porte”
 		- richiede l’attivazione della connessione _punto-a-punto_ tra due _socket_:
 			- ### Socket: ^297138
-				- indirizzo [[Indirizzamento IPv4|IP]] + numero di porta dell’applicazione a livello superiore.
+				- è una interfaccia software che rappresenta un terminale per la comunicazione identificato da:
+					- indirizzo [[Indirizzamento IPv4|IP]] + numero di porta dell’applicazione a livello superiore.
 			- ### Three way handshake ^75a5d7
 				- quando due macchine comunicano, quella che vuole iniziare la conversazione manda una richiesta _TCP_ all’altra che, se il socket non è occupato, risponde con un _OK_ 
 				- a questo punto la prima macchina invia i _dati di configurazione_ e poi si può procedere con lo scambio dati
@@ -67,4 +71,14 @@ data: "`2024-11-27 13:28`"
 		- si possono aprire comunicazioni fintanto che il buffer ha abbastanza memoria libera da poter allocare per creare una nuova comunicazione.
 		- un possibile attacco consiste nello sfruttare la finestra di apertura della sessione quindi continuando a tenere le risorse allocate.
 			- un rimedio potrebbe essere l’implementazione di un garbage collection  
-- Il ritardo di ricezione dei pacchetti comporta un sottoutilizzo della rete in quanto ogni host che invia i pacchetti  attende un _ACK_ prima di inviarne altri e in quei momenti la rete non viene utilizzata.
+		- ### De/Multiplexing:
+			- Se l'host mittente ha più applicazioni che devono inviare dati al destinatario allora verrà effettuato un _multiplexing_ dei dati trasformandoli in un unico flusso di dati.
+			- Il destinatario effettuerà poi _demultiplexing_ del pacchetto in arrivo e guardando il numero di porta relativo ad ogni segmento per decidere a quale socket inviarlo
+- # conseguenze di un ritardo:
+	- Il ritardo di ricezione dei pacchetti comporta un sottoutilizzo della rete in quanto ogni host che invia i pacchetti attende un _ACK_ prima di inviarne altri e in quei momenti la rete non viene utilizzata.
+	- ## Fast recovery:
+		- è un meccanismo che permette di inviare di nuovo un pacchetto di cui non si è ricevuto l' [[ACKNOWLEDGEMENT|ACK]] prima che scada il timeout relativo a quel pacchetto, in questo modo migliorando l'efficienza dell'algoritmo.
+		- Funziona inviando degli ACK duplicati per un segmento e quando se ne riceveranno un certo numero vorrà dire che quello successivo è andato perso perciò si necessita di ritrasmetterlo
+	- ## ritardo di trasmissione:
+		- RdT è il rapporto tra la dimensione di un pacchetto $P$ e la larghezza di banda di un canale 
+		- $$RdT=\frac{P}{bandwidth}$$

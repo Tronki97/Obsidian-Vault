@@ -11,7 +11,8 @@ data: "`2025-03-17 11:32`"
 	- ## Regole di gestione dei pacchetti:
 		- ### Azioni:
 			- Metodi per i pacchetti che fanno match con determinati pattern.
-			- `drop, forward, modify, send to controllere`.
+			- `drop, forward, modify, send to controller`.
+				- Se un pacchetto non corrisponde a nessun pattern presente nella tabella di flusso di solito viene eseguita l'azione `send to controller`
 		- ### Priorità:
 			- Disambigua dei pattern che si sovrappongono.
 		- ### Contatori:

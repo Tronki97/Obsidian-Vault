@@ -67,12 +67,16 @@ data: "`2025-03-31 11:14`"
 	    - **Diffrazione**:
 	    - **Fading**: dovuto al rimbalzo, il segnale che c'è e che non c'è.
 	    - **Multipath propagation**: le strade più lunghe attenuano di più il segnale. Possibile che si disturbino a vicenda le comunicazioni di uno stesso segnale.
+		    - ### ES:
+			    - Un segnale a $37.5 MHz$ viaggi per $29m$ in linea retta e per $41m$ rimbalzando e calcolata la lunghezza d'onda $8m$ si ha che nella differenza tra i percorsi ($12m$) la sinusoide fa 1.5 periodi arrivando a destinazione in completa _opposizione di fase_ annullandosi con il segnale in linea retta.
     - ##  VSWR:
         - Voltage Standing Wave Ratio (Rapporto di Volo della Corrente Stazionario).
         - Al cambiamento di impedenza, abbiamo un ritorno di segnale.
         - Non tutto arriva all'antenna per essere trasmesso.
         - Rischi di bruciare il trasmettitore.
         - Distorsione delle chitarre si basa su questo principio.
+        - ### ES:
+	        - Se si considera un VWSR di $1.5:1$, significa che al trasmettitore torna indietro il $50\%$ dell'energia trasmessa quindi al ricevitore arriverà solo il $50\%$ di quello che si vuole trasmettere riducendo quindi l'ampiezza del segnale.
     - ## EIRP:
         - _Equivalent Isotropically Radiated Power_ (Potenza Elettromagnetica Radiata Isotropa).
         - Quanto effettivamente si perde arrivando all'antenna.
@@ -80,7 +84,8 @@ data: "`2025-03-31 11:14`"
             - Si suppone che un antenna sia isotropica e si definisce un massimo essendo l'ampiezza dell'onda dell'isotropica minima rispetto alle altre antenne.
         - ### ES:
 	        - Se do $16mW$ direttamente all'antenna _isotropica_ l'energia irradiata in tutte le direzioni è $16mW$
-	        - Se li do ad una che focalizza 10 volte l'energia in una direzione, il valore _EIRP_ sarebbe quello che dovrei dare ad una isotropica per irradiare $160mW$ in questo caso l'EIRP è $160mW$. 
+	        - Se li do ad una che focalizza 10 volte l'energia in una direzione e portando l'energia trasmessa come onda radio a $160mW$.
+	        - Però se l'_EIRP_ è impostato per essere $16mW$ allora bisogna abbassare l'energia ricevuta dall'antenna a $1.6mW$ perché col guadagno di $10$ andrebbe a $16mW$ 
 - # Conversione tra dBm e milliwatt:
     - **dBi**: è il db-isotropic, la misura del guadagno passivo dell'antenna.
         - Per avere un'antenna isotropica, questa dovrebbe avere un dipolo pari a 0. In realtà, le antenne reali concentrano l'energia in modo non isotropico, generando un guadagno passivo in una certa direzione.
@@ -98,13 +103,19 @@ data: "`2025-03-31 11:14`"
 	- ## N.B:
 		- Un guadagno di $3dB$ vuol dire un raddoppiamento della potenza 
 		- Un guadagno di $10dB$ vuol dire un $*10$ della potenza 
-- # Potenza Monitoraggio:
+- # dBd:
+	- Il dB-dipole è l'opposto di dBi ed è il guadagno passivo normalizzato da un'antenna _non isotropica_ 
+		- $$x \ dBd = y\ dBi -2.14$$
+- # Monitoraggio della potenza:
     - La sensibilità nei dispositivi moderni si trova nel range $[-90, ..., +10]$ dBm. A seconda della potenza in questo intervallo, si ha:
         - **Signal Detection**: la capacità di capire ciò che ricevo.
             - **Signal Detection Power (SDP)**: con quale tecnica trasmetto.
             - **Channel Status Detection (CSD)**: capire se il canale è occupato o meno e quindi se posso trasmettere o no.
         - **RSSI**: le tacchette del Wi-Fi su ogni dispositivo.
             - Se due dispositivi hanno un RSSI massimo, a fondo scala, si confronta quanto ricevono con tale valore di RSSI. Questo è il tetto massimo ricevibile (pienamente sufficiente per ricevere bene). Non confrontare gli RSSI direttamente perché ogni dispositivo ha una scala diversa.
+    - ## Intentional radiator:
+	    - è un dispositivo progettato per emettere onde radio in modo controllato e intenzionale
+	    - Il valore della sua potenza (_IR Power out_) è in $mW$ e rappresenta la potenza totale emessa dall'ultimo dispositivo prima dell'antenna quindi la potenza realmente generata dal trasmettitore. 
 - # Line Of Sight (LOS):
 	- ![[Untitled 6 1.webp]]
     - Rappresenta la linea retta che congiunge il trasmettitore e il ricevitore. Non dovrebbe esserci alcuna ostruzione lungo questa linea.
@@ -129,10 +140,16 @@ data: "`2025-03-31 11:14`"
 	    - ![[Pasted image 20250701104439.png|150]]
 - # Path Loss:
     - È espresso in dB e rappresenta una stima pessimistica della dispersione sulla base della distanza e della frequenza. La formula da ricordare è:
-    - $$ PL = 36.6 + 20 \log_{10}(F) + 20 \log_{10}(D) $$
-		- Dove:
-			 - $F$ è la frequenza in MHz.
-			 - $D$ è la distanza tra il trasmettitore e il ricevitore in km (da convertire in miglia).
+	    - $$ PL = 36.6 + 20 \log_{10}(F) + 20 \log_{10}(D) $$
+			- Dove:
+				 - $F$ è la frequenza in MHz. F
+				 - $D$ è la distanza tra il trasmettitore e il ricevitore in miglia.
+					 - $1 Km = 0.62 mi$ e $1mi = 1.61Km$ 
+	- Oppure si può usare la formula:
+		- $$20 \log_{10}(F)+20\log_{10}(D)+92.45$$
+			- Dove:
+				 - $F$ è la frequenza in GHz.
+				 - $D$ è la distanza tra il trasmettitore e il ricevitore in km.
 	- ## Regola dei 6 dB
 	- Come regola generale si può dire che raddoppiando la distanza si ha una perdita di $6dB$ ovvero il segnale si riduce a circa $\frac{1}{4}$. Quindi per raddoppiare la distanza doppiamo quadruplicare la potenza del segnale. 
 - # Link budget:
@@ -141,10 +158,14 @@ data: "`2025-03-31 11:14`"
 	- _RS: il segnale più debole ricevibile_:
 		- Più basso è meglio è.
 	- Il link budget si calcola facendo:
-		- Potenza ricevuta in dBm - RS in dBm.
+		- Potenza ricevuta in dBm - RS in dBm + fade margin.
 	- ## ES:
 		- $RS=-82dBm$   potenza ricevuta= $-50dBm$:
-		- Link budget = $-50 +82=32dBm$
+		- Link budget = $-50 -(-82+FM)=32dBm$
+			- FM = 0
 		- Ciò significa che il segnale ha un margine di 32 dB prima che diventi non disponibile.
+	- ## N.B:
+		- La potenza ricevuta $P_{r}=P_{t}+G_{t}+G_{r}-PL$
 	- ## Fade margin:
 		- Del margine extra per il link budget (di solito nell’ordine dei $[+10...+20]dB$). 
+	- Perciò per permettere la comunicazione tra due [[Antenne]] serve che il _link budget_ sia $\ge 0$

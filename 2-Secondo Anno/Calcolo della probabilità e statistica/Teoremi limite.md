@@ -9,7 +9,7 @@ aliases:
   - teorema limite centrale
 data: "`2025-05-06 13:30`"
 ---
-XSA- # Argomento:
+- # Argomento:
 	- Si ha a che fare con successioni di [[Variabili aleatorie]] nello specifico [[Variabili aleatorie|V.A discreta]] 
 	- Questi teoremi sono dei risultati che si ottengono sotto certe condizioni 
 - # teorema limite centrale:

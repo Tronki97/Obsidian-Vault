@@ -19,7 +19,6 @@ data: "`2024-09-20 15:14`"
 			- Se si rompe un collegamento il segnale arriva al punto rotto e "rimbalza" facendo la strada a ritroso impiegando più tempo
 			- se il _token_ viene perso per un qualsiasi motivo comporta la paralisi dell'intero sistema di comunicazione 
 				- in più il tempo di rigenerazione del token deve essere maggiore del tempo di transito di una conversazione e quindi di trasferimento del token
-				- 
 			- se il _token_ va a qualcuno che non ha nulla da comunicare si spetta del tempo inutile.
 	- ### Stella:
 		- Composto con un Hub centrale a cui tutti gli altri host sono collegati, è [[Infrastruttura e collegamenti di rete#^27c57e||minimamente connessa]] perché sono presenti 6 elementi e 5 collegamenti nonostante l'hub non sia effettivamente un host 
@@ -42,7 +41,7 @@ data: "`2024-09-20 15:14`"
 			- mentre un nodo trasmette allo switch anche un altro riuscirebbe a trasmettere allo switch senza far collidere i segnali.
 			- Quando 2 segnali devono andare allo stesso host li mette in un _Buffer_ per far si che non vengano spediti insieme 
 	- ### Bus:
-		- Linea sui cui passano più segnali che poi si dirama per incontrare i vari host. Ha basso costo
+		- Linea sui cui passano più segnali che poi si dirama per incontrare i vari host. Ha basso costo ma più host non possono comunicare contemporaneamente. 
 		- ![[Pasted image 20240920151947.png]]
 		- #### Problema:
 			- rilevare chi può usare il bus in quel preciso momento
