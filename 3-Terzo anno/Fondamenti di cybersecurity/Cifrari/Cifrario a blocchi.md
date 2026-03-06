@@ -126,7 +126,43 @@ data: "`2026-02-27 11:31`"
 		- ![[Pasted image 20260302103833.png|611]]
 	- ## Attacchi:
 		- Best key recovery: risulta 4 volte migliore rispetto a ricerca esaustiva.
-		- Related key: dati $2^{99}$ coppie I/O da 4 chiavi correlate si può ricoverare le chiavi in tempo $2^{99}$ 
+		- Related key: dati $2^{99}$ coppie I/O da 4 chiavi correlate si può ricoverare le chiavi in tempo $2^{99}$
+- # Modi di operazioni:
+	- Pensati per avere più flessibilità e riuscire a lavorare su blocchi di _lunghezza variabile_ e par sembrare cifrari a blocchi come fossero di flusso.
+	- ## Sicurezza semantica:
+		- Ci si mette nella situazione di attacco [[Criptografia#^add400|Ciphertext-only]] in cui fa eavesdropping
+		- La chiave è diversa ogni volta che si cripta qualcosa.
+		- ![[Pasted image 20260306113614.png|346]]
+		- Quando l'adv riesce a indovinare quello che ha scritto il _challenger_ allora ciò che si sta analizzando non è _semanticamente sicuro_.
+		- ### OTK:
+			- Per un cifrario $Q$ e un Adv $A$ si definisce un gioco d-attacco>
+				- Per $b=0 \wedge 1$ si definiscono gli esperimenti $EXP(0)$ e $EXP(1)$ in questo modo:
+					- ![[Pasted image 20260306113904.png|533]]
+			- $$Adv_{SS}(A,Q):=|P(EXP(0)=1)-P(EXP(1)=1)|$$
+				- $EXP(.)$ danno come risultato un certo numero $\in(0|1)$
+				- Se la probabilità $EXP(0)=1$ si avvicina ad uno vuol dire che l'avversario sta perdendo mentre $P(EXP(1)=1)$ allora vuol dire che $A$ sta indovinando le azioni del _challenger_
+			- Per tutti gli $A$ efficienti il valore di $Adv_{SS}(A,Q)$ dovrebbe essere molto piccolo per far si che si abbia _sicurezza semantica_
+	- ## ECB
+		- Prende ogni blocco di plaintext lunghezza $n$ e lo cripto usando la stessa chiave
+		- Lo si usa spesso per trasmettere una chiave tra due entità in modo sicuro
+		- Il messaggio originale va diviso in $N$ blocchi indipendenti e si usa la stessa chiave per sia criptazione che decriptazione, non c'è feedback quindi ogni blocco viene maneggiato indipendentemente
+		- ![[Pasted image 20260306112813.png|436]]
+		- ### Sicurezza:
+			- Non ha aspetti di casualità, di fatto se due plaintext sono uguali allora anche il loro testo cifrato sarà uguale, è _deterministico_
+			- _Quindi ECB non è semanticamente sicuro_
+			- ![[Pasted image 20260306121422.png|721]]
+	- ## CBC
+		- Si fa criptazione tra plaintext e chiave facendo XOR
+		- Si usa per l'autenticazione
+	- ## CFB
+		- Per [[autenticazione]] 
+		- Si divide l'input in segmenti di $s$ bit e che si criptano mano a mano
+	- ## OFB
+		- Simile a _CFB_, prendo output relativo al primo plaintext e viene messa in input al secondo blocco di criptazione
+		- Usato in reti con alto noise 
+	- ## CTR
+		- Si fa XOR con un _counter_ che è criptato e viene aumentato per il plaintext successivo
+		- Usato quando serve poco delay nella comunicazione
 - # Trivia:
 	- Potrebbe fare domande sulle reti Feistel e richiede di farle il grafico e determinare output rispetto all'input. 
 - # Link Utili:

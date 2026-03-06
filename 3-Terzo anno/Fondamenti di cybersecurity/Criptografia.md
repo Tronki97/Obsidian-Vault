@@ -35,7 +35,7 @@ data: "`2026-02-16 11:06`"
 		- ### Attivo:
 			- Oltre all'osservazione tenta anche di modificare i messaggi infrangendo così _integrità_, _confidenzialità_, _autenticità_
 		- ### interazioni con gli algoritmi:
-			- #### Ciphertext-only:
+			- #### Ciphertext-only: ^add400
 				- L'attaccante vede i messaggi criptati e basta
 			- #### Chosen-plaintext (CPA):  ^8d2a6c
 				- Sceglie alcuni messaggi plaintext dei quali ottiene solo il messaggio cifrato (_ciphertext_)
