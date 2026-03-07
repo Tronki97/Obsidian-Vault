@@ -52,11 +52,11 @@ data: "`2026-03-02 17:11`"
 	- Tutto ciò che è calcolabile lo è da una macchina di Turing, rimane tesi perché non si ha una propria definizione di che cos'è calcolabile.
 - # Classi di calcolabilità:
 	- Una classe di calcolabilità è un insieme di linguaggi.
-	- ## RE:
+	- ## RE: ^e20268
 		- _ricorsivamente enumerabili_
 		- Comprende ciò che c'è dentro R
 		- I linguaggi che sono solo in RE ma non R sono quelli _semi-decidibili_ ovvero che vengono accettati, _ma non decisi_, da una _MdT_
-	- ## R:
+	- ## R: ^3eb35c
 		- è la classe dei linguaggi o [[Introduzione a Informatica Teorica#^dc8067|Problemi]] ricorsivi
 		- Ci sono tutti i linguaggi decisi da una qualche _MdT_
 		- è anche detta classe dei _linguaggi decidibili_ 

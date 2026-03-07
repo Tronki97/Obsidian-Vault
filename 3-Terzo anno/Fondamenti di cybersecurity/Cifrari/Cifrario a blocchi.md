@@ -151,12 +151,45 @@ data: "`2026-02-27 11:31`"
 			- Non ha aspetti di casualità, di fatto se due plaintext sono uguali allora anche il loro testo cifrato sarà uguale, è _deterministico_
 			- _Quindi ECB non è semanticamente sicuro_
 			- ![[Pasted image 20260306121422.png|721]]
+		- ### Soluzioni per la sicurezza:
+			- _criptazione randomizzata_ ovvero con la stessa chiave e lo stesso messaggio ottenere due messaggi criptati diversi con due tentativi.
+			- _nonce based_: usare un _nonce_
+				- Che può essere un _valore casuale_
+				- Un _timestamp_
+				- Un _numero di sequenza_ che si incrementa ogni volta
+				- Una combinazione di _timestamp_ e _numero di sequenza_ che si incrementa
+				- 
 	- ## CBC
 		- Si fa criptazione tra plaintext e chiave facendo XOR
-		- Si usa per l'autenticazione
+		- Si usa per la confidenzialità e anche per la autenticazione anche se non è il massimo.
+		- C'è una sorta di catena da cui si passa prima di generare il testo cifrato di output.
+		- ### Criptazione
+			- ![[Pasted image 20260306124811.png|723]]
+				- Si ha che il _ciphertext_ $C_{_{i}}$ dipende da $C_{i-1 }$
+		- ### vettore di inizializzazione (IV):
+			- Deve essere noto ad entrambe le entità comunicanti 
+			- Deve essere protetto da modifiche non autorizzate
+			- Per generarlo:
+				- Si genera un blocco dati casuale $IV\in \{0,1\}^{n}$
+				- Si applica la funzione di criptazione con la stessa chiave usata per il plaintext, il cui nonce deve essere un blocco dati unico 
+					- ![[Pasted image 20260306125517.png]]
+		- ### Decriptazione:
+			- ![[Pasted image 20260306125629.png]]
 	- ## CFB
 		- Per [[autenticazione]] 
 		- Si divide l'input in segmenti di $s$ bit e che si criptano mano a mano
+		- Si hanno quindi messaggi con lunghezza diversa da quella standard, riuscendo a trasmettere su canali ad alta velocità e anche a lavorare con applicazioni real-time con certi limiti sul delay.
+		- ### Struttura:
+			- ![[Pasted image 20260306132342.png]]
+				- ![[Pasted image 20260306132354.png]]
+				- La lunghezza dei registri a scorrimento è $b$ bits
+				- Il registro a scorrimento va inizializzo con il valore del Vettore di inizializzazione
+				- $MSB_{s}(X)$ e $LSB_{s}(X)$ sono i primi o ultimi $s$ bit di $X$
+		- ### Cifratura:
+			- ![[Pasted image 20260306132959.png|534]]
+			- Il messaggio viene segmentato in messaggi di lunghezza $s$ bit 
+		- ### Decifratura: 
+			- ![[Pasted image 20260306133024.png|537]]
 	- ## OFB
 		- Simile a _CFB_, prendo output relativo al primo plaintext e viene messa in input al secondo blocco di criptazione
 		- Usato in reti con alto noise 

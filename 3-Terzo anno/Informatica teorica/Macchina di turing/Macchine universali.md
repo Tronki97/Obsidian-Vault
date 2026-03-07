@@ -1,0 +1,70 @@
+---
+tags:
+  - TODO
+aliases: 
+data: "`2026-03-06 15:10`"
+---
+- # Argomento:
+	- è una particolare macchina di Turing
+	- _A livello strutturale è uguale alle altre_, ha stati, simboli di nastro e tutto il resto.
+	- è detta universale perché _è in grado di simulare il comportamento di altre macchine_.
+	- Esegue una funzione di transizione particolare che permette di simulare altre macchine.
+		- Viene chiamata _funzione universale_
+- # Def:
+	- $M_{u}$
+	- Riceve in input una coppia $(M,w)$
+		- $M$ _un modo di codificare un'altra macchina_
+		- $w$ è _l'input che vogliamo dare alla macchina_ $M$
+	- $M_{u}$ deve essere in grado di dire se $M$ accetta $w$ quindi dirci _come si comporta su quell'input_
+	- $$L_{u}=\{<M,w>|M\vdash w\}$$
+		- In sostanza quello da passare a $M_{u}$ è la codifica della funzione di transizione di $M$ caratterizzata del tipo:
+			- $\delta_{M}(q_{i},X_{j})=(q_{k},X_{l}, D_{m})$ 
+				- $D$ sta per direzione
+	- ## Nomenclatura
+		- Si assume che $X_{1}=0, \ \ X_{2}=1 \ \ X_{3}=\not{b}$; $D_{1}=\leftarrow$ e $D_{2}=\to$
+		- $q_{1}$ è lo stato iniziale
+		- $q_{2}$ unico stato finale accettante
+		- Questa è la codifica della entry della _funzione di transizione_ $0^{i}10^{j}10^{k}10^{l}10^{m}$
+			- esempio
+		- $C_{1}11C_{2}11C_{3}11 ...$
+- # Funzionamento:
+	- La macchina $M_{u}$ ha 4 nastri
+		- $1°:$ $M111w$
+			- Questo perché _tre_ 1 di fila non compaiono mai quindi dopo quei tre vuol dire che inizia $w$ 
+			- Si controlla per prima cosa $M$ quindi si controlla che sia scritta bene e se non è così dice subito _no_
+		- $2°:$ $w$ ricodificata trascritta dal $1°$ nastro come prima operazione
+			- Se in $w$ c'è lo $0$ allora ne mette 1 altrimenti ne mette 2 separandoli con un $1$
+			- $w=010=010010$ _ricodificato_
+		- $3°:$ si scrive lo stato corrente di $M$ su $w$ 
+		- $4°:$ si usa come nastro di brutta copia per fare certe modifiche al secondo nastro.
+	- Il [[Interprete#^47d635|ciclo fde]] è comparabile a questo processo per l'accettazione di stringhe basate su altre macchine.
+- # Linguaggio universale:
+	- Viene _accettato_ dalla macchina universale ma non _deciso_ perché potrebbe non terminare.
+	- Intuitivamente non si trova in [[Macchina di Turing non-deterministica#^3eb35c|classe R]] ma in [[Macchina di Turing non-deterministica#^e20268|classe RE]] 
+	- Per ogni stringa bianria è possbile concatenare un $1$ davanti in questo modo si riesce a dire che le stringhe binarie sono numerabili infinite quanto i _numeri naturali_ $\mathbb{N}$ 
+	- Questa cosa si può fare anche per le funzioni di transizione codificate delle macchine $M$ date a $M_{u}$ rendendole tante quanto i _numeri naturali_ valido anche quindi per gli _algoritmi_
+	- ## Dim:
+		- Faccio una tabella con sulle colonne le _stringhe di input_ sulle righe ci metto una _macchina di turing_ 
+			- ![[Pasted image 20260307112859.png]]
+				- L' $1$ indica che quella stringa $w_{i}$ è accettata da $M_{i}$ 
+				- Lo 0 invece il contrario.
+		- $\chi_{L}=\{1,0,0,1 ...\}$ descrive chi è dentro e chi è fuori $L$ quindi la si usa per dire quale stringa viene accettata da $M_{i}$
+		- Ci si segna poi la diagonale della matrice $D=\{0,0,1,0, ...\}$
+		- Complemento questa diagonale $\bar{D}=\{1,1,0,1,...\}$
+		- $L_{d}=\{w_{i}|M_{i}\ \not \vdash w_{i}\}$ insieme di stringhe che se fossero date in input ad una certa macchina non verrebbero riconosciute 
+			- Questo linguaggio non può essere accettato da nessuna macchina 
+			- Perché c'è almeno una stringa appartenente a questo linguaggio che non viene accettata da una certa macchina e siccome sulla tabella sono elencate tutte le _macchine_ non ce n'è una che potrebbe accettarla.
+		- Quindi risulta che $L_{d}$ si trova al di fuori di $RE$ 
+	- ## Th 1:
+		- Sia $L$ un linguaggio $\in R$ allora $\bar{L}\in R$ 
+		- $\bar{L}=\Sigma^{*}-L$
+		- ### Dim:
+			- $M_{L}$ decide $L$ quindi riesce sempre a dirmi si o no 
+			- Per decidere $\bar{L}$ costruisco $M_{\bar{L}}$ più grossa che semplicemente scambia le risposte di $M_{L}$ prendendo la sua funzione di transizione e facendo si che tutte le combinazioni in cui $M_{L}$ si fermerebbe le si fanno invece andare su stati accettanti
+	- ## TH 2:
+		- Sia $L$ un linguaggio
+			- $$(L\in RE) \wedge (\bar{L}\in RE) \implies L\in R$$
+		- $M_{L}$ riconosce e quindi anche $M_{\bar{L}}$ è così 
+		- Si può quindi creare una nuova macchina $M$ in cui la stringa di input viene fatta processare in parallelo alle altre due macchine, facendo quindi un prodotto cartesiano dei due stati risultanti delle due macchine sapendo quindi che se $M_{L}$ mi riesce a rispondere di si $M_{\bar{L}}$ essendo l'opposto riesce a far rispondere di no alla macchina $M$.
+- # Link Utili:
+	- 

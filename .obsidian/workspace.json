@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "3-Terzo anno/Informatica teorica/Macchina di turing/Macchine universali.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
-            }
-          },
-          {
-            "id": "dfe76d857095aa35",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Key exchange.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Key exchange"
-            }
-          },
-          {
-            "id": "cfc99619bacd3f25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario a blocchi.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Cifrario a blocchi"
+              "title": "Macchine universali"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -137,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -283,27 +233,30 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Pasted image 20260306121422.png",
-    "Pasted image 20260306113904.png",
-    "Pasted image 20260306113614.png",
-    "Pasted image 20260306112813.png",
-    "Key exchange.md",
+    "immagini/Pasted image 20260307112859.png",
+    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchine universali.md",
     "Homepage.md",
+    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing non-deterministica.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/Interprete.md",
+    "immagini/Pasted image 20260306133024.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/Key exchange.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario a blocchi.md",
+    "immagini/Pasted image 20260306132959.png",
+    "immagini/Pasted image 20260306132354.png",
+    "immagini/Pasted image 20260306132342.png",
+    "immagini/Pasted image 20260306125629.png",
+    "immagini/Pasted image 20260306125517.png",
+    "immagini/Pasted image 20260306124811.png",
+    "immagini/Pasted image 20260306121422.png",
+    "immagini/Pasted image 20260306113904.png",
     "Excalidraw/idee Progetto di Making.md",
     "3-Terzo anno/Laboratorio di Making/RaspberryPi.md",
-    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing non-deterministica.md",
     "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing deterministica.md",
-    "immagini/Pasted image 20260304094729.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario a blocchi.md",
-    "immagini/Pasted image 20260304094534.png",
     "Troubleshooting.md",
-    "immagini/Pasted image 20260302172321.png",
     "3-Terzo anno/Fondamenti di cybersecurity/intro a fondamenti di cybersecurity.md",
     "3-Terzo anno/Laboratorio di Making/Introduzione a laboratorio di Making.md",
-    "immagini/Pasted image 20260302172405.png",
-    "immagini/Pasted image 20260302093212.png",
     "3-Terzo anno/Informatica teorica/Macchina di turing",
     "3-Terzo anno/Informatica teorica/Introduzione a Informatica Teorica.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario di flusso(stream cipher).md",
@@ -311,8 +264,6 @@
     "3-Terzo anno/Introduzione all'apprendimento automatico/approccio probabilistico/Distribuzione congiunta.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Criptografia.md",
-    "immagini/Pasted image 20260302103833.png",
-    "immagini/Pasted image 20260302101722.png",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/Fondamenti di calcolabilità.md",
     "3-Terzo anno/computational statistics/computational statistics.md",
     "3-Terzo anno/computational statistics/accept & reject algorithm.md",
@@ -322,8 +273,6 @@
     "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
     "3-Terzo anno/computational statistics/Ottimizzazione di montecarlo.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Cifrari",
-    "3-Terzo anno/Laboratorio di Making/Arduino.md",
-    "Excalidraw/Drawing 2026-02-26 13.56.01.excalidraw.md",
     "3-Terzo anno/Laboratorio di Making",
     "3-Terzo anno/Basi di Dati/Indici/Senza nome",
     "3-Terzo anno/Basi di Dati/Indici",

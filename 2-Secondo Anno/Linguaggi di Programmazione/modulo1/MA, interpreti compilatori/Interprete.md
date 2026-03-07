@@ -11,7 +11,7 @@ data: "`2024-09-17 14:25`"
 	- Operazioni e strutture dati per il _controllo del trasferimento_ dei dati 
 	- Operazioni e strutture dati per la _gestione della memoria_
 - La struttura dell'interprete è uguale per ogni [[MA (macchina astratta)||MA]] cambiano i diversi componenti.
-- L'interprete ha il compito di eseguire il ciclo _Fetch-Decode-Execute_:
+- L'interprete ha il compito di eseguire il ciclo _Fetch-Decode-Execute_: ^47d635
 	- _Fetch_: Caricare in memoria le istruzioni del programma.
 	- _decode_: decodificare e identificare il tipo di istruzioni da eseguire.
 	- _execute_: eseguire le istruzioni ricevute.
