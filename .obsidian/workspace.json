@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Informatica teorica/Macchina di turing/Macchine universali.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Macchine universali"
+              "title": "Homepage"
+            }
+          },
+          {
+            "id": "b5b1c82616359f42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/Logaritmo discreto.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Logaritmo discreto"
+            }
+          },
+          {
+            "id": "fe4f3007b5893c3c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/Logaritmo discreto.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Logaritmo discreto"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -233,24 +282,26 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "immagini/Pasted image 20260307112859.png",
-    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchine universali.md",
+    "immagini/Pasted image 20260310190322.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/Key exchange.md",
+    "immagini/Pasted image 20260310201408.png",
+    "immagini/Pasted image 20260310200737.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/Logaritmo discreto.md",
+    "immagini/Pasted image 20260310195326.png",
+    "immagini/Pasted image 20260310194017.png",
+    "immagini/Pasted image 20260310193832.png",
+    "immagini/Pasted image 20260310193428.png",
+    "immagini/Pasted image 20260310193334.png",
+    "immagini/Pasted image 20260310190625.png",
     "Homepage.md",
+    "immagini/Pasted image 20260309185854.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Modi delle operazioni.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario a blocchi.md",
+    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchine universali.md",
     "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing non-deterministica.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/Interprete.md",
-    "immagini/Pasted image 20260306133024.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/Key exchange.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario a blocchi.md",
-    "immagini/Pasted image 20260306132959.png",
-    "immagini/Pasted image 20260306132354.png",
-    "immagini/Pasted image 20260306132342.png",
-    "immagini/Pasted image 20260306125629.png",
-    "immagini/Pasted image 20260306125517.png",
-    "immagini/Pasted image 20260306124811.png",
-    "immagini/Pasted image 20260306121422.png",
-    "immagini/Pasted image 20260306113904.png",
     "Excalidraw/idee Progetto di Making.md",
     "3-Terzo anno/Laboratorio di Making/RaspberryPi.md",
     "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing deterministica.md",
@@ -270,8 +321,6 @@
     "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "3-Terzo anno/computational statistics/Notes_Slides.pdf",
-    "3-Terzo anno/computational statistics/metodi di trasformazione generali.md",
-    "3-Terzo anno/computational statistics/Ottimizzazione di montecarlo.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Cifrari",
     "3-Terzo anno/Laboratorio di Making",
     "3-Terzo anno/Basi di Dati/Indici/Senza nome",

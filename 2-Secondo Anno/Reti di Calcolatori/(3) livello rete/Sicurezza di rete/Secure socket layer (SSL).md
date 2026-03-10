@@ -65,7 +65,7 @@ data: "`2025-02-25 17:00`"
 	- le stesse VPN usano IPsec 
 	- Gli IP rimangono visibili esternamente per garantire il traffico di dati attraverso i router ma esiste comunque una parte cifrata con i veri indirizzi IP. 
 	- ![[Pasted image 20250627115039.png|500]]
-- # Ipsec
+- # Ipsec ^d80cc0
 	- Si colloca tra il [[livello Rete]] e il [[Livello trasporto]]
 	- Garantisce:
 		- [[Sicurezza Di Rete#^cb41ce|integrità]]

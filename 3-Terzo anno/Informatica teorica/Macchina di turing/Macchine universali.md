@@ -57,14 +57,17 @@ data: "`2026-03-06 15:10`"
 		- Quindi risulta che $L_{d}$ si trova al di fuori di $RE$ 
 	- ## Th 1:
 		- Sia $L$ un linguaggio $\in R$ allora $\bar{L}\in R$ 
+		- $L\subseteq \Sigma^{*}$
 		- $\bar{L}=\Sigma^{*}-L$
 		- ### Dim:
 			- $M_{L}$ decide $L$ quindi riesce sempre a dirmi si o no 
 			- Per decidere $\bar{L}$ costruisco $M_{\bar{L}}$ più grossa che semplicemente scambia le risposte di $M_{L}$ prendendo la sua funzione di transizione e facendo si che tutte le combinazioni in cui $M_{L}$ si fermerebbe le si fanno invece andare su stati accettanti
+			- ![[Pasted image 20260307113707.png]]
 	- ## TH 2:
 		- Sia $L$ un linguaggio
 			- $$(L\in RE) \wedge (\bar{L}\in RE) \implies L\in R$$
 		- $M_{L}$ riconosce e quindi anche $M_{\bar{L}}$ è così 
 		- Si può quindi creare una nuova macchina $M$ in cui la stringa di input viene fatta processare in parallelo alle altre due macchine, facendo quindi un prodotto cartesiano dei due stati risultanti delle due macchine sapendo quindi che se $M_{L}$ mi riesce a rispondere di si $M_{\bar{L}}$ essendo l'opposto riesce a far rispondere di no alla macchina $M$.
+		- ![[Pasted image 20260307113750.png]]
 - # Link Utili:
 	- 

@@ -1,0 +1,98 @@
+---
+tags:
+  - TODO
+aliases:
+  - sicurezza semantica
+  - ECB
+  - Electronic CodeBook
+  - CBC
+  - Cipher Block Chaining
+  - CFB
+  - Cipher FeedBack
+  - OFB
+  - Output FeedBack
+  - CTR
+  - CounTeR
+data: "`2026-03-09 17:44`"
+---
+- # Modi delle operazioni:
+	- Pensati per avere più flessibilità e riuscire a lavorare su blocchi di _lunghezza variabile_ e per far sembrare i [[Cifrario a blocchi|cifrari a blocchi]] come se fossero di [[Cifrario di flusso(stream cipher)|flusso]]. 
+	- ## Sicurezza semantica:
+		- Ci si mette nella situazione di attacco [[Criptografia#^add400|Ciphertext-only]] in cui fa eavesdropping
+		- La chiave è diversa ogni volta che si cripta qualcosa.
+		- ![[Pasted image 20260306113614.png|346]]
+		- Quando l'adv riesce a indovinare quello che ha scritto il _challenger_ allora ciò che si sta analizzando non è _semanticamente sicuro_.
+		- ### OTK:
+			- Per un cifrario $Q$ e un Adv $A$ si definisce un gioco d-attacco>
+				- Per $b=0 \wedge 1$ si definiscono gli esperimenti $EXP(0)$ e $EXP(1)$ in questo modo:
+					- ![[Pasted image 20260306113904.png|533]]
+			- $$Adv_{SS}(A,Q):=|P(EXP(0)=1)-P(EXP(1)=1)|$$
+				- $EXP(.)$ danno come risultato un certo numero $\in(0|1)$
+				- Se la probabilità $EXP(0)=1$ si avvicina ad uno vuol dire che l'avversario sta perdendo mentre $P(EXP(1)=1)$ allora vuol dire che $A$ sta indovinando le azioni del _challenger_
+			- Per tutti gli $A$ efficienti il valore di $Adv_{SS}(A,Q)$ dovrebbe essere molto piccolo per far si che si abbia _sicurezza semantica_
+	- ## ECB (Electronic CodeBook)
+		- Prende ogni blocco di _plaintext_ lunghezza $n$ e lo cripto usando la _stessa chiave_
+		- Lo si usa spesso per trasmettere una chiave tra due entità in modo sicuro
+		- Il messaggio originale va diviso in $N$ blocchi indipendenti e si usa la stessa chiave per sia _criptazione_ che _decriptazione_, non c'è feedback quindi ogni blocco viene maneggiato indipendentemente
+		- ![[Pasted image 20260306112813.png|525]]
+		- ### Sicurezza:
+			- Non ha aspetti di casualità, di fatto se due plaintext sono uguali allora anche il loro testo cifrato sarà uguale, è _deterministico_
+			- _Quindi ECB non è semanticamente sicuro_
+			- ![[Pasted image 20260306121422.png|721]]
+		- ### Soluzioni per la sicurezza:
+			- _criptazione randomizzata_ ovvero con la stessa chiave e lo stesso messaggio ottenere due messaggi criptati diversi con due tentativi.
+			- _nonce based_: usare un _nonce_
+				- Che può essere un _valore casuale_
+				- Un _timestamp_
+				- Un _numero di sequenza_ che si incrementa ogni volta
+				- Una combinazione di _timestamp_ e _numero di sequenza_ che si incrementa
+					- In modo che il numero di sequenza si resetti se e solo se il _timestamp_ cambia 
+	- ## CBC (Cipher Block Chaining)
+		- Si fa criptazione tra plaintext e chiave facendo XOR
+		- Si usa per la confidenzialità e anche per la autenticazione anche se non è il massimo.
+		- C'è una sorta di catena da cui si passa prima di generare il testo cifrato di output.
+		- ### Criptazione
+			- ![[Pasted image 20260306124811.png|723]]
+				- Si ha che il _ciphertext_ $C_{_{i}}$ dipende da $C_{i-1 }$
+		- ### vettore di inizializzazione (IV):
+			- Deve essere noto ad entrambe le entità comunicanti 
+			- Deve essere protetto da modifiche non autorizzate
+			- Per generarlo:
+				- Si genera un blocco dati casuale $IV\in \{0,1\}^{n}$
+				- Si applica la funzione di criptazione con la stessa chiave usata per il plaintext, il cui nonce deve essere un blocco dati unico 
+					- ![[Pasted image 20260306125517.png]]
+		- ### Decriptazione:
+			- ![[Pasted image 20260306125629.png]]
+		- ### Attacco con rand. IV:
+			- L'avversario può prevedere il _vettore di inizializzazione_ quindi con è sicuro sul lato [[Criptografia#^8d2a6c|CPA]]
+			- Dato $c=E_{CBC}(k,m)$ si suppone che l'avversario possa prevedere l'_IV_ per il _prossimo messaggio._
+			- ![[Pasted image 20260309182348.png]]
+	- ## CFB (Cipher FeedBack)
+		- Per [[autenticazione]] 
+		- Si divide l'input in segmenti di $s$ bit e che si criptano mano a mano
+		- Si hanno quindi messaggi con lunghezza diversa da quella standard, riuscendo a trasmettere su canali ad alta velocità e anche a lavorare con applicazioni real-time con certi limiti sul delay.
+		- 
+		- ### Struttura:
+			- ![[Pasted image 20260306132342.png]]
+				- ![[Pasted image 20260306132354.png]]
+				- La lunghezza del registro a scorrimento è $b$ bits e viene inizializzato con il valore di $IV$ 
+				- $MSB_{s}(X)$ e $LSB_{s}(X)$ sono i primi o ultimi $s$ bit di $X$
+			- L'IV deve essere un _nonce_ quindi unico per ogni esecuzione dell'operazione di criptazione 
+		- ### Cifratura:
+			- ![[Pasted image 20260306132959.png|706]]
+			- Il messaggio viene segmentato in messaggi di lunghezza $s$ bit 
+		- ### Decifratura: 
+			- ![[Pasted image 20260306133024.png|718]]
+	- ## OFB (Output FeedBack)
+		- Simile a _CFB_, prendo output relativo al primo plaintext e viene messa in input al secondo blocco di criptazione
+		- Usato in reti con alto noise 
+	- ## CTR (CounTeR)
+		- Si fa XOR con un _counter_ che è criptato e viene aumentato per il plaintext successivo
+		- Usato quando serve poco delay nella comunicazione
+		- Il valore del contatore (counter $1$, ..., counter $N$) deve essere diverso per ogni _blocco di plaintext_ ($P_{1},...,P_{N}$) che viene criptato.
+		- Di solito il contatore viene inizializzato ad un qualche valore e poi incrementato di 1 per ogni blocco successivo ($mod\ 2^{b}$ con $b$ block size)
+		- Data una sequenza di contatori $T_{1},...,T_{N}$ si può definire $CTR$ in questo modo:
+			- ![[Pasted image 20260309183302.png]]
+			- ![[Pasted image 20260309183319.png|542]]
+- # Link Utili:
+	- 

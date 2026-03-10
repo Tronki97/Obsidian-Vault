@@ -1,10 +1,122 @@
 ---
 tags:
-  - TODO
-aliases: 
+aliases:
+  - Protocollo Diffie-Hellman
+  - Diffie-Hellman
+  - Puzzles di Merkle
+  - toy protocol
+  - Generazione di chiavi
+  - Certificati di chiave pubblica
+  - Autorità chiave pubblica
+  - distribuzione chiavi pubbliche
+  - distribuzione chiavi private
+  - scambio chiavi private
 data: "`2026-03-06 11:08`"
 ---
-- # Argomento:
-	-  
+- # Definizione:
+	- è la procedura nella quale 2 entità comunicanti $A$ e $B$ possono cooperare per acquisire una chiave crittografica _condivisa/segreta_
+	- Per criptazioni simmetriche entrambe le parti devono condividere una chiave che deve essere protetta dall'accesso da parte di altre persone 
+	- Inoltre i cambi frequenti di chiavi sono preferibili per limitare la quantità di dati compromessi nel caso che un attaccante _impari la chiave_
+- # Distribuzione:
+	- ## Chiavi pubbliche:
+		- ### Annunci pubblici:
+			- Chiunque può può falsificare un tale annuncio pubblico 
+			- Alcuni utenti potrebbero fingere di essere $A$ e mandare una chiave pubblica a un altro partecipante o mandarla in [[Infrastruttura e collegamenti di rete#^dd6b19|broadcast]]
+			- ![[Pasted image 20260309185854.png|572]]
+		- ### Directory pubblica di chiavi pubbliche:
+			- La manutenzione e distribuzione di queste directory pubbliche devono essere di competenza di una qualche entità o organizzazione/central authority (CA)
+			- ![[Pasted image 20260309190102.png|581]]
+		- ### Autorità chiave pubblica:
+			- In Questo scenario si assume che la $CA$ mantenga la _directory pubblica_ delle chiavi pubbliche per tutti i partecipanti ed ognuno di loro conosce in maniera affidabile una chiave pubblica per la _autorità_
+			- $A$ manda un messaggio con un _timestamp_ alla _autorità_ 
+			- La $CA$ risponde con un messaggio criptato usando la sua chiave privata $K_{Auth}^{-}$ contenente la chiave pubblica di $B$ $K_{B}^{+}$.
+			- $A$ si salva $K_{B}^{+}$ e la usa per criptare un messaggio per $B$ contenendo un identificatore $ID_{A}$ e un _nonce_ $N_{1}$
+			- $B$ fa la stessa cosa 
+			- I nonce $N_{1},N_{2}$ sono usati per identificare le transazioni tra $A$ e $B$.
+			- ![[Pasted image 20260309191025.png|553]]
+			- #### Problemi:
+				- La $CA$ può rappresentare il collo di bottiglia del sistema in quanto un utente deve chiedere una chiave per ogni altro utente che intende contattare.
+				- La directory dei nomi e delle chiavi pubbliche manutenuta dalla $CA$ è _vulnerabile a manomissioni_
+		- ### Certificati di chiave pubblica:
+			- Consiste in:
+				- _chiave pubblica_
+				- _identificatore del proprietario della chiave_
+				- _L'intero blocco firmato da una terza parte fidata_
+			- Questa terza parte tipicamente è una $CA$ tipo una _agenzia governativa_ o istituto finanziario che ha la fiducia della comunità degli utenti
+			- Ogni partecipante ricorre alla $CA$ fornendo _chiave pubblica_ e richiedendo un _certificato_ 
+			- Le applicazioni devono essere presentate di persona o attraverso un altro canale di comunicazione autenticato
+			- Per $A$ la autorità fornisce un certificato nella forma:
+				- $$C_{A}=E(K_{Auth}^{-}, [T\ || ID_{A}|| K_{A}^{+}])$$
+			- $A$ poi può passare questo certificato ad altri partecipanti, che lo leggono e lo verificano nel seguente modo :
+				- $$D(K^{+}_{Auth},C_{A})=D(K^{+}_{Auth},E(K_{Auth}^{-}, [T\ || ID_{A}|| K_{A}^{+}]))=(T\ || ID_{A}|| K_{A}^{+})$$
+			- #### Requisiti dei certificati:
+				- Qualunque partecipante può leggere un certificato per determinare il _nome e la chiave pubblica_ del possessore di tale certificato
+				- Qualunque partecipante può verificare che il certificato origini da una $CA$ e che quindi non sia _contraffatto_
+				- Solo la $CA$ può _creare e aggiornare_ i certificati
+				- Qualunque partecipante può verificare la _validità temporale_ del certificato
+			- #### Schema:
+				- Schema generico:
+					- ![[Pasted image 20260310190322.png|628]]
+				- Lo standard $X.509$ è diventato lo schema universalmente accettato e viene usato nella maggior parte delle applicazioni di sicurezza di rete, incluse [[Secure socket layer (SSL)#^d80cc0|IPsec]] e _TLS_
+					- ![[Pasted image 20260310190625.png|627]]
+					- 
+	- ## chiavi private:
+		- Per due entità $A,B$ ci sono vari modi per avere una distribuzioni di chiavi
+		- $A$ e $B$ si possono scambiare la chiave _fisicamente_
+		- Una terza parte può consegnare la chiave _fisicamente_ alle altre 2 parti
+		- Ci si può scambiare la chiave nuova criptandola con una vecchia usata da poco
+		- Se $A,B$ hanno una connessione criptata con $C$ essa può consegnare la chiave sulle connessioni criptate per $A,B$
+		- ### Terze parti fidate:
+			- #### Gestione delle chiavi:
+				- Si hanno $n$ utenti, immagazzinare le chiavi corrispettive risulta difficile essendo $O(n)$ chiavi per ogni utente
+					- Per un totale di $O(n^{2})$
+					- ![[Pasted image 20260310193334.png|263]]
+				- Una soluzione migliore sarebbe quella di avere una _terza parte fidata_
+					- ![[Pasted image 20260310193428.png|508]]
+					- Così ogni utente necessita di ricordarsi solo la chiave condivisa con la $TTP$
+			- #### Condivisione:
+				- Una _chiave di sessione temporanea_ $K_{S}$ viene creata la quale durerà solo per la durata della connessione [[Livello trasporto#^157bc5|TCP]] 
+				- $A$ e $B$ devono condividere una _long-lasting master key_ $K_{mA},K_{mB}$ con la terza parte coinvolta nella creazione della chiave $K_{S}$ 
+				- ![[Pasted image 20260310193832.png|653]]
+			- #### Generare le chiavi (toy protocol):
+				- ![[Pasted image 20260310194017.png|653]]
+					- Un _eavesdropper_ vede $E(K_{A}, \text{"A,B" }||\ K_{AB})$ e $E(K_{B}, \text{"A,B" }||\ K_{AB})$
+					- E siccome è [[Criptografia#^8d2a6c|CPA]] sicuro l'attaccante non saprà nulla riguardo alla chiave di sessione $K_{AB}$ 
+					- Risulta però vulnerabile ad un _replay attack_.
+		- ### Puzzles di Merkle:
+			- è uno scambio di chiavi _senza la terza parte_
+			- è sicura contro _eavesdropping_
+			- Consente a due entità di essere d'accordo su un segreto condiviso tramite lo scambio di messaggi anche se i due non hanno nessun precedente segreto comune
+			- _Alice_:
+				- Prepara $2^{32}$ puzzles 
+					- $\forall i=1,...,2^{32}$ si sceglie un numero random $P_{i}\in \{0,1\}^{32}$ e dei numeri random $x_{i},k_{i}\in \{0,1\}^{128}$ con $x_{i}\ne x_{j}$
+					- Si setta $puzzle_{i}=E(0^{96}||P_{i}, \text{"puzzle\#"}||x_{i},k_{i})$
+					- Si manda poi $puzzle_{1},...,puzzle_{2^{32}}$ a _Bob_
+			- _Bob_:
+				- Sceglie un $puzzle_{j}$ casuale e lo risolve con _forza bruta_ 
+				- Ottiene $(x_{j},k_{j})$ e usa $k_{j}$ come segreto condiviso
+				- Manda poi $x_{j}$ ad _Alice_
+			- _Alice_ da $x_{j}$ ricaverà poi $k_{j}$
+			- ![[Pasted image 20260310195326.png|600]]
+			- Il lavoro da fare per entrambe le parti è quindi $O(2^{32})=O(n)$ mentre l'attaccante deve risolvere $O(2^{64})=O(n^{2})$
+		- ### Protocollo Diffie-Hellman:
+			- $A$ e $B$ _non_ condividono in precedenza nessun info segreta
+			- $A$ e $B$ si scambiano messaggi
+			- Dopo lo scambio entrambi si sono messi d'accordo su una _chiave segreta condivisa_ $k$
+			- $k$ risulta sconosciuta all'ascoltatore
+			- Si basa sul problema del _logaritmo discreto_
+				- Dato $g$, $p$, $g^{k}\ mod\ p$ devo trovare $k$
+				- Si fissa $p$ di lunghezza alta tipo $600$ numeri
+				- Si fissa un intero $g\in\{2,...,p-2\}$
+				- ![[Pasted image 20260310200737.png]]
+			- #### Sicurezza:
+				- L'_eavesdropper_ vedrà $p,g,g^{a}\ mod\ p$ e $g^{b}\ mod \ p$
+				- Potrà l'attaccante calcolare $g^{ab}\ mod \ p$?
+				- Suppongo $p$ sia lungo $n$ bit 
+					- Il miglior algoritmo per calcolarlo ([GNFS](https://en.wikipedia.org/wiki/General_number_field_sieve)) ha un tempo di calcolo esponenziale: 
+						- $$e^{O(\sqrt[3]{n})}$$
+				- Non risulta sicuro però contro un attacco _MITM_
+					- ![[Pasted image 20260310201408.png]]
+					- In quanto potrebbe alterare i messaggi che arrivano a _Bob_ oppure riuscire a leggerli in chiaro.
 - # Link Utili:
 	- 

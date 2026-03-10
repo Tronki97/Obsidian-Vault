@@ -33,7 +33,7 @@ aliases:
 			- può verificarsi quando uno schema _minimamente connesso_ perde un collegamento. 
 			- ![[Pasted image 20240927131326.png]]
 - # Canali di comunicazione della rete
-	- ## Canale ad acceso multiplo (Broadcast):
+	- ## Canale ad acceso multiplo (Broadcast): ^dd6b19
 		- Tutti i dispositivi comunicano sullo stesso canale
 		- Bisogna decidere un _arbitraggio_ (chi comunica e quando)
 		- Richiede indirizzamento, ovvero decidere il destinatario della trasmissione.
