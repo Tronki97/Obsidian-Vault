@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+aliases:
+  - linguaggio universale
 data: "`2026-03-06 15:10`"
 ---
 - # Argomento:
@@ -16,7 +17,7 @@ data: "`2026-03-06 15:10`"
 		- $M$ _un modo di codificare un'altra macchina_
 		- $w$ è _l'input che vogliamo dare alla macchina_ $M$
 	- $M_{u}$ deve essere in grado di dire se $M$ accetta $w$ quindi dirci _come si comporta su quell'input_
-	- $$L_{u}=\{<M,w>|M\vdash w\}$$
+	- $$L_{u}=\{<M,w>|M\vDash w\}$$
 		- In sostanza quello da passare a $M_{u}$ è la codifica della funzione di transizione di $M$ caratterizzata del tipo:
 			- $\delta_{M}(q_{i},X_{j})=(q_{k},X_{l}, D_{m})$ 
 				- $D$ sta per direzione
@@ -51,7 +52,7 @@ data: "`2026-03-06 15:10`"
 		- $\chi_{L}=\{1,0,0,1 ...\}$ descrive chi è dentro e chi è fuori $L$ quindi la si usa per dire quale stringa viene accettata da $M_{i}$
 		- Ci si segna poi la diagonale della matrice $D=\{0,0,1,0, ...\}$
 		- Complemento questa diagonale $\bar{D}=\{1,1,0,1,...\}$
-		- $L_{d}=\{w_{i}|M_{i}\ \not \vdash w_{i}\}$ insieme di stringhe che se fossero date in input ad una certa macchina non verrebbero riconosciute 
+		- $L_{d}=\{w_{i}|M_{i}\ \not \vDash w_{i}\}$ insieme di stringhe che se fossero date in input ad una certa macchina non verrebbero riconosciute (_linguaggio di diagonalizzazione_)
 			- Questo linguaggio non può essere accettato da nessuna macchina 
 			- Perché c'è almeno una stringa appartenente a questo linguaggio che non viene accettata da una certa macchina e siccome sulla tabella sono elencate tutte le _macchine_ non ce n'è una che potrebbe accettarla.
 		- Quindi risulta che $L_{d}$ si trova al di fuori di $RE$ 
@@ -69,5 +70,76 @@ data: "`2026-03-06 15:10`"
 		- $M_{L}$ riconosce e quindi anche $M_{\bar{L}}$ è così 
 		- Si può quindi creare una nuova macchina $M$ in cui la stringa di input viene fatta processare in parallelo alle altre due macchine, facendo quindi un prodotto cartesiano dei due stati risultanti delle due macchine sapendo quindi che se $M_{L}$ mi riesce a rispondere di si $M_{\bar{L}}$ essendo l'opposto riesce a far rispondere di no alla macchina $M$.
 		- ![[Pasted image 20260307113750.png]]
+	- ## TH 3:
+		- Si può dimostrare che $L_{u}\notin R$ e che quindi non esisterà mai un decisore per questo linguaggio.
+		- ### DIM:
+			- Suppongo che $L_{u} \in R$ allora so dal _TH 1_ che $\bar{L_{u}}\in R$  quindi esiste un _MdT_  $\bar{M_{u}}$ che lo decide ($L(\bar{M_{u}})=\bar{L_{u}}$)
+			- Si considera una macchina più grossa $M'$ con in input $w_{i}$, che entra in un modulo di copia e scrive sul nastro $M_{i}111w_{i}$ che poi verrà mandata in input a $\bar M_{u}$ e se essa risponde di _si_ allora anche $M'$ risponde di _si_ e la stessa cosa vale per il _no_
+				- ![[Pasted image 20260311174113.png]]
+					- $M_{i}$ è esattamente $w_{i}$ però che viene intesa come codice binario di una macchina.
+					- _Oss_: il linguaggio di $M'$ è deciso da quella macchina
+				- Suppongo che $M'$ riesca a dire di _si_:
+					- Per far si che succeda serve che $\bar M_{u}$ dica di _si_ e per far si che accada serve che $M_{i}\not \vDash w_{i}$
+				- Suppongo risponda _no_:
+					- Per far si che succeda serve che $\bar M_{u}$ dica _no_ e par si che succeda serve che $M_{i}\vDash w_{i}$ 
+				- Risulta quindi che:
+					- $$L_{d}=\begin{cases} M_{i}\not \vDash w_{i} \\ M_{i}\vDash w_{i}\end{cases}$$
+					- Che però $L_{d}$ non viene deciso da nessuna macchina risultando quindi in un assurdo e quindi si è dimostrato che $L_{u}\notin R$ e che $L_{u} \in RE$ 
+						- Per il TH 2 ci risulta che $\bar L_{u}\notin RE$
+	- ## TH 4:
+		- $$\bar L_{d}=\{w_{i}| M_{i} \vDash w_{i}\}$$
+		- E si ha che $\bar L_{d} \in RE \implies \bar L_{d}\notin R$
+		- Per dimostrarlo si costruisce una macchina $M'$ con in input $M_{i}$ e si copia questo input in una stringa $M_{i}111w_{i}$ che si da in input alla macchina $M_{u}$ che se risponde di _si_ allora anche $M'$ dira di _si
+		- ![[Pasted image 20260311174225.png]] _
+			- Suppongo di avere in input una istanza _si_ di $\bar L_{d}$ ovvero $M_{i} \vDash w_{i}$ da ciò si ha che che $M'$ risponde di _si_ 
+			- Suppongo ora di avere un'istanza _no_ di $\bar L_{d}$ ovvero $M_{i} \not \vDash w_{i}$ quindi si ha che $M_{u}$ o non si ferma o risponde di _no_ allora $M'$ _non_ risponde di _si_ 
+		- Si può concludere che $\bar L_{d}\in RE$
+	- ## Halt language:
+		- $$HALT= \{<M,w>|M \ \text{si arresta}\}$$
+			- Si arresterà non per forza per dire di _si_ 
+		- $$L_{u}=\{<M,w>|M \vDash w\}$$
+		- Si può costruire la macchina $M_{H}$ dandole in input la coppia $<M,w>$ con all'interno la macchina $M_{u}$ che se risponde di si o no allora la macchina $M_{H}$ dirà di _si_ e se $M_{u}$ cilerà all'infinito allora vorrà dire che risponde di no.  
+			- ![[Pasted image 20260311174356.png]]
+		- ### appartenenza ad RE:
+			- Istanza si: $(M,w)\in HALT$ 
+				- Nel momento in cui $M_{u}$ simulando $w$ si accorge che si ferma  su un qualsiasi stato allora vuol dire che dovrà andare su uno stato finale accettante e quindi rispondere di si 
+			- Istanza no: $(M,w)\notin HALT$
+				- In questo caso $M_{H}$ per riuscire da "dire" _no_ semplicemente non risponderà di _si_ 
+			- Si è quindi dimostrato che $HALT \in RE$ 
+		- ### Appartenenza ad R:
+			- _Riuscire a capire se un algoritmo si ferma risulta essere intricato_.
+			- Si vuole dimostrare che $HALT \notin R$
+			- Suppongo per assurdo che $HALT \in R$ allora so che $\exists M_{H}^{*}$ che _decide_ $HALT$ 
+			- Si crea quindi una macchina $M'$ con in input $(M,w)$ la si copia e la si manda in input a $M_{H}^{*}$ e $M_{u}$ e quest'ultima riceve in input anche il risultato nel caso dica di _si_ di $M_{H}^{*}$ 
+			- Se $M_{H}^{*}$ dice di _no_ quindi $(M,w)$ non si arresta allora anche $M'$ dice di _no_ 
+				- ![[Pasted image 20260311174553.png|716]]
+			- Nel caso dica di _si_ allora si da un segnale di _start_ alla macchina $M_{u}$ il cui output _si_ o _no_ corrisponde anche al risultato di $M'$ 
+			- Tutto ciò funziona perché se $M_{H}^{*}$ si è assunto sia in grado di dire _si_ o _no_ dandomi quindi la garanzia che $M_{u}$ riesca a fermarsi per rispondere.
+			- Suppongo $M'$ risponda di _si_:
+				- Significa che $M_{u}$ ha detto _si_ e che quindi $M_{H}^{*}$ abbia detto di si e che quindi $M \vDash w$ 
+			- Suppongo $M'$ dica di _no_:
+				- Caso 1: la simulazione di $M_{u}$ è arrivata a fermarsi e a dire di no 
+				- Caso 2: $M_{H}^{*}$ ha detto di no quindi $M$ su $w$ non si ferma 
+				- Risulta quindi che $M\not\vDash w$ 
+			- Ma siamo quindi in un linguaggio $L_{u}$ che $\in RE$ avendo che $HALT \notin R$
+			- Da ciò si riesce quindi anche a dedurre grazie a TH 2 che $\overline{HALT} \notin RE$
+	- ## HALT su stringa vuota:
+		- $$HALT_{\epsilon} = \{<M>|\text{M si ferma su } \epsilon\}$$
+			- Si possono fermare in un qualsiasi numero di passi 
+		- ### appartenenza a RE:
+			- $HALT_{\epsilon} \in RE$ 
+			- Si ha una macchina con in input $M$ con all'interno $M_{u}$ che prende anche in input $\epsilon$ e dice _si,no_ oppure cicla all'infinito.
+				- ![[Pasted image 20260311174811.png]]
+		- ### Appartenenza ad R
+			- Suppongo per assurdo che $HALT_{\epsilon}\in R$ e ciò implica che $\exists M_{H_{\epsilon}}^{*}$ che decide $HALT_{\epsilon}$ 
+			- Costruisco quindi una macchina $N$  con in input $(M,w)$ che va in un modulo _reshape_ che da fuori $M'$ che finisce in $M_{H_{\epsilon}}^{*}$ che dirà _si_ o _no_
+				- ![[Pasted image 20260311174902.png|556]]
+				- _Reshape_ prende l'input guarda $\delta_{M}$ e ci aggiunge dei pezzi dando quindi come risultato $M'$ 
+					- Che cancella l'input iniziale, scrive $w$ sul nastro e poi fa partire la $\delta_{M}$ 
+			- Suppongo di avere _si_ da $N$ :
+				- $M_{H_{\epsilon}}^{*}$ dirà di si avendo $M'$ come input e risulta quindi che $M$ _si arresta sulla stringa_ $w$
+			- Suppongo che risponda di _no_:
+				- $M_{H_{\epsilon}}^{*}$ dirà di _no_ avendo $M'$ non si arresta quindi avendo che $M$ _non si arresta su_ $w$ 
+			- Il linguaggio deciso da $N$ è $HALT$ ma ciò è un assurdo perché $HALT$ non è decidibile risultando quindi che $HALT_{\epsilon}\notin R$ 
 - # Link Utili:
 	- 

@@ -1,11 +1,11 @@
 ---
 tags:
-  - TODO
 aliases:
   - albero di computazione
   - classi di calcolabilità
   - classe R
   - classe RE
+  - guess & check
 data: "`2026-03-02 17:11`"
 ---
 - # Macchina non deterministica:
