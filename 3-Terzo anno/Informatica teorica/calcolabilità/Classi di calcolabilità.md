@@ -1,0 +1,47 @@
+---
+tags:
+aliases:
+  - RE
+  - ricorsivamente enumerabili
+  - R
+  - classe RE
+  - classe R
+  - TH1
+  - TH2
+data: "`2026-03-12 17:22`"
+---
+- Una classe di calcolabilità è un insieme di linguaggi.
+- # RE: ^e20268
+	- _ricorsivamente enumerabili_
+	- Comprende ciò che c'è dentro R
+	- I linguaggi che sono solo in RE ma non R sono quelli _semi-decidibili_ ovvero che vengono accettati, _ma non decisi_, da una _MdT_
+- # R: ^3eb35c
+	- è la classe dei linguaggi o [[Introduzione a Informatica Teorica#^dc8067|Problemi]] ricorsivi
+	- Ci sono tutti i linguaggi decisi da una qualche _MdT_
+	- è anche detta classe dei _linguaggi decidibili_ 
+	- Chiamata così per motivi storici.
+	- Tutto ciò che non si trova qui dentro non è decidibile
+- Al di fuori di queste due classi ci sono quelli non-decidibili
+- # Proprietà:
+	- ## Th 1: ^0e0666
+		- Sia $L$ un linguaggio $\in R$ allora $\bar{L}\in R$ 
+		- $L\subseteq \Sigma^{*}$ 
+		- $\bar{L}=\Sigma^{*}-L$
+		- ### Dim:
+			- $M_{L}$ decide $L$ quindi riesce sempre a dirmi si o no 
+			- Per decidere $\bar{L}$ costruisco $M_{\bar{L}}$ più grossa che semplicemente scambia le risposte di $M_{L}$ prendendo la sua funzione di transizione e facendo si che tutte le combinazioni in cui $M_{L}$ si fermerebbe le si fanno invece andare su stati accettanti
+			- ![[Pasted image 20260307113707.png]]
+		- ### Formalismo:
+			- Se $w \in L \implies$ $M_{L}$ accetta $w$ quindi risulta che $M_{\bar{L}}$ rifiuta $w$ 
+			- Se $w\notin L \implies$ $M_{L}$ rifiuta $w$ che risulta in $M_{\bar{L}}$ che accetta $w$
+			- Quindi siccome la macchina riesce sempre a fermarsi e a dare una risposta _si_ o _no_ allora si può dire che $M_{\bar{L}}$ decide $\bar{L}$ 
+	- ## TH 2: ^d1d978
+		- Sia $L$ un linguaggio
+		- $$(L\in RE) \wedge (\bar{L}\in RE) \implies L\in R$$
+		- ### Dim:
+			- Ciò significa che esistono due macchine $M_{L}$ e $M_{\bar{L}}$ che riconoscono i rispettivi linguaggi 
+			- $M_{L}$ si ferma in stato accettante se $w \in L$ vale lo stesso per $M_{\bar{L}}$ e $\bar{L}$
+			- Si può quindi creare una nuova macchina $M$ in cui la stringa di input viene fatta processare in parallelo alle altre due macchine, facendo quindi un prodotto cartesiano dei due stati risultanti delle due macchine sapendo quindi che se $M_{L}$ mi riesce a rispondere di si $M_{\bar{L}}$ essendo l'opposto riesce a far rispondere di no alla macchina $M$ .
+			- ![[Pasted image 20260307113750.png]]
+- # Link Utili:
+	- 

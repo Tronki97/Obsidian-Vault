@@ -2,9 +2,6 @@
 tags:
 aliases:
   - albero di computazione
-  - classi di calcolabilità
-  - classe R
-  - classe RE
   - guess & check
 data: "`2026-03-02 17:11`"
 ---
@@ -50,18 +47,5 @@ data: "`2026-03-02 17:11`"
 			- $$L=\{ww|w\in (0|1)^{+}\}$$
 - # Tesi di Church-Turing:
 	- Tutto ciò che è calcolabile lo è da una macchina di Turing, rimane tesi perché non si ha una propria definizione di che cos'è calcolabile.
-- # Classi di calcolabilità:
-	- Una classe di calcolabilità è un insieme di linguaggi.
-	- ## RE: ^e20268
-		- _ricorsivamente enumerabili_
-		- Comprende ciò che c'è dentro R
-		- I linguaggi che sono solo in RE ma non R sono quelli _semi-decidibili_ ovvero che vengono accettati, _ma non decisi_, da una _MdT_
-	- ## R: ^3eb35c
-		- è la classe dei linguaggi o [[Introduzione a Informatica Teorica#^dc8067|Problemi]] ricorsivi
-		- Ci sono tutti i linguaggi decisi da una qualche _MdT_
-		- è anche detta classe dei _linguaggi decidibili_ 
-		- Chiamata così per motivi storici.
-		- Tutto ciò che non si trova qui dentro non è decidibile
-	- Al di fuori di queste die classi ci sono quelli non-decidibili
 - # Link Utili:
 	- 

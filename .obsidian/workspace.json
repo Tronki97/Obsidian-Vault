@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "106ea2356cc1fecd",
+            "id": "f181bbf79551beb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing non-deterministica.md",
+                "file": "3-Terzo anno/Informatica teorica/Macchina di turing/Macchine universali.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Macchina di Turing non-deterministica"
+              "title": "Macchine universali"
+            }
+          },
+          {
+            "id": "50074115526a258a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Informatica teorica/calcolabilità/linguaggio di diagonalizzazione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "linguaggio di diagonalizzazione"
+            }
+          },
+          {
+            "id": "87afe852e8f91f76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Informatica teorica/calcolabilità/linguaggio di diagonalizzazione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "linguaggio di diagonalizzazione"
+            }
+          },
+          {
+            "id": "38da6d915ac97ef7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Informatica teorica/calcolabilità/Classi di calcolabilità.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Classi di calcolabilità"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -270,8 +342,15 @@
   },
   "active": "db79be7258f0f00b",
   "lastOpenFiles": [
-    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing deterministica.md",
+    "3-Terzo anno/Informatica teorica/calcolabilità/Classi di calcolabilità.md",
+    "Halting problem.md",
+    "3-Terzo anno/Informatica teorica/calcolabilità",
     "3-Terzo anno/Informatica teorica/Macchina di turing/Macchine universali.md",
+    "3-Terzo anno/Informatica teorica/calcolabilità/linguaggio di diagonalizzazione.md",
+    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing non-deterministica.md",
+    "3-Terzo anno/Laboratorio di Making/RaspberryPi.md",
+    "Homepage.md",
+    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing deterministica.md",
     "3-Terzo anno/Informatica teorica/Introduzione a Informatica Teorica.md",
     "immagini/Pasted image 20260311174113.png",
     "immagini/Pasted image 20260311174902.png",
@@ -279,7 +358,6 @@
     "immagini/Pasted image 20260311174553.png",
     "immagini/Pasted image 20260311174356.png",
     "immagini/Pasted image 20260311174225.png",
-    "Homepage.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Logaritmo discreto.md",
     "immagini/Pasted image 20260310190322.png",
     "3-Terzo anno/Fondamenti di cybersecurity/Key exchange.md",
@@ -288,10 +366,8 @@
     "immagini/Pasted image 20260310195326.png",
     "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Modi delle operazioni.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario a blocchi.md",
-    "3-Terzo anno/Informatica teorica/Macchina di turing/Macchina di Turing non-deterministica.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/Interprete.md",
     "Excalidraw/idee Progetto di Making.md",
-    "3-Terzo anno/Laboratorio di Making/RaspberryPi.md",
     "Troubleshooting.md",
     "3-Terzo anno/Fondamenti di cybersecurity/intro a fondamenti di cybersecurity.md",
     "3-Terzo anno/Laboratorio di Making/Introduzione a laboratorio di Making.md",
@@ -303,9 +379,6 @@
     "3-Terzo anno/Fondamenti di cybersecurity/Criptografia.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/Fondamenti di calcolabilità.md",
     "3-Terzo anno/computational statistics/computational statistics.md",
-    "3-Terzo anno/computational statistics/accept & reject algorithm.md",
-    "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "3-Terzo anno/computational statistics/Notes_Slides.pdf",
     "3-Terzo anno/Fondamenti di cybersecurity/Cifrari",
     "3-Terzo anno/Laboratorio di Making",
@@ -314,7 +387,6 @@
     "3-Terzo anno/Basi di Dati/Normalizzazione",
     "3-Terzo anno/Introduzione all'apprendimento automatico/demo/autoencoder.ipynb",
     "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/laboratorio 1.ipynb",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/laboratorio/laboratorio3_reti_neurali.ipynb",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

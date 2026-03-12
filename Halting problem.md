@@ -1,0 +1,62 @@
+---
+tags:
+  - TODO
+aliases:
+  - halt language
+  - HALT
+  - HALT su stringa vuota
+data: "`2026-03-12 18:04`"
+---
+- # Halt language:
+	- $$HALT= \{<M,w>|M \ \text{si arresta}\}$$
+		- Si arresterà non per forza per dire di _si_ 
+	- $$L_{u}=\{<M,w>|M \vDash w\}$$
+	- ## Macchina per HALT:
+		- Si può costruire la macchina $M_{H}$ dandole in input la coppia $<M,w>$ con all'interno la macchina $M_{u}$ che se risponde di si o no allora la macchina $M_{H}$ dirà di _si_ e se $M_{u}$ ciclerà all'infinito allora vorrà dire che risponde di no.  
+			- ![[Pasted image 20260311174356.png]]
+	- ## appartenenza ad RE:
+		- Istanza si: $(M,w)\in HALT$ 
+			- Nel momento in cui $M_{u}$ simulando $w$ si accorge che si ferma  su un qualsiasi stato allora vuol dire che dovrà andare su uno stato finale accettante e quindi rispondere di _si_
+		- Istanza no: $(M,w)\notin HALT$
+			- In questo caso $M_{H}$ per riuscire da "dire" _no_ semplicemente non risponderà di _si_ 
+		- Si è quindi dimostrato che $HALT \in RE$ 
+	- ## Appartenenza ad R:
+		- _Riuscire a capire se un algoritmo si ferma risulta essere intricato_.
+		- Si vuole dimostrare che $HALT \notin R$
+		- Suppongo per assurdo che $HALT \in R$ allora so che $\exists M_{H}^{*}$ che _decide_ $HALT$ 
+		- Si crea quindi una macchina $M'$ con in input $(M,w)$ la si copia e la si manda in input a $M_{H}^{*}$ e $M_{u}$ e quest'ultima riceve in input anche il risultato nel caso dica di _si_ di $M_{H}^{*}$ 
+		- Se $M_{H}^{*}$ dice di _no_ quindi $(M,w)$ non si arresta allora anche $M'$ dice di _no_ 
+			- ![[Pasted image 20260311174553.png|716]]
+		- Nel caso dica di _si_ allora si da un segnale di _start_ alla macchina $M_{u}$ il cui output _si_ o _no_ corrisponde anche al risultato di $M'$ 
+		- Tutto ciò funziona perché se $M_{H}^{*}$ si è assunto sia in grado di dire _si_ o _no_ dandomi quindi la garanzia che $M_{u}$ riesca a fermarsi per rispondere.
+		- Suppongo $M'$ risponda di _si_:
+			- Significa che $M_{u}$ ha detto _si_ e che quindi $M_{H}^{*}$ abbia detto di si e che $M \vDash w$ 
+		- Suppongo $M'$ dica di _no_:
+			- Caso 1: la simulazione di $M_{u}$ è arrivata a fermarsi e a dire di no ovvero $M\not \vDash w$ e $M_{H}^{*}$ ha risposto _si_ 
+			- Caso 2: $M_{H}^{*}$ ha detto di no quindi $M$ su $w$ non si ferma 
+			- Risulta quindi che in entrambi i casi $M\not\vDash w$ 
+		- il linguaggio risultante è:
+			- $$L_{u}=\begin{cases} M \vDash w \ & \text{risposta SI} \\ M \not \vDash w \ &\text{risposta NO}\end{cases}$$
+		- Sapendo che $L_{u}\in RE$  e sapendo anche grazie a [[Macchine universali#^b9fc7d|TH3]] che $L_{u} \notin R$ allora ricavo che $HALT \notin R$
+		- Da ciò si riesce quindi anche a dedurre grazie a [[Classi di calcolabilità#^d1d978|TH2]] che $\overline{HALT} \notin RE$ 
+- # HALT su stringa vuota:
+	- $$HALT_{\epsilon} = \{<M>|\text{M si ferma con input } \epsilon\}$$
+		- Si possono fermare in un qualsiasi numero di passi 
+	- ## appartenenza a RE:
+		- $HALT_{\epsilon} \in RE$ 
+		- Si ha una macchina con in input $M$ con all'interno $M_{u}$ che prende anche in input $\epsilon$ e dice _si,no_ oppure cicla all'infinito.
+			- ![[Pasted image 20260311174811.png]]
+	- ## Appartenenza ad R
+		- Suppongo per assurdo che $HALT_{\epsilon}\in R$ e ciò implica che $\exists M_{H_{\epsilon}}^{*}$ che decide $HALT_{\epsilon}$ 
+		- Costruisco quindi una macchina $N$  con in input $(M,w)$ che va in un modulo _reshape_ che restituisce $M'$ che finisce in $M_{H_{\epsilon}}^{*}$ che dirà _si_ o _no_
+			- ![[Pasted image 20260311174902.png|556]]
+			- _Reshape_ prende l'input guarda $\delta_{M}$ e ci aggiunge dei pezzi dando quindi come risultato $M'$:
+				- Che cancella l'input iniziale, scrive $w$ sul nastro e poi fa partire la $\delta_{M}$ 
+		- Suppongo di avere _si_ da $N$ :
+			- $M_{H_{\epsilon}}^{*}$ dirà di _si_ avendo $M'$ come input e risulta quindi che $M$ _si arresta sulla stringa_ $w$
+		- Suppongo che risponda di _no_:
+			- $M_{H_{\epsilon}}^{*}$ dirà di _no_ avendo $M'$ non si arresta quindi avendo che $M$ _non si arresta su_ $w$ 
+		- Il linguaggio deciso da $N$ è $HALT$ ma ciò è un assurdo perché $HALT$ non è decidibile risultando quindi che $HALT_{\epsilon}\notin R$ 
+	- inoltre siccome $(HALT_{\epsilon} \in RE) \wedge HALT_{\epsilon} \notin R \implies \overline{HALT_{\epsilon}}\notin RE$ grazie al teorema [[Classi di calcolabilità#^d1d978|TH2]]   
+- # Link Utili:
+	- 
