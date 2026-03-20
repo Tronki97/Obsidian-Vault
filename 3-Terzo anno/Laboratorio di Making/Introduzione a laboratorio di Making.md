@@ -60,5 +60,7 @@ data: "`2026-02-17 15:17`"
 - # Valore tensione efficace:
 	- Quello che si legge con un multimetro su una corrente alternata che rappresenta una tensione continua equivalente che è
 		- $$\frac{\max(V_{c}(t))}{\sqrt{2}}$$
+- # Trasformatori:
+	- usando due avvolgimenti con stesso numero di spire si ottengono dei dispositivi che fanno passare la corrente alternata ma non quella continua
 - # Link Utili:
 	- 

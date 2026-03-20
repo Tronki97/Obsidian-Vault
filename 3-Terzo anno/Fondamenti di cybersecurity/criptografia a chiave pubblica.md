@@ -1,0 +1,55 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-03-16 09:29`"
+---
+- # Intro:
+	- ripasso sulla confidenzialità garantita da questo metodo
+	- ottenere la chiave pubblica ma non sapere quella privata non risulta molto utile e craccare quella privata richiede troppo tempo.
+- # Applicazioni:
+	- ## de/criptazione
+	- ## scambio di chiavi:
+	- ## Firma digitale:
+		- il mittente "mette la firma" criptando con la propria chiave privata, facendo quindi capire che è stato lui a mandare il messaggio in quanto solo lui conosce la chiave e in questo modo si aggiunge anche la _non repudiabilità_ del messaggio.
+- # Def:
+	- è compost da una tripla di algoritmi $(G,E,D)$
+		- $G()$ algoritmo di randomizzazione che butta fuori una coppia di chiavi $(K^{-},K^{+})$
+		- $E(K^{-},m)$ algoritmo randomico che prende $m\in M$ e manda fuori un ciphertext $c\in C$
+		- $D()$ algoritmo deterministico pe riottenere $m$ da $c$ usando la chiave 
+	- ## trapdoor one way function:
+		- facile da calcolare in un verso ma infattibile nell'altro 
+		- ma con certe informazioni aggiuntive si può calcolare l'inversa in tempo _polinomiale_
+		- $Y=f_{k}(X)$ facile da calcolare se $k$ e $X$ sono conosciute
+		- $X=f_{k}^{-1}(Y)$ facile se $k$ e $Y$ sono conosciute
+	- ## Secure trapdoor function (TDF)
+		- $(G,F,F^{-1})$ è sicura se $F(K^{+},m)$ è una funzione monodirezionale
+			- può essere calcolata ma non può essere invertita senza $K^{-}$
+			- ![[Pasted image 20260316095408.png]]
+		- $(G,F,F^{-1})$ è sicura se per ogni $A$ efficiente
+			- $$Adv_{OW}[A,F]=P[x=x']\ \text{è molto piccola}$$
+	- usare una trapdoor function insieme alla criptazione a chiave pubblica non va bene in quanto non rispetta la [[Modi delle operazioni#^579e62|sicurezza semantica]] perché la funzione di criptazione è deterministica per la _TDF_
+- # RSA:
+	- è una _trapdoor permutation_
+	- ovvero valuta $X$ e restituisce un output nello stesso insieme del dominio 
+		- ogni chiave $K^{+}$ definisce una determinata funzione di permutazione
+	- $G()$: sceglie 2 numeri primi random $p,q\sim 1024$ bits si setta $N=pq$ si scelgono 2 interi $e,d$ con $1<e<\phi(N)$ tali che $e*d =1$ mod $\phi(N)$ con l'output:
+		- $K^{+} = (N,e)$ e $K^{-}=(N,d)$ 
+	- $F(K^{+},x): \mathbb{Z}_{N}^{*}\to \mathbb{Z}_{N}^{*}$ si ottiene $y=RSA(x)=x^{e}\in \mathbb{Z_{N}}$
+	- invece l'inverso:
+		- $$F^{-1}(K^{-},y)=y^{d}$$
+		- $$y^{d}=(RSA(x))^{d}=(x^{e})^{d}=x^{ed}=x^{k \phi(N)+1}=(x^{\phi(N)})^{k}*x=x$$
+	- ## ES:
+		- bob genera la chiave 
+		- si scelgono 2 numeri primi $p=5, q=11$ 
+		- $N=55$ e $\phi(N)=(p-1)(q-1)=40$
+		- si sceglie un intero $e$ t.c $1<e<\phi(N)$ e che $gcd(e,\phi(N))=1$ per esempio $e =3$ soddisfa la richiesta 
+		- poi si calcola un intero $d$ tale che $3*d=1\ mod \ 40$ risulta che $d=27$ rispetta la condizione
+		- risulta quindi che la chiave pubblica è $(55,3)$ e la chiave privata è $(55,27)$
+		- _Alice_ ha un messaggio $m=13$ da mandare a bob
+		- conosce la chiave pubblica di _bob_ $(55,3)$
+		- calcola $c$
+			- $$c=13^{3}\ mod\ 55 = 2197 \ mod \ 55 = 52$$ 
+		- 
+- # Link Utili:
+	- 

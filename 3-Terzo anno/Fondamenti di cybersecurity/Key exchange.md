@@ -118,5 +118,6 @@ data: "`2026-03-06 11:08`"
 				- Non risulta sicuro però contro un attacco _MITM_
 					- ![[Pasted image 20260310201408.png]]
 					- In quanto potrebbe alterare i messaggi che arrivano a _Bob_ oppure riuscire a leggerli in chiaro.
+- Ecciù: 11
 - # Link Utili:
 	- 

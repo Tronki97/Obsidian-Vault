@@ -13,7 +13,7 @@ data: "`2024-08-31 20:05`"
 		- $$proj_{u}(v)=||v||\cdot ||u||\cdot cos \theta \cdot \frac{u}{||u||}=||v||cos \theta\cdot \frac{u}{||u||}$$
 	- Ovvero esattamente il _vettore in direzione_ $u$ (la direzione è data da $\frac{u}{||u||}$), e _di magnitudo_ $||v||cos \theta$, ossia la _lunghezza di $v$ per la sua inclinazione rispetto a $u$ _
 	- la parte più importante però non è il vettore $proj_{u}(v)$, ma $v-proj_{u}(v)$ 
-	- Questo vettore, di fatto, è [[1-Primo Anno/Algebra e geometria/Ortogonalità/Ortogonalità|ortogonale]] _a $u$ e misura la distanza dalla punta di v_. Ed è una [[Combinazione lineare]] di $u$ e $v$. Questo è fondamentale per l'applicazione dell'[[Algoritmo di Gram-Schmidt]].
+	- Questo vettore, di fatto, è [[1-Primo Anno/Algebra e geometria/6 Ortogonalità/Ortogonalità|ortogonale]] _a $u$ e misura la distanza dalla punta di v_. Ed è una [[Combinazione lineare]] di $u$ e $v$. Questo è fondamentale per l'applicazione dell'[[Algoritmo di Gram-Schmidt]].
 	 
 - # Dimostrazione di ortogonalità
 	- Dimostro che vale in generale che $v-proj_{u}(v)\bot u$ ovvero

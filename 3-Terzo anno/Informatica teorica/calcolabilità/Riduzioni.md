@@ -1,0 +1,103 @@
+---
+tags:
+aliases:
+  - calcolabilità di una funzione
+  - trasduttore
+  - TH5
+data: "`2026-03-13 15:12`"
+---
+- # riduzione:
+	- ha l'idea di ricondurre il _problema di partenza_ ad un _problema di arrivo_
+	- non è una operazione simmetrica, si parte da un punto e si arriva ad un altro avendo quindi un _verso_
+	- Ci si chiede qual è il problema di partenza e quello di arrivo
+	- Si vuole risolvere il problema $A$ con un certo algoritmo risolutore per un problema $B$, trasformando quindi $A$ in istanze del problema $B$ e poi trasformare la soluzione in un risolutore per $A$
+	- ## Def:
+		- si parte da $x$ istanza di $A$ che si trasforma in $y$ istanza di $B$ per farlo si applica una trasformazione $f(x)$ 
+		- si usa poi un risolutore per $y$ $S_{y}$ cercando poi di trasformare questo risolutore in $S_{x}$ usando circa una sorta di inversa $f^{-1}$ 
+		- _si può generalizzare in un algoritmo_
+			- si scrive un risolutore per $A$ che prende un'istanza $x$ del tipo `Instance_A`
+			- `SolverA(Instance_A x):`
+				- `instance_B y=f(x)`
+				- `Sy = SolverB(y)`
+				- `Sx = f_inv(Sy)`
+				- `return Sx`
+		- ### Nomenclatura:
+			- quello che è una _riduzione è rappresentato dalla funzione `f()`_ e deve essere sensata in maniera tale che da una soluzione di $y$ posso riuscire a ricavarne una per $x$ 
+		- ### ES:
+			- campionato italiano problema di _partenza_ 
+				- input è rappresentato da un insieme di squadre:
+					- `{BO, JU, MI, RO}`
+				- output sarebbe il calendario partite ovvero insieme di coppie che rappresentano partite giocate nello stesso giorno
+				- serve trovare una allocazione delle partite in modo tale che non ci siano 2 partite con la stessa squadra lo stesso giorno 
+			- K-col il problema di _arrivo_ 
+				- input si hanno i colori e il grafo da colorare.
+					- `<G, k>`
+				- output si associa ad ogni nodo il colore in modo tale che nodi adiacenti abbiano colori distinti.
+			- le partite in conflitto sono collegate dall'arco e quindi dovranno essere colorate diversamente avendo quindi che accadono in giornate diverse.
+				- _i colori saranno_ $|SQUAD|-1$ 
+			- passando quindi in input al solutore di $B$:
+				- ![[Pasted image 20260313184847.png|595]]
+			- che restituisce quindi il grafo colorato in maniera adeguata:
+				- ![[Pasted image 20260313184909.png]]
+			- ora si dovrà quindi guardare i nodi colorato uguali e vorrà dire che apparterranno alla stessa giornata di gioco:
+				- 1° `(J,M), (B,R)`
+				- 2° `(J,R), (M,B)`
+				- 3° `(M, R), (J,B)`
+		- _risulta utile perché se si è in grado di trasformare un problema in un altro vorrà dire che: se il problema di arrivo è decidibile o calcolabile allora lo sarà anche quello di partenza_
+	- ## Sui linguaggi di decisione:
+		- siano $A$ e $B$ due linguaggi, diciamo che $A$ si riduce in $B$ o che esiste una riduzione da $A$ a $B$ se esiste una funzione $f: \Sigma^{*} \to \Sigma^{*}$ _calcolabile_ tale che:
+			- $$\forall w \in \Sigma^{*}\ \ w\in A \iff f(w)\in B$$
+		- ### Calcolabilità di una funzione:
+			- una funzione è calcolabile se esiste una _MdT particolare_ che la calcola
+			- vengono chiamate _trasduttori_
+				- #### Trasduttore:
+					- è una MdT con _3 nastri_
+					- 1° nastro ha l'input ed è a sola lettura
+					- 2° nastro di lavoro, sia lettura che scrittura 
+					- 3° nastro di output, sola scrittura.
+			- un trasduttore $M$ calcola $f$ se per ogni $\forall w\in \Sigma^{*}$ quando $M$ riceve in input $w$ lascia scritto in _tempo finito_ al termine della sua computazione $f(w)$ sul nastro di output.   
+			- $f$ quindi deve essere una funzione calcolata da un trasduttore quindi un algoritmo.
+		- ### TH5: ^416588
+			- siano $A$ e $B$ linguaggi tali che $A \le B$ (A si riduce a B) allora:
+				- 1) $A\notin R \implies B\notin R$
+					- #### DIM:
+						- suppongo per assurdo $A\notin R \wedge B\in R$ 
+						- siccome $B\in R$ allora esiste una macchina $M_B$ tale che $L(M_{B})=B$
+						- la macchina più grande da costruire contiene $M_{B}$ e sapendo dall'ipotesi che $A\le B$ allora esiste una trasformazione che porta le istanze di A _si_ in istanze _si_ di B stessa cosa vale per il no .
+						- metto $f$ dentro la macchina più grande che prende in input $w$ che manderà quindi $f(w)$ in input alla macchina $M_{B}$ risultando quindi che la macchina grande _decide A_ ma ciò va contro l'ipotesi che $A\notin R$ 
+						- ![[Pasted image 20260313185009.png]]
+				- 2) $A\notin RE \implies B\notin RE$
+					- #### DIM:
+						- si suppone come per il caso precedente un assurdo.
+						- suppongo $A\notin RE \wedge B \in RE$ allora esiste una macchina $M_{B}$ che riesce a riconoscere $B$ 
+						- inoltre dall'ipotesi so che $A\le B$  quindi posso mettere la trasformazione $f$ dentro alla macchina grande $M_{A}$ 
+						- in modo da dare un input trasformato alla macchina $M_{B}$
+							- ![[appartenenza ad RE.excalidraw|900x200]]
+						- in questo modo si ha che esiste una macchina $M_{A}$ che riesce a riconoscere stringhe $w\in A$ ma ciò va contro l'assunzione che $A\notin RE$ quindi siamo in un assurdo.
+			- #### Corollario:
+				- siano $A,B$ linguaggi tali che $A\le B$
+				- $B\in R \implies A \in R$
+				- $B\in RE \implies A \in RE$ 
+		- ### Linguaggio dei codici delle macchine di Turing
+			- $L_{ne}$ insieme dei codici delle macchine di Turing con linguaggio non vuoto 
+				- $$L_{ne}=\{M|L(M)\ne \emptyset\}$$
+			- #### Appartenenza ad RE
+				- si costruisce una macchina con $M$ in input e con un modulo di [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sull'input $w$  e si mette in input alla macchina $M_{u}$ il risultato del guess e la macchina $M$ che riuscirà solo a fermarsi per dire di _si_ ma non è detto che si fermi. 
+					- il punto è che essendo le stringhe appartenenti ad un linguaggio potenzialmente infinite allora il modulo guess potrebbe continuare a cercarne all'infinito che possano essere accettate da $M_{u}$ e quindi mettendoci troppo tempo per rispondere risultare in una eventuale risposta _no_
+					- _riconoscendo il linguaggio ma non deciderlo_
+				- ![[Pasted image 20260313185126.png|513]]
+			- #### Appartenenza ad R:
+				- si fa una riduzione $L_{u} \le L_{ne}$ 
+				- istanze di $L_{u}$ sono $(M,w)$
+				- istanze $L_{ne}$ la macchina $N$
+				- serve la funzione che trasformi le istanze _si_ in altrettante tali per $L_{ne}$ 
+				- dentro $N$ ci si mette $M$ e l'input $w$ la cui risposta è uguale a quella di $M$
+					- _avendo però che l'input è ignorato_ 
+				- ![[Pasted image 20260313185147.png]]
+				- istanza _SI_
+					- se $M\vDash w$ allora $N$ dirà _si_ a qualsiasi cosa quindi vuol dire che $L(N)\ne \emptyset$ 
+						- di conseguenza $N\in L_{ne}$ 
+				- Istanza "_NO_"
+					- suppongo che $(M,w)\notin L_{u}$ allora $M \not \vDash w$ allora vuol dire che $L(N)= \emptyset$ e ciò implica che $N\notin L_{ne}$ 
+- # Link Utili:
+	- 

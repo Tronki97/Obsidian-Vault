@@ -73,7 +73,7 @@ SORT Materia
 - [[Reti di Calcolatori]]
 	- [ ] Passato
 	- Voto:
-	- Tentativi: 1
+	- Tentativi: 2
 - [[Ottimizzazione combinatoria]]
 	- [x] Passato
 	- Voto: 21
@@ -107,5 +107,6 @@ SORT Materia
 - [[0-Mostarda/Fondamenti di cybersecurity]]
 	- [ ] Passato
 	- Tentativi: 
+- 
 
 

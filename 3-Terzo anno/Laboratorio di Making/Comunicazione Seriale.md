@@ -1,0 +1,32 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-03-19 13:17`"
+---
+- # Argomento:
+	- diversi tipi di protocolli per la comunicazione ognuno con i suoi tradeoff
+	- i circuiti integrati usano dei certi protocolli di comunicazione che sono da rispettare per poterli utilizzare.
+	- si usa per ricevere comunicazioni più complesse e ridurre il numero di cavi usando un solo cavo e le comunicazioni avvengono sul dominio del tempo.
+- # Master / Slave:
+	- il master è il componente attivo che manda gli ordini e gli slave eseguono meccanicamente le istruzioni
+- # 1-wire:
+	- ci si mette d'accordo prima della comunicazione
+	- avviene su un unico cavo condiviso tra tutti gli slave in cascata
+		- di tipo half-duplex quindi uno solo parla alla volta.
+	- si ha un master e più slave 
+	- la frequenza è sui $16.3KHz$
+	- ogni device ha un suo ID che gli viene assegnato alla sua costruzione.
+	- ## Open drain:
+		- un 1 costante implica che nulla sta avvenendo in quanto se si usasse lo 0 per indicare la neutralità si potrebbe o essere nella situazione favorevole oppure si hanno degli errori nella comunicazione.
+	- ## Schema di segnale:
+		- si manda un impulso di $480 \mu s$ per indicare che si vuole iniziare a comunicare e se almeno un dispositivo risponde con un [[ACKNOWLEDGEMENT|ACK]] allora la comunicazione può iniziare. 
+- # UART:
+	- ci si mette d'accordo prima della comunicazione
+- # I2C:
+	- si possono mettere d'accordo più dispositivi sullo stesso Bus con un segnale di clock che scandisce per tutti quanti il tempo di lettura e scrittura
+- # SPI:
+	- si possono mettere d'accordo più dispositivi sullo stesso Bus con un segnale di clock che scandisce per tutti quanti il tempo di lettura e scrittura
+- 
+- # Link Utili:
+	- 

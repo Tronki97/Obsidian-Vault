@@ -40,7 +40,7 @@ data: "`2026-03-02 17:11`"
 		- ### Analisi dei costi:
 			- Suppongo ci siano $C$ figli nell'albero per ogni nodo arrivando quindi a sapere che dopo $m$ passi ci siano $c^{m}$ figli avendo $O(c^{m})$ che è un costo esponenziale.  
 			- _Non si riesce a sapere se sia possibile ridurre il costo computazionale, ma non si sa nemmeno se sia impossibile_
-	- ## Guess & Check:
+	- ## Guess & Check: ^6e7b0a
 		- è una tecnica di programmazione delle macchine di Turing non-deterministiche dove:
 			- Si fa "indovinare" alla macchina il percorso _giusto_ e poi si _controlla_ sia corretto
 		- ### ES:

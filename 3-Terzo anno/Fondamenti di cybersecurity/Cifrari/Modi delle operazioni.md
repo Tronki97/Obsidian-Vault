@@ -17,7 +17,7 @@ data: "`2026-03-09 17:44`"
 ---
 - # Modi delle operazioni:
 	- Pensati per avere più flessibilità e riuscire a lavorare su blocchi di _lunghezza variabile_ e per far sembrare i [[Cifrario a blocchi|cifrari a blocchi]] come se fossero di [[Cifrario di flusso(stream cipher)|flusso]]. 
-	- ## Sicurezza semantica:
+	- ## Sicurezza semantica: ^579e62
 		- Ci si mette nella situazione di attacco [[Criptografia#^add400|Ciphertext-only]] in cui fa eavesdropping
 		- La chiave è diversa ogni volta che si cripta qualcosa.
 		- ![[Pasted image 20260306113614.png|346]]

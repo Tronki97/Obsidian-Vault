@@ -1,0 +1,66 @@
+---
+tags:
+  - TODO
+aliases:
+  - CO-RE
+  - TH6
+  - TH7
+  - TH8
+  - halt per ogni
+data: "`2026-03-18 19:07`"
+---
+
+- # CO-RE:
+	- classe di problemi i cui complementi stanno dentro [[Classi di calcolabilità#^e20268|RE]] si è in grado di rispondere _no_ in tempo finito ma si hanno problemi per il _si_ 
+- # RE:
+	- la solita [[Classi di calcolabilità#^e20268|classe RE]]
+- queste due classi non comprendono tutti i problemi, _esistono dei problemi dove non è possibile ne rispondere si ne no in tempo finito_
+	- ![[Pasted image 20260318184215.png]]
+- # proprietà:
+	- ### TH6:
+		- $R\ne RE$ verificata perché esiste almeno un linguaggio $\in RE$ ma non a $R$ 
+	- ### TH7:
+		- $Co-RE \cap RE =R$ 
+		- serve dimostrare che due versi di $\subseteq$: 
+			- $Co-RE \cap RE \subseteq R$
+				- sia $L\in Co-RE \cap RE$ 
+				- per le definizioni delle due classi $L\in CO-RE \implies\bar{L}\in RE$ 
+				- siccome $L$ appartiene all'intersezione, e quindi ad entrambi gli insiemi, posso fare una supposizione analoga $L\in RE \implies \bar{L} \in CO-RE$ allora per il teorema [[Classi di calcolabilità#^d1d978|TH2]] $L\in R$
+			- $R \subseteq Co-RE \cap RE$
+				- sia $L\in R$, so quindi che $\exists M:L(M)=L$ e siccome so che la macchina mi da garanzie sia sul _si_ che sul _no_ allora so che appartiene sia a $RE$ che a $CO-RE$
+	- ### TH8:
+		- $RE\ne Co-RE$ 
+		- si sa che, per il _TH7_ $Co-RE \cap RE = R$ 
+		- se $CO-RE$ fosse uguale $RE$ allora si potrebbe dire che $RE \cap RE = R \to RE =R$ che non è vero per il _TH6_ 
+- # ES:
+	- ## HALT per ogni: ^e285c2
+		- $HALT_{\forall}=\{M|M\ \text{si arresta su tutte le stringhe}\}$
+		- sia per riuscire a rispondere si o no serve controllare tutte le stringhe possibili per capire se possa esistere almeno una stringa che non faccia fermare la macchina 
+		- ### Appartenenza ad CO-RE
+			- siano $A,B$ due linguaggi t.c $A\le B$ 
+			- $A\notin CO-RE \implies B\notin CO-RE$ 
+			- serve una riduzione che tolga $HALT_{\forall}$ da $RE$ e una che lo tolga da $CO-RE$ 
+			- _per togliere da $RE$ si riduce $\overline{HALT_{\epsilon}}\le HALT_{\forall}$_
+				- si trasforma da $M$ a $N=f(M)$ 
+				- si ha $M$ che legge $\epsilon$ e con l'input $w$ si conta la sua lunghezza $|w|$ e quindi $N$ simula $M$ sulla stringa $\epsilon$ per $|w|$ passi 
+				- se in quel numero di passi $M$ si è fermata allora si _cicla_
+				- se $M$ non è arrivata ad una [[Macchina di Turing deterministica#^887fb0|configurazione finale]] allora si da una risposta casuale 
+				- ![[Pasted image 20260318185656.png|531]]
+				- #### Funzionamento trasformazione:
+					- suppongo $M\in \overline{HALT_{\epsilon}}$ quindi $M$ non si arresta su $\epsilon$ allora vuol dire che qualsiasi stringa data in input non importa la sua lunghezza perché tanto $M$ non si è fermata, quindi non importa quale stringa sia in input allora $M$ si arresterà.
+					- $M \notin \overline{HALT_{\epsilon}} \implies$ $M$ si arresta su $\epsilon$ in un numero finito di passi $\implies$ se lanciamo la simulazione ci sarà almeno una stringa sufficientemente lunga tale da vedere che $M$ si ferma su $\epsilon$ $\implies$ $N$ non si fermerà su qualche input $\implies N \notin HALT_{\forall}$
+						- $N$ si arresta sulle stringhe più corte di $t$
+						- $N$ non si arresta sulle stringhe più lunghe di $t$
+						- dove $t$ è il numero di passi in cui $M$ si ferma su $\epsilon$
+			- 
+		- ### Appartenenza a RE
+			- _per toglierlo da $CO-RE$ si riduce $HALT_{\epsilon}\le HALT_{\forall}$_
+				- input $HALT_{\epsilon}$ è $M$ e anche per $HALT_{\forall}$
+				- quindi la funzione di trasformazione $f:M\to N=f(M)$
+				- $N$ ignora il proprio input per il resto si comporta come $M$
+				- ![[Pasted image 20260318185611.png|534]]
+				- #### Funzionamento della trasformazione:
+					- suppongo $M\in HALT_{\epsilon}$ quindi vuol dire $M$ si arresta su $\epsilon$ e visto che $N$ ignora l'input vuol dire che si _arresterà su tutti gli input_  e quindi $N\in HALT_{\forall}$
+					- ora suppongo che $M\notin HALT_{\epsilon}$ e quindi $M$ non si arresta su $\epsilon$ e visto che $N$ ignora l'input allora $N$ non si fermerà mai per nessuna stringa in input da cui $N\notin HALT_{\forall}$
+- # Link Utili:
+	- 

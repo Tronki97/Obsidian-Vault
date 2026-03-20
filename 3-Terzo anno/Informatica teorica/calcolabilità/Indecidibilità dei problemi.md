@@ -1,0 +1,225 @@
+---
+tags:
+  - TODO
+aliases:
+  - problema di corrispondenza di Post
+  - PCP
+  - tiling problem
+data: "`2026-03-16 18:26`"
+---
+- # Problema di corrispondenza di Post (PCP):
+	- è un problema su stringhe
+	- si hanno due liste di stringhe $R$ e $S$ indicizzate normalmente.
+		- ![[R&S.excalidraw]]
+	- l'output è un booleano _si/no_
+	- una coppia di liste tale per cui esiste una sequenza di indici $n>0$ tale che la concatenazione delle stringhe equivalenti a quegli indici forma una certa stringa che risulta uguale ad un'altra appartenente all'altro insieme 
+		- $$r_{i_{1}}\cdot,..., \cdot r_{i_{n}}=s_{i_{1}}\cdot,..., \cdot s_{i_{n}}$$
+	- nell'esempio di prima con gli indici $2,1,1,3$
+		- $r\to 10111\ 1\ 1\ 10$
+		- $s\to 10 \ 111\ 111\ 0$
+			- queste due stringhe sono di fatto uguali 
+	- si sa che appartiene ad $RE$ in quanto si può usare una [[Macchina di Turing non-deterministica]] con un sistema di [[Macchina di Turing non-deterministica#^6e7b0a|guess & check]] che la riconosca
+	- ## Appartenenza ad R:
+		- si dimostra quindi che $PCP\notin R$
+		- si utilizza una riduzione. $L_{u}\le MPCP\le PCP$ 
+			- con $MPCP$ che è una forma semplificata di $PCP$ ù
+			- e siccome $L_{u}\notin R$ allora saprò che anche $PCP\notin R$ 
+			- quindi la parte importante è trovare la funzione  $f$ per passare in $MPCP$ e $PCP$ 
+		- ### MPCP:
+			- ha gli stessi input di $PCP$ le istanze _si_ però sono solo quelle che all'inizio della sequenza hanno una stringa che è di indice $1$ 
+		- ### Riduzione verso MPCP
+			- problema di partenza: $L_{u}$ con input $(M,w)$  con istanze _si_ $M\vDash w$; con istanze _no_ $M\not \vDash w$
+			- #### Soluzione non funzionante
+				- per trasformare verifico che $M$ riconosca $w$ se accetta genero un istanza _si_ per $MPCP$ se rifiuta genero un _no_ 
+					- _risulta non funzionante in quanto la funzione di trasformazione non è calcolabile perché M potrebbe non fermarsi mai nell'accetare la stringa_
+			- #### Soluzione
+				- si può sfruttare il fatto che la computazione si può rappresentare come sequenza di [[Macchina di Turing deterministica#^e7168b|configurazioni]] $\alpha_{0} \vdash \alpha_{1}...$ 
+					- ![[Pasted image 20260316171639.png|625]]
+					- quindi il risultato della macchina $M$ che riconosce la stringa in input viene trasformato in opportune liste di stringhe $R,S$ in modo da poter simulare la computazione
+						- $S$ simulano il comportamento della macchina 
+						- $R$ come $S$ ma è un passo indietro.
+						- ![[Pasted image 20260316171734.png]]
+					- in sostanza vengono indicate le azioni fatte dalla macchina per processare la stringa.
+				- ## Formalizzazione della trasformazione:
+					- si assume che $M$ _non scrive mai $\not{b}$_ e che _non scriva mai a sinistra dell'inizio_
+					- regole delle famiglie $R,S$
+						- 1) #  per $R$ e $\#q_{0}w_{1}...w_{n}$
+							- ![[Pasted image 20260316171948.png]]
+						- 2) ![[Pasted image 20260316172256.png]]
+						- 3)![[Pasted image 20260316172324.png]]
+						- 4)![[Pasted image 20260316172359.png]]
+						- 5)![[Pasted image 20260316172913.png]]
+				- dimostrazione che la trasformazione è funzionante:
+					- la funzione è _calcolabile_ perché si sta solo guardando la computazione della macchina $M$ 
+					- dimostro che la mappatura della funzione sia corretta:
+						- da una istanza si ne ottengo una si:
+							- da una coppia $(M,w)$ t.c $M\vDash w$; ottengo che, siccome si è strutturato gli insiemi di stringhe in maniera tale da ottenere tutte le possibili casistiche della computazione della stringa in input, ci sarà almeno una concatenazione di stringhe che iniziano da indice $1$ che risulteranno uguali. 
+						- da una istanza _no_ ne ottengo una _no_:
+							- dimostro che se ho ottenuto un _si_ solo perché sono partito da un _si_
+							- suppongo quindi di essere arrivato ad una istanza si, e per essere li vuol dire che ho trovato una combinazione di indici tali che:
+								- $$r_{1}r_{i_{1}}...r_{i_{n}} =s_{1} s_{i_{1}}...s_{i_{n}}$$
+									- partendo dall'indice 1 della tabella delle stringhe $\in R,S$ 
+									- sapendo quindi che la concatenazione delle $r$ inizia con $\#$ e finisce con $q\#\#$ mentre quella delle $s$ inizia con $\#q_{0}w_{1}...w_{n}\#$  e finisce con $\#$ e in mezzo ci saranno tutte quelle stringhe della famiglia $3$ che hanno il compito di codificare la funzione di transizione della macchina $M$ si avrà in sostanza _una simulazione di accettazione della macchina $M$ sulla stringa $w$_.
+							- ottenendo una risposta _si_ per il problema $MPCP$ vuol dire che si ha avuto una computazione della stringa in input $w$ tale che $M\vDash w$ quindi si era in una istanza _si_  
+		- ### Riduzione verso PCP 
+			- input partenza $R,S$; input arrivo $(T,U)$ 
+			- trasformo ogni stringa di $R$ in quella di $T$ mettendo un $*$ dopo ogni simbolo presente nella stringa $101 \to 1*0*1*$ 
+			- mentre per $S$ e $U$ faccio la stessa cosa solo mettendo $*$ prima del simbolo
+			- infine aggiungo una coppia:
+				- in $T$ aggiungo un $*$ prima della stringa di indice $1$ in $T$ 
+				- per $U$ copio quella di indice 1 in $U$
+			- aggiungo un altra coppia di indice $k+1$
+				- $T$ aggiungo ${\$}$ e in $U$ metto $*{\$}$ 
+			- ![[Pasted image 20260316175720.png|626]]
+			- #### verifica funzionamento della transizione:
+				- suppongo che $(R,S)\in MPCP$ allora $\exists i_{1},...,i_{n}:$
+					- $$r_{1}r_{i_{1}}...r_{i_{n}}=s_{1}s_{i_{1}}...s_{n}$$
+					- ora si cercano le corrispettive stringhe dalla tabella $(T,U)$
+						- $$t_{1}t_{i_{1}}...t_{i_{n}}=u_{1}u_{i_{1}}...u_{n}$$
+					- questa uguaglianza non risulta corretta in quanto all'indice $1$ della tabella ci sono gli asterischi sfalsati quindi si cerca di prendere un'altra stringa:
+						- $$*t_{1}t_{i_{1}}...t_{i_{n}}{\$}=u_{1}u_{i_{1}}...u_{i_{n}}*{\$}$$
+						- si ha che:
+							- $*t_{1}=t_{0}$ 
+							- $u_{1}=u_{0}$
+							- ${\$}=t_{k+1}$ 
+							- $*{\$}=u_{k+1}$ 
+						- quindi si ha che la uguaglianza è corretta in quanto risulta come la concatenazione:
+							- $$t_{0} t_{i_{1}}...t_{i_{n}}t_{k+1}=u_{0}u_{i_{1}}...u_{i_{n}}u_{k+1}$$
+				- ora si suppone di passare da una istanza _no_ ad un'altra istanza _no_ 
+					- si cerca quindi di dimostrare che se si è ottenuto una istanza _si_ allora si è partiti da un'altra _si_ 
+					- $(T,U)\in PCP$ allora $\exists i_{1},...,i_{l-1}i_{l}:$
+						- $$t_{i_{1}}...t_{i_{l-1}}t_{i_{l}}=u_{i_{1}}...u_{i_{l-1}}u_{i_{l}}$$
+						- poi visto che la tabella $(T,U)$ ha come unico indice con inizio uguale si per $T$ che per $U$ l'indice $0$ vorrà dire che:
+							- $t_{i_{1}}=t_{0}=*t_{1}$ e $u_{i_{1}}=u_{0}=u_{1}$
+						- e quello che ha lo stesso finale è l'indice $k+1$ 
+							- $t_{l}=t_{k+1}$ e $u_{l}=u_{k+1}$
+					- si ottiene quindi che:
+						- $$r_{1}r_{i_{2}}...r_{i_{l-1}}=s_{1}s_{i_{2}}...s_{l-1}$$
+			- in questo modo si è quindi ridotto $MPCP$ in $PCP$ e siccome $MPCP$ era indecidibile, grazie al fatto che si è riusciti a ridurre $L_{u}$ (che è indecidibile o $\notin R$) a $MPCP$ dimostrando quindi la sua indecidibilità grazie al [[Riduzioni#^416588|TH5]]
+- # Tiling problem:
+	- si ha una superficie infinita da riempire di piastrelle con certi quadranti colorati.
+	- si ha una famiglia di queste piastrelle disponibili.
+		- ![[Pasted image 20260318142057.png|227]]
+	- per essere inserite devono seguire certe regole:
+		- le piastrelle per essere messe adiacenti devono condividere il colore nel quadrante adiacente.
+			- ![[Pasted image 20260318142205.png|216]]
+		- una certa piastrella deve essere messa in prima posizione per non partire dalla parete vuota.
+		- Le piastrelle non possono essere ruotate.
+	- si cerca quindi un modo per piastrellare completamente la parete.
+	- ## Formalizzazione:
+		- l'input del problema è un insieme $T=(D,d_{0},H,V)$
+			- $D$ è l'insieme dei tipi di piastrelle
+			- $d_{0}\in D$ è la piastrella iniziale
+			- $H\subseteq D \times D$ sottoinsieme di coppie di tipi di piastrelle che ci dice le regole di affiancamento _orizzontale_
+			- $V\subseteq D \times D$ sottoinsieme di coppie di tipi di piastrelle che ci dice le regole di affiancamento _verticale_
+		- $f: \mathbb{N} \times \mathbb{N}\to D$
+			- $f(0,0)=d_{0}$
+			- $(f(m,n),f(m+1,n))\in H$ $\forall m,n \in \mathbb{N}$
+			- $(f(m,n),f(m,n+1))\in V$ $\forall m,n \in \mathbb{N}$
+		- si cerca quindi una funzione $f$ che rispetti questi vincoli e che faccia riempire tutto il piano.
+	- ## Appartenenza ad R:
+		- lo si dimostra riducendo $\overline{HALT_{\epsilon}}\le TILING$
+		- istanza si $\overline{HALT_{\epsilon}}$ è una macchina $M$ che non si ferma su stringa vuota 
+		- istanza si $TILING$ è una funzione di _tiling_ $T=g(M)$ che permette di piastrellare tutto la parete.
+		- come per $PCP$ la computazione di $M$ si può vedere come una serie di [[Macchina di Turing deterministica#^e7168b|configurazioni]] 
+		- se la macchina non si arresta mai allora si continuerà a mettere piastrelle in direzione verticale.
+		- invece dei colori si usano delle etichette per comodità. 
+		- ![[Pasted image 20260318183725.png]]
+			- voglio che al confine con la prima e seconda linea ci siano dei colori che mi indicano la particolare configurazione.
+			- servono quindi le piastrelle che riescano a riprodurre la funzione di transizione della macchina $M$ in input senza sapere cosa essa faccia.
+			- $d_{0}$ deve essere una pastrella che mi permette di codificare la [[Macchina di Turing deterministica#^aa3d99|configurazione iniziale]] nella prima riga 
+		- ![[Pasted image 20260318184109.png|610]]
+		- ### tipi di pastrelle:
+			- 1) permettono di portare al livello successivo i simboli lontani dalla testina.
+				- ![[Pasted image 20260318183800.png|605]]
+			- 2) codificano le possibilità della funzione di transizione verso destra
+				- $qXZ \to YpZ$ se $\delta(q,X)=(p,Y, \to)$
+				- ![[Pasted image 20260318183832.png|610]]
+			- 3) come quello precedente ma verso sinistra:
+				- $XqX \to pZY$ se $\delta(q,X)=(p,Y, \leftarrow)$ 
+				- ![[Pasted image 20260318183856.png|612]]
+			- 4) le piastrelle della prima fila:
+				- ![[Pasted image 20260318183919.png|399]]
+		- ### Funzionamento della trasformazione:
+			- _calcolabilità_
+				- risulta esserlo in quanto prende semplicemente la computazione della macchina in input
+			- _mappatura delle istanze_ 
+				- istanza _si_ 
+					- $(M\in \overline{HALT_{\epsilon}})$ siccome la macchina non si ferma mai allora si riesce ad andare avanti a riempire tutto quanto il piano quindi $f(M)\in TILING$
+				- istanza _no_:
+					- suppongo $T=g(M)$ sia una istanza si di $TILING$ allora vuol dire che la prima riga ha per forza la configurazione iniziale di $M$ su $\epsilon$ e per come è stata costruita $T$ vuol dire che anche $M$ è una istanza _si_ di $\overline{HALT_{\epsilon}}$ allora vuol dire che la si può ottenere solo da una istanza _si_ 
+			- così si è dimostrato che questa trasformazione è funzionante e quindi che si ha fatto una riduzione $\overline{HALT_{\epsilon}}\le TILING$ corretta.
+			- e sapendo che $\overline{HALT_{\epsilon}} \notin RE$ allora anche $TILING \notin RE$ _dimostrando la sua indecidibilità_
+- # teorema di Rice:
+	- $L_{ne}=\{M|L(M)\ne 0\}$
+	- è un risultato che stabilisce l'indecidibilità di linguaggi che hanno una certa forma
+	- questi linguaggi all'interno hanno i stringhe che codificano le _MdT_
+	- una certa macchina macchina $M$ ha una certa proprietà $P$ se appartiene ad un certo insieme di macchine con quella proprietà.
+		- si studia il linguaggio associato a quella macchina. 
+		- $L_{P}=\{M\in P\}$
+	- $L$ è una proprietà di macchine se contiene delle stringhe che codificano MdT
+	- ## Proprietà:
+		- una proprietà $P$ di Macchine è _banale_ se o $P$ non contiene alcuna macchina o le contiene tutte 
+			- $\not \exists M \in P \vee \forall M\ \  M\in P$
+		- ### ES:
+			- $P_{1}=\{M|M \text{ha esattamente 5 stati}\}$ risulta _non banale_
+				- associata alla struttura della macchine 
+			- $P_{2}=\{M| L(M)\text{contiene solo stringhe lunghezza pari} \}$ _non banale_ 
+			- $P_{e}=\{M|L(M)=\emptyset\}$ non banale non tutte le macchine riconoscono un linguaggio vuoto e ci possono essere delle macchine che riconoscono su un linguaggio vuoto.
+				- risulta anche essere indecidibile 
+		- ### Proprietà strutturali:
+			- riguardano la struttura in se della macchina 
+		- ### proprietà di linguaggi (o semantica)
+			- quando la proprietà è relativa al linguaggio che la macchina riconosce.
+			- sia $P$ una proprietà di macchine, $P$ è detta _semantica_ se:
+				- $\forall M_{1}, M_{2}: L(M_{1})=L(M_{2})$ allora $M_{1} \in P \iff M_{2} \in P$  
+			- si può dire quindi che $P\subseteq RE$ 
+				- una proprietà $P$ di linguaggi è _banale_ se è vuota o è tutto $RE$
+- # Teorema:
+	- si applica solo alle proprietà semantiche e non banali
+	- ogni proprietà non banale di linguaggi $RE$ è indecidibile 
+	- ## Dim:
+		- sia $P\subseteq RE$ una proprietà di linguaggi non banale si hanno 2 casi:
+			- $\emptyset \notin P$
+				- si ha quindi che $P$ è non banale e che $P\subseteq RE$ da cui esiste un linguaggio $L\ne \emptyset:L\in P$ quindi esiste una macchina $M_{L}$ che riconosce $L$ quindi $L(M_{L})=L$
+				- si vuole dimostrare che $L_{P}=\{M| L(M)\in P\}$ è indecidibile quindi $L_{P}\notin R$ 
+				- si usa una [[Riduzioni]] da un linguaggio $\notin R$. $L_{u}\le L_{P}$ 
+					- istanza partenza $(M,w)$ istanza arrivo $N=f(M,w)$ 
+				- la trasformazione contiene $M$ che simula $w$ e se la riconosce fa partire la macchina $M_{L}$ che simulerà poi l'input $x$ e darà in output a $N$ il suo risultato 
+				- ### Funzionamento trasformazione:
+					- suppongo $(M,w)\in L_{u}$ allora so che $M\vDash w$ allora $N$ si comporta come $M_{L}$ quindi non importa quale input $x$ ci sia, la macchina $N$ avrà come linguaggio $L$ che per ipotesi $L\in P$ da cui $N\in L_{P}$ 
+					- suppongo che $(M,w)\notin L_{u}$ allora so che $M\not \vDash w$ quindi $L(N)= \emptyset$ e ciò mi dice che $N\notin L_{P}$ perché si era supposto che $\emptyset \notin P$ 
+				- La trasformazione funziona e quindi ricavo che $L_{P}\notin R$ perché neanche $L_{u}$ gli appartiene  
+			- $\emptyset \in P$
+				- si considera $\bar{P}=RE - P$ quindi si ha che $\emptyset\notin \bar{P}$ 
+				- $\bar{P}$ sarà non banale perché si è assunto che neanche $P$ lo sia 
+				- dal caso precedente si ha che $L_{\bar{P}}\notin P$ 
+	- e risulta che $\bar{L_{\bar{P}}}=L_{P}$
+	- non è possibile che $\bar{L_{\bar{P}}}$ sia in $R$ perché:
+		- suppongo che $\bar{L_{\bar{P}}} \in R$ allora vuol dire che $L_{\bar{P}}\in R$ ma è una contraddizione su quello che era stato detto prima  
+	- ## ES:
+		- data $M$, il linguaggio di $M$ è finito? 
+		- è una proprietà di macchine e semantica 
+		- è una proprietà non banale 
+		- quindi per _rice_ è indecidibile.
+	- ## ES2:
+		- dato $M$ il linguaggio di $M$ è infinito?
+		- stesso ragionamento di prima.
+	- ## ES3:
+		- data $M$ il linguaggio di $M$ è un linguaggio accettato _solo_ da macchine con $5$ stati 
+		- risulta essere banale perché basterebbe prendere una macchina con uno stato in più inutile che però riconosce lo stesso il linguaggio risultando quindi in una proprietà vuota.
+	- ## ES4:
+		- $L=\{W\#A|W\in (0|1)^{+}, A=W \vee A=W^{R}\}$
+			- #immagine
+		- $P_{1}=\{M|L(M)=L\}$ 
+			- è non banale perché so che contiene un linguaggio $L$ 
+			- quindi per _rice_ so che è indecidibile
+		- $P_{2}=\{M|L(M)=L \wedge \forall w\in L\ \text{M accetta w in esattamente100 passi}\}$
+			- banale perché basterebbe mettere una stringa lunga abbastanza da non permettere alla macchina di riconoscere la stringa entro quei 100 passi 
+		- $P_{3}=\{M|L(M) \ne L \cap \{0,1,\#\}^{101} \}$ 
+	- ## ES5:
+		- ho l'[[Classi di decidibilità#^e285c2|halt per ogni]] $HALT_{\forall}$ 
+		- è una proprietà di macchine.
+		- risulta essere non semantica perché si potrebbero avere 2 macchine una che si ferma sempre su istanze _si o no_ mentre se ne potrebbe avere un'altra che si ferma su istanze si mentre in quelle _no_ cicla di fatto queste due riconoscono lo stesso linguaggio ma uno appartiene alla proprietà $HALT_{\forall}$ mentre l'altro no perché non si ferma sulle istanze no quindi _è una propretà non semantica_.
+- # Link Utili: 
+	- 

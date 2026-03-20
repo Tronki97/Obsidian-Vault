@@ -11,6 +11,8 @@ aliases:
   - macchina multi-nastro
   - running time
   - configurazione iniziale
+  - instantaneous description
+  - ID
 data: "`2026-02-23 16:10`"
 ---
 - # Preconcetti:
@@ -58,7 +60,7 @@ data: "`2026-02-23 16:10`"
 			- La configurazione in cui si trova la macchina nel momento in cui la si accende. 
 		- ### Configurazione accettante:
 			- Si dice accettante quando al suo interno compare uno stato accettante
-		- ### Configurazione finale:
+		- ### Configurazione finale: ^887fb0
 			- Quando dallo stato in cui si trova la macchina essa non può fare altri passi
 		- ### Successore valido di una configurazione:
 			- Sia $C_{1}$ una configurazione, $C_{2}$ è il successore valido per $C_{1}$ sse:
