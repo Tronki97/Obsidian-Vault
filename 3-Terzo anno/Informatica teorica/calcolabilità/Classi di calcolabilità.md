@@ -24,11 +24,12 @@ data: "`2026-03-12 17:22`"
 - Al di fuori di queste due classi ci sono quelli non-decidibili
 - # Proprietà:
 	- ## Th 1: ^0e0666
-		- Sia $L$ un linguaggio $\in R$ allora $\bar{L}\in R$ 
+		- $$L\in R \implies \bar{L}\in R$$
 		- $L\subseteq \Sigma^{*}$ 
 		- $\bar{L}=\Sigma^{*}-L$
 		- ### Dim:
-			- $M_{L}$ decide $L$ quindi riesce sempre a dirmi si o no 
+			- visto che $L\in R$ esiste una macchina $M_{L}$ in grado di decidere $L$
+				- $M_{L}$ decide $L$ quindi riesce sempre a dirmi si o no 
 			- Per decidere $\bar{L}$ costruisco $M_{\bar{L}}$ più grossa che semplicemente scambia le risposte di $M_{L}$ prendendo la sua funzione di transizione e facendo si che tutte le combinazioni in cui $M_{L}$ si fermerebbe le si fanno invece andare su stati accettanti
 			- ![[Pasted image 20260307113707.png]]
 		- ### Formalismo:

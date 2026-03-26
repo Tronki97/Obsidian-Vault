@@ -1,6 +1,7 @@
 ---
 tags: []
-aliases: 
+aliases:
+  - identità di Bézout
 data: "`2024-08-31 20:05`"
 ---
 - # Def:
@@ -9,6 +10,6 @@ data: "`2024-08-31 20:05`"
 	- parto avendo già eseguito l' [[Algoritmo di Euclide]] per trovare $mcd(603,207)=9$ Per vedere il funzionamento di Bézout bisogna tornare indietro ricavando i resti e sostituendoli: 
 		- $$\begin{array}\  9=63-18*3=63-(270-63*4)*3=63(1+12)-3(270)=\\ \\  =13(603-2*270)-3(270)=13(603)+270(-26-3)= \\ \\ =13(603)-29(270) \end{array} $$
 	- Dove $r=603$ e $s=-29$ 
-	- ## identità
+	- ## identità ^8f18d4
 		- l'identità dice che 
 			- $$\exists r,s:mcd(a,b)=ra+sb=1$$

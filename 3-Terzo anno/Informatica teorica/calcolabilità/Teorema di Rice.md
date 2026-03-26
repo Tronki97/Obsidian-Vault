@@ -1,0 +1,67 @@
+---
+tags:
+aliases:
+data: "`2026-03-21 16:10`"
+---
+- # Intro
+	- è un risultato che stabilisce l'indecidibilità di linguaggi che hanno una certa forma
+	- questi linguaggi all'interno hanno stringhe che codificano le _MdT_
+	- una certa macchina macchina $M$ ha una certa proprietà $P$ se appartiene ad un certo insieme di macchine con quella proprietà.
+		- si studia il linguaggio associato a quella macchina. 
+		- $L_{P}=\{M\in P\}$
+- # Teorema:
+	- si applica solo alle [[Proprietà di macchine#^169fb6|proprietà semantiche]] e non [[Proprietà di macchine#^83cfde|banali]] 
+	- _Ogni proprietà non banale di linguaggi $RE$ è indecidibile_
+	- ## Dim:
+		- sia $P\subseteq RE$ una _proprietà di linguaggi_ _non banale_ si hanno 2 casi:
+			- $\emptyset \notin P$
+				- si ha quindi che $P$ è non banale e che $P\subseteq RE$ da cui esiste un linguaggio $L\ne \emptyset:L\in P$ quindi esiste una macchina $M_{L}$ che riconosce $L$ quindi $L(M_{L})=L$
+				- si vuole dimostrare che $L_{P}=\{M| L(M)\in P\}$ è indecidibile, quindi $L_{P}\notin R$ 
+				- si usa una [[Riduzioni]] da un linguaggio $\notin R$. $L_{u}\le L_{P}$ 
+					- istanza partenza $(M,w)$ istanza arrivo $N=f(M,w)$ 
+				- la trasformazione contiene $M$ che simula $w$ e se la riconosce fa partire la macchina $M_{L}$ che simulerà poi l'input $x$ e darà in output a $N$ il suo risultato 
+				- ![[Pasted image 20260321161830.png]]
+				- ### Funzionamento trasformazione:
+					- istanza di partenza _si_
+						- suppongo $(M,w)\in L_{u}$ allora so che $M\vDash w$ allora $N$ si comporta come $M_{L}$ quindi non importa quale input $x$ ci sia, la macchina $N$ avrà come linguaggio $L$ che per ipotesi $L\in P$ da cui $N\in L_{P}$
+					- istanza di partenza _no_
+						- suppongo che $(M,w)\notin L_{u}$ allora so che $M\not \vDash w$ quindi $L(N)= \emptyset$ e ciò mi dice che $N\notin L_{P}$ perché si era supposto che $\emptyset \notin P$ 
+				- La trasformazione funziona e quindi per il [[Riduzioni#^416588|TH5]] visto che $L_{u}\notin R$ allora neanche $L_{P}$ gli appartiene   
+			- $\emptyset \in P$
+				- si considera $\bar{P}=RE - P$ quindi si ha che $\emptyset\notin \bar{P}$ 
+				- $\bar{P}$ sarà non banale perché si è assunto che neanche $P$ lo sia e visto che:
+					- $$\begin{cases}\emptyset \notin \bar{P}\\ \bar{P} \ \text{non baanle}\end{cases} \implies\text{stesse premesse del caso precedente}$$
+					- si ha che $L_{\bar{P}}\notin R$ 
+				- inoltre risulta che $\bar{L_{\bar{P}}}=L_{P}$ e quindi non è possibile che $\bar{L_{\bar{P}}}$ sia in $R$ perché:
+					- supponendo che $\bar{L_{\bar{P}}} \in R$ allora vuol dire che $L_{\bar{P}}\in R$ (per [[Classi di calcolabilità#^0e0666|TH1]]) ma è una contraddizione su quello che era stato dimostrato prima  
+		- quindi si è riusciti a dimostrare che $L_{P} \notin R$ quindi _indecidibile_.
+- ## ES:
+	- data $M$, il linguaggio di $M$ è finito? 
+	- è una proprietà di macchine e semantica 
+	- è una proprietà non banale 
+	- quindi per _rice_ è indecidibile.
+- ## ES2:
+	- dato $M$ il linguaggio di $M$ è infinito?
+	- stesso ragionamento di prima.
+- ## ES3:
+	- data $M$ il linguaggio di $M$ è un linguaggio accettato _solo_ da macchine con $5$ stati 
+	- risulta essere _banale_ perché qualsiasi linguaggio riconosciuto da macchine con $5$ stati può essere riconosciuto da una con uno stato in più nominandolo accettante e facendo si che lo stato accettante precedente faccia sempre transitare nel nuovo stato. In questo modo la macchina accetta $L$ e ha più di $5$ stati  
+- ## ES4:
+	- $L=\{W\#A|W\in (0|1)^{+}, A=W \vee A=W^{R}\}$
+		- ![[Pasted image 20260321171625.png|657]]
+	- $P_{1}=\{M|L(M)=L\}$ 
+		- è non banale perché so che contiene almeno un linguaggio, in questo caso $L$, e so che ci sono dei linguaggi non appartenenti a questa proprietà, basta pensare a $\bar{L}$  
+		- quindi per _Rice_ so che è indecidibile 
+	- $P_{2}=\{M|L(M)=L \wedge \forall w\in L\ \text{M accetta w in meno di 100 passi}\}$
+		- banale perché basterebbe mettere una stringa lunga abbastanza da non permettere alla macchina di riconoscere la stringa entro quei 100 passi
+			- quindi la parte del $\forall w$ non sarebbe rispettata.
+	- $P_{3}=\{M|L(M) \ne (L \cap \{0,1,\#\}^{101}) \}$ 
+		- è una proprietà semantica 
+		- è non banale perché esiste almeno un linguaggio non appartenente a questa proprietà ovvero $(L \cap \{0,1,\#\}^{101}$ e invece gli appartengono tutti i linguaggi diversi da quello  
+		- per _Rice_ è indecifibile.
+- ## ES5:
+	- ho l'[[Classi di decidibilità#^e285c2|halt per ogni]] $HALT_{\forall}$ 
+	- è una proprietà di macchine.
+	- risulta essere non semantica perché si potrebbero avere 2 macchine una che si ferma sempre su istanze _si o no_ mentre se ne potrebbe avere un'altra che si ferma su istanze si mentre in quelle _no_ cicla. Di fatto queste due riconoscono lo stesso linguaggio ma uno appartiene alla proprietà $HALT_{\forall}$ mentre l'altro no perché non si ferma sulle istanze no quindi _è una propretà non semantica_.
+- # Link Utili:
+	- 

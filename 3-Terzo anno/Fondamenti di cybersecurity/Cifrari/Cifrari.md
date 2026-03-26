@@ -1,9 +1,16 @@
 ---
 tags:
-  - TODO
 aliases:
   - cifrario di cesare
   - shift cipher
+  - cifrario di sostituzione
+  - substitution cipher
+  - cifrario affine
+  - affine cipher
+  - cifrario di Vigénere
+  - Vigénere cipher
+  - Hill cipher
+  - cifrario Hill
 data: "`2026-02-20 11:50`"
 ---
 - # Cifrario di Cesare (shift cipher):

@@ -1,8 +1,16 @@
 ---
 tags:
-  - TODO
 aliases:
   - rete di Feistel
+  - DES
+  - data encryption standard
+  - PC-1
+  - PC-2
+  - S-box
+  - double DES
+  - 3DES
+  - DESX
+  - AES
 data: "`2026-02-27 11:31`"
 ---
 - # Motivazioni:
@@ -106,7 +114,7 @@ data: "`2026-02-27 11:31`"
 	- $\Delta_{P}=P_{1} \oplus P_{2},\Delta_{C}=C_{1}\oplus C_{2}$
 		- La distribuzione dei delta può rivelare informazioni sulla chiave 
 	- Stranamente _DES_ è resistente 
-- # AES:
+- # AES: ^e890d7
 	- Advanced encryption standard
 	- Blocchi da 128 bit e chiavi da $128, 192\ o\  256$ bit
 	- Si vengono a generare 44,52 o 60 sottochiave tutte da $32$ bit 
@@ -127,7 +135,6 @@ data: "`2026-02-27 11:31`"
 	- ## Attacchi:
 		- Best key recovery: risulta 4 volte migliore rispetto a ricerca esaustiva.
 		- Related key: dati $2^{99}$ coppie I/O da 4 chiavi correlate si può ricoverare le chiavi in tempo $2^{99}$
-- 
 - # Trivia:
 	- Potrebbe fare domande sulle reti Feistel e richiede di farle il grafico e determinare output rispetto all'input. 
 - # Link Utili:

@@ -1,0 +1,41 @@
+---
+tags:
+aliases:
+  - algoritmo di Euclide esteso
+  - square&multiply
+  - square and multiply
+  - totiente di Eulero
+  - inversione modulare
+  - teorema di Fermat
+data: "`2026-03-13 10:58`"
+---
+- # Esponenziazione:
+	- $X^{c}\ mod\ n$ viene effettuato normalmente moltiplicando ripetutamente lo stesso numero 
+		- ![[Pasted image 20260321174417.png]]
+		- ciò risulta però inefficiente per valori molto grandi di $c$ 
+	- ## Algoritmo Square&Multiply:
+		- ![[Pasted image 20260321174506.png|454]]
+		- si assume che $c$ sia rappresentato in _binario_ con $c_{i}=(0|1)$ e $0\le i \le l-1$ dove $l$ è il numero di _bit_ di $c$
+			- $$c=\sum\limits _{i=0}^{l-1}c_{i}*2^{i}$$
+- # Algoritmo di Euclide esteso:
+	- in sostanza si usa il [[Teorema di Bézout]] per trovare quei due valori scalari che soddisfino la richiesta.
+	- ![[Pasted image 20260321175423.png|400]]
+- # Inversione modulare:
+	- un algoritmo per l'[[Aritmetica modulare#^6e5f67|invertibilità]] nell'[[Aritmetica modulare]] 
+	- ![[Pasted image 20260321175625.png|609]]
+- # teorema di Fermat:
+	- sia $p$ un numero primo e $x$ in intero positivo non divisibile per $p$
+		- $$\forall x \in \mathbb{Z}_{p}^{*}: x^{p-1}=1 \ in \ \mathbb{Z}_{p}$$
+- # Generare numeri primi grandi:
+	- per esempio $p$ di lunghezza $1024$ bit 
+	- si sceglie un intero random $p\in[1^{1024}, 2^{1025}-1 ]$
+	- si controlla se $2^{p-1}=1 \ in\ \mathbb{Z}_{p}$ (questo è il _test della primalità di Fermat_)
+		- se risulta rispettata si da in output $p$ altrimenti di genera di nuovo $p$  
+- # Totiente di Eulero: ^0bf1dc
+	- $\phi(N)$ numero di interi positivi minori di $N$ primi rispetti ad $N$ 
+		- $\phi(12)=|\{1,5,7,11\}|=4$
+		- $\phi(p)$ con $p$ primo da come risultato $p-1$ 
+			- $\phi(37)=36$
+	- suppongo di avere due primi $q,p$ con $p\ne q$ $\phi(pq)=\phi(p)*\phi(q)=(p-1)(q-1)$
+- # Link Utili:
+	- 

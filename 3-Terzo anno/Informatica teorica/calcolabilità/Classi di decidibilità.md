@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - CO-RE
   - TH6
@@ -52,7 +51,6 @@ data: "`2026-03-18 19:07`"
 						- $N$ si arresta sulle stringhe più corte di $t$
 						- $N$ non si arresta sulle stringhe più lunghe di $t$
 						- dove $t$ è il numero di passi in cui $M$ si ferma su $\epsilon$
-			- 
 		- ### Appartenenza a RE
 			- _per toglierlo da $CO-RE$ si riduce $HALT_{\epsilon}\le HALT_{\forall}$_
 				- input $HALT_{\epsilon}$ è $M$ e anche per $HALT_{\forall}$

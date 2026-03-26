@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - sicurezza semantica
   - ECB
@@ -13,6 +12,7 @@ aliases:
   - Output FeedBack
   - CTR
   - CounTeR
+  - OTK
 data: "`2026-03-09 17:44`"
 ---
 - # Modi delle operazioni:

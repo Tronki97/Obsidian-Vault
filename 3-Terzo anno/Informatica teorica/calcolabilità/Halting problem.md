@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - halt language
   - HALT
@@ -56,7 +55,7 @@ data: "`2026-03-12 18:04`"
 			- $M_{H_{\epsilon}}^{*}$ dirà di _si_ avendo $M'$ come input e risulta quindi che $M$ _si arresta sulla stringa_ $w$
 		- Suppongo che risponda di _no_:
 			- $M_{H_{\epsilon}}^{*}$ dirà di _no_ avendo $M'$ non si arresta quindi avendo che $M$ _non si arresta su_ $w$ 
-		- Il linguaggio deciso da $N$ è $HALT$ ma ciò è un assurdo perché $HALT$ non è decidibile risultando quindi che $HALT_{\epsilon}\notin R$ 
+		- Il linguaggio _deciso_ da $N$ è $HALT$ ma ciò è un assurdo perché $HALT$ non è _decidibile_ risultando quindi che $HALT_{\epsilon}\notin R$ 
 	- inoltre siccome $(HALT_{\epsilon} \in RE) \wedge HALT_{\epsilon} \notin R \implies \overline{HALT_{\epsilon}}\notin RE$ grazie al teorema [[Classi di calcolabilità#^d1d978|TH2]]   
 - # Link Utili:
 	- 

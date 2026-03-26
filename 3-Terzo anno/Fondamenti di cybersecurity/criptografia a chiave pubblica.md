@@ -2,54 +2,80 @@
 tags:
   - TODO
 aliases:
+  - RSA
+  - trapdoor one way function
+  - TDF
+  - secure trapdoor function
 data: "`2026-03-16 09:29`"
 ---
 - # Intro:
 	- ripasso sulla confidenzialità garantita da questo metodo
 	- ottenere la chiave pubblica ma non sapere quella privata non risulta molto utile e craccare quella privata richiede troppo tempo.
+	- ## Problemi con la crittografia simmetrica:
+		- Per riuscire a comunicare in maniera sicura usando algoritmi come [[Cifrario a blocchi#^DES|DES]] o [[Cifrario a blocchi#^e890d7|AES]] servirebbe avere innanzitutto una _chiave condivisa_ e quindi esiste il problema di condividersi questa chiave.
+		- Poi se serve comunicare con $N$ _persone diverse_ si aggiunge il problema di mantenere $N$ _chiavi diverse_
+- # Idea principale:
+	- ogni user genera una _coppia di chiavi_ per la de/criptare i messaggi
+	- una delle due chiavi nella coppia viene inserita in un registro pubblico, questa è detta _chiave pubblica_ 
+	- l'altra chiave viene invece tenuta _privata_
+	- ogni utente mantiene un gruppo di chiave pubbliche ottenute da altri utenti.
+	- ![[Pasted image 20260323115939.png|676]]
 - # Applicazioni:
 	- ## de/criptazione
 	- ## scambio di chiavi:
+		- le due parti cooperano per scambiarsi una chiave di sessione segreta per la criptazione simmetrica e viene generata per particolari _sessioni_ e rimane _valida per poco tempo_
 	- ## Firma digitale:
 		- il mittente "mette la firma" criptando con la propria chiave privata, facendo quindi capire che è stato lui a mandare il messaggio in quanto solo lui conosce la chiave e in questo modo si aggiunge anche la _non repudiabilità_ del messaggio.
 - # Def:
 	- è compost da una tripla di algoritmi $(G,E,D)$
-		- $G()$ algoritmo di randomizzazione che butta fuori una coppia di chiavi $(K^{-},K^{+})$
-		- $E(K^{-},m)$ algoritmo randomico che prende $m\in M$ e manda fuori un ciphertext $c\in C$
-		- $D()$ algoritmo deterministico pe riottenere $m$ da $c$ usando la chiave 
-	- ## trapdoor one way function:
+		- $G()$ algoritmo di randomizzazione che butta fuori una coppia di chiavi $(K^{+},K^{-})$
+		- $E(K^{+},m)$ algoritmo randomico che prende $m\in M$ e manda fuori un _ciphertext_ $c\in C$
+		- $D(K^{-},c)$ algoritmo deterministico per riottenere $m$ da $c$ usando la chiave $K^{-}$
+		- $$\forall (K^{+},K^{-}) \in G(): \forall m\in M: D(K^{-},E(K^{+}, m))=m$$
+	- ## Trapdoor one way function:
 		- facile da calcolare in un verso ma infattibile nell'altro 
 		- ma con certe informazioni aggiuntive si può calcolare l'inversa in tempo _polinomiale_
-		- $Y=f_{k}(X)$ facile da calcolare se $k$ e $X$ sono conosciute
-		- $X=f_{k}^{-1}(Y)$ facile se $k$ e $Y$ sono conosciute
+		- questa funzione in realtà è una famiglia di funzioni _invertibili_ $f_{k}$:
+			- $Y=f_{k}(X)$ facile da calcolare se $k$ e $X$ sono conosciute
+			- $X=f_{k}^{-1}(Y)$ facile se $k$ e $Y$ sono conosciute altrimenti diventa poco fattibile.
 	- ## Secure trapdoor function (TDF)
+		- una _trapdoor function_ è una tripla di algoritmi efficienti $(G,F,F^{-1})$ 
+			- $G():$ un algoritmo randomizzato che da in output la coppia di chiavi $(K^{+},K^{-})$
+			- $F(K^{+},x)$: algoritmo deterministico che definisce una funzione $X\to Y$
+			- $F^{-1}(K^{-}, c)$ definisce una funzione $Y\to X$ che inverte $F(K^{+},m)$
+			- $$\forall(K^{+},K^{-}): \forall x\in X: F^{-1}(K^{-},F(K^{+},x))=x$$
 		- $(G,F,F^{-1})$ è sicura se $F(K^{+},m)$ è una funzione monodirezionale
 			- può essere calcolata ma non può essere invertita senza $K^{-}$
 			- ![[Pasted image 20260316095408.png]]
-		- $(G,F,F^{-1})$ è sicura se per ogni $A$ efficiente
+		- $(G,F,F^{-1})$ è sicura se per ogni algoritmo $A$ efficiente:
 			- $$Adv_{OW}[A,F]=P[x=x']\ \text{è molto piccola}$$
 	- usare una trapdoor function insieme alla criptazione a chiave pubblica non va bene in quanto non rispetta la [[Modi delle operazioni#^579e62|sicurezza semantica]] perché la funzione di criptazione è deterministica per la _TDF_
+		- inoltre se si usa non bisogna mai applicare la criptazione al plaintext senza magari prima averlo hashato. 
 - # RSA:
 	- è una _trapdoor permutation_
 	- ovvero valuta $X$ e restituisce un output nello stesso insieme del dominio 
 		- ogni chiave $K^{+}$ definisce una determinata funzione di permutazione
-	- $G()$: sceglie 2 numeri primi random $p,q\sim 1024$ bits si setta $N=pq$ si scelgono 2 interi $e,d$ con $1<e<\phi(N)$ tali che $e*d =1$ mod $\phi(N)$ con l'output:
-		- $K^{+} = (N,e)$ e $K^{-}=(N,d)$ 
+	- $G()$: sceglie 2 numeri primi random $p,q\sim 1024$ bits si setta $N=pq$ si scelgono 2 interi $e,d$ con $1<e<\phi(N)$ (con $\phi(N)$ che rappresenta il [[Teoria dei numeri#^0bf1dc|totiente di Eulero]]) tali che $e*d =1$ mod $\phi(N)$ con l'output:
+		- $K^{+} = (N,e)$
+		- $K^{-}=(N,d)$ 
 	- $F(K^{+},x): \mathbb{Z}_{N}^{*}\to \mathbb{Z}_{N}^{*}$ si ottiene $y=RSA(x)=x^{e}\in \mathbb{Z_{N}}$
 	- invece l'inverso:
 		- $$F^{-1}(K^{-},y)=y^{d}$$
 		- $$y^{d}=(RSA(x))^{d}=(x^{e})^{d}=x^{ed}=x^{k \phi(N)+1}=(x^{\phi(N)})^{k}*x=x$$
 	- ## ES:
-		- bob genera la chiave 
-		- si scelgono 2 numeri primi $p=5, q=11$ 
-		- $N=55$ e $\phi(N)=(p-1)(q-1)=40$
-		- si sceglie un intero $e$ t.c $1<e<\phi(N)$ e che $gcd(e,\phi(N))=1$ per esempio $e =3$ soddisfa la richiesta 
-		- poi si calcola un intero $d$ tale che $3*d=1\ mod \ 40$ risulta che $d=27$ rispetta la condizione
-		- risulta quindi che la chiave pubblica è $(55,3)$ e la chiave privata è $(55,27)$
+		- bob genera la chiave:
+			- si scelgono 2 numeri primi $p=5, q=11$ 
+			- $N=55$ e $\phi(N)=(p-1)(q-1)=40$
+			- si sceglie un intero $e$ t.c $1<e<\phi(N)$ e che $gcd(e,\phi(N))=1$ per esempio $e =3$ soddisfa la richiesta 
+			- poi si calcola un intero $d$ tale che $3*d=1\ mod \ 40$ risulta che $d=27$ rispetta la condizione
+			- risulta quindi che la chiave pubblica è $K^{+}=(55,3)$ e la chiave privata è $K^{-}=(55,27)$
 		- _Alice_ ha un messaggio $m=13$ da mandare a bob
-		- conosce la chiave pubblica di _bob_ $(55,3)$
-		- calcola $c$
-			- $$c=13^{3}\ mod\ 55 = 2197 \ mod \ 55 = 52$$ 
-		- 
+			- conosce la chiave pubblica di _bob_ $(55,3)$
+			- calcola $c$
+				- $$c=13^{3}\ mod\ 55 = 2197 \ mod \ 55 = 52$$ 
+			- manda quindi il messaggio cifrato $c=52$ 
+		- _bob_ riceve $c=52$
+			- usa quindi la propria chiave privata $27$ per calcolare $m$ 
+				- $$m=52^{27} mod \ 55 = 13$$
 - # Link Utili:
 	- 

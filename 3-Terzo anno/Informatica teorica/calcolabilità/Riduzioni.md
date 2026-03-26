@@ -81,13 +81,18 @@ data: "`2026-03-13 15:12`"
 		- ### Linguaggio dei codici delle macchine di Turing
 			- $L_{ne}$ insieme dei codici delle macchine di Turing con linguaggio non vuoto 
 				- $$L_{ne}=\{M|L(M)\ne \emptyset\}$$
+				- può anche essere definito come il complemento di $L_{e}$
+					- $L_{e}=\{M|L(M)=\emptyset\}$ 
+				- $L_{ne} = \bar{L_{e}}$ 
 			- #### Appartenenza ad RE
+				- si deve dimostrare che esista una macchina $N$ in grado di riconoscere $L_{ne}$   
 				- si costruisce una macchina con $M$ in input e con un modulo di [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sull'input $w$  e si mette in input alla macchina $M_{u}$ il risultato del guess e la macchina $M$ che riuscirà solo a fermarsi per dire di _si_ ma non è detto che si fermi. 
 					- il punto è che essendo le stringhe appartenenti ad un linguaggio potenzialmente infinite allora il modulo guess potrebbe continuare a cercarne all'infinito che possano essere accettate da $M_{u}$ e quindi mettendoci troppo tempo per rispondere risultare in una eventuale risposta _no_
 					- _riconoscendo il linguaggio ma non deciderlo_
 				- ![[Pasted image 20260313185126.png|513]]
 			- #### Appartenenza ad R:
-				- si fa una riduzione $L_{u} \le L_{ne}$ 
+				- riduco da un linguaggio che so non appartenere ad $R$
+					- si fa una riduzione $L_{u} \le L_{ne}$ 
 				- istanze di $L_{u}$ sono $(M,w)$
 				- istanze $L_{ne}$ la macchina $N$
 				- serve la funzione che trasformi le istanze _si_ in altrettante tali per $L_{ne}$ 
@@ -99,5 +104,6 @@ data: "`2026-03-13 15:12`"
 						- di conseguenza $N\in L_{ne}$ 
 				- Istanza "_NO_"
 					- suppongo che $(M,w)\notin L_{u}$ allora $M \not \vDash w$ allora vuol dire che $L(N)= \emptyset$ e ciò implica che $N\notin L_{ne}$ 
+				- avendo fatto quindi la riduzione da un linguaggio $\notin R$ e avendo verificato che la trasformazione funziona si può stabilire grazie al _TH3_ che neanche quello in cui ci si è ridotti appartenga ad $R$ 
 - # Link Utili:
 	- 

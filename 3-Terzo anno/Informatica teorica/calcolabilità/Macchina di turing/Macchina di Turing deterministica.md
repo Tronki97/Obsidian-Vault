@@ -90,8 +90,8 @@ data: "`2026-02-23 16:10`"
 			- $w\in L \to M \ accetta\  w$
 			- $w\notin L\to M \ non \ accetta\  w$
 	- ## ES:
-		- $$L=\{ww^{R}|w\in (0,1)^{*},w^{R} \ è reverse\}$$
-		- ![[Pasted image 20260220185513.png|500]]
+		- $$L=\{ww^{R}|w\in (0,1)^{*},w^{R} \ è  \ reverse\}$$
+		- ![[Pasted image 20260220185513.png|618]]
 	- ## ES con uso di marcatori:
 		- $$L=\{a^{n}b^{m}|m>n>0\}$$
 		- In pratica al posto di cancellare il simbolo dalla cella che ho letto lo sostituisco con un altro simbolo ($X, Y...$) ciò mi permette  di guardare e marcare i simboli che _non si trovano agli estremi della stringa_ 

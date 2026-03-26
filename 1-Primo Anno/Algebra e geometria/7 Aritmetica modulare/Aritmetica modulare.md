@@ -49,7 +49,7 @@ data: "`2024-08-31 20:05`"
 			- 3) Dimostro la doppia inclusione tra insiemi 
 				- L'inclusione $\{[0]_{n},[1]_{n},...,[n-1]_{n}\}\subset \mathbb{Z}_{n}$ è banale in quanto $\mathbb{Z}_{n}$ contiene tutte le classi di resto, in particolare quelle del primo insieme.
 				- Per dimostrare  $\mathbb{Z}_{n}\subset\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$ consider $[a]_{n}\in \mathbb{Z}_{n}$, per il primo punto di questa proposizione so che $[a]_{n}=[r]_{n}$, dove $r$ è il resto della divisione per $n$ che per definizione appartiene a $\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$. Quindi $[a]_{n}=[r]_{n}\in \{[0]_{n},[1]_{n},...,[n-1]_{n}\}$  
-	- ## Invertibilità
+	- ## Invertibilità ^6e5f67
 		- Una classe $[a]_{n}\in \mathbb{Z}_{n}$ si dice _invertibile_ se esiste una classe $[c]_{n}\in \mathbb{Z}_{n}$ detta _inverso_ di $[a]_{n}$ tale che:
 			- $$[a]_{n}[c]_{n}=[1]_{n}$$
 		- e l'inverso di $[a]_{n}$ è scritto $[a]_{n}^{-1}$
@@ -80,7 +80,7 @@ data: "`2024-08-31 20:05`"
 				- $$2:1=2\ \ r=0$$
 			- Quindi $mcd(30,67)=1$ e la Proposizione 3 mi assicura che esiste l'inverso che si calcola trovando il valore $r$ ripercorrendo a ritroso l'algoritmo: 
 				- $$\begin{array}\  1=7-3*2=7-3(30-4*7)=13*7-30*3= \\ \\ =13*(67-2*30)-3*30=-29*30+13*67 \end{array} $$
-				- Così per l'identità di Bézout 
+				- Così per l'[[Teorema di Bézout#^8f18d4|identità di Bézout]] 
 					- $$1=-29*30+13*67$$
 				- in cui $r=-29$ e Quindi 
 					- $$[30]_{67}^{-1}=[-29]_{67}=[38]_{67}$$

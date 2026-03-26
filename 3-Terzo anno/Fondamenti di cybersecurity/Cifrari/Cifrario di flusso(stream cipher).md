@@ -1,8 +1,13 @@
 ---
 tags:
-  - TODO
 aliases:
   - perfect secrecy
+  - one time pad
+  - sicurezza di Shannon
+  - PRNG
+  - BBS generator
+  - RC4
+  - estream
 data: "`2026-02-23 09:07`"
 ---
 - # Motivazioni:
