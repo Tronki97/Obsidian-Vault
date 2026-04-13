@@ -1,0 +1,153 @@
+---
+tags:
+aliases:
+  - DTIME
+  - P
+  - classe P
+  - NP
+  - Classe NP
+  - NTIME
+data: "`2026-03-31 14:54`"
+---
+- # Idea:
+	- contengono solo [[Introduzione a Informatica Teorica#^c71371|problemi di decisione]]
+	- insiemi di linguaggi tali che si ha lo stesso [[Nozioni di Complessità strutturale#^34a85e|time complexity upper bound]] 
+	- ## Classe DTIME:
+		- sia $t(n)$ una [[Nozioni di Complessità strutturale#^dc4cbe|time function]] si definisce la classe di complessità time function 
+			- $$DTIME(t(n))=\{L| \exists M \text{deterministica che decide L in tempo}\ O(t(n))\}$$
+	- ## Classe P:
+		- detta _polynomial time_
+		- $$P=\bigcup_{c\ge 1} DTIME(n^{c})$$
+			- il grado $c$ del polinomio è _fissato_
+		- un problema appartenente a questa classe è definito come _problema facile_ 
+		- ### ES:
+			- _problema della raggiungibilità su un grafo_.
+				- $$L_{R}=\{<G, s, t>| \text{G è un Grafo, (s,t)}\in G\ \exists\text{ un percorso da s a t in G}\}$$
+				- _è in $P$_
+				- basta pensare all'[[Algoritmo di Dijkstra]] e prendere il nodo di partena come $s$ e quello di arrivo $t$ avendo la strada "più veloce" ma di fatto esiste quella strada.
+				- altrimenti semplicemente una [[Visite sui Grafi#^3c4eb5|BFS sui grafi]] e si controlla che che il nodo $t$ sia presente nell'albero restituito. 
+			- _decidere se un numero è primo o no_:
+				- banalmente se divido per tutti i numeri minori dovrò fare almeno $n$ divisioni.
+					- una divisione ha costo polinomiale 
+				- ma come complessità si ha $O(2^{|n|}*Poly(|n|))$ siccome bisogna fare $n$ divisioni ma di fatto usando numeri in binario si dovranno fare $2^{|n|}$ operazioni polinomiali 
+				- _di fatto rendendo l'algoritmo esponenziale_ $\notin P$ 
+			- _problema SAT(CNF)_
+				- _problema della soddisfacibilità delle formule booleane_
+					- $\phi=c_{1}\wedge...\wedge c_{n}$
+						- $c_{i}=(l_{i1} \vee...\vee l_{ik})$
+					- un esempio può essere: $\phi=(x_{1} \vee \neg x_{2} \vee x_{3})\wedge(x_{4} \vee\neg x_{2})$
+					- $\sigma$ è un assegnamento di verità che mi dice ogni variabile che valore deve avere  
+				- il problema consiste nel verificare l'esistenza di un assegnamento $\sigma$ che soddisfi una formula $\phi$  
+					- se $\sigma$ ci viene subito fornito allora la complessità è di circa $O(n^{2})$ 
+					- se si dovesse trovarne una invece la complessità è di $O(2^{n}*Poly (n))$ in quanto si devono guardare i valori booleani di $n$ clausole
+				- _non sta in $P$_
+			- problema dell'indipenent set
+				- dato un grafo e un numero $k$
+					- esiste un insieme di $k$ nodi che non sono collegati da un arco  
+				- si deve quindi guardare tutti i nodi $k$ e controllare tutti i sottoinsiemi e questa operazione costa $\binom{n}{k}\simeq 2^{n}$  
+	- ## classe NTIME
+		- $NTIME(t(n))=\{L|\exists M\text{ non deterministica che decide L in tempo}\ O(t(n)\}$
+	- ## NP:
+		- _nodeterministic polynomial_
+		- insieme di tutti i problemi di decisioni che possono essere decisi da macchine di turing non deterministiche in tempo polinomiale
+			- $$NP=\bigcup_{c\ge1}\ NTIME(n^{c})$$
+			- non esistono ancora algoritmi polinomiali per risolvere questi problemi
+- # Considerazioni:
+	- $P\subseteq NP$ perché tutti gli algoritmi deterministici sono contenuti in quelli non deterministici semplicemente non usando il non-determinismo.
+	- non si sa però se $NP \subseteq P$ che se fosse verificato implicherebbe che $P=NP$  
+		- ci si chiede quindi se quello che si fa polinomialmente in maniera non-deterministica si possa risolvere allo stesso modo in maniera deterministica.
+		- forse è un bene che $P$ sia diverso da $NP$ perché in questo modo l'infrastruttura della criptografia rimane in piedi. 
+- # Riduzione polinomiale:
+	- è una [[Riduzioni]] con la caratteristica di essere calcolata in tempo polinomiale.
+	- siano $A,B$ linguaggi; $A$ _si riduce polinomialmente_ a $B$ se $\exists f: \Sigma^{*} \to \Sigma^{*}$ t.c:
+		- 1) $f$ è _calcolabile in tempo polinomiale deterministico_
+		- 2) $\forall w\in \Sigma^{*}$  $w\in A \iff f(w)\in B$
+	- denotiamo la riduzione con:
+		- $$A\le_{P}B$$
+- # NP-Hardness:
+	- Un linguaggio $L$ è $NP-HARD$ se $\forall L' \in NP$ si ha che $L'\le_{P} L$ 
+- # NP-completezza:
+	- Un linguaggio $L$ è $NP$ completo se:
+		- 1) $L\in NP$
+		- 2) $L$ è $NP-HARD$ 
+	- di fatto esistono linguaggi $NP-HARD$ ma non $NP$ completi un esempio è [[Macchine universali#^0eac02|linguaggio universale]] in quanto è difficile quanto tutti i problemi di $NP$ ma non gli appartiene.
+- # Teorema dell'uguaglianza delle classi:
+	- sia $L$ un linguaggio $NP$ completo allora $L\in P \iff P=NP$ 
+	- $\Longleftarrow)$ 
+		- $P=NP \implies L\in P$
+		- dalla supposizione si ha che $L\in NP$ e siccome si suppone che $P=NP$ allora $L\in P$
+	- $\implies)$
+		- $L\in P \implies P=NP$
+		- che è come dire che: $L\in P \implies P\subseteq NP \wedge NP \subseteq P$
+			- e per definizione si sa che $P\subseteq NP$ 
+		- quindi ci si riduce a dimostrare $L\in P \implies NP \subseteq P$
+		- dall'ipotesi so che $L$ è NP completo quindi:
+			- $\forall L' \in NP \ \ L'\le_{P} L$
+		- $L\in P \implies$ esiste $M_{L}$ (deterministica) che riesce a decidere $L$ in tempo polinomiale
+		- sia $L' \in NP$ 
+			- visto che la riduzione esiste, per definizione di $NP-HARD$, allora la funzione $f$ esiste
+			- si crea una macchina che trasforma un input di $L'$ in uno di $L$ e poi la macchina interna $M_{L}$ lo decide di fatto quindi decidendo $L'$ 
+			- che per definizione della funzione di trasformazione è deterministica rendendo quindi la macchina $M_{L}'$ un decisore deterministico di $L'$ 
+			- ![[Pasted image 20260401185955.png]]
+				- il calcolo di $f(w)=y$ avviene in tempo $O(|w|^{c})$ siccome la trasformazione $f$ è polinomiale per definizione di _riduzione polinomiale_ 
+				- $|y|$ non può essere troppo grande in quanto essa viene calcolata in tempo polinomiale $O(|w|^{c})$ 
+				- il calcolo finale invece, si esegue $M_{L}(y)$ con risposta polinomiale (grazie all'ipotesi che $L\in P$) ottenendo quindi un costo $O(|y|^{d})=O((O(|w|^{c}))^{d})=O(|w|^{c*d})$
+			- il costo di calcolo totale della macchina $M_{L}'$ è $O(|w|^{c}) + O(|w|^{c*d})$ ottenendo quindi che $L'\in P$
+		- in questo modo si ricava che se un linguaggio $NP$ completo appartenesse a $P$ allora si avrebbe che $NP \subseteq P$ quindi per le considerazioni fatte all'inizio $NP =P$   
+- # transitività delle riduzioni polinomiali:
+	- siano $A,B,C$ linguaggi; $A\le_{P}B \wedge B\le_{P} C \implies A \le_{P} C$
+	- ## DIM:
+		- $A\le_{P}B$ allora $\exists f: w\in A \iff f(w)\in B$
+		- $B\le_{P}C$ allora $\exists g: w\in B \iff f(w)\in C$ 
+		- si vuole dimostrare che $A \le_{P} C$ e che quindi $g\circ f: w\in A \iff g(f(w))\in C$
+		- si costruisce una macchina con dentro le due funzioni $f$ e $g$ che si sa essere polinomiali deterministiche ma ci si chiede se $f$ seguito da $g$ lo sia 
+		- ![[Pasted image 20260401191617.png|660]]
+			- il calcolo di $f(w)$ è fatto in tempo polinomiale $O(|w|^c)$
+			- per il calcolo di $g(f(w))$ si sa che $g$ è polinomiale quindi $O(|f(w)|^{d})=O((|w|^{c})^{d})=O(|w|^{c*d})$
+			- avendo quindi un calcolo finale di $O(|w|^{c})+O(|w|^{c*d})$
+- # Teorema per NP-HARD:
+	- siano $A,B$ linguaggi $A\in NP-HARD \wedge A\le_{P}B \implies B\in NP-HARD$
+	- ## Dim:
+		- $A\in NP-HARD \implies$ $\forall L'\in NP \ \ L'\le_{P} A$ e sapendo che $A\le_{P}B$ allora per la _transitività delle riduzioni polinomiali_ $L'\le_{P}B$  
+	- _SAT_ è l'unico linguaggio dimostrato essere $NP-HARD$ per definizione e non per riduzione.
+- # NP completezza di 3SAT:
+	- linguaggio simile a _SAT_ ma con una caratteristica particolare.
+	- ogni clausola ha al massimo 3 letterali 
+	- si vuole dimostrare che $3SAT$ sia _$NP$ completo_ 
+	- ## Dim:
+		- $3SAT \in NP$:
+			- si costruisce una macchina non-deterministica che fa un guess l'assegnamento dei letterali e procederà poi a fare il check della formula con quell'assegnamento 
+			- in questo modo si ha che la macchina non-deterministica è in grado di risolvere in tempo polinomiale.
+		- $3SAT \in NP-HARD$
+			- si dimostra riducendo da $SAT$ ovvero $SAT \le_{P}3SAT$
+			- le istanze di $SAT$ sono le formule booleane $\phi$ in CNF; mentre quelle di $3SAT$ sono formule booleane $\psi$ in $3CNF$  
+			- una istanza si di $SAT$ è una formula $\phi$ per la quale esiste un assegnamento $\sigma$ che rende la formula $\phi$ vera; per quella $3SAT$ la situazione è analoga 
+			- un istanza no invece è una formula per la quale non esiste un assegnamento che la rende vera; questione analoga per $3SAT$ 
+			- si parte da $\phi$ e la si trasforma in $\phi'$ dove si è accorciato le clausole lunghe di un letterale 
+				- questo processo si ripete fintanto che non si è accorciato abbastanza per aver ottenuto clausole di lunghezza massima $3$ 
+				- $\phi \to \phi' \to...\to \psi$ 
+			- si suppone di avere $\phi=c_{1} \wedge c_{2} \wedge ... \wedge c_{n}$ 
+			- si processano tutte le $c_{i}$ e si guarda la loro lunghezza e se la lunghezza è $\le 3$ la si copia in $\phi'$
+				- $c_{i}=(l_{1} \vee... \vee l_{k})$ con $k >3$ e la si divide in:
+					- $c_{i}'=(l_{1} \vee l_{2} \vee h_{i})$
+					- $c_{i}''=(l_{3} \vee ... \vee l_{k} \vee \neg h_{i})$
+						- risulta avere un letterale in meno rispetto a $c_{i}$ 
+					- questa trasformazione 
+				- questa trasformazione $\phi \to \phi'$ è polinomiale ottenendo alla peggio il doppio delle clausole ($2m$ con $m=$ clausole)
+				- quando se ne spezza una in due se ne avrà sicuramente una di lunghezza massima 3 e quindi nel passaggio successivo solo una di quelle due andrà spezzata in 2.
+				- fino a trasformare in $\psi$ si dovranno fare quindi $k$ suddivisioni in tempo quindi $k*m$ quindi _polinomiale_ 
+			- ### Funzionamento della trasformazione:
+				- se $\phi$ è soddisfacibile allora anche $\phi'$ lo è quindi esiste $\sigma$ che soddisfa $\phi$ .
+				- deve esistere quindi un $\tau_{\sigma}$ che soddisfa $\phi'$ lo si costruisce partendo da $\sigma$
+					- $\tau_{\sigma}$ per le variabili comuni tra le due formule si copiano le stesse variabili presenti in $\sigma$ 
+					- se si guarda lo spezzettamento di $c_{i}$ si sa che $\sigma$ lo rende vero e quindi dopo la divisione si ha che $\tau_{\sigma}$ renderà vero uno dei letterali $l_{i}$ o di $c_{i}'$ o di $c_{i}''$ 
+						- se $c_{i}'$ viene reso vero si imposta $\neg h_{i}$ a vero 
+						- se $c''_{i}$ è reso vero allora si imposta $h_{i}$ a vero 
+				- se $\phi'$ è soddisfacibile allora anche $\phi$ lo è quindi $\exists \tau$ che soddisfa $\phi'$
+					- $\sigma_\tau$ si ricopiano solo le variabili comuni alle due formule escludendo gli assegnamenti di $h$ in questo modo le clausole corte in $\phi'$ che non derivano da spezzettamenti di quelle di $\phi$ verranno soddisfatte.
+					- per quanto riguarda le clausole spezzate, per loro costruzione so che uno dei letterali presenti in una delle due metà è reso vero; ma derivando da una unica clausola grande di $\phi$ allora so che proprio quella sarà soddisfatta. 
+- # Es:
+	- $L = EXACT-3SAT$ le formule hanno le clausole di lunghezza $3$  
+	- mostrare che il linguaggio è $NP$ completo e farlo con $3SAT \le _{P} EXACT-3SAT$
+- # Link Utili:
+	- 

@@ -22,7 +22,7 @@ data: "`2026-03-02 17:11`"
 					- $q_{0}10\vdash q_{1}\not{b}00\not{b}\vdash q_{2}00$ risulta essere uno _stato accettante_ 
 					- $10q_{1}\not{b}\vdash10\not{b}q_{2}\not{b}$ che risulta essere uno _stato accettante_
 		- Per definizione non possono esistere fisicamente quindi ci si chiede come si può accettare una stringa?
-		- ### Albero di computazione:
+		- ### Albero di computazione: ^ab1928
 			- è un albero i cui nodi sono tutte le possibili configurazioni che la macchina può osservare nel momento in cui processa la stringa $w$ la radice è la [[Macchina di Turing deterministica#^aa3d99|configurazione iniziale]] e si ha un arco tra una [[Macchina di Turing deterministica#^e7168b|configurazione]] e l'altra se la configurazione figlia è una _legal succsessor_ della padre
 			- _Si accetta la stringa di input quando nell'albero esiste almeno un percorso dalla radice ad una configurazione finale e accettante_
 			- Rifiuta l'input se tutte le possibili computazioni portano ad una configurazione non accettante.

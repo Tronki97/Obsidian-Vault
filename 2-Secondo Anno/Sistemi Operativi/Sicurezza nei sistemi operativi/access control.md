@@ -53,7 +53,7 @@ data: "`2025-05-15 18:14`"
 	- Formalmente è un insieme di _tuple_ 
 	- Ogni soggetto è associato ad un dominio di protezione in cui opera 
 		- Questo abbinamento può essere _statico o dinamico_ 
-- # DAC matrix:
+- # DAC matrix: ^17c594
 	- Un modello di Discretionary Access Control (DAC)
 	- è una matrice $M$ con i _domini come righe_ e _oggetti come colonne_
 	- ogni cella $M(i,j)$ contiene l'insieme di diritti di accesso $\alpha$ che il dominio $D_i$ permette sull'oggetto $O_j$

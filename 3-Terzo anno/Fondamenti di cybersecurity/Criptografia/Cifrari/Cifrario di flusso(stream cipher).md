@@ -8,6 +8,7 @@ aliases:
   - BBS generator
   - RC4
   - estream
+  - next-bit test
 data: "`2026-02-23 09:07`"
 ---
 - # Motivazioni:
@@ -60,11 +61,11 @@ data: "`2026-02-23 09:07`"
 	- ## PRNG deboli:
 		- Linear congruention generator:
 			- `r[0]=seed`
-			- `r[i]=(a*r[i-1]+b)mod p`
+			- `r[i]=(a*r[i-1]+b) mod p`
 				- Ha come output pochi bit di $r[i]$
 			- `i++`
 		- Glibc random
-	- ## BBS generator:
+	- ## BBS generator(Blum Blum Shub):
 		- Si scelgono due numeri primi grandi $p,q$ con questa relazione:
 			- $p\equiv q \equiv 3\ mod\ 4$ e $p\ mod \ 4  = q\ mod\ 4=3$
 		- Sia $n=pq$
@@ -72,20 +73,21 @@ data: "`2026-02-23 09:07`"
 		- Si genera quindi uno pseudo-casuale secondo:
 			- `X[0] = s^2 mod n`
 			- `for i = 1 to` $\infty$
-				- `X_i = (X[i-1])^2 mod n`
+				- `X[i] = (X[i-1])^2 mod n`
 				- `B[i]=X[i] mod 2`
 		- è considerato come ciptograficamente sicuro e passa il _next-bit test_
 		- ### Next-bit test:
 			- Dati i primi $k$ bit dell'output non c'è un algoritmo polinomiale sul tempo che permette di dire che il prossimo bit sia 1 o 0 sia $\frac{1}{2}$
-		- La sicurezza di _BBS_ si basa sui fattori di $n$ in quanto bisogna determinare 
+		- La sicurezza di _BBS_ si basa sul fattorizzare $n$ in quanto bisogna determinare i fattori primi $p$ e $q$  
 - # Cifrario di flusso:
 	- Si rimpiazza la chiave _random_ con una pseudo-random 
-	- Con la funzione PRG: $G:\{0,1\}^{s} \to \{0,1\}^{n}$ con $n>>s$
+		- Con la funzione PRG: $G:\{0,1\}^{s} \to \{0,1\}^{n}$ con $n>>s$ che prende quindi in input $k$
 	- ## Struttura:
 		- ![[Struttura cifrario di flusso.png|500]]
 			- Con $k$ random e non può essere usata più di una volta
 		- ![[stream cipher detail.png|500]]
-			- $z_{i}$ viene applicato lo XOR insieme al plaintext $p_{i}$
+			- a $z_{i}$ viene applicato lo XOR insieme al plaintext $p_{i}$
+				- tutto questo viene fatto un _byte_ alla volta 
 	- ## segretezza perfetta:
 		- Non la possiede in quanto la lunghezza della chiave è più piccola di quella del messaggio.
 	- ## sicurezza:
@@ -99,9 +101,10 @@ data: "`2026-02-23 09:07`"
 		- ![[initial S vector.png|400]]
 		- ![[stream generation.png|400]]
 		- ### debolezze:
-			- 1)Ha un bias nell'output iniziale: si assume che l'algoritmo di setup sia perfetto e generi una permutazione dall'insieme di tutte le 256 permutazioni
-			- Si può dimostrare che l'output iniziale sia biased:
-				- $$P(2^{nd}byte=0)=\frac{2}{256}=\frac{1}{128}\implies$$
+			- 1)Ha un bias nell'output iniziale: 
+				- si assume che l'algoritmo di setup sia perfetto e generi una permutazione dall'insieme di tutte le $256!$ permutazioni
+				- Si può dimostrare che l'output iniziale sia biased:
+				- $$P(2^{nd}\ byte=0)=\frac{2}{256}=\frac{1}{128}\implies$$
 			- 2) $P(0,0)=\frac{1}{256^{2}}+\frac{1}{256^{3}}$
 	- ## eStream:
 		- $PRNG: \{0,1\}^{s} \times r\to \{0,1\}^{n}$
@@ -112,7 +115,8 @@ data: "`2026-02-23 09:07`"
 	- Risulta insicuro 
 	- $c_{1}=m_{1}\oplus PRG(k)$
 	- $c_{2}=m_{2}\oplus PRG(k)$
-	- Quello che fa l'ascoltatore è $c_{1} \oplus c_{2}= m_{1}\oplus m_{2}$
+	- Quello che fa l'ascoltatore è 
+		- $$c_{1} \oplus c_{2}= (m_{1}\oplus PRG(k)) \oplus (m_{2}\oplus PRG(k))=c_{1}\oplus m_{2}\oplus PRG(k)=m_{1}\oplus m_{2}$$
 	- E grazie alla ridondanza della lingua inglese e del codice ASCII risulta che:
 		- $m_{1} \oplus m_{2}$
 - # Link Utili:

@@ -1,0 +1,46 @@
+---
+tags:
+aliases:
+  - complessità temporale
+  - time function
+  - running time
+  - time complexity upper bound
+  - time complexity lower bound
+data: "`2026-03-30 12:17`"
+---
+- # Idea:
+	- ci si sposta sul dilemma degli algoritmi non abbastanza efficienti oppure se certi problemi non potessero essere svolti in maniera più efficiente.
+	- ci si occupa quindi di problemi di linguaggi appartenenti alla [[Classi di calcolabilità|classe R]]
+	- _si vuole stabilire quindi la complessità dei problemi_ 
+- # Complessità temporale:
+	- sia $M$ una [[Macchina di Turing deterministica]] e sia $w$ una _stringa_ in input per $M$
+	- si definisce il _computation time_ di $M$ su $w$ come:
+		- _il numero di passi che $M$ esegue prima di arrestarsi su $w$_
+	- mentre per le [[Macchina di Turing non-deterministica]]:
+		- si guarda la lunghezza del _branch_ più lungo dell'[[Macchina di Turing non-deterministica#^ab1928|albero di computazione]]
+- # Time function: ^dc4cbe
+	- sia $t(n)$ una funzione $t:\mathbb{N}\to \mathbb{N}$ $t$ si chiama _time function_ se:
+		- $t>0$ e inoltre $t$ è _non decrescente_. 
+			- in questo modo si suppone anche che le macchine per arrestarsi facciano almeno un passo e che per stringhe più lunghe il tempo cresca.
+- # Running time:
+	- il _running time_ della macchina $M$ (quindi indipendente da uno specifico input) 
+	- sia $t(n)$ una time function, il running time di $M$ è $t(n)$ se $\forall w$, tranne un numero finito, il _computation time_ di $M$ su $w$ è _bounded_ da $t(|w|)$ 
+		- quindi possono esserci dei casi in cui _computation time_ sborda un poco allora la macchina lo riconosce prima di computare su quell'input e dare quindi una risposta predefinita.
+- # Classi asintotiche:
+	- ### Big O
+		- siano $f,g: \mathbb{N}\to \mathbb{N}$ si dice che $f(n)$ è $O(g(n))$ se esistono due interi $c,n_{0}$ t.c:
+			- $\forall  n\ge n_{0}$ $f(n)\le c*g(n)$ 
+				- $f(n)$ quindi da un certo punto non crescerà mai più velocemente di $g(n)$ 
+	- ### Big $\Omega$ 
+		- $f(n)$ è $\Omega(g(n))$ se esistono $c,n_{0}$
+			- $\forall n\ge n_{0}$ $c*g(n)\le f(n)$
+	- $f(n)$ è $\Theta(g(n))$ se $f(n)$ è$O(g(n))$ e $f(n)$ è $\Omega(g(n))$ 
+- # Complessità dei problemi:
+	- sia $P$ un _problema di Decisione_:
+	- ## Time complexity upper bound: ^34a85e
+		- Il _time complexity upper bound_ di $P$ è $O(f(n))$ se:
+			- esiste un _algoritmo (o MdT)_, che risolve $P$, il cui _running time_ è $O(f(n))$.
+	- ## Time complexity lower bound:
+		- il _time complexity lower bound_ di $P$ è $\Omega(f(n))$ se:
+			- ogni algoritmo che risolve $P$ ha _running time_ $\Omega(f(n))$ 
+- # Link Utili:

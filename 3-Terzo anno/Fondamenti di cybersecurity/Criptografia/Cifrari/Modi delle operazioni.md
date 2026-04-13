@@ -22,14 +22,14 @@ data: "`2026-03-09 17:44`"
 		- La chiave è diversa ogni volta che si cripta qualcosa.
 		- ![[Pasted image 20260306113614.png|346]]
 		- Quando l'adv riesce a indovinare quello che ha scritto il _challenger_ allora ciò che si sta analizzando non è _semanticamente sicuro_.
-		- ### OTK:
-			- Per un cifrario $Q$ e un Adv $A$ si definisce un gioco d-attacco>
+		- ### OTK(One time Key):
+			- Per un cifrario $Q=(E,D)$ e un _Adv_ $A$ si definisce un gioco d'attacco
 				- Per $b=0 \wedge 1$ si definiscono gli esperimenti $EXP(0)$ e $EXP(1)$ in questo modo:
 					- ![[Pasted image 20260306113904.png|533]]
 			- $$Adv_{SS}(A,Q):=|P(EXP(0)=1)-P(EXP(1)=1)|$$
 				- $EXP(.)$ danno come risultato un certo numero $\in(0|1)$
 				- Se la probabilità $EXP(0)=1$ si avvicina ad uno vuol dire che l'avversario sta perdendo mentre $P(EXP(1)=1)$ allora vuol dire che $A$ sta indovinando le azioni del _challenger_
-			- Per tutti gli $A$ efficienti il valore di $Adv_{SS}(A,Q)$ dovrebbe essere molto piccolo per far si che si abbia _sicurezza semantica_
+			- Per tutti gli $A$ efficienti il valore di $Adv_{SS}(A,Q)$ dovrebbe essere molto piccolo per far si che $Q$ sia _semanticamente sicuro_
 	- ## ECB (Electronic CodeBook)
 		- Prende ogni blocco di _plaintext_ lunghezza $n$ e lo cripto usando la _stessa chiave_
 		- Lo si usa spesso per trasmettere una chiave tra due entità in modo sicuro

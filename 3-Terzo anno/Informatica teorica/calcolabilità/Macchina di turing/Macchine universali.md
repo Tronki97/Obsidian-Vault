@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - linguaggio universale
   - TH3
@@ -24,7 +23,7 @@ data: "`2026-03-06 15:10`"
 		- $3°:$ si scrive lo stato corrente di $M$ su $w$ 
 		- $4°:$ si usa come nastro di brutta copia per fare certe modifiche al secondo nastro.
 	- Il [[Interprete#^47d635|ciclo fde]] è comparabile a questo processo per l'accettazione di stringhe basate su altre macchine.
-- # Linguaggio universale:
+- # Linguaggio universale: ^0eac02
 	- Viene _accettato_ dalla macchina universale ma non _deciso_ perché potrebbe non terminare.
 	- Intuitivamente non si trova in [[Classi di calcolabilità#^3eb35c|R]] ma in [[Classi di calcolabilità#^e20268|RE]]  
 	- ## Def:

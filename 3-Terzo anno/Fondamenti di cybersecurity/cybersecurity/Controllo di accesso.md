@@ -1,0 +1,41 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-04-13 09:43`"
+---
+- # Elementi base:
+	- _soggetto_: entità in grado di accedere agli oggetti
+	- _oggetto_: una risorsa per la quale è necessario controllare l'accesso 
+	- _diritto di accesso_: descrive il modo in cui il soggetto può accedere all'oggetto 
+- # Politiche di cotrollo di accesso:
+	- ## Controllo direzionale dell'accesso (DAC)
+		- basato sull'dentità dei soggetti e sulle regole di accesso stabilendo cosa possono fare su quali oggetti 
+		- è detto _direzionale_ perché i soggetti decidono che tipo di accesso concedere agli altri soggetti 
+		- utilizza la matrice di accesso [[access control#^17c594|DAC matrix]]
+	- ## Controllo di accesso obbligato (MAC)
+		- si basa sul controllo delle etichette di sicurezza (_security labels_), che indicano quanto sono sensibili o critici gli oggetti, con le autorizzazioni di sicurezza (_security clearence_) dei soggetti 
+		- è detto _obbligatorio_ perché le etichette sono impostate dal sistema e non possono venir modificate dai soggetti 
+	- ## Controllo di accessi basato sui ruoli (RBAC)
+		- l'accesso è basato sui ruoli che i soggetti hanno dentro al sistema e su _regole_
+		- i ruoli vengono assegnati in maniera dinamica in base alle responsabilità.
+		- la sua matrice di controllo associa i singoli utenti ai ruoli e di solito gli utenti sono più numerosi rispetto ai ruoli 
+			- ai singoli utenti possono essere assegnati più ruoli diversi.
+			- ![[Pasted image 20260413095431.png]]
+- # Principi delle politiche di sicurezza:
+	- _Open design_:
+		- si basa su un concetto simile a quello di _Kerckhoffs_
+	- _economy of mechanism_:
+		- _as simple as possible_
+		- si semplifica la progettazione e l'implementazione dei meccanismi di sicurezza 
+		- più il sistema è semplice meno è probabile la comparsa di errori 
+		- il processo di controllo e test è meno complesso 
+		- le [[sviluppo di un sistema software Java#^7e2383|interfacce]] sono aree sospette e devono essere il più semplici possibili.
+	- _fail-safe defaults_:
+		- i concessi sono uguali per tutti e vengono modificati poi in seguito in base alle necessità 
+	- _Complete mediation_:
+		- non si può accedere direttamente agli oggetti 
+		- tutti gli accessi vanno controllati 
+	- [[Network security#^7e9b5d|least privilege]]
+- # Link Utili:
+	- 

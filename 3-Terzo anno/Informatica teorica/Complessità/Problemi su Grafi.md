@@ -1,0 +1,165 @@
+---
+tags:
+aliases:
+  - independent set
+  - Vertex cover
+  - CLIQUE
+  - dominating set
+  - KERNEL problem
+data: "`2026-04-08 14:23`"
+---
+- # indipendent set:
+	- un independent set per un grafo è un insieme $S$ di nodi sottoinsieme di quello dei nodi 
+	- ogni coppia di nodi in $S$ non è collegato da un arco del grafo 
+		- in sostanza le coppie di nodi non devono essere collegate da archi diretti 
+	- questo risulta un problema banale se questi insiemi sono di sottoinsiemi di nodi piccoli tipo $1$ nodo 
+	- $$IS=\{<G,k>|G=<V,E> \ k \in \mathbb{Z} \text{ G ammette un IS di taglia almeno k} \}$$
+	- dimostrare che $IS\in NP$-completo 
+		- $IS \in NP:$
+			- serve trovare una macchina non deterministica che lo risolva in tempo polinomiale.
+			- si fa il [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sull'indipendent set per poi fare il check di $k$ nodi fatto in $O(n^{2})$
+				- con $n$ numero di nodi 
+		- $IS\in NP-HARD$
+			- si riduce da un linguaggio $NP-HARD$ e lo faremo da $3SAT$
+				- $$3SAT \le_{P} IS$$  
+				- input di $3SAT$ è una formula $\phi$ con ogni clausola con esattamente $3$ letterali 
+				- input di $IS$ un grafo $G$ e un intero $k$ 
+			- _funzione di trasformazione_:
+				- la parte difficile del problema di partenza $3SAT$ consiste nel determinare i valori dei letterali (e grazie al cazzo) 
+				- mentre del problema di arrivo è determinare se un nodo appartiene all'IS o meno. 
+				- si potrebbero mappare le variabili che vengono definite vere in nodi appartenenti all'$IS$ 
+				- si suppone di avere $\phi=(x_{1} \vee x_{2} \vee \neg x_{3})\wedge (\neg x_{2} \vee x_{4} \vee x_{3})\wedge(\neg x_{4} \vee x_{5} \vee \neg x_{3})$
+					- collego ogni variabile alla sua versione negata:
+						- ![[Pasted image 20260409114242.png]]
+				- suppongo $\phi$ sia vero quindi in ogni clausola deve esserci almeno un letterale vero quindi si può costruire $\sigma$ che soddisfi $\phi$
+				- $\sigma \longrightarrow S_{\sigma}$ 
+					- per ogni clausola. siccome $\sigma$ la soddisfa, accade che almeno un letterale vero è al suo interno. 
+					- si mette il letterale che rende vera la clausola in $S_{\sigma}$ 
+						- è efficace perché supponendo per assurdo che $S_{\sigma}$ non sia un IS vuol dire che ci sono due nodi collegati ma quei nodi sono una variabile col suo negato 
+						- rendendo quindi impossibile aver scelto quei 2 nodi come assegnamento che soddisfa la formula.
+				- $S \longrightarrow \sigma_{S}$
+					- partendo però dall'IS di taglia $k$ non è detto che la formula di partenza sia soddisfacibile. perché per esempio i nodi indipendenti possono appartenere alla stessa clausola non riuscendo quindi a rendere vera la formula. 
+						- per rimediare si possono collegare i nodi della stessa clausola. 
+						- ![[Pasted image 20260409114803.png]]
+					- quindi per dimostrare che partendo da un IS significa che la formula era soddisfacibile posso dimostrare per assurdo:
+						- suppongo che non esiste un assegnamento che soddisfi $\phi$ quindi tra i $k$ nodi presi almeno 2 appartengono alla stessa clausola ma questo va in contraddizione con l'ipotesi di avere un $IS$ che richiede che i nodi non siano collegati da archi diretti avendo quindi che se si è ottenuto un $IS$ è perché la formula era soddisfacibile.
+- # Vertex cover:
+	- dato un grafo $G=<V,E>$ il _vertex cover_ è insieme dei suoi nodi tale che: l'unione di tutti gli archi collegati a quei nodi formi $E$  
+	- $$VC = \{<G,k>| G \text{ ammette un vertex cover di taglia al massimo k}\}$$
+	- si verifica che ogni arco sia coperto dai nodi in $VC$ che devono essere $k$ 
+	- riduco da $IS$ a $VC$ 
+		- $$IS (<G,k>) \le_{P} VC(<H,l>)$$ 
+	- ## Lemma:
+		- sia $G$ un grafo e $S$ un insieme di nodi di $G$
+		- $S$ è $IS$ di $G$ $\iff$ $V-S$ è un $VC$ di $G$ 
+		- $\implies)$ 
+			- per ipotesi $S$ è IS di $G$
+			- suppongo per assurdo che $C=V-S$ non sia VC di $G$ 
+			- allora esiste un arco di $G$ i cui nodi collegati non stanno in $C$, allora stanno in $\bar{C}=S$ che va contro l'ipotesi di partenza che $S$ sia un IS. 
+		- $\Leftarrow)$
+			- per ipotesi ho che $C=V-S$ sia $VC$ di $G$ 
+			- suppongo che $S$ non sia $IS$ quindi ci sono due nodi collegati da un arco. 
+			- ma siccome $C=\bar{S}$ vuol dire che esiste almeno una coppia di nodi collegati da un arco non presente in $C$ che va contro l'ipotesi che $C$ sia $VC$ di $G$
+	- ## trasformazione
+		- si applica facendo $H=G$ e $l=|V|-k$
+		- parto dall'istanza _si_ del problema di partenza:
+			- $<G,k>\in IS$ quindi esiste un insieme di nodi $S$ di taglia $k$ che è un $IS$  per il lemma di sopra $\bar{S}$ è un $VC$ di $G$ di cardinalità $|V|-k$ ma siccome $G=H$ allora $\bar{S}$ è un $VC$ di $H$ di cardinalità $l$ 
+			- quindi avrò che anche $<H,l>$ è una istanza si di _Vertex cover_
+		- ora parto dall'istanza _si_ del problema di arrivo:
+			- per averla vuol dire che esiste $C$ di taglia $l$ che è $VC$ di $H$ 
+			- per il lemma di sopra so che $V-C=S$ è un IS di $H$ di taglia $|V|-l=|V|-|V|+k=k$ 
+			- siccome $H=G$ allora ho che $\bar{C}=S$ è un IS di $G$ di taglia $k$ 
+			- quindi se ho ottenuto questa istanza si è perché anche quella di partenza lo era. 
+		- questa riduzione da un problema $NP-$Hard è efficace e quindi Vertex Cover è anch'esso $NP-$Hard 
+	- si ha quindi che Vertex cover è _$NP$-completo_.
+- # Clique:
+	- esistenza di un sotto-grafo completamente connesso ![[Pasted image 20260409123931.png]]
+	- dimostrare che è NP-completo.
+	- $$CLIQUE=\{<G,k>|G\ \text{ammette una CLIQUE di taglia almeno k} \}$$
+	- la riduzione è sempre da $IS$
+		- $$IS<G,k>\le_{P} CLIQUE<H,l>$$
+	- ## Lemma:
+		- $S$ è $IS$ di $G$ $\iff$ $S$ è una _clique_ in $\bar{G}$
+			- $\bar{G}$ definito come presenza di archi dove non ci sono e toglierli da dov'erano  
+		- $\implies$)
+			- sia $S$ IS di $G$ 
+			- suppongo che $S$ non sia CLIQUE di $\bar{G}$ quindi non tutti i nodi dentro $S$ in $\bar{G}$ sono collegati quindi vuol dire che c'è almeno un arco che collega una coppia di nodi dentro $S$ in $G$ ma questo va contro l'ipotesi che $S$ sia $IS$ di $G$
+		- $\Longleftarrow)$
+			- sia $S$ una CLIQUE di $\bar{G}$ 
+			- suppongo che $S$ non sia $IS$ di $G$ quindi vuol dire che almeno una coppia di nodi in $S$ è collegata da un arco ma siccome tutti gli archi di $G$ sono invertiti rispetto a $\bar{G}$ ciò non è possibile in quanto tutti i nodi di $S$ in $\bar{G}$ sono collegati. 
+			- si ha quindi una contraddizione. 
+	- ## Trasformazione:
+		- $H=\bar{G}$ e $l=k$ 
+		- parto dall'istanza _Si_ di partenza:
+			- $<G,k>\in IS$ quindi esiste un IS $S$ di $G$ di taglia $k$ 
+			- per il lemma di sopra so che $S$ è una CLIQUE per $\bar{G}$ e siccome $H=\bar{G}$ allora avrò che $S$ è una CLIQUE di taglia $l$ per il grafo $H$ 
+		- parto dall'istanza _SI_ di arrivo:
+			- esiste un $S$ di taglia $l$ che è CLIQUE di $H$
+			- per il lemma di sopra so che $S$ è un $IS$ per $\bar{H}$ di taglia $k$ e sapendo dalla trasformazione che $G=\bar{H}$ ho che per aver ottenuto un istanza si di arrivo l'unico motivo è che anche quella di partenza lo fosse.
+	- visto che la trasformazione è efficace allora si ha che si è riusciti a ridurre da un problema $NP-$Hard  e quindi che anche $CLIQUE$ lo è, di conseguenza $CLIQUE$ è _NP-completo_.
+- # Dominating set:
+	- un dominating set $D$ è un sottoinsieme dei vertici del grafo tali che ogni vertice fuori è agganciato ad uno dei vertici del dominating set 
+	- un dominating set non è necessariamente un vertex cover ma l'opposto invece è vero
+		- _un vertex cover è sempre un dominating set_.
+	- $$DS=\{<G, k>|\ G \text{ ammette un dominating set di taglia al massimo k}\}$$
+	- dimostrare che sia _NP-completo_
+	- $DS\in NP$:
+		- si crea una macchina non deterministica che fa il _guess_ sui nodi appartenenti e poi fa il check per vedere se collegano tutti gli altri nodi. 
+	- $DS\in NP-HARD$
+		- si riduce da _vertex cover_
+		- $$VC \le_{P} DS$$
+		- input 
+			- partenza è coppia grafo numero $<G,k>$ 
+			- arrivo è coppia grafo numero $<H,l>$
+		- ## Trasformazione:
+			- $l=k$ e nel nuovo grafo $H$ aggiungo un nodo per ogni nodo in modo di bypass dell'arco
+				- ![[Pasted image 20260411160546.png]]
+			- istanza _si_ di partenza:
+				- vuol dire che in $G$ esiste un $VC$ $C$ di taglia $k$ che copre tutti gli archi di $G$
+				- suppongo per assurdo che questo sottoinsieme $C$ non sia $DS$ di $H$ in questo modo qualche nodo di $H$ non è raggiungibile dai nodi di $C$ e questo può accadere per due ragioni:
+					- suppongo che uno di quelli non raggiungibili sia uno di quelli copiati ma ciò non è possibile per la proprietà di prima ovvero che _un vertex cover è sempre un dominating set_.
+					- suppongo che uno di quelli sia uno di quelli aggiunti, ma ciò non è possibile perché avendo aggiunto degli archi ad ogni nodo e siccome $C$ era $VC$ allora ognuno di quei nodi è raggiungibile.  
+			- istanza _si_ di arrivo:
+				- si ha quindi $<H,l>$ che ammette un $DS$ $D$ di taglia $l$
+				- dentro $D$ ci sono due tipi di nodo
+					- quelli che appartenevano a $G$ vengono ricopiati in $C$
+					- per quanto riguarda quelli che erano stati aggiunti, invece di quelli scelgo uno dei nodi adiacenti.
+				- suppongo, per assurdo, che $C$ così generato non sia $VC$ di $G$ quindi c'è almeno un arco che non è coperto da nessuno dei nodi di $C$, ciò vorrebbe dire quindi che non avevo scelto uno dei nodi che poteva raggiungere uno dei nodi aggiunti che simulava quell'arco e ciò è una contraddizione dell'ipotesi che $D$ è $DS$ di $H$ 
+		- la trasformazione è quindi efficace e in questo modo si è dimostrato che il problema è _NP-hard_ 
+	- avendo dimostrato le due proprietà si ha che $DS$ è _NP-completo_.
+- # KERNEL:
+	- un kernel $K$ di un grafo è un insieme di vertici tali che:
+		- $K$ è un $IS$ del grafo 
+		- $K$ è un $DS$ del grafo 
+	- $$KERNEL=\{G|G \ \text{ha un kernel}\}$$
+	- $KERNEL \in NP$
+		- si può fare guess sulla soluzione e checkare che il sottoinsieme sia $IS$ e $DS$ che entrambi si controllano in tempo polinomiale 
+	- $KERNEL \in NP-HARD$ 
+		- riduco da $3SAT$
+			- $$3SAT \le_{P} KERNEL$$
+		- si parte da una formula la quale necessita di un assegnamento per la soddisfacibilità e si arriva ad un grafo che necessita di sapere se contiene un _kernel_ 
+		- ## Trasformazione:
+			- suppongo $\phi=(x_{1} \vee x_{2} \vee\neg x_{3}) \wedge (\neg x_{2} \vee \neg x_{1} \vee x_{3}) \wedge (x_{4} \vee \neg x_{2} \vee x_{5})$
+			- per ogni variabile in $\phi$ ho due nodi in $G$ ($x_{i}, \neg x_{i}$)
+				- si collegano i nodi opposti.
+				- si aggiungono dei nodi clausola che collegano tutti i letterali appartenenti alla stessa clausola 
+				- inoltre si mette un arco che rientra nei nodi clausola in modo che non vengano scelti per la soluzione del problema di arrivo.
+				- ![[Pasted image 20260411161710.png]].
+			- parto dall'istanza _si_ di $3SAT$
+				- quindi $\phi$ è soddisfacibile quindi $\exists \sigma:$ soddisfa $\phi$ 
+				- partendo da sigma costruisco l'insieme $K_{\sigma}$ : 
+					- $\sigma[x_{i}]=T \implies x_{i} \in K$
+					- $\sigma[x_{i}]=F \implies \neg x_{i}\in K$
+				- suppongo che $K$ non sia kernel:
+					- suppongo che non sia $IS$ ma ciò non è possibile per la costruzione di questo grafo $G$ che collega tra di loro le variabili opposte e che quindi non possono essere scelte contemporaneamente.
+					- suppongo che non sia $DS$ questo vorrebbe dire che almeno uno dei nodi $\notin K$ non può raggiungere un nodo $\in K$; ma siccome la costruzione di $K_{\sigma}$ è stata costruita in modo tale che ci fosse almeno un nodo per ogni clausola che quindi gli è collegato allora ciò _non è possibile_.  
+			- parto da istanza _si_ di $KERNEL$:
+				- quindi esiste $K$ che è un kernel di $G$ 
+					- $K$ non può contenere nodi clausola $c_{i}$ in quanto hanno dei loop e quindi li esclude dal $IS$ 
+					- $K$ non può contenere contemporaneamente $x_{i}$ e $\neg x_{i}$ perché escluderebbe dall'essere $IS$ 
+				- $\sigma_{K}$ viene costruito in questo modo:
+					- $x_{i}\in K \implies \sigma_{K}[x_{i}]=T$
+					- $\neg x_{i} \in K \implies \sigma_{K}[x_{i}]=F$
+				- si assume per assurdo che $\sigma_{K}$ non soddisfi $\phi$ quindi esiste una $c_{i}$ nella quale tutti i letterali sono falsi, ma ciò implicherebbe che non tutti i nodi clausola sono raggiunti e ciò è impossibile perché si romperebbe la supposizione che $K$ è kernel e quindi ha la proprietà di essere anche $DS$. 
+- # Link Utili:
+	- 

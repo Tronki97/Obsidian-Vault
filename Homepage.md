@@ -5,21 +5,12 @@ cssclasses:
 # Vault Info
 
 ## Ultime lezioni da finire:
-
 ```dataview
 TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia 
 FROM #TODO
 WHERE file.path !="template/Modello appunti.md"
 SORT file.ctime DESC
 LIMIT 15
-```
-
-## Da fare/finire:
-```dataview
-TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia
-FROM #TODO
-WHERE file.path !="template/Modello appunti.md"
-SORT Materia 
 ```
 
 # Primo Anno
@@ -71,8 +62,8 @@ SORT Materia
 	- Voto: 
 	- Tentativi: 
 - [[Reti di Calcolatori]]
-	- [ ] Passato
-	- Voto:
+	- [x] Passato
+	- Voto: 22
 	- Tentativi: 2
 - [[Ottimizzazione combinatoria]]
 	- [x] Passato
@@ -103,10 +94,15 @@ SORT Materia
 	- Tentativi: 1
 - [[Informatica teorica]]
 	- [ ] Passato
+	- Voto:
 	- Tentativi:
 - [[0-Mostarda/Fondamenti di cybersecurity]]
 	- [ ] Passato
+	- Voto:
 	- Tentativi: 
-- 
+- [[Laboratorio di Making]]
+	- [ ] Passato
+	- Voto:
+	- Tentativi: 
 
 

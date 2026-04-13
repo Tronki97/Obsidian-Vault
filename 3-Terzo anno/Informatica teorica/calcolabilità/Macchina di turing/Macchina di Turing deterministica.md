@@ -126,7 +126,7 @@ data: "`2026-02-23 16:10`"
 		- _non risulta più potente di quella mono-nastro perché potrebbe essere ricondotta ad una macchina multi-traccia con il doppio di tracce rispetto ai nastri_ 
 			- Sulla tracce di indice dispari c'è il contenuto dei nastri 
 			- Su quelle di indice pari ci metti i marcatori che indicano le posizioni delle testine.
-	- ## Running time:
+	- ## Running time: ^3abf11
 		- Il numero di passi che fa la macchina prima di fermarsi.
 		- Una macchina multi traccia per fare gli stessi movimenti di quella multi nastro deve farne 
 			- $2m+2m+2k$ dove $m$ è il numero dei passi di quella multi-nastro dalla partenza del cursore e $k$ è il numero di nastri.

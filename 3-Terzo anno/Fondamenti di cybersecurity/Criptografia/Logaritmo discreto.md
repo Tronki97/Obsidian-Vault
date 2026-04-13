@@ -4,7 +4,7 @@ aliases:
   - radice primitiva
 data: "`2026-03-10 19:57`"
 ---
-- # Radice primitiva:
+- # Radice primitiva: ^fb68a4
 	- Un numero $a$ è una _radice primitiva_ modulo $p$ se ogni numero $g$ _coprimo_ a $p$ è congruente alla potenza di $a$ modulo $p$ 
 	- Quindi $a$ è una _radice primitiva_ modulo $p$ se per ogni intero $g$ coprimo a $p$ esiste qualche intero $k$ per il quale vale $a^{k} \equiv g \ (mod\ p)$
 	- Questo valore $k$ è chiamato l'_indice_ o _logaritmo discreto_ di $g$ con base $a$ modulo $p$

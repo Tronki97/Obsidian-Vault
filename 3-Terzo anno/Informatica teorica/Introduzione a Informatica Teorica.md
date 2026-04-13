@@ -1,10 +1,11 @@
 ---
 tags:
-  - TODO
 aliases:
   - Calcolabilità
   - Complessità
   - Problema
+  - problema di ricerca
+  - problema di decisione
 data: "`2026-02-16 12:03`"
 ---
 - # Fonti:
@@ -79,7 +80,7 @@ data: "`2026-02-16 12:03`"
 				- Si vuole sapere se c'è un percorso da $s$ a $t$ nel grafo $G$
 				- Risulta essere un _problema facile_ visto che ha soluzione polinomiale
 			- Dato un problema di ricerca esiste una sua variante _di decisione_ che intuitivamente ha circa la stessa complessità
-		- ### Di decisione:
+		- ### Di decisione: ^c71371
 			- Sono problemi per i quali il possibile output è un _booleano_.
 			- #### ES:
 				- Dato un grafo $<G>$ è vero che esiste un _ciclo hamiltoniano_

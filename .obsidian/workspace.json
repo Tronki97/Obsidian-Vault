@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Controllo di accesso.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Controllo di accesso"
+            }
+          },
+          {
+            "id": "1d709e658109b045",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sicurezza dei sistemi.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Sicurezza dei sistemi"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -63,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Bézout",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e2f8231889bb1b44",
@@ -195,7 +221,7 @@
             }
           },
           {
-            "id": "eab8996951bb93c5",
+            "id": "6633fc50d041c659",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -235,52 +261,52 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "3-Terzo anno/Fondamenti di cybersecurity/Key exchange.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/criptografia a chiave pubblica.md",
-    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Aritmetica modulare.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Teoria dei numeri.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrari.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario a blocchi.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Controllo di accesso.md",
+    "Sicurezza dei sistemi.md",
+    "Pasted image 20260413095431.png",
     "Homepage.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/Teorema di Rice.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/Proprietà di macchine.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/Indecidibilità dei problemi.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/Riduzioni.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo3/Tipo dato astratto.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/Classi di decidibilità.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/Halting problem.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/Classi di calcolabilità.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/linguaggio di diagonalizzazione.md",
-    "3-Terzo anno/Informatica teorica/calcolabilità/Macchina di turing/Macchine universali.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Nozioni di Complessità strutturale.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Problemi su Grafi.md",
+    "3-Terzo anno/Informatica teorica/Introduzione a Informatica Teorica.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Network security.md",
+    "immagini/Pasted image 20260410114518.png",
+    "immagini/Pasted image 20260411170631.png",
+    "immagini/Pasted image 20260411170609.png",
+    "immagini/Pasted image 20260411170556.png",
+    "immagini/Pasted image 20260411170402.png",
+    "immagini/Pasted image 20260411163901.png",
+    "immagini/Pasted image 20260411163135.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity",
+    "immagini/Pasted image 20260411161710.png",
+    "immagini/Pasted image 20260411160546.png",
+    "3-Terzo anno/Basi di Dati/SQL/SQL avanzato.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Classi di complessità.md",
     "3-Terzo anno/Informatica teorica/calcolabilità/Macchina di turing/Macchina di Turing non-deterministica.md",
+    "1-Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Visite sui Grafi.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/Criptosistema Rabin.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Criptografia.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia",
+    "3-Terzo anno/Informatica teorica/calcolabilità/Macchina di turing/Macchine universali.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/criptografia a chiave pubblica.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/RSA.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/Criptosistema ElGamal.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Chiave pubblica/Senza nome",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Key exchange.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica",
     "3-Terzo anno/Informatica teorica/calcolabilità/Macchina di turing/Macchina di Turing deterministica.md",
-    "0-Mostarda/Informatica teorica.md",
-    "immagini/Pasted image 20260323115939.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Modi delle operazioni.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari/Cifrario di flusso(stream cipher).md",
-    "immagini/Pasted image 20260321174417.png",
-    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Algoritmo di Euclide.md",
-    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Teorema di Bézout.md",
-    "immagini/Pasted image 20260321175625.png",
-    "immagini/Pasted image 20260321175423.png",
-    "immagini/Pasted image 20260321174506.png",
-    "immagini/Pasted image 20260321161830.png",
-    "immagini/Pasted image 20260321171625.png",
-    "3-Terzo anno/Laboratorio di Making/Comunicazione Seriale.md",
-    "immagini/Pasted image 20260318142057.png",
-    "immagini/Pasted image 20260318185656.png",
-    "immagini/Pasted image 20260318185611.png",
+    "1-Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Algoritmo di Dijkstra.md",
+    "3-Terzo anno/Informatica teorica/calcolabilità/Indecidibilità dei problemi.md",
+    "3-Terzo anno/Informatica teorica/Complessità",
+    "3-Terzo anno/Informatica teorica/calcolabilità/Riduzioni.md",
+    "3-Terzo anno/Informatica teorica/calcolabilità/Classi di decidibilità.md",
+    "3-Terzo anno/Informatica teorica/calcolabilità/Classi di calcolabilità.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario a blocchi.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Modi delle operazioni.md",
     "latexsheet-a4.pdf",
     "3-Terzo anno/Informatica teorica/calcolabilità",
     "3-Terzo anno/Informatica teorica/calcolabilità/Macchina di turing",
     "3-Terzo anno/computational statistics/Notes_Slides.pdf",
-    "3-Terzo anno/Fondamenti di cybersecurity/Cifrari",
-    "3-Terzo anno/Laboratorio di Making",
-    "3-Terzo anno/Basi di Dati/Indici/Senza nome",
-    "3-Terzo anno/Basi di Dati/Indici",
-    "3-Terzo anno/Basi di Dati/Normalizzazione",
-    "3-Terzo anno/Introduzione all'apprendimento automatico/demo/autoencoder.ipynb",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

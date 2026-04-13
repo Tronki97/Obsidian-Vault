@@ -99,7 +99,7 @@ data: "`2026-03-06 11:08`"
 			- _Alice_ da $x_{j}$ ricaverà poi $k_{j}$
 			- ![[Pasted image 20260310195326.png|600]]
 			- Il lavoro da fare per entrambe le parti è quindi $O(2^{32})=O(n)$ mentre l'attaccante deve risolvere $O(2^{64})=O(n^{2})$
-		- ### Protocollo Diffie-Hellman:
+		- ### Protocollo Diffie-Hellman: ^2547b3
 			- $A$ e $B$ _non_ condividono in precedenza nessun info segreta
 			- $A$ e $B$ si scambiano messaggi
 			- Dopo lo scambio entrambi si sono messi d'accordo su una _chiave segreta condivisa_ $k$

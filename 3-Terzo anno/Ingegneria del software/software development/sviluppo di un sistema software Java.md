@@ -56,7 +56,7 @@ data: "`2025-10-20 15:22`"
 				- Come le classi locali ma non possiedono un nome.
 					- Usate quando devo usare una classe locale ma solo una volta
 					- Un esempio può essere un event listener per un `button`
-	- ## Interfacce:
+	- ## Interfacce: ^7e2383
 		- Hanno una implementazione
 			- ![[Pasted image 20251020201516.png|550]]
 		- I metodi di istanza sono preferiti rispetto ai metodi di `default`.

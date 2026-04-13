@@ -1,0 +1,80 @@
+---
+tags:
+aliases:
+  - trapdoor permutation
+  - firma digitale
+data: "`2026-03-30 17:58`"
+---
+- # Def:
+	- è una _trapdoor permutation_
+	- ovvero valuta $X$ e restituisce un output nello stesso insieme del dominio 
+		- ogni chiave $K^{+}$ definisce una determinata funzione di permutazione
+	- $G()$: sceglie 2 numeri primi random $p,q\sim 1024$ bits si setta $N=pq$ si scelgono 2 interi $e,d$ con $1<e<\phi(N)$ (con $\phi(N)$ che rappresenta il [[Teoria dei numeri#^0bf1dc|totiente di Eulero]]) tali che $e*d =1$ mod $\phi(N)$ con l'output:
+		- $K^{+} = (N,e)$
+		- $K^{-}=(N,d)$ 
+	- $F(K^{+},x): \mathbb{Z}_{N}^{*}\to \mathbb{Z}_{N}^{*}$ si ottiene $y=RSA(x)=x^{e}\in \mathbb{Z_{N}}$
+	- invece l'inverso:
+		- $$F^{-1}(K^{-},y)=y^{d}$$
+		- $$y^{d}=(RSA(x))^{d}=(x^{e})^{d}=x^{ed}=x^{k \phi(N)+1}=(x^{\phi(N)})^{k}*x=x$$
+- # ES:
+	- bob genera la chiave:
+		- si scelgono 2 numeri primi $p=5, q=11$ 
+		- $N=55$ e $\phi(N)=(p-1)(q-1)=40$
+		- si sceglie un intero $e$ t.c $1<e<\phi(N)$ e che $gcd(e,\phi(N))=1$ per esempio $e =3$ soddisfa la richiesta 
+		- poi si calcola un intero $d$ tale che $3*d=1\ mod \ 40$ risulta che $d=27$ rispetta la condizione
+		- risulta quindi che la chiave pubblica è $K^{+}=(55,3)$ e la chiave privata è $K^{-}=(55,27)$
+	- _Alice_ ha un messaggio $m=13$ da mandare a bob
+		- conosce la chiave pubblica di _bob_ $(55,3)$
+		- calcola $c$
+			- $$c=13^{3}\ mod\ 55 = 2197 \ mod \ 55 = 52$$ 
+		- manda quindi il messaggio cifrato $c=52$ 
+	- _bob_ riceve $c=52$
+		- usa quindi la propria chiave privata $27$ per calcolare $m$ 
+			- $$m=52^{27} mod \ 55 = 13$$
+- # Sicurezza:
+	- ci si chiede se RSA è veramente _one way permutation_
+		- l'attaccante per invertire la funzione $RSA$ deve calcolare $x$ partendo da $c=x^{e}\ mod\ N$
+		- si guarda la difficolta nel fattorizzare il numero N usato per ottenere la chiave
+	- inoltre se si vuole provare a diminuire la dimensione del valore _d_ se lo si volesse avere $<N^{0.25}$ RSA risulterebbe insicuro; stessa cosa vale per $d<N^{0.292}$ 
+		- si ricorda che $N$ è nell'ordine dei $2048$ bit.
+	- mentre se si vuole velocizzare in maniera sicura RSA si può usare un valore di $e\ge 3$ e nel caso un valore consigliato di $e=2^{16}+1$ 
+	- ### Attacchi:
+		- Timing attack:
+			- si guarda il tempo di decriptazione del ciphertext.
+		- Power attack :
+			- si guarda il consumo di energia durante la decriptazione
+		- Faults attack: 
+			- si guarda l'insorgere di errori di computazione durante la decriptazione.
+	- ## Problemi nella generazione della chiave
+		- un problema della generazione di $p,q$ è che ogni tanto alcuni $N$ possono essere generati con la stessa $p$ segue la facilità di ricavare $q$ con i quali poi posso ricavare $\phi(N)$ e quindi si è riusciti a ricavare chiavi pubbliche e private. 
+		- di solito si scopre ciò facendo il $gcd(N_{1},N_{2})$ 
+- # Firma digitale:
+	- si vuole essere sicuri che il messaggio inviato arrivi effettivamente dal mittente originale.
+	- Bob quindi hasha il messaggio $M$, questo messaggio insieme alla chiave privata $K_{B}^{-}$ servono come firma digitale $S$   
+	- ![[Pasted image 20260330174528.png|645]]
+	- ## ES:
+		- Bob sceglie due numeri primi $p=5; q=11$
+		- calcola $n=p*q=55$
+		- sceglie un numero $e=3: gcd(e,40)=1$
+			- $40=\phi(N)$
+		- si calcola $d=27$ che soddisfi la condizione $3*d \ mod\ 40=1$
+		- si hanno quindi:
+			- $K^{+}_{B}=(3,55)$
+			- $K_{B}^{-}=(27)$
+		- ora _Bob_ deve firmare il documento $m=19$ usa la sua chiave privata per calcolare la firma digitale:
+			- $S=m^{d}\ mod\ n = 19^{27} \mod \ 55=24$
+		- il messaggio così inviato sarà:
+			- $(m,S)=(19,24)$ 
+		- il ricevente per verificare che il mittente sia proprio lui riceve la coppia $(19,24)$ e usa quindi la chiave pubblica di _Bob_ $(3,55)$ calcolando:
+			- $$t=S^{e}\mod{55} =19$$
+		- controlla che $t=m$ e se è così allora il documento è effettivamente firmato da _Bob_ 
+	- ## Documenti lunghi:
+		- semplicemente non si manda il messaggio in chiaro in quanto essendo di grandi dimensioni richiederebbe un alto tempo di calcolo per la firma e la verifica di essa.
+		- quindi si decide di _hashare_ il documento e poi si firma l'_hash_
+		- ![[Pasted image 20260330175536.png|669]]
+	- ## Motivazioni:
+		- la firma _non è falsificabile_ in quanto richiederebbe un tempo di calcolo troppo alto
+		- garantisce la _non repudiabilità_ del messaggio
+		- è verificabile universalmente
+- # Link Utili:
+	- 

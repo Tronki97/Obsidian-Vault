@@ -1,0 +1,89 @@
+---
+tags:
+aliases:
+  - AAA
+  - CIA
+  - accounting
+  - availability
+  - Anonimità
+  - mix-based systems
+  - onion routing
+  - dataleaks
+  - fullz
+  - password leak
+  - privilegio minimo
+  - least privilege
+data: "`2026-04-10 11:11`"
+---
+- # AAA:
+	- ## Autenticazione:
+		- quando si accede ad un sistema si necessita di autenticarsi
+		- un software per avere autenticazione deve garantire o verificare che un utente possa essere identificato attraverso certe informazioni che sono in possesso dell'utente
+			- Ciò che si ha (badge...)
+			- Ciò che l'utente ha (password...)
+			- Ciò che l'utente è (volto, impronta)
+		- ### A più fattori 
+			- a volte possono essere richiesti più metodi di autenticazione che richiedono di essere passati per accedere  
+			- ![[Pasted image 20260411163135.png|526]]
+	- ## Autorizzazione:
+		- una volta che l'utente ha eseguito l'accesso si può limitare l'accesso a certe risorse in base al livello di _autorizzazione_ che l'utente ha 
+	- ## Accounting:
+		- procedura in cui si assegnano determinate operazioni effettuate da un account 
+		- per esempio vengono segnati i traffici effettuati e i dati consumati dalla SIM dell'utente 
+- # CIA:
+	- la sicurezza di un sistema si può misurare in base a questi tre fattori che devono essere sempre presenti.
+	- ## Confidenzialità:
+		- un messaggio può essere letto solo dalle persone designate nella comunicazione.
+		- ### Attacchi:
+			- _Man in the middle_: ci si mette in mezzo nella comunicazione potenzialmente anche modificando i messaggi che passano  
+			- _eavesdropping_: semplicemente si leggono i messaggi che trafficano sulla rete ma senza modificarli.
+	- ## Integrità:
+		- un messaggio è integro solo se è stato inviato dal mittente specificato e se il suo contenuto non è stato alterato.
+		- ### Attacchi:
+			- _spoofing_: si spaccia per il mittente del messaggio e potenzialmente manda messaggi modificati.
+	- ## Disponibilità (Availability):
+		- è la capacità di un sistema di rispondere a determinate richieste di entità autorizzate e deve essere fatto in un certo tempo viabile.
+		- ### Attacco:
+			- _denial of service_: è una azione che previene o debilita l'uso autorizzato della rete, di sistemi o applicazioni esaurendo le risorse come la _CPU_, _memoria_, _larghezza di banda_ o _spazio su disco_ 
+			- _D(istributed) denial of service_: l'attaccante non è più un soggetto singolo ma sono più utenti oppure vari bot.
+- # Anonimità:
+	- la proprietà che un utente possa usare certe _risorse_ o _servizi_ senza esporre la propria identità personale
+	- principalmente serve per eludere la proprietà di _accounting_
+	- l'anonimità non esiste in quanto si è sempre soggetti alla profilazione da parte dei _providers_
+	- ## Mix-based systems:
+		- usa usa il Server relay per garantire anonimato del mittente e non-linkability contro gli eavesdropping globali.
+		- i messaggi vengono in sostanza criptati per contrastare l'eavesdropping. 
+		- si raccolgono diversi messaggi di lunghezza fissa in dei batch che vengono di seguito criptati e poi spediti ai destinatari in maniera randomica.
+		- _il problema sta nella lentezza della criptazione dei messaggi._
+	- ## Onion routing:
+		- si basa su diversi "strati" di criptazione 
+		- quando ci si collega si ottiene una lista di nodi, si sceglie poi un percorso randomico tra i nodi questi percorsi interni sono criptati invece il link verso il destinatario finale è in chiaro.
+			- ![[Pasted image 20260411170609.png|420]]
+			- ![[Pasted image 20260411170556.png|419]]
+		- per comunicare con una persona diversa serve scegliere un percorso randomico diverso 
+			- ![[Pasted image 20260411170631.png|425]]
+- # Attacchi all'IP:
+	- _address spoofing_:
+		- visto che i propri indirizzi IP non sono protetti da nessun meccanismo di integrità chiunque può cambiare il proprio indirizzo IP.
+		- ![[Pasted image 20260410114518.png|404]]
+- # Attacco al TCP:
+	- siccome il [[Livello trasporto#^157bc5|TCP]] è un protocollo connection-oriented durante lo stabilimento della connessione si invia un pacchetto chiamato _SYN_ e ci si aspetta un _SYN-ACK_ seguito dall'invio di un [[ACKNOWLEDGEMENT|ACK]] 
+		- ![[Pasted image 20260411163901.png|632]]
+	- se non si mandasse l'ultimo $ACK$ il server dovrebbe rimanere in attesa e se il server potesse accettare massimo $n$ chiamate si avrebbe un _denial of service_ alla $n+1$ esima 
+		- ![[Pasted image 20260411170402.png|487]]
+- # Attacco a DNS:
+	- si compra un certo dominio per far si che quando la gente per esempio sbaglia a scrivere la propria mail allora le e-mail private verranno mandate a server fasullo.
+- # Dataleaks:
+	- sono rilasci di informazioni private riguardanti _aziende_, _persone_ o _oggetti_
+	- ## Fullz:
+		- un tipo di dataleak contenente il minimo indispensabile per creare conti corrente e/o pagare carte di credito 
+		- con questi leak è più facile fare truffe 
+	- ## Password Leaks:
+		- sono quelli più comuni e contengono le password legate ad un determinato account 
+		- [Have I Been Pwned](https://haveibeenpwned.com/) è un sito che scandagliando i dataleak riesce a dire se per un determinato account mail la password sia sta leakata.
+		- alcuni software chiamati _crawler/spider_ sono utilizzati per scandagliare la rete e cercare certi leak che contengono determinate stringhe 
+- # Privilegio minimo: ^7e9b5d
+	- è un concetto riguardante il fatto che una entità dovrebbe avere il minimo accesso possibile per i compiti assegnatigli
+	- se una persona ha compito di accedere ad un determinato account non ha senso che abbia le credenziali per accedere anche a molti altri. 
+- # Link Utili:
+	- 

@@ -55,21 +55,25 @@ data: "`2026-02-27 11:31`"
 		- Con $C_{i}=LS_{i}(C_{i-1})$ 
 		- $D_{i}=LS_{i}(D_{i-1})$
 		- $K_{i}=PC-2(C_{i}D_{i})$
-		- $LS$ significa left shift che appunto shifta di una posizione se $i=1,2,9,16$ altrimenti shifta di 2 posizioni 
+		- $LS$ significa left shift che, appunto, shifta di una posizione se $i=1,2,9,16$ altrimenti shifta di 2 posizioni 
 		- $PC-2$ e $PC-1$ sono matrici che sono date dallo standard.
 		- ### Matrici di scelta di permutazione:
 			- #### PC-1
 				- ![[Pasted image 20260227121756.png]]
-					- Questa matrice non comprende i bit di parità della chiave.
+					- Questa matrice non comprende i bit di parità della chiave. 
+						- $(8, 16,24,32,40,48,56,64)$
 					- Scambiando i bit in maniera casuale in base alle posizioni segnate nelle matrici.
+						- il $1°$ bit della nuova chiave sarà il $57°$ di quella originale 
+						- il $2°$ sarà il $49°$ 
+						- e così via...
 			- #### PC-2:
 				- ![[Pasted image 20260227121845.png]]
 					- Seleziona la sottochiave da $48$ bit per ogni round dalla chiave da $56$ bit
 					- Facendo lo stesso processo di scambio che si fa con PC-1
 	- ## le funzioni:
 		- Uno schema di rappresentazione delle funzioni $f_{i}(x)=F(k_{i},x)$
-		- ![[Pasted image 20260304094534.png|592]]
-		- ### S-box:
+		- ![[Pasted image 20260304094534.png|785]]
+		- ### S-box(blocchi di sostituzione):
 			- è una funzione, $\{0,1\}^{6}\to \{0,1\}^{4}$
 			- ![[Pasted image 20260304094729.png|635]]
 			- In questo caso la stringa di bit $011011$ verrebbe trasformata in $1001$ perché 
