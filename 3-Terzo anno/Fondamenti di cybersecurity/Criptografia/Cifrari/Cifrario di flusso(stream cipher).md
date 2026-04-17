@@ -58,7 +58,7 @@ data: "`2026-02-23 09:07`"
 		- Il PRNG è un algoritmo deterministico
 		- Il seme stesso deve essere un numero random o pseudo-random
 		- Di solito il seme è generato da un TRNG
-	- ## PRNG deboli:
+	- ## PRNG deboli: ^fffea3
 		- Linear congruention generator:
 			- `r[0]=seed`
 			- `r[i]=(a*r[i-1]+b) mod p`

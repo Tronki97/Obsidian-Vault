@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-24 17:47`"
+---
 - ## Derivazioni:
 	- data una [[Grammatiche#^c95cdc||grammatica libera]] $G=(NT, T, R, S)$, _v_ deriva subito _w_ e lo denoto come:
 		- $v \Rightarrow w$ se:

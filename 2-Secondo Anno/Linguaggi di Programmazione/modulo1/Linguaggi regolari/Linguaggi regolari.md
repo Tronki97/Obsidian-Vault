@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - LdP
 aliases:
   - lessema
   - pattern

@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - LdP
 aliases:
   - oggetti denotabili
   - vita di un oggetto

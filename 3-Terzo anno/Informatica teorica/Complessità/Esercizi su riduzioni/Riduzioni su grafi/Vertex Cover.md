@@ -1,0 +1,43 @@
+---
+tags:
+aliases:
+  - VC
+  - lemma per VC
+data: "`2026-04-13 17:35`"
+---
+- # Definizione:
+	- dato un grafo $G=<V,E>$ il _vertex cover_ è insieme dei suoi nodi tale che: l'unione di tutti gli archi collegati a quei nodi formi $E$  
+	- $$VC = \{<G,k>| G \text{ ammette un vertex cover di taglia al massimo k}\}$$
+	- si verifica che ogni arco sia coperto dai nodi in $VC$ che devono essere $k$ 
+	- 
+- # Lemma:
+	- sia $G$ un grafo e $S$ un insieme di nodi di $G$
+	- $S$ è [[Independent Set|IS]] di $G$ $\iff$ $V-S$ è un $VC$ di $G$ 
+	- $\implies)$ 
+		- per ipotesi $S$ è IS di $G$
+		- suppongo per assurdo che $C=V-S$ non sia VC di $G$ 
+		- allora esiste un arco di $G$ i cui nodi collegati non stanno in $C$, allora stanno in $\bar{C}=S$ che va contro l'ipotesi di partenza che $S$ sia un IS. 
+	- $\Leftarrow)$
+		- per ipotesi ho che $C=V-S$ sia $VC$ di $G$ 
+		- suppongo che $S$ non sia $IS$ quindi ci sono due nodi collegati da un arco. 
+		- ma siccome $C=\bar{S}$ vuol dire che esiste almeno una coppia di nodi collegati da un arco non presente in $C$ che va contro l'ipotesi che $C$ sia $VC$ di $G$
+- # NP-completezza:
+	- $VC\in NP$
+		- costruisco una [[Macchina di Turing non-deterministica]] che lo risolve in tempo polinomiale facendo [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sul sottoinsieme di nodi e poi facendo il check per vedere se effettivamente sono $VC$; entrambe queste operazioni si svolgono in tempo _polinomiale_ quindi $VC\in NP$ 
+	- $VC\in NP-HARD$
+		- riduco da $IS$ a $VC$ 
+		- $$IS (<G,k>) \le_{P} VC(<H,l>)$$
+		- ## trasformazione
+		- si applica facendo $H=G$ e $l=|V|-k$
+		- parto dall'istanza _si_ del problema di partenza:
+			- $<G,k>\in IS$ quindi esiste un insieme di nodi $S$ di taglia $k$ che è un $IS$  per il lemma di sopra $\bar{S}$ è un $VC$ di $G$ di cardinalità $|V|-k$ ma siccome $G=H$ allora $\bar{S}$ è un $VC$ di $H$ di cardinalità $l$ 
+			- quindi avrò che anche $<H,l>$ è una istanza si di _Vertex cover_
+		- ora parto dall'istanza _si_ del problema di arrivo:
+			- per averla vuol dire che esiste $C$ di taglia $l$ che è $VC$ di $H$ 
+			- per il lemma di sopra so che $V-C=S$ è un IS di $H$ di taglia $|V|-l=|V|-|V|+k=k$ 
+			- siccome $H=G$ allora ho che $\bar{C}=S$ è un IS di $G$ di taglia $k$ 
+			- quindi se ho ottenuto questa istanza si è perché anche quella di partenza lo era. 
+		- questa riduzione da un problema $NP-$Hard è efficace e quindi Vertex Cover è anch'esso $NP-$Hard 
+	- si ha quindi che Vertex cover è _$NP$-completo_.
+- # Link Utili:
+	- 

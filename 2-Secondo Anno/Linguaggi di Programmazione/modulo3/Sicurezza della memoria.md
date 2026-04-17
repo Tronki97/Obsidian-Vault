@@ -1,5 +1,6 @@
 ---
 tags:
+  - LdP
 aliases:
   - dangling pointer
   - tombstones

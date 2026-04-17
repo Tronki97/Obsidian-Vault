@@ -39,7 +39,7 @@ data: "`2024-10-11 13:48`"
 			- Un interferenza prolungata su quella singola frequenza porterebbe a una totale _perdita della comunicazione_
 	- ## Spread spectrum:
 		- Si usano più frequenze per comunicare.
-		- ### Frequency hopping:
+		- ### Frequency hopping: ^ee30c8
 			- Si salta da una frequenza all'altra in modo casuale.
 			- Si usa per evitare interferenze e aumentare la sicurezza.
 				- In caso di interferenza su una frequenza, si può saltare a un'altra.

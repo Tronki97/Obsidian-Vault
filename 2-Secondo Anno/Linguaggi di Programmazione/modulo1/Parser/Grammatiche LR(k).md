@@ -1,7 +1,8 @@
 ---
 tags:
   - TODO
-aliases: 
+  - LdP
+aliases:
 data: "`2025-08-19 12:55`"
 ---
 - # Grammatiche LR(k):

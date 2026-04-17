@@ -1,0 +1,31 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-04-14 15:16`"
+---
+- # Oscillatori:
+	- Circuito LC che in sostanza agisce da oscillatore usato per avere un segnale ad una certa frequenza in maniera costante 
+	- ## Serie:
+		- usati anche per far risuonare una certa frequenza, se si prende un'antenna con un circuito oscillatore questo permetterà di amplificare una certa frequenza e attenuando le altre.
+	- ## Parallelo:
+		- avendo la frequenza giusta si riesce a mantenere l'oscillazione con una corrente minore rispetto ad altre frequenze.
+	- la frequenza di risonanza del circuito dipende dalla capacità e induttanza: 
+		- $$f=\frac{1}{2 \pi \sqrt{LC}}$$
+	- avendo un fattore di qualità alto la frequenza con cui si amplifica il segnale non si concentra su quella base ma in un range abbastanza grande.
+- è possibile creare questi oscillatori anche senza un segnale analogico in ingresso ma basta guardare il _Colpits_ che usando oltre ai tre componenti $RLC$ anche un _transistor_ permette di non far fermare l'oscillazione e di dargli un "rintocco" 
+- # Alimentatori:
+	- come caratteristiche che devono avere è la _stabilità_ e la _resistenza alle interferenze_
+	- normalmente composti dal trasformatore seguita dal ponte di diodi e poi il condensatore questo lo rende non stabilizzato in quanto presenta del _ripple_ 
+		- quindi intanto si mette un diodo _Zener_ che permette di avere una certa tensione stabile, ma funziona solo per basse correnti ed inoltre se a monte c'è un'alta tensione implicherà l'avere una bassa rendita siccome gran parte della tensione viene dissipata sulla resistenza di limitazione.
+	- ## Switching:
+		- si prende come esempio il Duty cycle di un segnale ad onda quadra collegandoci un condensatore ci avrà in uscita una tensione uguale alla percentuale di $V_{max}$ relativa al duty cicle
+		- quindi per regolare la sua tensione in uscita cerca di regolare il tempo in cui il segnale è 1 in sostanza modificando il duty cycle.
+- # Amplificatore:
+	- ## Classe A:
+		- siccome lavora sempre sul punto medio del transistor dissiperà sempre metà della tensione e inoltre sfasa il segnale di $\pi$ 
+	- ## Classe B
+		- si usano due transistor uno $PNP$ e uno $NPN$ perché uno si occupa della parte positiva dell'onda e uno della parte negativa.
+	- ## Classe D:
+		- si digitalizza il segnale campionandolo e poi si usa un alimentatore switching per amplificarlo.
+- # Link Utili:

@@ -1,6 +1,7 @@
 ---
-tags: 
-aliases: 
+tags:
+  - LdP
+aliases:
 date: 2024-10-02
 ---
 - # Equivalenze tra espressioni:

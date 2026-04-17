@@ -1,7 +1,7 @@
 ---
 tags:
-  - linguaggi
-aliases: 
+  - LdP
+aliases:
 data: "`2024-10-24 12:01`"
 ---
 - # Def:

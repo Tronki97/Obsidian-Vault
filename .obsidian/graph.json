@@ -50,10 +50,10 @@
       }
     },
     {
-      "query": "path:\"Secondo Anno/Linguaggi di Programmazione\"  ",
+      "query": "tag:#LdP   ",
       "color": {
         "a": 1,
-        "rgb": 255
+        "rgb": 16777215
       }
     },
     {
@@ -95,6 +95,6 @@
   "repelStrength": 20,
   "linkStrength": 1,
   "linkDistance": 500,
-  "scale": 0.15014891812124467,
+  "scale": 0.1894866786607228,
   "close": false
 }

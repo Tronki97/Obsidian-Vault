@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - LdP
 aliases:
   - linguaggio accettato
 data: "`2024-10-05 20:17`"

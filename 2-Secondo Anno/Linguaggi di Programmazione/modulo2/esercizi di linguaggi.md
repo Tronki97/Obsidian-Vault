@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - LdP
+aliases:
 data: "`2025-03-06 13:28`"
 ---
 - # EZ 2:

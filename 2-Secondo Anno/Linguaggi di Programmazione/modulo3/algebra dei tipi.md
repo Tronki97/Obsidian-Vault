@@ -1,5 +1,6 @@
 ---
 tags:
+  - LdP
 aliases:
   - regole di equivalenza
   - preordini

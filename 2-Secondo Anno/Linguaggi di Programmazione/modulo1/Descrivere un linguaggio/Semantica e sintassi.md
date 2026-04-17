@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-27 18:46`"
+---
 - ## Sintassi:
 	- I [[Vincoli sintattici]] le appartengono.
 	- tutto quello che si descrive in [[Grammatiche||grammatiche libere]] 

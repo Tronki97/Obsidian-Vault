@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - LdP
+aliases:
 data: "`2024-10-30 18:22`"
 ---
 - # Richiami

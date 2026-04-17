@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-27 19:15`"
+---
 - Scrivere un compilatore per una macchina ospite già realizzata andando quindi a costruire una [[MA (macchina astratta)||macchina astratta]] per il linguaggio
 - ## Correttezza:
 	- dimostrare che mantenga la [[Semantica e sintassi#^78ca9a||semantica]] ovvero il programma sorgente ed oggetto calcolino la stessa funzione.

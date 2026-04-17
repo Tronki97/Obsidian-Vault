@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - LdP
 ---
 - ## Ambiguità:
 	- considero la grammatica: $S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$

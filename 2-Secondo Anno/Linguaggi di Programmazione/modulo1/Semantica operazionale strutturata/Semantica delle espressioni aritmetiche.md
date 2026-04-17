@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - LdP
 aliases:
   - espressioni aritmetiche
 date: 2024-10-02

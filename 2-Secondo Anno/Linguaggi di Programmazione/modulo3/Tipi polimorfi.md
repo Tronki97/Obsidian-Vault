@@ -1,5 +1,6 @@
 ---
 tags:
+  - LdP
 aliases:
   - polimorfismo di tipo
   - polimorfismo ad-hoc

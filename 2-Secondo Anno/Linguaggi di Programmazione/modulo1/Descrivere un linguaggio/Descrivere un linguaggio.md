@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-19 12:28`"
+---
 - ## Sintassi:
 	- regole che dicono quando una frase è corretta
 	- relazione tra segni

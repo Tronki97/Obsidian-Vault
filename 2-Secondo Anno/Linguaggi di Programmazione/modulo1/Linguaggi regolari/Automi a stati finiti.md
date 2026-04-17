@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - LdP
 aliases:
   - diagramma di transizione
 data: "`2024-10-03 13:06`"

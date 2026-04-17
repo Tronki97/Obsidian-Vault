@@ -1,0 +1,37 @@
+---
+tags:
+aliases:
+  - DS
+data: "`2026-04-13 17:50`"
+---
+- # Definizione:
+	- un dominating set $D$ è un sottoinsieme dei vertici del [[Grafi|grafo]] tali che ogni vertice fuori è agganciato ad uno dei vertici del dominating set 
+	- un _dominating set_ non è necessariamente un [[Vertex Cover]] ma l'opposto invece è vero
+		- _un vertex cover è sempre un dominating set_.
+	- $$DS=\{<G, k>|\ G \text{ ammette un dominating set di taglia al massimo k}\}$$
+- # NP-completezza:
+	- $DS\in NP$:
+		- si crea una [[Macchina di Turing non-deterministica]] che fa il [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sui nodi appartenenti e poi fa il check per vedere se collegano tutti gli altri nodi. 
+	- $DS\in NP-HARD$
+		- si riduce da [[Vertex Cover]]
+		- $$VC \le_{P} DS$$
+		- input 
+			- partenza è coppia grafo numero $<G,k>$ 
+			- arrivo è coppia grafo numero $<H,l>$
+		- ## Trasformazione:
+			- $l=k$ e nel nuovo grafo $H$ aggiungo un nodo per ogni arco
+				- ![[Pasted image 20260411160546.png]]
+			- istanza _si_ di partenza:
+				- vuol dire che in $G$ esiste un $VC$ $C$ di taglia $k$ che copre tutti gli archi di $G$
+				- suppongo per assurdo che questo sottoinsieme $C$ non sia $DS$ di $H$ in questo modo qualche nodo di $H$ non è raggiungibile dai nodi di $C$ e questo può accadere per due ragioni:
+					- suppongo che uno di quelli non raggiungibili sia uno di quelli copiati ma ciò non è possibile per la proprietà di prima ovvero che _un vertex cover è sempre un dominating set_.
+					- suppongo che uno di quelli sia uno di quelli aggiunti, ma ciò non è possibile perché avendo aggiunto degli archi ad ogni nodo e siccome $C$ era $VC$ allora ognuno di quei nodi è raggiungibile.  
+			- istanza _si_ di arrivo:
+				- si ha quindi $<H,l>$ che ammette un $DS$ $D$ di taglia $l$
+				- dentro $D$ ci sono due tipi di nodo
+					- quelli che appartenevano a $G$ vengono ricopiati in $C$
+					- per quanto riguarda quelli che erano stati aggiunti, invece di quelli scelgo uno dei nodi adiacenti.
+				- suppongo, per assurdo, che $C$ così generato non sia $VC$ di $G$ quindi c'è almeno un arco che non è coperto da nessuno dei nodi di $C$, ciò vorrebbe dire quindi che non avevo scelto uno dei nodi che poteva raggiungere uno dei nodi aggiunti che simulava quell'arco e ciò è una contraddizione dell'ipotesi che $D$ è $DS$ di $H$ 
+		- la trasformazione è quindi efficace e in questo modo si è dimostrato che il problema è _NP-hard_ 
+	- avendo dimostrato le due proprietà si ha che $DS$ è _NP-completo_.
+- # Link Utili:

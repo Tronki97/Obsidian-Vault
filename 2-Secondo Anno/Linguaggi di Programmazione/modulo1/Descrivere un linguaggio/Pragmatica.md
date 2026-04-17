@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-27 19:12`"
+---
 - insieme di regole sul modo in cui è meglio usare le istruzioni a disposizione, come lo "stile di programmazione"
 - ## ES:
 	- evitare le istruzioni di salto (`goto`) quando possibile perché rendono i codici incomprensibili.

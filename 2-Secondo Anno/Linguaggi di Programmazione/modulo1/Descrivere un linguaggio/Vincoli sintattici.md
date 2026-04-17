@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-26 13:03`"
+---
 - ## ES:
 	- una variabile deve prima essere dichiarata
 	- compatibilità di tipo: $x=e$

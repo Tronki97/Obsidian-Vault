@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-19 15:01`"
+---
 - ## Complemento:
 	- $$\overline{L} = \{w \in A^{*} \vert w \notin L\} = A^{*} \setminus L$$
 - ## Unione

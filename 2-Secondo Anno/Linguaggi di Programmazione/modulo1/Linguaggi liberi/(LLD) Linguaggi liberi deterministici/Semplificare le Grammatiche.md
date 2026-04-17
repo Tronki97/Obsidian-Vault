@@ -1,6 +1,6 @@
 ---
 tags:
-  - linguaggi
+  - LdP
 aliases:
   - produzione unitaria
   - simboli inutili

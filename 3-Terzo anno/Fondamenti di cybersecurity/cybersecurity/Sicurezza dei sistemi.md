@@ -1,0 +1,33 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-04-13 10:00`"
+---
+- # ACL:
+	- [[access control#^26954d|ACL]]
+	- ripasso sulle ACL
+- # File /etc/passwd:
+	- viene usato per tenere traccia di ogni utente registrato che ha accesso al sistema informatico e contiene:
+		- _nome utente_
+		- _pswd crittografata_
+		- _U(ser)ID_
+		- _G(roup)ID_ dell'utente
+		- _nome completo utente_
+		- _directory home dell'utente_
+		- _shell di login_
+- nei sistemi UNIX la politica di sicurezza è quella _DAC_ 
+	- di fatto esiste il comando `chmod` che permette agli utenti singoli di cambiare i permessi per certi file.
+- # modelli di scambio di informazioni:
+	- ## Modello Bell-LaPadula:
+		- si concentra sulla confidenzialità dei dati e sull'accesso a informazioni segrete 
+		- mira a a dimostrare logicamente che un designa soddisfi un certo insieme di requisiti di sicurezza e che la sua implementazione è fedelmente conforme alle sue specifiche.
+			- ad ogni soggetto e oggetto viene assegnata una classe di sicurezza 
+			- un soggetto può leggere oggetti con livelli di sicurezza minori o uguali al suo 
+			- un soggetto può scrivere oggetti a livelli di sicurezza pari o maggiori al suo. 
+	- ## Biba:
+		- il contrario di BLP 
+		- si può leggere i livelli uguali o superiori 
+		- si può scrivere ai livelli uguali o inferiori. 
+- # Link Utili:
+	- 

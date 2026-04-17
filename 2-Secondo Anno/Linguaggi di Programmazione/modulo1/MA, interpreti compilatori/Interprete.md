@@ -1,5 +1,6 @@
 ---
 tags:
+  - LdP
 aliases:
   - fetch-decode-execute
   - ciclo fde

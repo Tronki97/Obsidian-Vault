@@ -1,5 +1,6 @@
 ---
 tags:
+  - LdP
 aliases:
   - semantica statica
   - semantica dinamica

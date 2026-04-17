@@ -1,6 +1,7 @@
 ---
 tags:
   - TODO
+  - LdP
 aliases:
   - YACC
   - struttura file YACC

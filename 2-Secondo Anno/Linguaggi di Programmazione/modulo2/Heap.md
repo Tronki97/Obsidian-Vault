@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - LdP
+aliases:
 data: "`2025-02-26 11:01`"
 ---
 - # Heap:

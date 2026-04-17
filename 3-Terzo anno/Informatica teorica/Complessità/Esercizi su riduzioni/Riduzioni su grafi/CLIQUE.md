@@ -1,0 +1,37 @@
+---
+tags:
+aliases:
+  - Lemma per Clique
+data: "`2026-04-13 17:41`"
+---
+- # Definizione:
+	- Esistenza di un sotto-[[Grafi|grafo]] completamente connesso ![[Pasted image 20260409123931.png]]
+	- dimostrare che è NP-completo.
+	- $$CLIQUE=\{<G,k>|G\ \text{ammette una CLIQUE di taglia almeno k} \}$$
+- # Lemma:
+	- $S$ è [[Independent Set|IS]] di $G$ $\iff$ $S$ è una _clique_ in $\bar{G}$
+		- $\bar{G}$ definito come presenza di archi dove non ci sono e toglierli da dov'erano  
+	- $\implies$)
+		- sia $S$ IS di $G$ 
+		- suppongo che $S$ non sia CLIQUE di $\bar{G}$ quindi non tutti i nodi dentro $S$ in $\bar{G}$ sono collegati quindi vuol dire che c'è almeno un arco che collega una coppia di nodi dentro $S$ in $G$ ma questo va contro l'ipotesi che $S$ sia $IS$ di $G$
+	- $\Longleftarrow)$
+		- sia $S$ una CLIQUE di $\bar{G}$ 
+		- suppongo che $S$ non sia $IS$ di $G$ quindi vuol dire che almeno una coppia di nodi in $S$ è collegata da un arco ma siccome tutti gli archi di $G$ sono invertiti rispetto a $\bar{G}$ ciò non è possibile in quanto tutti i nodi di $S$ in $\bar{G}$ sono collegati. 
+			- si ha quindi una contraddizione.
+- # NP-completezza:
+	- $CLIQUE \in NP$-completo
+		- si costruisce la [[Macchina di Turing non-deterministica]] che fa [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sul sottoinsieme dei nodi che formano la CLIQUE e checka se è effettivamente così e queste operazioni si fanno in tempo polinomiale.
+	- $CLIQUE\in NP-HARD$
+		- la riduzione è sempre da $IS$
+		- $$IS<G,k>\le_{P} CLIQUE<H,l>$$
+		- ## Trasformazione:
+			-  $H=\bar{G}$ e $l=k$ 
+			- parto dall'istanza _Si_ di partenza:
+				- $<G,k>\in IS$ quindi esiste un IS $S$ di $G$ di taglia $k$ 
+				- per il lemma di sopra so che $S$ è una CLIQUE per $\bar{G}$ e siccome $H=\bar{G}$ allora avrò che $S$ è una CLIQUE di taglia $l$ per il grafo $H$ 
+			- parto dall'istanza _SI_ di arrivo:
+				- esiste un $S$ di taglia $l$ che è CLIQUE di $H$
+				- per il lemma di sopra so che $S$ è un $IS$ per $\bar{H}$ di taglia $k$ e sapendo dalla trasformazione che $G=\bar{H}$ ho che per aver ottenuto un istanza si di arrivo l'unico motivo è che anche quella di partenza lo fosse.
+		- visto che la trasformazione è efficace allora si ha che si è riusciti a ridurre da un problema $NP-$Hard e quindi che anche $CLIQUE$ lo è, di conseguenza $CLIQUE$ è _NP-completo_.
+- # Link Utili:
+	- 

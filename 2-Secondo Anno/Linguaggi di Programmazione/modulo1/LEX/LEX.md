@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - LdP
 aliases:
   - file.l
 data: "`2024-10-15 18:44`"

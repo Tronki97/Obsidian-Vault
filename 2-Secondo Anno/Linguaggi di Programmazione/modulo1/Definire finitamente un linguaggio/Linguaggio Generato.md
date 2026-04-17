@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-24 12:18`"
+---
 - il linguaggio generato dalla [[Grammatiche]] G è l'insieme $$L(G)=\{w\in T^{*}|S \Rightarrow^{*}  w\}$$
 - _Come determinare un $L(G)$ e come capire se una stringa $w$ appartiene a quel linguaggio_:
 	- algoritmi "naif":

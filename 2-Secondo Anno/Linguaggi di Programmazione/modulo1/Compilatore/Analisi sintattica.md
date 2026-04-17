@@ -2,6 +2,8 @@
 aliases:
   - parser
   - Parser
+tags:
+  - LdP
 ---
 
 - ## Parser: ^381037

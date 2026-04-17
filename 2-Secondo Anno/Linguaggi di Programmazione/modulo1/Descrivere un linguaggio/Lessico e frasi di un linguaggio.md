@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - LdP
 aliases:
   - alfabeto
   - linguaggio formale

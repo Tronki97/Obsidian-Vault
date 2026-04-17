@@ -1,0 +1,37 @@
+---
+tags:
+aliases:
+  - COL
+data: "`2026-04-13 17:57`"
+---
+- # Definizione:
+	- dato un [[Grafi|grafo]] si vogliono colorare i nodi in modo tale che quelli adiacenti siano di colori diverso.
+	- si vuole sapere se un grafo è colorabile.
+		- $$COL=\{<G,k>|G \text{ è colorabile con al più k colori}\}$$
+- # NP-completezza:
+	- $COL \in NP$:
+		- costruisco la [[Macchina di Turing non-deterministica]] che risolva in tempo polinomiale
+		- si fa il guess sulla colorazione e si fa il check sui colori dei nodi
+	- $COL \in NP-HARD$
+		- riduco da [[Classi di complessità#^e624a3|3SAT]]
+			- $$3SAT \le_{P} COL$$
+			- si deve mappare un assegnamento di verità per $\phi$ ad un assegnamento di colori per il grafo $G$
+		- suppongo di avere $\phi=(x_{1} \vee x_{2} \vee \neg x_{3}) \wedge (\neg x_{2} \vee x_{3} \vee x_{4})$
+		- ## Trasformazione:
+			- si ha un CLIQUE composto da 3 nodi $(T,F,B)$ con $T$ colorato di _verde_, $F$ di _rosso_ e $B$ di _Blu_ 
+			- si assegna ad ogni variabile e ad ogni suo negato un nodo, per evitare che vengano colorati in maniera uguali li si collega; ogni nodo variabile viene collegato al nodo $B$ per evitare che vengano colorati in quel modo e così da ottenere in sostanza una colorazione _Verde/Rosso_ per indicare l'eventuale valore $T/F$ di quella variabile.
+			- per indicare la parte delle clausole si usano dei moduli che simulano un _OR_ a tre vie 
+				- ![[COL.excalidraw]]
+					- collegandolo ad $F$ starò simulando un $AND$ per garantire che le clausole siano entrambe _vere_
+			- parto dall'istanza _si_ di partenza:
+				- esiste quindi un'assegnazione $\sigma$ che soddisfa $\phi$ e posso quindi costruire la colorazione $\lambda_{\sigma}$ in questo modo 
+					- se $\sigma[x_{i}]=T \implies \lambda_{\sigma}[x_{i}]=V \wedge \lambda_{\sigma}[\neg x_{i}]=R$
+					- se $\sigma[x_{i}]=F \implies \lambda_{\sigma}[x_{i}]=R \wedge \lambda_{\sigma}[\neg x_{i}]=V$
+				- dalla premessa so che $\phi$ è soddisfacibile quindi i nodi che rappresentano le clausole devono essere colorati di verde sia per la struttura dei moduli clausola sia per il collegamento con i nodi $B$ e $R$ 
+			- parto dall'istanza _si_ di arrivo
+				- quindi il grafo è colorabile secondo le regole stabilite, avendo quindi definito l'ordine dei colori per $(T,R,B)$ che non necessitano di avere sempre gli stessi colori. 
+					- chiamo questa colorazione $\lambda$ 
+				- se il colore di $x_{i}$ è lo stesso di $T$ allora in $\sigma_\lambda[x_{i}]=T$ se invece è uguale a quello di $F$ metto in $\sigma_{\lambda}[x_{i}]=F$ 
+				- se per assurdo $\sigma_{\lambda}$ non è un assegnamento soddisfacente allora vuol dire che almeno una clausola ha i letterali tutti falsi e vorrebbe dire che gli input dei moduli OR del grafo nell'immagine sono entrambi del colore di $F$ e ciò significherebbe che il loro risultato sarebbe lo stesso di $R$ che gli è adiacente e ciò porterebbe ad una contraddizione sull'ipotesi che $\lambda$ sia una colorazione accettabile. 
+- # Link Utili:
+	- 

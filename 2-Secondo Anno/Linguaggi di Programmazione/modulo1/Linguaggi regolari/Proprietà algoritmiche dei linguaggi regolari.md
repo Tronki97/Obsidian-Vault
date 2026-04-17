@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - LdP
 aliases:
   - pumping lemma
 data: "`2024-10-15 19:10`"

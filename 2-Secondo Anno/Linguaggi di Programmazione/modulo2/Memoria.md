@@ -1,5 +1,6 @@
 ---
 tags:
+  - LdP
 aliases:
   - record di attivazione
   - RdA

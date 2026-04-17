@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-27 18:40`"
+---
 - ## Sintassi concreta:
 	- [[Grammatiche||grammatica]] non ambigua che fa uso di zucchero sintattico come la "$(E)$" 
 - ## Sintassi astratta: ^ec88f9

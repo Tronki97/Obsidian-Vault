@@ -1,0 +1,42 @@
+---
+tags:
+aliases:
+data: "`2026-04-13 17:53`"
+---
+- # Definizione:
+	- un kernel $K$ di un [[Grafi|grafo]] è un insieme di vertici tali che:
+		- $K$ è un [[Independent Set|IS]] del grafo 
+		- $K$ è un [[Dominating Set|DS]] del grafo 
+	- $$KERNEL=\{G|G \ \text{ha un kernel}\}$$
+- # NP-completezza:
+	- $KERNEL \in NP$
+		- si può fare una [[Macchina di Turing non-deterministica]] che fa [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sulla soluzione e checkare che il sottoinsieme sia $IS$ e $DS$ che entrambi si controllano in tempo polinomiale 
+	- $KERNEL \in NP-HARD$ 
+		- riduco da $3SAT$ 
+			- $$3SAT \le_{P} KERNEL$$
+		- si parte da una formula la quale necessita di un assegnamento per la soddisfacibilità e si arriva ad un grafo che necessita di sapere se contiene un _kernel_ 
+		- ## Trasformazione:
+			- suppongo $\phi=(x_{1} \vee x_{2} \vee\neg x_{3}) \wedge (\neg x_{2} \vee \neg x_{1} \vee x_{3}) \wedge (x_{4} \vee \neg x_{2} \vee x_{5})$
+			- per ogni variabile in $\phi$ ho due nodi in $G$ ($x_{i}, \neg x_{i}$)
+				- si collegano i nodi opposti.
+				- si aggiungono dei nodi clausola che collegano tutti i letterali appartenenti alla stessa clausola 
+				- inoltre si mette un arco che rientra nei nodi clausola in modo che non vengano scelti per la soluzione del problema di arrivo.
+				- ![[Pasted image 20260411161710.png]].
+			- parto dall'istanza _si_ di $3SAT$
+				- quindi $\phi$ è soddisfacibile quindi $\exists \sigma:$ soddisfa $\phi$ 
+				- partendo da sigma costruisco l'insieme $K_{\sigma}$ : 
+					- $\sigma[x_{i}]=T \implies x_{i} \in K$
+					- $\sigma[x_{i}]=F \implies \neg x_{i}\in K$
+				- suppongo che $K$ non sia kernel:
+					- suppongo che non sia $IS$ ma ciò non è possibile per la costruzione di questo grafo $G$ che collega tra di loro le variabili opposte e che quindi non possono essere scelte contemporaneamente.
+					- suppongo che non sia $DS$ questo vorrebbe dire che almeno uno dei nodi $\notin K$ non può raggiungere un nodo $\in K$; ma siccome la costruzione di $K_{\sigma}$ è stata costruita in modo tale che ci fosse almeno un nodo per ogni clausola che quindi gli è collegato allora ciò _non è possibile_.  
+			- parto da istanza _si_ di $KERNEL$:
+				- quindi esiste $K$ che è un kernel di $G$ 
+					- $K$ non può contenere nodi clausola $c_{i}$ in quanto hanno dei loop e quindi li esclude dal $IS$ 
+					- $K$ non può contenere contemporaneamente $x_{i}$ e $\neg x_{i}$ perché escluderebbe dall'essere $IS$ 
+				- $\sigma_{K}$ viene costruito in questo modo:
+					- $x_{i}\in K \implies \sigma_{K}[x_{i}]=T$
+					- $\neg x_{i} \in K \implies \sigma_{K}[x_{i}]=F$
+				- si assume per assurdo che $\sigma_{K}$ non soddisfi $\phi$ quindi esiste una $c_{i}$ nella quale tutti i letterali sono falsi, ma ciò implicherebbe che non tutti i nodi clausola sono raggiunti e ciò è impossibile perché si romperebbe la supposizione che $K$ è kernel e quindi ha la proprietà di essere anche $DS$. 
+- # Link Utili:
+	- 

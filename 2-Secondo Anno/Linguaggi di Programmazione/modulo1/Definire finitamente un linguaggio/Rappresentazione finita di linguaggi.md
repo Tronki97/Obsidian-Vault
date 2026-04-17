@@ -1,3 +1,9 @@
+---
+tags:
+  - LdP
+aliases:
+data: "`2024-09-24 11:10`"
+---
 - se $L$ è infinito usiamo varie tecniche per rappresentarlo:
 	- 1) $\mathbb{N}=\{ 0,1,2,...\}$ non memorizzabile perché infinito 
 		- posso trovare una rappresentazione implicita in forma finita:

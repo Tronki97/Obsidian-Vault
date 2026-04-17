@@ -1,0 +1,32 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-04-15 15:20`"
+---
+- # Def:
+	- si ha un insieme di oggetti con un valore e un peso $<\{1,...,n\},\{w_{1},...,x_{n}\},\{v_{1},...,v_{n}\}>$
+		- si vuole trovare un sottoinsiemi di oggetti con peso totale massimo $W$ e con $K$ valore minimo.
+- # NP-completezza:
+	- $KS \in NP$
+		- si costruisce una [[Macchina di Turing non-deterministica]] che fa un [[Macchina di Turing non-deterministica#^6e7b0a|guess]] di sottoinsieme degli oggetti e poi fa il check per verificare che rimangano nei limiti di peso $W$ e con almeno valore $K$ totale 
+	- $KS \in NP-HARD$
+		- si riduce da [[EXACT COVER]] 
+			- $$EC \le_{P} KS$$
+			- si parte da una coppia di insiemi $<U,F>$ e si arriva a dei valori di oggetti e pesi e i loro limiti di peso e valore.
+		- ## Trasformazione:
+			- per questa riduzione si considera un particolare caso dove $w_{i}=v_{i}$ e di conseguenza $W=K$ 
+			- avendo $U$ e $F$ considero U come valore di $(111....1)$ e poi quelli in $F$ come valori binari in base alla $U$
+			- avendo $U=\{1,2,3,4\}$ e $F=\{\{3,4\},\{2,4\},\{2,3,4\}\}$ (_questa risulta essere una istanza di EC)
+			- tengo da conto $U=\{1,...,n\}$ e $F= \{F_{1},...,F_{m}\}$ ottenendo:
+				- $w_{i} = \sum\limits_{j\in F_{i}}(m+1)^{n-j}=v_{i}$
+					- in questo modo sto interpretando ogni numero dentro ad ogni oggetto in base $m+1$ 
+				- $W=\sum\limits_{j=1}^{n}(m+1)^{n-j}=K$
+		- parto dall'istanza _si_ di partenza:
+			- esiste quindi $P\subseteq F$ che è partizione di $U$ 
+				- $F_{i} \in P \implies SELECT \ w_{i}$
+			- ora serve vedere se $\sum\limits_{F_{i}\in P}w_{i} =W$
+		- parto da istanza si di arrivo:
+			- esiste quindi una lista $L=\{w_{3},w_{5},...\}$ tale che $\sum\limits_{|L|} L = W$ 
+- # Link Utili:
+	- 

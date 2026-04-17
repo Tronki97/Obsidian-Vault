@@ -1,5 +1,6 @@
 ---
 tags:
+  - LdP
 aliases:
   - classe
   - grammatiche LL(k)

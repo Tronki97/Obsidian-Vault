@@ -1,5 +1,6 @@
 ---
 tags:
+  - LdP
 aliases:
   - parametro attuale
   - parametro formale

@@ -1,0 +1,62 @@
+---
+tags:
+aliases:
+data: "`2026-04-15 14:16`"
+---
+- # Def:
+	- coppia di insiemi $<U,F>$ dove $U$ è un insieme di oggetti $u_{1},...,u_{n}$ e $F$ è una _famiglia_ $s_{1},...,s_{n}$ tale che $s_{i}\subseteq U$ 
+	- è vero o no che dentro $F$ si possono scegliere degli $s_{i}$ che possono formare una partizione di $U$ 
+		- $s_{i} \cap s_{j}=\emptyset$ e $\bigcup_{i} s_{i}=U$
+- # NP-completezza:
+	- $EC\in NP$
+		- si fa guess sui $s_{i}$ all'interno di $F$ che formino la partizione di $U$ e poi si checka che la loro unione faccia $U$ 
+		- la taglia di questo certificato è al massimo $F$ 
+	- $EC \in NP-HARD$
+		- si riduce che $3SAT$ 
+			- $$3SAT\le_{P} EC$$
+			- un istanza si di partenza è una formula $\phi$ soddisfacibile mentre una istanza si di arrivo è una coppia $<U,F>$ tale che $F$ contiene degli $s_{i}$ distinti e che uniti formino $U$. 
+		- ## Trasformazione:
+			- da ricordare che $\phi=c_{1} \wedge ... \wedge c_{l}$ e che $c_{i} = l_{i,1} \vee l_{i,2} \vee l_{i,3}$ 
+			- $U=\{x_{i}|1\le i \le n\}\cup \{c_{j}|1\le j\le l\}\cup\{p_{j,k}|l_{j,k}\}$
+				- con $n$ numero di variabili e $l$ numero di clausole e $l_{j,k}$ è il letterale $k$ della clausola $j$ 
+			- $F$ contiene:
+				- singoletti $\{p_{j,k}\}$ per ogni oggetto $p_{j,k}$
+				- per ogni variabile $x_{i}\in \phi$ :
+					- $T_{i,T}=\{x_{i}\}\cup \{p_{j,k}|l_{j,k} = \neg x_{i}\}$
+						- in questa famiglia c'è la variabile $x_{i}$ più tutti i letterali che verrebbero resi falsi dall'assegnamento $T$ per $x_{i}$
+					- $T_{i,F}=\{x_{i}\}\cup \{p_{j,k}|l_{j,k} = x_{i}\}$
+						- in questa famiglia c'è la variabile $x_{i}$ più tutti i letterali che verrebbero resi falsi dall'assegnamento $F$ per $x_{i}$ 
+				- per ogni clausola $c_{j}\in \phi$ si ha:
+					- $\{c_{j},p_{j,1}\}$ poi $\{c_{j},p_{j,2}\}$ e $\{c_{j},p_{j,3}\}$
+					- che serve a capire quali dei letterali rendono vera la clausola $c_{j}$ 
+			- suppongo di avere $\phi=(x_{1} \vee \neg x_{2} \vee x_{3}) \wedge (\neg x_{1} \vee x_{2} \vee x_{4})$ e costruisco di conseguenza $<U,F>$
+				- $$U= \{x_{1},x_{2},x_{3},x_{4},c_{1},c_{2}, p_{1,1}, p_{1,2},p_{1,3}, p_{2,1},p_{2,2},p_{2,3}\}$$
+				- $F=$
+					- $$\begin{array}\ F = \{\{P_{1,1}\},\{P_{1,2}\},\{P_{1,3}\},\{P_{2,1}\},\{P_{2,2}\},\{P_{2,3}\},\\ T_{1,T}=\{x_{1},p_{2,1}\}, T_{2,T}=\{x_{2},p_{1,2}\}, T_{3,T}=\{x_{3}\},T_{4,T}=\{x_{4}\} ,\\ T_{1,F}=\{x_{1},p_{1,1}\}, T_{2,F}=\{x_{2},p_{2,2}\} ,T_{3,F}=\{x_{3},p_{1,3}\}, T_{4,F}=\{x_{4},p_{2,3}\} \\  \{c_{1},p_{1,1}\}, \{c_{1},p_{1,2}\}, \{c_{1},p_{1,3}\}, \{c_{2},p_{2,1}\}, \{c_{2},p_{2,2}\}, \{c_{2},p_{2,3}\}\}\end{array}$$
+				- 
+			- suppongo di partire dal _si_ di partenza:
+				- esiste quindi $\sigma$ che soddisfi $\phi$ 
+					- $\sigma[x_{i}]=T \implies SELECT \ T_{i,T}$
+					- $\sigma[x_{i}]=F \implies SELECT \ T_{i,F}$
+					- con questo passo si riescono a prendere tutti gli _oggetti variabile_
+				- per ogni $c_{j}$ prendo $\{c_{j},p_{j,k}\}$ dove $p_{j,k}$ è relativa ad ogni letterale $l_{j,k}$ reso vero da $\sigma$
+					- con questo si riescono a prendere tutti gli _oggetti clausola_ e qualche _oggetto letterale_
+				- per ogni oggetto $p_{j,k}$ non coperto dalla selezione precedente prendo il singoletto $\{p_{j,k}\}$
+					- con questo riesco a prendere tutti gli _oggetti letterale_ non coperti in precedenza.
+				- si hanno le intersezioni vuote perché:
+					- non ci possono essere insiemi con $x_{i}$ in comune 
+						- perché per ogni assegnamento di $x_{i}$ in $\sigma$ io prendo o $T_{i,T}$ o $T_{i,F}$ 
+						- e queste sono le uniche famiglie ad avere $x_{i}$ dentro. 
+					- non ci possono essere $p_{j,k}$ in comune:
+						- perché ho già preso tutti i letterali che erano resi falsi dalle assegnazioni varie di $x_{i}$ e quando prendo la coppia $\{c_{j},p_{j,k}\}$ sto guardando i $p_{j,k}$ resi veri che appunto rendono vera anche $c_{j}$ 
+						- e nell'ultimo passaggio prendo tutti i letterali rimasti $p_{j,k}$ che sono resi veri ma che non sono i primi ad essere stati scelti precedentemente.
+			- parto dall'istanza _si_ di arrivo:
+				- si ha quindi una partizione $P\subseteq F$ che è partizione di $U$
+					- $T_{i,T}\in P \implies \sigma[x_{i}]=T$
+					- $T_{i,F}\in P \implies \sigma[x_{i}]=F$
+				- suppongo che $\sigma_{P}$ non soddisfi $\phi$ in tal caso allora esiste una clausola $c_{j}$ i cui letterali sono tutti falsi ma se fosse così la coppia $\{c_{j}, p_{j,k}\}$ non comparirebbe perché andrebbe in contrasto con una $T_{i,T}$ o $T_{i,F}$ indicando che $c_{j}$ non viene coperta da $P$ che va contro l'assunzione che $P$ sia una partizione di $U$ 
+				- quindi non esistono clausole non soddisfatte e quindi se $F$ contiene una partizione di $U$ è perché si è partiti da una formula $\phi$ soddisfacibile.
+		- con questa trasformazione efficace si ha che $EC$ è $NP-HARD$ 
+	- con queste due proprietà si ha che $EC$ è NP-completo 
+- # Link Utili:
+	- 

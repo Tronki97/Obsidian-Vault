@@ -1,0 +1,42 @@
+---
+tags:
+aliases:
+  - IS
+data: "`2026-04-13 17:31`"
+---
+- # Definizione:
+	- un Independent set per un grafo è un insieme $S$ di nodi sottoinsieme di quello dei nodi 
+	- ogni coppia di nodi in $S$ non è collegato da un arco del grafo 
+		- in sostanza le coppie di nodi non devono essere collegate da archi diretti 
+	- questo risulta un problema banale se questi insiemi sono di sottoinsiemi di nodi piccoli tipo $1$ nodo 
+	- $$IS=\{<G,k>|G=<V,E> \ k \in \mathbb{Z} \text{ G ammette un IS di taglia almeno k} \}$$
+- # NP-completezza:
+	- $IS \in NP:$
+		- serve trovare una macchina non deterministica che lo risolva in tempo polinomiale.
+		- si fa il [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sull'independent set per poi fare il check di $k$ nodi fatto in $O(n^{2})$
+			- con $n$ numero di nodi 
+	- $IS\in NP-HARD$
+		- si riduce da un linguaggio $NP-HARD$ e lo faremo da $3SAT$
+			- $$3SAT \le_{P} IS$$  
+			- input di $3SAT$ è una formula $\phi$ con ogni clausola con esattamente $3$ letterali 
+			- input di $IS$ un grafo $G$ e un intero $k$ 
+		- ## Trasformazione:
+			- la parte difficile del problema di partenza $3SAT$ consiste nel determinare i valori dei letterali (e grazie al cazzo) 
+			- mentre del problema di arrivo è determinare se un nodo appartiene all'IS o meno. 
+			- si potrebbero mappare le variabili che vengono definite vere in nodi appartenenti all'$IS$ 
+			- si suppone di avere $\phi=(x_{1} \vee x_{2} \vee \neg x_{3})\wedge (\neg x_{2} \vee x_{4} \vee x_{3})\wedge(\neg x_{4} \vee x_{5} \vee \neg x_{3})$
+				- collego ogni variabile alla sua versione negata:
+					- ![[Pasted image 20260409114242.png]]
+			- suppongo $\phi$ sia vero quindi in ogni clausola deve esserci almeno un letterale vero quindi si può costruire $\sigma$ che soddisfi $\phi$
+			- $\sigma \longrightarrow S_{\sigma}$ 
+				- per ogni clausola. siccome $\sigma$ la soddisfa, accade che almeno un letterale vero è al suo interno. 
+				- si mette il letterale che rende vera la clausola in $S_{\sigma}$ 
+					- è efficace perché supponendo per assurdo che $S_{\sigma}$ non sia un IS vuol dire che ci sono due nodi collegati ma quei nodi sono una variabile col suo negato 
+					- rendendo quindi impossibile aver scelto quei 2 nodi come assegnamento che soddisfa la formula.
+			- $S \longrightarrow \sigma_{S}$
+				- partendo però dall'IS di taglia $k$ non è detto che la formula di partenza sia soddisfacibile. perché per esempio i nodi indipendenti possono appartenere alla stessa clausola non riuscendo quindi a rendere vera la formula. 
+					- per rimediare si possono collegare i nodi della stessa clausola. 
+					- ![[Pasted image 20260409114803.png]]
+				- quindi per dimostrare che partendo da un IS significa che la formula era soddisfacibile posso dimostrare per assurdo:
+					- suppongo che non esiste un assegnamento che soddisfi $\phi$ quindi tra i $k$ nodi presi almeno 2 appartengono alla stessa clausola ma questo va in contraddizione con l'ipotesi di avere un $IS$ che richiede che i nodi non siano collegati da archi diretti avendo quindi che se si è ottenuto un $IS$ è perché la formula era soddisfacibile.
+- # Link Utili:
