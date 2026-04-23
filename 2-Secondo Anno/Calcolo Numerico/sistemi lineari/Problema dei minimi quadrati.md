@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - CN
 aliases:
   - minimi quadrati
   - residuo

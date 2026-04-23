@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - STAT
 aliases:
   - fdr
   - f.d.r

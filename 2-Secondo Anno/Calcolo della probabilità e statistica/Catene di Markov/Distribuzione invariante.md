@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - STAT
+aliases:
 data: "`2025-05-21 12:13`"
 ---
 - ## Distribuzione invariante:

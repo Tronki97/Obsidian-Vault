@@ -1,3 +1,9 @@
+---
+tags:
+  - CN
+aliases:
+data: "`2024-09-16 12:53`"
+---
 - ## Conda
 	- scaricare anaconda dal sito.
 	- https://www.anaconda.com/download/success

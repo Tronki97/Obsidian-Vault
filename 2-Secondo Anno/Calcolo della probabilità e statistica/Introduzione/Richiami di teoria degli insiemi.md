@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - STAT
+aliases:
 data: "`2025-02-23 12:12`"
 ---
 - # Argomento:

@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - CN
 aliases:
   - SVD
 data: "`2024-09-30 13:14`"

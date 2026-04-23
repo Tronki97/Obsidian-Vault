@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - STAT
+aliases:
 data: "`2025-03-04 14:38`"
 ---
 - # ES:

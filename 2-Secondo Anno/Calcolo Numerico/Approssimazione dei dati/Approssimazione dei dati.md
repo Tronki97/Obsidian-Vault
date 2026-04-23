@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - CN
 aliases:
   - problema test
   - matrice di vandermonde

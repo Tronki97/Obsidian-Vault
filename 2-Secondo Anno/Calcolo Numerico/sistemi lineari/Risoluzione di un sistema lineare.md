@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - CN
 aliases:
   - cholesky
   - numero di condizione

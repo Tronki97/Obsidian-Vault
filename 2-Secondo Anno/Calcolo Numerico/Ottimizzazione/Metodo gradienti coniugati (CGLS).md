@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - CN
+aliases:
 data: "`2024-11-05 09:41`"
 ---
 - # Argomento:

@@ -2,30 +2,59 @@
 tags:
   - TODO
 aliases:
+  - RFID
+  - SSID hiding
+  - network injection
+  - jamming
 data: "`2026-04-17 11:14`"
 ---
 - # Ambiente:
-	- _endpoint_: è l'utilizzatore della rete come PC, telefono...
-	- _Access point_: dispositivo con il quale l'endpoint parla per potersi collegare alla rete; solitamente è un router wireless.
-	- _mezzo di trasmissione_: il campo elettromagnetico terrestre, rappresenta una fonte di vulnerabilità.
-	- _canale wireless_: visto che nel wireless le comunicazioni broadcast sono più comuni si è quindi più soggetti ad attacchi di tipo attivo.
-	- _mobilità_: visto che di solito il wireless è utilizzato con dispositivi mobili questo concetto porta con se dei rischi per la sicurezza.
-	- _Risorse_: i dispositivi wireless di solito hanno poca capacità di risorse(sia di memoria che di elaborazione) anche dettato dal sistema operativo sofisticato. e quindi fare degli attacchi _DoS_ è più semplice.
-	- _Accessibilità_: alcuni dispositivi possono essere lasciati incustoditi in luoghi remoti/ostili e ciò lascia spazio ad attacchi di tipo fisico come furti...
+	- ## Endpoint:
+		- è l'utilizzatore della rete come PC, telefono...
+	- ## Access point:
+		- dispositivo con il quale l'endpoint parla per potersi collegare alla rete; solitamente è un router wireless.
+	- ## mezzo di trasmissione:
+		- il campo elettromagnetico terrestre, rappresenta una fonte di vulnerabilità.
+	- ## canale wireless:
+		- visto che nel wireless le comunicazioni broadcast sono più comuni si è quindi più soggetti ad attacchi di tipo attivo.
+	- ## mobilità:
+		- visto che di solito il wireless è utilizzato con dispositivi mobili questo concetto porta con se dei rischi per la sicurezza.
+	- ## Risorse:
+		- i dispositivi wireless di solito hanno poca capacità di risorse(sia di memoria che di elaborazione) anche dettato dal sistema operativo sofisticato. e quindi fare degli attacchi _DoS_ è più semplice.
+	- ## Accessibilità:
+		- alcuni dispositivi possono essere lasciati incustoditi in luoghi remoti/ostili e ciò lascia spazio ad attacchi di tipo fisico come furti...
 - # Minacce:
-	- _associazione dannosa_: quando ci si vuole collegare alla rete internet si deve cercare un access point e ciò lascia spazio ai _rogue access point_ che permetterebbe all'attaccante di rubare dati all'utente legittimo.
-	- _reti ad-hoc_: sono reti _peer-to-peer_ in cui non sono presenti dispositivi di regolazione centrale tra i collegamenti che potrebbe gestire le comunicazione. Così un qualsiasi attaccante potrebbe far parte di questo collegamento e rubare quindi le credenziali.
-	- _Reti non tradizionali_: come i collegamenti bluetooth, codici a barre scansionabili ecc...
+	- ## Associazione dannosa:
+		- quando ci si vuole collegare alla rete internet si deve cercare un access point e ciò lascia spazio ai _rogue access point_ che permetterebbe all'attaccante di rubare dati all'utente legittimo.
+	- ## reti ad-hoc: 
+		- sono reti _peer-to-peer_ in cui non sono presenti dispositivi di regolazione centrale tra i collegamenti che potrebbe gestire le comunicazione. Così un qualsiasi attaccante potrebbe far parte di questo collegamento e rubare quindi le credenziali.
+	- ## Reti non tradizionali:
+		- come i collegamenti bluetooth, codici a barre scansionabili ecc...
 		- rappresentano un rischio per la sicurezza in termini di intercettazioni e _spoofing_.
-	- _MAC Spoofing_: un aggressore può sniffare il traffico per identificare un [[MAC-address|indirizzo MAC]] e modificando quindi il suo per impersonificare un altro.
-	- _network injection_: si prende di mira gli access point dove il traffico non è filtrato e dove vengono usati comandi di riconfigurazione di rete fasulli per influenzare il router e degradare le prestazioni della rete.
-	- _Jamming_: in sostanza si basa sul mandare un segnale di tutti $1$ che da un particolare tipo di [[Modulazione]] viene interpretato come presenza di segnale quindi di fatto sporcandolo e il ricevitore non vedrà il segnale mandato dal mittente ma vedrà una somma di dei due segnali.
+	- ## MAC Spoofing:
+		- un aggressore può sniffare il traffico per identificare un [[MAC-address|indirizzo MAC]] e modificando quindi il suo per impersonificare un altro.
+	- ## network injection:
+		- si prende di mira gli access point dove il traffico non è filtrato e dove vengono usati comandi di riconfigurazione di rete fasulli per influenzare il router e degradare le prestazioni della rete.
+	- ## Jamming: 
+		- in sostanza si basa sul mandare un segnale di tutti $1$ che da un particolare tipo di [[Modulazione]] viene interpretato come presenza di segnale quindi di fatto sporcandolo e il ricevitore non vedrà il segnale mandato dal mittente ma vedrà una somma di dei due segnali.
 		- gli attacchi jammer per loro natura richiedono molta energia in quanto l'antenna deve sempre inviare segnale un idea per sfruttare questa pecca del jammer è utilizzare una banda larga di frequenza e quindi usare [[Il Livello fisico#^ee30c8|frequency hopping]] 
-	- _replay attack_: un esempio di questo attacco può essere la trasmissione del segnale di apertura del cancello un attaccante può catturare il treno di impulsi OOK e quindi rimandarlo al cancello per poterlo riaprire 
+	- ## Replay attack:
+		- un esempio di questo attacco può essere la trasmissione del segnale di apertura del cancello un attaccante può catturare il treno di impulsi OOK e quindi rimandarlo al cancello per poterlo riaprire 
 		- per cercare di tamponare si può usare il _rolling code_:
 			- il trasmettitore selezione un codice basandosi su uno [[Cifrario di flusso(stream cipher)#^fffea3|PRNG]] e lo invia 
 			- il trasmettitore poi selezione il codice successivo sempre basandosi sul PRNG 
 			- il ricevitore poi controlla che il codice ricevuto sia coerente con il PNRG e nel caso lo sia fa avanzare il PRNG.
 		- nel caso però il codice inviato non venga ricevuto, il ricevitore non controlla solo un codice ma una finestra di codici successivi a quello abilitato poi sposterà ka finestra di conseguenza.
 		- con questo metodo non si annulla completamente il _replay attack_ ma almeno lo rende più difficile.
+- # RFID:
+	- _radio frequency identification_
+	- utilizza i campi elettromagnetici per identificare e tracciare automaticamente certi _tag_ attaccati a degli oggetti 
+	- è composto da un minuscolo _transponder radio_ detto _tag_, un _lettore_ e un sistema che elabori e gestisca i dati da e verso i lettori.
+	- il _tag_ trasmette i dati digitali quando un lettore RFID nelle sue vicinanze manda un impulso elettromagnetico 
+	- di solito questo sistema si usa per autenticare tramite _badge, telefoni, portachiavi..._ 
+	- il badge _UNIBO_ usa questo sistema ed in particolare il $EM410X$ dove per ogni badge è associato un id univoco 
+	- ## Spoofing:
+		- è sempre possibile spacciarsi per un altra persona catturando il segnale mandato dal badge con un _transceiver RFID_ per poi utilizzarlo per autenticarsi come quella persona.
+- # SSID hiding:
+	- consiste nell'evitare che il router mandi in broadcast il nome della rete a cui è collegato, può essere usato come "meccanismo di sicurezza" perché così l'attaccante non riuscirà a vedere il nome della rete e quindi non dovrebbe riuscire ad accedervi.
 - # Link Utili:

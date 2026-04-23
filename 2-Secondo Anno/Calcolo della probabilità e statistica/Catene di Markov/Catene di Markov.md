@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - STAT
 aliases:
   - classi di comunicazione
   - classe di comunicazione

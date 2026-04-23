@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - STAT
 aliases:
   - V.A
   - variabili aleatorie costanti

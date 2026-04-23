@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - STAT
 aliases:
   - matrice delle covarianze
   - covarianza

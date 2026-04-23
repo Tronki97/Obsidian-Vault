@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - CN
 aliases:
   - matrice estesa
   - centro di una matrice

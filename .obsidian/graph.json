@@ -8,80 +8,178 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"architettura degli elaboratori\"  ",
+      "query": "path:\"1-Primo Anno/architettura degli elaboratori\"",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 16670045
       }
     },
     {
-      "query": "path:\"Algebra e geometria\"  ",
+      "query": "file:\"Architettura degli Elaboratori\"",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 16670045
       }
     },
     {
-      "query": "path:\"Algoritmi e strutture dati\" path:Logica  ",
+      "query": "path:\"1-Primo Anno/Algebra e geometria\"  ",
       "color": {
         "a": 1,
-        "rgb": 5399264
+        "rgb": 16762194
       }
     },
     {
-      "query": "path:Logica  ",
+      "query": "file:\"Algebra e geometria\"",
       "color": {
         "a": 1,
-        "rgb": 11929817
+        "rgb": 16762194
       }
     },
     {
-      "query": "path:programmazione  ",
+      "query": "path:\"1-Primo Anno/Algoritmi e strutture dati\"  ",
       "color": {
         "a": 1,
-        "rgb": 7254232
+        "rgb": 7935
       }
     },
     {
-      "query": "path:Analisi  ",
+      "query": "file:\"Algoritmi e strutture dati\"",
       "color": {
         "a": 1,
-        "rgb": 15533835
+        "rgb": 2309631
       }
     },
     {
-      "query": "tag:#LdP   ",
+      "query": "path:\"1-Primo Anno/Logica\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16106239
+      }
+    },
+    {
+      "query": "file:Logica per l'informatica",
+      "color": {
+        "a": 1,
+        "rgb": 16106239
+      }
+    },
+    {
+      "query": "path:\"1-Primo Anno/Analisi\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 9043970
+      }
+    },
+    {
+      "query": "file:Analisi matematica",
+      "color": {
+        "a": 1,
+        "rgb": 9043970
+      }
+    },
+    {
+      "query": "path:\"1-Primo Anno/programmazione\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "tag:#LdP  ",
+      "color": {
+        "a": 1,
+        "rgb": 5530881
+      }
+    },
+    {
+      "query": "tag:#STAT  ",
+      "color": {
+        "a": 1,
+        "rgb": 3296835
+      }
+    },
+    {
+      "query": "tag:#CN  ",
+      "color": {
+        "a": 1,
+        "rgb": 11204916
+      }
+    },
+    {
+      "query": "path:\"2-Secondo Anno/Reti di Calcolatori\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 64062
+      }
+    },
+    {
+      "query": "path:\"2-Secondo Anno/Sistemi Operativi\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 540929
+      }
+    },
+    {
+      "query": "path:\"2-Secondo Anno/Tecnologie Web\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 13631125
+      }
+    },
+    {
+      "query": "path:\"3-Terzo anno/Basi di Dati\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 11118587
+      }
+    },
+    {
+      "query": "path:\"3-Terzo anno/computational statistics\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16753585
+      }
+    },
+    {
+      "query": "path:\"3-Terzo anno/Ingegneria del software\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 4405514
+      }
+    },
+    {
+      "query": "path:\"3-Terzo anno/Introduzione all'apprendimento automatico\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 13958912
+      }
+    },
+    {
+      "query": "path:\"3-Terzo anno/Fondamenti di cybersecurity\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 328965
+      }
+    },
+    {
+      "query": "path:\"3-Terzo anno/Informatica teorica\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15605875
+      }
+    },
+    {
+      "query": "path:\"3-Terzo anno/Laboratorio di Making\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 64175
+      }
+    },
+    {
+      "query": "file:Homepage",
       "color": {
         "a": 1,
         "rgb": 16777215
-      }
-    },
-    {
-      "query": "path:\"Secondo Anno/Ottimizzazione combinatoria\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 55541
-      }
-    },
-    {
-      "query": "path:\"Secondo Anno/Tecnologie Web\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 16616331
-      }
-    },
-    {
-      "query": "path:\"Secondo Anno/Reti di Calcolatori\" path:",
-      "color": {
-        "a": 1,
-        "rgb": 8421504
-      }
-    },
-    {
-      "query": "",
-      "color": {
-        "a": 1,
-        "rgb": 14725458
       }
     }
   ],
@@ -91,10 +189,10 @@
   "nodeSizeMultiplier": 2.41097819182723,
   "lineSizeMultiplier": 0.750497565106924,
   "collapse-forces": false,
-  "centerStrength": 1,
+  "centerStrength": 0.730070362638212,
   "repelStrength": 20,
   "linkStrength": 1,
-  "linkDistance": 500,
-  "scale": 0.1894866786607228,
+  "linkDistance": 30,
+  "scale": 0.30033877124767344,
   "close": false
 }

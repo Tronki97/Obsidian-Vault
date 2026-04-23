@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - STAT
 aliases:
   - metodo dei coefficienti binomiali
   - metodo delle scelte successive

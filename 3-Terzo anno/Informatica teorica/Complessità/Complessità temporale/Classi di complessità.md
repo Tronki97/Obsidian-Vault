@@ -24,7 +24,7 @@ data: "`2026-03-31 14:54`"
 	- ## Classe DTIME:
 		- sia $t(n)$ una [[Nozioni di Complessità strutturale#^dc4cbe|time function]] si definisce la classe di complessità time function 
 			- $$DTIME(t(n))=\{L| \exists M \text{deterministica che decide L in tempo}\ O(t(n))\}$$
-	- ## Classe P:
+	- ## Classe P: ^78c582
 		- detta _polynomial time_
 		- $$P=\bigcup_{c\ge 1} DTIME(n^{c})$$
 			- il grado $c$ del polinomio è _fissato_
@@ -40,6 +40,7 @@ data: "`2026-03-31 14:54`"
 					- una divisione ha costo polinomiale 
 				- ma come complessità si ha $O(2^{|n|}*Poly(|n|))$ siccome bisogna fare $n$ divisioni ma di fatto usando numeri in binario si dovranno fare $2^{|n|}$ operazioni polinomiali 
 				- _di fatto rendendo l'algoritmo esponenziale_ $\notin P$ 
+				- anche se in realtà esiste un algoritmo in grado di risolverlo in tempo polinomiale con $O(n^{12})$ 
 			- _problema SAT(CNF)_
 				- _problema della soddisfacibilità delle formule booleane_
 					- $\phi=c_{1}\wedge...\wedge c_{n}$
@@ -50,7 +51,7 @@ data: "`2026-03-31 14:54`"
 					- se $\sigma$ ci viene subito fornito allora la complessità è di circa $O(n^{2})$ 
 					- se si dovesse trovarne una invece la complessità è di $O(2^{n}*Poly (n))$ in quanto si devono guardare i valori booleani di $n$ clausole
 				- _non sta in $P$_
-			- problema dell'indipenent set
+			- problema dell'indepenent set
 				- dato un grafo e un numero $k$
 					- esiste un insieme di $k$ nodi che non sono collegati da un arco  
 				- si deve quindi guardare tutti i nodi $k$ e controllare tutti i sottoinsiemi e questa operazione costa $\binom{n}{k}\simeq 2^{n}$  
@@ -58,7 +59,7 @@ data: "`2026-03-31 14:54`"
 - # Non-Determinismo:
 	- ## classe NTIME
 		- $NTIME(t(n))=\{L|\exists M\text{ non deterministica che decide L in tempo}\ O(t(n)\}$
-	- ## NP:
+	- ## NP: ^488c5d
 		- _nodeterministic polynomial_
 		- insieme di tutti i problemi di decisioni che possono essere _decisi_ da macchine di turing non deterministiche in tempo polinomiale
 			- $$NP=\bigcup_{c\ge1}\ NTIME(n^{c})$$
@@ -120,7 +121,7 @@ data: "`2026-03-31 14:54`"
 				- il calcolo di $f(w)$ è fatto in tempo polinomiale $O(|w|^c)$
 				- per il calcolo di $g(f(w))$ si sa che $g$ è polinomiale quindi $O(|f(w)|^{d})=O((|w|^{c})^{d})=O(|w|^{c*d})$
 				- avendo quindi un calcolo finale di $O(|w|^{c})+O(|w|^{c*d})$
-- # NP-Hardness:
+- # NP-Hardness: ^72a363
 	- Un linguaggio $L$ è $NP-HARD$ se $\forall L' \in NP$ si ha che $L'\le_{P} L$ 
 	- ## TH:
 		- siano $A,B$ linguaggi $A\in NP-HARD \wedge A\le_{P}B \implies B\in NP-HARD$

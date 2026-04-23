@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - STAT
 aliases:
   - legge di probabilità
   - distribuzione di

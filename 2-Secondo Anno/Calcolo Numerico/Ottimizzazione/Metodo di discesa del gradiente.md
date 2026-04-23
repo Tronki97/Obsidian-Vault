@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - CN
+aliases:
 data: "`2025-01-04 16:45`"
 ---
 - # Metodi di ricerca in linea:

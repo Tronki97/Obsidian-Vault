@@ -25,5 +25,16 @@ data: "`2025-04-24 16:48`"
 		- [[linguaggio C]]
 - Modulo 2:
 	- [[Struttura dei sistemi operativi]]
-	- [[Richiami Di Architettura]]
+	- 2.Architettura dei sistemi operativi:
+		- [[Richiami Di Architettura]]
+	- 3.Scheduling:
+		- [[Scheduler|scheduler]]
+		- [[Scheduling]]
+		- [[Threads]]
+	- 4. Gestione risorse:
+		- [[Gestione dei deadlock]]
+		- [[Gestione risorse]]
+		- [[Grafo di Holt]]
+	- 5. Gestione della memoria:
+		- Allocazion
 # Link Utili:

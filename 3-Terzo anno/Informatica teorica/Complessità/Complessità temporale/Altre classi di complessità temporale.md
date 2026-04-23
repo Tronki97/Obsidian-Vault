@@ -1,0 +1,101 @@
+---
+tags:
+  - TODO
+aliases:
+  - UNSAT
+  - CO-NP
+  - CO-NP-hardness
+  - CO-NP completezza
+  - FACTOR
+  - EXP
+  - NEXP
+data: "`2026-04-20 12:18`"
+---
+- # UNSAT:
+	-  $$UNSAT=\{\phi | \phi \text{ è una formula non soddisfacibile} \}$$
+- # CO-NP:
+	- insieme dei linguaggi i cui complementi appartengono a $NP$ 
+		- $$\{L| \bar L \in NP\}$$
+	- $UNSAT\in NP$ perché il suo complemento ovvero $SAT\in NP$ 
+		- $UNSAT = \overline{SAT}$ 
+	- quei linguaggi per i quali esiste un certificato conciso che faccia dire _no_ 
+	- a differenza di [[Classi di calcolabilità#^e20268|RE]] e [[Classi di decidibilità#^ace69a|CO-RE]] dove l'intersezione di quei due insiemi è la [[Classi di calcolabilità|classe R]], l'intersezione di [[Classi di complessità#^488c5d|NP]] e CO-NP non si sa se sia [[Classi di complessità#^78c582|P]] o se questa classe ne sia un sottoinsieme stretto.
+	- inoltre non si sa se queste due classi sono diverse.
+	- ![[Pasted image 20260420144041.png|478]]
+- # Tautologia:
+	- $$TAUT=\{\phi | \phi \ \text{è una formula booleana che è una tautologia} \}$$
+		- _tautologia_: è una formula che indipendentemente dall'assegnamento è sempre soddisfatta. 
+	- questo linguaggio è in CO-NP perché basta indovinare un assegnamento che non la soddisfa e quindi riuscire a capire che il suo complemento sta in $NP$ 
+- # TH:
+	- $$P\subseteq NP \cap CO-NP$$
+	- ## DIM:
+		- sia $L$ un linguaggio arbitrario $\in P$
+		- si dimostra che: $(L\in NP) \wedge (L\in CO-NP)$ 
+		- $L\in P$ e poiché $P\subseteq NP$ allora si ricava che $L\in NP$ 
+		- suppongo che $L\in P$ allora $\bar{L}\in P$ perché basta "invertire" la macchina che decide $L$ poiché $P\subseteq NP$ allora $\bar{L}\in NP$
+		- e siccome $\bar{L}\in NP \implies L\in CO-NP$ 
+	- QED
+- # TH:
+	- $$NP=CO-NP\iff \exists L \text{ NP-completo:}\ L\in CO-NP$$ 
+	- $\implies)$
+		- so quindi che $NP=CO-NP$ e devo dimostrare l'esistenza di $L$ NP-completo $\in CO-NP$
+		- suppongo che $L$ è $NP-$completo e segue quindi che $L\in NP$, ma dalla supposizione so che $NP=CO-NP$ allora in caso $L\in NP-$completo allora vuol dire che appartiene anche a $CO-NP$
+	- $\Leftarrow)$
+		- $\exists L$ NP-completo t.c $L\in CO-NP$ e devo dimostrare l'uguaglianza dei due insiemi 
+		- e devo Quindi dimostrare che $NP\subseteq CO-NP$ e che $CO-NP \subseteq NP$ supponendo l'esistenza di $L$ 
+		- per ipotesi $L$ sia NP-completo e inoltre $L\in CO-NP$ 
+			- dalla completezza desumo che $L\in NP$ e che $\bar{L}\in CO-NP$ 
+			- e da  $L\in CO-NP$ ho che $\bar{L}\in NP$ 
+		- $NP\subseteq CO-NP$ 
+			- sia $L'$ un linguaggio qualsiasi $\in NP$ 
+			- si vuole dimostrare che $L'\in CO-NP$ e per farlo si dimostra che $\bar{L'}\in NP$ 
+				- poiché $L'\in NP$ e $L\in$NP-completo allora si può effettuare la [[Classi di complessità#^1c511e|riduzione polinomiale]] $L'\le_{P} L$ e quindi:
+					- $\exists f: \forall w\ \ w \in L' \iff f(w)\in L$ che si può riscrivere come:
+						- $$\forall w\ \ \ w\notin L' \iff f(w)\notin L$$
+						- $$\forall w \ \ \ w\in \bar{L'} \iff f(w)\in \bar{L}$$
+							- da questo posso dire che esiste una riduzione polinomiale $\bar{L'}\le_{P} \bar{L}$ 
+			- so che $L\in CO-NP$ e per definizione $\bar{L}\in NP$ quindi da $\bar{L'}\le_{P} \bar{L}$ si ha che $\bar{L'}$ si riduce ad un linguaggio $\in NP$ da cui $\bar{L'}\in NP$
+		- $CO-NP \in NP$:
+			- supponendo $L'\in CO-NP$ si mostra che $L'\in NP$ 
+			- $L'\in CO-NP \implies \bar{L'}\in NP$ 
+			- poiché $L\in NP-$completo so che $\bar{L'}\le_{P} L$ 
+			- per lo stesso ragionamento di prima ricavo che $L'\le_{P} \bar{L}$ 
+			- poiché so che $L\in CO-NP$ si ha che $\bar{L}\in NP$ quindi da $L'\le_{P} \bar{L}$  e che $\bar{L}\in NP$ si ha che ${L'}\in NP$ 
+- # CO-NP-hardness:
+	- un linguaggio $L$ è $CO-NP-$hard se:
+		- _definizione semplice_:
+			- il complemento $\bar{L}$ è [[Classi di complessità#^72a363|NP-hard]]
+		- _definizione classica_:
+			- ogni linguaggio $L'$ appartenente a $CO-NP$ può essere [[Classi di complessità#^1c511e|ridotto polinomialmente]] a $L$ 
+- # CO-NP completezza:
+	- n linguaggio è CO-NP completo se:
+		- _definizione semplice_:
+			- il suo complemento è $NP-$completo
+		- _definizione classica_:
+			- appartiene a $CO-NP$ 
+			- è $CO-NP$-hard
+- # FACTOR:
+	- $$FACTOR=\{<n,k>|n\in \mathbb{Z} \text{ n ammette un divisore di valore al più k}\}$$
+	- ## ES:
+		- $<175, 6>\in FACTOR$
+		- $<175, 4>\notin FACTOR$ 
+	- $FACTOR \in NP$:
+		- si usa una [[Macchina di Turing non-deterministica]] che guessa un divisore $p$ primo che divide $n$ e si controlla che effettivamente lo divida e che sia $\le k$ 
+	- $FACTOR\in CO-NP$
+		- dimostro che $\overline{FACOR}\in NP$
+		- $$\overline{FACTOR}=\{<n,k>|n\in \mathbb{Z}\ \text{i suoi divisori sono tutti}> k\}$$
+		- si fa guess di una fattorizzazione $p_{1},p_{2},...,p_{m}$ di $n$ tale che:
+			- $\prod_{1}^{m}p_{i} =n$ e inoltre $\forall i \ \ p_{i} > k$ 
+			- la loro taglia è al massimo $n$ 
+	- quindi il linguaggio $FACTOR$ si colloca nell'intersezione di $NP$ e $CO-NP$ però non in $P$
+		- ![[FACTOR.excalidraw]]
+- # EXP:
+	- insieme dei linguaggi di cui si ha la certezza che possono essere risolti da [[Macchina di Turing deterministica]] in tempo esponenziale 
+		- $$EXP=\bigcup_{c\ge 1}DTIME(2^{n^{c}})$$
+	- $NP$ è sottoinsieme di $EXP$ perché è possibile ridurre una macchina non-det ad una det aumentando il tempo di riconoscimento ad esponenziale 
+	- ![[Pasted image 20260423155102.png]]
+- # NEXP:
+	- $$NEXP=\bigcup_{c\ge 1} NTIME(2^{n^{c}})$$
+	- ![[Pasted image 20260423155121.png]]
+- # Link Utili:
+	- 

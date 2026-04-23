@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - STAT
 aliases:
   - distribuzione uniforme discreta
   - distribuzione di bernoulli

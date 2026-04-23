@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - CN
 aliases:
   - condizione del primo ordine
   - condizione del secondo ordine

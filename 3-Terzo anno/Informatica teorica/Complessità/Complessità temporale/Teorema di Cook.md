@@ -1,0 +1,87 @@
+---
+tags:
+aliases:
+data: "`2026-04-17 15:06`"
+---
+- # Intro:
+	- ripasso su [[Classi di complessità#^72a363|NP-hardness]] 
+	- _prima si era dato per scontato che $SAT$ è NP-Hard ora si dimostra che da ogni problema in NP posso ridurre verso $SAT$_
+- # TH:
+	- un qualsiasi linguaggio $\in NP$ si riduce a $SAT$ 
+	- $$L\le SAT$$
+		- $L\in NP$ ed è generico e non si possono fare altre assunzioni su questo linguaggio.
+- # Dim:
+	- ## Idea:
+		- una istanza del problema di partenza è una _stringa_ $w$ sull'alfabeto di riferimento di $L$ e quella di arrivo è una formula $\phi_{w}$ in $CNF$ (da ottenere partendo da $w$) 
+		- di $w$ non si sa nulla tranne che è una stringa.
+		- sul linguaggio si sa solo che è $NP$ quindi esiste una [[Macchina di Turing non-deterministica]] $M$ che decide $L$ ($L(M)=L$) in tempo polinomiale (Running time di $M$ è $p(n)\in Pol$). 
+		- la funzione di trasformazione $f$ prende in input $w$ e si basa massivamente sulla macchina $M$ e tira fuori una istanza si $SAT$ cercando di costruire, tramite la conoscenza di $M$, la formula che simuli il comportamento di $M$ su $w$
+		- si deve codificare $\phi$ come l' eventuale comportamento di $M$ su $w$
+	- ## Proprietà:
+		- _distributività_ 
+			- $$\begin{array}\ (A_{1} \wedge ... \wedge A_{n} )\vee ( B_{1} \wedge ... \wedge B_{m}) =\\  =(A_{1} \vee B_{1}) \wedge (A_{1} \vee B_{2})\wedge ... \wedge (A_{n} \vee B_{m-1})\wedge (a_{n} \vee B_{m}) \end{array}$$
+		- _de Morgan_ : 
+			- $$\neg(A_{1} \wedge... \wedge A_{n})\equiv \neg A_{1} \vee \neg A_{2} \vee ... \vee \neg A_{n}$$
+		- $(\phi \implies \psi) \equiv (\neg \phi \vee \psi)$ 
+		- $\phi \implies \psi_{1} \wedge \psi_{2} \equiv (\phi \implies \psi_{1}) \wedge (\phi \implies \psi_{2})$
+		- ### ES:
+			- $$\begin{array}\ (A \wedge B) \implies (C \wedge D) \vee (E \wedge F) \equiv \\ \equiv A \wedge B \implies (C \vee E ) \wedge (C \vee F) \wedge (D \vee E) \wedge (D \vee F) \equiv \\  (A \wedge B \implies C \vee E) \wedge  (A \wedge B \implies C \vee F) \wedge (A \wedge B \implies D \vee E)  \wedge (A \wedge B \implies D \vee F) \equiv \\ (\neg A \vee\neg B \vee C \vee E) \wedge (\neg A \vee\neg B \vee C \vee F) \wedge (\neg A \vee \neg B \vee D \vee E)\wedge (\neg A \vee\neg B \vee D \vee F) \end{array}$$
+	- ## Assunzioni: 
+		- si fa una assunzione sul comportamento di $M$
+			- $M$ non scrive mai $\not{b}$ 
+			- $M$ ha il nastro semi-infinito.
+				- la testina non va mai a sinistra dell'inizio
+			- $M$ su $w$ si ferma sempre in $p(n)$ passi. 
+				- sui rami, dell'[[Macchina di Turing non-deterministica#^ab1928|albero di computazione]], più corti la macchina fa dei passi aggiuntivi inutili.
+	- ## Variabili:
+		- $q_{i,k}= T$ se al passo $i-$esimo la macchina è nello stato $k$ 
+			- il numero di queste variabili è $p(n)* m$ dove $m$ è il numero di stati. 
+		- $h_{i,j}=T$ se al passo $i-$esimo se la testina si trova sulla cella $j-$esima 
+			- queste variabili sono al massimo $p(n)^{2}$
+		- $t_{i,j,l}=T$ se al passo $i-$esimo la cella $j-$esima del nastro contiene il simbolo $\alpha_{l}\in \Gamma$ 
+			- queste variabili sono al massimo $p(n)^{2} * |\Gamma|$ 
+	- ## trasformazione:
+		- $\phi_{w}\equiv C \wedge S \wedge N \wedge F$
+			- C è _consistency_ il cui obiettivo è costringere le variabili ad essere assegnamenti sensati.
+			- $N$ descrive che i passi replichino i passi della funzione di transizione di $M$ e garantisce che la simulazione la segua  
+			- F deve descrivere che siamo allo stato finale accettante  
+			- $S$ descrive che siamo nello stato iniziale 
+		- ### C (Consistency):
+			- $$C\equiv \bigwedge_{i,j,k' ;\  k\ne k'} (q_{i,k} \implies \neg q_{i,k'}) \wedge \bigwedge_{i,j,j'; \ j\ne j'}   (h_{i,j} \implies \neg h_{i,j'})\wedge \bigwedge_{i,j,l,l';\  l\ne l'} (t_{i,j,l} \implies \neg t_{i,j,l'})$$
+				- se $q_{i,k}$ per un certo $i$ è vero per un certo $k$ si vuole che per altri $k$ sia falso 
+				- se $h_{i,j}$ per un certo $i$ e per una certa $j$ è vero vuol dire che per altre $j$ è falso 
+				- se $t_{i,j,l}$ è vero per un certo $i,j,l$ vuol dire che per simboli $l'$ diversi sarà falso.
+		- ### S (Start):
+			- simula lo start della macchina sulla stringa $w$ 
+			- $$S \equiv q_{0,0} \wedge h_{0,0} \wedge t_{0,0, w_{0}} \wedge t_{0,1,w_{1}}  \wedge... \wedge t_{0,n,w_{n}}  \wedge t_{0,n+1 , \not b} \wedge ... $$
+				- al passo $0$ si è nello stato $0$ e nella cella $0$ con il simbolo iniziale di $w$ su quella cella e su quelle successive c'è il resto della stringa $w$ e oltre la lunghezza di $w$ c'è $\not b$
+		- ### N (Next step):
+			- descrive il comportamento della testina sul nastro passo dopo passo 
+			- $$N= N^{I} \wedge N^{H} \wedge N^{P}$$
+				- $$N^{I}\equiv \bigwedge_{i,j,l} (\neg h_{i,j} \wedge t_{i,j,l}  \implies t_{i+1,j,l})$$
+					- se non è vero che al passo $i$ la testina si trova su $j$ e su quella cella c'è il simbolo $l$ allora il simbolo su quella cella rimarrà tale
+				- $$N^{H}\equiv \bigwedge_{i,j} (q_{i,k} \wedge h_{i,j} \wedge t_{i,j,l} \implies (q_{i+1,k'} \wedge h_{i+1,j+1}\wedge t_{i+1,j,l'})\vee (q_{i+1,k''}\wedge h_{i+1,j-1}\wedge t_{i+1,j,l''} )) $$
+					- $\delta(q_{k},\alpha_{l})= \{(q_{k'},\alpha_{l'}, \to),(q_{k'},\alpha_{l''}, \leftarrow),...   \}$
+					- se al passo $i$ si è nello stato $k$ e la testina sta in posizione $j$ con simbolo $l$ vuol dire che al passo successivo o:
+						- si andrà nello stato $k'$, ci si sposterà sulla cella a destra e si scriverà sulla cella attuale il simbolo $l'$
+						- oppure si andrà nello stato $k''$, ci si sposta nella cella a sinistra e si scrive su quella attuale il simbolo $l''$
+				- ![[Pasted image 20260419183831.png]]
+					- parte della formula che indica rappresenta il padding da fare per la lunghezza dei rami più corti dell'albero.
+		- ### F (Finish):
+			- $$F\equiv q_{p(n),F}$$
+				- al passo $p(n)$ si è nello stato accettante
+				- se ci fosse più di uno stato finale accettante basterebbe mettere in _OR_ con gli altri stati accettanti.
+		- ### Funzionamento:
+			- questa formula $\phi_{w}$ avrà un assegnamento di verità che la soddisfa se questo assegnamento è:
+				- C: _consistente_
+				- S: descrive la configurazione iniziale della macchina (altrimenti la parte $S$ non sarebbe soddisfatta)
+				- N: deve rispecchiare tutte le possibili transizioni di questa macchina _non deterministica_
+				- F: richiede che alla configurazione finale ci sia lo stato accettante.
+			- questa riduzione si basa più che altro sui parametri della macchina $M$ perché il linguaggio da cui parte deve essere uno qualsiasi 
+			- quindi siccome la formula è soddisfacibile se e solo se la stringa in input alla macchina $M$ è accettata allora si ha che $SAT$ è riducibile da questo linguaggio $L$ che però essendo generico $\in NP$ allora tutti i linguaggi appartenenti a quella classe si possono ridurre verso $SAT$ da cui si trova che $SAT\in NP-$hard 
+	- quindi si è dimostrato che $SAT\in NP-$completo
+- # Considerazioni:
+	- questo teorema in sostanza mi dice che $SAT$ è un problema abbastanza generico dal quale si può descrivere o rappresentare qualsiasi altro linguaggio $\in NP$ 
+	- di solito quando si vogliono risolvere delle istanze di problemi $NP-$completi si fanno delle riduzioni verso $SAT$ e poi si usano dei risolutori di esso visto che quelli disponibili sono molto efficienti  
+- # Link Utili:
+	- 

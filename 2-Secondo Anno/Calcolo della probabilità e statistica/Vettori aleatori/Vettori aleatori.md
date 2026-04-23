@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - STAT
 aliases:
   - indipendenza di variabili aleatorie
   - leggi marginali

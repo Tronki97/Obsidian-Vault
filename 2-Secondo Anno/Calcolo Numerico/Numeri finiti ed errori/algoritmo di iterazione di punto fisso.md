@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - CN
 aliases:
   - equazioni a punto fisso
   - Errore di troncamento

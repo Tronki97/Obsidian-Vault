@@ -1,3 +1,9 @@
+---
+tags:
+  - CN
+aliases:
+data: "`2024-09-16 11:21`"
+---
 - ## E-book gratis per il corso
 	- Guida per python:
 		- https://pythonnumericalmethods.studentorg.berkeley.edu/notebooks/Index.html 

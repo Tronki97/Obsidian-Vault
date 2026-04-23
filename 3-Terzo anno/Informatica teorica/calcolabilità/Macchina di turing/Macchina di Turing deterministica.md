@@ -49,7 +49,7 @@ data: "`2026-02-23 16:10`"
 		- $\delta: Q \times \Gamma \to Q \times \Gamma \times \{\to, \leftarrow \}$
 		- $F$ sono gli stati finali e accettanti
 		- ### Configurazione: ^e7168b
-			- Oppure ID (_instantaneous description_)
+			- Oppure ID (_instantaneous description_) ^e83938
 			- è una fotografia dello stato corrente di configurazione della macchina:
 				- _Cosa c'è sul nastro_, _dove è la testina_, _qual è lo stato in cui si trova la macchina_
 			- è una stringa come $aq_{1}abb$

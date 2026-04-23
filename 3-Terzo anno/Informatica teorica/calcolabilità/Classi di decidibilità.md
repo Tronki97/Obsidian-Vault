@@ -9,7 +9,7 @@ aliases:
 data: "`2026-03-18 19:07`"
 ---
 
-- # CO-RE:
+- # CO-RE: ^ace69a
 	- classe di problemi i cui complementi stanno dentro [[Classi di calcolabilità#^e20268|RE]] si è in grado di rispondere _no_ in tempo finito ma si hanno problemi per il _si_ 
 - # RE:
 	- la solita [[Classi di calcolabilità#^e20268|classe RE]]

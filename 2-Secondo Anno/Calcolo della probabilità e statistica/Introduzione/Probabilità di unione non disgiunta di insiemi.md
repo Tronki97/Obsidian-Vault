@@ -1,6 +1,7 @@
 ---
-tags: []
-aliases: 
+tags:
+  - STAT
+aliases:
 data: "`2025-03-02 19:16`"
 ---
 - # Probabilità di unione non disgiunta di insiemi:

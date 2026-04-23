@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - STAT
 aliases:
   - eventi indipendenti
   - indipendenza tra più di 2 eventi

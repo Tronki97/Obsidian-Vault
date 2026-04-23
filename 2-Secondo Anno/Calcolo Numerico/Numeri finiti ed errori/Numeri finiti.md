@@ -1,5 +1,6 @@
 ---
-tags: 
+tags:
+  - CN
 aliases:
   - floating point
   - errore assoluto

@@ -1,0 +1,119 @@
+---
+tags:
+aliases:
+  - Computation space
+  - space function
+  - running space
+  - DSPACE
+  - NSPACE
+  - LOGSPACE
+  - NLOGSPACE
+  - L
+  - NL
+  - REACH
+  - NL-completezza
+  - NL-hardness
+data: "`2026-04-23 15:38`"
+---
+- # Intro:
+	- Ci si chiede _quanta memoria_ un determinato algoritmo richieda
+	- non sempre quella temporale è la più importante e infatti a volte ci si ritrova a fare dei compromessi tra _tempo e spazio richiesto_
+	- nonostante ciò si ragiona ancora in termini di complessità strutturale che quindi riguarda i _problemi_.
+	- Serve quindi introdurre un nuovo modello di _macchina di Turing_ che è quello standard per la complessità spaziale:
+		- 1 nastro di input _read-only_
+		- 1 nastro di lavoro _read-write_ 
+			- su questo nastro ci sarà il vincolo sullo spazio perché le classi spaziali sono molto piccole e se si considerasse il nastro di input sarebbe sempre spazio lineare mentre invece serve definire classi tipo $LOGSPACE$ 
+- # Computation Space:
+	- il _computation space_ di una MdT $M$ sulla stringa in input $w$ è il numero di celle sul _nastro di lavoro_ che $M$ _visita_ mentre processa $w$ 
+		- _N.B_: nel caso si visitasse più volte la stessa cella quello _conta come una sola visita_
+	- si tratta di _visitare_ non _scrivere_:
+		- perché altrimenti si potrebbe usare qualche trucco che ci permetterebbe di non scrivere quasi niente e di sfruttare lo spazio con il $\not b$
+	- nel caso di una [[Macchina di Turing non-deterministica]] basta controllare tutti i branch dell'[[Macchina di Turing non-deterministica#^ab1928|albero di computazione]] e guardare quello che ne ha visitate di più
+	- ## Space function:
+		- $$s(n): \mathbb{N}\to \mathbb{N}$$
+		- è strettamente positiva e monotona non-decrescente simile alla [[Nozioni di Complessità strutturale#^dc4cbe|time function]] 
+	- ## Running space:
+		- o complessità spaziale di $M$ è $s(n)$ dove $s(n)$ è una space function, se:
+			- $\forall w$ tranne un numero finito di esse, il computation space di $M$ su $w$ è al massimo $s(|w|)$ 
+- # Classi:
+	- ## DSPACE:
+		- $$DSPACE(s(n)) = \{L | \exists M \text{ deterministica t.c. } L(M) = L \text{ e il running space di M e' } O(s(n))\}$$
+	- ## NSPACE:
+		- $$NSPACE(s(n)) = \{L | \exists M \text{ non-deterministica t.c. } L(M) = L \text{ e il running space di M e' } O(s(n))\}$$
+	- ## LOGSPACE:
+		- è anche detto _L_
+		- $$LOGSPACE = DSPACE(\log_{2}(n))$$
+	- ## NLOGSPACE:
+		- è anche detto _NL_
+		- $$NLOGSPACE = NSPACE(\log_{2}(n))$$
+	- ## ES:
+		- $L=\{0^{n}1^{n}|\ n> 0\}$
+			- normalmente si farebbe in spazio lineare.
+			- per farlo in spazio logaritmico basta contare gli $0$ che ci sono sull'input e rappresentare questo numero $n$ in binario sul nastro di lavoro occupando così $\log_{2}(n)$ celle e poi quando si arriva agli $1$ sottrarre dal nastro di lavoro finche non si arriva a $0$ 
+			- quindi $L\in LOGSPACE$
+		- ### REACH:
+			- $$REACH = \{(G, s, t) | \text{G e' orientato, s e t sono due vertici di G ed esiste un path da s a t in G}\}$$
+			- si può provare a usare [[Algoritmo di Dijkstra||Dijkstra]] e quindi tenere da conti nodi visitati risultando quindi in linearità sui nodi.
+			- serve utilizzare il _non-determinismo_
+				- si fa [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sul cammino e voi check per vedere sia valido.
+				- però il cammino ha lunghezza lineare sui nodi 
+			- allora si deve semplicemente tenere in memoria un solo nodo:
+				- si va quindi a sovrascrivere il nodo corrente con quello successivo che viene _guessato_.
+				- _problema_: la presenza di grafi ciclici potrebbe far andare avanti all'infinito l'algoritmo 
+			- serve quindi un contatore dei nodi attraversati 
+				- così se il numero dei nodi attraversati supera il numero dei nodi totale allora si è in un ciclo.
+				- _questo contatore deve essere in base 2 altrimenti sarebbe lineare_. 
+			- in sostanza:
+				- il vertice corrente è rappresentato in base 2 e quindi logaritmico sul numero dei nodi come il contatore
+				- quindi $REACH\in LOGSPACE$
+- # Considerazioni:
+	- $L\subseteq NL$ anche se non si sa ancora se $L\ne NL$ 
+- # NL-completezza:
+	- $A$ è $NL-$completo se:
+		- $A\in NL$ 
+		- ## NL-hardness:
+			- $\forall B \in NL,\ \ B\le_{L} A$ 
+				- $B\le_{L} A$ è una riduzione _logspace_ deve essere quindi calcolabile in spazio logaritmico
+					- _il trasduttore_ che calcola questa funzione di _riduzione_ lavora sul secondo nastro ed è li che si applica il _bound logaritmico_ 
+					- il nastro di output è dio sola scrittura e quindi il _trasduttore_ non lo può usare per fare dei lavori intermedi obbligandoci a trovare delle procedure che ci fanno scrivere sul nastro di output _solo risultati corretti_
+	- ## ES:
+		- $REACH\in NL$-completo:
+			- _non si hanno problemi NL-hard di partenza da usare come base_
+			- bisogna quindi fare in maniera equivalente al [[Teorema di Cook]] 
+			- dimostro quindi che $REACH\in NL-$hard:
+				- ### Riduzione:
+					- problema di partenza - $L$ generico 
+						- istanza: $w$
+					- problema di arrivo - $REACH$
+						- istanza: $(G, s, t)$
+					- l'idea è quella di usare l'albero di computazione facendo però attenzione a fare la riduzione in _spazio logaritmico_ perché $f$ non può mettere nel _nastro di lavoro_ tutto $G$ e poi scriverlo sull'output per creare una istanza di $REACH$ perché richiederebbe _spazio lineare_ 
+					- serve quindi ricordarci alcune cose riguardanti la computazione di $M$ su $w$
+						- _nastro di lavoro_
+							- richiede $O(\log_{2} n)$
+						- $h_{1}$: posizione della testina sull'input
+							- richiede $O(\log_{2} n)$
+						- $h_{2}$: posizione della testina sul nastro di lavoro
+							- richiede $O(\log_{2} (\log_{2} n))$ 
+						- $q$: stato corrente 
+							- spazio costante 
+						- in questo modo è possibile ricostruire le [[Macchina di Turing deterministica#^e7168b|instantaneous description]] di $M$
+						- ![[Pasted image 20260423173030.png]]
+					- queste informazioni formeranno i nodi di $G$ 
+					- la macchina che calcola $f$ parte da una stringa inizializzata a tutti $0$  
+						- la macchina controlla che questa stringa che gli do in input sia sintatticamente sensata e nel caso lo sia la scrive in output e in caso contrario passo alla stringa successiva
+							- _da notare come le varie stringhe possono avere un ordine perché le posso ordinare in base al valore in binario che possiedono_ 
+						- quando passo alla stringa successiva quello che sto facendo in realtà è aggiornare la stringa modificandone i valori "facendo finta" di avergliene data un'altra in input 
+						- in questo modo posso rappresentare tutti i nodi del grafo 
+					- manca ancora la rappresentazione degli archi:
+						- prima però si aggiunge un nodo $t$ che ha un simbolo _extra_ 
+						- lo si fa perché il _grafo di computazione_ potrebbe avere vari nodi accettanti e siccome non si sa nulla del linguaggio $L$ da cui fare la riduzione aggiungerò un arco da ognuno di quei nodi accettanti verso questo nuovo nodo $t$ in modo da poter poi controllare la _raggiungibilità_ verso $t$ dal nodo $s$ 
+					- per rappresentare l'arco che collega due nodi serve controllare due stringhe:
+						- si usa lo stesso metodo di prima controllando se siano sintatticamente corrette e poi si controlla se sia possibile raggiungere la seconda _ID_ dalla prima facendo un solo passo, controllando la funzione di transizione che è nota perché la macchina $M$ è fissata. 
+						- se questa caratteristica è rispettata allora scriverò in output la coppia.
+					- per rappresentare invece l'arco che si collega a $t$ faccio un procedimento simile al precedente:
+						- solo che invece di controllare la funzione di transizione guardo se questa stringa rappresenti una configurazione accettante o meno se lo è scrivo in output la coppia rappresentata dalla configurazione accettante e dal nodo $t$ 
+				- in questo modo in output verrà prodotto il grafo di computazione che rappresenta appunto la computazione di $M$ sulla stringa $w$ con un nodo aggiuntivo $t$ al quale sono agganciati tutti i nodi rappresentanti le configurazioni accettanti 
+					- questo grafo in output avrà quindi un percorso che va dal nodo $s$ (rappresentato dalla configurazione iniziale di $M$) al nodo $t$ se e solo se la macchina $M$ riconosce la stringa $w$ in input. 
+			- $REACH$ risulta quindi essere $NL$-completo 
+- # Link Utili:
+	- 

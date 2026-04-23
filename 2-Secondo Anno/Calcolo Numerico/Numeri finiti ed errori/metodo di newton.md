@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - CN
 aliases:
   - velocità di convergenza
 data: "`2024-09-24 10:34`"

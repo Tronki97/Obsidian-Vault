@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - CN
 aliases:
   - interpolante
 data: "`2025-01-06 16:16`"
