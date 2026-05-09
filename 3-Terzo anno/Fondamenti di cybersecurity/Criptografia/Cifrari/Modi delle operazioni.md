@@ -67,7 +67,7 @@ data: "`2026-03-09 17:44`"
 			- L'avversario può prevedere il _vettore di inizializzazione_ quindi con è sicuro sul lato [[Criptografia#^8d2a6c|CPA]]
 			- Dato $c=E_{CBC}(k,m)$ si suppone che l'avversario possa prevedere l'_IV_ per il _prossimo messaggio._
 			- ![[Pasted image 20260309182348.png]]
-	- ## CFB (Cipher FeedBack)
+	- ## CFB (Cipher FeedBack) ^a6aed8
 		- Per [[autenticazione]] 
 		- Si divide l'input in segmenti di $s$ bit e che si criptano mano a mano
 		- Si hanno quindi messaggi con lunghezza diversa da quella standard, riuscendo a trasmettere su canali ad alta velocità e anche a lavorare con applicazioni real-time con certi limiti sul delay.
@@ -86,7 +86,7 @@ data: "`2026-03-09 17:44`"
 	- ## OFB (Output FeedBack)
 		- Simile a _CFB_, prendo output relativo al primo plaintext e viene messa in input al secondo blocco di criptazione
 		- Usato in reti con alto noise 
-	- ## CTR (CounTeR)
+	- ## CTR (CounTeR) ^33be00
 		- Si fa XOR con un _counter_ che è criptato e viene aumentato per il plaintext successivo
 		- Usato quando serve poco delay nella comunicazione
 		- Il valore del contatore (counter $1$, ..., counter $N$) deve essere diverso per ogni _blocco di plaintext_ ($P_{1},...,P_{N}$) che viene criptato.

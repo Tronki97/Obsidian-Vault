@@ -78,4 +78,76 @@ data: "`2026-04-17 11:14`"
 			- se due terminali decidessero di non rispettare mai il _backoff_ nessuno riuscirebbe più a comunicare avendo quindi un _DoS_ 
 	- ## SSID hiding:
 		- consiste nell'evitare che il router mandi in broadcast il nome della rete a cui è collegato, può essere usato come "meccanismo di sicurezza" perché così l'attaccante non riuscirà a vedere il nome della rete e quindi non dovrebbe riuscire ad accedervi.
+	- ## MAC whitelisting:
+		- Un meccanismo di sicurezza per prevenire lo _spoofing_ che permette di abilitare solo alcuni [[MAC-address|indirizzi MAC]] in una certa rete wireless 
+		- il problema però è che in _IEEE 802.11_ gli indirizzi MAC vengono inviati in chiaro e quindi sono facilmente _sniffabili_ 
+	- ## Cifratura:
+		- in queste reti per fare eavesdropping non è necessario applicare il _MitM_ quindi non serve far parte delle rete per leggere le informazioni che vengono inviate ed è quindi necessario avere dei meccanismi crittografici 
+		- ### Messaggi di Dissociazione:
+			- sono messaggi che fanno si che un terminale tolga l'associazione con un determinato _access point_ e quindi un attaccante potrebbe fare _packet injection_ e far disconnettere un utente generando disservizio e un eventuale perdita dati 
+			- per risolvere si usa lo standard _IEEE 802.11w-2009_ che protegge i _messaggi di gestione_ come quelli di dissociazione
+			- ![[Pasted image 20260509164020.png|280]]
+		- ### WEP:
+			- _Wired Equivalent Privacy_
+			- _non è sicuro_ 
+			- presenta due modi di funzionamento per l'autenticazione 
+			- #### Shared key:
+				- a $64$ o $128$ bit 
+				- tutti i dispositivi nella rete condividono una chiave segreta e lo scopo è quello di dimostrare che l'utente possieda la suddetta chiave 
+					- ![[Pasted image 20260509164355.png]]
+					- bucabile da un attacco _known plaintex_ e ricavare la chiave da tutte le autenticazioni 
+			- #### Open system: 
+				- non si usa una challenge 
+				- quello che fa la richiesta è a conoscenza del segreto comune 
+			- anche usando cifrari come [[Cifrario di flusso(stream cipher)#^443bbc|RC4]] che sfrutta un initialization vector è possibile catturare segnale che usano lo stesso $IV$ e con un'analisi statistica ottenere il _keystream_ e se si catturano pacchetti con un $IV$ noto è possibile far ricircolare pacchetti vecchi effettuando quindi un _replay attack_ e eventualmente aumentando il traffico 
+		- ### WPA/WPA3:
+			- creato per risolvere i problemi del _WEP_
+			- _Wi-Fi Protected Access_ ha 3 modi d utilizzo per il canale 
+				- PSK (_Pre-Shared Key_) per reti domestiche, chiave segreta su ogni dispositivo 
+				- _Enterprise_ per reti con molti utenti (come l'ALMAWIFI)
+				- _WPS_: sistema di autenticazione facilitato 
+			- #### IEEE 802.11i:
+				- definisce 2 schemi per la protezione di dati trasmessi nelle MAC Protocol data unit (_MPDU_)  
+					- ![[Pasted image 20260509165628.png]]
+				- ##### TKIP:
+					- _Temporal Key integrity Protocol_
+					- progettato solo per richiedere modifiche software ai dispositivi implementati con _WEP_ e fornisce due servizi:
+						- _integrità del messaggio_:
+							- si aggiunge un codice di integrità (_MIC_) al frame $802.11$ dopo il campo dati 
+							- questo _MIC_ è generato da un algoritmo, detto _Michael_, che calcola un valore a $64$ bit e usa come input i valori del MAC address di origine e destinazione e il campo dati insieme al materiale della chiave
+						- _confidenzialità dei dati_:
+							- ottenuta cifrando il valore $MPDU+MIC$ usando _RC4_
+					- ###### Chiave temporale TK 
+						- con l'algoritmo _Michael_ vengono usate 2 chiavi a $64$ bit per produrre il MIC 
+							- una per proteggere i messaggi nel percorso da _client_ ad _access point_
+							- l'altra chiave per proteggere i messaggi nel percorso inverso 
+						- i restanti $128$ bit sono troncati per generare la chiave $RC4$ usata per crittografare i dati trasmessi 
+					- ###### Contatore di sequenza TSC:
+						- è un contatore che viene assegnato ad ogni frame e ha 2 scopi:
+							- è incluso in ogni _MPDU_ ed è protetto dal _MIC_ per evitare gli attacchi _replay_
+							- viene combinato con la _TK_ della sessione per produrre una _chiave dinamica_ che cambia in base al _MPDU_ trasmesso
+				- ##### CCMP:
+					- _Counter Mode-CBC MAC Protocol_
+					- è usato in _WPA2_ ed è usato nei dispositivi più recenti e fornisce 2 servizi:
+						- _integrità del messaggio_:
+							- usa un codice di autenticazione basato su [[Modi delle operazioni#^a6aed8|Cipher Block Chaining]] 
+						- _confidenzialità_:
+							- usa la modalità operativa [[Modi delle operazioni#^33be00|CTR]] con [[Cifrario a blocchi#^e890d7|AES]] per la crittografia 
+						- la stessa chiave _AES_ a $128$bit viene usata per entrambi i servizi
+						- si utilizza un _packet number_ a $48$bit per costruire un _nonce_ per prevenire i _replay_ 
+			- #### Attacchi:
+				- ci sono i classici problemi legati ai meccanismi di autenticazione quindi attacchi _brute force_ o _dizionari_ possono comunque essere efficaci 
+				- Key Reinstallation AttaCK (Krack): è un attacco che sfrutta una vulnerabilità di _WPA2_ dove si riutilizzava un _nonce_ per velocizzare le autenticazioni successive, questo comporta il poter reinstallare chiavi vecchie in modo da poter analizzare facilmente la comunicazione e risalire alla chiave di cifratura 
+			- #### WPS:
+				- _Wi-Fi protected setup_
+				- non richiede di scambiare password fra i dispositivi wireless e il router 
+				- ha metodologie di accesso diverso:
+					- un tasto fisico
+					- un codice PIN a 8 cifre 
+				- ##### Attacchi:
+					- siccome il PIN è a 8 cifre basta un attacco brute force con al massimo $10^{8}$ tentativi per riuscire ad indovinarlo e di conseguenza riesce anche a ricavare la chiave WPA/WPA2 pre-condivisa della rete. 
+			- #### WPA3:
+				- utilizza un meccanismo per l'autenticazione chiamato _SAE_ che rende più difficili gli attacchi dizionario 
+				- include _Wi-Fi Enhanced Open_ per offrire una maggiore protezione dei dati quando ci si connette a _reti pubbliche_ o _hotspot non sicuri_, in sostanza ogni connessione tra user e access point viene cifrata con una chiave univoca per evitare dei _MitM_  
+				- ideale per reti moderne mentre _WPA2_ è compatibile con dispositivi vecchi.
 - # Link Utili:

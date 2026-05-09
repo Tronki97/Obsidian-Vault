@@ -24,7 +24,7 @@ data: "`2025-07-01 12:18`"
 	- ## FSK:
 		- Usa diversi tipi di frequenza per indicare 1 (la più alta) o 0 (la più bassa) o viceversa dipende dal protocollo applicato.
 		- ![[Pasted image 20250701114847.png]]
-	- ## PSK:
+	- ## PSK: ^7522eb
 		- Si usa la fase del segnale per indicare 1 o 0.
 		- ![[Pasted image 20250415161913.png]]
 - # Rappresentazione del segnale:

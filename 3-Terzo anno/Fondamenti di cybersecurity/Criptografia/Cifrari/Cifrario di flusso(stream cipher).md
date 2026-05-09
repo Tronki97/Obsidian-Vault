@@ -105,7 +105,7 @@ data: "`2026-02-23 09:07`"
 	- ## sicurezza:
 		- Necessita di una diversa definizione di sicurezza in quanto dipende fortemente dal PRNG usato 
 		- con un PRNG propriamente definito un cifrario di flusso è sicuro quanto un [[Cifrario a blocchi]] con la lunghezza della chiave comparabile. 
-	- ## RC 4:
+	- ## RC 4: ^443bbc
 		- è relativamente semplice.
 		- Una chiave a lunghezza variabile $k$ ($[8,  2048]bit$ oppure $[1,256]Byte$) usato per inizializzare uno state vector $S$ a $256$ elementi  
 		- $S$ contiene una permutazione di tutti i numeri a $8$ bit 
