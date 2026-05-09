@@ -10,13 +10,13 @@ aliases:
   - CCA
 data: "`2026-02-16 11:06`"
 ---
-- # definizione:
-	- Usare la matematica per oscurare il significato di dati applicandoci trasformazioni che sono poco pratiche o impossibili da invertire
 - # Criptoanalisi:
 	- Rompere la criptazione, codici segreti o messaggi segreti senza conoscere le chiavi 
-- # criptografia:
+- # Criptografia:
+	- ## Def:
+		- Usare la matematica per oscurare il significato di dati applicandoci trasformazioni che sono poco pratiche o impossibili da invertire
 	- ![[Pasted image 20260216111507.png|600]]
-	- Encryption e decryption compongono uno schema di criptazione.
+	- Encryption e decryption compongono uno _schema di criptazione_.
 	- ## Obiettivi:
 		- _privacy_(segretezza, confidenzialità): solo il mittente e destinatario devono sapere il contenuto dei messaggi
 		- _autenticità_: il messaggio è mandato effettivamente dal mittente
@@ -31,7 +31,7 @@ data: "`2026-02-16 11:06`"
 	- ## modello di minaccia attaccante:
 		- Si assume che l'attaccante conosca l'interezza dell'algoritmo di criptografia (DES, AES, RSA...)
 		- ### Passivo:
-			- L'attaccante osserva e basata e tenta di decriptare i messaggi
+			- L'attaccante si limita ad osservare e tenta di decriptare i messaggi
 		- ### Attivo:
 			- Oltre all'osservazione tenta anche di modificare i messaggi infrangendo così _integrità_, _confidenzialità_, _autenticità_
 		- ### interazioni con gli algoritmi:
@@ -45,31 +45,6 @@ data: "`2026-02-16 11:06`"
 			- In caso un brute force vincerebbe sempre
 		- Con risorse finite _computational security_:
 			- Per decriptare certi messaggi servirebbe un tempo di calcolo molto lungo.
-- # Criptografia simmetrica:
-	- _confidenzialità_
-	- Si usa una sola chiave sia per il mittente che per il destinatario per far si che ciò che viene mandato sul canale non venga intercettato e letto da un terzo.
-		- ![[Pasted image 20260220112245.png|500]]
-		- $m:$ plaintext
-		- $c:$ messaggio cifrato
-		- $E:$ algoritmo di criptazione
-		- $D:$ algoritmo di decriptazione
-		- $E,D$: cifratore
-			- Si usano sempre cifratori con algoritmi conosciuti e quindi mai usare quelli proprietari.
-		- La chiave condivisa ha però bisogno appunto di essere condivisa tra i due quindi prima della comunicazione _c'è bisogno di usare un protocollo per scambiare questa chiave simmetrica_
-	- Si possono generare dei MAC (message authentication code) usando le chiavi simmetriche per garantire quindi che il messaggio inviato sia autentico.
-		- Inviando quindi: $K_{s}(H(m),m)$
-	- ## Casi d'uso:
-		- ### Chiave singola:
-			- Ci sono scenari in cui la chiave $K_{s}$ va rigenerata ogni volta avendo quindi una chiave diversa per ogni messaggio
-		- ### Multi-uso:
-			- La stessa chiave viene usata diverse volte, e necessita l'utilizzo in combo con il _nonce_ o un _initialisation vector_
-- # Criptografia asimmetrica:
-	- Si usano coppie di chiavi: _pubbliche_ e _private_; quelle pubbliche vengono salvate in delle repository pubbliche.
-	- Ogni volta che un utente necessita di inserire una chiave pubblica in questa _repo_ si necessita di autenticare l'utente e verificare che la chiave che si sta inserendo sia effettivamente di quell'utente.
-	- ![[Pasted image 20260220113932.png|500]]
-	- Questo schema garantisce la confidenzialità perché solo bob riuscirà a decriptare il messaggio criptato con la chiave pubblica di bob $K_{B}^{+}$ perché possiede la chiave privata $K_{B}^{-}$
-		- Quindi $K_{B}^{-}(K_{B}^{+}(m))=m$.
-	- Si usa anche per firmare digitalmente un messaggio per far quindi capire che è proprio di quell'utente
 - # Applicazioni:
 	- La criptografia si usa banalmente per la comunicazione sicura in rete
 	- Comunicazione sicura di messaggistica tra telefoni cellulare
@@ -79,5 +54,9 @@ data: "`2026-02-16 11:06`"
 	- Definire precisamente il modello di minaccia
 	- Proporre il design del _cifrario_
 	- Dimostrare che rompere la soluzione sotto il modello di minaccia risulta un problema _molto difficile_
+- # Tipologie:
+	- esistono due tipologie di criptografia che si basano su ccerte caratteristiche che vengono date alle chiavi:
+		- [[Criptografia Asimmetrica]]
+		- [[Criptografia simmetrica]] 
 - # Link Utili:
 	- 

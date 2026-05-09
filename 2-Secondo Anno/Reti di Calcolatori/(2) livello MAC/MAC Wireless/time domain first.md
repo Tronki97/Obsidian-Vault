@@ -1,11 +1,12 @@
 ---
-tags: 
+tags:
 aliases:
   - ALOHA
   - slotted
   - CSMA
   - carrier sense
   - backoff
+  - CSMA/CA
 data: "`2025-06-28 11:39`"
 ---
 - # Protocolli time domain:
@@ -29,7 +30,7 @@ data: "`2025-06-28 11:39`"
 	- ## CSMA (carrier sens multiple access): ^6bda93
 		- Simile all'_ALOHA puro_, ma la trasmissione dipende dal chip che ascolta il canale, con il canale occupato la trasmissione è ritardata.
 		- Il tempo di vulnerabilità è 2 volte il delay della propagazione; con gli slot sarebbe uguale al delay della propagazione.
-			- ### Variante CA (collision avoidance):
+			- ### Variante CA (collision avoidance): ^349ba4
 				- Non utilizza anche la collision detection perché non si riesce ad ascoltare efficacemente il canale mentre si sta trasmettendo con lo scopo di rilevare una collisione che avviene presso il ricevitore
 	- ![[Untitled 1 3.webp]]
 		- Analisi del [[Il Livello fisico#^e14f6f|throughput]] dei 3 algoritmi.

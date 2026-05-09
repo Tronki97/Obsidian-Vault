@@ -14,7 +14,7 @@ data: "`2025-06-28 11:40`"
 - # Protocolli space domain:
 	- Si basa sulla separazione spaziale dei canali di comunicazione.
 	- C'è enfasi sulla distribuzione dei nodi, copertura del segnale riduzione interferenza e massimizzare l'efficienza spaziale.
-	- ## Problema dei terminali nascosti:
+	- ## Problema dei terminali nascosti: ^e0721a
 		- Si verifica quando un nodo non può sentire le trasmissioni di un altro nodo, ma entrambi possono comunicare con un terzo nodo $\to$  porta a collisioni non rilevate.
 	- ## Problema dei terminali esposti:
 		- Si verifica quando un nodo può sentire le trasmissioni di un altro nodo, ma non può comunicare con esso, portando a un sottoutilizzo del canale.

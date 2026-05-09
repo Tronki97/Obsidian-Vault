@@ -54,7 +54,7 @@ data: "`2025-05-15 18:14`"
 			- Visto che questo è un attacco che viene fatto off-line (in un sistema diverso da quello sotto attacco) non abbiamo accesso al ritmo dell'attacco quindi modificarlo non aiuta a difendersi 
 			- Possiamo scegliere _hash one way pesante_ che impieghi molto tempo per calcolare il digest e ciò Potrebbe rallentare l'attaccante 
 				- _es_ applicare DES 25 volte ad un blocco di 0 usando la pw come chiave 
-			- #### Salting:
+			- #### Salting: ^1f596d
 				- Invece di memorizzare una password di un utente U, il sistema memorizza per utente $U$ due quantità:
 					- **S** (salt):  numero random generato dal sistema 
 					- **Q** : il digest contenuto dalla concatenazione tra la Password e il Salt 

@@ -22,7 +22,7 @@ data: "`2024-08-31 20:05`"
 			- Insieme degli archi _E_:
 				- relazione binaria tra vertici
 			- una arco _(X, X)_ è un cappio.
-		- ![[Grafo Orientato.png]]
+		- ![[Grafo Orientato.png]] ^a0b8ac
 		- #### Incidenza e Adiacenza:
 			- Si dice _incidente_ un arco _(v, w)_ da _v_ a _w_ 
 				- _es_: (A, B) è incidente da A a B
@@ -34,7 +34,7 @@ data: "`2024-08-31 20:05`"
 			- Insieme degli archi _E_:
 				- coppie non ordinate
 			- non ci sono cappi
-		- ![[Grafo non orientato.png]]
+		- ![[Grafo non orientato.png]] ^fa433e
 - ## Operazioni:
 	- ### NumVertici() → intero 
 	- ### NumArchi() → intero 

@@ -37,7 +37,7 @@ data: "`2026-02-20 11:50`"
 	- ## Criptoanalisi:
 		- Con quell'alfabeto si hanno un totale di $26!\simeq 2^{88}$ [[Calcolo combinatorio#^96af78|permutazioni]] 
 		- ![[Pasted image 20260220121735.png|500]]
-		- Le lettere "e", "t", "a" sono quelle più usate nella lingua inglese
+		- Le lettere _"e", "t", "a"_ sono quelle più usate nella lingua inglese
 			- Che risultano avere una frequenza del: $12.7\%, 9.1\%, 8.1\%$
 		- Si può anche analizzare la coppia di lettere più usate e poi il trio e così via 
 		- ### ES:
@@ -49,9 +49,9 @@ data: "`2026-02-20 11:50`"
 			- Con $e(x), x,a,b\in \mathbb{Z}_{26}$
 	- Se avessi $a=1$ avrei di nuovo un _shift chipher_
 	- Ripasso su [[Aritmetica modulare]]
-	- La decriptazione di questo cifrario è possivbile se l afunzione $e(x)$ è [[iniettiva]]
+	- La decriptazione di questo cifrario è possibile se la funzione $e(x)$ è [[iniettiva]]
 	- Per qualsiasi $y\in \mathbb{Z}_{26}$ si vuole la congruenza 
-		- $$ax+b\equiv y(mod\ 26)= ax\equiv y-b (mod\ 26)$$
+		- $$e(x)=ax+b\equiv y(mod\ 26)= ax\equiv y-b (mod\ 26)$$
 		- Per avere quindi una _soluzione unica_ per $x$ e sarà così sse $MCD(a,26)=1$
 	- ## ES:
 		- Si suppone che $MCD(a,26)=d>1$ e che $MCD(4,26)=2$
@@ -65,10 +65,17 @@ data: "`2026-02-20 11:50`"
 		- 3) cifrare la parola "sicurezza"
 			- ![[Pasted image 20260220130335.png]]
 			- Per ogni lettera devo fare $5*x+4$ dove $x$ è il numero della lettera
-			- $e(s)=16$, $e(i)=18$, $e(c)=14$, $e(u)=0$, $e(r)=11$, $e(e)=24$, $e(z)=$ 
+			- $e(s)=16$, $e(i)=18$, $e(c)=14$, $e(u)=0$, $e(r)=11$, $e(e)=24$, $e(z)= 25$, $e(a)=4$ 
+			- la parola criptata risulta:
+				- $$e(sicurezza)= qsoalyzze$$
 		- 4) calcolare la funzione di decifratura $d(y)$
 			- $$y=e(x)=5x+4 \implies 5x=y-4 \implies 5^{-1}*5*x=5^{-1}(y-4)\implies x=5^{-1}(y-4)$$
-			- Lo finiremo un altra volta
+			- per calcolare l'inverso di $5 \ mod 26$ si usa l'[[Aritmetica modulare#^6e5f67|invertibilità]] 
+			- $[5]^{-1}_{26}=[21]_{26}$ 
+			- quindi per calcolare la $x$ originale basta fare:
+				- $$x=21(y-4)$$
+			- $d(q)=21*12\  mod \ 26=18=s$ 
+			- e così via per il resto delle lettere...
 - # cifrario di Vigénere:
 	- è un _cifrario di sostituzione polialfabetica_
 	- Data $m$ intero positivo
@@ -87,7 +94,7 @@ data: "`2026-02-20 11:50`"
 		- Serve capire la lunghezza della keyword e quindi trovare $m$.
 		- Si divide il testo cifrato in $m$ criptazioni shift cipher
 		- Si fa quindi un analisi di frequenza su ogni shift cipher.
-- # cifrario Hill:
+- # Cifrario Hill:
 	- Sia $m\ge 2$ un intero $P=C=(\mathbb{Z}_{26})^{m}$
 	- $$K=\{m \times m \ \text{matrice invertibile su }Z_{26}\}$$
 	- Per una chiave $K$ si definisce 
@@ -95,6 +102,11 @@ data: "`2026-02-20 11:50`"
 	- Per la decriptazione invece:
 		- $d_{k}(y)=y*K^{-1}$
 	- E tutte le operazioni sono fatte in $\mathbb{Z}_{26}$
+	- $$(y_{1},...,y_{m})=(x_{1},...,x_{m})*\begin{pmatrix} k_{1,1} & ... & k_{1,m} \\ k_{2,1} & ... & k_{2,m} \\ \vdots & \vdots & \vdots \\ k_{m,1} & ... & k_{m,m} \end{pmatrix}$$
+	- ## ES:
+		- $y_{1}= (11x_{1} +3x_{2}) mod 26$
+		- $y_{2}= (8x_{1}+7x_{2})\ mod 26$
+		- $$(y_{1},y_{2})= (x_{1},x_{2})\begin{pmatrix} 11 & 8 \\ 3 & 7\end{pmatrix}$$ 
 - # rotori:
 	- Si fanno molteplici sostituzioni sulla stessa lettera 
 - # Link Utili:

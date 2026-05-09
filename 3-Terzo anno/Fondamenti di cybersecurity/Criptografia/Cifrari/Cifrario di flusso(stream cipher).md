@@ -9,12 +9,34 @@ aliases:
   - RC4
   - estream
   - next-bit test
+  - secure cipher
+  - cifrario sicuro
+  - segretezza perfetta
 data: "`2026-02-23 09:07`"
 ---
+- # Preconcetti:
+	- ## Cifrario sicuro:
+		- Si suppone che l'attaccante veda solo i messaggi cifrati. ([[Criptografia#^add400|Ciphertext-only]] attack)
+		- _primo tentativo_: l'attaccante non può recuperare la chiave:
+			- $E(k,m)$ _risulta sicuro_
+		- _secondo tentativo_: l'attaccante riesce a recuperare solo una parte del plain-text
+			- $E(k,m_{0}|| m_{1})=m_{0}||k\oplus m_{1}$: risulta sicuro
+		- ### idea di Shannon:
+			- Il _ciphertext_ non dovrebbe rivelare nessuna parte del _plaintext_ per far si che un cifrario si possa definire sicuro.
+	- ## Sicurezza di shannon:
+		- Un cifrario $(E,D)$ su $(K,P,C)$ ha una _segretezza perfetta_ se:
+			- $\forall m_{0}, m_{1}\in P$ con $len(m_{0})=len(m_{1})$ e $\forall c \in C$
+			- $$P(E(k,m_{0})=c)=P(E(k,m_{1})=c)$$
+				- Dove $k$ è uniformemente distribuito in $K$
+		- ### Nota:
+			- Non ci sono assunzioni sulla potenza computazionale dell'attaccante.
+		- ### TH:
+			- $Perfect\ Secrecy \implies |K|\ge |P|$ 
+			- quindi si necessita che la chiave sia almeno lunga quanto il plaintext  
 - # Motivazioni:
 	- Serve quando devo cifrare flussi di dati senza che ci sia delay tra un pacchetto ed un altro
 	- Adatti per applicazioni real-time, sensori per applicazioni IoT...
-- # One-time pad:
+- # One-time pad (OTP):
 	- Si tratta di una chiave simmetrica che viene usata una sola volta e che viene generata randomicamente.
 	- $K=P=C=\{0,1\}^{n}$
 	- $k\in K, m\in P, c\in C$
@@ -22,32 +44,18 @@ data: "`2026-02-23 09:07`"
 	- $D(k,c)=k \oplus c$
 	- $k$ viene usata _una sola volta_
 	- $k$ è una chiave randomica (con [[Distribuzioni notevoli di variabili aleatorie discrete|distribuzione uniforme]] su $K$)
+	- $\oplus$ è l'operazione _XOR_  
 	- ## Pro e contro:
 		- è molto veloce in quanto si fanno manipolazioni direttamente sui bit
 		- Si ha però bisogno di chiavi lunghe quanto il messaggio da cifrare $|K|\ge|P|$
 			- E quando si vuole fare una trasmissione sicura serve comunicare la chiave in modo sicuro quindi mandare un messaggio lungo a causa della lunghezza della chiave.
-- # Cifrario sicuro:
-	- Si suppone che l'attaccante veda solo i messaggi cifrati. (ciphertext-only attack)
-	- _primo tentativo_: l'attaccante non può recuperare la chiave:
-		- $E(k,m)$ _risulta sicuro_
-	- _secondo tentativo_: l'attaccante riesce a recuperare solo una parte del plain-text
-		- $E(k,m_{0}|| m_{1})=m_{0}||k\oplus m_{1}$: risulta sicuro
-	- ## idea di Shannon:
-		- Il _ciphertext_ non dovrebbe rivelare nessuna parte del _plaintext_ per far si che un cifrario si possa definire sicuro.
-- # Sicurezza di shannon:
-	- Un cifrario $(E,D)$ su $(K,P,C)$ ha una _sicurezza perfetta_ se:
-		- $\forall m_{0}, m_{1}\in P$ con $len(m_{0})=len(m_{1})$ e $\forall c \in C$
-		- $$P(E(k,m_{0})=0)=P(E(k,m_{1})=c)$$
-			- Dove $k$ è uniformemente distribuito in $K$
-	- ## Nota:
-		- Non ci sono assunzioni sulla potenza computazionale dell'attaccante.
-- # Perfect secrecy:
-	- Ha segretezza perfetta.
-	- $\forall m,c$
-	- $$P_{k}(E(k,m)=c)= \frac{\#keys \ k\in K:E(k,m)=c}{|K|}$$
-	- Ovvero:
-		- $$P(E(k,m_{0})=c)=P(E(k,m_{1})=c)$$
-	- Quindi se $\forall m,c$ $\#\{k\in K:E(k,m)=c\}$ è un numero costante allora il cifrario ha _segretezza perfetta_
+	- ## Segretezza di OTP:
+		- OTP Ha segretezza perfetta.
+		- $\forall m,c$
+		- $$P_{k}(E(k,m)=c)= \frac{\#keys \ k\in K:E(k,m)=c}{|K|}$$
+		- Ovvero:
+			- $$P(E(k,m_{0})=c)=P(E(k,m_{1})=c)$$
+		- Quindi se $\forall m,c$ $\#\{k\in K:E(k,m)=c\}$ è un numero costante allora il cifrario ha _segretezza perfetta_
 - # Generatori di numeri pseudocasuali (PRNG):
 	- ![[Random number generator.png|600]]
 		- A)Per avere un TRNG serve avere una fonte di vera casualità e tradurre ciò che ho estratto in bit
@@ -58,49 +66,54 @@ data: "`2026-02-23 09:07`"
 		- Il PRNG è un algoritmo deterministico
 		- Il seme stesso deve essere un numero random o pseudo-random
 		- Di solito il seme è generato da un TRNG
+			- ![[Pasted image 20260507180953.png|118]]
 	- ## PRNG deboli: ^fffea3
-		- Linear congruention generator:
-			- `r[0]=seed`
+		- Linear congruential generator con parametri ($a,b\in \mathbb{Z}$ e $p$ numero primo):
+			- `r[0]:=seed`
 			- `r[i]=(a*r[i-1]+b) mod p`
 				- Ha come output pochi bit di $r[i]$
 			- `i++`
-		- Glibc random
+		- Glibc random():
+			- `r[i]= (r[i-3]+r[i-31])% 2^32`
+			- `return r[i] >>1` 
 	- ## BBS generator(Blum Blum Shub):
 		- Si scelgono due numeri primi grandi $p,q$ con questa relazione:
 			- $p\equiv q \equiv 3\ mod\ 4$ e $p\ mod \ 4  = q\ mod\ 4=3$
 		- Sia $n=pq$
 		- Si sceglie un numero random $s$ primo rispetto ad $n$
-		- Si genera quindi uno pseudo-casuale secondo:
+		- Si genera quindi uno pseudo-casuale secondo questo algoritmo:
 			- `X[0] = s^2 mod n`
 			- `for i = 1 to` $\infty$
 				- `X[i] = (X[i-1])^2 mod n`
 				- `B[i]=X[i] mod 2`
 		- è considerato come ciptograficamente sicuro e passa il _next-bit test_
 		- ### Next-bit test:
-			- Dati i primi $k$ bit dell'output non c'è un algoritmo polinomiale sul tempo che permette di dire che il prossimo bit sia 1 o 0 sia $\frac{1}{2}$
+			- Dati i primi $k$ bit dell'output non c'è un algoritmo polinomiale sul tempo che permette di dire che il prossimo bit sia 1 o 0 con probabilità di successo  $>\frac{1}{2}$
 		- La sicurezza di _BBS_ si basa sul fattorizzare $n$ in quanto bisogna determinare i fattori primi $p$ e $q$  
 - # Cifrario di flusso:
 	- Si rimpiazza la chiave _random_ con una pseudo-random 
-		- Con la funzione PRG: $G:\{0,1\}^{s} \to \{0,1\}^{n}$ con $n>>s$ che prende quindi in input $k$
+		- la funzione PRG è una funzione $G:\{0,1\}^{s} \to \{0,1\}^{n}$ con $n>>s$ che prende quindi in input $k$
 	- ## Struttura:
 		- ![[Struttura cifrario di flusso.png|500]]
-			- Con $k$ random e non può essere usata più di una volta
+			- Con $k$ random e _non può essere usata più di una volta_
 		- ![[stream cipher detail.png|500]]
-			- a $z_{i}$ viene applicato lo XOR insieme al plaintext $p_{i}$
+			- a $z_{i}$ viene applicato lo _XOR_ insieme al plain-text $p_{i}$
 				- tutto questo viene fatto un _byte_ alla volta 
+			- ![[Pasted image 20260507182401.png]]
 	- ## segretezza perfetta:
-		- Non la possiede in quanto la lunghezza della chiave è più piccola di quella del messaggio.
+		- i cifrari di flusso Non possiedono la _segretezza perfetta_ in quanto la lunghezza della chiave è più piccola di quella del messaggio.
 	- ## sicurezza:
 		- Necessita di una diversa definizione di sicurezza in quanto dipende fortemente dal PRNG usato 
+		- con un PRNG propriamente definito un cifrario di flusso è sicuro quanto un [[Cifrario a blocchi]] con la lunghezza della chiave comparabile. 
 	- ## RC 4:
 		- è relativamente semplice.
-		- Una chiave a lunghezza variabile $k$ (da 8 a 2048 bit) usato per inizializzare uno state vector $S$ a $256B$ 
+		- Una chiave a lunghezza variabile $k$ ($[8,  2048]bit$ oppure $[1,256]Byte$) usato per inizializzare uno state vector $S$ a $256$ elementi  
 		- $S$ contiene una permutazione di tutti i numeri a $8$ bit 
 		- Per criptazione e decriptazione, _un byte k_ viene generato da $S$ estraendo da uno degli slot di $S$ 
 		- Quando viene generata $k$ le celle di $S$ vengono permutate di nuovo. 
 		- ![[initial S vector.png|400]]
 		- ![[stream generation.png|400]]
-		- ### debolezze:
+		- ### Debolezze:
 			- 1)Ha un bias nell'output iniziale: 
 				- si assume che l'algoritmo di setup sia perfetto e generi una permutazione dall'insieme di tutte le $256!$ permutazioni
 				- Si può dimostrare che l'output iniziale sia biased:
@@ -112,12 +125,12 @@ data: "`2026-02-23 09:07`"
 		- _nonce_: è un valore non ripetuto per una chiave e quindi la coppia $(k,r)$ è unica
 		- Si può quindi riutilizzare la chiave a patto che il _nonce_ sia diverso.
 - # Attacchi su two time pad:
-	- Risulta insicuro 
+	- usare la stessa chiave più volte in un cifrario di flusso Risulta insicuro 
 	- $c_{1}=m_{1}\oplus PRG(k)$
 	- $c_{2}=m_{2}\oplus PRG(k)$
 	- Quello che fa l'ascoltatore è 
 		- $$c_{1} \oplus c_{2}= (m_{1}\oplus PRG(k)) \oplus (m_{2}\oplus PRG(k))=c_{1}\oplus m_{2}\oplus PRG(k)=m_{1}\oplus m_{2}$$
 	- E grazie alla ridondanza della lingua inglese e del codice ASCII risulta che:
-		- $m_{1} \oplus m_{2}$
+		- $m_{1} \oplus m_{2} \to m_{1}, m_{2}$
 - # Link Utili:
 	- 

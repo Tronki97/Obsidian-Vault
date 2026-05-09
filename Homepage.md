@@ -8,10 +8,11 @@ cssclasses:
 ```dataview
 TABLE regexreplace(file.path, "^.*?/(.*?)/.*$", "$1") AS Materia 
 FROM #TODO
-WHERE file.path !="template/Modello appunti.md"
+WHERE !contains(file.folder, "Laboratorio di Making")
+WHERE !contains(file.folder, "template") 
 SORT file.ctime DESC
-LIMIT 15
 ```
+
 
 # Primo Anno
 - [[Analisi matematica]]
@@ -88,7 +89,7 @@ LIMIT 15
 	- Progetto: 28
 	- Totale: 27
 	- Tentativi: 1
-- [[0-Mostarda/Computational statistics|Computational statistics]]
+- [[0-Mostarda/Terzo Anno/Computational statistics|Computational statistics]]
 	- [x] Passato
 	- Voto: 29
 	- Tentativi: 1
@@ -96,7 +97,7 @@ LIMIT 15
 	- [ ] Passato
 	- Voto:
 	- Tentativi:
-- [[0-Mostarda/Fondamenti di cybersecurity]]
+- [[Fondamenti di cybersecurity]]
 	- [ ] Passato
 	- Voto:
 	- Tentativi: 

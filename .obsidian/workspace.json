@@ -4,20 +4,107 @@
     "type": "split",
     "children": [
       {
-        "id": "7f167a47c4bf24a3",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "4741b277aad8509f",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Homepage.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Homepage"
+            }
+          },
+          {
+            "id": "c5e126c2d1c7bc6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0-Mostarda/Terzo Anno/Fondamenti di cybersecurity.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Fondamenti di cybersecurity"
+            }
+          },
+          {
+            "id": "9fd679dcbb845666",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Wireless network security.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Wireless network security"
+            }
+          },
+          {
+            "id": "c4e264a6ae969fc4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "space domain"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -221,52 +308,52 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "3-Terzo anno/Laboratorio di Making/Comunicazione Seriale.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale/Complessità spaziale.md",
-    "Lecture 22042026141827.md",
-    "Pasted image 20260423173030.png",
-    "immagini/Pasted image 20260420144041.png",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Altre classi di complessità temporale.md",
-    "immagini/Pasted image 20260423155121.png",
-    "immagini/Pasted image 20260423155102.png",
-    "Excalidraw/FACTOR.excalidraw.md",
+    "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Wireless network security.md",
+    "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
+    "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Controllo di accesso.md",
+    "2-Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/access control.md",
+    "2-Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Network security.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Sicurezza dei sistemi.md",
+    "Pasted image 20260509151012.png",
+    "0-Mostarda/Terzo Anno/Fondamenti di cybersecurity.md",
+    "Homepage.md",
+    "immagini/Pasted image 20260508152352.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Stack buffer overflow.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Difese contro il Buffer Overflow.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Buffer overflow.md",
+    "immagini/Pasted image 20260508152316.png",
+    "immagini/Pasted image 20260506145204.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
+    "immagini/Pasted image 20260508150644.png",
+    "immagini/Pasted image 20260508143633.png",
+    "immagini/Pasted image 20260508140141.png",
+    "immagini/Pasted image 20260508135841.png",
+    "immagini/Pasted image 20260508135822.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario a blocchi.md",
+    "0-Mostarda/Terzo Anno",
+    "0-Mostarda/Secondo Anno",
+    "0-Mostarda/Primo Anno",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Criptografia Asimmetrica.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Criptografia simmetrica.md",
+    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Teorema di Bézout.md",
+    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Aritmetica modulare.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Lab 3 Cybesecurity.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Modi delle operazioni.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario di flusso(stream cipher).md",
+    "immagini/Pasted image 20260507182401.png",
+    "3-Terzo anno/Laboratorio di Making/Asterisk.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Criptografia.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrari.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/iniettiva.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Oracoli",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale",
-    "Homepage.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Classi di complessità.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario di flusso(stream cipher).md",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/VAPT.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Teorema di Cook.md",
-    "immagini/Pasted image 20260419183831.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Wireless network security.md",
-    "0-Mostarda/Sistemi Operativi.md",
-    "0-Mostarda/Computational statistics.md",
-    "0-Mostarda/Analisi matematica.md",
-    "0-Mostarda/Logica per l'informatica.md",
-    "3-Terzo anno/Laboratorio di Making/Motori.md",
-    "0-Mostarda/Basi di Dati.md",
-    "0-Mostarda/Ingegneria del software.md",
-    "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/Componenti di rete.md",
-    "0-Mostarda/Calcolo numerico.md",
-    "2-Secondo Anno/Calcolo Numerico/Python.md",
-    "2-Secondo Anno/Calcolo Numerico/Problemi inversi.md",
-    "2-Secondo Anno/Calcolo Numerico/Intro.md",
-    "2-Secondo Anno/Calcolo Numerico/Imaging.md",
-    "2-Secondo Anno/Calcolo Numerico/sistemi lineari/Risoluzione di un sistema lineare.md",
-    "immagini/Pasted image 20260416140113.png",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi",
-    "immagini/Pasted image 20260413095431.png",
-    "immagini/Pasted image 20260410114518.png",
-    "immagini/Pasted image 20260411170631.png",
-    "immagini/Pasted image 20260411170609.png",
     "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia",
-    "3-Terzo anno/Fondamenti di cybersecurity/Chiave pubblica/Senza nome",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica",
-    "3-Terzo anno/Informatica teorica/Complessità",
-    "latexsheet-a4.pdf",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

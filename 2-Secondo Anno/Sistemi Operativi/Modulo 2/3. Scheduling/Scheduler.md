@@ -68,7 +68,7 @@ data: "`2025-03-06 15:20`"
 		- è la sequenza temporale di assegnazioni delle risorse da gestire ai Richiedenti
 	- ## Scheduling:
 		- è l'azione di calcolare uno schedule
-	- ## Mode switching:
+	- ## Mode switching: ^c03aa0
 		- Cambio tra modalità utente e kernel causato da un interrupt o da una syscall 
 	- ## Context switching: ^ff7644 ^635de2
 		- Quando avviene un [[Richiami Di Architettura#^63291e|interrupt]], viene gestito e poi viene chiamato lo scheduler che può decidere di eseguire un altro processo, e in quel caso sottopone il sistema ad un _context switch_.

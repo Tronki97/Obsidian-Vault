@@ -1,0 +1,45 @@
+---
+tags:
+aliases:
+  - exploit
+  - program memory
+  - data memory
+data: "`2026-04-27 09:09`"
+---
+- # Exploit:
+	- è la tipica conseguenza di un qualche bug presente nel software.
+	- si può sfruttare certi exploit per aggirare dei controlli, aumentare i propri o altrui privilegi, far eseguire codice malevolo o consentire accesso persistente e non autorizzato.
+- # Buffer overflow:
+	- una condizione in cui è possibile inserire più input in un buffer rispetto alla capacità assegnatagli, sovrascrivendo altre informazioni 
+	- si può usare per mandare in crash un sistema o inserire codice che conceda a certi utenti il controllo del sistema.
+	- ## ES:
+		- ![[Pasted image 20260427091710.png|586]]
+	- ## Richiami di esecuzione del programma:
+		- ![[Pasted image 20260427091911.png|612]]
+		- ### Data memory: ^089eb4
+			- area di memoria dedicata allo storing e alla manipolazione di variabili  
+			- ![[Pasted image 20260508135841.png]]
+			- questa memoria è organizzata usando lo _stack_ 
+			- ogni funzione quando viene eseguita ottiene un frame sullo stack e questo frame contiene le variabili locali della funzione 
+			- quando la funzione termina l'esecuzione il frame viene distrutto 
+			- #### Chiamata di una funzione:
+				- ![[Pasted image 20260508140141.png]]
+				- _P_ è la funzione chiamante
+					- pusha i parametri (`param 2, param 1`) della funzione _Q_ sullo stack
+					- procede poi a eseguire l'_istruzione di chiamata_ per chiamare la funzione bersaglio in questo si pusha sullo stack l'_indirizzo di ritorno_ per la funzione 
+				- _Q_ è la funzione chiamata 
+					- pusha il valore del frame pointer corrente sullo stack 
+					- setta il frame pointer al valore dello stack pointer corrente ovvero l'indirizzo del vecchio frame pointer, in questo modo si identifica la location del nuovo _stack frame_ 
+					- si allocano poi lo spazio per le variabili locali (`local 1, local 2`) 
+					- ora si esegue il corpo della funzione 
+						- si setta per pima cosa lo stack pointer di nuovo al valore del frame pointer 
+						- si fa pop del vecchio frame pointer in questo modo si restaura il link allo stack frame della routine del chiamante _P_ 
+						- si esegue l'istruzione di ritorno che fa pop dell'indirizzo di ritorno e si fa quindi tornare il controllo alla funzione chiamante e quindi si ritorna all'indirizzo dell'istruzione subito dopo la chiamata della funzione _Q_ 
+				- _P_ procede a fare pop dei parametri della funzione chiamata e poi continua con l'esecuzione delle istruzioni successive.
+			- #### ES:
+				- ![[Pasted image 20260508143633.png]]
+		- ### Program memory: ^7e53f3
+			- area di memoria dedicata al testo dei codici in esecuzione.
+			- ![[Pasted image 20260508135822.png]]
+- # Link Utili:
+	- 

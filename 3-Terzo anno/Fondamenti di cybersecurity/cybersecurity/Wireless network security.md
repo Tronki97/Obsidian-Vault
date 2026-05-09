@@ -26,26 +26,39 @@ data: "`2026-04-17 11:14`"
 - # Minacce:
 	- ## Associazione dannosa:
 		- quando ci si vuole collegare alla rete internet si deve cercare un access point e ciò lascia spazio ai _rogue access point_ che permetterebbe all'attaccante di rubare dati all'utente legittimo.
-	- ## reti ad-hoc: 
+	- ## Reti ad-hoc: 
 		- sono reti _peer-to-peer_ in cui non sono presenti dispositivi di regolazione centrale tra i collegamenti che potrebbe gestire le comunicazione. Così un qualsiasi attaccante potrebbe far parte di questo collegamento e rubare quindi le credenziali.
 	- ## Reti non tradizionali:
 		- come i collegamenti bluetooth, codici a barre scansionabili ecc...
 		- rappresentano un rischio per la sicurezza in termini di intercettazioni e _spoofing_.
 	- ## MAC Spoofing:
 		- un aggressore può sniffare il traffico per identificare un [[MAC-address|indirizzo MAC]] e modificando quindi il suo per impersonificare un altro.
+	- ## Attacchi MitM:
+		- si inganna un access point e un utente mettendosi in mezzo tra di loro e invece fargli credere di star comunicando direttamente, le reti wireless soffrono molto questo attacco. 
+	- ## Attacchi DoS:
+		- un aggressore bombarda un access point o una porta wireless con messaggi di protocollo che drenano le risorse di sistema
+		- i sistemi wireless sono particolarmente deboli a questo attacco in quanto è più facile riuscire a mandare più messaggi wireless verso il bersaglio. 
 	- ## network injection:
 		- si prende di mira gli access point dove il traffico non è filtrato e dove vengono usati comandi di riconfigurazione di rete fasulli per influenzare il router e degradare le prestazioni della rete.
 	- ## Jamming: 
-		- in sostanza si basa sul mandare un segnale di tutti $1$ che da un particolare tipo di [[Modulazione]] viene interpretato come presenza di segnale quindi di fatto sporcandolo e il ricevitore non vedrà il segnale mandato dal mittente ma vedrà una somma di dei due segnali.
-		- gli attacchi jammer per loro natura richiedono molta energia in quanto l'antenna deve sempre inviare segnale un idea per sfruttare questa pecca del jammer è utilizzare una banda larga di frequenza e quindi usare [[Il Livello fisico#^ee30c8|frequency hopping]] 
+		- in sostanza si basa sul mandare un segnale di tutti $1$ che da un particolare tipo di [[Modulazione]] viene interpretato come presenza di segnale quindi di fatto sporcandolo, di conseguenza il ricevitore non vedrà il segnale mandato dal mittente ma vedrà una somma dei due segnali.
+		- gli attacchi jammer per loro natura richiedono molta energia in quanto l'antenna deve sempre inviare segnale, un idea per sfruttare questa pecca del jammer è utilizzare una banda larga di frequenza e quindi usare [[Il Livello fisico#^ee30c8|frequency hopping]] 
 	- ## Replay attack:
 		- un esempio di questo attacco può essere la trasmissione del segnale di apertura del cancello un attaccante può catturare il treno di impulsi OOK e quindi rimandarlo al cancello per poterlo riaprire 
 		- per cercare di tamponare si può usare il _rolling code_:
-			- il trasmettitore selezione un codice basandosi su uno [[Cifrario di flusso(stream cipher)#^fffea3|PRNG]] e lo invia 
+			- il trasmettitore selezione un codice basandosi su un [[Cifrario di flusso(stream cipher)#^fffea3|PRNG]] e lo invia 
 			- il trasmettitore poi selezione il codice successivo sempre basandosi sul PRNG 
 			- il ricevitore poi controlla che il codice ricevuto sia coerente con il PNRG e nel caso lo sia fa avanzare il PRNG.
 		- nel caso però il codice inviato non venga ricevuto, il ricevitore non controlla solo un codice ma una finestra di codici successivi a quello abilitato poi sposterà ka finestra di conseguenza.
 		- con questo metodo non si annulla completamente il _replay attack_ ma almeno lo rende più difficile.
+- # Challenge and response:
+	- un problema dei metodi come il _rolling code_ è che il ricevitore si limita solo a ricevere il segnale del trasmettitore di fatto non dialogandoci quindi non è previsto un canale di _feedback_ 
+	- tramite dei _transceiver_ è possibile fare il _challenge and response_ 
+		- l'autenticando richiede l'accesso al sistema 
+		- l'autenticatore genera un _nonce_ random e lo invia all'autenticando  
+		- l'autenticando cifra il nonce e re-invia il valore cifrato 
+		- l'autenticatore decifra il messaggio e valida o meno l'accesso.
+	- la cifratura che si applica può essere tramite [[Cifrario a blocchi]] o [[Cifrario di flusso(stream cipher)]]  
 - # RFID:
 	- _radio frequency identification_
 	- utilizza i campi elettromagnetici per identificare e tracciare automaticamente certi _tag_ attaccati a degli oggetti 
@@ -55,6 +68,14 @@ data: "`2026-04-17 11:14`"
 	- il badge _UNIBO_ usa questo sistema ed in particolare il $EM410X$ dove per ogni badge è associato un id univoco 
 	- ## Spoofing:
 		- è sempre possibile spacciarsi per un altra persona catturando il segnale mandato dal badge con un _transceiver RFID_ per poi utilizzarlo per autenticarsi come quella persona.
-- # SSID hiding:
-	- consiste nell'evitare che il router mandi in broadcast il nome della rete a cui è collegato, può essere usato come "meccanismo di sicurezza" perché così l'attaccante non riuscirà a vedere il nome della rete e quindi non dovrebbe riuscire ad accedervi.
+- # Wi-Fi:
+	- è l'utilizzo dello standard _IEEE 802.11_ pensato principalmente per le reti locali 
+	- ## Collisioni:
+		- per l'accesso al canale è necessario un protocollo tra i dispositivi per ridurre le collisioni che è molto probabile accadano nel campo del wireless uno di questi protocolli è il [[time domain first#^349ba4|CSMA/CA]] 
+		- si può presentare il problema dei [[space domain#^e0721a|terminali nascosti]] 
+		- un modo per ridurre le collisioni è quello di avere un tempo di [[time domain first#^7657bf|backoff]] avendo quindi degli spazi di tempo da rispettare.
+			- se qualcuno decidesse di non rispettare il _backoff_ in seguito ad una collisione si avrebbe che comunicherebbe solo lui 
+			- se due terminali decidessero di non rispettare mai il _backoff_ nessuno riuscirebbe più a comunicare avendo quindi un _DoS_ 
+	- ## SSID hiding:
+		- consiste nell'evitare che il router mandi in broadcast il nome della rete a cui è collegato, può essere usato come "meccanismo di sicurezza" perché così l'attaccante non riuscirà a vedere il nome della rete e quindi non dovrebbe riuscire ad accedervi.
 - # Link Utili:

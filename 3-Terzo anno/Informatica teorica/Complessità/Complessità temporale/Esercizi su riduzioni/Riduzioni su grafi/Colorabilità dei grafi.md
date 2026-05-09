@@ -2,6 +2,10 @@
 tags:
 aliases:
   - COL
+  - k-col
+  - k-colorabilità
+  - k colorabilità
+  - k col
 data: "`2026-04-13 17:57`"
 ---
 - # Definizione:

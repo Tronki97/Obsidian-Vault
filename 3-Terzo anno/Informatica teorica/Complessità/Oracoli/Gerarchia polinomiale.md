@@ -1,0 +1,37 @@
+---
+tags:
+aliases:
+data: "`2026-04-28 18:55`"
+---
+- # Gerarchia polinomiale:
+	- livelli di classi ad oracolo che si trovano tra _NP_ e _PSPACE_
+	- $\Sigma^{P}_{i}$
+		- $\Sigma^{P}_{0}=P$ 
+		- $\forall i \ge 1 \ \ \Sigma_{i}^{P}=NP^{\Sigma_{i-1}^{P}}$
+		- $\Sigma^{P}_{1}=NP^{P}=NP$ 
+		- $\Sigma_{2}^{P}= NP^{\Sigma_{1}^{P}} =NP^{NP}$
+		- e così via 
+	- $\Pi_{i}^{P}$
+		- $\Pi_{1}^{P}=CO-NP$ 
+		- $\forall i\ge0\ \  \Pi_{i}^{P}=CO-\Sigma^{P}_{i}=\{L| \bar{L}\in \Sigma^{P}_{i}  \}$
+		- di fatto quindi $\Pi^{P}_{3}$ è l'insieme di tutti i linguaggi i quali complementi stanno in $\Sigma^{P}_{3}$
+	- $\Delta_{i}^{P}$
+		- $\Delta^{P}_{i+1}=P^{\Sigma^{P}_{i}}$
+		- $\Delta^{P}_{3}=P^{\Sigma^{P}_{2}}=P^{NP^{NP}}$
+		- e siccome $MIN-COVER\in P^{NP}$ avrò che $MIN-COVER\in \Delta^{P}_{2}$
+	- ## Relazioni tra le classi:
+		- $\Sigma^{P}_{i}\subseteq \Delta_{i+1}^{P}$
+			- per definizione so che $\Delta^{P}_{i+1}=P^{\Sigma^{P}_{i}}$ e, similmente a quello che è stato detto per $NP \subseteq P^{NP}$, $\Sigma^{P}_{i} \subseteq P^{\Sigma_{i}^{P}}=\Delta^{P}_{i+1}$ 
+		- $\Pi_{i}^{P}\subseteq \Delta_{i+1}^{P}$
+			- qua invece seguendo ciò che è stato detto per $CO-NP \subseteq P^{NP}$ ho che $\Pi^{P}_{i}=CO-\Sigma^{P}_{i} \subseteq P^{\Sigma^{P}_{i}}=\Delta^{P}_{i+1}$
+		- $\Delta_{i}^{P} \subseteq \Sigma_{i}^{P}$
+			- voglio dimostrare che $P^{\Sigma^{P}_{i-1}}\subseteq NP^{\Sigma^{P}_{i-1}}$ e in sostanza che se un linguaggio può essere deciso in tempo _polinomiale_ da una _macchina deterministica_ con un oracolo in $\Sigma^{P}_{i-1}$ allora può essere deciso in _tempo polinomiale_ da una macchina _non-deterministica_ con lo stesso oracolo il che è ovvio, semplicemente _non usa il non-determinismo_ 
+		- $\Delta_{i}^{P}\ \subseteq \Pi_{i}^{P}$
+			- sia $L\in \Delta_{i}^{P}=P^{\Sigma^{P}_{i-1}}$, quindi esiste una $MdT$ _det_ $M$ che decide $L$ in tempo polinomiale usando un oracolo in $\Sigma^{P}_{i-1}$, essendo la macchina deterministica si possono invertire le risposte date da essa costruendo quindi $M'$ che decide $\bar{L}$ ma la classe della macchina non cambia e $\bar{L}\in \Delta_{i}^{P}$ e quindi $\Delta_{i}^{P}=CO-\Delta_{i}^{P}$  
+			- dalla dimostrazione precedente ($\Delta_{i}^{P} \subseteq \Sigma_{i}^{P}$) ho che $\bar{L}\in \Sigma^{P}_{i}$ e quindi il suo complemento $L\in CO-\Sigma^{P}_{i}=\Pi_{i}^{P}$ 
+		- ![[Pasted image 20260428183818.png]]
+		- $\exists \forall -SAT$
+			- $\exists x \forall y \ \ \phi(x,y)$ e quindi la domanda è: esiste un vettore di variabili $x$ tale che per ogni vettore di variabili $y$ la formula $\phi$ è soddisfacibile 
+			- questo linguaggio $\in \Sigma^{P}_{2}$ ed è in realtà $\Sigma^{P}_{2}-$completo  
+- # Link Utili:
+	- 

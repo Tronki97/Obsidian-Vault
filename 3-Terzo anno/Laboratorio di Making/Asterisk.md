@@ -1,0 +1,16 @@
+- # Voip
+	- famiglia di protocolli che consentono la comunicazione in tempo reale di suoni
+	- si usa per tutte le chiamate non per via telefonica 
+- asterisk è un server Voip 
+- # Private branch exchange (PBX):
+	- un sistema di scambio che permette di gestire comunicazioni di tipo telefonico 
+	- ## SiP:
+		- protocollo di [[Livello applicazione]] che serve per fare l'handshake nelle chiamate  
+- # Dial Plan:
+	- insieme di regole che impiegano certi metodi da chiamare in secondo certe condizioni 
+	- _extension_: indica un certo numero da chiamare.
+	- c'è bisogno di configurare degli utenti. 
+		- gli si da il nome utente 
+		- gli si da una password 
+		- gli si da un particolare contesto 
+			- tutte le extension che quell'utente digiterà saranno relative a quel determinato contesto. 

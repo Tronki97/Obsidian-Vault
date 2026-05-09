@@ -19,15 +19,38 @@ data: "`2026-04-13 10:00`"
 - nei sistemi UNIX la politica di sicurezza è quella _DAC_ 
 	- di fatto esiste il comando `chmod` che permette agli utenti singoli di cambiare i permessi per certi file.
 - # modelli di scambio di informazioni:
-	- ## Modello Bell-LaPadula:
+	- ## Modello Bell-LaPadula(BLP):
 		- si concentra sulla confidenzialità dei dati e sull'accesso a informazioni segrete 
-		- mira a a dimostrare logicamente che un designa soddisfi un certo insieme di requisiti di sicurezza e che la sua implementazione è fedelmente conforme alle sue specifiche.
-			- ad ogni soggetto e oggetto viene assegnata una classe di sicurezza 
-			- un soggetto può leggere oggetti con livelli di sicurezza minori o uguali al suo 
-			- un soggetto può scrivere oggetti a livelli di sicurezza pari o maggiori al suo. 
+		- mira a a dimostrare logicamente che un design soddisfi un certo insieme di requisiti di sicurezza e che la sua implementazione è fedelmente conforme alle sue specifiche.
+			- ad ogni soggetto e oggetto viene assegnata _una classe di sicurezza_
+			- un soggetto può leggere oggetti con livelli di sicurezza _minori o uguali al suo_ 
+			- un soggetto può scrivere oggetti a livelli di sicurezza _pari o maggiori al suo_. 
+		- ### ES:
+			- suppongo di avere tre livelli di sicurezza:
+				- _Top-Secret_
+				- _Secret_
+				- _Public_ 
+			- un operatore a livello secret può:
+				- leggere documenti _Secret_ e _Public_ 
+				- scrivere documenti _Secret_ e _Top-Secret_
 	- ## Biba:
 		- il contrario di BLP 
 		- si può leggere i livelli uguali o superiori 
-		- si può scrivere ai livelli uguali o inferiori. 
+		- si può scrivere ai livelli uguali o inferiori.
+- # Permessi nei Filesystem Linux:
+	- nei filesystem linux esiste il concetto di _gruppo_ dove un utente può appartenere a più gruppi che di solito vengono usati per controllare l'accesso a file di device driver (`/dev`) come audio, video, dischi esterni, ecc...
+		- ![[Pasted image 20260509151012.png]]
+	- esistono poi 3 permessi speciali che si trovano nei bit più significativi dei metadati del file:
+		- _setuid_
+			- una cartella con questo permesso verrà ignorata 
+			- applicato ad un file permetterà di eseguirlo come se fosse eseguito dal suo proprietario
+		- _setgid_
+			- assegna ai file creati nella cartella con questo permesso lo stesso gruppo della cartella 
+			- in questo modo si può mantenere una sorta di coerenza per tutti i file all'interno di una cartella
+			- assegnarlo ad un file permetterà di eseguirlo con il suo gruppo di appartenenza 
+		- _sticky_
+			- questo bit applicato su una cartella permette l'eliminazione dei file al suo interno solo al suo _owner_, anche se ha i permessi di scrittura per tutti (per esempio la cartella `/tmp`)
+			- se messo su di un file questo bit viene ignorato
+		- se un eseguibile appartenente a `root` e avente i bit di _setuid_ o _setgid_ attivi potrebbe essere sfruttato per ottenere l'accesso a root ad un altro utente 
 - # Link Utili:
 	- 

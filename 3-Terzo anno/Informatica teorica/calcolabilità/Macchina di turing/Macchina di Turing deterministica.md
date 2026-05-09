@@ -58,7 +58,7 @@ data: "`2026-02-23 16:10`"
 				- E la testina è sul simbolo a destra dello stato quindi la seconda "a"
 		- ### Configurazione iniziale: ^aa3d99
 			- La configurazione in cui si trova la macchina nel momento in cui la si accende. 
-		- ### Configurazione accettante:
+		- ### Configurazione accettante: ^d42b1d
 			- Si dice accettante quando al suo interno compare uno stato accettante
 		- ### Configurazione finale: ^887fb0
 			- Quando dallo stato in cui si trova la macchina essa non può fare altri passi

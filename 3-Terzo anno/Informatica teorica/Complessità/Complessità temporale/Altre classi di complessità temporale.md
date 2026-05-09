@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
   - UNSAT
   - CO-NP
@@ -13,7 +12,7 @@ data: "`2026-04-20 12:18`"
 ---
 - # UNSAT:
 	-  $$UNSAT=\{\phi | \phi \text{ è una formula non soddisfacibile} \}$$
-- # CO-NP:
+- # CO-NP: ^eb6fff
 	- insieme dei linguaggi i cui complementi appartengono a $NP$ 
 		- $$\{L| \bar L \in NP\}$$
 	- $UNSAT\in NP$ perché il suo complemento ovvero $SAT\in NP$ 
@@ -89,7 +88,7 @@ data: "`2026-04-20 12:18`"
 			- la loro taglia è al massimo $n$ 
 	- quindi il linguaggio $FACTOR$ si colloca nell'intersezione di $NP$ e $CO-NP$ però non in $P$
 		- ![[FACTOR.excalidraw]]
-- # EXP:
+- # EXP: ^65b187
 	- insieme dei linguaggi di cui si ha la certezza che possono essere risolti da [[Macchina di Turing deterministica]] in tempo esponenziale 
 		- $$EXP=\bigcup_{c\ge 1}DTIME(2^{n^{c}})$$
 	- $NP$ è sottoinsieme di $EXP$ perché è possibile ridurre una macchina non-det ad una det aumentando il tempo di riconoscimento ad esponenziale 

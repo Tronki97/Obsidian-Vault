@@ -13,6 +13,8 @@ aliases:
   - REACH
   - NL-completezza
   - NL-hardness
+  - PSPACE
+  - NPSPACE
 data: "`2026-04-23 15:38`"
 ---
 - # Intro:
@@ -29,7 +31,7 @@ data: "`2026-04-23 15:38`"
 	- si tratta di _visitare_ non _scrivere_:
 		- perché altrimenti si potrebbe usare qualche trucco che ci permetterebbe di non scrivere quasi niente e di sfruttare lo spazio con il $\not b$
 	- nel caso di una [[Macchina di Turing non-deterministica]] basta controllare tutti i branch dell'[[Macchina di Turing non-deterministica#^ab1928|albero di computazione]] e guardare quello che ne ha visitate di più
-	- ## Space function:
+	- ## Space function: ^52c243
 		- $$s(n): \mathbb{N}\to \mathbb{N}$$
 		- è strettamente positiva e monotona non-decrescente simile alla [[Nozioni di Complessità strutturale#^dc4cbe|time function]] 
 	- ## Running space:
@@ -40,10 +42,10 @@ data: "`2026-04-23 15:38`"
 		- $$DSPACE(s(n)) = \{L | \exists M \text{ deterministica t.c. } L(M) = L \text{ e il running space di M e' } O(s(n))\}$$
 	- ## NSPACE:
 		- $$NSPACE(s(n)) = \{L | \exists M \text{ non-deterministica t.c. } L(M) = L \text{ e il running space di M e' } O(s(n))\}$$
-	- ## LOGSPACE:
+	- ## LOGSPACE: ^54c5e2
 		- è anche detto _L_
 		- $$LOGSPACE = DSPACE(\log_{2}(n))$$
-	- ## NLOGSPACE:
+	- ## NLOGSPACE: ^4ee054
 		- è anche detto _NL_
 		- $$NLOGSPACE = NSPACE(\log_{2}(n))$$
 	- ## ES:
@@ -66,9 +68,14 @@ data: "`2026-04-23 15:38`"
 			- in sostanza:
 				- il vertice corrente è rappresentato in base 2 e quindi logaritmico sul numero dei nodi come il contatore
 				- quindi $REACH\in LOGSPACE$
+	- ## PSPACE: ^303f0e
+		- $$PSAPCE = \bigcup_{c\ge 1}DSPACE(n^{c})$$
+	- ## NPSPACE:
+		- $$NPSPACE = \bigcup_{c\ge 1} NSPACE(n^{c})$$
 - # Considerazioni:
 	- $L\subseteq NL$ anche se non si sa ancora se $L\ne NL$ 
-- # NL-completezza:
+	- mentre si sa, grazie al [[Teorema di Savitch]] che $PSPACE = NPSPACE$ 
+- # NL-completezza: ^7f6e94
 	- $A$ è $NL-$completo se:
 		- $A\in NL$ 
 		- ## NL-hardness:
@@ -76,8 +83,8 @@ data: "`2026-04-23 15:38`"
 				- $B\le_{L} A$ è una riduzione _logspace_ deve essere quindi calcolabile in spazio logaritmico
 					- _il trasduttore_ che calcola questa funzione di _riduzione_ lavora sul secondo nastro ed è li che si applica il _bound logaritmico_ 
 					- il nastro di output è dio sola scrittura e quindi il _trasduttore_ non lo può usare per fare dei lavori intermedi obbligandoci a trovare delle procedure che ci fanno scrivere sul nastro di output _solo risultati corretti_
-	- ## ES:
-		- $REACH\in NL$-completo:
+	- ## NL-completezza di REACH:
+		- $REACH\in NL$-completo: ^4d4221
 			- _non si hanno problemi NL-hard di partenza da usare come base_
 			- bisogna quindi fare in maniera equivalente al [[Teorema di Cook]] 
 			- dimostro quindi che $REACH\in NL-$hard:

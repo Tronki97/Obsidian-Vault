@@ -1,0 +1,95 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-04-29 14:12`"
+---
+- # Hamiltonian cycle:
+	- un grafo presenta un hamiltonian cycle se è possibile costruire un percorso che passa per ogni nodo massimo una volta e ritorna al nodo di partenza 
+	- ![[Hamiltonian Cycle.gif]]
+- # Def:
+	- è un problema su [[Grafi]]
+	- si ha un [[Grafi#^fa433e|grafo non orientato]] con gli archi pesati 
+		- si assumono pesi positivi 
+	- $G=<V,E,\lambda>$ 
+		- $\lambda: V \to \mathbb{N}$
+	- $$FTSP(G)=\min \{\lambda(\pi)| \pi \text{ è un hamiltonian cycle di }G=<V,E>  \}$$
+	- $$TSP=\{<G,k>|G \text{ ammette un hamiltonian cycle di peso almeno}\  k \}$$
+		- _$TSP\in NP$ perché si può guessare il ciclo e poi sommare i pesi sugli archi e verificare che non ecceda $k$_
+	- si può avere un trasduttore $FP^{NP}$ che quindi faccia richiesta ad un oracolo per il problema $TSP$ 
+		- fare chiamate in base al peso totale degli archi del grafo non farebbe rientrare il problema in $FP^{NP}$ perché risulta non polinomiale rispetto alla taglia dell'input perché si basa sul peso totale invece che sul numero di nodi. 
+		- se invece si facesse una ricerca binaria sul dominio $[0, SUM]$ che risulta esponenziale sulla taglia che ci serve per rappresentare l'input e visto che si fa una ricerca binaria risulta quindi $O(\log 2^{n^{c}})=O(n^{c})$ che è _polinomiale_.
+- # NP-completezza di TSP:
+	- ## appartenenza ad NP:
+		- già dimostrato in precedenza 
+	- ## NP-hardness:
+		- $$3SAT\le_{P} DHC \le_{P} HC \le_{P} TSP$$
+		- $3SAT\le_{P} DHC$ (directed hamiltonian cycle)
+			- istanza di partenza una formula $\phi$ in 3CNF e quella di arrivo è un grafo orientato 
+				- _istanza si di partenza_: una formula $\phi$ in 3CNF che ammette una assegnazione che la soddisfa 
+				- _istanza si di arrivo_: un grafo orientato che ammette un ciclo hamiltoniano
+			- ### Trasformazione:
+				- si vuole trasformare una certa assegnazione in un certo percorso del grafo 
+				- si hanno quindi $2^{n}$ assegnazioni di variabili, e serve quindi una struttura del grafo con $2^{n}$ percorsi possibili. 
+				- sia $x_{i}$ una variabile di $\phi$ e sia $m$ il numero di clausole di $\phi$ per ogni $x_{i}$ si genera questa sequenza:
+					- si generano $m$ coppie di nodi tra ogni coppia si aggiungono dei nodi extra e all'inizio e alla fine della sequenza si aggiungono degli altri nodi. 
+					- da sinistra a destra si collegano i nodi con archi _verdi_ e da destra a sinistra con archi _rossi_ 
+					- ![[Pasted image 20260504141422.png|558]]
+				- ![[Pasted image 20260504141444.png|488]]
+					- dopo ogni scelta si inserisce la sequenza generata per $x_{i}$ 
+					- infine l'ultimo nodo è collegato al primo. 
+					- in questo modo però si avrà sempre un ciclo hamiltoniano 
+					- quello che si fa è aggiungere un nodo relativo alla clausola 
+					- si agganciano quindi le clausole alle catene dei letterali che compaiono in quelle clausole.
+						- se $x_{i}\in c_{j}$ si costruirà la sequenza:
+							- ![[Pasted image 20260504141732.png]]
+						- se $\neg x_{i} \in c_{j}$ si costruisce la sequenza:
+							- ![[Pasted image 20260504141748.png]]
+				- risultando quindi in un grafo di questo tipo:
+					- ![[Pasted image 20260504141840.png|577]]
+			- ### Funzionamento della trasformazione:
+				- istanza si di partenza:
+					- suppongo che $\phi$ sia soddisfacibile e sia $\sigma$ un assegnamento che la soddisfi 
+					- ogni volta che è possibile si un detour verso un nodo clausola non ancora visitato e siccome ce ne deve essere almeno uno per clausola siccome $\sigma$ esiste quindi si riescono a visitare tutti i nodi del grafo 
+				- istanza si di arrivo:
+					- assumo che il grafo abbia un ciclo hamiltoniano 
+					- sia $\pi$ un qualsiasi ciclo hamiltoniano di $G$ 
+						- 1: in $\pi$ devono quindi comparire tutti i nodi clausola e se si arriva a $c_{j}$ da $x_{i}^{j'}$ allora il nodo successivo deve essere $x_{i}^{j''}$
+						- 2: se in $\pi$ si arriva a $c_{j}$ da $x_{i}^{j''}$ allora il nodo successivo deve essere $x_{i}^{j'}$
+					- altrimenti se dopo essere entrati in un nodo clausola se si esce in un nodo di un livello diverso succederà che il nodo $x_{i}^{j}$ dovrà essere attraversato prima o poi arrivando dal lato opposto ma ciò porterà per forza ad attraversare un nodo già visitato.
+					- quindi tutti i cicli $\pi$ saranno _well-behaved_ e quindi non saranno tali che ci saranno dei salti fra i livelli delle variabili.
+		- $DHC \le_{P} HC$ 
+			- istanza di partenza è un [[Grafi#^a0b8ac|grafo orientato]] $G$ e quella di arrivo è un [[Grafi#^fa433e|grafo non orientato]] $H$
+				- istanza si di partenza un grafo orientato che ammette un hamiltonian cycle 
+				- istanza si di arrivo un grafo non orientato che ammette un hamiltonian cycle 
+			- ### Trasformazione:
+				- ogni nodo di $G$ viene trasformato in $3$ nodi in $H$ 
+					- $A \to (A_{in}, A_{mid}, A_{out})$ che sono collegati sequenzialmente tra di loro 
+					- se c'è un collegamento diretto da $A$ a $B$ in $G$ collegherò $A_{out}$ a $B_{in}$ in $H$ 
+					- ![[DHC to HC.excalidraw]]
+			- ### Funzionamento della riduzione:
+				- istanza si di partenza:
+					- suppongo $\pi$ sia un $H.C.$ di $G$ quindi esiste un ciclo Hamiltoniano orientato in $G$ 
+						- $v_{1},v_{2},...,v_{n}, v_{1}$
+						- che diventa 
+							- $$v_{1_{in}},v_{1_{mid}},v_{1_{out}},v_{2_{in}},v_{2_{mid}},v_{2_{out}},...,v_{n_{in}},v_{n_{mid}},v_{n_{out}},v_{1_{in}},v_{1_{mid}},v_{1_{out}}$$
+				- istanza si di arrivo:
+					- suppongo di partire dal grafo $H$ con un $H.C.$ 
+						- saprò sicuramente che la sequenza dei nodi nel ciclo sarà:
+							- $in,mid,out...$ oppure $out,mid,in$ 
+						- $v_{1_{in}},v_{1_{mid}},v_{1_{out}},v_{2_{in}},v_{2_{mid}},v_{2_{out}},...,v_{n_{in}},v_{n_{mid}},v_{n_{out}},v_{1_{in}},v_{1_{mid}},v_{1_{out}}$
+							- questo garantisce la presenza di un $H.C$ in $G$ in quanto basta far collassare le triplette rendendola $v_{1},v_{2},...,v_{n}, v_{1}$ 
+		- $HC \le_{P} TSP$
+			- istanza di partenza è un grafo _non orientato_ $G$ e quella di arrivo è una coppia $<H,k>$
+				- istanza si di partenza: grafo $G$ che ammette un $H.C$ 
+				- istanza si di arrivo: grafo $H$ che ammette $H.C$ con peso al massimo $k$ 
+			- ### trasformazione:
+				- si replica $G$ su $H$ solo che ogni arco in $H$ avrà peso $1$ e a $k$ si assegna il numero di nodi di $G$ ($k=|V|$) 
+				- questa riduzione si calcola anche in [[Complessità spaziale#^54c5e2|LOGSPACE]]
+			- ### Funzionamento:
+				- istanza si di partenza:
+					- $G$ ammette un ciclo hamiltoniano $\pi$ che sarà presente anche in $H$ ma ci si chiede se il costo è $\le k$ il che è vero perché si attraversa un numero di archi $\le |V|$, avente peso $1$, al massimo una volta quindi il peso sarà sicuramente $\le k$
+				- istanza si di arrivo:
+					- $H$ ammette un ciclo $\pi$ di peso $\le k$ quindi anche in $G$ ci sarà sicuramente un ciclo siccome basta togliere il peso degli archi e visto che la struttura del grafo è uguale allora ci sarà un ciclo anche in $G$  
+	- quindi $TSP$ è NP completo e per questa sua caratteristica non sarà possibile 
+- # Link Utili:

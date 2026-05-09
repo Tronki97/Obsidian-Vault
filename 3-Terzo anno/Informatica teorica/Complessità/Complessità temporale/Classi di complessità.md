@@ -56,10 +56,10 @@ data: "`2026-03-31 14:54`"
 					- esiste un insieme di $k$ nodi che non sono collegati da un arco  
 				- si deve quindi guardare tutti i nodi $k$ e controllare tutti i sottoinsiemi e questa operazione costa $\binom{n}{k}\simeq 2^{n}$  
 		- _una soluzione è possibile calcolarla efficientemente_
-- # Non-Determinismo:
+- # Non-Determinismo: ^117cc2
 	- ## classe NTIME
 		- $NTIME(t(n))=\{L|\exists M\text{ non deterministica che decide L in tempo}\ O(t(n)\}$
-	- ## NP: ^488c5d
+	- ## classe NP: ^488c5d
 		- _nodeterministic polynomial_
 		- insieme di tutti i problemi di decisioni che possono essere _decisi_ da macchine di turing non deterministiche in tempo polinomiale
 			- $$NP=\bigcup_{c\ge1}\ NTIME(n^{c})$$

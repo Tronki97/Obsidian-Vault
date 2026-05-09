@@ -1,0 +1,40 @@
+---
+tags:
+aliases:
+data: "`2026-04-24 15:53`"
+---
+- # Preconcetti:
+	-  $REACH \in DSPACE((\log \ n)^{2})$
+		- non si ha quindi una esplosione di spazio necessario 
+		- per riuscire ad andare da $s$ a $t$ serve passare per un nodo intermedio $u$ e quindi dividere il percorso in due da $s$ a $u$ e da $u$ a $t$ quindi in sostanza fare una ricerca binaria. 
+		- questo nodo $h$ potrebbe essere _guessato_ ma siccome si è nel campo del determinismo non lo si può fare quindi si sfrutta il fatto che non ci sono limiti sul tempo e si proveranno quindi tutti i nodi intermedi possibili
+		- ## TH:
+			- $REACH \in DSPACE((\log \ n)^{2})$ 
+			- casi base:
+				- $s=t$ 
+				- $s$ e $t$ sono collegati direttamente da un arco 
+			- provo ogni nodo $u$ e ricorsivamente eseguo l'algoritmo da $s$ verso $u$ e poi da $u$ verso $t$ 
+			- ![[Pasted image 20260424153453.png|634]]
+			- il $k$ che gli passiamo deve essere uguale al numero di nodi o archi del grafo $G$ 
+			- ![[Pasted image 20260424154803.png]]
+				- quindi in memoria si terrà alla volta massimo un branch dove ogni chiamata occupa $O(\log |E|)$ e l'altezza di questo branch è $O(\log |V|)$ il cui totale è $O(log^{2}n)$ 
+- # Teorema di Savitch:
+	- sia $s(n)\in \Omega(\log n)$ una [[Complessità spaziale#^52c243|space function]] allora:
+		- $$NSPACE(s(n))\subseteq DSPACE(s(n)^{2})$$
+	- ## Dim:
+		- sia $L\in NSPACE(s(n))$ serve quindi dimostrare che ogni $L$ può essere deciso da una [[Macchina di Turing deterministica]] in spazio $O(s^{2}(n))$ 
+		- per sapere se $w\in L$ si esplora il grafo di computazione di una macchina $M$ che decide $L$ 
+		- serve ancora rappresentare le [[Macchina di Turing deterministica#^e83938|instantaneous description]] in questo modo 
+			- ![[Pasted image 20260428171959.png]]
+				- $H_{1}:$ posizione della testina sull'input 
+				- $H_{2}:$ posizione della testina sul work-tape 
+				- $Q:$ stato corrente  
+		- guardare il work-tape basta per vedere che in quanto a spazio si ha $O(s(n))$ bits/simboli 
+		- avendo $l$ simboli dell'alfabeto di nastro si avranno al massimo $O(l^{s(n)})$ stringhe che è quindi il numero di _vertici_ 
+		- mentre per il numero di _archi_ $O((l^{s(n)})^{2})=O(l^{2*s(n)})$ 
+		- usando quindi l'algoritmo per $EXIST-PATH$ sul grafo di computazione si avrà di spazio:
+			- $$O((\log (l^{2*s(n)}))^{2})= O((2*s(n)*\log l)^{2}) = O(4*s(n)^{2}*(\log l)^{2} ) =O(s(n)^{2})$$
+				- questo perché $4$ e $\log^{2} l$ sono due costanti.
+		- in conclusione si ha usato questo algoritmo per cercare l'esistenza di un percorso tra un nodo che rappresenta la [[Macchina di Turing deterministica#^aa3d99|configurazione iniziale]] e uno che rappresenta una [[Macchina di Turing deterministica#^d42b1d|configurazione accettante]]
+- # Link Utili:
+	- 

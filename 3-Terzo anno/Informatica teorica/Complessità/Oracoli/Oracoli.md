@@ -1,0 +1,49 @@
+---
+tags:
+aliases:
+  - macchine di Turing con oracolo
+  - oracolo
+  - MIN-COVER
+data: "`2026-04-27 12:15`"
+---
+- # MIN-COVER: ^ffb59a
+	- $$MIN-COVER=\{<G,k>|\text{i VERTEX COVER di taglia minima abbiano taglia k}\}$$
+	- sembra non stare in NP 
+	- si potrebbe fare guess per un VC di taglia $k-1$ e se esiste riesco a dire di no al problema, però se non lo trovassi, un [[Vertex Cover|VC]] di taglia $k$ potrebbe comunque esserci  
+	- il problema si colloca in [[Complessità spaziale#^303f0e|PSPACE]] in quanto basta partire da 0 nodi e controllare che ci sia un VC e appena se ne trova uno confrontarlo con $k$ e rispondere in base all'uguaglianza.
+	- ## Metodo alternativo:
+		- $$MIN-COVER=\{<G,k>|<G,k>\in VC  \ \wedge <G,k-1>\notin VC \}$$
+			- può essere inteso come intersezione di due linguaggi 
+			- uno che controlla per VC di taglia $k$ e uno per quelli di taglia $k-1$ 
+		- `MIN-COVER(G,k)`
+			- `result_1=check_VC(G,k)`
+			- `result_2=check_VC(G,k-1)`
+			- `return (result_1 && not result_2)`
+		- questo è un metodo che usa gli _oracoli_ 
+		- non è possibile mettere insieme due [[Macchina di Turing non-deterministica]] per farle rispondere alle sub-routine perché una delle macchine sta cercando una risposta _si_ mentre l'altra una risposta _no_, risultando quindi in 2 classi diverse [[Classi di complessità#^117cc2|NP]] per la prima e [[Altre classi di complessità temporale#^eb6fff|CO-NP]] per la seconda.
+- # Macchine di Turing Con oracolo:
+	- è una macchina che può fare una chiamata a sub-routine 
+		- si assume che queste chiamate riescano a rispondere in _tempo costante_ 
+	- _composizione_:
+		- _oracle tape_: 1 nastro designato per fare domande all'oracolo
+			- è di sola scrittura 
+	- la macchina scrive sul _oracle tape_ e poi transisce su uno stato specifico $q_{?}$ 
+		- l'oracolo risponde poi a una domanda di membership che mi dice se la stringa scritta appartiene al linguaggio specifico dell'oracolo 
+		- la macchina in base alla risposta transirà sullo stato $q_{y}$ o $q_{n}$ e in seguito l'_oracle tape_ viene cancellato.
+	- una macchina di questo tipo si identifica con $M^{?}$ e se deve fare domande specifiche per un certo linguaggio si indica con $M^{L}$
+		- per esempio con $SAT$ si indica con $M^{SAT}$ 
+- # Classi di complessità ad Oracolo:
+	- sia $C$ una classe di complessità 
+	- si definisce 
+		- $$P^{C}=\{L| \text{L può essere deciso da una macchina}\  M^{?} \text{ in tempo P che domanda ad un oracolo della classe C }\}$$
+		- $$NP^{C}=\{L| \text{L può essere deciso da una macchina}\  M^{?} \text{in tempo NP che domanda ad un oracolo della classe C  }\}$$
+	- ## ES:
+		- $MIN-COVER\in P^{NP}$ 
+		- perché si usa un algoritmo deterministico che fa richieste per un linguaggio $VC\in NP$
+	- ## Relazione con le altre classi:
+		- $NP\subseteq P^{NP}$
+			- sia $L\in NP$, una macchina con oracolo per $L$ è semplicemente una macchina che chiama l'oracolo con una stringa per $L$ e che quindi darà come risposta quella dell'oracolo
+		- $CO-NP \subseteq P^{NP}$ 
+			- per lo stesso motivo del precedente e basta fare la domanda all'oracolo e poi invertire la risposta 
+			- sia $\bar{L}\in CO-NP$ si decide se $w\in L$ semplicemente chiedendo se $w\in \bar{L}$ e se questo è il caso si rigetta altrimenti si accetta 
+- # Link Utili:
