@@ -4,13 +4,21 @@ tags:
 aliases:
 data: "`2026-05-04 09:16`"
 ---
+- # Hash:
+	- ripasso sull'hashing e sulla sua non invertibilità 
+	- ## GNU coreutils:
+		- strumenti disponibili nella maggior parte delle distribuzioni Linux
+		- _generare un Hash:_ `{md5, sha1, sha224, sha256, ...}sum (filename)`
+		- _controllare l'hash:_ `echo "(hash)  (filename)" | {md5, sha1, sha224, sha256, ...}sum -c`
+			- tra `(hash)` e `(filename)` ci sono due spazi 
 - # Attacchi agli algoritmi di Hash:
 	- si possono fare attacchi brute force 
 	- precomputed attacks:
 		- ## Catene di Hash:
+			- permettono una "inversione" efficiente sullo spazio e il tempo delle [[Tabelle Hash#^01153a|funzioni hash]] 
 			- si precalcolano un certo numero di password di lunghezza $k$ chiamandola così _catena_ 
 			- si storano solo l'_inizio_ e _fine_ di ogni catena 
-			- più $k$ è grande meno catene da immagazzinare ci saranno 
+				- più $k$ è grande meno catene da immagazzinare ci saranno ma più sarà alto il costo di CPU per ricostruirle 
 			- serve quindi una _funzione di riduzione_ $R:H \to P$ 
 				- con $P$ che è lo spazio delle password 
 				- si seleziona un $P'\subset P$ e poi $\forall p' \in P'$ si applica $H(p')=h'$ e poi $R(h')=p''$ e si ripete questo procedimento per $k$ volte
@@ -20,7 +28,15 @@ data: "`2026-05-04 09:16`"
 			- un problema risultante delle catene di Hash è la probabile presenza di collisioni 
 		- ## Rainbow tables:
 			- si cerca di ridurre il problema di collisioni 
-			- invece di usare una sola funzione di riduzione $R$ se ne usa una famiglia $\{R_{1}, ..., R_{n}\}$ 
+			- invece di usare una sola funzione di riduzione $R$ se ne usa una famiglia $\{R_{1}, ..., R_{k}\}$ 
+			- ### Utilizzo:
+				- si installa il pacchetto:
+					- `rainbowcrack` 
+				- si genera e si ordina una rainbowtable con un certo hash(per esempio _md5_):
+					- `sudo rtgen md5 loweralpha 1 7 0 1000 100000 0`
+					- `sudo rtsort /usr/share/rainbowcrack`
+				- si cracca poi un certo hashcode:
+					- `rcrack /usr/share/rainbowcrack -h (hash)` 
 	- _dictionary attack_:
 		- si provano tutte le parole salvate in una lista predefinita molto lunga hashando la parola e confrontandola con l'hash salvato dal sistema, questo attacco viene reso meno efficace dal meccanismo di [[User Authentication#^1f596d|salting]] 
 		- queste liste di parole sono rese pubbliche online 

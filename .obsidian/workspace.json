@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/VAPT.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "VAPT"
             }
           },
           {
-            "id": "c5e126c2d1c7bc6a",
+            "id": "10ed083cfabd416d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-Mostarda/Terzo Anno/Fondamenti di cybersecurity.md",
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/lab 2 cybersecurity.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Fondamenti di cybersecurity"
+              "title": "lab 2 cybersecurity"
             }
           },
           {
-            "id": "9fd679dcbb845666",
+            "id": "4df2b9f550e8513e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Wireless network security.md",
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/lab 2 cybersecurity.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Wireless network security"
+              "title": "lab 2 cybersecurity"
             }
           }
         ],
@@ -282,10 +282,19 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "9fd679dcbb845666",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "2-Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/VAPT.md",
+    "Pasted image 20260511123930.png",
+    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/lab 2 cybersecurity.md",
+    "Homepage.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Sicurezza dei sistemi.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Sicurezza nelle reti Wi-Fi.md",
     "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Wireless network security.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario di flusso(stream cipher).md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Network security.md",
+    "2-Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
     "0-Mostarda/Terzo Anno/Fondamenti di cybersecurity.md",
     "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Modi delle operazioni.md",
@@ -297,10 +306,7 @@
     "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Controllo di accesso.md",
     "2-Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/access control.md",
     "2-Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Network security.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Sicurezza dei sistemi.md",
     "Pasted image 20260509151012.png",
-    "Homepage.md",
     "immagini/Pasted image 20260508152352.png",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Stack buffer overflow.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Difese contro il Buffer Overflow.md",
@@ -310,7 +316,6 @@
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
     "immagini/Pasted image 20260508150644.png",
     "immagini/Pasted image 20260508143633.png",
-    "immagini/Pasted image 20260508140141.png",
     "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario a blocchi.md",
     "0-Mostarda/Terzo Anno",
     "0-Mostarda/Secondo Anno",
@@ -319,17 +324,11 @@
     "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Criptografia simmetrica.md",
     "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Teorema di Bézout.md",
     "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Aritmetica modulare.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Lab 3 Cybesecurity.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario di flusso(stream cipher).md",
-    "3-Terzo anno/Laboratorio di Making/Asterisk.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Criptografia.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrari.md",
     "3-Terzo anno/Informatica teorica/Complessità/Oracoli",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

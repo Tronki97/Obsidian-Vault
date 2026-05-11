@@ -1,7 +1,10 @@
 ---
 tags:
-  - TODO
 aliases:
+  - modello Bell-LaPadula
+  - BLP
+  - Bell-LaPadula
+  - Biba
 data: "`2026-04-13 10:00`"
 ---
 - # ACL:
