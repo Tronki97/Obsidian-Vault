@@ -90,7 +90,7 @@ data: "`2026-02-27 11:31`"
 	- Non si usa a causa di un _meet in the middle_ attack
 	- Dato $m$ e $c$ l'obiettivo è quello di trovare $(k_{1},k_{2})$ tali che $E(k_{1}, E(k_{2},m))=c$ o equivalentemente trovare $(k_{1},k_{2})$ tali che $E(k_{2},m)=D(k_{1},c)$ 
 		- ![[Pasted image 20260302093212.png|609]]
-		- Il punto centrale rappresenta il messaggio prima di effettuare la seconda encriptazione
+		- Il punto centrale rappresenta il messaggio prima di effettuare la seconda cifratura 
 	- ### M(eet)ITM attack:
 		- Si fa una tabella che si mette in ordine sulla seconda colonna.
 		- ![[Pasted image 20260302093415.png|515]]
@@ -101,7 +101,6 @@ data: "`2026-02-27 11:31`"
 			- Tempo per costruire e sortare la tabella: $2^{56}*\log(2^{56})$
 			- Tempo di ricerca nella tabella: $2^{56}*\log(2^{56})$
 			- Il totale è la somma dei due ottenendo un valore $<2^{63}<<2^{112}$ 
-			- 
 - # 3DES:
 	- Blocco da $8$ byte e una chiave da $3*56=168$ bit 
 	- Si fanno 3 operazioni:
@@ -122,7 +121,7 @@ data: "`2026-02-27 11:31`"
 	- Advanced encryption standard
 	- Blocchi da 128 bit e chiavi da $128, 192\ o\  256$ bit
 	- Si vengono a generare 44,52 o 60 sottochiave tutte da $32$ bit 
-	- Ogni round esegue in paralle lo 4 step:
+	- Ogni round esegue in parallelo 4 step:
 		- _subBytes_ sostituzione byte per byte usando _S-box_
 		- _ShiftRows_ permutazione che ciclicamente shifta le ultime 3 righe nello stato
 		- _MixColumns_: sostituzione che usa un campo di Galois $GF(2^{8})$

@@ -30,7 +30,7 @@ data: "`2025-04-24 16:48`"
 	- [[Stack buffer overflow]]
 	- [[Difese contro il Buffer Overflow]] 
 - Laboratorio:
-	- [[lab 2 cybersecurity]] 
+	- [[LAB 2 (Hashing)]] 
 	- [[Lab 3 Cybesecurity]]
 
 # Link Utili:

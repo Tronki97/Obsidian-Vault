@@ -60,6 +60,7 @@ data: "`2026-04-10 11:11`"
 		- quando ci si collega si ottiene una lista di nodi, si sceglie poi un percorso randomico tra i nodi questi percorsi interni sono criptati invece il link verso il destinatario finale è in chiaro.
 			- ![[Pasted image 20260411170609.png|420]]
 			- ![[Pasted image 20260411170556.png|419]]
+			- ogni volta che un nodo riceve un pacchetto prima di inoltrarlo rimuove uno "strato" di crittografia per ricavare il nodo successivo a cui inoltrare il pacchetto.
 		- per comunicare con una persona diversa serve scegliere un percorso randomico diverso 
 			- ![[Pasted image 20260411170631.png|425]]
 - # Attacchi all'IP:

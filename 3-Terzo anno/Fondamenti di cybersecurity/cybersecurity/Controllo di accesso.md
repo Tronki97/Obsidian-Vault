@@ -4,7 +4,7 @@ aliases:
   - DAC
   - RBAC
   - MAC
-  - Controllo direzionale dell'accesso
+  - Controllo discrezionale dell'accesso
   - Controllo di accesso obbligato
   - Controllo di accessi basato sui ruoli
   - Domini di protezione
@@ -43,9 +43,9 @@ data: "`2026-04-13 09:43`"
 			- tutti gli accessi vanno controllati 
 		- [[Network security#^7e9b5d|least privilege]]
 	- ## Politiche: 
-		- ### Controllo direzionale dell'accesso (DAC)
+		- ### Controllo discrezionale dell'accesso (DAC)
 			- basato sull'identità dei soggetti e sulle regole di accesso stabilendo cosa possono fare su quali oggetti 
-			- è detto _direzionale_ perché i soggetti decidono che tipo di accesso concedere agli altri soggetti 
+			- è detto _discrezionale_ perché i soggetti decidono che tipo di accesso concedere agli altri soggetti 
 			- utilizza la matrice di accesso [[access control#^17c594|DAC matrix]]
 		- ### Controllo di accesso obbligato (MAC)
 			- si basa sul controllo delle etichette di sicurezza (_security labels_), che indicano quanto sono sensibili o critici gli oggetti, con le autorizzazioni di sicurezza (_security clearence_) dei soggetti 

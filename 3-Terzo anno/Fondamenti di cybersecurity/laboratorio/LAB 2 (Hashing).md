@@ -1,7 +1,11 @@
 ---
 tags:
-  - TODO
 aliases:
+  - Catene di Hash
+  - Hash chain
+  - rainbow table
+  - Hashcat
+  - rainbowcrack
 data: "`2026-05-04 09:16`"
 ---
 - # Hash:
@@ -13,7 +17,7 @@ data: "`2026-05-04 09:16`"
 			- tra `(hash)` e `(filename)` ci sono due spazi 
 - # Attacchi agli algoritmi di Hash:
 	- si possono fare attacchi brute force 
-	- precomputed attacks:
+	- _precomputed attacks_:
 		- ## Catene di Hash:
 			- permettono una "inversione" efficiente sullo spazio e il tempo delle [[Tabelle Hash#^01153a|funzioni hash]] 
 			- si precalcolano un certo numero di password di lunghezza $k$ chiamandola così _catena_ 
@@ -40,5 +44,42 @@ data: "`2026-05-04 09:16`"
 	- _dictionary attack_:
 		- si provano tutte le parole salvate in una lista predefinita molto lunga hashando la parola e confrontandola con l'hash salvato dal sistema, questo attacco viene reso meno efficace dal meccanismo di [[User Authentication#^1f596d|salting]] 
 		- queste liste di parole sono rese pubbliche online 
+- # Hashcat:
+	- `hashcat (-m mode) (-a attack) (hash) [OPTIONS]`
+		- _mode_: si sceglie l'algoritmo che è stato usato (0 per _md5_, 100 per sha1,...)
+		- _attack_: _dictionary, brute force, masks_ (0 per _dictionary_, 3 per _brute force_, ...)
+		- _hash_: una stringa o un file contenenti una o più hash 
+		- _OPTIONS_: si può introdurre una _wordlist_
+	- gli hash craccati sono salvati un _potfile_ in `~/.local/.../hashcat/hashcat.potfile`
+	- un esempio di alcune opzioni per un esecuzione di hashcat:
+		- ![[Pasted image 20260511131332.png]]
+	- ## ES:
+		- `echo -n "hola" | md5sum`
+			- risultato: `4d186321c1a7f0f354b297e8914ab240`
+		- se si usasse lo strumento `hashid` si avrebbe una risposta ambigua `MD2/4/5`
+		- quindi si può provare a craccarlo supponendo sia stato hashato con `MD5` 
+			- quindi opzione `-m 0`
+		- si usa un normale attacco dizionario `-a 0` 
+		- si usa una wordlist `rockyou.txt`
+		- il comando risultante è quindi:
+			- `hashcat –a 0 –m 0 ”4d186321c1a7f0f354b297e8914ab240” /usr/share/wordlists/rockyou.txt`
+	- ## ES con il salt:
+		- _salt_: `1234`
+		- _Hash con il salt:_ `ccee5504c9d889922b101124e9e43b71`
+		- conoscendo il _salt_ lo si concatena nell'esecuzione di hashcat con la sintassi "hash:salt"
+			- `hashcat –a 0 –m 10 ”ccee5504c9d889922b101124e9e43b71:1234” /usr/share/wordlists/rockyou.txt`
+			- si usa `-m 10` perché indica hashato con md5 _seguito_ dal _salt_ 
+	- ## Maschere:
+		- molte password seguono degli schemi come nome seguito dall'anno come:
+			- `alessandro2004`
+		- si può fare in modo di far provare ad hashcat solo le password con una determinata struttura. 
+		- per farlo si usa sempre l'opzione `-m`
+	- ## Regole:
+		- si cambia la _wordlist_ per farle seguire un certo pattern 
+		- si possono creare anche delle regole personalizzate 
+			- per esempio `$x` per appendere `x` alla fine di ogni parola 
+		- ovviamente ci sono anche quelle built-in di hashcat locate nel percorso:
+			- `/usr/share/hashcat/rules/`
+			- utilizzabili usando il parametro `-r rule` 
 - # Link Utili:
 	- 

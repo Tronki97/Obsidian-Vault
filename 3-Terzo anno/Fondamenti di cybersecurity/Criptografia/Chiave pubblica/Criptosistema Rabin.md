@@ -11,8 +11,8 @@ data: "`2026-03-30 18:10`"
 		- $K_{B}^{-}=(p,q)$
 - # Criptazione:
 	- Alice deve mandare $m$ a _bob_ e conosce la sua _chiave pubblica_ $n$
-	- calcola $c=m^{2}\mod n$
-	- manda poi il ciphertext $c$ a _Bob_
+	- calcola $c=m^{2}\mod n$ 
+	- manda poi il cipher-text $c$ a _Bob_
 - # Decriptazione:
 	- _Bob_ riceve $c$ da Alice 
 	- usa la sua chiave privata per calcolare $m$:

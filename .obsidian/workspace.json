@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/VAPT.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "VAPT"
+              "title": "Homepage"
             }
           },
           {
-            "id": "10ed083cfabd416d",
+            "id": "1b2891ae2833d405",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/lab 2 cybersecurity.md",
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/Criptosistema Rabin.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lab 2 cybersecurity"
+              "title": "Criptosistema Rabin"
             }
           },
           {
-            "id": "4df2b9f550e8513e",
+            "id": "882ef9adc26a43e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/lab 2 cybersecurity.md",
+                "file": "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrari.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "lab 2 cybersecurity"
+              "title": "Cifrari"
             }
           }
         ],
@@ -112,7 +112,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "direzionale",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -284,16 +284,26 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/Criptosistema Rabin.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/LAB 2 (Hashing).md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/RSA.md",
+    "2-Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Crittografia.md",
+    "Homepage.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/Criptosistema ElGamal.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Network security.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Key exchange.md",
+    "2-Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/access control.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Controllo di accesso.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario a blocchi.md",
+    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/Lab 3 Cybesecurity.md",
+    "Pasted image 20260511131332.png",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/VAPT.md",
     "Pasted image 20260511123930.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/lab 2 cybersecurity.md",
-    "Homepage.md",
     "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Sicurezza dei sistemi.md",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Sicurezza nelle reti Wi-Fi.md",
     "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Wireless network security.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario di flusso(stream cipher).md",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Network security.md",
     "2-Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
     "0-Mostarda/Terzo Anno/Fondamenti di cybersecurity.md",
     "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
@@ -303,27 +313,18 @@
     "Pasted image 20260509164020.png",
     "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
     "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Controllo di accesso.md",
-    "2-Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/access control.md",
     "2-Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
     "Pasted image 20260509151012.png",
     "immagini/Pasted image 20260508152352.png",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Stack buffer overflow.md",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Difese contro il Buffer Overflow.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Buffer overflow.md",
     "immagini/Pasted image 20260508152316.png",
     "immagini/Pasted image 20260506145204.png",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
     "immagini/Pasted image 20260508150644.png",
-    "immagini/Pasted image 20260508143633.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario a blocchi.md",
     "0-Mostarda/Terzo Anno",
     "0-Mostarda/Secondo Anno",
     "0-Mostarda/Primo Anno",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Criptografia Asimmetrica.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Criptografia simmetrica.md",
-    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Teorema di Bézout.md",
-    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Aritmetica modulare.md",
     "3-Terzo anno/Informatica teorica/Complessità/Oracoli",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale",
