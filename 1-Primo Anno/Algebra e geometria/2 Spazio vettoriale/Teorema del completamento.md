@@ -7,7 +7,7 @@ data: "`2024-08-31 20:05`"
 	- Sia V uno [[Spazio vettoriale]] [[Sottospazio generato#^2c0f72||fg]] e sia $\beta = v_1,...,v_n$ [[Base]] di V e $w_{1},...,w_{m}\in V$ [[Indipendenza lineare||linearmente indipendenti]], allora: 
 		- 1)$m\leq n$
 		- 2)possiamo aggiungere a $w_{1},...,w_{m}$ fino a $n-m$ vettori di $\beta$ in modo da ottenere una base 
-		In pratica se abbiamo un po di vettori linearmente indipendenti appartenenti ad uno spazio di V, allora possiamo aggiungerne un po per ottenere una base 
+		In pratica se abbiamo un po' di vettori linearmente indipendenti appartenenti ad uno spazio di V, allora possiamo aggiungerne un po' per ottenere una base 
 		_N.B_: questo teorema è simmetrico a quello dell'[[Base#^6a952a||esistenza della base]]. In questo caso però al posto che togliere dei vettori dipendenti _ci viene dato un criterio per aggiungerne al fine di creare una base_. 
 - # Dimostrazione
 	- $m\leq n$

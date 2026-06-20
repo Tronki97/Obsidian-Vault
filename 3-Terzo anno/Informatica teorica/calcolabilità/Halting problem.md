@@ -9,13 +9,14 @@ data: "`2026-03-12 18:04`"
 - # Halt language:
 	- $$HALT= \{<M,w>|M \ \text{si arresta}\}$$
 		- Si arresterà non per forza per dire di _si_ 
-	- $$L_{u}=\{<M,w>|M \vDash w\}$$
+	- richiamo del [[Macchine universali#^0eac02|linguaggio universale]]
+		- $$L_{u}=\{<M,w>|M \vDash w\}$$
 	- ## Macchina per HALT:
 		- Si può costruire la macchina $M_{H}$ dandole in input la coppia $<M,w>$ con all'interno la macchina $M_{u}$ che se risponde di si o no allora la macchina $M_{H}$ dirà di _si_ e se $M_{u}$ ciclerà all'infinito allora vorrà dire che risponde di no.  
 			- ![[Pasted image 20260311174356.png]]
 	- ## appartenenza ad RE:
 		- Istanza si: $(M,w)\in HALT$ 
-			- Nel momento in cui $M_{u}$ simulando $w$ si accorge che si ferma  su un qualsiasi stato allora vuol dire che dovrà andare su uno stato finale accettante e quindi rispondere di _si_
+			- Nel momento in cui $M_{u}$ simulando $w$ si accorge che si ferma su un qualsiasi stato allora vuol dire che dovrà andare su uno stato finale accettante e quindi rispondere di _si_
 		- Istanza no: $(M,w)\notin HALT$
 			- In questo caso $M_{H}$ per riuscire da "dire" _no_ semplicemente non risponderà di _si_ 
 		- Si è quindi dimostrato che $HALT \in RE$ 

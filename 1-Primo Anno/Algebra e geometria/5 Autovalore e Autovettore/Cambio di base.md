@@ -25,7 +25,7 @@ data: "`2024-08-31 20:05`"
 		- Dove $c$ è la [[Base Canonica]] di $V$ e $c'$ quella di $W$
 		- ### Dimostrazione:
 			- Devo dimostrare che è sempre possibile creare una matrice $A$ in quel modo. Mi concentro sul caso $n=2$ e $m=3$ e mi fido del fatto che questo ragionamento può essere esteso in generale.
-			- Fisso $\beta=v_{1},v_{2}$ base ordinata di $V$, e $\beta'=w_{1},w_{2},w_{3}$ e prendo un $v \in V$ per cui $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}$([[Combinazione lineare]] di $\beta$) e $v_\beta=\lambda_{1},\lambda_{2}$. 
+			- Fisso $\beta=v_{1},v_{2}$ base ordinata di $V$, e $\beta'=w_{1},w_{2},w_{3}$ e prendo un $v \in V$ per cui $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}$ ([[Combinazione lineare]] di $\beta$) e $v_\beta=\lambda_{1},\lambda_{2}$. 
 			  Ora devo definire $A_{\beta \beta'}$, per cui scrivo le immagini della base $\beta$, e poi le loro coordinate rispetto a $\beta'$. Allora ho 
 				- $$f(v_{1})=\mu_{1} w_{1}+\mu_{2}w_{2}+\mu_{3}w_{3}$$
 			- e 
@@ -65,7 +65,8 @@ data: "`2024-08-31 20:05`"
 				- $A_{\beta c}$
 				- $A_{\beta \beta}$
 				- $A_{c\beta}$
-				In particolare prendo l'esempio per $n=2$ e $\beta=\{e_{1}-e_{2}, 2e_{1}+3e_{2}\}$ 
+					- In particolare prendo l'esempio per $n=2$ e $\beta=\{e_{1}-e_{2}, 2e_{1}+3e_{2}\}$ 
+					- $v_{1}=(1,-1)$ e $v_{2}=(2,3)$
 			- $A_{\beta c}$
 				- Questa matrice è facile da ottenere. Infatti se so che $A$ è della forma 
 					- $$A=f(v_{1})_{c},...,f(v_{n})_{c}$$

@@ -21,16 +21,16 @@ data: "`2026-03-16 18:26`"
 	- ## Appartenenza ad R:
 		- si dimostra quindi che $PCP\notin R$
 		- si utilizza una riduzione. $L_{u}\le MPCP\le PCP$ 
-			- con $MPCP$ che è una forma semplificata di $PCP$ ù
+			- con $MPCP$ che è una forma semplificata di $PCP$
 			- e siccome $L_{u}\notin R$ allora saprò che anche $PCP\notin R$ 
-			- quindi la parte importante è trovare la funzione  $f$ per passare in $MPCP$ e $PCP$ 
+			- quindi la parte importante è trovare la funzione $f$ per passare in $MPCP$ e $PCP$ 
 		- ### MPCP:
 			- ha gli stessi input di $PCP$ le istanze _si_ però sono solo quelle che all'inizio della sequenza hanno una stringa che è di indice $1$ 
 		- ### Riduzione verso MPCP
 			- problema di partenza: $L_{u}$ con input $(M,w)$  con istanze _si_ $M\vDash w$; con istanze _no_ $M\not \vDash w$
 			- #### Soluzione non funzionante
 				- per trasformare verifico che $M$ riconosca $w$ se accetta genero un istanza _si_ per $MPCP$ se rifiuta genero un _no_ 
-					- _risulta non funzionante in quanto la funzione di trasformazione non è calcolabile perché M potrebbe non fermarsi mai nell'accetare la stringa_
+					- _risulta non funzionante in quanto la funzione di trasformazione non è calcolabile perché M potrebbe non fermarsi mai nell'accettare la stringa_
 			- #### Soluzione
 				- si può sfruttare il fatto che la computazione si può rappresentare come sequenza di [[Macchina di Turing deterministica#^e7168b|configurazioni]] $\alpha_{0} \vdash \alpha_{1}...$ 
 					- ![[Pasted image 20260316171639.png|625]]

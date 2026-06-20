@@ -45,9 +45,12 @@ data: "`2024-08-31 20:05`"
 				- 1) $\underline{0}\in ker(f)$
 				- 2) $v_{1}+v_{2}\in ker(f)\ \  \forall v_{1},v_{2}\in ker(f)$
 				- 3)$\lambda v_{1}\in ker(f) \ \ \forall v_{1}\in ker(f)\ \ \forall \lambda \in \mathbb{R}$ 
-			Il vettore nullo è in $ker(f)$ perché per linearità di $f$ devo avere $f(0_{V})=0_{W}$, per cui $\underline{0}\in ker(f)$ 
-			se so per ipotesi che $v_{1},v_{2}\in ker(f)$, per la definizione di $ker(f)$ ho che $f(v_{1})=\underline{0}$ e $f(v_{2})=\underline{0}$ allora ottengo: $$f(v_{1}+v_{2})=f(v_{1})+f(v_{2})=\underline{0}+\underline{0}=\underline{0}$$Ovvero quello che volevo dimostrare.
-			- Infine avendo $v_{1}\in ker(f)$ so che $f(v_{1})=\underline{0}$, allora ottengo:$$f(\lambda v_{1})=\lambda f(v_{1})=\lambda \underline{0}=\underline{0}$$
+			- Il vettore nullo è in $ker(f)$ perché per linearità di $f$ devo avere $f(0_{V})=0_{W}$, per cui $\underline{0}\in ker(f)$ 
+			- se so per ipotesi che $v_{1},v_{2}\in ker(f)$, per la definizione di $ker(f)$ ho che $f(v_{1})=\underline{0}$ e $f(v_{2})=\underline{0}$ allora ottengo: 
+				- $$f(v_{1}+v_{2})=f(v_{1})+f(v_{2})=\underline{0}+\underline{0}=\underline{0}$$
+					- Ovvero quello che volevo dimostrare.
+			- Infine avendo $\lambda v_{1}\in ker(f)$ so che $f(\lambda v_{1})=\underline{0}$, allora ottengo:
+				- $$f(\lambda v_{1})=\lambda f(v_{1})=\lambda \underline{0}=\underline{0}$$
 	- $f$ lineare $\implies Im(f)\le W$  
 		- ovvero data una funzione $f:V \rightarrow W$ lineare, ho che l'[[Immagine di una funzione||immagine]] di $f$ è sottospazio di $W$ 
 		- #### Dimostrazione:
@@ -56,18 +59,22 @@ data: "`2024-08-31 20:05`"
 				- $w_{1}+w_{2}\in Im(f) \forall w_{1},w_{2}\in Im(f)$ 
 				- $\lambda w_{1}\in Im(f) \ \ \forall w_{1}\in Im(f)\ \ \forall \lambda \in \mathbb{R}$ 
 			- Il vettore nullo è nell'immagine di $f$ perché ho per forza che $f(0_{V})=0_{W}$ 
-			- Fissati 2 vettori $w_{1},w_{2}\in Im(f)$, per definizione so che $\exists v_{1}|f(v_{1})=w_{1}$ e $\exists v_{2}|f(v_{2})=w_{2}$. Devo dimostrare $\exists v_{3}|f(v_{3})=w_{1}+w_{2}$. scelgo come $v_{3}=v_{1}+v_{2}$ e ottengo:$$f(v_{3})=f(v_{1}+v_{2})=f(v_{1})+f(v_{2})=w_{1}+w_{2}$$Ovvero ciò che dovevo dimostrare.
-			- Per l'ultimo punto avendo $w_{1}\in Im(f)$ so che $\exists v_{1}|f(v_{1})=w_{1}$. Devo dimostrare che $\exists v_{2}|f(v_{2})=\lambda w_{1}$. Scelgo $v_{2}=\lambda v_{1}$ e ottengo$$f(v_{2})=f(\lambda v_{1})=\lambda f(v_{1})=\lambda w_{1}$$Ovvero ciò che dovevo dimostrare.
+			- Fissati 2 vettori $w_{1},w_{2}\in Im(f)$, per definizione so che $\exists v_{1}|f(v_{1})=w_{1}$ e $\exists v_{2}|f(v_{2})=w_{2}$. Devo dimostrare $\exists v_{3}|f(v_{3})=w_{1}+w_{2}$. scelgo come $v_{3}=v_{1}+v_{2}$ e ottengo:
+				- $$f(v_{3})=f(v_{1}+v_{2})=f(v_{1})+f(v_{2})=w_{1}+w_{2}$$
+					- Ovvero ciò che dovevo dimostrare.
+			- Per l'ultimo punto avendo $w_{1}\in Im(f)$ so che $\exists v_{1}|f(v_{1})=w_{1}$. Devo dimostrare che $\exists v_{2}|f(v_{2})=\lambda w_{1}$. Scelgo $v_{2}=\lambda v_{1}$ e ottengo
+				- $$f(v_{2})=f(\lambda v_{1})=\lambda f(v_{1})=\lambda w_{1}$$
+					- Ovvero ciò che dovevo dimostrare.
 	- $f$ lineare $\implies f \  su \Longleftrightarrow Im(f)=W$
 		- ovvero data $f:V \rightarrow W$ lineare, allora quest'ultima è [[Suriettiva]] sse l'immagine di $f$ coincide col codominio
 			- vero per definizione di suriettività.
 	- $f$ lineare $\implies f \  in \Longleftrightarrow ker(f)=\underline{0}$
-		- ciò ci dice che affinché un'applicazione lineare sia iniettiva basta che l'unico mappato nel vettore nullo del codominio sia il vettore nullo del dominio: Questo criterio è sufficiente per capire se tutta la funzione sarà iniettiva.
+		- ciò ci dice che affinché un'applicazione lineare sia iniettiva basta che l'unico vettore mappato nel vettore nullo del codominio sia il vettore nullo del dominio: Questo criterio è sufficiente per capire se tutta la funzione sarà iniettiva.
 		- #### Dimostrazione:
 			- $\implies$)
 				- suppongo che $f$ sia $in$ per cui $a\ne b \implies f(a)\ne f(b)\ \ \forall a,b$ e che $f(a)=f(b)\implies a=b\ \ \forall a,b$ . devo dimostrare che $ker(f)=\underline{0}$. dalle ipotesi scelgo $v\in ker(f)$ t.c $f(v)=\underline{0}=f(0_{V})$. Allora essendo iniettiva so che $v=0_{V}$ e quindi che $ker(f)=0_{V}=\underline{0}$ 
 			- $\Longleftarrow$)
-				- suppongo che $ker(f)=\underline{0}$. Dimostro che $f$ è $in$ ovvero che $a\ne b \implies f(a)\ne f(b)\ \ \forall a,b$ oppure $f(a)=f(b)\implies a=b\ \ \forall a,b$ . Suppongo per un qualche $a,b \in V, f(a)=f(b)$ che implica $f(a)-f(b)=\underline{0}$ uso la linearità di $f$ e ottengo che $f(a-b)=\underline{0}$. Ciò vuol dire che ho trovato un elemento del [[Kernel]] $a-b\in ker(f)$ e, per ipotesi so che deve essere $\underline{0}$. Allora $a-b=\underline{0}\implies a=b$ 
+				- suppongo che $ker(f)=\underline{0}$. Dimostro che $f$ è $in$ ovvero che $a\ne b \implies f(a)\ne f(b)\ \ \forall a,b$ oppure $f(a)=f(b)\implies a=b\ \ \forall a,b$ . Suppongo per un qualche $a,b \in V, f(a)=f(b)$ che implica $f(a)-f(b)=\underline{0}$ uso la linearità di $f$ e ottengo che $f(a-b)=\underline{0}$. Ciò vuol dire che ho trovato un elemento del [[Kernel]] $a-b\in ker(f)$ e, per ipotesi so che deve essere $\underline{0}$. Allora $a-b=\underline{0}\implies a=b$
 - ## Osservazioni:
 	- come corollario della linearità di una funzione $f$ si ha che $$f(\lambda_1 v_1+...+\lambda_n v_n)=f(\lambda_{1}v_{1})+...+f(\lambda_{n}v_{n})=$$
 	- $$=\lambda_{1} f(v_{1})+...+\lambda_{n}f(v_{n})$$

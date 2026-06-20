@@ -5,8 +5,8 @@ data: "`2024-08-31 20:05`"
 ---
 - # Def:
 	- Siano $u,v \in \mathbb{R}^{n}$, allora la _proiezione ortogonale_ di $v$ su $u$ è data da 
-		- $$proj_{u}(v)=\frac{<v,u>}{<u,v>}u=<v,u>{\frac{u}{||u||^{2}}}$$
-	- Ovvero si definisce come il [[Prodotto scalare Euclideo||prodotto scalare]] tra $v$ e $u$ diviso la [[Norma euclidea||norma]] al quadrato di $u$, il tutto per $u$
+		- $$proj_{u}(v)=\frac{<v,u>}{<u,u>}u=<v,u>{\frac{u}{||u||^{2}}}$$
+	- Ovvero si definisce come il [[Prodotto scalare Euclideo||prodotto scalare]] tra $v$ e $u$ diviso la [[Norma euclidea||norma]] al quadrato di $u$, il tutto moltiplicato per $u$
 - # Interpretazione
 	- Geometricamente parlando, la proiezione ortogonale è facile da capire. Considero due vettori $u,v \in \mathbb{R}^{2}$; definisco la _proiezione ortogonale di $v$ su $u$ quel vettore che punta verso $u$ e che ha magnitudo $v$_. 
 	- Si chiarisce tutto usando le _coordinate polari_ dei vettori, sfruttando il fatto che si è in $\mathbb{R}^{2}$. Infatti se rappresento $<v,u>$ come $||v||\cdot ||u||\cdot cos \theta$ e $<u,u>$ come $||u||^{2}$ ottengo
@@ -39,10 +39,16 @@ data: "`2024-08-31 20:05`"
 			- equivalente a:
 		- $$<v,v_{i}>=<p,v_{i}> \forall i=1,...,n$$
 	- ## Procedimento:
-		- calcolo i [[Prodotto scalare Euclideo||prodotti scalari]]: $<v,v_{i}>$ e $<p,v_{i}>$ per ogni $i$.
-		- calcolo i prodotti scalari tra i vettori di $W$:
-			- $$<v_{i},v_{j}> \forall i,j=1,...,n$$
-		- risolvo il sistema di equazioni lineari ottenuto:
-			- $$\begin{cases}<v,v_{1}>=\lambda_{1}<v_{1},v_{1}>+...+\lambda_{n}<v_{1},v_{n}>\\ \vdots \\ <v,v_{n}>=\lambda_{1}<v_{n},v_{1}>+...+\lambda_{n}<v_{n},v_{n}>\end{cases}$$
-		- Trovati i coefficienti $\lambda$ posso calcolare la soluzione:
-			- $$p= \lambda_{1}v_{1}+...+\lambda_{n}v_{n}$$
+		- dopo aver ricavato il vettore $v-p$ pongo un sistema per far si che sia [[1-Primo Anno/Analisi/modulo2/Ortogonalità|ortogonale]] a tutti i vettori della base di $W$ 
+		- $$\begin{cases} <v-p, v_{1}> = 0  \\ \vdots \\ <v-p, v_{n}>=0\end{cases}$$
+		- in questo modo ricavo gli _scalari_ $\lambda_{1,...,n}$ e andrò a sostituirli nel vettore $p$ per ricavarne il valore effettivo.
+	- ## ES:
+		- $\beta=\{(1,0,1,0), (-2,1,0,1)\}=\{v_{1},v_{2}\}$
+		- $v= (0,3,0,1)$
+		- $proj_{W}(v)=p=\lambda_{1}(1,0,1,0)+\lambda_{2}(-2,1,0,1)=(\lambda_{1}-2\lambda_{2}, \lambda_{2}, \lambda_{1}, \lambda_{2})$
+		- $v-p=(-\lambda_{1}+2\lambda_{2}, 3-\lambda_{2}, -\lambda_{1}, 1-\lambda_{2})$
+		- ora impongo l'[[1-Primo Anno/Analisi/modulo2/Ortogonalità|Ortogonalità]] a sistema:
+			- $$\begin{cases}  <v-p, v_{1}> = 0 \to -\lambda_{1}+2\lambda_{2}-\lambda_{1}=0 \to \lambda_{2}=\lambda_{1}\\ <v-p, v_{2}>= 0 \to 2\lambda_{1} - 6 \lambda_{2} + 4 =0 \to 2\lambda_{1}-6\lambda_{1}=-4 \to \lambda_{1}=1\end{cases}$$
+				- e si ricava anche che $\lambda_{2} =1$
+		- sostituendo i valori degli scalari in $p$:
+			- $p=(-1,1,1,1)$

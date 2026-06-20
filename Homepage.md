@@ -98,9 +98,9 @@ SORT file.ctime DESC
 	- Voto:
 	- Tentativi:
 - [[Fondamenti di cybersecurity]]
-	- [ ] Passato
-	- Voto:
-	- Tentativi: 
+	- [x] Passato
+	- Voto: 30
+	- Tentativi: 1
 - [[Laboratorio di Making]]
 	- [ ] Passato
 	- Voto:

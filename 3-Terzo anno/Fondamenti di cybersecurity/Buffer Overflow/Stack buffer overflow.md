@@ -24,7 +24,7 @@ data: "`2026-05-08 15:09`"
 		- siccome gli indirizzi di memoria sullo stack cambiano spesso risulta difficile indovinare il punto preciso dove saltare 
 		- un modo per riuscire a saltare alla posizione dello shellcode è rendere l'area di memoria dedicatagli molto grande 
 		- per farlo ci viene in aiuto il fatto che molte CPU supportano istruzioni `no-op` che sono istruzioni da un _byte_ che non fanno nulla 
-		- quello che si fa quindi è creare una enorme schiera di istruzioni `NOP` prima dello  così se il salto per cercare di arrivare sullo _shellcode_ atterra su una di quelle operazioni continuerà a farle finche non arriverà allo _shellcode_ effettivo.
+		- quello che si fa quindi è creare una enorme schiera di istruzioni `NOP` prima dello shellcode così se il salto per cercare di arrivare sullo _shellcode_ atterra su una di quelle operazioni continuerà a farle finche non arriverà allo _shellcode_ effettivo.
 		- ![[Pasted image 20260508150644.png|558]] 
 - # Link Utili:
 	- 

@@ -6,7 +6,8 @@ data: "`2024-08-31 20:05`"
 ---
 - Sia $f:A \rightarrow B$ una funzione, e sia $b\in B$ allora la _controimmagine_ di $b$ tramite $f$ è$$f^{-1}(b)=a\in A|f(a)=b$$Ciò però non è l'inversa di $f$ 
 - ## Conseguenze
-	- Si ha che la controimmagine di un certo $b$ tramite $f$ è l'insieme vuoto sse $b$ non è nell'[[Immagine di una funzione||immagine]] di $f$ ovvero $$f^{-1}(b)=\emptyset \Longleftrightarrow b\ne Im(f)$$
+	- Si ha che la controimmagine di un certo $b$ tramite $f$ è l'insieme vuoto sse $b$ non è nell'[[Immagine di una funzione||immagine]] di $f$ ovvero 
+		- $$f^{-1}(b)=\emptyset \Longleftrightarrow b\ne Im(f)$$
 - ## Algebra lineare
 	- si analizza la controimmagine di un'[[Applicazione lineare]] $f:V \rightarrow W$ dove $V,W$ sono [[Spazio vettoriale]] .
 	- ### Casistiche:
@@ -28,7 +29,10 @@ data: "`2024-08-31 20:05`"
 	- Applicando [[Algoritmo di Gauss||gauss]] si ottiene che 
 		- $$rr(A)=2=rr(A|\underline{b})<3=n°incognite$$ 
 	- Per cui il sistema ha infinite soluzioni dipendenti da $3-2=1$ parametri e si scrive: 
-		- $$\begin{array}\ f^{-1}(2,-3)=(-2x_{3}-3,-2x_{3}-5,x_{3})|x_{3}\in \mathbb{R}=\\ \\ =(-3,5,0)+x_{3}(-2,-2,1)|x_{3}\in \mathbb{R}\end{array}$$
+		- $$\begin{array}\ f^{-1}(2,-3)=(-2x_{3}-3,-2x_{3}-5,x_{3})|x_{3}\in \mathbb{R}=\\ \\ =\{(-5,-7,1) \}\end{array}$$
+	- infatti se si volesse fare una controprova:
+		- $$f(-5,-7,1)=(-5+7, -5+2)=(2,-3)$$
+		- ovvero il vettore di cui si cercava la controimmagine
 - ## Proposizione ^70afd1
 	- ### Soluzione di un sistema lineare ^07e889
 		- la controimmagine di un'[[Applicazioni lineari definite da una matrice]] $A$ è definita come l'insieme delle soluzioni del sistema lineare.

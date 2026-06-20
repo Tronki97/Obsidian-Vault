@@ -31,7 +31,7 @@ data: "`2024-08-31 20:05`"
 	- Verifico che $S=(x_{1},x_{2},x_{3})|x_{1}+2x_{2}-x_{3}\geq0$ è sottospazio di $\mathbb{R}^{3}$
 		- 1)$S\ne\emptyset$. VERO perché $(0,0,0)\in S$
 		- 2)presi $u_{1}=(x_{1},x_{2},x_{3})$ e $u_{2}=(y_{1},y_{2},y_{3})\in S$, la somma $u_{1}+u_{2}=(x_{1}+y_{1},x_{2}+y_{2},x_{3}+y_{3})$ per appartenere ad S dovrebbe essere verificato che: 
-			- $$\begin{array} (x_{1}+y_{1})+2(x_{2}+y_{2})-(x_{3}+y_{3})=\\ \\ =x_{1}+y_{1}+3x_{2}+3y_{2}-x_{3}-y_{3}\geq 0 \end{array} $$ 
+			- $$\begin{array} \ (x_{1}+y_{1})+2(x_{2}+y_{2})-(x_{3}+y_{3})=\\ \\ =x_{1}+y_{1}+2x_{2}+2y_{2}-x_{3}-y_{3}\geq 0 \end{array} $$ 
 			- Vero perché somma di due positivi per le ipotesi.
 		- 3)preso $u_{1}=(x_{1},x_{2},x_{3})$ e $\lambda \in \mathbb{R}$ si ha che $\lambda u_{1}=(\lambda x_{1},\lambda x_{2},\lambda x_{3})$, per appartenere ad S deve verificarsi che 
 			- $$\lambda x_{1}+2\lambda x_{2}-\lambda x_3=\lambda(x_{1}+2x_{2}-x_{3})\geq 0$$

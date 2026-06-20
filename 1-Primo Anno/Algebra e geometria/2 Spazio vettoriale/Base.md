@@ -1,5 +1,7 @@
 ---
-~
+tags:
+aliases:
+data: "`2024-08-31 20:05`"
 ---
 - # DEFINIZIONE
 	- Sia V uno [[Spazio vettoriale]], allora un insieme $v_1,...,v_n$ si dice _base_ di V se:

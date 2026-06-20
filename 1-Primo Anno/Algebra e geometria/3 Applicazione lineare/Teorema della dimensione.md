@@ -8,8 +8,8 @@ data: "`2024-08-31 20:05`"
 	- Sia $f:V \rightarrow W$ un' [[Applicazione lineare]] allora si ha che:
 		- $$\dim(V)=\dim(\ker(f))+\dim(Im(f))$$
 	- Ovvero che la [[Dimensione]] del dominio V è uguale a alla somma di quella del [[Kernel]] di $f$ con quella dell' [[Immagine di una funzione||immagine]] di $f$
-	- ### Dimostrazione 
-		- Mi riduco a dimostrare 
+	- ### Dimostrazione
+		- Mi riduco a dimostrare
 			- $$dim(V)-dim(ker(f))=dim(Im(f))$$
 		- Suppongo di avere una [[Base]] di V t.c $dim(V)=n$ la dimensione del kernel di $f$, supponendo di aver risolto il sistema lineare omogeneo associato alla [[Matrici||matrice]] $A$ che definisce l' [[Applicazione lineare]] $L_{A}=f$ sarà $r\le n$ dove r è il numero di _pivot_ di $A$ ridotta a scala. Quindi una base di $ker(f)$ sarebbe del tipo $v_1,...,v_{r}$ t.c $f(v_1),...,f(v_{r})=\underline{0}$. Sostituendo tali valori nell'equazione ottengo: 
 			- $$dim(Im(f))=n-r$$
@@ -44,7 +44,7 @@ data: "`2024-08-31 20:05`"
 		- siano $V,W$ [[Spazio vettoriale]] tali che $dim(V)=dim(W)$ e sia $f:V \rightarrow W$ lineare allora
 			- $$f \ in \iff f\ su$$
 		- #### Dimostrazione:
-			- è una conseguenza diretta del [[Teorema del completamento]], infatti ho che se $dim(V)=dim(W)$ allora 
+			- è una conseguenza diretta del [[Teorema del completamento]], infatti ho che se $dim(V)=dim(W)$ allora
 				- $$dim(V)=dim(ker(f))+dim(Im(f))=dim(W)$$
 			- e allora:
 				- $f$ è iniettiva $\implies dim(ker(f))=0\implies dim(V)=$
@@ -53,10 +53,10 @@ data: "`2024-08-31 20:05`"
 				  $=dim(ker(f))+dim(W)=dim(W)\implies$
 				  $dim(ker(f))=0\implies f$ è iniettiva  
 	- #### Righe e colonne di una matrice
-		- Sia $A \in M_{m\times n}(\mathbb{R})$ t.c $r_1,...,r_{m}$ sono le righe di di $A$ e $c_1,...,c_n$ sono le colonne, allora:
+		- Sia $A \in M_{m\times n}(\mathbb{R})$ t.c $r_1,...,r_{m}$ sono le righe di $A$ e $c_1,...,c_n$ sono le colonne, allora:
 			- $$dim(\langle{r_1,...,r_{m}}\rangle)=dim(\langle{c_1,...,c_n}\rangle)$$
 		- Ovvero il [[Sottospazio generato]] dalle righe e quello generato dalle colonne sono uguali. 
-		- Da questa conseguenza sappiamo infatti che le righe e le colonne di una matrice vivono su spazi vettoriali di dimensione e fattezza diversi, ma la dimensione del dei diversi sottospazi generati da esse saranno uguali.
+		- Da questa conseguenza sappiamo infatti che le righe e le colonne di una matrice vivono su spazi vettoriali di dimensione e fattezza diversi, ma la dimensione dei diversi sottospazi generati da esse saranno uguali.
 		- #### Dimostrazione:
 			- Considerando un' [[Applicazione lineare]] $L_{A}:\mathbb{R}^{n} \rightarrow \mathbb{R}^{m}$ definita da una [[Matrici||matrice]] $A \in M_{m\times n}(\mathbb{R})$. Ho che $ker(L_{A})$ è definito come l'insieme delle soluzioni del sistema lineare omogeneo $A \underline{x}=\underline{0}$. Riducendo $A$ a scala, ottengo che il $ker(f)$ è l'insieme delle soluzioni dipendenti da $n-rr(A)$ variabili libere, ovvero
 				- $$dim(ker(L_{A}))=n-rr(A)$$

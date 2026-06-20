@@ -48,7 +48,7 @@ data: "`2024-08-31 20:05`"
 			- Poi, sempre per il teorema della dimensione devo avere che: 
 				- $$\begin{array}\  dim(\mathbb{R}^{n})=dim(ker(L_{A}))+dim(Im(L_{A}))\iff \\ \\ \iff n=dim(ker(L_{A}))+rk(A) \end{array} $$
 				- E ciò avviene allora $\iff$
-					- $$dim(ker(L_{A}))=n-rk(A)>1$$
+					- $$dim(ker(L_{A}))=n-rk(A)>0$$
 				- Poi per il [[teorema di struttura per sistemi lineari]] la soluzione di $A \underline{x}=\underline{b}$ può essere scritta come: 
 					- $$S=v+z|z\in ker(L_{A})$$
 				- Dove $v \in L^{-1}_{A}(b)$ e sapendo che $dim(ker(L_{A}))=n-rk(A)$, ho infiniti vettori di $S$ che dipendono proprio da $n-rk(A)$ parametri. Infatti fissato $t=n-rk(A)$, allora $ker(L_{A})=\langle{v_1,...,v_{t}}\rangle$. Quindi se $z\in ker(L_{A})$ significa che $\exists \lambda_{1},...,\lambda_{t}$ t.c $z=\lambda_1 v_1+...+\lambda_{t} v_{t}$. Allora se questo vale per ogni $z\in ker(L_{A})$ e $S=v+z$, si ha che le soluzioni dipendono da $\lambda_{1},...,\lambda_{t}$, ovvero da $t=n-rk(A)$ parametri.

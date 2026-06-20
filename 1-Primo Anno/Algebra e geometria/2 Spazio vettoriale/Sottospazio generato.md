@@ -22,7 +22,7 @@ data: "`2024-08-31 20:05`"
 		- 3)$w\in \langle v_{1},...v_{n}\rangle \Longleftrightarrow \langle v_{1},...v_{n}\rangle=\langle v_{1},...v_{n}, w\rangle$
 	- ## Dimostrazione
 		- 1)$$\langle v_{1},...v_{n}\rangle \leq V$$
-			- dobbiamo dimostrare che $\langle v_{1},...v_{n}\rangle$ è un sottospazio di generico un V.
+			- dobbiamo dimostrare che $\langle v_{1},...v_{n}\rangle$ è un sottospazio di un generico V.
 				- per la definizione di sottospazio bisogna avere $(0,...,0)\in \langle v_{1},...v_{n}\rangle$, vero perché la [[Combinazione lineare]] $\lambda_{1}v_{1},...,\lambda_{n}v_{n}$ con $\lambda_{1},...\lambda_{n}=0$ risulta proprio in $(0,...,0)$. Quindi $\langle v_{1},...v_{n}\rangle$ deve essere _chiuso rispetto alla somma_. Per la definizione di [[#^5d24e7||sottospazio generato]], $u$ e $v$ sono combinazioni lineari di $v_{1},...,v_{n}$ e quindi del tipo $u=\lambda_{1}v_{1}+...+\lambda_{n}v_{n}$ e $v=\beta_{1}v_{1}+...+\beta_{n}v_{n}$ .
 				  La loro somma $u+v= (\lambda_{1}+\beta_{1})v_{1}+...+(\lambda_{n}+\beta_{n})v_{n} \in \langle v_{1},...,v_{n}\rangle$ per la definizione di sottospazio generato. 
 				- per la _chiusura rispetto al prodotto_; preso $u \in \langle v_{1},...,v_{n}\rangle$ e $\beta \in \mathbb{R}$ dimostro che $\beta u\in \langle v_{1},...,v_{n}\rangle$. per definizione, $u$ è una [[Combinazione lineare]] di $v_{1},...,v_{n}$ quindi del tipo $u=\lambda_{1}v_{1}+...+\lambda_{n}v_{n}$. Quindi il prodotto per scalare $\beta u=\beta\lambda_{1}v_{1}+...+\beta\lambda_{n}v_{n}\in \langle v_{1},...,v_{n}\rangle$ sempre per definizione di sottospazio generato.

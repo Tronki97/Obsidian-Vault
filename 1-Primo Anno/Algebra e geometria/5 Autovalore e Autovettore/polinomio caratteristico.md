@@ -12,12 +12,12 @@ data: "`2024-08-31 20:05`"
 - # Proposizioni:
 	- ## Autovalori
 		- Sia $A\in M_{n}(\mathbb{R})$, allora $\lambda \in \mathbb{R}$ è un autovalore di $A\iff \lambda$ è uno zero del polinomio caratteristico, ovvero 
-			- $$det(A-xI)=0$$
+			- $$det(A-\lambda I)=0$$
 		- ### Dimostrazione 
 			- $\implies$)
-				- suppongo che $\lambda$ sia autovalore di $A$ allora $Ax=\lambda x$per un qualche $x\in \mathbb{R}^{n}$ e $x\ne \underline{0}$, ovvero $Ax -\lambda x=\underline{0}$ quindi $(A-\lambda I)x=\underline{0}$. Allora si ha che $x\in ker(A-\lambda I)$, ed essendo $x\ne \underline{0}$ significa che $dim(ker(A-\lambda I))>0$ perciò non è [[iniettiva]], e quindi $det(A-\lambda I)=0$
+				- suppongo che $\lambda$ sia autovalore di $A$ allora $Ax=\lambda x$ per un qualche $x\in \mathbb{R}^{n}$ e $x\ne \underline{0}$, ovvero $Ax -\lambda x=\underline{0}$ quindi $(A-\lambda I)x=\underline{0}$. Allora si ha che $x\in ker(A-\lambda I)$, ed essendo $x\ne \underline{0}$ significa che $dim(ker(A-\lambda I))>0$ perciò non è [[iniettiva]], e quindi $det(A-\lambda I)=0$
 			- $\Longleftarrow$)
-				- suppongo che $det(A-xI)=0$ allora significa che $A-\lambda I$ non è [[iniettiva]], per cui
+				- suppongo che $det(A-\lambda I)=0$ allora significa che $A-\lambda I$ non è [[iniettiva]], per cui
 					- $$\exists x\in ker(A-\lambda I):x\ne \underline{0}$$
 				- Quindi vale 
 					- $$(A-\lambda I)x=\underline{0}$$
@@ -26,3 +26,20 @@ data: "`2024-08-31 20:05`"
 				- Quindi 
 					- $$Ax=\lambda x$$
 				- Ovvero la definizione di autovalore per $\lambda$ 
+	- ## Matrici simili:
+		- se due matrici sono simili hanno lo stesso polinomio caratteristico:
+		- ### dimostrazione:
+			- $P^{-1}*A *P =B$ 
+			- $$p(\lambda)_{B}=det(B-\lambda I)=det(P^{-1}*A*P-\lambda I)$$
+			- $I$ ha una proprietà che dice $\lambda I = P^{-1} \lambda I *P$ quindi posso riscrivere tutto come:
+				- $$p(\lambda)_{B}=det(P^{-1}*A*P- P^{-1}*\lambda I * P)$$
+				- $$p(\lambda)_{B}=det(P^{-1}(A-\lambda I)P)$$
+			- per il [[Teorema di Binet]] so che:
+				- $$det(P^{-1}(A-\lambda I)P)=det(P^{-1})*det(A-\lambda I)*det(P)$$
+				- quindi :
+					- $$p(\lambda)_{B} = det(P^{-1})*det(A-\lambda I)*det(P)$$
+			- per le proprietà del determinante $det(P^{-1})=\frac{1}{det(P)}$
+				- $$p(\lambda)_{B}=1*det(A-\lambda I)=p(\lambda)_{A}$$
+		- ### N.B:
+			- l'inverso non è vero quindi:
+				- se due matrici hanno lo stesso polinomio caratteristico non è detto siano simili  

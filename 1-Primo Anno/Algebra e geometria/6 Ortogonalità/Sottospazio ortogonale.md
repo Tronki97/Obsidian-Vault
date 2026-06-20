@@ -59,7 +59,7 @@ data: "`2024-08-31 20:05`"
 	- Si nota facilmente che è un sistema omogeneo, infatti la soluzione nulla $x=\underline{0}$ è ortogonale a qualunque altro vettore ed è sempre in $W^{\bot}$ (motivo per cui è un sottospazio)
 	- Risolvendo con [[Algoritmo di Gauss||gauss]], si ottiene che le soluzioni dipendono da $5-3=2$ parametri, per cui.
 		- $$dim(W^{\bot})=5-3=2$$
-	- In particolare, trasformando le equazioni cartesiane risultanti in [[Sottospazio generato]], (ovvero trasformare la matrice a scala risultata in un sistema e trovare i 2 parametri da cui dipendono le soluzioni; infine sostituire la soluzione finale con i parametri impostati arbitrariamente a $0$ e poi $1$)si ottiene l base di $W^{\bot}$: 
+	- In particolare, trasformando le equazioni cartesiane risultanti in [[Sottospazio generato]], (ovvero trasformare la matrice a scala risultata in un sistema e trovare i 2 parametri da cui dipendono le soluzioni; infine sostituire la soluzione finale con i parametri impostati arbitrariamente a $0$ e poi $1$ si ottiene la base di $W^{\bot}$: 
 		- $$W^{\bot}=\langle{(-1,0,0,1,0),(-1,0,1,0,1)}\rangle$$
 - # Dimensione
 	- Sia $W \le \mathbb{R}^{n}$ allora si ha che 
@@ -74,7 +74,7 @@ data: "`2024-08-31 20:05`"
 		- Il sistema è associato ad una matrice $A$ che ha per righe $w_1,...,w_k$, per cui si ottiene che 
 			- $$W^{\bot}=v\in \mathbb{R}^{n}|A v=\underline{0}$$
 			- Ovvero il [[Kernel]].
-		- So che almeno una soluzione esiste: quella nulla (perché si tratta di un sistema omogeneo). Perciò per il [[Teorema di Rouché-Capelli]], fissato $n$ come il numero di colonne di e $k$ come il rango della matrice associata(perché $w_1,...,w_k$ sono linearmente [[Indipendenza lineare||linearmente indipendenti]]), la soluzione del sistema dipenderà da $n-k$ parametri, per cui la dimensione di $W^{\bot}$ sarà proprio $n-k$ 
+		- So che almeno una soluzione esiste: quella nulla (perché si tratta di un sistema omogeneo). Perciò per il [[Teorema di Rouché-Capelli]], fissato $n$ come il numero di colonne di e $k$ come il rango della matrice associata(perché $w_1,...,w_k$ sono [[Indipendenza lineare||linearmente indipendenti]]), la soluzione del sistema dipenderà da $n-k$ parametri, per cui la dimensione di $W^{\bot}$ sarà proprio $n-k$ 
 			- $$dim(W^{\bot})=n-k=n-dim(W)$$
 	- ## Intersezione 
 		- sia $W\le \mathbb{R}^{n}$, allora si ha che 

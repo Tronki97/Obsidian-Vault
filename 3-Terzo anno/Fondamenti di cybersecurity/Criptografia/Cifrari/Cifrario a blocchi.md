@@ -25,7 +25,7 @@ data: "`2026-02-27 11:31`"
 		- Ciò implica l'avere $2^{56}$ chiavi.
 	- ## Rete di Feistel:
 		- Date delle funzioni $f_{1,...,d}:\{0,1\}^{n} \to \{0,1\}^{n}$ non necessariamente invertibili
-		- L'obiettivo è quello di costruire una rete che se presa come funzione unica sia invertibile $F:\{0,1\}^{2n}\to \{0,1\}^{2n}$
+		- L'obiettivo è quello di costruire _una rete che se presa come funzione unica sia invertibile_ $F:\{0,1\}^{2n}\to \{0,1\}^{2n}$
 		- ![[Pasted image 20260227114820.png|808]]
 			- $R_{i}=f_{i}(R_{i-1})\oplus L_{i-1}$
 				- Con $\oplus$ inteso come _XOR_
@@ -87,8 +87,9 @@ data: "`2026-02-27 11:31`"
 	- Una proprietà desiderabile per algoritmi di criptazione è che una _piccola modifica_, della chiave o del _plaintext_, dovrebbe risultare in un _cambiamento sostanziale_ del _testo cifrato_  
 	- In particolare cambiare un bit della chiave o del plaintext dovrebbe far cambiare molti bit del testo cifrato
 - # Double DES:
+	- consiste nel cifrare due volte un messaggio con una 
 	- Non si usa a causa di un _meet in the middle_ attack
-	- Dato $m$ e $c$ l'obiettivo è quello di trovare $(k_{1},k_{2})$ tali che $E(k_{1}, E(k_{2},m))=c$ o equivalentemente trovare $(k_{1},k_{2})$ tali che $E(k_{2},m)=D(k_{1},c)$ 
+		- Dato $m$ e $c$ l'obiettivo è quello di trovare $(k_{1},k_{2})$ tali che $E(k_{1}, E(k_{2},m))=c$ o equivalentemente trovare $(k_{1},k_{2})$ tali che $E(k_{2},m)=D(k_{1},c)$ 
 		- ![[Pasted image 20260302093212.png|609]]
 		- Il punto centrale rappresenta il messaggio prima di effettuare la seconda cifratura 
 	- ### M(eet)ITM attack:
@@ -100,7 +101,7 @@ data: "`2026-02-27 11:31`"
 		- #### Analisi costi:
 			- Tempo per costruire e sortare la tabella: $2^{56}*\log(2^{56})$
 			- Tempo di ricerca nella tabella: $2^{56}*\log(2^{56})$
-			- Il totale è la somma dei due ottenendo un valore $<2^{63}<<2^{112}$ 
+			- Il totale è la somma dei due ottenendo un valore $<2^{63}<<2^{112}$ che è il tempo supposto se si dovesse fare brute force sul ciphertext cifrato 2 volte.
 - # 3DES:
 	- Blocco da $8$ byte e una chiave da $3*56=168$ bit 
 	- Si fanno 3 operazioni:
@@ -122,10 +123,13 @@ data: "`2026-02-27 11:31`"
 	- Blocchi da 128 bit e chiavi da $128, 192\ o\  256$ bit
 	- Si vengono a generare 44,52 o 60 sottochiave tutte da $32$ bit 
 	- Ogni round esegue in parallelo 4 step:
-		- _subBytes_ sostituzione byte per byte usando _S-box_
+		- _subBytes_ sostituzione byte per byte usando _S-box_ per introdurre la non linearità
 		- _ShiftRows_ permutazione che ciclicamente shifta le ultime 3 righe nello stato
+			- la prima rimane invariata 
+			- la seconda shifta di 2 posizioni verso sinistra 
+			- la terza shifta di tre posizioni verso sinistra 
 		- _MixColumns_: sostituzione che usa un campo di Galois $GF(2^{8})$
-			- Fa sostituzioni nel set definitio di Galois
+			- Fa sostituzioni nel set definito di Galois
 		- _Add round key_ si fa lo XOR bit per bit con una chiave espansa.
 	- ## Parametri:
 		- ![[Pasted image 20260302101722.png|458]]

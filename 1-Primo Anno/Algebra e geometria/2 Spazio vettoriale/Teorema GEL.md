@@ -10,7 +10,7 @@ data: "`2024-08-31 20:05`"
 	- 1)$v_1,...,v_n$ è [[Base]] di V
 	- 2)$v_1,...,v_n$ sono [[Indipendenza lineare||linearmente indipendenti]]
 	- 3)$v_1,...,v_n$ [[Sottospazio generato||generano]] V
-	Questa relazione tra _dimensione_, _base_, _indipendenza lineare_ e _generazione_ è una conseguenza del [[Teorema del completamento]]
+		- Questa relazione tra _dimensione_, _base_, _indipendenza lineare_ e _generazione_ è una conseguenza del [[Teorema del completamento]]
 - # Dimostrazione:
 	- per la definizione di base, $1 \implies 2$ e $1\implies 3$. 
 	  Verifico gli altri casi.

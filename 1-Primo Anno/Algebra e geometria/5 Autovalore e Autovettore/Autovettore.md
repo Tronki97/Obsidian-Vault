@@ -19,9 +19,11 @@ data: "`2024-08-31 20:05`"
 		- $$(A-\lambda_{i} I)v=0$$
 	- ## $\lambda_{1}$:
 		- si ha che $A-\lambda_{1} I= \begin{pmatrix}1 & 1 & 0 \\ 1 &2&1\\ 0&1&1\end{pmatrix}$
-	    - si risolve il sistema lineare:$$\begin{cases} x+y=0 \\ x+2y+z=0 \\ y+z=0 \end{cases}$$
+	    - si risolve il sistema lineare:
+		    - $$\begin{cases} x+y=0 \\ x+2y+z=0 \\ y+z=0 \end{cases}$$
 	    - la matrice risulta di rango 2 e per il [[Teorema di Rouché-Capelli]] si ha che il sistema ha $\infty^{3-2}=\infty^{1}$ soluzioni dipendenti da 1 parametro, e quindi ha almeno un autovettore associato a $\lambda_{1}$.
-		 - risolvendo si ha che l’autovettore associato a $\lambda_{1}$ $$v_{1}= (1, -1,  1)$$
+		 - risolvendo si ha che l’autovettore associato a $\lambda_{1}$ 
+			 - $$v_{1}= (1, -1,  1)$$
     - $\lambda_{2}$:
 	    - si ha che $A-\lambda_{2} I= \begin{pmatrix}-2 & 1 & 0 \\ 1 &-1&1\\ 0&1&-2\end{pmatrix}$
 	    - riduco a scala la matrice:

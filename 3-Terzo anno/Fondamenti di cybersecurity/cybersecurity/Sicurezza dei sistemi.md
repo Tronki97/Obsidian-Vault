@@ -27,7 +27,8 @@ data: "`2026-04-13 10:00`"
 		- mira a a dimostrare logicamente che un design soddisfi un certo insieme di requisiti di sicurezza e che la sua implementazione è fedelmente conforme alle sue specifiche.
 			- ad ogni soggetto e oggetto viene assegnata _una classe di sicurezza_
 			- un soggetto può leggere oggetti con livelli di sicurezza _minori o uguali al suo_ 
-			- un soggetto può scrivere oggetti a livelli di sicurezza _pari o maggiori al suo_. 
+			- un soggetto può scrivere oggetti a livelli di sicurezza _pari o maggiori al suo_.
+		- _no read up_ & _no write down_ 
 		- ### ES:
 			- suppongo di avere tre livelli di sicurezza:
 				- _Top-Secret_
@@ -54,6 +55,6 @@ data: "`2026-04-13 10:00`"
 		- _sticky_
 			- questo bit applicato su una cartella permette l'eliminazione dei file al suo interno solo al suo _owner_, anche se ha i permessi di scrittura per tutti (per esempio la cartella `/tmp`)
 			- se messo su di un file questo bit viene ignorato
-		- se un eseguibile appartenente a `root` e avente i bit di _setuid_ o _setgid_ attivi potrebbe essere sfruttato per ottenere l'accesso a root ad un altro utente 
+		- se un eseguibile appartenente a `root` e avente i bit di _setuid_ o _setgid_ attivi potrebbe essere sfruttato per far ottenere l'accesso a root ad un altro utente 
 - # Link Utili:
 	- 

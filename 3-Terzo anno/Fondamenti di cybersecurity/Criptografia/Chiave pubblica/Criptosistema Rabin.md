@@ -6,9 +6,9 @@ data: "`2026-03-30 18:10`"
 - # Generazione della chiave:
 	- _Bob_ genera 2 numeri primi grandi e diversi $p,q$ tali che:
 		- $$p\mod 4=q\mod 4=3$$
-		- si calcola poi $n=p*q$
+		- si calcola poi $n=p*q$  
 		- $K^{+}_{B}=n$
-		- $K_{B}^{-}=(p,q)$
+		- $K_{B}^{-}=(p,q)$ 
 - # Criptazione:
 	- Alice deve mandare $m$ a _bob_ e conosce la sua _chiave pubblica_ $n$
 	- calcola $c=m^{2}\mod n$ 
@@ -17,7 +17,7 @@ data: "`2026-03-30 18:10`"
 	- _Bob_ riceve $c$ da Alice 
 	- usa la sua chiave privata per calcolare $m$:
 		- calcola $m_{p}=c^{\frac{p+1}{4}} \mod p$
-		- calcola $m_{1}=c^{\frac{q+1}{4}} \mod q$
+		- calcola $m_{q}=c^{\frac{q+1}{4}} \mod q$
 		- trova poi $y_{p}$ e $y_{q}$ tali che 
 			- $y_{p}*p+y_{q}*q=1$ ([[Algoritmo di Euclide]]) 
 		- si calcola poi $r=(y_{p}*p*m_{p}+y_{q}*q*m_{q})\mod n$

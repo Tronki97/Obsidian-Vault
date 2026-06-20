@@ -5,6 +5,22 @@ aliases:
 data: "`2025-04-24 17:09`"
 ---
 # Note: 
+- Sistema lineare:
+	- [[Equazioni lineari]]
+	- [[Matrici]]
+	- [[Rango righe]]
+	- [[Algoritmo di Gauss]]
+- [[Spazio vettoriale]]
+	- [[Indipendenza lineare]]
+	- [[Base]]
+		- [[Base Canonica]]
+	- [[Combinazione lineare]]
+	- [[Sottospazio vettoriale]]
+		- [[Sottospazio generato]]
+		- [[Sottospazi vettoriali di R2]], [[Sottospazi vettoriali di R3]]
+	- [[Dimensione]]
+	- [[Teorema del completamento]]
+		- [[Teorema GEL]]
 - [[Applicazione lineare]]
 	- [[Applicazioni lineari definite da una matrice]]
 	- [[Composizione di applicazioni lineari]]

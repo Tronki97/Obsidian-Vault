@@ -28,7 +28,7 @@ data: "`2024-08-31 20:05`"
 		- sia V uno [[Spazio vettoriale]]. $v_1,...,v_{n} \in V$ sono dipendenti $\Longleftrightarrow$ uno di essi è  [[Combinazione lineare]] degli altri.
 		- ### Dimostrazione
 			- $\implies$)
-				- per ipotesi so che $v_1,...,v_{n}\in V$ sono dipendenti, ovvero esiste una sequenza di scalari che da come risultato il vettore nullo con un qualche $\lambda_{k}\ne 0$ per dimostrare quindi che in quell'insieme di vettori ce n'è uno che è combinazione lineare degli altri, prendo il vettore $v_{k}$ associato a $\lambda_{k}\ne 0$ e o isolo.
+				- per ipotesi so che $v_1,...,v_{n}\in V$ sono dipendenti, ovvero esiste una sequenza di scalari che da come risultato il vettore nullo con un qualche $\lambda_{k}\ne 0$ per dimostrare quindi che in quell'insieme di vettori ce n'è uno che è combinazione lineare degli altri, prendo il vettore $v_{k}$ associato a $\lambda_{k}\ne 0$ e lo isolo.
 					- $$\lambda_1 v_1+...+\lambda_{k}v_{k}+\lambda_n v_n=\underline{0}$$
 				- che diventa: 
 					- $$-\lambda_{k}v_{k}=\lambda_1 v_1+...+\lambda_n v_n$$

@@ -36,7 +36,7 @@ data: "`2026-03-09 17:44`"
 		- Il messaggio originale va diviso in $N$ blocchi indipendenti e si usa la stessa chiave per sia _criptazione_ che _decriptazione_, non c'è feedback quindi ogni blocco viene maneggiato indipendentemente
 		- ![[Pasted image 20260306112813.png|525]]
 		- ### Sicurezza:
-			- Non ha aspetti di casualità, di fatto se due plaintext sono uguali allora anche il loro testo cifrato sarà uguale, è _deterministico_
+			- Non ha aspetti di casualità, di fatto se due _plaintext_ sono uguali allora anche il loro testo cifrato sarà uguale, è _deterministico_
 			- _Quindi ECB non è semanticamente sicuro_
 			- ![[Pasted image 20260306121422.png|721]]
 		- ### Soluzioni per la sicurezza:
@@ -53,7 +53,9 @@ data: "`2026-03-09 17:44`"
 		- C'è una sorta di catena da cui si passa prima di generare il testo cifrato di output.
 		- ### Criptazione
 			- ![[Pasted image 20260306124811.png|723]]
-				- Si ha che il _ciphertext_ $C_{_{i}}$ dipende da $C_{i-1 }$
+				- $C_{1}=E(k, IV \oplus P_{1})$
+				- Si ha che il _ciphertext_ $C_{_{i}}$ dipende da $C_{i-1 }$ nel particolare:
+					- $C_{i} = E(k, (C_{i-1}\oplus P_{i}))$ 
 		- ### vettore di inizializzazione (IV):
 			- Deve essere noto ad entrambe le entità comunicanti 
 			- Deve essere protetto da modifiche non autorizzate
@@ -63,6 +65,9 @@ data: "`2026-03-09 17:44`"
 					- ![[Pasted image 20260306125517.png]]
 		- ### Decriptazione:
 			- ![[Pasted image 20260306125629.png]]
+			- si esegue lo XOR tra il ciphertext decriptato e il vettore di inizializzazione:
+				- $P_{1}=D(k,C_{1})\oplus IV$
+				- $P_{i} = C_{i-1}\oplus D(k, C_{i})$
 		- ### Attacco con rand. IV:
 			- L'avversario può prevedere il _vettore di inizializzazione_ quindi con è sicuro sul lato [[Criptografia#^8d2a6c|CPA]]
 			- Dato $c=E_{CBC}(k,m)$ si suppone che l'avversario possa prevedere l'_IV_ per il _prossimo messaggio._
@@ -71,13 +76,14 @@ data: "`2026-03-09 17:44`"
 		- Per [[autenticazione]] 
 		- Si divide l'input in segmenti di $s$ bit e che si criptano mano a mano
 		- Si hanno quindi messaggi con lunghezza diversa da quella standard, riuscendo a trasmettere su canali ad alta velocità e anche a lavorare con applicazioni real-time con certi limiti sul delay.
-		- 
 		- ### Struttura:
-			- ![[Pasted image 20260306132342.png]]
-				- ![[Pasted image 20260306132354.png]]
+			- ![[Pasted image 20260306132342.png|609]]
+				- ![[Pasted image 20260306132354.png|460]]
 				- La lunghezza del registro a scorrimento è $b$ bits e viene inizializzato con il valore di $IV$ 
 				- $MSB_{s}(X)$ e $LSB_{s}(X)$ sono i primi o ultimi $s$ bit di $X$
 			- L'IV deve essere un _nonce_ quindi unico per ogni esecuzione dell'operazione di criptazione 
+			- in sostanza:
+				- $$C_{j}=P_{J} \oplus MSB_{s}(E(k, LSB_{b-s}(I_{j-1})|| C_{j-1}))$$
 		- ### Cifratura:
 			- ![[Pasted image 20260306132959.png|706]]
 			- Il messaggio viene segmentato in messaggi di lunghezza $s$ bit 

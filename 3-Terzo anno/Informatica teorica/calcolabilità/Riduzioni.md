@@ -55,7 +55,7 @@ data: "`2026-03-13 15:12`"
 					- 1° nastro ha l'input ed è a sola lettura
 					- 2° nastro di lavoro, sia lettura che scrittura 
 					- 3° nastro di output, sola scrittura.
-			- un trasduttore $M$ calcola $f$ se per ogni $\forall w\in \Sigma^{*}$ quando $M$ riceve in input $w$ lascia scritto in _tempo finito_ al termine della sua computazione $f(w)$ sul nastro di output.   
+			- un trasduttore $M$ calcola $f$ se $\forall w\in \Sigma^{*}$ quando $M$ riceve in input $w$ lascia scritto in _tempo finito_ al termine della sua computazione $f(w)$ sul nastro di output.   
 			- $f$ quindi deve essere una funzione calcolata da un trasduttore quindi un algoritmo.
 		- ### TH5: ^416588
 			- siano $A$ e $B$ linguaggi tali che $A \le B$ (A si riduce a B) allora:
@@ -72,7 +72,7 @@ data: "`2026-03-13 15:12`"
 						- suppongo $A\notin RE \wedge B \in RE$ allora esiste una macchina $M_{B}$ che riesce a riconoscere $B$ 
 						- inoltre dall'ipotesi so che $A\le B$  quindi posso mettere la trasformazione $f$ dentro alla macchina grande $M_{A}$ 
 						- in modo da dare un input trasformato alla macchina $M_{B}$
-							- ![[appartenenza ad RE.excalidraw|900x200]]
+							- ![[appartenenza ad RE1.excalidraw|900x200]]
 						- in questo modo si ha che esiste una macchina $M_{A}$ che riesce a riconoscere stringhe $w\in A$ ma ciò va contro l'assunzione che $A\notin RE$ quindi siamo in un assurdo.
 			- #### Corollario:
 				- siano $A,B$ linguaggi tali che $A\le B$

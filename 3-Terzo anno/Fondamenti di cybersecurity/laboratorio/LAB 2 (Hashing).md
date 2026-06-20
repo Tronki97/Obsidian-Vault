@@ -22,7 +22,7 @@ data: "`2026-05-04 09:16`"
 			- permettono una "inversione" efficiente sullo spazio e il tempo delle [[Tabelle Hash#^01153a|funzioni hash]] 
 			- si precalcolano un certo numero di password di lunghezza $k$ chiamandola così _catena_ 
 			- si storano solo l'_inizio_ e _fine_ di ogni catena 
-				- più $k$ è grande meno catene da immagazzinare ci saranno ma più sarà alto il costo di CPU per ricostruirle 
+				- più $k$ è grande meno percentuale della catena c'è da immagazzinare ma più sarà alto il costo di CPU per ricostruirle 
 			- serve quindi una _funzione di riduzione_ $R:H \to P$ 
 				- con $P$ che è lo spazio delle password 
 				- si seleziona un $P'\subset P$ e poi $\forall p' \in P'$ si applica $H(p')=h'$ e poi $R(h')=p''$ e si ripete questo procedimento per $k$ volte

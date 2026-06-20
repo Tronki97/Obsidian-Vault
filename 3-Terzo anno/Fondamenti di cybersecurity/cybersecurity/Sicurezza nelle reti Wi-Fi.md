@@ -82,6 +82,7 @@ data: "`2026-05-10 11:27`"
 						- usa la modalità operativa [[Modi delle operazioni#^33be00|CTR]] con [[Cifrario a blocchi#^e890d7|AES]] per la crittografia 
 					- la stessa chiave _AES_ a $128$bit viene usata per entrambi i servizi
 					- si utilizza un _packet number_ a $48$bit per costruire un _nonce_ per prevenire i _replay_ 
+					- in questo modo ogni pacchetto ha una crittografia unica 
 		- ### Attacchi:
 			- ci sono i classici problemi legati ai meccanismi di autenticazione quindi attacchi _brute force_ o _dizionari_ possono comunque essere efficaci 
 			- Key Reinstallation AttaCK (Krack): è un attacco che sfrutta una vulnerabilità di _WPA2_ dove si riutilizzava un _nonce_ per velocizzare le autenticazioni successive, questo comporta il poter reinstallare chiavi vecchie in modo da poter analizzare facilmente la comunicazione e risalire alla chiave di cifratura 

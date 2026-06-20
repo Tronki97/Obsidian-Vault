@@ -104,11 +104,12 @@ data: "`2026-03-06 11:08`"
 			- $A$ e $B$ si scambiano messaggi
 			- Dopo lo scambio entrambi si sono messi d'accordo su una _chiave segreta condivisa_ $k$
 			- $k$ risulta sconosciuta all'ascoltatore
-			- Si basa sul problema del _logaritmo discreto_
+			- Si basa sul problema del [[Logaritmo discreto]]
 				- Dato $g$, $p$, $g^{k}\ mod\ p$ devo trovare $k$
-				- Si fissa $p$ di lunghezza alta tipo $600$ numeri
-				- Si fissa un intero $g\in\{2,...,p-2\}$
+				- Si _fissa_ $p$ di lunghezza alta tipo $600$ numeri
+				- Si _fissa_ un intero $g\in\{2,...,p-2\}$
 				- ![[Pasted image 20260310200737.png]]
+					- in sostanza Alice manda $g^{a} \mod p$ a Bob che a sua volta manda $g^{b} \mod p$ in seguito ognuno di loro eleva la proprio esponente ($a$ o $b$) il messaggio che ha ricevuto in questo modo si è riusciti a condividere una sorta di chiave di sessione 
 			- #### Sicurezza:
 				- L'_eavesdropper_ vedrà $p,g,g^{a}\ mod\ p$ e $g^{b}\ mod \ p$
 				- Potrà l'attaccante calcolare $g^{ab}\ mod \ p$?
@@ -117,6 +118,9 @@ data: "`2026-03-06 11:08`"
 						- $$e^{O(\sqrt[3]{n})}$$
 				- Non risulta sicuro però contro un attacco _MITM_
 					- ![[Pasted image 20260310201408.png]]
-					- In quanto potrebbe alterare i messaggi che arrivano a _Bob_ oppure riuscire a leggerli in chiaro.
+					- così facendo si creano di fatto due chiavi 
+						- $g^{a'b}\mod p$ per comunicare con Bob 
+						- $g^{ab'}\mod p$ per comunicare con Alice 
+					- in questo modo ogni messaggio passerà attraverso Eve che potrà decriptare i messaggi ed eventualmente modificarli.
 - # Link Utili:
 	- 

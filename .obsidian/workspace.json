@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "99a54977b160e770",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "0-Mostarda/Terzo Anno/Informatica teorica.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Informatica teorica"
             }
           },
           {
-            "id": "1b2891ae2833d405",
+            "id": "b159c965e9fe0f23",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/Criptosistema Rabin.md",
+                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/Indecidibilità dei problemi.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Criptosistema Rabin"
+              "title": "Indecidibilità dei problemi"
             }
           },
           {
-            "id": "882ef9adc26a43e5",
+            "id": "489ac223fc75883e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrari.md",
+                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/Riduzioni.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Cifrari"
+              "title": "Riduzioni"
+            }
+          },
+          {
+            "id": "4e2b3308e5609e15",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/Halting problem.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Halting problem"
+            }
+          },
+          {
+            "id": "e9e72e807237ab50",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/linguaggio di diagonalizzazione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "linguaggio di diagonalizzazione"
+            }
+          },
+          {
+            "id": "97c82a1e45551dba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di calcolabilità.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Classi di calcolabilità"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -100,7 +172,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Esplora risorse"
@@ -112,7 +184,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "direzionale",
+                "query": "setuid",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -244,7 +316,7 @@
             }
           },
           {
-            "id": "6633fc50d041c659",
+            "id": "1de0e105fb0c0663",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -284,44 +356,43 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/Criptosistema Rabin.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/LAB 2 (Hashing).md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/RSA.md",
-    "2-Secondo Anno/Reti di Calcolatori/(3) livello rete/Sicurezza di rete/Crittografia.md",
+    "0-Mostarda/Terzo Anno/Informatica teorica.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Riduzioni.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di calcolabilità.md",
+    "immagini/uc.png",
+    "immagini/Teoria di Dijkstra.png",
+    "immagini/Teoria Dijkstra.png",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/linguaggio di diagonalizzazione.md",
+    "immagini/Pasted image 20230926093429.png",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Halting problem.md",
+    "immagini/99a742d9c381b9a1835450f01f4dbe480d7b506f693c3420790296faab207e87.png",
     "Homepage.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Chiave pubblica/Criptosistema ElGamal.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Network security.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Key exchange.md",
-    "2-Secondo Anno/Sistemi Operativi/Sicurezza nei sistemi operativi/access control.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Controllo di accesso.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario a blocchi.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/Lab 3 Cybesecurity.md",
-    "Pasted image 20260511131332.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/laboratorio/VAPT.md",
-    "Pasted image 20260511123930.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Sicurezza dei sistemi.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/gerarchia di decidibilità dei linguaggi.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Gerarchia delle classi di complessità.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di decidibilità.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchine universali.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchina di Turing non-deterministica.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchina di Turing deterministica.md",
+    "1-Primo Anno/Algebra e geometria/5 Autovalore e Autovettore/Cambio di base.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Teorema spettrale.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Sottospazio ortogonale.md",
+    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Algoritmo di Euclide.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Proiezioni ortogonali.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Ortogonalità.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Sottospazio generato.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Coordinate rispetto a una base.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Matrice ortogonale.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Base ortonormale.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Base ortogonale.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Applicazione ortogonale.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Algoritmo di Gram-Schmidt.md",
+    "immagini/Pasted image 20260509151012.png",
+    "immagini/Pasted image 20260511131332.png",
+    "immagini/Pasted image 20260511123930.png",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Sicurezza nelle reti Wi-Fi.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/cybersecurity/Wireless network security.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Cifrario di flusso(stream cipher).md",
-    "2-Secondo Anno/Reti di Calcolatori/(1) Livello fisico/Modulazione.md",
-    "0-Mostarda/Terzo Anno/Fondamenti di cybersecurity.md",
-    "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/space domain.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Criptografia/Cifrari/Modi delle operazioni.md",
-    "Pasted image 20260509165628.png",
-    "Pasted image 20260509164355.png",
-    "Pasted image 20260509164020.png",
-    "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/time domain first.md",
-    "2-Secondo Anno/Reti di Calcolatori/(2) livello MAC/MAC Wireless/ad-hoc.md",
-    "2-Secondo Anno/Sistemi Operativi/Modulo 2/3. Scheduling/Scheduler.md",
-    "Pasted image 20260509151012.png",
-    "immagini/Pasted image 20260508152352.png",
-    "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Stack buffer overflow.md",
-    "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow/Difese contro il Buffer Overflow.md",
-    "immagini/Pasted image 20260508152316.png",
-    "immagini/Pasted image 20260506145204.png",
+    "immagini/Pasted image 20260509165628.png",
+    "immagini/Pasted image 20260509164355.png",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
-    "immagini/Pasted image 20260508150644.png",
     "0-Mostarda/Terzo Anno",
     "0-Mostarda/Secondo Anno",
     "0-Mostarda/Primo Anno",

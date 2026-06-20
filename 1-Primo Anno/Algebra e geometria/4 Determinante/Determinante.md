@@ -10,14 +10,14 @@ data: "`2024-08-31 20:05`"
 - # Def:
 	- Il _determinante_ di una [[Matrici||matrice]] quadrata $A \in M_{n}(\mathbb{R})$ è una funzione $det$ : $M_{n}(\mathbb{R})\to \mathbb{R}$ definita come $A\to det(A)$ tale che:
 		- 1)presa una riga $j$ di $A$ e scomposto tale vettore come somma di altri due vettori $v,u$ allora $det(A)$ è la somma dei determinanti delle due matrici ottenute sostituendo alla riga $j$ rispettivamente $v,u$;
-		- 2) Presa una riga $j$ di $A$ e scomposto tale vettore come il prodotto $\lambda u$, allora il $det(A)$ è il prodotto tra$\lambda$ e il determinante della matrice ottenuta sostituendo alla riga $j$ il vettore $u$
+		- 2) Presa una riga $j$ di $A$ e scomposto tale vettore come il prodotto $\lambda u$, allora il $det(A)$ è il prodotto tra $\lambda$ e il determinante della matrice ottenuta sostituendo alla riga $j$ il vettore $u$
 		- 3) se due righe di $A$ sono uguali allora $det(A)=0$;
 		- 4) $det(I)=1$ dove $I$ è la [[Matrice identità]]
 	- è importante tenere in considerazione che si dimostra come _una funzione che soddisfi queste 4 proprietà esiste ed è unica_, per cui è possibile studiarla. 
 - # Importanza ^65c54b
 	- Il determinante di una matrice è utile a studiarne [[Matrice invertibile||l'invertibilità]] e il comportamento dell' [[Applicazioni lineari definite da una matrice||applicazione lineare associata]] $L_{A}$. Di fatto si ha che:
 		- $$A\ invertibile \iff det(A)\ne 0$$
-	- e che $det(A)$ dove $A\in M_{n}(\mathbb{R})$ associata a $L_{A}:\mathbb{R}^{n}\to \mathbb{R}^{n}$ ci dice come cambiano le aree $(\mathbb{R}^2)$, i volumi $(\mathbb{R}^{3})$ o gli spazi maggiori quando si applica $L_{A}:$ funge un po da derivata di $L_{A}$
+	- e che $det(A)$ dove $A\in M_{n}(\mathbb{R})$ associata a $L_{A}:\mathbb{R}^{n}\to \mathbb{R}^{n}$ ci dice come cambiano le aree $(\mathbb{R}^2)$, i volumi $(\mathbb{R}^{3})$ o gli spazi maggiori quando si applica $L_{A}:$ funge un po' da derivata di $L_{A}$
 - # Corollario
 	- 1) Se $B$ si ottiene da $A$ scambiando due righe allora
 		- $$det(A)=-det(B)$$

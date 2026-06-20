@@ -21,7 +21,6 @@ data: "`2025-03-04 14:21`"
 		- $\mathbb{P}(B)$ è data dalla [[Formula delle probabilità totali]] 
 			- ![[Pasted image 20250324165436.png]]
 			- $$\mathbb{P}(B)=\mathbb{P}(B\cap T)+\mathbb{P}(B\cap T^{C})$$
-		- $$ \mathbb{P}(T|B)= \frac{\mathbb{P}(B|T)\mathbb{P}(T)}{\mathbb{P}(A)}=\frac{\mathbb{P}(B\cap T)}{\mathbb{P}(B\cap T)+\mathbb{P}(B\cap T^{C})}=\frac{1}{2}* \frac{1}{3}: \left( \frac{1}{3}* \frac{1}{2}+\frac{2}{7}* \frac{1}{2} \right)=\frac{7}{13}$$
-		- 
+		- $$ \mathbb{P}(T|B)= \frac{\mathbb{P}(B|T)\mathbb{P}(T)}{\mathbb{P}(B)}=\frac{\mathbb{P}(B\cap T)}{\mathbb{P}(B\cap T)+\mathbb{P}(B\cap T^{C})}=\frac{1}{2}* \frac{1}{3}: \left( \frac{1}{3}* \frac{1}{2}+\frac{2}{7}* \frac{1}{2} \right)=\frac{7}{13}$$
 - # Link Utili:
 	- 

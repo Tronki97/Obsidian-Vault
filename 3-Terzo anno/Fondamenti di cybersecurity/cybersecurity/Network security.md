@@ -13,6 +13,8 @@ aliases:
   - password leak
   - privilegio minimo
   - least privilege
+  - DDoS
+  - DoS
 data: "`2026-04-10 11:11`"
 ---
 - # AAA:

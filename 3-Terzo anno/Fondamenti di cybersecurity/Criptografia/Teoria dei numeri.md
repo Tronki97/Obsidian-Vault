@@ -25,7 +25,7 @@ data: "`2026-03-13 10:58`"
 	- ![[Pasted image 20260321175625.png|609]]
 - # teorema di Fermat:
 	- sia $p$ un numero primo e $x$ in intero positivo non divisibile per $p$
-		- $$\forall x \in \mathbb{Z}_{p}^{*}: x^{p-1}=1 \ in \ \mathbb{Z}_{p}$$
+		- $$\forall x \in \mathbb{Z}_{p}^{*}: x^{p-1}=1 \mod {p}$$
 - # Generare numeri primi grandi:
 	- per esempio $p$ di lunghezza $1024$ bit 
 	- si sceglie un intero random $p\in[1^{1024}, 2^{1025}-1 ]$
@@ -38,4 +38,4 @@ data: "`2026-03-13 10:58`"
 			- $\phi(37)=36$
 	- suppongo di avere due primi $q,p$ con $p\ne q$ $\phi(pq)=\phi(p)*\phi(q)=(p-1)(q-1)$
 - # Link Utili:
-	- 
+	- 1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25
