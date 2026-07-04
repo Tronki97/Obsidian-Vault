@@ -4,7 +4,9 @@ aliases:
 data: "`2026-04-15 14:16`"
 ---
 - # Def:
-	- coppia di insiemi $<U,F>$ dove $U$ è un insieme di oggetti $u_{1},...,u_{n}$ e $F$ è una _famiglia_ $s_{1},...,s_{n}$ tale che $s_{i}\subseteq U$ 
+	- coppia di insiemi $<U,F>$ dove:
+		- $U$ è un insieme di oggetti $u_{1},...,u_{n}$ 
+		- $F$ è una _famiglia_ $s_{1},...,s_{n}$ tale che $s_{i}\subseteq U$ 
 	- è vero o no che dentro $F$ si possono scegliere degli $s_{i}$ che possono formare una partizione di $U$ 
 		- $s_{i} \cap s_{j}=\emptyset$ e $\bigcup_{i} s_{i}=U$
 - # NP-completezza:

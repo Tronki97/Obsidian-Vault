@@ -77,7 +77,7 @@ data: "`2026-02-16 12:03`"
 				- Ovvero problemi in cui l'output può essere vario.
 			- #### ES:
 				- Dato $<G, s, t>$
-				- Si vuole sapere se c'è un percorso da $s$ a $t$ nel grafo $G$
+				- Si vuole sapere qual è il percorso da $s$ a $t$ nel grafo $G$
 				- Risulta essere un _problema facile_ visto che ha soluzione polinomiale
 			- Dato un problema di ricerca esiste una sua variante _di decisione_ che intuitivamente ha circa la stessa complessità
 		- ### Di decisione: ^c71371
@@ -88,6 +88,5 @@ data: "`2026-02-16 12:03`"
 			- _L'analisi di questi problemi risulta più facile rispetto a quelli di ricerca quindi ci si concentra su questi_
 			- Una classe di problemi di questo tipo è _l'analisi dei linguaggi_ e quindi capire se una certa stringa appartiene ad un determinato linguaggio.
 				- Si può fare perché tutti i problemi di decisione possono essere ricondotti al riconoscimento di un linguaggio
-- 
 - # Link Utili:
 	- 

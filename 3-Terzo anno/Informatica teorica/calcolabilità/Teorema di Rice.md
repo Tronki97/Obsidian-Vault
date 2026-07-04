@@ -57,11 +57,11 @@ data: "`2026-03-21 16:10`"
 			- quindi la parte del $\forall w$ non sarebbe rispettata.
 	- $P_{3}=\{M|L(M) \ne (L \cap \{0,1,\#\}^{101}) \}$ 
 		- è una proprietà semantica 
-		- è non banale perché esiste almeno un linguaggio non appartenente a questa proprietà ovvero $(L \cap \{0,1,\#\}^{101}$ e invece gli appartengono tutti i linguaggi diversi da quello  
-		- per _Rice_ è indecifibile.
+		- è non banale perché esiste almeno un linguaggio non appartenente a questa proprietà ovvero $(L \cap \{0,1,\#\}^{101})$ e invece gli appartengono tutti i linguaggi diversi da quello  
+		- per _Rice_ è indecidibile.
 - ## ES5:
 	- ho l'[[Classi di decidibilità#^e285c2|halt per ogni]] $HALT_{\forall}$ 
 	- è una proprietà di macchine.
-	- risulta essere non semantica perché si potrebbero avere 2 macchine una che si ferma sempre su istanze _si o no_ mentre se ne potrebbe avere un'altra che si ferma su istanze si mentre in quelle _no_ cicla. Di fatto queste due riconoscono lo stesso linguaggio ma uno appartiene alla proprietà $HALT_{\forall}$ mentre l'altro no perché non si ferma sulle istanze no quindi _è una propretà non semantica_.
+	- risulta essere non semantica perché si potrebbero avere 2 macchine una che si ferma sempre su istanze _si o no_ mentre se ne potrebbe avere un'altra che si ferma su istanze si mentre in quelle _no_ cicla. Di fatto queste due riconoscono lo stesso linguaggio ma uno appartiene alla proprietà $HALT_{\forall}$ mentre l'altro no perché non si ferma sulle istanze no quindi _è una proprietà non semantica_.
 - # Link Utili:
 	- 

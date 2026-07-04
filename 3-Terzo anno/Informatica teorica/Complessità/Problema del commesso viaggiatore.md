@@ -14,7 +14,7 @@ data: "`2026-04-29 14:12`"
 	- $G=<V,E,\lambda>$ 
 		- $\lambda: V \to \mathbb{N}$
 	- $$FTSP(G)=\min \{\lambda(\pi)| \pi \text{ è un hamiltonian cycle di }G=<V,E>  \}$$
-	- $$TSP=\{<G,k>|G \text{ ammette un hamiltonian cycle di peso almeno}\  k \}$$
+	- $$TSP=\{<G,k>|G \text{ ammette un hamiltonian cycle di peso massimo}\  k \}$$
 		- _$TSP\in NP$ perché si può guessare il ciclo e poi sommare i pesi sugli archi e verificare che non ecceda $k$_
 	- si può avere un trasduttore $FP^{NP}$ che quindi faccia richiesta ad un oracolo per il problema $TSP$ 
 		- fare chiamate in base al peso totale degli archi del grafo non farebbe rientrare il problema in $FP^{NP}$ perché risulta non polinomiale rispetto alla taglia dell'input perché si basa sul peso totale invece che sul numero di nodi. 
@@ -50,7 +50,7 @@ data: "`2026-04-29 14:12`"
 			- ### Funzionamento della trasformazione:
 				- istanza si di partenza:
 					- suppongo che $\phi$ sia soddisfacibile e sia $\sigma$ un assegnamento che la soddisfi 
-					- ogni volta che è possibile si un detour verso un nodo clausola non ancora visitato e siccome ce ne deve essere almeno uno per clausola siccome $\sigma$ esiste quindi si riescono a visitare tutti i nodi del grafo 
+					- ogni volta che è possibile si fa un detour verso un nodo clausola non ancora visitato e siccome ce ne deve essere almeno uno per clausola siccome $\sigma$ esiste quindi si riescono a visitare tutti i nodi del grafo 
 				- istanza si di arrivo:
 					- assumo che il grafo abbia un ciclo hamiltoniano 
 					- sia $\pi$ un qualsiasi ciclo hamiltoniano di $G$ 

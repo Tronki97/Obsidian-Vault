@@ -8,7 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "99a54977b160e770",
+            "id": "e7a7b303c61786dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3-Terzo anno/Informatica teorica/Complessità/Gerarchia delle classi di complessità.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Gerarchia delle classi di complessità"
+            }
+          },
+          {
+            "id": "b0cad8d8964f977a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,12 +56,12 @@
             }
           },
           {
-            "id": "b159c965e9fe0f23",
+            "id": "a2405436a383bf07",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/Indecidibilità dei problemi.md",
+                "file": "3-Terzo anno/Informatica teorica/Introduzione a Informatica Teorica.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,107 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Indecidibilità dei problemi"
-            }
-          },
-          {
-            "id": "489ac223fc75883e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/Riduzioni.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Riduzioni"
-            }
-          },
-          {
-            "id": "4e2b3308e5609e15",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/Halting problem.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Halting problem"
-            }
-          },
-          {
-            "id": "e9e72e807237ab50",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/linguaggio di diagonalizzazione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "linguaggio di diagonalizzazione"
-            }
-          },
-          {
-            "id": "97c82a1e45551dba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di calcolabilità.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Classi di calcolabilità"
+              "title": "Introduzione a Informatica Teorica"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -357,41 +285,42 @@
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
     "0-Mostarda/Terzo Anno/Informatica teorica.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Gerarchia delle classi di complessità.md",
+    "Homepage.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Dominating Set.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Problemi su Grafi.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/linguaggio di diagonalizzazione.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchina di Turing non-deterministica.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Oracoli/Oracoli.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale/Teorema di Savitch.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale/Complessità spaziale.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Oracoli/Gerarchia polinomiale.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Oracoli/Classi funzionali.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Teorema di Cook.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Nozioni di Complessità strutturale.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Classi di complessità.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Problema del commesso viaggiatore.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Altre classi di complessità temporale.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Teorema di Rice.md",
     "3-Terzo anno/Informatica teorica/Calcolabilità/Riduzioni.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchine universali.md",
     "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di calcolabilità.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/KERNEL problem.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Independent Set.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Vertex Cover.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/CLIQUE.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Colorabilità dei grafi.md",
+    "immagini/Pasted image 20260313185147.png",
     "immagini/uc.png",
     "immagini/Teoria di Dijkstra.png",
     "immagini/Teoria Dijkstra.png",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/linguaggio di diagonalizzazione.md",
     "immagini/Pasted image 20230926093429.png",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Halting problem.md",
     "immagini/99a742d9c381b9a1835450f01f4dbe480d7b506f693c3420790296faab207e87.png",
-    "Homepage.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/gerarchia di decidibilità dei linguaggi.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Gerarchia delle classi di complessità.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di decidibilità.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchine universali.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchina di Turing non-deterministica.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchina di Turing deterministica.md",
-    "1-Primo Anno/Algebra e geometria/5 Autovalore e Autovettore/Cambio di base.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Teorema spettrale.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Sottospazio ortogonale.md",
-    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Algoritmo di Euclide.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Proiezioni ortogonali.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Ortogonalità.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Sottospazio generato.md",
-    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Coordinate rispetto a una base.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Matrice ortogonale.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Base ortonormale.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Base ortogonale.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Applicazione ortogonale.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Algoritmo di Gram-Schmidt.md",
     "immagini/Pasted image 20260509151012.png",
     "immagini/Pasted image 20260511131332.png",
     "immagini/Pasted image 20260511123930.png",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "immagini/Pasted image 20260509165628.png",
-    "immagini/Pasted image 20260509164355.png",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
     "0-Mostarda/Terzo Anno",
     "0-Mostarda/Secondo Anno",

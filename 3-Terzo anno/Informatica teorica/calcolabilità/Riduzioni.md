@@ -104,6 +104,6 @@ data: "`2026-03-13 15:12`"
 						- di conseguenza $N\in L_{ne}$ 
 				- Istanza "_NO_"
 					- suppongo che $(M,w)\notin L_{u}$ allora $M \not \vDash w$ allora vuol dire che $L(N)= \emptyset$ e ciò implica che $N\notin L_{ne}$ 
-				- avendo fatto quindi la riduzione da un linguaggio $\notin R$ e avendo verificato che la trasformazione funziona si può stabilire grazie al _TH3_ che neanche quello in cui ci si è ridotti appartenga ad $R$ 
+				- avendo fatto quindi la riduzione da un linguaggio $\notin R$ e avendo verificato che la trasformazione funziona si può stabilire grazie al _TH3_ che _neanche quello in cui ci si è ridotti appartenga ad $R$_ 
 - # Link Utili:
 	- 

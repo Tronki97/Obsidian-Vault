@@ -5,7 +5,7 @@ aliases:
 data: "`2026-04-13 17:31`"
 ---
 - # Definizione:
-	- un Independent set per un grafo è un insieme $S$ di nodi sottoinsieme di quello dei nodi 
+	- un Independent set per un grafo è un insieme $S\subseteq V$ 
 	- ogni coppia di nodi in $S$ non è collegato da un arco del grafo 
 		- in sostanza le coppie di nodi non devono essere collegate da archi diretti 
 	- questo risulta un problema banale se questi insiemi sono di sottoinsiemi di nodi piccoli tipo $1$ nodo 
@@ -21,7 +21,7 @@ data: "`2026-04-13 17:31`"
 			- input di $3SAT$ è una formula $\phi$ con ogni clausola con esattamente $3$ letterali 
 			- input di $IS$ un grafo $G$ e un intero $k$ 
 		- ## Trasformazione:
-			- la parte difficile del problema di partenza $3SAT$ consiste nel determinare i valori dei letterali (e grazie al cazzo) 
+			- la parte difficile del problema di partenza $3SAT$ consiste nel determinare i valori dei letterali (_e grazie al cazzo_) 
 			- mentre del problema di arrivo è determinare se un nodo appartiene all'IS o meno. 
 			- si potrebbero mappare le variabili che vengono definite vere in nodi appartenenti all'$IS$ 
 			- si suppone di avere $\phi=(x_{1} \vee x_{2} \vee \neg x_{3})\wedge (\neg x_{2} \vee x_{4} \vee x_{3})\wedge(\neg x_{4} \vee x_{5} \vee \neg x_{3})$

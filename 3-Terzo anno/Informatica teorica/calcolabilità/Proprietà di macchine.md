@@ -23,11 +23,11 @@ data: "`2026-03-21 15:52`"
 	- si può dire quindi che $P\subseteq RE$ 
 		- una proprietà $P$ di linguaggi è _banale_ se è vuota o è tutto $RE$
 - # ES:
-	- $P_{1}=\{M|M \text{ha esattamente 5 stati}\}$ risulta _non banale_ perché possono esserci macchine anche con più o meno di 5 stati
+	- $P_{1}=\{M|M\  \text{ha esattamente 5 stati}\}$ risulta _non banale_ perché possono esserci macchine anche con più o meno di 5 stati
 		- associata alla struttura della macchine 
 		- non è semantica perché basterebbe considerare una macchina $M_{2}$ con 1 stato in più che non verrà mai usato che però riesce a riconoscere lo stesso linguaggio di una a 5 stati.
 	- $P_{2}=\{M| L(M)\ \text{contiene solo stringhe lunghezza pari} \}$ _non banale_ perché ci sono macchine che riconoscono linguaggi con stringhe non pari
-		- _proprietà di linguaggi_ perché se prendo due macchine $M_{1},M_{2}$ che accettano lo stesso linguaggio $L=L(M_{1})=L(M_{2})$ con sole stringhe pari quindi $M_{1},M_{2} \in P_{2}$ nel caso invece $L$ avesse anche stringhe non pari allora $M_{1},M_{2} \notin P_{2}$ 
+		- _proprietà semantica_ perché se prendo due macchine $M_{1},M_{2}$ che accettano lo stesso linguaggio $L=L(M_{1})=L(M_{2})$ con sole stringhe pari quindi $M_{1},M_{2} \in P_{2}$ nel caso invece $L$ avesse anche stringhe non pari allora $M_{1},M_{2} \notin P_{2}$ 
 	- $P_{e}=\{M|L(M)=\emptyset\}$ _non banale_ perché non tutte le macchine riconoscono un linguaggio vuoto e ci possono essere delle macchine che riconoscono un linguaggio vuoto.
 		- risulta anche essere indecidibile
 - # Link Utili:

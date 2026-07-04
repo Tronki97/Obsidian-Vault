@@ -33,13 +33,13 @@ data: "`2026-03-31 14:54`"
 			- _problema della raggiungibilità su un grafo_.
 				- $$L_{R}=\{<G, s, t>| \text{G è un Grafo, (s,t)}\in G\ \exists\text{ un percorso da s a t in G}\}$$
 				- _è in $P$_
-				- basta pensare all'[[Algoritmo di Dijkstra]] e prendere il nodo di partena come $s$ e quello di arrivo $t$ avendo la strada "più veloce" ma di fatto esiste quella strada.
+				- basta pensare all'[[Algoritmo di Dijkstra]] e prendere il nodo di partenza come $s$ e quello di arrivo $t$ avendo la strada "più veloce" ma di fatto esiste quella strada.
 				- altrimenti semplicemente una [[Visite sui Grafi#^3c4eb5|BFS sui grafi]] e si controlla che che il nodo $t$ sia presente nell'albero restituito. 
 			- _decidere se un numero è primo o no_:
 				- banalmente se divido per tutti i numeri minori dovrò fare almeno $n$ divisioni.
 					- una divisione ha costo polinomiale 
 				- ma come complessità si ha $O(2^{|n|}*Poly(|n|))$ siccome bisogna fare $n$ divisioni ma di fatto usando numeri in binario si dovranno fare $2^{|n|}$ operazioni polinomiali 
-				- _di fatto rendendo l'algoritmo esponenziale_ $\notin P$ 
+				- _di fatto rendendo l'algoritmo esponenziale_ quindi $\notin P$ 
 				- anche se in realtà esiste un algoritmo in grado di risolverlo in tempo polinomiale con $O(n^{12})$ 
 			- _problema SAT(CNF)_
 				- _problema della soddisfacibilità delle formule booleane_
@@ -63,9 +63,9 @@ data: "`2026-03-31 14:54`"
 		- _nodeterministic polynomial_
 		- insieme di tutti i problemi di decisioni che possono essere _decisi_ da macchine di turing non deterministiche in tempo polinomiale
 			- $$NP=\bigcup_{c\ge1}\ NTIME(n^{c})$$
-			- non esistono ancora algoritmi polinomiali per risolvere questi problemi
+			- non esistono ancora algoritmi polinomiali deterministici per risolvere questi problemi
 	- ## Caratterizzazione diversa per NP:
-		- normalmente quando in una macchina non deterministica si fa guess di solito si sta cercando di trovare un _certificato_ che per essere NP necessitano di essere di dimensione _polinomiale_ e vengono chiamati _certificati concisi_ e deve essere _polinomialmente verificabile_ in maniera, di solito, deterministica.
+		- Quando in una macchina non deterministica si fa un guess di solito si sta cercando di trovare un _certificato_ che per essere NP necessitano di essere di dimensione _polinomiale_ e vengono chiamati _certificati concisi_ e deve essere _polinomialmente verificabile_ in maniera, di solito, deterministica.
 		- questa nuova definizione è basata su _certificati e relazioni_ 
 		- definisco una relazione come: dati $\Sigma=\{0,1\}$ e $\Sigma^{*}$:
 			- $R\subseteq \Sigma^{*} \times \Sigma^{*}$ questa _relazione_ può avere lunghezza infinita
@@ -126,7 +126,7 @@ data: "`2026-03-31 14:54`"
 	- ## TH:
 		- siano $A,B$ linguaggi $A\in NP-HARD \wedge A\le_{P}B \implies B\in NP-HARD$
 		- ### Dim:
-			- $A\in NP-HARD \implies$ $\forall L'\in NP \ \ L'\le_{P} A$ e sapendo che $A\le_{P}B$ allora per la _transitività delle riduzioni polinomiali_ $L'\le_{P}B$  
+			- $A\in NP-HARD \implies$ $\forall L'\in NP \ \ L'\le_{P} A$ e sapendo che $A\le_{P}B$ allora per la _transitività delle riduzioni polinomiali_ $\forall L' \in  NP\ \  L' \le_{P}B$ quindi $B$ è _NP-hard_
 		- _SAT_ è l'unico linguaggio dimostrato essere $NP-HARD$ per definizione e non per riduzione.
 - # NP-completezza: ^c9bbd5
 	- Un linguaggio $L$ è $NP$ completo se:
@@ -145,8 +145,8 @@ data: "`2026-03-31 14:54`"
 			- $3SAT \in NP-HARD$
 				- si dimostra riducendo da $SAT$ ovvero $SAT \le_{P}3SAT$
 				- le istanze di $SAT$ sono le formule booleane $\phi$ in CNF; mentre quelle di $3SAT$ sono formule booleane $\psi$ in $3CNF$  
-				- una istanza si di $SAT$ è una formula $\phi$ per la quale esiste un assegnamento $\sigma$ che rende la formula $\phi$ vera; per quella $3SAT$ la situazione è analoga 
-				- un istanza no invece è una formula per la quale non esiste un assegnamento che la rende vera; questione analoga per $3SAT$ 
+				- una istanza _si_ di $SAT$ è una formula $\phi$ per la quale esiste un assegnamento $\sigma$ che rende la formula $\phi$ vera; per quella $3SAT$ la situazione è analoga 
+				- un istanza _no_ invece è una formula per la quale non esiste un assegnamento che la rende vera; questione analoga per $3SAT$ 
 				- si parte da $\phi$ e la si trasforma in $\phi'$ dove si è accorciato le clausole lunghe di un letterale 
 					- questo processo si ripete fintanto che non si è accorciato abbastanza per aver ottenuto clausole di lunghezza massima $3$ 
 					- $\phi \to \phi' \to...\to \psi$ 

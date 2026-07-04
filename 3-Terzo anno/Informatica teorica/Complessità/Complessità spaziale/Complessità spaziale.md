@@ -57,7 +57,7 @@ data: "`2026-04-23 15:38`"
 			- $$REACH = \{(G, s, t) | \text{G e' orientato, s e t sono due vertici di G ed esiste un path da s a t in G}\}$$
 			- si può provare a usare [[Algoritmo di Dijkstra||Dijkstra]] e quindi tenere da conti nodi visitati risultando quindi in linearità sui nodi.
 			- serve utilizzare il _non-determinismo_
-				- si fa [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sul cammino e voi check per vedere sia valido.
+				- si fa [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sul cammino e poi check per vedere sia valido.
 				- però il cammino ha lunghezza lineare sui nodi 
 			- allora si deve semplicemente tenere in memoria un solo nodo:
 				- si va quindi a sovrascrivere il nodo corrente con quello successivo che viene _guessato_.
@@ -67,7 +67,7 @@ data: "`2026-04-23 15:38`"
 				- _questo contatore deve essere in base 2 altrimenti sarebbe lineare_. 
 			- in sostanza:
 				- il vertice corrente è rappresentato in base 2 e quindi logaritmico sul numero dei nodi come il contatore
-				- quindi $REACH\in LOGSPACE$
+				- quindi $REACH\in NLOGSPACE$
 	- ## PSPACE: ^303f0e
 		- $$PSAPCE = \bigcup_{c\ge 1}DSPACE(n^{c})$$
 	- ## NPSPACE:
@@ -82,7 +82,7 @@ data: "`2026-04-23 15:38`"
 			- $\forall B \in NL,\ \ B\le_{L} A$ 
 				- $B\le_{L} A$ è una riduzione _logspace_ deve essere quindi calcolabile in spazio logaritmico
 					- _il trasduttore_ che calcola questa funzione di _riduzione_ lavora sul secondo nastro ed è li che si applica il _bound logaritmico_ 
-					- il nastro di output è dio sola scrittura e quindi il _trasduttore_ non lo può usare per fare dei lavori intermedi obbligandoci a trovare delle procedure che ci fanno scrivere sul nastro di output _solo risultati corretti_
+					- il nastro di output è di sola scrittura e quindi il _trasduttore_ non lo può usare per fare dei lavori intermedi obbligandoci a trovare delle procedure che ci fanno scrivere sul nastro di output _solo risultati corretti_
 	- ## NL-completezza di REACH:
 		- $REACH\in NL$-completo: ^4d4221
 			- _non si hanno problemi NL-hard di partenza da usare come base_

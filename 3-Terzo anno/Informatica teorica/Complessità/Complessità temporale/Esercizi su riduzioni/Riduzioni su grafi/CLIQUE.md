@@ -23,7 +23,7 @@ data: "`2026-04-13 17:41`"
 		- si costruisce la [[Macchina di Turing non-deterministica]] che fa [[Macchina di Turing non-deterministica#^6e7b0a|guess]] sul sottoinsieme dei nodi che formano la CLIQUE e checka se è effettivamente così e queste operazioni si fanno in tempo polinomiale.
 	- $CLIQUE\in NP-HARD$
 		- la riduzione è sempre da $IS$
-		- $$IS<G,k>\le_{P} CLIQUE<H,l>$$
+		- $$IS<G,k>\ \ \le_{P} \ \ CLIQUE<H,l>$$
 		- ## Trasformazione:
 			-  $H=\bar{G}$ e $l=k$ 
 			- parto dall'istanza _Si_ di partenza:

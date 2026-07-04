@@ -42,7 +42,7 @@ data: "`2026-03-16 18:26`"
 				- ## Formalizzazione della trasformazione:
 					- si assume che $M$ _non scrive mai $\not{b}$_ e che _non scriva mai a sinistra dell'inizio_
 					- regole delle famiglie $R,S$
-						- 1) #  per $R$ e $\#q_{0}w_{1}...w_{n}$
+						- 1) # per $R$ e $\#q_{0}w_{1}...w_{n}$
 							- ![[Pasted image 20260316171948.png]]
 						- 2) ![[Pasted image 20260316172256.png]]
 						- 3)![[Pasted image 20260316172324.png]]
@@ -61,7 +61,7 @@ data: "`2026-03-16 18:26`"
 									- sapendo quindi che la concatenazione delle $r$ inizia con $\#$ e finisce con $q\#\#$ mentre quella delle $s$ inizia con $\#q_{0}w_{1}...w_{n}\#$  e finisce con $\#$ e in mezzo ci saranno tutte quelle stringhe della famiglia $3$ che hanno il compito di codificare la funzione di transizione della macchina $M$ si avrà in sostanza _una simulazione di accettazione della macchina $M$ sulla stringa $w$_.
 							- ottenendo una risposta _si_ per il problema $MPCP$ vuol dire che si ha avuto una computazione della stringa in input $w$ tale che $M\vDash w$ quindi si era in una istanza _si_  
 		- ### Riduzione verso PCP 
-			- input partenza $R,S$; input arrivo $(T,U)$ 
+			- input partenza $(R,S)$; input arrivo $(T,U)$ 
 			- trasformo ogni stringa di $R$ in quella di $T$ mettendo un $*$ dopo ogni simbolo presente nella stringa $101 \to 1*0*1*$ 
 			- mentre per $S$ e $U$ faccio la stessa cosa solo mettendo $*$ prima del simbolo
 			- infine aggiungo una coppia:
@@ -88,7 +88,7 @@ data: "`2026-03-16 18:26`"
 					- si cerca quindi di dimostrare che se si è ottenuto una istanza _si_ allora si è partiti da un'altra _si_ 
 					- $(T,U)\in PCP$ allora $\exists i_{1},...,i_{l-1}i_{l}:$
 						- $$t_{i_{1}}...t_{i_{l-1}}t_{i_{l}}=u_{i_{1}}...u_{i_{l-1}}u_{i_{l}}$$
-						- poi visto che la tabella $(T,U)$ ha come unico indice con inizio uguale si per $T$ che per $U$ l'indice $0$ vorrà dire che:
+						- poi visto che la tabella $(T,U)$ ha come unico indice con inizio uguale sia per $T$ che per $U$ l'indice $0$ vorrà dire che:
 							- $t_{i_{1}}=t_{0}=*t_{1}$ e $u_{i_{1}}=u_{0}=u_{1}$
 						- e quello che ha lo stesso finale è l'indice $k+1$ 
 							- $t_{l}=t_{k+1}$ e $u_{l}=u_{k+1}$

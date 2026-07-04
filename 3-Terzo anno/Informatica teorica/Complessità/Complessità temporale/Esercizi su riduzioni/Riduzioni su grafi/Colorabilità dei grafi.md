@@ -6,6 +6,7 @@ aliases:
   - k-colorabilità
   - k colorabilità
   - k col
+  - vertex-coloring
 data: "`2026-04-13 17:57`"
 ---
 - # Definizione:
@@ -33,7 +34,7 @@ data: "`2026-04-13 17:57`"
 					- se $\sigma[x_{i}]=F \implies \lambda_{\sigma}[x_{i}]=R \wedge \lambda_{\sigma}[\neg x_{i}]=V$
 				- dalla premessa so che $\phi$ è soddisfacibile quindi i nodi che rappresentano le clausole devono essere colorati di verde sia per la struttura dei moduli clausola sia per il collegamento con i nodi $B$ e $R$ 
 			- parto dall'istanza _si_ di arrivo
-				- quindi il grafo è colorabile secondo le regole stabilite, avendo quindi definito l'ordine dei colori per $(T,R,B)$ che non necessitano di avere sempre gli stessi colori. 
+				- quindi il grafo è colorabile secondo le regole stabilite, avendo quindi definito l'ordine dei colori per $(T,F,B)$ che non necessitano di avere sempre gli stessi colori. 
 					- chiamo questa colorazione $\lambda$ 
 				- se il colore di $x_{i}$ è lo stesso di $T$ allora in $\sigma_\lambda[x_{i}]=T$ se invece è uguale a quello di $F$ metto in $\sigma_{\lambda}[x_{i}]=F$ 
 				- se per assurdo $\sigma_{\lambda}$ non è un assegnamento soddisfacente allora vuol dire che almeno una clausola ha i letterali tutti falsi e vorrebbe dire che gli input dei moduli OR del grafo nell'immagine sono entrambi del colore di $F$ e ciò significherebbe che il loro risultato sarebbe lo stesso di $R$ che gli è adiacente e ciò porterebbe ad una contraddizione sull'ipotesi che $\lambda$ sia una colorazione accettabile. 

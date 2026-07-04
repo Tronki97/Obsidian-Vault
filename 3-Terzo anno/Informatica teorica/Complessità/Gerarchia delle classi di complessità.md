@@ -16,7 +16,7 @@ data: "`2026-04-24 19:22`"
 			- sia $L\in CO-NP$ quindi ho che $\bar{L}\in NP$, per la dimostrazione precedente so che $\bar{L}\in PSPACE$ quindi esiste una [[Macchina di Turing deterministica]] $M$ che decide $\bar{L}$ in _spazio polinomiale_, di conseguenza è possibile costruire una $MdT$ con gli stati di accettazione e rigetto invertiti in modo tale che riconosca $\bar{\bar{L}}=L$ in spazio polinomiale
 			- quindi $L\in PSPACE$ e $CO-NP\subseteq PSPACE$ 
 		- $PSPACE \subseteq$ [[Altre classi di complessità temporale#^65b187|EXP]]:
-			- ogni MdT deterministica che decide un linguaggio $L$ usando $O(n^c)$ celle non potra visitare più di $O(2^{n^{c}})$ [[Macchina di Turing deterministica#^e83938|ID]] 
+			- ogni MdT deterministica che decide un linguaggio $L$ usando $O(n^c)$ celle non potrà visitare più di $O(2^{n^{c}})$ [[Macchina di Turing deterministica#^e83938|ID]] 
 			- e quindi la macchina richiederà tempo esponenziale per decidere $L$ 
 - # Link Utili:
 	- 
