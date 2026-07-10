@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3-Terzo anno/Informatica teorica/Complessità/Gerarchia delle classi di complessità.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Gerarchia delle classi di complessità"
-            }
-          },
-          {
-            "id": "b0cad8d8964f977a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0-Mostarda/Terzo Anno/Informatica teorica.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Informatica teorica"
-            }
-          },
-          {
-            "id": "a2405436a383bf07",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Informatica teorica/Introduzione a Informatica Teorica.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Introduzione a Informatica Teorica"
+              "title": "Homepage"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -178,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
+                "file": "Homepage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,7 +139,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Riferimenti a sviluppo di un sistema software in python"
+              "title": "Riferimenti a Homepage"
             }
           },
           {
@@ -197,11 +148,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Homepage.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Collegamenti in uscita"
+              "title": "Collegamenti in uscita da Homepage"
             }
           },
           {
@@ -244,7 +196,7 @@
             }
           },
           {
-            "id": "1de0e105fb0c0663",
+            "id": "e0f7a9090ccdda12",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -284,32 +236,32 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "0-Mostarda/Terzo Anno/Informatica teorica.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Gerarchia delle classi di complessità.md",
     "Homepage.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Dominating Set.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Problemi su Grafi.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/linguaggio di diagonalizzazione.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchina di Turing non-deterministica.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Oracoli/Oracoli.md",
+    "1-Primo Anno/Algebra e geometria/4 Determinante/Determinante.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Applicazione lineare.md",
+    "0-Mostarda/Primo Anno/Algebra e Geometria.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Teorema GEL.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Teorema del completamento.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Dimensione.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Sottospazio generato.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Combinazione lineare.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Sottospazio vettoriale.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Base.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Base Canonica.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Indipendenza lineare.md",
+    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Spazio vettoriale.md",
+    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Algoritmo di Gauss.md",
+    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Rango righe.md",
+    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Matrici.md",
+    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Equazioni lineari.md",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale/Teorema di Savitch.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale/Complessità spaziale.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Oracoli/Gerarchia polinomiale.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Oracoli/Classi funzionali.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Teorema di Cook.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Nozioni di Complessità strutturale.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Classi di complessità.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Problema del commesso viaggiatore.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Altre classi di complessità temporale.md",
+    "0-Mostarda/Terzo Anno/Informatica teorica.md",
     "3-Terzo anno/Informatica teorica/Calcolabilità/Teorema di Rice.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Riduzioni.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Macchina di turing/Macchine universali.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di calcolabilità.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/KERNEL problem.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Independent Set.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Indecidibilità dei problemi.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di decidibilità.md",
+    "3-Terzo anno/Informatica teorica/Calcolabilità/Proprietà di macchine.md",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Vertex Cover.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/CLIQUE.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Colorabilità dei grafi.md",
+    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Classi di complessità.md",
     "immagini/Pasted image 20260313185147.png",
     "immagini/uc.png",
     "immagini/Teoria di Dijkstra.png",

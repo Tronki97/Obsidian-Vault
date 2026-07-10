@@ -29,6 +29,7 @@ data: "`2026-03-21 15:52`"
 	- $P_{2}=\{M| L(M)\ \text{contiene solo stringhe lunghezza pari} \}$ _non banale_ perché ci sono macchine che riconoscono linguaggi con stringhe non pari
 		- _proprietà semantica_ perché se prendo due macchine $M_{1},M_{2}$ che accettano lo stesso linguaggio $L=L(M_{1})=L(M_{2})$ con sole stringhe pari quindi $M_{1},M_{2} \in P_{2}$ nel caso invece $L$ avesse anche stringhe non pari allora $M_{1},M_{2} \notin P_{2}$ 
 	- $P_{e}=\{M|L(M)=\emptyset\}$ _non banale_ perché non tutte le macchine riconoscono un linguaggio vuoto e ci possono essere delle macchine che riconoscono un linguaggio vuoto.
-		- risulta anche essere indecidibile
+		- è _semantica_ perché se due macchine entrambe riconoscono un linguaggio vuoto allora entrambe apparterranno alla proprietà delle macchine che riconoscono un linguaggio vuoto.
+		- risulta anche essere _indecidibile_
 - # Link Utili:
 	- 

@@ -4,7 +4,12 @@ aliases:
 data: "`2024-08-31 20:05`"
 ---
 - # Def:
-	- Uno spazio vettoriale è una struttura algebrica composta da: un insieme V di vettori, due operazioni, somma tra due vettori e prodotto per uno scalare e un vettore e una serie di proprietà
+	- Uno spazio vettoriale è una struttura algebrica composta da: 
+		- un insieme V di vettori
+		- due operazioni:
+			- somma tra due vettori 
+			- prodotto per uno scalare e un vettore
+		- una serie di proprietà
 - # Operazioni
 	- ## Somma:
 		- dati due vettori $u = (u_{1},...,u_{n})\ , \  v = (v_{1},...,v_{n})$ $\in V$ 

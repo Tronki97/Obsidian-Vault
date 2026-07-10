@@ -30,7 +30,7 @@ data: "`2026-03-21 16:10`"
 			- $\emptyset \in P$
 				- si considera $\bar{P}=RE - P$ quindi si ha che $\emptyset\notin \bar{P}$ 
 				- $\bar{P}$ sarà non banale perché si è assunto che neanche $P$ lo sia e visto che:
-					- $$\begin{cases}\emptyset \notin \bar{P}\\ \bar{P} \ \text{non baanle}\end{cases} \implies\text{stesse premesse del caso precedente}$$
+					- $$\begin{cases}\emptyset \notin \bar{P}\\ \bar{P} \ \text{non banale}\end{cases} \implies\text{stesse premesse del caso precedente}$$
 					- si ha che $L_{\bar{P}}\notin R$ 
 				- inoltre risulta che $\bar{L_{\bar{P}}}=L_{P}$ e quindi non è possibile che $\bar{L_{\bar{P}}}$ sia in $R$ perché:
 					- supponendo che $\bar{L_{\bar{P}}} \in R$ allora vuol dire che $L_{\bar{P}}\in R$ (per [[Classi di calcolabilità#^0e0666|TH1]]) ma è una contraddizione su quello che era stato dimostrato prima  

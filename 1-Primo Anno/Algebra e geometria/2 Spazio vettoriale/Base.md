@@ -23,7 +23,7 @@ data: "`2024-08-31 20:05`"
 				- $V=\langle{v_1,...,v_n}\rangle$
 					- In questo caso, se $v_1,...,v_n$ sono indipendenti sono anche una base; altrimenti vuol dire che uno specifico vettore $v_{i}$ può essere espresso come [[Combinazione lineare]] degli altri, Per cui:
 						- 1) Cancello $v_{i}$ dall'insieme dei generatori
-						- 2) controllo de sono ancora dipendenti, in tal caso identifico la combinazione lineare che esprime $v_{i}$ e ricomincio dal punto 1; altrimenti ho la mia base.
+						- 2) controllo se sono ancora dipendenti, in tal caso identifico la combinazione lineare che esprime $v_{i}$ e ricomincio dal punto 1; altrimenti ho la mia base.
 		- ###### ES:
 			- dato l'insieme di vettori 
 				- $$S=(3,1+x,x^{2},5x,4x,-2x^{3},x^{2}+10x-1)$$
