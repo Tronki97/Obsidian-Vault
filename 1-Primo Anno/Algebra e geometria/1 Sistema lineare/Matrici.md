@@ -14,7 +14,7 @@ data: "`2024-08-31 20:05`"
 	- _Uguaglianza_: Due matrici A e B sono uguali se $\forall i,j \ \  a_{ij}=b_{ij}$ 
 	- Una riga (o colonna) di una matrice A può essere vista come una matrice $1\times n$ (rispettivamente $m\times1$) 
 - # Matrice quadrata:
-	- Una matrice si dice quadrata se m=n 
+	- Una matrice si dice quadrata se m=n  ^7c2a5d
 - # Matrice trasposta: ^9fad89
 	- la trasposta di una matrice una matrice dove l'elemento $a_{ji}$ diventa l'elemento $a_{ij}$
 		- quindi una matrice di 4 righe e 3 colonne avrà la trasposta di 3 righe e 4 colonne.

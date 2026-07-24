@@ -62,7 +62,7 @@ data: "`2024-08-31 20:05`"
 			- $$\begin{pmatrix}2&-1|&a\\1&-1|&b\end{pmatrix}$$
 		- La riduco a [[Matrici#^f9d3d2||scala]] usando [[Algoritmo di Gauss||Gauss]]:
 			- $$\begin{pmatrix}2&-1|&a \\0&\ \ \ 1| &b-2a\end{pmatrix}$$
-		- A prescindere dai valori di a e b, il [[Rango righe]] della matrice incompleta è uguale al rango righe della matrice completa ovvero: 
+		- A prescindere dai valori di a e b, il [[Rango di una matrice]] della matrice incompleta è uguale al rango righe della matrice completa ovvero: 
 			- $$rr(A)=2=rr(A|\underline{b})$$
 		- Quindi il sistema ha soluzione. Il numero di incognite è sempre 2, perciò il sistema ha una sola soluzione.
 		- Infine possiamo affermare che un qualunque $(a,b)\in \mathbb{R}^2$ può essere generato a partire dai vettori (2,1) e (-1,-1), ovvero: $(a,b)\in\langle (2,1),(-1,-1)\rangle\ \ \forall(a,b)$ e che quindi:

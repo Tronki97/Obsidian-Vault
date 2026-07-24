@@ -5,7 +5,17 @@ data: "`2024-08-31 20:05`"
 ---
 - # Def:
 	- Un [[Applicazione lineare]] $f:\mathbb{R}^{n} \to \mathbb{R}^{n}$ [[Applicazioni lineari definite da una matrice||definita da una matrice]] $M$ si dice _diagonalizzabile_ se esiste una [[Base]] $\beta$ di $\mathbb{R}^{n}$ tale che $M_{\beta}^{\beta}(f)$ sia _diagonale_
+	- una [[Matrici#^7c2a5d|matrice quadrata]] $A$ è diagonalizzabile se esiste una [[Matrice invertibile]] $P: P^{-1}*A*P=B$ sia _diagonale_ 
 - # Proposizioni
+	- ## 1:
+		- sia $T:\mathbb{R}^{n} \to \mathbb{R}^{n}$ una [[Applicazione lineare]] associata alla matrice $A$ rispetto alla base canonica in dominio e codominio allora:
+			- $$T \in Diagonalizzabile \iff A \in Diagonalizzabile$$
+		- inoltre se entrambe lo sono la base $\beta$ che diagonalizza $T$ corrisponde alle colonne della matrice $P: P^{-1}*A*P=B$ sia diagonale.
+		- ### Dim:
+			- $\implies)$
+				- supponendo $T$ sia diagonalizzabile allora esiste una base $\beta$ rispetto a cui la matrice $A_{\beta,\beta'}$ associata a $T$ è diagonale detta $P=I_{\beta,c}$ si avrà che, secondo la formula del [[Cambio di base]], $A_{\beta,\beta'}=P^{-1}* A*P$ quindi per definizione $A$ sarà diagonalizzabile.
+			- $\Longleftarrow)$
+				- supponendo che $A$ sia diagonalizzabile allora significa che esiste $P:P^{-1}* A*P$ sia diagonale, e se si considera la base $\beta$ con elementi le colonne di $P$ si avrà che $P$ è esattamente la matrice di cambio base $I_{\beta,c}$ per cui la matrice associata a $T$ rispetto alla base $\beta$ in dominio e codominio è $I_{\beta,c}^{-1}*A*I_{\beta,c}=P^{-1}*A*P$ che è diagonale pertanto $T$ è diagonalizzabile.
 	- ## Legame con autovettori
 		- Prendo per esempio $f:\mathbb{R}^{2} \to \mathbb{R}^{2}$ t.c. $f(e_{1})=e_{2}$ e $f(e_{2})=e_{1}$ ovvero un'applicazione lineare che _flippa_ lo spazio $\mathbb{R}^{2}$, creando una simmetria rispetto alla retta $y=x$. Di fatto si ha che $(x_{1},x_{2})\to (x_{2},x_{1})$. Ci sono quindi dei vettori, come $(2,1)\to (1,2)$ che invertono simmetricamente a $y=x$ la loro direzione e altri invece la mantengono: proprio gli [[Autovettore||autovettori]]. In particolare, tutti i vettori sulla retta $y=x$ e $y=-x$ sono autovettori. Si può pensare a:
 			- $v_{1}=(1,1)\to (1,1)$ con [[Autovalore]] 1
@@ -16,3 +26,13 @@ data: "`2024-08-31 20:05`"
 	    - Trovo gli [[Autovalore]] di $A$ e gli [[Autovettore]] associati
 	    - se trovo $n$ autovalori distinti allora $A$ è diagonalizzabile
 	- se gli autovalori non sono distinti allora posso trovare una base di autovettori e verificare che sia una base di $\mathbb{R}^{n}$ 
+	- ## Metodo 2:
+		- trovo gli autovalori di $A$ se non trovo $n$ autovalori distinti controllo le [[molteplicità algebrica]] e [[molteplicità geometrica]] di ogni autovalore e se coincidono, ovvero se la somma delle molteplicità geometriche è $n$, allora si ha che $A$ è diagonalizzabile 
+		- ### Prop:
+			- siano $\lambda_{1},...,\lambda_{r}$ gli autovalori e $n_{1},...,n_{r}$ le rispettive molteplicità geometriche di A allora:
+			- $$A\in Diagonalizzabile \iff n_{1}+...+n_{r}=n$$
+		- ### Dim:
+			- sia $T$ l'[[Applicazione lineare]] associata ad $A$ rispetto alla [[Base Canonica]] 
+			- $\Longleftarrow)$
+				- suppongo che $n_{1}+...+n_{r}=n$ $\forall  \lambda_i$ allora fisso una base $\beta_{i}=\{v_{i1},...,v_{in_{i}}\}$ dell'[[Autospazio]] $V_{\lambda_{i}}$ si dimostra ora che l'unione di tutte le basi $\beta_{i}$ è una base di $\mathbb{R}^{n}$
+			- $\implies$

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Rango di una matrice.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Rango di una matrice"
             }
           }
         ]
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "setuid",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -234,34 +234,35 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
     "Homepage.md",
     "1-Primo Anno/Algebra e geometria/4 Determinante/Determinante.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Immagine di una funzione.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Suriettiva.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Teorema della dimensione.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/teorema di struttura per sistemi lineari.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Teorema di Rouché-Capelli.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Teorema di esistenza e unicità di un'applicazione lineare.md",
     "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Applicazione lineare.md",
-    "0-Mostarda/Primo Anno/Algebra e Geometria.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Teorema GEL.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Teorema del completamento.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Dimensione.md",
+    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Aritmetica modulare.md",
+    "1-Primo Anno/Algebra e geometria/7 Aritmetica modulare/Teorema di Bézout.md",
+    "1-Primo Anno/Algebra e geometria/5 Autovalore e Autovettore/Cambio di base.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Kernel.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/iniettiva.md",
+    "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Controimmagine.md",
     "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Sottospazio generato.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Combinazione lineare.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Sottospazio vettoriale.md",
+    "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Composizione di applicazioni lineari.md",
+    "1-Primo Anno/Algebra e geometria/5 Autovalore e Autovettore/Autospazio.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Base ortonormale.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Sottospazio ortogonale.md",
+    "1-Primo Anno/Analisi/modulo2/Prodotto scalare Euclideo.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Proiezioni ortogonali.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Base ortogonale.md",
+    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Ortogonalità.md",
     "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Base.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Base Canonica.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Indipendenza lineare.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Spazio vettoriale.md",
-    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Algoritmo di Gauss.md",
-    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Rango righe.md",
-    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Matrici.md",
-    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Equazioni lineari.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale/Teorema di Savitch.md",
-    "0-Mostarda/Terzo Anno/Informatica teorica.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Teorema di Rice.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Indecidibilità dei problemi.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Classi di decidibilità.md",
-    "3-Terzo anno/Informatica teorica/Calcolabilità/Proprietà di macchine.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi/Vertex Cover.md",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Classi di complessità.md",
+    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Rango di una matrice.md",
     "immagini/Pasted image 20260313185147.png",
     "immagini/uc.png",
     "immagini/Teoria di Dijkstra.png",
@@ -281,7 +282,6 @@
     "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale/Esercizi su riduzioni/Riduzioni su grafi",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

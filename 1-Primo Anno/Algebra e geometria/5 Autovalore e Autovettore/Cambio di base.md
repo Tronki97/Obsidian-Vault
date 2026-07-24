@@ -13,7 +13,7 @@ data: "`2024-08-31 20:05`"
 		- Per prima cosa c'è bisogno di generalizzare il concetto di applicazione lineare definita da una matrice. So che fissata la base canonica $\beta=v_1,...,v_n$ del dominio, potevo definire $f$ come:
 			- $$f(v)=A v$$
 		- Dove $A$ è una matrice che ha per colonne le coordinate delle immagini $f(v_{1}),...,f(v_{n})$ rispetto alla base canonica del codominio. 
-		- Si nota quindi che sia codominio che nel dominio lavorassero sulle rispettive basi canoniche. 
+		- Si nota quindi che sia codominio che dominio lavorassero sulle rispettive basi canoniche. 
 		- Se invece volessi dare una definizione generale, si dovrebbe scrivere:
 			- $$A_{\beta \beta'}=M_{\beta}^{\beta'} \in M_{m\times n}(\mathbb{R})$$
 		- Tale che 
@@ -25,7 +25,7 @@ data: "`2024-08-31 20:05`"
 		- Dove $c$ è la [[Base Canonica]] di $V$ e $c'$ quella di $W$
 		- ### Dimostrazione:
 			- Devo dimostrare che è sempre possibile creare una matrice $A$ in quel modo. Mi concentro sul caso $n=2$ e $m=3$ e mi fido del fatto che questo ragionamento può essere esteso in generale.
-			- Fisso $\beta=v_{1},v_{2}$ base ordinata di $V$, e $\beta'=w_{1},w_{2},w_{3}$ e prendo un $v \in V$ per cui $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}$ ([[Combinazione lineare]] di $\beta$) e $v_\beta=\lambda_{1},\lambda_{2}$. 
+			- Fisso $\beta=\{v_{1},v_{2}\}$ base ordinata di $V$, e $\beta'=\{w_{1},w_{2},w_{3}\}$ e prendo un $v \in V$ per cui $v=\lambda_{1}v_{1}+\lambda_{2}v_{2}$ ([[Combinazione lineare]] di $\beta$) e $v_\beta=\lambda_{1},\lambda_{2}$. 
 			  Ora devo definire $A_{\beta \beta'}$, per cui scrivo le immagini della base $\beta$, e poi le loro coordinate rispetto a $\beta'$. Allora ho 
 				- $$f(v_{1})=\mu_{1} w_{1}+\mu_{2}w_{2}+\mu_{3}w_{3}$$
 			- e 

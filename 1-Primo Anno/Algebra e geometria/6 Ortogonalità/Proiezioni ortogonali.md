@@ -52,3 +52,4 @@ data: "`2024-08-31 20:05`"
 				- e si ricava anche che $\lambda_{2} =1$
 		- sostituendo i valori degli scalari in $p$:
 			- $p=(-1,1,1,1)$
+		- mentre il vettore $v-p=(1,2,-1,0)$

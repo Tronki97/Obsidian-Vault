@@ -102,7 +102,7 @@ data: "`2024-08-31 20:05`"
 				- Qed
 - # Teoremone ^3334b3
 	- Sia $f:\mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ e sia $A$ la matrice associata ad $f$ allora le seguenti proposizioni sono equivalenti:
-		- 1)$f$ è invertibile
+		- 1)$f$ è invertibile.
 		- 2)$f$ è [[iniettiva]]
 		- 3)f è [[Suriettiva]] 
 		- 4)$dim(Im(f))=n$
@@ -114,3 +114,13 @@ data: "`2024-08-31 20:05`"
 		- 10) $A$ è invertibile 
 		- 11) $det(A)\ne0$
 	- Questo è utilissimo perché: se ci viene chiesto, per esempio, se $f$ è iniettiva basta calcolare il determinante della matrice associata e vedere che sia _diverso_ da 0.
+- # Equivalenze:
+	- la 2 e la 3 sono equivalenti per il [[Teorema della dimensione]]
+	- 3 implica 4 perché per il corollario del [[Teorema della dimensione]] se la dimensione dell'immagine è uguale a quella del codominio allora $f$ è suriettiva e viceversa.
+	- 4 implica 5 perché $rk(A)=dim(Im(f))$ 
+	- 5 implica 6 perché siccome $rk(A)=rc(A)=n=dim(\mathbb{R}^{n})$ vuol dire che le colonne sono linearmente indipendenti 
+	- 6 implica 7 per lo stesso motivo precedente.
+	- 7 implica 8 perché se si riduce a scala la matrice $A$ le cui righe sono linearmente indipendenti per risolvere $A \underline{x}=\underline{0}$ si hanno esattamente $n$ pivot e quindi un'unica soluzione.
+	- 8 implica 9 perché riducendo a scala la matrice $A|\underline{b}$ si ottengono esattamente $n$ pivot e una matrice $A'|\underline{b}'$ in questo modo $A \underline{x}=\underline{b}$ avrà esattamente una soluzione.
+	- 9 implica 2 perché dimostrando che $dim(Ker (f))=0$ tramite la risoluzione del sistema $A \underline{x}=0$ prendendo $x = 0$ si avrà comunque un'unica soluzione che essendo obbligatoriamente quella nulla si avrà che $f$ è iniettiva
+	- 1 implica 10 per definizione in quanto f è invertibile sse il suo determinante è $\ne0$ e ciò vale anche per $A$ 

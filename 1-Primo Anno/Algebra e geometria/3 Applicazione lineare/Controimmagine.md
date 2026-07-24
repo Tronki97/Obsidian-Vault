@@ -7,9 +7,9 @@ data: "`2024-08-31 20:05`"
 - Sia $f:A \rightarrow B$ una funzione, e sia $b\in B$ allora la _controimmagine_ di $b$ tramite $f$ è$$f^{-1}(b)=a\in A|f(a)=b$$Ciò però non è l'inversa di $f$ 
 - ## Conseguenze
 	- Si ha che la controimmagine di un certo $b$ tramite $f$ è l'insieme vuoto sse $b$ non è nell'[[Immagine di una funzione||immagine]] di $f$ ovvero 
-		- $$f^{-1}(b)=\emptyset \Longleftrightarrow b\ne Im(f)$$
+		- $$f^{-1}(b)=\emptyset \Longleftrightarrow b\notin Im(f)$$
 - ## Algebra lineare
-	- si analizza la controimmagine di un'[[Applicazione lineare]] $f:V \rightarrow W$ dove $V,W$ sono [[Spazio vettoriale]] .
+	- si analizza la controimmagine di un'[[Applicazione lineare]] $f:V \rightarrow W$ dove $V,W$ sono [[Spazio vettoriale]].
 	- ### Casistiche:
 		- per questa $f:V \rightarrow W$ lineare, preso un $w\in W$ si distinguono 2 casi: 
 			- $w \ne \underline{0}\implies f^{-1}\nleq V$, questo perché $0_{V}\notin f^{-1}(w)$, infatti $f(0_{V})=0_{W}\ne w$;
@@ -54,5 +54,3 @@ data: "`2024-08-31 20:05`"
 				- $$f^{-1}(w)=v' \in V |(v'-v)\in ker(f)$$
 			- Ora fissato $z=v'-v\in ker(f)$ si ha che $v'=v+z\in V$ e allora la controimmagine può essere scritta come 
 				- $$f^{-1}(w)=v+z\in V|z\in ker(f)$$
-			- e visto che so che $v+z=v+v'-v=v' \in V$ per ipotesi si giunge al fatto che 
-				- $$f^{-1}(w)=v+z|z\in ker(f)$$

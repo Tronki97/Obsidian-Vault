@@ -30,7 +30,7 @@ data: "`2024-08-31 20:05`"
 	- Passare da una all'altra è facile:
 		- $1\longrightarrow 3$ si fa per definizione di $A$ mettendo quindi i risultati di $f(e_{1}),...,f(e_{n})$ nelle colonne di $A$ 
 		- $3\longrightarrow 2$ si ottiene con la moltiplicazione $A \underline{x}=A\cdot \begin{pmatrix}x_{1}\\⋮\\x_{n}\end{pmatrix}$
-		- $2\longrightarrow 1$ si ottiene calcolando i risultati di $f$ per ogni base canonica del dominio
+		- $2\longrightarrow 1$ si ottiene calcolando i risultati di $f$ per ogni vettore della base canonica del dominio
 	- N.B: ottenere la matrice $A$ è sempre comodo
 - ## Proposizioni ^f4fef0
 	- $f$ lineare $\implies f(0_{V})=0_{W}$
@@ -49,15 +49,16 @@ data: "`2024-08-31 20:05`"
 			- se so per ipotesi che $v_{1},v_{2}\in ker(f)$, per la definizione di $ker(f)$ ho che $f(v_{1})=\underline{0}$ e $f(v_{2})=\underline{0}$ allora ottengo: 
 				- $$f(v_{1}+v_{2})=f(v_{1})+f(v_{2})=\underline{0}+\underline{0}=\underline{0}$$
 					- Ovvero quello che volevo dimostrare.
-			- Infine avendo $\lambda v_{1}\in ker(f)$ so che $f(\lambda v_{1})=\underline{0}$, allora ottengo:
+			- Infine avendo $v_{1}\in ker(f)$ so che $f(v_{1})=\underline{0}$, allora ottengo:
 				- $$f(\lambda v_{1})=\lambda f(v_{1})=\lambda \underline{0}=\underline{0}$$
+				- quindi $f(\lambda v_{1})\in \ker(f)$
 	- $f$ lineare $\implies Im(f)\le W$  
 		- ovvero data una funzione $f:V \rightarrow W$ lineare, ho che l'[[Immagine di una funzione||immagine]] di $f$ è sottospazio di $W$ 
 		- #### Dimostrazione:
 			- applico la definizione di sottospazio, per cui devo dimostrare:
-				- $\underline{0}\in Im(f)$
-				- $w_{1}+w_{2}\in Im(f) \forall w_{1},w_{2}\in Im(f)$ 
-				- $\lambda w_{1}\in Im(f) \ \ \forall w_{1}\in Im(f)\ \ \forall \lambda \in \mathbb{R}$ 
+				- 1) $\underline{0}\in Im(f)$
+				- 2) $w_{1}+w_{2}\in Im(f) \ \ \forall w_{1},w_{2}\in Im(f)$ 
+				- 3) $\lambda w_{1}\in Im(f) \ \ \forall w_{1}\in Im(f)\ \ \forall \lambda \in \mathbb{R}$ 
 			- Il vettore nullo è nell'immagine di $f$ perché ho per forza che $f(0_{V})=0_{W}$ 
 			- Fissati 2 vettori $w_{1},w_{2}\in Im(f)$, per definizione so che $\exists v_{1}|f(v_{1})=w_{1}$ e $\exists v_{2}|f(v_{2})=w_{2}$. Devo dimostrare $\exists v_{3}|f(v_{3})=w_{1}+w_{2}$. scelgo come $v_{3}=v_{1}+v_{2}$ e ottengo:
 				- $$f(v_{3})=f(v_{1}+v_{2})=f(v_{1})+f(v_{2})=w_{1}+w_{2}$$
@@ -67,7 +68,7 @@ data: "`2024-08-31 20:05`"
 					- Ovvero ciò che dovevo dimostrare.
 	- $f$ lineare $\implies f \  su \Longleftrightarrow Im(f)=W$
 		- ovvero data $f:V \rightarrow W$ lineare, allora quest'ultima è [[Suriettiva]] sse l'immagine di $f$ coincide col codominio
-			- vero per definizione di suriettività.
+			- vero per definizione di _suriettività_.
 	- $f$ lineare $\implies f \  in \Longleftrightarrow ker(f)=\underline{0}$
 		- ciò ci dice che affinché un'applicazione lineare sia iniettiva basta che l'unico vettore mappato nel vettore nullo del codominio sia il vettore nullo del dominio: Questo criterio è sufficiente per capire se tutta la funzione sarà iniettiva.
 		- #### Dimostrazione:

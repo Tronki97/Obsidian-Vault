@@ -27,7 +27,7 @@ data: "`2024-08-31 20:05`"
 			- $$\mathbb{Z}_{n}=\{[a]_{n}|a \in \mathbb{Z}\}$$
 		- _Definizione sull'insieme $\mathbb{Z}_{n}$ delle operazioni di somma e prodotto_:
 			- $[a]_{n}+[b]_{n}=[a+b]_{n}$
-			- $[a]_{n}[b]_{n}=[ab]_{n}a$
+			- $[a]_{n}[b]_{n}=[ab]_{n}$
 		- ### Osservazione:
 			- per la proposizione $1$, le operazioni di somma e prodotto non dipendono dai numeri $a,b$ che scelgo per rappresentare le classi di congruenza, ma solo dalla loro classe di congruenza. Si dice in tal caso che le operazioni sono _ben definite_. 
 			- #### ES:
@@ -48,7 +48,7 @@ data: "`2024-08-31 20:05`"
 				- Quindi $n|i-j$ poiché per ipotesi $0\leq i-j <n$ segue che $i-j=0$ e quindi $i=j$ 
 			- 3) Dimostro la doppia inclusione tra insiemi 
 				- L'inclusione $\{[0]_{n},[1]_{n},...,[n-1]_{n}\}\subset \mathbb{Z}_{n}$ è banale in quanto $\mathbb{Z}_{n}$ contiene tutte le classi di resto, in particolare quelle del primo insieme.
-				- Per dimostrare  $\mathbb{Z}_{n}\subset\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$ consider $[a]_{n}\in \mathbb{Z}_{n}$, per il primo punto di questa proposizione so che $[a]_{n}=[r]_{n}$, dove $r$ è il resto della divisione per $n$ che per definizione appartiene a $\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$. Quindi $[a]_{n}=[r]_{n}\in \{[0]_{n},[1]_{n},...,[n-1]_{n}\}$  
+				- Per dimostrare  $\mathbb{Z}_{n}\subset\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$ considero $[a]_{n}\in \mathbb{Z}_{n}$, per il primo punto di questa proposizione so che $[a]_{n}=[r]_{n}$, dove $r$ è il resto della divisione per $n$ che per definizione appartiene a $\{[0]_{n},[1]_{n},...,[n-1]_{n}\}$. Quindi $[a]_{n}=[r]_{n}\in \{[0]_{n},[1]_{n},...,[n-1]_{n}\}$  
 	- ## Invertibilità ^6e5f67
 		- Una classe $[a]_{n}\in \mathbb{Z}_{n}$ si dice _invertibile_ se esiste una classe $[c]_{n}\in \mathbb{Z}_{n}$ detta _inverso_ di $[a]_{n}$ tale che:
 			- $$[a]_{n}[c]_{n}=[1]_{n}$$
@@ -93,7 +93,7 @@ data: "`2024-08-31 20:05`"
 			- 1) l'equazione $[a]_{n}x=[b]_{n}$ ha soluzione in $\mathbb{Z}_{n}$ $\iff d|b$
 			- 2) se $d|b$ allora $[a]_{n}x=[b]_{n}$ ha esattamente $d$ soluzioni distinte in $\mathbb{Z}_{n}$
 		- ### Dimostrazione 
-			- Dimostro solo che $[a]_{n}x=[b]_{n}$ ha soluzione in $\mathbb{Z}_{n}$ allora $d|b$.
+			- Dimostro solo che se $[a]_{n}x=[b]_{n}$ ha soluzione in $\mathbb{Z}_{n}$ allora $d|b$.
 			- Sia $[c]_{n}$ una soluzione, allora $[a]_{n}[c]_{n}=[b]_{n}$ ovvero $[ac]_{n}=[b]_{n}$ quindi $d|ac-b$ poiché $d|n$ ho che $d|ac-b$. Inoltre $d|an$ quindi $d|ac$. Infine segue che $d|ac-(ac-b)=b$
 	- ## Congruenza lineare
 		- Si dice _congruenza lineare_ nell'incognita $x$ (modulo $n$) una congruenza del tipo 

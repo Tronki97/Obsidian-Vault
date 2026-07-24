@@ -60,7 +60,7 @@ data: "`2025-04-09 10:02`"
 		- Il poliedro $P_{I}$ risultante da $P$ è anch’esso una faccia di $P$
 		- La faccia permette di definire un _vertice_.
 	- ## Vertice: ^a0d9ff
-		- Una faccia determinata da $A_{I}$ con [[Rango righe]] $k$ ha dimensione $n-k$ o inferiore.
+		- Una faccia determinata da $A_{I}$ con [[Rango di una matrice]] $k$ ha dimensione $n-k$ o inferiore.
 		- Quindi le facce determinate da $A_{I}$ con rango $n$ hanno necessariamente [[Dimensione]] 0 e son dette _vertici_.
 			- Per l’ipotesi sul rango l’equazione $A_{I}x=b_{I}$ ammette una sola soluzione.
 	- ## Soluzioni di base:
