@@ -32,9 +32,9 @@ SORT file.ctime DESC
 	- Voto: 25
 	- Tentativi: 2
 - [[Algebra e Geometria]]
-	- [ ] Passato
+	- [x] Passato
 	- Voto: ~~10~~, ~~14~~, 
-	- Tentativi: 2
+	- Tentativi: 3
 - [[Algoritmi e strutture dati]]
 	- [x] Passato
 	- Voto: 20
@@ -94,9 +94,9 @@ SORT file.ctime DESC
 	- Voto: 29
 	- Tentativi: 1
 - [[Informatica teorica]]
-	- [ ] Passato
-	- Voto:
-	- Tentativi:
+	- [x] Passato
+	- Voto: 20
+	- Tentativi: 1
 - [[Fondamenti di cybersecurity]]
 	- [x] Passato
 	- Voto: 30

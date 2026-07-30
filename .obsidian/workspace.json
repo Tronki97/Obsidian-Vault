@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Rango di una matrice.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,83 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Rango di una matrice"
+              "title": "Homepage"
+            }
+          },
+          {
+            "id": "182928120b394333",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Linguaggi di Programmazione"
+            }
+          },
+          {
+            "id": "b8f148fdddd11213",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/generare un compilatore.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "generare un compilatore"
+            }
+          },
+          {
+            "id": "15c141a45e11bc6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/Interprete.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Interprete"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -234,9 +307,18 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/generare un compilatore.md",
+    "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/Interprete.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/MA (macchina astratta).md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/Linguaggio macchina.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/Macchine astratte interpreti e compilatori.md",
     "Homepage.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Descrivere un linguaggio.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Lessico e frasi di un linguaggio.md",
+    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Rango di una matrice.md",
     "1-Primo Anno/Algebra e geometria/4 Determinante/Determinante.md",
     "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Immagine di una funzione.md",
     "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Suriettiva.md",
@@ -254,15 +336,6 @@
     "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Controimmagine.md",
     "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Sottospazio generato.md",
     "1-Primo Anno/Algebra e geometria/3 Applicazione lineare/Composizione di applicazioni lineari.md",
-    "1-Primo Anno/Algebra e geometria/5 Autovalore e Autovettore/Autospazio.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Base ortonormale.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Sottospazio ortogonale.md",
-    "1-Primo Anno/Analisi/modulo2/Prodotto scalare Euclideo.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Proiezioni ortogonali.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Base ortogonale.md",
-    "1-Primo Anno/Algebra e geometria/6 Ortogonalità/Ortogonalità.md",
-    "1-Primo Anno/Algebra e geometria/2 Spazio vettoriale/Base.md",
-    "1-Primo Anno/Algebra e geometria/1 Sistema lineare/Rango di una matrice.md",
     "immagini/Pasted image 20260313185147.png",
     "immagini/uc.png",
     "immagini/Teoria di Dijkstra.png",

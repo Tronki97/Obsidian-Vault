@@ -2,25 +2,28 @@
 tags:
   - LdP
 aliases:
+  - realizzare una macchina astratta
 data: "`2024-09-17 14:23`"
 ---
 - # Def:
 	- Supponendo di avere un linguaggio $L$ definisco la sua macchina astratta come $M_{L}$ è un insieme di strutture dati ed algoritmi che permettono di memorizzare ed eseguire un programma scritto in $L$.
-	- ![[Schema di una macchina.png]]
+	- ![[Schema di una macchina.png|594]]
 - ## Realizzare una macchina astratta: ^584d6e
-	- ### 1) realizzazione _hardware_
+	- ### 1) realizzazione tramite hardware
 		- sempre possibile ma usata solo per macchine a basso livello o dedicate
+			- quindi consiste nel dover realizzare a mano tutto (con memorie, porte logiche, ecc...)
 		- massima velocità
 		- niente flessibilità
-	- ### 2) emulazione o simulazione _firmware_
-		- SDeA _MA_ realizzati tramite microprogrammi, che risiedono in [[Memorie#^ff2552||ROM]] 
-		- macchina ospite microprogrammabile
+	- ### 2) emulazione o simulazione via firmware
+		- Strutture dati e algoritmi _MA_ realizzati tramite microprogrammi, che risiedono in [[Memorie#^ff2552||ROM]] 
+		- Macchina ospite microprogrammabile
 		- alta velocità
-		- flessibilità maggiore rispetto all'HW puro.
+		- flessibilità maggiore rispetto all'HW puro ma comunque i microprogrammi risiedono in memorie difficili da modificare
 	- ### 3) Interpretazione o simulazione via software 
-		- SDeA _MA_ realizzati tramite _programmi scritti nel linguaggio della macchina ospite(MO)_
+		- Strutture dati e algoritmi _MA_ realizzati tramite _programmi scritti nel linguaggio "L" della macchina ospite(MO)_
 			- _MO_ qualsiasi
 			- minore velocità
+				- in quanto si deve passare attraverso più livelli di interpretazione.
 			- _massima flessibilità_
 	- Nella realtà si usa un misto delle 3 tecniche precedenti
 	- la conseguenza del punto _3_  è che è possibile realizzare macchine il cui linguaggio è sofisticato con cui a propria volta si possono realizzare macchina il cui linguaggio è ancora più sofisticato.  

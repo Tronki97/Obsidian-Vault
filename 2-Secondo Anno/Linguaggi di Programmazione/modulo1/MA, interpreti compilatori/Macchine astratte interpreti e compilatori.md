@@ -1,7 +1,7 @@
 ---
 tags:
-  - LdP
 aliases:
+  - macchina fisica
 data: "`2024-09-14 00:31`"
 ---
 - Una macchina fisica _MF_ esiste per eseguire il suo _linguaggio_. 
