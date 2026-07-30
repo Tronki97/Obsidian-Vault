@@ -56,7 +56,7 @@ date: 2024-10-03
 		- ### Operatori ausiliari:
 			- permettono di rendere più sintetiche le operazioni base.
 	- ## Definizioni regolari:
-		- una _definizione regolare_ su di un [[Lessico e frasi di un linguaggio#^de2f85||alfabeto]] $A$ è una lista di definizioni:
+		- una _definizione regolare_ su di un [[Lessico e linguaggio formale#^de2f85||alfabeto]] $A$ è una lista di definizioni:
 			- $d_{1}:= r_{1}, \ d_{2}:=r_{2}, ...,d_{k}:=r_{k}$
 			- dove $d_{i}$ rappresentano i nuovi simboli e $r_{i}$ le espressioni regolari sull'alfabeto esteso $A\cup \{d_{1},...,d_{k}\}$ 
 		- ### ES:

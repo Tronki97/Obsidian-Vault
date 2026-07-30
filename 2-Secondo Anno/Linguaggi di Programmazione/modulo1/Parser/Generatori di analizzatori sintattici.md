@@ -11,7 +11,7 @@ data: "`2025-08-20 18:08`"
 - # YACC:
 	- Tecniche $LR$ ([[Parser bottom-up#^2f2330|shift]] - [[Parser bottom-up#^94ff73|reduce]]) sono automatizzate da molti strumenti
 	- Il capostipite di questi strumenti è _YACC_ (_Yet Another Compiler-Compiler_), un altro è _GNUBison_
-	- In _input_ prende la _specifica YACC_ (`translate.y`) il quale contiene la descrizione della [[Grammatiche#^c95cdc|grammatica libera]] 
+	- In _input_ prende la _specifica YACC_ (`translate.y`) il quale contiene la descrizione della [[Definire finitamente un linguaggio#^c95cdc|grammatica libera]] 
 	- In _output_ restituisce `y.tab.c` ovvero un programma in $C$ che realizza il [[Parser bottom-up#^d6df98|parser LALR(1)]] con costruzione diretta (_non vista a lezione_)
 	- Il file `.c` è pronto per essere compilato e trasformato in eseguibile (`.out`) dal compilatore $C$.
 	- Questo eseguibile prende un input (_lista di token_) dando un output (_lista di derivazione/albero sintattico_).
@@ -94,6 +94,6 @@ data: "`2025-08-20 18:08`"
 	- Senza indicazioni YACC risolve:
 		- Conflitti di tipo [[Parser bottom-up#^{2f2330|shift]] / [[Parser bottom-up#^{94ff73|reduce]] a favore dello _shift_
 		- Conflitti del tipo _reduce/reduce_ a favore della produzione elencata per prima.
-		- Si può invocare YACC con l'opzione `-v` la qualw genera un file aggiuntivo `y.output` che contiene i kernel degli insiemi degli item trovati per la [[Grammatiche|grammatica]], una descrizione dei conflitti generati dall'algoritmo LALR, ed anche una rappresentazione leggibile della tabella di parsing che mostra come i conflitti sono stati risolti.
+		- Si può invocare YACC con l'opzione `-v` la qualw genera un file aggiuntivo `y.output` che contiene i kernel degli insiemi degli item trovati per la [[Definire finitamente un linguaggio|grammatica]], una descrizione dei conflitti generati dall'algoritmo LALR, ed anche una rappresentazione leggibile della tabella di parsing che mostra come i conflitti sono stati risolti.
 - # Link Utili:
 	- 

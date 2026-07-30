@@ -27,7 +27,7 @@ data: "`2024-10-19 18:25`"
 - # Mutua esclusione: ^1acdf8
 	- l'accesso a una risorsa è mutualmente esclusiva se ad ogni istante un processo può accedere a quella risorsa
 - # Deadlock: ^2a9ed1
-	- a mutua esclusione permette di risolvere il problema della non interferenza, ma può causare il blocco permanente dei processi
+	- la mutua esclusione permette di risolvere il problema della non interferenza, ma può causare il blocco permanente dei processi
 	- la soluzione ad uno di questi stalli nei sistemi reali sarebbe di _uccidere uno dei processi_ 
 	- ## ES:
 		- due processi A e B che vogliono accedere a due risorse $R_{1}$ e $R_{2}$ prima di poter terminare il programma devono accedere alle risorse contemporaneamente

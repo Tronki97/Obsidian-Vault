@@ -33,7 +33,7 @@ data: "`2025-08-19 12:55`"
 	- ## Linguaggi generati:
 		- ### Def:
 			- Un linguaggio $L$ è di classe $X$ se $\exists G$ di classe $X$ tale che $L=L(G)$
-		- Classificando i linguaggi piuttosto che le [[Grammatiche]] il diagramma si semplifica di molto.
+		- Classificando i linguaggi piuttosto che le [[Definire finitamente un linguaggio]] il diagramma si semplifica di molto.
 		- ### ES:
 			- $$G_{1}=\begin{cases} S\to aAc \\  A\to bAb\ | \ b\end{cases}$$
 			- $L(G_{1})=\{ab^{2n+1}c|\ n\ge 0\}$

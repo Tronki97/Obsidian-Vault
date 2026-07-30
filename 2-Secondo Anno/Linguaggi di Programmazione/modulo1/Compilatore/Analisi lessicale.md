@@ -3,16 +3,16 @@ tags:
   - LdP
 aliases:
   - scanner
-  - Scanner
 ---
 
 - ## Scanner:
-	- spezza il programma in token e controlla che il linguaggio sia ammissibile
-	- riempie parzialmente la tabella dei simboli
+	- spezza il programma in token e controlla che il linguaggio sia ammissibile utilizzando una [[Struttura di un compilatore#^80f144|tabella dei simboli]] che riempie parzialmente con tutti gli ID delle variabili, delle procedure, ecc...
+	- Il suo output è una _lista di token_ 
 	- ### Realizzarlo:
-		- necessita di grammatiche regolari del tipo:
+		- necessita di [[Grammatiche regolari]] del tipo:
 			- $A\to aB$ oppure $A\to a$
-		- espressioni regolari:
+		- espressioni regolari: 
+			- che è un formalismo per descrivere linguaggi generati da [[Grammatiche regolari]]
 		- [[Automi a stati finiti]]:
 			- uno strumento che permette di riconoscere i linguaggi regolari 
 		- regex $\to$ [[Automi finiti non deterministici||NFA]] $\to$ [[Automi finiti deterministici||DFA]] 

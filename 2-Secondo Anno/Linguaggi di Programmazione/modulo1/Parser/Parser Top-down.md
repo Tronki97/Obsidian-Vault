@@ -25,7 +25,7 @@ data: "`2024-11-07 12:01`"
 					- $aa \implies S\to aSb$
 			- Si utilizzano due funzioni ausiliare:
 				- ### First:
-					- dico che $First(\alpha)$ è insieme dei T ([[Grammatiche#^24b447||terminali]]) che possono stare in prima posizione in una stringa derivabile da $\alpha$
+					- dico che $First(\alpha)$ è insieme dei T ([[Definire finitamente un linguaggio#^24b447||terminali]]) che possono stare in prima posizione in una stringa derivabile da $\alpha$
 					- Per $a\in T$
 						- $$a\in First(\alpha) \iff\alpha \Rightarrow^{*}a \beta$$
 							- Con $\beta \in (T\cup NT)$
@@ -49,7 +49,7 @@ data: "`2024-11-07 12:01`"
 						- In pratica, $First(A)=First(\alpha_{1})\cup...\cup First(\alpha_{k})$
 							- ![[Pasted image 20250322160356.png]]
 				- ### Follow: ^ea28e7
-					- Data una [[Grammatiche#^c95cdc|grammatica libera]] $G$ e $A\in NT$, dico che $Follow(A)$ è l’insieme dei $T$ che possono comparire immediatamente a dx di $A$:
+					- Data una [[Definire finitamente un linguaggio#^c95cdc|grammatica libera]] $G$ e $A\in NT$, dico che $Follow(A)$ è l’insieme dei $T$ che possono comparire immediatamente a dx di $A$:
 					- Con $a\in T$, :
 						- $$a\in Follow(A)\iff S\Rightarrow^{*}\alpha Aa \beta$$
 							- Per qualche $\alpha, \beta \in (T\cup NT)^{*}$
@@ -105,7 +105,7 @@ data: "`2024-11-07 12:01`"
 		- ![[Pasted image 20250801175128.png]]
 		- ![[Pasted image 20250801175142.png]]
 - # Teorema:
-	- Ogni [[Linguaggi regolari|linguaggio regolare]] è generabile da una [[Grammatiche]] $G$ di [[Classe di una grammatica|classe]] LL(1)
+	- Ogni [[Linguaggi regolari|linguaggio regolare]] è generabile da una [[Definire finitamente un linguaggio]] $G$ di [[Classe di una grammatica|classe]] LL(1)
 	- ## Dim:
 		- Se $L$ è regolare allora $\exists$ [[Automi finiti deterministici|DFA]] $M=(Q, \Sigma, \delta, q_{0}, F)$ tale che $L=L[M]$.
 		- A partire da $M$, si costruisce la grammatica regolare $G=(NT, T, S, R)$ con:

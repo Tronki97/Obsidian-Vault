@@ -4,8 +4,10 @@ tags:
 ---
 
 - ## Prop:
-	- Considerando la [[Grammatiche]] $$S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$$
-	-  e la derivazione:$$S \Rightarrow S*S \Rightarrow S+S*S \Rightarrow a+S*S \Rightarrow a+b*S \Rightarrow a+b * c$$
+	- Considerando la [[Grammatica]] 
+		- $$S\to \{a\ |\ b\ |\ c\ |\ S+S\ |\ S*S\}$$
+	-  e la [[Derivazioni|derivazione]]:
+		- $$S \Rightarrow S*S \Rightarrow S+S*S \Rightarrow a+S*S \Rightarrow a+b*S \Rightarrow a+b * c$$
 		- ___Leftmost___: ad ogni passo si riscrive il non terminale più a sx   ^308569
 		- ad ognuno di questi passi si associa un piano dell'_albero di derivazione:
 			-  ![[Pasted image 20240924183128.png]]
@@ -17,10 +19,15 @@ tags:
 				- ![[Pasted image 20240924183709.png|300]]
 				  E questo si chiama _Albero sintattico_.
 - ## Def:
-	- anche detto albero di Parsing
-	- è un albero ordinato etichettato con simboli $NT \cup \{\epsilon\}\cup T$ 
-	- la radice è etichettata con $S$
-	- ogni nodo interno è un simbolo $NT$
-	- se il nodo $n$
-		- ha etichetta $A\in NT$ e i figli sono nell'ordine $m_{1},...m_{k}$ con etichetta $x_{1},...,x_{k}$ allora 
-			- $A\to x_{1},...,x_{k}$ è una regola di $R$
+	- data una [[Grammatica]] $G$ un _albero di derivazione_, anche detto albero di Parsing, è un albero ordinato in cui:
+		- ogni nodo ha come etichetta un simbolo: $NT \cup \{\epsilon\}\cup T$ 
+		- la radice è etichettata con $S$
+		- ogni nodo interno è un simbolo $NT$
+		- se il nodo $n$:
+			- 1) ha etichetta $A\in NT$ e i figli sono nell'ordine $m_{1},...m_{k}$ con etichetta $x_{1},...,x_{k}$ allora 
+				- $A\to x_{1},...,x_{k}$ è una regola di $R$
+			- 2) ha etichetta $\epsilon$, allora $n$ è una foglia, è figlio unico e definito $A$ come genitore, $A\to \epsilon$ è una produzione di $R$ 
+		- se ogni foglia è etichettata su $T\cup \{\epsilon\}$ allora l'albero corrisponde ad una derivazione completa.
+	- ## TH:
+		- una stringa $w\in T^{*}$ appartiene a $L(G) \iff$ ammette un albero di derivazione completo.
+			- le cui foglie lette da sx verso dx diano la stringa $w$  

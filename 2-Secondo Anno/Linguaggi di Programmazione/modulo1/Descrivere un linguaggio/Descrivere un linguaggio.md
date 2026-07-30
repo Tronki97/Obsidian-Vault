@@ -2,14 +2,20 @@
 tags:
   - LdP
 aliases:
+  - sintassi di un linguaggio
+  - semantica di un linguaggio
+  - pragmatica di un linguaggio
+  - aspetto lessicale
+  - aspetto grammaticale
 data: "`2024-09-19 12:28`"
 ---
-- ## Sintassi:
+- # Sintassi:
 	- regole che dicono quando una frase è corretta
 	- relazione tra segni
 		- ### Aspetto lessicale:
 			- descrizione del lessico: si usa strutture chiamate strutture regolari.
 			- errori: vocaboli inesistenti
+			- si controllano quindi quali parole possono essere usate 
 		- ### Aspetto grammaticale:
 			- in che modo posso _strutturare_ il lessico per formare frasi sensate
 			- le frasi grammaticali sono infinite

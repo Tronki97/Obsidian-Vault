@@ -2,10 +2,11 @@
 tags:
   - LdP
 aliases:
+  - derivazione
 data: "`2024-09-24 17:47`"
 ---
 - ## Derivazioni:
-	- data una [[Grammatiche#^c95cdc||grammatica libera]] $G=(NT, T, R, S)$, _v_ deriva subito _w_ e lo denoto come:
+	- data una [[Definire finitamente un linguaggio#^c95cdc||grammatica libera]] $G=(NT, T, R, S)$, _v_ deriva subito _w_ e lo denoto come:
 		- $v \Rightarrow w$ se:
 			- ![[Pasted image 20240924174523.png]]
 		- si dice che da _v_ si deriva _w_ e lo denoto con $v \Rightarrow^{*}w$, se esiste una sequenza finita di derivazioni immediate che vanno da _v_ a _w_ 

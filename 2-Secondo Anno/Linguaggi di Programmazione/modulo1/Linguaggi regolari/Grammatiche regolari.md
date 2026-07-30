@@ -5,7 +5,7 @@ aliases:
 data: "`2024-10-08 11:10`"
 ---
 - # Def:
-	- Una [[Grammatiche#^c95cdc||grammatica libera]] è _regolare_ sse ogni produzione(o [[Grammatiche#^125369||regola]]) è della forma:
+	- Una [[Definire finitamente un linguaggio#^c95cdc||grammatica libera]] è _regolare_ sse ogni produzione(o [[Definire finitamente un linguaggio#^125369||regola]]) è della forma:
 		- $$V\to aW \ \ \ \mathbf{oppure}\ \ \  V\to a $$
 		- dove: $V,W\in NT$ (simboli non terminali) e $a\in T$ (simboli terminali)
 		- per il simbolo inziale $S$ è ammessa anche la regola $S\to \epsilon$

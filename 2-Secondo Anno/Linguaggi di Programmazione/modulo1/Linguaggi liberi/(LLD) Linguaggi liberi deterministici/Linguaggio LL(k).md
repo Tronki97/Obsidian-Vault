@@ -24,7 +24,7 @@ data: "`2025-08-04 17:39`"
 	- $$L=\{a^{i}b^{j}\ |\ i\ge j\}$$
 		- è [[Linguaggio libero deterministico]] ma non è $LL(k)$ per nessun $k$
 		- ![[Pasted image 20250806155240.png]]
-		- Una sua possibile [[Grammatiche#^c95cdc|grammatica libera]]:
+		- Una sua possibile [[Definire finitamente un linguaggio#^c95cdc|grammatica libera]]:
 			- $$G=\begin{cases}S\to aS\  |\ B  \\ B\to aBb\ |\ \epsilon \end{cases}$$
 				- $L(G)=L$
 		- Ma come si può scegliere tra $S\to aS$ e $S\to B$? Bisognerebbe leggere fino in fondo all'input per sapere quante $b$ in meno di $a$ ci siano. Di conseguenza $G$ non può essere $LL(k)$ per nessun $k$.

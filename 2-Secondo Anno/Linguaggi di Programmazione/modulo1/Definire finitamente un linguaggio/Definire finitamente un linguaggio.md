@@ -2,8 +2,6 @@
 tags:
   - LdP
 aliases:
-  - grammatiche libere
-  - grammatica libera
 data: "`2024-09-24 11:24`"
 ---
 - ## Definire finitamente un linguaggio:
@@ -30,20 +28,11 @@ data: "`2024-09-24 11:24`"
 			- $$P\implies aPa \implies abPba \implies abba$$
 			- Quindi $P \Rightarrow^{*} abba$ 
 			- ![[Pasted image 20240924173550.png]]
-- ## Grammatica def: ^653185
+- # Grammatica def: ^653185
 	- di tanti tipi come: _regolari, libere_ ecc...
 	- tutte seguono lo stesso pattern, sono diverse solo per alcune caratteristiche come:
 		- _le produzioni (o regole)_. ^125369
 	- dopo aver definito una grammatica serve capire quale linguaggio genera
-	- ### Libere (da contesto): ^c95cdc
-		- è una _quadrupla_$(NT, T, R, S)$ 
-			- $NT$ _non terminali_ (di solito maiuscole)
-			- $T$ _terminali_ (minuscole)
-			- $S \in NT$ simbolo da cui _partire_
-			- $R$ insieme finito di _regole_
-				- $V\to w$ dove $V\in NT$ e $w\in (T\cup NT)^{*}$
-		- #### ES:
-			- $G=(\{ S\}, \{a,b,+,*\},S,R )$
-			- $R=\{S\to_{1}a_{1}; S\to_{2} b; S\to_{3}S+S; S\to_{4}S*S\}$ 
+	- 
 	- ### Regolari:
 		- permettono di definire linguaggi regolari. 

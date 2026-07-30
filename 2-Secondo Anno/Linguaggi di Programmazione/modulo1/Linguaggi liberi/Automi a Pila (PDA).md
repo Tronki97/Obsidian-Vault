@@ -99,7 +99,7 @@ data: "`2024-10-19 16:41`"
 			- ## Lemma 1:
 				- ogni PDA  $N$ può essere simulato da uno $N'$ con un solo stato 
 			- ## Lemma 2:
-				- Ogni PDA con un solo stato ha una equivalente [[Grammatiche#^c95cdc||grammatica libera]] 
+				- Ogni PDA con un solo stato ha una equivalente [[Definire finitamente un linguaggio#^c95cdc||grammatica libera]] 
 - # Riassunto:
 	- _Un linguaggio $L$ è libero sse è accettato da un PDA (nondeterministico)_
 - # Link Utili:

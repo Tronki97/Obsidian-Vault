@@ -12,7 +12,7 @@ data: "`2024-10-22 18:08`"
 		- 3) $|vx|\ge 1$
 		- 4) $\forall k\ge 0$    $\mathbf{uv^{k}wx^{k}y}\in L$
 	- ## Dim:
-		- Sia $G$ una [[Grammatiche#^c95cdc||grammatica libera]] tale che $L=L(G)$ 
+		- Sia $G$ una [[Definire finitamente un linguaggio#^c95cdc||grammatica libera]] tale che $L=L(G)$ 
 		- sia $b$ il massimo numero di simboli che compaiono nella parte destra di una regola $R$ 
 			- $b=max\{|\alpha|\ \ |\ A\to \alpha\in R\}$ 
 			- $b\ge2$ altrimenti la grammatica sarebbe _banale_

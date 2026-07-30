@@ -9,7 +9,7 @@ data: "`2024-10-05 20:09`"
 ---
 - # Def:
 	- un automa finito nondeterministico (_NFA_) è una quintupla:$$(\Sigma, Q,\delta, q_{0}, F)$$
-		- $\Sigma$ è un [[Lessico e frasi di un linguaggio#^de2f85||alfabeto]] finito di simboli in input
+		- $\Sigma$ è un [[Lessico e linguaggio formale#^de2f85||alfabeto]] finito di simboli in input
 		- $Q$ è un insieme finito di stati.
 		- $q_{0}\in Q$ è lo stato iniziale
 		- $F \subseteq Q$ è l'insieme degli stati finali.

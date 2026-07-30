@@ -23,7 +23,7 @@ data: "`2024-11-19 11:09`"
 	- riconosce la stringa per [[Automi a Pila (PDA)#^a594b1|pila vuota]]
 - # nondeterministico:
 	- ## Input:
-		- [[Grammatiche#^c95cdc|grammatiche libere]] $G$ con simbolo iniziale $S$
+		- [[Definire finitamente un linguaggio#^c95cdc|grammatiche libere]] $G$ con simbolo iniziale $S$
 	- ## Output:
 		- ogni volata che faccio “reduce” fornisco in output la produzione usata.
 	- quindi in pratica il parser parte dall’input e costruisce sulla pila la sequenza di produzioni necessarie per produrre quell’input e se ci riesce accetta la stringa data. 
@@ -95,7 +95,7 @@ data: "`2024-11-19 11:09`"
 		- Se $A\to \alpha .\beta$ è nello stato del DFA in cima alla pila vuol dire che $\alpha$ è sulla pila dei simboli e ci si aspetta che nell'input da leggere ci sia $\beta$
 		- Se $A\to \alpha.$ è nello stato del DFA in cima alla pila allora sulla pila dei simboli c'è l'_handle_ $\alpha$ e possiamo fare la _reduce_. 
 	- ## Costruire l'NFA dei prefissi viabili:
-		- Data una [[Grammatiche#^c95cdc|grammatica libera]] se ne prende una versione aumentata con un nuovo simbolo iniziale $S'$ e una produzione $S'\to S$
+		- Data una [[Definire finitamente un linguaggio#^c95cdc|grammatica libera]] se ne prende una versione aumentata con un nuovo simbolo iniziale $S'$ e una produzione $S'\to S$
 		- $[S'\to .S]$ è lo stato iniziale.
 		- Dallo stato $[A\to \alpha.X \beta]$ si fa una transizione allo stato $[A\to \alpha X.\beta]$ etichettato $X$, per $X\in T\cup NT$ 
 		- Dallo stato $[A\to \alpha.X \beta]$, per $X\in NT$ e per ogni produzione $X\to \gamma$, c'è una $\epsilon-$ transizione verso lo stato $[X\to .\gamma]$
@@ -236,7 +236,7 @@ data: "`2024-11-19 11:09`"
 			- 4) se $A\in NT$ e $S \xrightarrow{A}t$ nell'automa LR(1) inserisco $goto \ t$ in $M[s,A]$
 			- _ogni casella che rimane vuota è un errore_
 		- ### Def:
-			- Una [[Grammatiche#^c95cdc|grammatica libera]] $G$ è di [[Classe di una grammatica|classe]] LR(1) se ogni casella della tabella di parsing LR(1) ha al più un elemento (_non ci sono conflitti_)
+			- Una [[Definire finitamente un linguaggio#^c95cdc|grammatica libera]] $G$ è di [[Classe di una grammatica|classe]] LR(1) se ogni casella della tabella di parsing LR(1) ha al più un elemento (_non ci sono conflitti_)
 	- ## ES:
 		- ![[Pasted image 20250818160209.png|600]]
 		- ![[Pasted image 20250818160234.png|600]]

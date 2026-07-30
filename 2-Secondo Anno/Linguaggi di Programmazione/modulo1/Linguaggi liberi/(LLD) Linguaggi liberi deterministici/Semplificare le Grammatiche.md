@@ -40,7 +40,7 @@ data: "`2024-11-05 11:09`"
 		- dopo aver aver calcolato l’insieme $N(G)$ costruisco la grammatica $G'=(NT, T, S, R')$ 
 		- in $G'$ non metto produzioni del tipo $A\to \epsilon\in R$ e non introduco produzioni del tipo $A\to \epsilon$ 
 		- ### Prop:
-			- data la [[Grammatiche#^653185|grammatica libera]] $G$. $G'$ non ha $\epsilon$-produzioni e $L(G')=L(G)-\{\epsilon\}$ 
+			- data la [[Definire finitamente un linguaggio#^653185|grammatica libera]] $G$. $G'$ non ha $\epsilon$-produzioni e $L(G')=L(G)-\{\epsilon\}$ 
 		- ### ES:
 			- ![[Pasted image 20241105224451.png]]
 			- ![[Pasted image 20241105224510.png]]

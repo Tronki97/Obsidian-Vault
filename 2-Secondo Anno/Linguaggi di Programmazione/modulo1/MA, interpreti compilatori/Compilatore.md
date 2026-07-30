@@ -1,0 +1,46 @@
+---
+tags:
+  - LdP
+aliases:
+  - compilatore via kernel
+  - compilatore tramite bootstrapping
+data: "`2024-09-19 12:06`"
+---
+- # Def:
+	- un _Compilatore_ da $L$ a $L_{O}$ è un _programma_ che realizza una funzione:
+		- $$C_{L,L_{O}}: Prog^{L} \to Prog^{L_{O}}$$
+	- in modo tale che: $C_{L,L_{O}}(P^{L})=P^{L_{O}}$ e deve essere rispettato che:
+		- $$\forall Input \in D: P^{L}(Input)=P^{L_{O}}(Input)$$
+		- ovvero se il compilatore è scritto bene, avendo lo stesso input per entrambi i programmi otterrò lo stesso output
+- # Realizzare un compilatore:
+	- ## Strumenti automatici
+		- _Lex_: genera analizzatori lessicali
+		- _Yacc_: genera analizzatori sintattici
+			- verifica che le cose siano scritte in modo corretto secondo le regole grammaticali
+	- ## Implementazione via kernel
+		- per implementare $L$ si scrive un interprete o compilatore in $H$
+			- $C^{H}_{L,Lo}$ compilatore scritto in $H$ che traduce $L$ in $Lo$
+			- $I^{H}_{L}$ interprete in $L$
+		- ### per implementare $L$
+			- implemento opportunamente $H$
+			- uso $H$ come linguaggio di implementazione
+		- ### conseguenze:
+			- Semplifica l'implementazione: il linguaggio $H$ è più vicino di $L$ a quello [[Linguaggio macchina||macchina]] 
+			- facilita la portabilità: basta re-implementare $H$ nel nuovo linguaggio macchina. 
+	- ## Bootstrapping:
+		- usare altri compilatori per compilare dei compilatori.
+		- ### ES:
+			- prendo in esame il linguaggio _Pascal_ che era fornito di:
+			- $C^{Pascal}_{Pascal, P-code}$ compilatore da Pascal a P-code scritto in Pascal  
+			- $C^{P-Code}_{Pascal,P-code}$ lo stesso precedente ma scritto in P-code 
+			- $I^{Pascal}_{P-code}$ interprete per P-code scritto in Pascal.
+			- per poter quindi implementare un linguaggio in una specifica $M_{O}$ 
+				- si traduce a mano l'interprete del P-code in $I^{L_{0}}_{P-code}$ 
+			- in questo modo posso eseguire un programma $P^{Pascal}$ con input $x$ con due passaggi:
+				- $I^{L_{O}}_{P-code}(C^{P-Code}_{Pascal,P-code}, P^{Pascal})=P^{P-code}$
+				- $I^{L_{O}}_{P-code}(P^{P-code},x)=Out$ 
+			- si potrebbe migliorare l'efficienza scrivendo a mano un compilatore per il linguaggio della macchina $M_{O}$ 
+				- $C^{Pascal}_{Pascal,L_{O}}$ 
+				- $I^{L_{O}}_{P-code}(C^{P-Code}_{Pascal,P-code}, C^{Pascal}_{Pascal, L_{O}})=C^{P-code}_{Pascal,L_{O}}$
+				- $I^{L_{O}}_{P-code}(C^{P-code}_{Pascal,L_{O}}, C^{Pascal}_{Pascal,L_{O}})=C^{L_{O}}_{Pascal,L_{O}}$ 
+			- in questo modo si ha creato un compilatore scritto in $L_{O}$ quindi eseguibile sulla macchina $M_{O}$ che trasforma programmi scritti in Pascal in programma scritti in $L_O$ e quindi eseguibili su $M_{O}$   

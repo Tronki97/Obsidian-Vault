@@ -4,6 +4,8 @@ tags:
 aliases:
   - alfabeto
   - linguaggio formale
+  - prefisso
+  - suffisso
 data: "`2024-09-19 12:42`"
 ---
 - ## Alfabeto: ^de2f85
@@ -15,8 +17,7 @@ data: "`2024-09-19 12:42`"
 - ## Linguaggio formale:
 	- un linguaggio $L$ su un alfabeto $A$ è un sottoinsieme di $A^{*}$ $(L\subseteq A^{*})$ 
 	- $A^{*}=\bigcup_{n\geq0} A^n$  dove $A^{0}=\{\epsilon\} \ \ |\ \ \epsilon=$ _parola vuota_
-		- $n$= lunghezza delle parole quindi $A^{1}$ è l'insieme delle parole lunghe 1 ovvero le _lettere dell'alfabeto_
-- ## Definizioni ausiliarie:
+		- $n$ = lunghezza delle parole quindi $A^{1}$ è l'insieme delle parole lunghe 1 ovvero le _lettere dell'alfabeto_
 	- ### Lunghezza di una parola:
 		- indicata con $|...|$ un esempio è:
 			- $|\epsilon|=0$ 
@@ -40,4 +41,6 @@ data: "`2024-09-19 12:42`"
 		- la potenza $n$-esima di una stringa $w$ è: $$w^{0}=\epsilon \ \ \ w^{n+1}=ww^{n} \ \ \ \forall n >0$$
 		- #### ES:
 			- $(ab)^{3}=ababab$
-	- 
+	- $A^{*}$ è equipotente a $\mathbb{N}$
+	- $L\subseteq A^*$ è contabile
+	- un formalismo è un linguaggio su un alfabeto quindi i suoi "programmi" (grammatiche, automi) sono numerabili

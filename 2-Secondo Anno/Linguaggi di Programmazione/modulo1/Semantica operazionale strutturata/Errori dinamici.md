@@ -7,10 +7,11 @@ aliases:
 date: 2024-10-02
 ---
 - # Errori dinamici(a runtime):
-	- $\Gamma'=\Gamma \cup \{err\}$      $T'=T\cup\{err\}$
+	- $\Gamma'=\Gamma \cup \{err\}$      
+	- $T'=T\cup\{err\}$
 	- $eval: \ Exp \times Store \to \mathbb{N}\cup{err}$
 	- $eval_{b}: Bexp\times Store \to \Pi  \cup \{err\}$
-	- $exec: Com \times Store$ parziale in $Store\cup \{err\}$ 
+	- $exec: Com \times Store- o\to Store\cup \{err\}$  
 	- ### Regola per generare "errore"
 		- ![[Pasted image 20241002215613.png]]
 	- ### Regole per propagare l'errore(in $Exp$)

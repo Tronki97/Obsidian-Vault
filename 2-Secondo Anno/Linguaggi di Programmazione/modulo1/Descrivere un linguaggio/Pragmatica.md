@@ -4,8 +4,9 @@ tags:
 aliases:
 data: "`2024-09-27 19:12`"
 ---
-- insieme di regole sul modo in cui è meglio usare le istruzioni a disposizione, come lo "stile di programmazione"
-- ## ES:
-	- evitare le istruzioni di salto (`goto`) quando possibile perché rendono i codici incomprensibili.
-	- usare le variabili di controllo nei `for` solo per quello scopo
-	- scegliere se usare `for` o `while` per gli scopi giusti 
+- # Def:
+	- insieme di regole sul modo in cui è meglio usare le istruzioni a disposizione, come lo "stile di programmazione"
+	- ## ES:
+		- evitare le istruzioni di salto (`goto`) quando possibile perché rendono i codici incomprensibili.
+		- usare le variabili di controllo nei `for` solo per quello scopo
+		- scegliere se usare `for` o `while` per gli scopi giusti 

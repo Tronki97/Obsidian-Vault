@@ -1,20 +1,26 @@
 ---
 tags:
   - LdP
+aliases:
+  - diambiguare
+  - linguaggio ambiguo
+  - grammatica ambigua
 ---
-- ## Ambiguità:
-	- considero la grammatica: $S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$
+- # Ambiguità:
+	- considero la [[Grammatica]]: $S\to a\ |\ b\ |\ c\ |\ S+S\ |\ S*S$
 	- ### due diverse derivazioni:
 		- ![[Pasted image 20240926121615.png]]
 		- ![[Pasted image 20240926121627.png]]
 		- Quindi in questa grammatica $a*b+c$ ha più di un albero di derivazione Perciò la grammatica è _ambigua_ 
 			- Ovvero non è utilizzabile per dare semantica a $a*b+c$
 		- anche perché le operazioni da eseguire avranno un ordine di esecuzione diverso.
-		- #### 1) $(a*b)+c$
-		- #### 2) $a*(b+c)$
-	- ### Formalmente:
-		- una grammatica libera G è ambigua se $\exists w \in L(G)$ che ammette più alberi di derivazione 
-		- Un linguaggio è ambiguo se tutte le grammatiche che lo _generano_ sono ambigue
+		- ## 1) 
+			- $(a*b)+c$
+		- ## 2) 
+			- $a*(b+c)$
+	- ## Definizione Formale:
+		- una _grammatica libera_ G è _ambigua_ se $\exists w \in L(G)$ che ammette più alberi di derivazione 
+		- Un linguaggio è _ambiguo_ se tutte le grammatiche che lo _generano_ sono ambigue
 - ## Togliere l'ambiguità: ^ea4c8c
 	- mantiene lo stesso linguaggio.
 	- ### ES:
@@ -35,7 +41,7 @@ tags:
 		- ma il $*$ ha la precedenza sul $+$ 
 		- La nuova grammatica $E$ è equivalente a $S$ e non è ambigua ($L(S)=L(E)$) e genera questo albero:
 			- ![[albero di derivazione.png||350]]
-			-  tuttavia non può generare quello precedente
+			- tuttavia non può generare quello precedente
 			- per farlo si utilizzano delle tecniche come quella dello zucchero sintattico per modificare la grammatica:
 				- $E\to E+T\ |\ T$ associativo a sx
 				- $T\to A*T \ |\ A$ associativo a dx 
@@ -43,4 +49,3 @@ tags:
 				- che genera questo nuovo albero:
 				- ![[Pasted image 20240927183959.png]]
 				- che raggiunge l'obbiettivo che avevamo.
-- 

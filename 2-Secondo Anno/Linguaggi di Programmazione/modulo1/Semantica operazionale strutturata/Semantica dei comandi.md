@@ -3,17 +3,41 @@ tags:
   - LdP
 aliases:
   - comandi
-  - store
 date: 2024-10-02
 ---
 - # Semantica dei comandi:
-	- $$c::=skip\ |\ v:=e \ |\ c;c\ |\ if\ b\ then\ c\ else \ c$$
-	- $<\Gamma_{c}, T_{c}, \to_{c}>$ dove $\Gamma_{c}=\{<c, \sigma>\ |\ c\in Com,\ \sigma \in Store\}\cup {\sigma\ |\ \sigma \in Store}$ 
-	  $T_{c}=\{\sigma\ |\ \sigma \in Store\}$ = Store
-	  $e \to_{c} \subseteq \Gamma_{c} \times \Gamma_{c}$ è la minima relazione generata dai seguenti assiomi:
-		- ![[Pasted image 20241002214817.png]]
-		  ![[Pasted image 20241002214830.png]] 
-	- ### ES:
+	- $$c::=skip\ |\ v:=e \ |\ c;c\ |\ if\ b\ then\ c\ else \ c \ |\ while \ b \ do\ c$$
+	- $<\Gamma_{c}, T_{c}, \to_{c}>$ dove
+		- $\Gamma_{c}=\{<c, \sigma>\ |\ c\in Com,\ \sigma \in Store\}\cup \{\sigma\ |\ \sigma \in Store\}$ 
+		- $T_{c}=\{\sigma\ |\ \sigma \in Store\}$ = Store
+		- $e \to_{c} \subseteq \Gamma_{c} \times \Gamma_{c}$ è la minima relazione generata dai seguenti assiomi:
+			- ![[Pasted image 20241002214817.png]]
+				- l'operazione $\sigma[m,v]$ consiste nell'assegnare alla variabile $v$ il valore $m$ nello [[Semantica operazionale strutturata#^e7c735|Store]]
+			  ![[Pasted image 20241002214830.png]] 
+			- ![[Pasted image 20260730191852.png]]
+	- ## ES:
 		- ![[Pasted image 20241002215122.png]]
+	- ## ES2:
+		- ![[Pasted image 20260730192010.png|771]]
+			- $\gamma_{i}=<while \ tt\ do \ x:=x+1, \{[x,i]\}>$
+			- $\gamma'_{i}= <x:=x+1;while \ tt\ do \ x:=x+1, \{[x,i]\}>$
+		- ottenendo quindi la sequenza:
+			- $$\gamma_{0} \to \gamma_{0'} \to \gamma_{1} \to \gamma_{1}'\to ...$$
+- # Prop:
+	- $\to_{c}$ è deterministica, ovvero $\gamma \to_{c} \gamma' \wedge \gamma \to_{c} \gamma'' \implies \gamma'=\gamma''$ 
+	- definisco quindi:
+		- $exec: Com \times Store -o\to Store$
+		- $exec(c,\sigma)=\begin{cases} \sigma' & <c.\sigma> \to^{*}_{c} \sigma' \\ indefinita & altrimenti \end{cases}$ 
+- # OSS:
+	- La _divergenza_ (ciclo infinito) e il [[Proprietà di un programma#^2a9ed1|deadlock]] sono equiparati
+	- _divergenza:_ 
+		- $c_{1} = while \ tt \ do \ skip$
+		- ![[Pasted image 20260730193132.png]]
+	- deadlock:
+		- $c_{2}=x:=(3-5)$
+		- $<c_{2},\sigma> \not \to$ 
+	- di fatto con lo _skip_ e il _while_ non si modifica lo store quindi:
+		- $exec(c_{1},\sigma)=exec(c_{2},\sigma)=indefinito$ 
+	- quindi per distinguere semanticamente questi due aspetti serve introdurre gli [[Errori dinamici]] 
 - # Link Utili:
 	- 
