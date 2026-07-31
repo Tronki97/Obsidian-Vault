@@ -5,9 +5,9 @@ aliases:
 data: "`2024-10-08 18:13`"
 ---
 - # Teorema:
-	- data una [[Linguaggi regolari#^aca36f||espressione regolare]] $S$  posso costruire un [[Automi finiti non deterministici||NFA]] $N[S]$ tale che:
+	- data una [[Linguaggi regolari ed elementi costruttivi#^aca36f||espressione regolare]] $S$  posso costruire un [[Automi finiti non deterministici||NFA]] $N[S]$ tale che:
 		- $$L[N[S]]=\scr{L}\mathbf{[S]}$$
-	- ovvero gli NFA riconoscono tutti i [[Linguaggi regolari]]
+	- ovvero gli NFA riconoscono tutti i [[Linguaggi regolari ed elementi costruttivi]]
 - # Dim:
 	- per induzione sulla [[Sintassi concreta e astratta#^ec88f9||sintassi astratta]] dell'espressione $S$
 	- costruiremo $N[S]$ ovvero un possibile NFA associato all'espressione regolare $S$ in modo da mantenere i seguenti punti invariati:

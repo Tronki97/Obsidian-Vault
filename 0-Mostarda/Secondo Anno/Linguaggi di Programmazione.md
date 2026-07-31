@@ -6,14 +6,14 @@ aliases:
 data: "`2025-04-24 16:48`"
 ---
 # Note:
-- Modulo 1:
-	- [[Macchine astratte interpreti e compilatori]]
+- ## Modulo 1:
+	- ### [[Macchine astratte interpreti e compilatori]]
 		- [[MA (macchina astratta)]]
 			- [[Linguaggio macchina]]
 		- [[Interprete]]
 		- [[Compilatore]]
 		- [[Implementare un linguaggio]]
-	- [[Descrivere un linguaggio]], [[Definire finitamente un linguaggio]]
+	- ### [[Descrivere un linguaggio]], [[Definire finitamente un linguaggio]]
 		- [[Lessico e linguaggio formale]]
 		- [[Grammatica]]
 			- [[Derivazioni]]
@@ -26,20 +26,20 @@ data: "`2025-04-24 16:48`"
 		- [[Vincoli sintattici e Contestuali]]
 		- [[Semantica e sintassi]]
 		- [[Pragmatica]]
-	- Compilatore:
-		- [[Struttura di un compilatore]]
+	- ### Compilatore:
+		- #### [[Struttura di un compilatore]]
 			- [[Analisi lessicale]]
 			- [[Analisi semantica]]
 			- [[Implementazione]]
 			- [[Analisi sintattica]]
 			- [[Compilazione di un programma]]
-	- [[Semantica operazionale strutturata]]
+	- ### [[Semantica operazionale strutturata]]
 		- [[Semantica delle espressioni aritmetiche]]
 		- [[Semantica delle espressioni booleane]]
 		- [[Semantica dei comandi]]
 			- [[Errori dinamici]]
 		- [[nondeterminismo e parallelismo]]
-	- [[Linguaggi regolari]]
+	- ### [[Linguaggi regolari ed elementi costruttivi]]
 		- [[Automi a stati finiti]]
 		- [[Automi finiti non deterministici]]
 		- [[Linguaggio riconosciuto]]
@@ -53,8 +53,8 @@ data: "`2025-04-24 16:48`"
 		- [[Equivalenza o indistinguibilità degli stati]]
 		- [[Automa minimo]]
 		- [[Proprietà algoritmiche dei linguaggi regolari]]
-	- [[LEX]]
-	- Linguaggi liberi:
+	- ### [[LEX]]
+	- ### Linguaggi liberi:
 		- [[Automi a Pila (PDA)]]
 		- [[Proprietà di chiusura dei linguaggi liberi]]
 		- [[Pumping Theorem]]
@@ -65,15 +65,15 @@ data: "`2025-04-24 16:48`"
 			- [[Semplificare le Grammatiche]]
 			- [[Linguaggio LL(k)]]
 			- [[Classe di una grammatica]]
-	- Parser:
+	- ### Parser:
 		- [[Top-down Parsing]]
 			- [[Parser Top-down]]
 		- [[Bottom-up parsing]]
 			- [[Parser bottom-up]]
 		- [[Grammatiche LR(k)]]
 		- [[Generatori di analizzatori sintattici]]
-	- [[Fondamenti di calcolabilità]]
-- Modulo 2:
+	- ### [[Fondamenti di calcolabilità]]
+- ## Modulo 2:
 	- [[Nomi, ambiente, blocchi, regole di scope]]
 	- [[Heap]]
 	- [[Regole di Scope]]
@@ -81,7 +81,7 @@ data: "`2025-04-24 16:48`"
 	- [[Sottoprogrammi]]
 	- [[Memoria]]
 	- [[esercizi di linguaggi]]
-- Modulo 3:
+- ## Modulo 3:
 	- [[tipi nei linguaggi di programmazione]]
 	- [[Tipi base]]
 	- [[Tipi polimorfi]]

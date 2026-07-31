@@ -153,7 +153,7 @@ data: "`2024-11-19 11:09`"
 					- Per qualche $y \in T^{*}$, $\delta \in (T\cup NT)^{*}$ e per una produzione $A\to \alpha \beta$. Inoltre $S$ è un _prefisso viabile_ per definizione 
 					- Un prefisso viabile si dice _completo_ se $\beta= \epsilon$; in quel caso $\alpha$ è detto _handle_(maniglia) per $\gamma y$, (_ovvero in cima alla pila trovo $\alpha^{R}$ e posso fare una reduce_) ^952cf9
 			- #### Teorema:
-				- Data $G$ libera, i _prefissi viabili_ di $G$ costituiscono un [[Linguaggi regolari|linguaggio regolare]] e può essere descritto con un DFA.
+				- Data $G$ libera, i _prefissi viabili_ di $G$ costituiscono un [[Linguaggi regolari ed elementi costruttivi|linguaggio regolare]] e può essere descritto con un DFA.
 			- Il Parser può consultare il _DFA_ dei prefissi viabili ovvero la tabella di parsing per decidere cosa fare.
 				- Se la pila contiene un prefisso viabile completo allora il parser _riduce_.
 				- Se la pila contiene un prefisso viabile incompleto allora _shifta_.

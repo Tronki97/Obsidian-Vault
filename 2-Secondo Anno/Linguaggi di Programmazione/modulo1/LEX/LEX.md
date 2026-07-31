@@ -24,7 +24,7 @@ data: "`2024-10-15 18:44`"
 				- se si usano funzioni complesse nella parte "azione" queste potrebbero essere definite qui.
 		- ### File lex.yy.c
 			- Implementa il [[Automi finiti deterministici||DFA]] riconoscitore del linguaggio
-				- Produce il token relativo al [[Linguaggi regolari#^114588||lessema]] in input, se riconoscibile ed esegue l'azione relativa
+				- Produce il token relativo al [[Linguaggi regolari ed elementi costruttivi#^114588||lessema]] in input, se riconoscibile ed esegue l'azione relativa
 				- Ricerca sempre il pattern più lungo se uno è prefisso dell'altro
 				- Se uno è caso speciale dell'altro sceglie il primo in elenco
 					- Applicare queste regole nella simulazione del DFA relativo all'[[Automi finiti non deterministici||NFA]]

@@ -22,7 +22,7 @@ data: "`2024-10-22 17:51`"
 			- $(L_{1})^{*}=L(G)$ dove $G$ è:
 			- $$\{NT_{1}\cup \{S\}, T_{1}, S, R_{1}\cup \{S\to \epsilon|S_{1}S\}\}$$
 - # Intersezione:
-	- L'intersezione di un linguaggio libero $L_{1}$ con uno [[Linguaggi regolari||regolare]] $L_{2}$ è un _linguaggio libero_ 
+	- L'intersezione di un linguaggio libero $L_{1}$ con uno [[Linguaggi regolari ed elementi costruttivi||regolare]] $L_{2}$ è un _linguaggio libero_ 
 	- ## Dim:
 		-  ![[Pasted image 20241022180210.png]]
 		- $N$ segue le mosse di $N_{1}$ tenendo traccia dello stato raggiunto da $N_{2}$ 

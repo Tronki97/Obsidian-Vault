@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "8e81adc645d5d3eb",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "009cbf78c7450b47",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,33 +30,8 @@
               "icon": "lucide-file",
               "title": "Homepage"
             }
-          },
-          {
-            "id": "182928120b394333",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Linguaggi di Programmazione"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -76,10 +51,12 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Esplora file"
             }
           },
           {
@@ -224,10 +201,24 @@
             "id": "e0f7a9090ccdda12",
             "type": "leaf",
             "state": {
-              "type": "review-queue-list-view",
-              "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Coda di note da rivedere"
+              "type": "markdown",
+              "state": {
+                "file": "Homepage.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Homepage"
             }
           }
         ],
@@ -239,12 +230,12 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "switcher:Apri selettore rapido": false,
+      "daily-notes:Apri nota giornaliera": false,
       "bases:Crea nuova Base": false,
-      "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "3d-graph:3D Graph": false,
       "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
       "markdown-importer:Apri importazione Markdown": false,
@@ -259,12 +250,16 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "182928120b394333",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "latexsheet-a4.pdf",
+    "Homepage.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Linguaggi regolari ed elementi costruttivi.md",
+    "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi a stati finiti.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Errori dinamici.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica dei comandi.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
-    "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
     "Pasted image 20260730193132.png",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica delle espressioni booleane.md",
     "2-Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Proprietà di un programma.md",
@@ -289,10 +284,6 @@
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Pragmatica.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/MA, interpreti compilatori/Implementare un linguaggio.md",
     "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Linguaggio Generato.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Fondamenti di contabilità/Fondamenti di calcolabilità.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/alberi di derivazione/Sintassi concreta e astratta.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Derivazioni.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/alberi di derivazione/Alberi di derivazione.md",
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
     "immagini/Pasted image 20260313185147.png",
     "immagini/uc.png",

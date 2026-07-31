@@ -10,7 +10,7 @@ data: "`2024-10-10 12:10`"
 - # idea della prova:
 	- ## Caso semplice:
 		- ho un solo $NT$ $A\to aA|b|\epsilon$
-		- e $a^{*}(b|\epsilon)$ e la [[Linguaggi regolari#^aca36f||regex]] associata  
+		- e $a^{*}(b|\epsilon)$ e la [[Linguaggi regolari ed elementi costruttivi#^aca36f||regex]] associata  
 	- ## Caso medio:
 		- due non terminali:
 		- $A\to aA|bB|c$
@@ -20,7 +20,7 @@ data: "`2024-10-10 12:10`"
 			- $$B\approx a^{*}(cA|d)$$
 		- ora sostituisco $B$ nella "prima equazione" 
 			- $$A\approx aA|ba^{*}(cA|d)|c$$
-		- usando le leggi viste sulle [[Linguaggi regolari#^aca36f||espressioni regolari]]
+		- usando le leggi viste sulle [[Linguaggi regolari ed elementi costruttivi#^aca36f||espressioni regolari]]
 			- $$A\approx aA|ba^{*}cA|ba^{*}d|c$$
 		- che risulta in:
 			- $$A\approx (a|ba^{*}c)A| ba^{*}d|c$$
@@ -48,6 +48,6 @@ data: "`2024-10-10 12:10`"
 			- generano: [[Grammatiche regolari]]
 			- riconoscono: [[Automi finiti non deterministici||NFA]]/[[Automi finiti deterministici||DFA]]
 			- descrivono: _regex_ 
-		- la stessa classe di linguaggi ovvero i [[Linguaggi regolari]] 
+		- la stessa classe di linguaggi ovvero i [[Linguaggi regolari ed elementi costruttivi]] 
 - # Link Utili:
 	- 

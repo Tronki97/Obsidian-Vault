@@ -20,7 +20,7 @@ data: "`2024-10-24 12:01`"
 		- N è un DPDA 
 		- N lo riconosce per stato finale.
 	- ## Dim:
-		- Se $L$ è [[Linguaggi regolari|regolare]] allora $\exists$ un [[Automi finiti deterministici|DFA]] $M$ tale che: $L=L[M]$ 
+		- Se $L$ è [[Linguaggi regolari ed elementi costruttivi|regolare]] allora $\exists$ un [[Automi finiti deterministici|DFA]] $M$ tale che: $L=L[M]$ 
 		- a partire da $M$ posso costruire un _DPDA_ $N$ che si comporta come $M$ __senza mai manipolare lo stack__ 
 			- $\implies L=L[N]$ 
 	- Quindi un linguaggio libero deterministico $L$ è riconosciuto da un DPDA per [[Automi a Pila (PDA)|pila vuota]] sse:

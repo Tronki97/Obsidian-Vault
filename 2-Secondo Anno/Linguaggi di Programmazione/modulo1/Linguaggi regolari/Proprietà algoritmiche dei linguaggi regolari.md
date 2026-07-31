@@ -13,7 +13,7 @@ data: "`2024-10-15 19:10`"
 		- Ciò va in contrapposizione con i [[Automi finiti deterministici||DFA]] e [[Automi finiti non deterministici||NFA]] in quanto hanno stati _finiti_ 
 - # Proprietà algoritmiche:
 	- ## Pumping Lemma:
-		- se $L$ è un [[Linguaggi regolari||linguaggio regolare]] allora 
+		- se $L$ è un [[Linguaggi regolari ed elementi costruttivi||linguaggio regolare]] allora 
 			- $$\exists N>0: \forall z\in L | \ |z| \geq N, \exists u,v,w:$$
 				- $z=uvw$
 				- $|uv|\le N$
@@ -53,14 +53,14 @@ data: "`2024-10-15 19:10`"
 		- $\exists k =2: uv^{2}w=uvvw=a^{N+j}b^{N}\notin L$ 
 		- Quindi il linguaggio $L$ non è regolare. 
 - # Altre proprietà:
-	- la classe dei [[Linguaggi regolari]] è chiusa per:
+	- la classe dei [[Linguaggi regolari ed elementi costruttivi]] è chiusa per:
 		- Unione
 		- Concatenazione
 		- Ripetizione
 		- Complementazione
 		- Intersezione
 	- ## Dim:
-		- le prime 3 si dimostrano dal fatto che: se $L_{1}$ e $L_{2}$ sono regolari allora $\exists s_{1}, s_{2}$ [[Linguaggi regolari#^808f0a||regex]] tali che:
+		- le prime 3 si dimostrano dal fatto che: se $L_{1}$ e $L_{2}$ sono regolari allora $\exists s_{1}, s_{2}$ [[Linguaggi regolari ed elementi costruttivi#^808f0a||regex]] tali che:
 			- $$L_{1}=\scr L \mathbf{[s_{1}]},\mathbf{L_{2}=}L \mathbf{[s_{2}]}$$ 
 			- E facendo le prime 3 operazioni si dimostra
 		- la 4 si dimostra usando un [[Automi finiti deterministici||DFA]] $M$, col quale si costruisce il suo complementare $\overline{M}$ (ottenumto avendo come stati finali $Q - F$) 

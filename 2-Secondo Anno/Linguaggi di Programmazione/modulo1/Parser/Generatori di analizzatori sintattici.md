@@ -20,7 +20,7 @@ data: "`2025-08-20 18:08`"
 		- L'analizzatore sintattico usa quello lessicale come _subroutine_
 		- Lo invoca con `yylex()` per richiedere il token successivo (_on demand_)
 		- Alcune variabili comuni ai due programmi permettono di scambiare informazioni
-			- Come ad esempio `yyval` dove il [[LEX]] mette il [[Linguaggi regolari#^114588|lessema]] appena individuato.
+			- Come ad esempio `yyval` dove il [[LEX]] mette il [[Linguaggi regolari ed elementi costruttivi#^114588|lessema]] appena individuato.
 - # Struttura file YACC:
 	- ## % {prologo %}:
 		- Parte opzionale che contiene definizioni di macro e altre dichiarazioni di variabili o funzioni che saranno usate nelle sessioni seguenti

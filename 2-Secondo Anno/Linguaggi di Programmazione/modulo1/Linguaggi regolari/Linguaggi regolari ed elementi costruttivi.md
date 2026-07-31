@@ -11,29 +11,32 @@ aliases:
 date: 2024-10-03
 ---
 - # Analisi lessicale:
-	- la stringa o programma in input viene trasformata in una sequenza di simboli detta token
+	- la stringa o programma in input viene trasformata in una sequenza di simboli detta token dallo [[Analisi lessicale#^ec1d70|scanner]]
 	- ## Token:
 		- è una coppia formata da (nome, valore)
-		- nome: simbolo che rappresenta la categoria
-		- valore: una sequenza di simboli che appartiene a quella categoria.
+		- _nome_: simbolo che rappresenta la categoria
+		- _valore_: una sequenza di simboli che appartiene a quella categoria.
 		- ### ES:
 			-  $<Ide, x_{1}>$ 
+				- _Ide_: è la classe di token
+				- $x_{1}$ identifica un determinato token 
 		- ### pattern 
 			- è una descrizione generale della forma dei valori di una classe di token come:
 				- $(x\ |\ y)(x\ |\ y\ |\ 0\ |\ 1)^{*}$ 
 		- ### lessema:  ^114588
 			- è una striga istanza di un _pattern_ come $x_{1}$  è un lessema dell'istanza del pattern visto prima 
 	- ## ES:
-		- dalla stringa: `if(x==0)printf ("zero")` 
+		- dalla stringa: `if(x==0) printf("zero")` 
 			- lo scanner potrebbe generare una sequenza di token di questo tipo:
 				- ![[Pasted image 20241003121115.png]]
 				- anche se in realtà ogni identificatore viene associato ad un indirizzo nella [[Struttura di un compilatore#^80f144||tabella dei simboli]]
 	- ## Espressioni regolari: ^aca36f
 		- si fissa un alfabeto $A=\{a_{1},a_{2},...\}$ e si definiscono le espressioni regolari:
-			- $$r::= \emptyset \ |\ \epsilon \ |\  a \ |\  r \cdot r \ |\ r|r \ |\ r^{*}$$
+			- $$r::= \emptyset \ |\ \epsilon \ |\  a \ |\  r \cdot r \ |\ r\ |\ r \ |\ r^{*}$$
 			- N.B: per [[Ambiguità#^ea4c8c||disambiguare]] la sintassi si potrebbe usare le parentesi. 
 			- per semplicità si assume che:
 				- _concatenazione $(\ \cdot\ )$, disgiunzione$(\ |\ )$ e ripetizione$(\ *\ )$_ sono _associative a sx_ 
+				- c'è la precedenza tra gli operatori $* > \cdot > |$
 			- ![[Pasted image 20241003121750.png]]
 			- ### Esempio di espressione regolare:
 				- $A=\{0,1\}$

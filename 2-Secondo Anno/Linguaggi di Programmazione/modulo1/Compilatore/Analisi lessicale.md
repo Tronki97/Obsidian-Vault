@@ -5,7 +5,7 @@ aliases:
   - scanner
 ---
 
-- ## Scanner:
+- ## Scanner: ^ec1d70
 	- spezza il programma in token e controlla che il linguaggio sia ammissibile utilizzando una [[Struttura di un compilatore#^80f144|tabella dei simboli]] che riempie parzialmente con tutti gli ID delle variabili, delle procedure, ecc...
 	- Il suo output è una _lista di token_ 
 	- ### Realizzarlo:

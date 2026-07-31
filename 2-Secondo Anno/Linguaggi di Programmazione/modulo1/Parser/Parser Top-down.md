@@ -105,7 +105,7 @@ data: "`2024-11-07 12:01`"
 		- ![[Pasted image 20250801175128.png]]
 		- ![[Pasted image 20250801175142.png]]
 - # Teorema:
-	- Ogni [[Linguaggi regolari|linguaggio regolare]] è generabile da una [[Definire finitamente un linguaggio]] $G$ di [[Classe di una grammatica|classe]] LL(1)
+	- Ogni [[Linguaggi regolari ed elementi costruttivi|linguaggio regolare]] è generabile da una [[Definire finitamente un linguaggio]] $G$ di [[Classe di una grammatica|classe]] LL(1)
 	- ## Dim:
 		- Se $L$ è regolare allora $\exists$ [[Automi finiti deterministici|DFA]] $M=(Q, \Sigma, \delta, q_{0}, F)$ tale che $L=L[M]$.
 		- A partire da $M$, si costruisce la grammatica regolare $G=(NT, T, S, R)$ con:
