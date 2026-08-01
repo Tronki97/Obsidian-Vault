@@ -4,12 +4,14 @@ tags:
 aliases:
   - indistinguibilità
   - tabella a scala
+  - stati equivalenti
 data: "`2024-10-10 12:37`"
 ---
 - # Def:
 	- due stati sono _indistinguibili_ tra loro se $\forall x \in \Sigma^{*}$ 
 		- $$\hat{\delta}(q_{1},x)\in F \iff \hat{\delta}(q_{2},x)\in F$$
 	- ovvero se $L[N,q_{1}]=L[N,q_{2}]$
+	- in sostanza sono indistinguibili se per ogni stringa $x$ essa viene riconosciuta partendo da $q_{1}$ sse viene riconosciuta partendo da $q_{2}$ ovvero se il linguaggio generato da $N$ partendo da $q_{1}$ è identico a quello generato partendo da $q_{2}$ 
 - # Strategia:
 	- cerco di distinguere due stati considerando le $x\in \Sigma^{*}$ a partire dalla più corta ($\epsilon$)
 		- ![[Pasted image 20241010124218.png]]
@@ -35,6 +37,8 @@ data: "`2024-10-10 12:37`"
 	- dato un [[Automi finiti deterministici||DFA]] _M_ definisco una famiglia di relazioni:
 		- $$\sim_{i}\subseteq Q \times Q$$ 
 	- $$\sim_{0}=F \times F \cup (Q-F)\times(Q-F)$$
+		- sono gli stati che non possono essere distinti da $\epsilon$, ovvero l'unica parola di lunghezza $0$ e si selezionano gli stati equivalenti rispetto alle stringhe di lunghezza 0
+	- 
 	- ## OSS:
 		- 1) la relazione $Id\{(q,q)|q\in Q\}$ è tale che $Id\subseteq \sim_{i}\ \ \ \forall i$ 
 			- uno stato è sempre equivalente a se stesso

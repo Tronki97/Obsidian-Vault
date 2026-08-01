@@ -7,7 +7,7 @@ data: "`2024-10-08 18:13`"
 - # Teorema:
 	- data una [[Linguaggi regolari ed elementi costruttivi#^aca36f||espressione regolare]] $S$  posso costruire un [[Automi finiti non deterministici||NFA]] $N[S]$ tale che:
 		- $$L[N[S]]=\scr{L}\mathbf{[S]}$$
-	- ovvero gli NFA riconoscono tutti i [[Linguaggi regolari ed elementi costruttivi]]
+	- ovvero gli NFA riconoscono tutti i [[Linguaggi regolari ed elementi costruttivi#^55c05a|linguaggi regolari]]
 - # Dim:
 	- per induzione sulla [[Sintassi concreta e astratta#^ec88f9||sintassi astratta]] dell'espressione $S$
 	- costruiremo $N[S]$ ovvero un possibile NFA associato all'espressione regolare $S$ in modo da mantenere i seguenti punti invariati:
@@ -23,11 +23,15 @@ data: "`2024-10-08 18:13`"
 		- $S=a$
 			- ![[Pasted image 20241008183750.png]]
 			- si osserva che $\scr L \mathbf{[a]=\{a\}=L[N[S]]}$ 
-		- $S=r\ |\ t$
-			- ![[Pasted image 20241008183900.png]]
-			- ![[Pasted image 20241008183928.png]]
+		- $S=r\ |\ t$:
+			- per induzione si suppone di aver costruito $N[r]$ e $N[t]$ che rispettino gli invarianti, siano $i_{r}$ e $i_{t}$ i rispettivi stati iniziali e $f_{r},f_{t}$ quelli finali si definisce $N[r|t]$:
+				- ![[Pasted image 20241008183900.png]]
+				- gli invarianti sono rispettati in quanto $i$ non ha archi entranti, $f$ non ne ha di uscenti e per raggiungerlo o si passa per lo stato finale di $N[r]$ o per quello di $N[t]$ quindi:
+					- ![[Pasted image 20241008183928.png]]
 		- $S= r\cdot t$
+			- il procedimento è simile a quello precedente.
 			- ![[Pasted image 20241008183954.png]]
+			- per raggiungere lo stato finale $f_{t}$ è necessario passare per $f_{r}$ e quindi si consuma un input $\in L[rt]$  
 		- $S=r^{*}$
 			- ![[Screenshot 2024-10-08 at 18-40-27 Lez07-Gorrieri.pdf.png]]
 - # ES:

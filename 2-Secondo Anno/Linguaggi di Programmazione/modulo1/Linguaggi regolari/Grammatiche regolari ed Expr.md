@@ -5,17 +5,18 @@ aliases:
 data: "`2024-10-10 12:10`"
 ---
 - # Teorema:
-	- è possibile costruire una expr regolare $S_{G}$ tale che:
+	- il linguaggio definito da una [[Grammatiche regolari]] $G$ è un [[Linguaggi regolari ed elementi costruttivi#^55c05a|linguaggio regolare]] ovvero è possibile costruire una espressione regolare $S_{G}$ tale che:
 		- $$L(G)=\scr L \mathbf{[S_{G}]}$$
+		- ovvero il [[Linguaggio Generato]] dalla grammatica $G$ è lo stesso descritto dall'[[Linguaggi regolari ed elementi costruttivi#^94ff4f|espressione regolare]] $S_{G}$ 
 - # idea della prova:
 	- ## Caso semplice:
 		- ho un solo $NT$ $A\to aA|b|\epsilon$
 		- e $a^{*}(b|\epsilon)$ e la [[Linguaggi regolari ed elementi costruttivi#^aca36f||regex]] associata  
 	- ## Caso medio:
 		- due non terminali:
-		- $A\to aA|bB|c$
-		- $B\to cA|aB|d$ 
-			- si possono vedere come un sistema lineare.
+			- $A\to aA|bB|c$
+			- $B\to cA|aB|d$ 
+				- si possono vedere come un sistema lineare.
 		- ricavo $B$ dalla "seconda equazione"
 			- $$B\approx a^{*}(cA|d)$$
 		- ora sostituisco $B$ nella "prima equazione" 
@@ -48,6 +49,6 @@ data: "`2024-10-10 12:10`"
 			- generano: [[Grammatiche regolari]]
 			- riconoscono: [[Automi finiti non deterministici||NFA]]/[[Automi finiti deterministici||DFA]]
 			- descrivono: _regex_ 
-		- la stessa classe di linguaggi ovvero i [[Linguaggi regolari ed elementi costruttivi]] 
+		- la stessa classe di linguaggi ovvero i [[Linguaggi regolari ed elementi costruttivi|linguaggi regolari]] 
 - # Link Utili:
 	- 

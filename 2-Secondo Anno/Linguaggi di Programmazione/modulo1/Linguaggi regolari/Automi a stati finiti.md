@@ -6,11 +6,10 @@ aliases:
 data: "`2024-10-03 13:06`"
 ---
 - # Automi a stati finiti:
+	- sono degli strumenti necessari per capire se una sequenza in ingresso è un [[Linguaggi regolari ed elementi costruttivi#^114588|lessema]] per una certa categoria sintattica
 	- ## Caratteristiche:
-		- memoria finita data dal numero degli stati
+		- memoria _finita_ data dal numero _finito_ degli stati
 		- in _input_ ha una stringa da riconoscere e in _output_ ha un bit che dice se la stringa è riconosciuta come buona.
-		- 
-		- 
 	- ## Descrizione iniziale:
 		- controllo sullo stato iniziale $q_{0}$ 
 		- la testina inizia dal primo carattere dell'input.
@@ -18,7 +17,7 @@ data: "`2024-10-03 13:06`"
 		- in base allo stato in cui si trova e al carattere in input decide se:
 			- _cambiare stato_ 
 			- _spostare la testina sull'input successivo_ 
-		- tutto ciò è ripetuto finché ha finito di leggere l'input(e riconoscere che la stringa ha raggiunto lo stato terminale) oppure si blocca prima a causa di una condizione particolare come visto in [[Semantica operazionale strutturata]] in particolare nell'operazione (_sum3_) 
+		- tutto ciò è ripetuto finché ha _finito di leggere l'input_ (e riconoscere che la stringa ha raggiunto lo _stato terminale_) oppure si blocca prima a causa di una condizione particolare come visto in [[Semantica operazionale strutturata]] in particolare nell'operazione (_sum3_) 
 - # Diagramma di transizione: ^a25e73
 	- è un modo in cui può essere descritto il funzionamento di un automa finito.
 	- ![[Pasted image 20241005200304.png]]

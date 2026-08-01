@@ -15,9 +15,20 @@ data: "`2024-10-05 20:09`"
 		- $F \subseteq Q$ è l'insieme degli stati finali.
 		- $\delta$ è la funzione di transizione del tipo:
 			- $\delta: Q \times (\Sigma\cup \{\epsilon\})\to P(Q)=$ insieme delle parti di Q 
+	- ## Descrizione istantanea:
+		- è una coppia $(q,w)$ dove:
+			- $q$ è lo stato corrente 
+			- $w$ è l'input da leggere
+	- ## Mossa:
+		- $$\cfrac{q'\in \delta (q, \sigma)}{(q, \sigma w) \vdash _N (q',w)}​$$
+		- dove $\delta(q,\sigma)$ è l'insieme degli stati che possono essere raggiunti da $q$ leggendo $\sigma$ 
+	- ## Cammino:
+		- $$\cfrac{(q, w) \vdash _N^* (q',w') \quad (q', w') \vdash _N (q'',w'')}{(q, w) \vdash _N^* (q'',w'')}​$$
+		- gode della proprietà riflessiva quindi in 0 passi l'automa può raggiugere se stesso 
 - # ES:
 	- $\Sigma=\{a,b\}$     $Q=\{q_{0},q_{1},q_{2}\}$     $q_{0}$ iniziale     $F=\{q_{2}\}$
-		- ![[Pasted image 20241005201619.png]]Che rappresentato in NFA è:
+		- ![[Pasted image 20241005201619.png]]
+		- Che rappresentato in NFA è:
 			- ![[Pasted image 20241005201650.png]]
 - # Pros & Cons:
 	- è facile costruirli 

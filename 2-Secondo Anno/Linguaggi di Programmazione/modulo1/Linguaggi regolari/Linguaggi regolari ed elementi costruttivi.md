@@ -30,48 +30,57 @@ date: 2024-10-03
 			- lo scanner potrebbe generare una sequenza di token di questo tipo:
 				- ![[Pasted image 20241003121115.png]]
 				- anche se in realtà ogni identificatore viene associato ad un indirizzo nella [[Struttura di un compilatore#^80f144||tabella dei simboli]]
-	- ## Espressioni regolari: ^aca36f
-		- si fissa un alfabeto $A=\{a_{1},a_{2},...\}$ e si definiscono le espressioni regolari:
-			- $$r::= \emptyset \ |\ \epsilon \ |\  a \ |\  r \cdot r \ |\ r\ |\ r \ |\ r^{*}$$
-			- N.B: per [[Ambiguità#^ea4c8c||disambiguare]] la sintassi si potrebbe usare le parentesi. 
-			- per semplicità si assume che:
-				- _concatenazione $(\ \cdot\ )$, disgiunzione$(\ |\ )$ e ripetizione$(\ *\ )$_ sono _associative a sx_ 
-				- c'è la precedenza tra gli operatori $* > \cdot > |$
-			- ![[Pasted image 20241003121750.png]]
-			- ### Esempio di espressione regolare:
-				- $A=\{0,1\}$
-				- $0^{*}\ 1\ 0^{*}$
-					- $$L_{1}=\{w\in A^{*}|\mathbf{w \ contiene \ solo \ un \ 1}\}$$
-				- $(0\ |\ 1)^{*}1$
-					- $L_{2}=\{w\in A^{*}\ |\ \mathbf{w\ termina\  con \ 1}\}$ 
-	- ## Linguaggio denotato da una espressione regolare:
-		- dato l'alfabeto $A$ si definisce la funzione:
-			- $$L:ExpReg\to P(A^{*})$$
-			- segue che:
-				- ![[Pasted image 20241003121940.png]]
-				- e si ricordano queste [[Operazioni su linguaggi||operazioni]]  
-	- ## Linguaggio regolare:
-		- Def: sono quei linguaggi rappresentabili usando le espressioni regolari
-		- ogni linguaggio finito è sicuramente regolare 
-			- ![[Pasted image 20241003122421.png]] 
-		- esistono anche linguaggi regolari infiniti:
-			- ![[Pasted image 20241003122513.png]]
-		- ### Operatori ausiliari:
-			- permettono di rendere più sintetiche le operazioni base.
-	- ## Definizioni regolari:
-		- una _definizione regolare_ su di un [[Lessico e linguaggio formale#^de2f85||alfabeto]] $A$ è una lista di definizioni:
-			- $d_{1}:= r_{1}, \ d_{2}:=r_{2}, ...,d_{k}:=r_{k}$
-			- dove $d_{i}$ rappresentano i nuovi simboli e $r_{i}$ le espressioni regolari sull'alfabeto esteso $A\cup \{d_{1},...,d_{k}\}$ 
-		- ### ES:
-			- ![[Pasted image 20241003124349.png]]
-	- ## Equivalenze tra espressioni regolari:
-		- $$r \wedge s\ \  \mathbf{equivalenti }\iff L[r]=L[s]$$
-			- ovvero denotano lo stesso linguaggio e si indica con:
-				- $r \simeq s$
-		- ### Leggi:
-			- ![[Pasted image 20241005195400.png]]
+- # Espressioni regolari: ^aca36f
+	- si fissa un alfabeto $A=\{a_{1},a_{2},...\}$ e si definiscono le espressioni regolari:
+		- $$r::= \emptyset \ |\ \epsilon \ |\  a \ |\  r \cdot r \ |\ r\ |\ r \ |\ r^{*}$$
+		- N.B: per [[Ambiguità#^ea4c8c||disambiguare]] la sintassi si potrebbe usare le parentesi. 
+		- per semplicità si assume che:
+			- _concatenazione $(\ \cdot\ )$, disgiunzione$(\ |\ )$ e ripetizione$(\ *\ )$_ sono _associative a sx_ 
+			- c'è la precedenza tra gli operatori $* > \cdot > |$
+		- ![[Pasted image 20241003121750.png|783]]
+		- ## operatori ausiliari:
+			- $r^{+}$ indica una ripetizione positiva.
+			- $r?$ come scrivere $r|\epsilon$ 
+			- $[a_{1},...,a_{n}]$ è l'elenco 
+		- ## Esempio di espressione regolare: ^94ff4f
+			- $A=\{0,1\}$
+			- $0^{*}\ 1\ 0^{*}$
+				- $$L_{1}=\{w\in A^{*}|\mathbf{w \ contiene \ solo \ un \ 1}\}$$
+			- $(0\ |\ 1)^{*}1$
+				- $L_{2}=\{w\in A^{*}\ |\ \mathbf{w\ termina\  con \ 1}\}$ 
+- # Linguaggio denotato da una espressione regolare:
+	- Dato l'alfabeto $A$ si definisce la funzione:
+		- $$L:ExpReg\to P(A^{*})$$
+		- segue che:
+			- ![[Pasted image 20241003121940.png]]
+			- e si ricordano queste [[Operazioni su linguaggi||operazioni]]  
+- # Linguaggio regolare: ^55c05a
+	- Sono quei linguaggi rappresentabili usando le espressioni regolari
+		- $L\subseteq A^{*}$ è detto _regolare_ $\iff \ \exists$ una _regex_ $r$ tale che $L=L[r]$ 
+	- ogni linguaggio finito è sicuramente regolare 
+		- ![[Pasted image 20241003122421.png]] 
+	- esistono anche linguaggi regolari infiniti:
+		- ![[Pasted image 20241003122513.png]]
+	- ## Operatori ausiliari:
+		- permettono di rendere più sintetiche le operazioni base.
+- # Definizioni regolari:
+	- una _definizione regolare_ su di un [[Lessico e linguaggio formale#^de2f85||alfabeto]] $A$ è una lista di definizioni:
+		- $d_{1}:= r_{1}, \ d_{2}:=r_{2}, ...,d_{k}:=r_{k}$
+		- dove $d_{i}$ rappresentano i nuovi simboli e $r_{i}$ le espressioni regolari sull'alfabeto esteso $A\cup \{d_{1},...,d_{k}\}$ 
+	- ## ES:
+		- ![[Pasted image 20241003124349.png]]
+- # Equivalenze tra espressioni regolari:
+	- $$r \simeq s\ \  \iff L[r]=L[s]$$
+		- ovvero sono equivalenti e denotano lo stesso linguaggio. 
+	- ## Leggi:
+		- $\emptyset^{*}\simeq \epsilon$
+		- $r\ |\ \varnothing \simeq r​$
+		- $r \cdot \varnothing \simeq \varnothing \simeq \varnothing \cdot r​$
+		- $(\epsilon\ |\ r)^* \simeq r^*​$
+		- $(r^*s^*)^* \simeq (r\ |\ s)^*​$ 
+		- ![[Pasted image 20241005195400.png|671]]
+- # Considerazioni
 	- Le _espressioni regolari_ servono a specificare il _pattern_ di una categoria sintattica, ovvero la forma dei possibili _lessemi_ ^808f0a
 	- per riconoscere che una certa sequenza in ingresso sia un lessema per una certa categoria sintattica si usano gli [[Automi a stati finiti]]  
 - # Link Utili:
 	- https://virtuale.unibo.it/pluginfile.php/2200368/mod_resource/content/0/Lez06-Gorrieri.pdf fino alla pagina 11.
-	- 

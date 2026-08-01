@@ -10,18 +10,19 @@ aliases:
 data: "`2024-10-05 20:34`"
 ---
 - # Def:
-	- un DFA è una quintupla $(\Sigma, Q,\delta, q_{0}, F)$ dove $\Sigma, Q, q_{0}, F$ sono definiti come per un [[Automi finiti non deterministici||NFA]] mentre la funzione $\delta$:
+	- un DFA (deterministic finite automata) è una quintupla $(\Sigma, Q,\delta, q_{0}, F)$ dove $\Sigma, Q, q_{0}, F$ sono definiti come per un [[Automi finiti non deterministici||NFA]] mentre la funzione $\delta$:
 		- $$\delta:Q \times \Sigma \to Q $$
 			- $(\delta(q, \sigma)=q')$ 
 - # Oss:
-	- un DFA è un tipo di NFA che:
-		- $\forall q \in Q\ |\ \delta(q,\epsilon)=\emptyset$ (non ci sono transizioni $\epsilon$) 
+	- un DFA è un particolare tipo di NFA che:
+		- $\forall q \in Q\ |\ \delta(q,\epsilon)=\emptyset$ _(non ci sono transizioni $\epsilon$)_
 		- $\forall \sigma\in \Sigma, \forall q \in Q,\  \exists q' \in Q: \delta(q,\sigma)=\{q'\}$ 
-			- ovvero l'insieme delle mosse possibili è sempre un singoletto.     
+			- ovvero l'insieme delle mosse possibili è sempre un singoletto.
+- # TH:
+	- Gli NFA e DFA sono equiespressivi infatti per ogni NFA è possibile costruire da esso un DFA 
 - # Dim:
-	- per ogni NFA è possibile costruire da esso un DFA
 	- ## Idea:
-		- seguire tutti i possibili cammini alternativi dell'NFA e ciò implica che:
+		- seguire contemporaneamente tutti i possibili cammini alternativi dell'NFA e ciò implica che:
 			- gli stati dell'DFA costruito sono insiemi degli stati dell'NFA. 
 	- ## ES:
 		- ![[Pasted image 20241008170611.png]]

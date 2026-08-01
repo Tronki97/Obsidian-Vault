@@ -6,9 +6,11 @@ aliases:
 data: "`2024-10-05 20:17`"
 ---
 - # Def:
-	- un [[Automi finiti non deterministici||NFA]]  $N=(\Sigma, Q,\delta, q_{0}, F)$accetta una stringa $w=a_{1}...a_{n}$ sse nel [[Automi a stati finiti#^a25e73||diagramma di transizione]] _esiste_ un cammino da $q_{0}$ ad uno stato $\in F$ nel quale la stringa che si ottiene concatenando le etichette degli archi percorsi è esattamente $w$
-	- il linguaggio accettato da $N$ indicato con $L[N]$ è 
+	- un [[Automi finiti non deterministici||NFA]]  $N=(\Sigma, Q,\delta, q_{0}, F)$ accetta una stringa $w=a_{1}...a_{n}$ sse nel [[Automi a stati finiti#^a25e73||diagramma di transizione]] _esiste_ un cammino da $q_{0}$ ad uno stato $\in F$ nel quale la stringa che si ottiene concatenando le etichette degli archi percorsi è esattamente $w$
+	- Accettazione di una stringa: 
 		- $$w\in L[N]\iff \exists q\in F: (q_{0},w)\vdash^{*}_{N}(q,\epsilon)$$
+		- il linguaggio accettato in se è definito come:
+			- $$L[N]=\{w\in \Sigma^{*}| \exists q \in F: (q_{0},w) \vdash^{*}_{N} (q,\epsilon)\}$$
 	- ## Equivalenza:
 		- due _NFA_ si dicono equivalenti sse accettano lo stesso linguaggio ovvero: $L[N_{1}]=L[N_{2}]$ 
 - # ES:

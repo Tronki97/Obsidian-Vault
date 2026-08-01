@@ -11,7 +11,7 @@ data: "`2024-10-08 19:08`"
 	- Sia $M=(\Sigma,Q, \delta, q_{0}, F)$ il DFA. la grammatica $G_{M}=(Q, \Sigma, R, q_{0})$ ha:
 		- come NT gli stati di $M$ 
 		- come T l'alfabeto $\Sigma$ si $M$ 
-		- come $S$ lo stato iniziale di $M$ 
+		- come simbolo iniziale lo stato $q_{0}$ di $M$ 
 		- come produzioni $R$:
 			- $\forall \delta(q_{i},a)=q_{J}$ la produzione $q_{i}\to aq_{J}\in R$ 
 			  inoltre se $q_{J}\in F$ anche $q_{i}\to a\in R$ 

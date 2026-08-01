@@ -33,7 +33,7 @@ data: "`2024-10-08 17:45`"
 				- $$\hat{\delta}(q_{0},xa)=\epsilon-closure(\bigcup_{i=1}^{k}\delta(P_{i},a))$$
 			- similmente:
 				- $$\hat{\Delta}(i_{M},xa)=\Delta(\{P_{1},...,P_{k} \},a)$$
-			- in base all'algoritmo la definizione di $\Delta$ ci dice che:
+			- in base all'algoritmo, la definizione di $\Delta$ ci dice che:
 				- $$\Delta(\{P_{1},...,P_{k} \},a)=\epsilon-closure(mossa(\{P_{1},...,P_{k} \},a))=$$
 				- $$=\epsilon-closure(\bigcup_{i=1}^{k}\delta(p_{i},a))=\hat{\delta}(q_{0},xa)$$
 			- Quindi infine si ha che:
