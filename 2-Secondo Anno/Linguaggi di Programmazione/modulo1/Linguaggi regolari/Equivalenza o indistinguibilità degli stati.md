@@ -38,7 +38,8 @@ data: "`2024-10-10 12:37`"
 		- $$\sim_{i}\subseteq Q \times Q$$ 
 	- $$\sim_{0}=F \times F \cup (Q-F)\times(Q-F)$$
 		- sono gli stati che non possono essere distinti da $\epsilon$, ovvero l'unica parola di lunghezza $0$ e si selezionano gli stati equivalenti rispetto alle stringhe di lunghezza 0
-	- 
+	- $$q_{1}\sim_{i+1}q_{2} \iff \delta(q_{1},a)\sim_{i} \delta(q_{2},a)$$
+		- questa affermazione riguarda le stringhe di lunghezza al massimo $i+1$, i due stati sono in relazione $\sim_{i+1}$ se $\forall x\in \Sigma^{*}: |x|\le i+1, \hat{\delta}(q_{1},x)\in F \iff \hat{\delta}(q_{2},x)\in F$ 
 	- ## OSS:
 		- 1) la relazione $Id\{(q,q)|q\in Q\}$ è tale che $Id\subseteq \sim_{i}\ \ \ \forall i$ 
 			- uno stato è sempre equivalente a se stesso
@@ -72,18 +73,19 @@ data: "`2024-10-10 12:37`"
 	- e così via finche si riesce ad aggiungere un simbolo $x_{i}$ nella tabella.
 	- ## ES:
 		- ![[Pasted image 20241011144321.png]]
+		- gli stati che quindi risultano equivalenti sono quelli non marcati sulla tabella quando non è più possibile marcarne altri. 
 		- e l'automa risultante è:
 			- ![[Pasted image 20241011144417.png]]
 - # Teorema:
 	- dato un [[Automi finiti deterministici||DFA]] $M=(\Sigma, Q, \delta, q_{0}, F)$
 	- l'algoritmo di riempimento della tabella a Scala termina. 
-	- (Due stati $p$ e $q$ sono indistinguibili) $\iff$ (la casella $(p,q)$ o $(q,p)$ è marcata) e quindi sono equivalenti sse la casella non è marcata 
+	- (Due stati $p$ e $q$ sono _distinguibili_) $\iff$ (la casella $(p,q)$ o $(q,p)$ è marcata) e quindi sono equivalenti sse la casella non è marcata 
 	- ## Dim:
 		- Termina sempre perché:
-			-  $$\exists k: \sim_{k}=\sim$$
+			-  $$\exists k: \sim_{k}=\sim_{k+1}$$
 			- e quindi l'algoritmo iterativo termina entro $k$ cicli.
 		- $\implies$ )
-			- suppongo che $p$ e $q$ sono indistinguibili, allora:
+			- suppongo che $p$ e $q$ sono _distinguibili_, allora:
 				-  $$\exists x \in \Sigma^{*}: \hat{\delta}(p,x)\in F \wedge \hat{\delta}(q,x)\notin F$$
 				- o viceversa
 			- se prendo $k=|x|$ allora di sicuro $(p,q)\notin \sim_{k}$ ovvero $(p,q)$ viene marcata entro il ciclo $k$

@@ -1,0 +1,31 @@
+---
+tags:
+aliases:
+  - grammatiche monotone
+  - grammatica monotona
+  - grammatica generale
+data: "`2026-08-04 16:54`"
+---
+- # [[Grammatiche regolari]]:
+	-  $A\to aB$ 
+	- $A\to a$ 
+	- $S\to \epsilon$
+- # [[Grammatica|Grammatiche libere]] 
+	- $A\to \gamma$ con $\gamma \in (NT\cup T)^{+}$ 
+	- $S\to \epsilon$ 
+- # Grammatiche dipendenti dal contesto:
+	- $\gamma A \delta \to \gamma w \delta$ con $\gamma,\delta\in (NT \cup T)^{*}$ e $w\in (NT\cup T)^{+}$ 
+	- $S\to \epsilon$ 
+- # Grammatiche Monotone:
+	- $\gamma \to \delta$ con $|\gamma|\le |\delta|$ 
+- # Grammatiche generali:
+	- $\gamma \to \delta$ senza che ci siano vincoli 
+- # TH:
+	- per ogni grammatica $G_{1}$ _monotona_, ne esiste una $G_{2}$ _dipendente dal contesto_ tale che:
+		- $L(G_{1})=L(G_{2})$
+- # Classificazione grammatiche:
+	- ![[Pasted image 20260804170047.png|609]]
+- # Classificazione linguaggi:
+	- ![[Pasted image 20260804170210.png|622]]
+- # Link Utili:
+	- 

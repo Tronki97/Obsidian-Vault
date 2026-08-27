@@ -26,7 +26,7 @@ data: "`2025-05-06 13:30`"
 			- Sapendolo stimare allora so stimare anche $\mathbb{E}[f(X)]\ \ \forall f: \mathbb{R}\to \mathbb{R}$
 			- Inoltre posso stimare $\mathbb{P}(A), A\subset \Omega$ ovvero:
 				- $X= \mathbb{1}_{A}: \mathbb{E}[X]=\mathbb{P}(A)$ 
-			- Voglio dimostarre cje $\bar x_{n}$ è una buona stima di $\mathbb{E}[X]$
+			- Voglio dimostrare che $\bar x_{n}$ è una buona stima di $\mathbb{E}[X]$
 	- ## Teorema legge dei grandi numeri (LGN): ^c4bbb8
 		- $(X_{n})_{n\in \mathbb{N}}$ successione di v.a _iid_  con $\mu=\mathbb{E}[X]$ e $\sigma^{2}=Var(x)$ ^e7ebba
 			- $$\bar x_{n}: \frac{x_{1},...,x_{n}}{n}$$

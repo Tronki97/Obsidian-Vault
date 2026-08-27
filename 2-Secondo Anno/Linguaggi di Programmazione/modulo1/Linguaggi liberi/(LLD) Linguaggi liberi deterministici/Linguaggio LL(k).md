@@ -5,7 +5,7 @@ aliases:
 data: "`2025-08-04 17:39`"
 ---
 - # Def:
-	-  un linguaggio $L$ è di classe $LL(k)$ se esiste una grammatica di [[Classe di una grammatica#^1f2034||classe LL(k)]] tale che $L=L(G)$
+	-  un linguaggio $L$ è di classe $LL(k)$ se esiste una [[Grammatica LL(k)]] $G$ tale che $L=L(G)$
 - # Prop:
 	- Per ogni $k\ge 0$, la classe  dei linguaggi $LL(k+1)$ contiene strettamente la classe dei linguaggi $LL(k)$
 	- ![[Pasted image 20250804174224.png|500]]

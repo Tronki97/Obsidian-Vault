@@ -1,0 +1,54 @@
+---
+tags:
+aliases:
+data: "`2026-08-22 17:52`"
+---
+- # Grammatiche LL(k): ^1f2034
+	- $First_{k}(\alpha)$:
+		- $$w\in First_{k}(\alpha) \iff \alpha \Rightarrow^{*}w \beta$$
+			- Con $|w|=k, \ w\in T^{*},\ \beta\in (T\cup NT)^{*}$ 
+		- Altrimenti:
+		- $$w\in First_{k}(\alpha) \iff \alpha \Rightarrow^{*}w$$
+			- Con $|w|\le k ,\ w\in T^{*}$
+	- $Follow_{k}(A)$:
+		- $$w\in Follow_{k}(A) \iff S\Rightarrow^{*}\alpha Aw \beta$$
+			- Con $|w|=k$ e $w\in T^{*}$ $\alpha, \beta \in (T \cup NT)^{*}$
+		- Altrimenti:
+		- $$w\in Follow_{k}(A) \iff S\Rightarrow^{*}\alpha Aw $$
+			- Con $|w|\le k$ e $w\in T^{*}$
+	- ## Tabella di parsing LL(k):
+		- Righe: Non terminali
+		- Colonne: 
+			- $$\{w\in T^{*}\ |\  |w|\le k\}$$
+			- Per ogni produzione $A\to \alpha\ \  M[A,w]$ contiene $A\to \alpha$ per ogni $w\in First_{k}(\alpha)$ con $w\ne \epsilon$ e per ogni $w\in Follow _{k}(A)$ se $\epsilon \in First_{k}(\alpha)$
+			- Se ogni casella contiene al più una produzione, e non esistono $w_{1}, w_{2}$ tali che $w_{1}$ è prefisso di $w_{2}$ con le due caselle corrispondenti su una riga entrambe riempite, allora la grammatica $G$ è $LL(k)$  
+			- ### N.B:
+				- Le colonne sono tante quante i $w$ che appartengono a $First_{k}(\alpha)$ per $A\to \alpha$ o a $Follow_{k}(A)$ per $A\to \alpha$ e questo va fatto per tutte le produzioni.
+	- ## ES:
+		- $$G=\begin{cases} S\to aSb \ |\ ab \ |\ c\end{cases}$$
+			- $First_{2}(aSb)=\{aa,ac\}$
+			- $First_{2}(ab)=\{ab\}$
+			- $First_{2}(c)=\{c\}$
+		- $$L(G)=\{a^{n}b^{n}|n\ge 1\} \cup \{a^{n}cb^{n}|n\ge 0\}$$
+			- $G$ è $LL(2)$ perché:
+				- $First_{2}(aSb)\cap First_{2}(ab)=\emptyset$
+				- $First_{2}(aSb)\cap First_{2}(c)=\emptyset$
+				- $First_{2}(ab)\cap First_{2}(c)=\emptyset$
+			- ![[Pasted image 20250804172214.png]]
+	- ## Teorema:
+		- 1) una grammatica ricorsiva sinistra non è $LL(k)$ per nessun $k$
+		- 2) Una grammatica [[Ambiguità||ambigua]] non è $LL(k)$ per nessun $k$
+		- 3) se $G$ è $LL(k)$ per qualche $k$ allora $G$ non è ambigua.
+		- 4) se $G$ è $LL(k)$ allora $L(G)$ è [[Linguaggio libero deterministico||libero deterministico]]
+		- 5) esiste $L$ libero deterministico tale che non esiste una grammatica $G$ di classe $LL(k)$, per nessun $k$, tale che $L=L(G)$
+		- ### ES:
+			- $$G_{1} = \begin{cases}S\to aSb\ | \ aAc \\ A\to cA \ |\ c\end{cases}$$
+				- $First_{2}(aSb)=\{aa\}$
+				- $First(aAc)=\{ac\}$
+				- $First_{2}(cA)=\{cc\}$
+				- $First_{2}(c)=\{c\}$
+				- ![[Pasted image 20250804173022.png]]
+					- Questa tabella $LL(2)$ è senza conflitti, ma "c" è prefisso di $cc$ quindi il parsing non è deterministico quando $A$ è in cima alla pila.
+					- ![[Pasted image 20250804173547.png]]  
+- # Link Utili:
+	- 

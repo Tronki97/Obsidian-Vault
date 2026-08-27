@@ -58,18 +58,21 @@ data: "`2025-04-24 16:48`"
 		- [[Automi a Pila (PDA)]]
 		- [[Proprietà di chiusura dei linguaggi liberi]]
 		- [[Pumping Theorem]]
+		- [[Classificazione di Chomsky]]
+	- ### PDA e linguaggi deterministici:
 		- [[Linguaggio libero deterministico]]:
-			- [[PDA deterministico]]
-			- [[Proprietà linguaggi liberi deterministici]]
-			- [[Parser]]
-			- [[Semplificare le Grammatiche]]
+		- [[PDA deterministico]]
+		- [[Proprietà linguaggi liberi deterministici]]
+	- ### [[Parser]]:
+		- #### Introduzione
+			- [[Top-down Parsing]]
+			- [[Bottom-up parsing]]
+				- [[Semplificare le Grammatiche]]
+		- [[Parser Top-down]]
+			- [[Grammatica LL(k)]]
 			- [[Linguaggio LL(k)]]
-			- [[Classe di una grammatica]]
-	- ### Parser:
-		- [[Top-down Parsing]]
-			- [[Parser Top-down]]
-		- [[Bottom-up parsing]]
-			- [[Parser bottom-up]]
+		- [[Parser bottom-up]]
+		- [[Classe di una grammatica]]
 		- [[Grammatiche LR(k)]]
 		- [[Generatori di analizzatori sintattici]]
 	- ### [[Fondamenti di calcolabilità]]

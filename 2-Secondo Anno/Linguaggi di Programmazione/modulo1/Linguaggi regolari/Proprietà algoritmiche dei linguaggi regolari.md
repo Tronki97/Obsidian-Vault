@@ -14,27 +14,29 @@ data: "`2024-10-15 19:10`"
 - # Proprietà algoritmiche:
 	- ## Pumping Lemma:
 		- se $L$ è un [[Linguaggi regolari ed elementi costruttivi||linguaggio regolare]] allora 
-			- $$\exists N>0: \forall z\in L | \ |z| \geq N, \exists u,v,w:$$
+			- $$\exists N>0: \forall z\in L : \ |z| \geq N, \exists u,v,w:$$
 				- $z=uvw$
 				- $|uv|\le N$
 				- $|v|\ge 1$ 
 				- $\forall k\ge 0$    $uv^{k}w\in L$ 
 			- inoltre $N$ $\leq$ del numero di stati del DFA [[minimizzazione||minimo]] che accetta $L$ 
+		- il nome deriva dal fatto che in ogni _linguaggio regolare infinito_ le stringhe abbastanza lunghe possono essere "pompate" a volontà 
 		- ### Dim:
-			- $N=|Q_{M}|$ dove $M$ è il DFA minimo che accetta $L$ 
-			- $z=a_{1}...a_{m}\in L$ $m\geq N$
-			- quindi: 
-				- $$q_{0}\to^{a_{0}}q_{1}....\to^{a_{m}}q_{m}\in F$$ 
-			- ora $o-m$ è dato da $m+1$ stati con $m+1>N$
+			- sia $M$ il DFA minimo che accetta $L$ 
+			- sia $N= |Q_{M}|$ 
+				- ovvero il numero di stati di $M$ 
+			- prendendo una generica stringa $z=a_{1}...a_{m}\in L$ con $m\geq N$ e considerando l'elenco ordinato di $m+1$ stati per cui $M$ passa per accettare $z$ 
+				- $$q_{0}\to^{a_{0}}q_{1}....\to^{a_{m}}q_{m}\in F$$
+			- se si considerano i primi $N+1$ stati, dal momento che $m\ge N$ questi $N+1$ stati _non possono essere tutti diversi tra loro_.
 			- ciò implica che $\exists i,j: q_{i}=q_{j}$  con $i\ne j$ 
 				- ![[Pasted image 20241015193002.png||600]] 
-			- $i\ne j \implies v=a_{i+1}...a_{j}$ è tale che $|v| \geq 1$ 
-			- $|uv|\le N$ mi dice che(se $m$ è molto grande potrebbero esserci più cicli) prendo il primo ciclo.
+			- $i\ne j \implies v=a_{i+1}...a_{j}$ è tale che $|v| \geq 1$ inoltre $u=a_{0}...a_{i}$ e $w=a_{j+1}...a_{m}$ 
+			- $|uv|\le N$ è rispettato in quanto $i,j$ sono gli indici scelti nei primi $N+1$ stati
 			- ![[Pasted image 20241015193241.png]]
 				- $\forall k\ge 0$   $uv^{k}w\in L$ perché il ciclo $v$ può essere percorso un numero arbitrario di volte 
-	- Spesso viene utilizzato il _pumping lemma_ per dire che un linguaggio non è regolare. 
+	- Spesso viene utilizzato il _pumping lemma_ per dire che un linguaggio _non è regolare._ 
 	- ## Negazione pumping lemma:
-		- Se $\forall N>0 \ \ \exists z \in L| \ |z|\geq N$
+		- Se $\forall N>0 \ \ \exists z \in L: \ |z|\geq N$
 			- $\forall u,v,w$ se:
 				- $z=uvw$
 				- $|uv|\le N$
@@ -53,7 +55,7 @@ data: "`2024-10-15 19:10`"
 		- $\exists k =2: uv^{2}w=uvvw=a^{N+j}b^{N}\notin L$ 
 		- Quindi il linguaggio $L$ non è regolare. 
 - # Altre proprietà:
-	- la classe dei [[Linguaggi regolari ed elementi costruttivi]] è chiusa per:
+	- la classe dei [[Linguaggi regolari ed elementi costruttivi|linguaggi regolari]] è chiusa per:
 		- Unione
 		- Concatenazione
 		- Ripetizione
@@ -63,7 +65,7 @@ data: "`2024-10-15 19:10`"
 		- le prime 3 si dimostrano dal fatto che: se $L_{1}$ e $L_{2}$ sono regolari allora $\exists s_{1}, s_{2}$ [[Linguaggi regolari ed elementi costruttivi#^808f0a||regex]] tali che:
 			- $$L_{1}=\scr L \mathbf{[s_{1}]},\mathbf{L_{2}=}L \mathbf{[s_{2}]}$$ 
 			- E facendo le prime 3 operazioni si dimostra
-		- la 4 si dimostra usando un [[Automi finiti deterministici||DFA]] $M$, col quale si costruisce il suo complementare $\overline{M}$ (ottenumto avendo come stati finali $Q - F$) 
+		- la 4 si dimostra usando un [[Automi finiti deterministici||DFA]] $M$, col quale si costruisce il suo complementare $\overline{M}$ (ottenuto avendo come stati finali $Q - F$) 
 		- La 5 deriva dalla legge di De Morgan
 			- da quest'ultima proprietà si può dimostrare che un linguaggio non è regolare: intersecandolo con uno regolare _se il risultato non lo è vuol dire che quello di partenza non lo era a sua volta_
 - # Altre proprietà:

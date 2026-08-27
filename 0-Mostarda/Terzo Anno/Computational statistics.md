@@ -10,5 +10,5 @@ data: "`2025-04-24 16:48`"
 - [[metodi di trasformazione generali]]
 - [[accept & reject algorithm]]
 - [[integrazione di MonteCarlo]]
-- [[Ottimizzazione di montecarlo]]
+- [[Ottimizzazione di MonteCarlo]]
 # Link Utili:

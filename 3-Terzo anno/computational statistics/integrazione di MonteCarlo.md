@@ -22,7 +22,7 @@ data: "`2025-12-01 09:10`"
 		- Quindi l'integrando può essere scritto come prodotto di due funzioni 
 		- Almeno uno dei due ($f$) deve essere una _densità_ che potrebbe anche essere _non normalizzata_
 	- $$\int_{X}h(x)f(x)dx=\mathbb{E}_{f}[h(x)]$$
-	- ## il metodo di montecarlo:
+	- ## il metodo di Montecarlo:
 		- 1) si genera un sample $(x_{1},...,x_{n})$ dalla densità $f$ e l'integrale può essere approssimata come:
 			- $$\bar{h}_{n}=\frac{1}{n}\sum\limits_{j=1}^{n}h(x_{j})$$
 			- Grazie alla _legge dei grandi numeri_ converge:

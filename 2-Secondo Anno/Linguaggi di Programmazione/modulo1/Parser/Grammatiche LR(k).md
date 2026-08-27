@@ -68,7 +68,7 @@ data: "`2025-08-19 12:55`"
 		- 2)
 			- $L_{1}=\{a\}$ è $LL(1)$ e $LR(0)$
 			- $L_{2}=\{ab\}$ è $LL(1)$ e $LR(0)$
-			- La loro unione non è $LR(0)$ perché non gode della _prefix-property_. Però è $LL(1)$
+			- La loro unione non è $LR(0)$ perché non gode della [[Linguaggio libero deterministico#^bac8ea|prefix property]]. Però è $LL(1)$
 				- Quindi _l'unione di linguaggi LR(0) può non essere LR(0)_
 		- 3) 
 			- $L_{1}=a^{*}=\{a^{n}\ | \ n\ge 0\}$ è $LL(1)$

@@ -52,7 +52,7 @@ data: "`2024-08-31 20:05`"
 	- ### rimuoviVertice(vertice v)
 	- ### rimuoviArco(arco e)
 - ## Rappresentazione di Grafi
-	- ### Matrice di adiacenza
+	- ### Matrice di adiacenza ^afcfa6
 		- rappresentare i collegamenti tra nodi con una matrice di booleani simmetrica con il seguente riempimento:$$M(u, v)= \begin {cases}1\ \ se \{u,v\}\in E \\ 0 \ \ altrimenti \end {cases}$$
 		- #### Costi:
 			- ##### Spazio:

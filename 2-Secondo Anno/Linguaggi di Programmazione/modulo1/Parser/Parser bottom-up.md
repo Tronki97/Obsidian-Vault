@@ -21,14 +21,14 @@ data: "`2024-11-19 11:09`"
 		- fa il contrario di un [[Parser Top-down]] 
 		- rimuove una stringa $\alpha^{R}$ dalla pila e la sostituisce con $A$ 
 	- riconosce la stringa per [[Automi a Pila (PDA)#^a594b1|pila vuota]]
-- # nondeterministico:
+- # Parser nondeterministico:
 	- ## Input:
 		- [[Definire finitamente un linguaggio#^c95cdc|grammatiche libere]] $G$ con simbolo iniziale $S$
 	- ## Output:
 		- ogni volata che faccio “reduce” fornisco in output la produzione usata.
 	- quindi in pratica il parser parte dall’input e costruisce sulla pila la sequenza di produzioni necessarie per produrre quell’input e se ci riesce accetta la stringa data. 
-	- Si inizializza la pila a ${\$}$ 
-	- Si inizializza l'input a $w{\$}$
+	- Si inizializza la _pila_ a ${\$}$ 
+	- Si inizializza l'_input_ a $w{\$}$
 	- Si usa il seguente [[Automi a Pila (PDA)|PDA]] per trovare la derivazione dell'input
 		- $$M=(T,\{q\}, T\cup NT\cup \{\$\}, \delta, \$, \emptyset)$$
 			- 1) $(q, aX)\in \delta(q,a,X)\ \ \forall a\in T \ \ \forall x \Gamma$    (_SHIFT_)
@@ -40,16 +40,40 @@ data: "`2024-11-19 11:09`"
 		- ![[Pasted image 20241119112217.png|600]] ![[Pasted image 20241119112233.png|600]] 
 		- e l’albero di derivazione generato è appunto costruita bottom-up e rightmost:
 			- ![[Pasted image 20241119112348.png|500]]
-	- C'è in sacco di _nondeterminismo_:
+	- C'è un sacco di _nondeterminismo_:
 		- _Conflitti shift-reduce_: al 2) si poteva fare shift invece di reduce
 		- _conflitti reduce-reduce_: al 11) si poteva usare la regola di derivazione $E\to T$ invece di $T\to A*T$
+	- ## Risoluzione dei conflitti:
+		- Bisogna scegliere l'azione giusta da compiere in modo che sulla pila ci sia un _prefisso viabile_.
+		- ### Prefisso viabile:
+			- #### Prima definizione:
+				- Sequenza $\in (T\cup NT)^{*}$ che può apparire sulla pila di un [[Parser bottom-up]] _per una configurazione che accetta un input_.
+				- In sostanza si necessita che la parte top della pila sia un prefisso di una parte dx di una produzione.
+				- Negli esempi fatti prima:
+					- ${\$}a+$ non è prefisso di nessuna parte dx di una produzione ma ${\$}A$ lo è.
+					- ${\$}T+A*E$ non è prefisso di una parte dx di una produzione mentre ${\$}T+T$ lo è
+				- Quindi si necessita di fornire al PDA una struttura di controllo (_tabella di parsing_) che aiuti a scegliere l'azione giusta.
+			- #### Seconda definizione:
+				- è una stringa $\gamma \in (T\cup NT)^{*}$ viabile per $G$ libera se e solo se esiste _una derivazione rightmost_.
+					- $$(S \Rightarrow^{*}Say) \implies (\delta \alpha \beta y = \gamma \beta y) $$
+						- Per qualche $y \in T^{*}$, $\delta \in (T\cup NT)^{*}$ e per una produzione $A\to \alpha \beta$. Inoltre $S$ è un _prefisso viabile_ per definizione 
+						- Un prefisso viabile si dice _completo_ se $\beta= \epsilon$; in quel caso $\alpha$ è detto _handle_(maniglia) per $\gamma y$, (_ovvero in cima alla pila trovo $\alpha^{R}$ e posso fare una reduce_) ^952cf9
+				- ##### Teorema:
+					- Data $G$ libera, i _prefissi viabili_ di $G$ costituiscono un [[Linguaggi regolari ed elementi costruttivi|linguaggio regolare]] e può essere descritto con un DFA.
+				- Il Parser può consultare il _DFA_ dei prefissi viabili ovvero la tabella di parsing per decidere cosa fare.
+					- Se la pila contiene un prefisso viabile completo allora il parser _riduce_.
+					- Se la pila contiene un prefisso viabile incompleto allora _shifta_.
+					- Se la pila non contiene un prefisso viabile allora errore.
+				- A seconda di come è fatto il DFA il parser può risultare deterministico o meno.
+				- _ogni prefisso di un prefisso viabile è anch'esso un prefisso viabile_.
+	- Per togliere il nondeterminismo serve quindi implementare delle strutture di controllo, _tabelle di parsing_, che aiutino a scegliere l'azione giusta.
 - # Parser LR:
 	- L: input letto da sinistra a destra 
 	- R: genera una derivazione rightmost.
 	- ## Composizione:
 		- ![[Pasted image 20250806162120.png]]
 		- Una configurazione è:
-			- $$(S_{0}...S_{n}, X_{1}...X_{m}, a_{i}...a_{k}{\$})$$
+			- $$(S_{0}...S_{n}, \ X_{1}...X_{m},\  a_{i}...a_{k}{\$})$$
 				- $S$: stack degli stati
 				- $X$: stack dei simboli.
 				- $a$: resto dei simboli.
@@ -57,15 +81,15 @@ data: "`2024-11-19 11:09`"
 			- $X_{1}...X_{m} \ \ \   a_{i}...a_{k}$ è una stringa intermedia della derivazione canonica destra.
 	- ## Mosse:
 		- 1) prima legge lo _stato top_ ($S_{n}$) e i _simboli correnti dell'input_ ($a_{i}$)
-		- 2) Consulta la tabella di parsing LR $M[S_{n}, a_{i}]$
+		- 2) Consulta la tabella di parsing LR: $M[S_{n}, a_{i}]$
 			- Se $M[S_{n}, a_{i}]=\text{shifts}$ allora la nuova configurazione è:
-				- $$(S_{0}...S_{n}, X_{1}...X_{m}\ a_{i}, a_{i+1}...a_{k}{\$})$$
-			- Se $M[S_{n}, a_{i}]=\text{reduce} \ \ A\to \beta$ allora la configurazione diventa:
-				- $$(S_{0}...S_{n-r}\ S, X_{1}...X_{m-r}\ A, a_{i}...a_{k}{\$})$$
+				- $$(S_{0}...S_{n}S,\  X_{1}...X_{m}\ a_{i}, \ a_{i+1}...a_{k}{\$})$$
+			- Se $M[S_{n}, a_{i}]=\text{reduce} \ \ A\to \beta$, allora la configurazione diventa:
+				- $$(S_{0}...S_{n-r}\ S,\  X_{1}...X_{m-r}\ A,\  a_{i}...a_{k}{\$})$$
 					- Dove $r=|\beta|$ e $M[S_{n-r}, A]=goto\ S$
 				- In sostanza fa _tre passi_:
 					- 1) fa "pop" di $r$ elementi dai 2 stack
-					- 2) metto $A$ in cima alla pila dei simboli
+					- 2) metto $A$ in cima alla _pila dei simboli_
 					- 3) calcolo il nuovo stato top, guardando $M[S_{n-r}, A]=goto \ S$ e metto $S$ in cima alla pila degli stati.
 			- Se $M[S_{n}, a_{i}]=accept$ allora finisco.
 			- Se $M[S_{n}, a_{i}]$ è vuoto allora c'è un errore.
@@ -74,10 +98,11 @@ data: "`2024-11-19 11:09`"
 			- $$G=\begin{cases}(1)\ S'\to S  \\ (2) \ S\to (S) \\ (3)\ S\to  ()\end{cases}$$
 		- Si genera la tabella di parsing $LR(0)$
 		- ![[Pasted image 20250806181006.png]]
-		- Le operazioni shift-reduce devono fare in modo che in cima alla pila rimanga un prefisso di una parte dx di una produzione.
+		- Le operazioni shift-reduce devono fare in modo che in cima alla pila rimanga un prefisso viabile.
 		- In questo esempio appena sulla pila compare "$)$" allora bisogna fare una _reduce_, la reduce da fare dipende dallo stato su cui siamo finiti nel [[Automi finiti deterministici|DFA]].
 		- Questa tabella è generabile grazie al _DFA dei prefissi viabili_ o _Automa canonico $LR(0)$_ 
-			- ![[Pasted image 20250806181959.png]]
+			- ![[Pasted image 20250806181959.png|700]]
+		- ![[Pasted image 20260824182812.png|697]]
 	- ## Modifiche alla pila:
 		- La pila viene modificata solo in 2 casi:
 			- 1) _shift_: la pila passa da ${\$}\gamma$ a ${\$} \gamma x$. In tal caso il DFA si trova nello stato $S$ dopo aver elaborato ${\$} \gamma$ basta poi far ripartire il DFA da $S$ con input $x$
@@ -121,45 +146,20 @@ data: "`2024-11-19 11:09`"
 			- _colonne_: $T\cup \{\$ \}\cup NT$ 
 				- $T\cup \{\$ \}$ per le azioni
 				- $NT$ per i $Goto$
-		- $M[s, X]$ contiene le azioni che potrebbe compiere il parser con $S$ in cima alla pila degli stati e $X$ come simbolo in input
-			- Se è vuota allora c'è un errore
-			- Se contiene più azioni allora c'è un conflitto e di conseguenza il parser è _nodeterministico_
+		- $M[S, X]$ contiene le azioni che potrebbe compiere il parser con $S$ in cima alla pila degli stati e $X$ come simbolo in input
+			- Se è _vuota_ allora c'è un errore
+			- Se contiene _più azioni_ allora c'è un conflitto e di conseguenza il parser è _nondeterministico_
 		- ### Caso LR(0):
 			- Per ogni stato $S$ dell'automa canonico
-				- Se $x\in T$ e $S \xrightarrow{x}t$ nell'automa inserisco _shift_ in $M[s,x]$
-				- Se $A\to \alpha. \ \in S$ e $A\ne S'$, inserisco _reduce $A\to \alpha$_ in $M[s,x]$ per tutti gli $x\in T\cup \{\$\}$
-				- Se $S'\to S \in s$ inserisco _accept_ in $M[s, \{\$\}]$
-				- Se $A\in NT$ e $S \xrightarrow{A}t$ nell'automa LR(0); inserisco _goto t_ in $M[s,A]$
+				- Se $x\in T$ e $S \xrightarrow{x}t$ nell'automa inserisco _shift_ in $M[S,x]$
+				- Se $A\to \alpha. \ \in S$ e $A\ne S'$, inserisco _reduce $A\to \alpha$_ in $M[S,x]$ per tutti gli $x\in T\cup \{\$\}$
+				- Se $S'\to S \in s$ inserisco _accept_ in $M[S, \{\$\}]$
+				- Se $A\in NT$ e $S \xrightarrow{A}t$ nell'automa LR(0); inserisco _goto t_ in $M[S,A]$
 			- #### grammatica LR(0)
 				- Una grammatica si dice $LR(0)$ se ogni casella nella [[Parser bottom-up#^5d8d50|tabella di parsing LR]] contiene al più un elemento.
 			- Per quanto riguarda l'ultimo esempio la tabella di parsing risultante è:
-				- ![[Pasted image 20250807132843.png|700]]
+				- ![[Pasted image 20260824205214.png]]
 				- Non presentando conflitti $G$ è di [[Classe di una grammatica|classe]] LR(0)
-		- 
-		- 
-- # Risoluzione dei conflitti:
-	- Bisogna scegliere l'azione giusta da compiere in modo che sulla pila ci sia un _prefisso viabile_.
-	- ## Prefisso viabile:
-		- ### Prima definizione:
-			- Sequenza $\in (T\cup NT)^{*}$ che può apparire sulla pila di un [[Parser bottom-up]] _per una configurazione che accetta un input_.
-			- In sostanza si necessita che la parte top della pila sia un prefisso di una parte dx di una produzione.
-			- Negli esempi fatti prima:
-				- ${\$}a+$ non è prefisso di nessuna parte dx di una produzione ma ${\$}A$ lo è.
-				- ${\$}T+A*E$ non è prefisso di una parte dx di una produzione mentre ${\$}T+T$ lo è
-			- Quindi si necessita di fornire al PDA una struttura di controllo (_tabella di parsing_) che aiuti a scegliere l'azione giusta.
-		- ### Seconda definizione:
-			- è una stringa $\gamma \in (T\cup NT)^{*}$ viabile per $G$ libera se e solo se esiste _una derivazione rightmost_.
-				- $$(S \Rightarrow^{*}Say) \implies (\delta \alpha \beta y = \gamma \beta y) $$
-					- Per qualche $y \in T^{*}$, $\delta \in (T\cup NT)^{*}$ e per una produzione $A\to \alpha \beta$. Inoltre $S$ è un _prefisso viabile_ per definizione 
-					- Un prefisso viabile si dice _completo_ se $\beta= \epsilon$; in quel caso $\alpha$ è detto _handle_(maniglia) per $\gamma y$, (_ovvero in cima alla pila trovo $\alpha^{R}$ e posso fare una reduce_) ^952cf9
-			- #### Teorema:
-				- Data $G$ libera, i _prefissi viabili_ di $G$ costituiscono un [[Linguaggi regolari ed elementi costruttivi|linguaggio regolare]] e può essere descritto con un DFA.
-			- Il Parser può consultare il _DFA_ dei prefissi viabili ovvero la tabella di parsing per decidere cosa fare.
-				- Se la pila contiene un prefisso viabile completo allora il parser _riduce_.
-				- Se la pila contiene un prefisso viabile incompleto allora _shifta_.
-				- Se la pila non contiene un prefisso viabile allora errore.
-			- A seconda di come è fatto il DFA il parser può risultare deterministico o meno.
-			- _ogni prefisso di un prefisso viabile è anch'esso un prefisso viabile_.
 - # Risoluzione conflitti LR(0):
 	- _Una grammatica libera però può non essere $LR(0)$_
 		- ![[Pasted image 20250807163135.png]]
@@ -174,9 +174,9 @@ data: "`2024-11-19 11:09`"
 		- ![[Pasted image 20250807170044.png]]
 		- Tabella $SLR(1)$ senza conflitti quindi ci dice che $G$ è $SLR(1)$ ma non $LR(0)$.
 	- ## OSS:
-		- 1) _Se $G$ ha produzioni $\epsilon$ allora $G$ difficilmente è $LR(0)$ _ 
-		- 2) _Se $L$ è [[Linguaggio libero deterministico]] e gode della prefix-property_ (ovvero se $\not \exists x,y \in L:$ $x$ è prefisso di $y$) allora $L$ è $LR(0)$; quindi se $L$ è libero deterministico, ma non è $LR(0)$ allora non gode della _prefix property_.
-		- 3) _se L è_ $LR(0)$ ed è finito allora gode della _prefix-property_. _ovvero se L è finito e non gode di questa proprietà allora L non è $LR(0)$ _
+		- 1) _Se $G$ ha produzioni $\epsilon$ allora $G$ difficilmente è $LR(0)$_ 
+		- 2) _Se $L$ è [[Linguaggio libero deterministico]] e gode della_ [[Linguaggio libero deterministico#^bac8ea|prefix property]] allora $L$ è $LR(0)$; quindi se $L$ è libero deterministico, ma non è $LR(0)$ allora non gode della _prefix property_.
+		- 3) _se L è_ $LR(0)$ ed è finito allora gode della _prefix-property_. _ovvero se L è finito e non gode di questa proprietà allora L non è $LR(0)$_
 		- 4) Se $L$ è $LR(0)$ ma è infinito, può non godere della _prefix-property_.
 		- ### ES:
 			- ![[Pasted image 20250807171530.png]]

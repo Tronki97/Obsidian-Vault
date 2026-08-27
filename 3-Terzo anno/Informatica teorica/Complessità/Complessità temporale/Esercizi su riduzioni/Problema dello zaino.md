@@ -1,6 +1,5 @@
 ---
 tags:
-  - TODO
 aliases:
 data: "`2026-04-15 15:20`"
 ---

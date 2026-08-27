@@ -5,7 +5,7 @@ aliases:
   - grammatiche libere
 data: "`2026-07-30 12:35`"
 ---
-- # Def:
+- # Def: ^9eadd3
 	- una _grammatica Libera (da contesto)_: ^c95cdc
 		- è una _quadrupla_$(NT, T, R, S)$ 
 			- $NT$ _non terminali_ (di solito maiuscole)

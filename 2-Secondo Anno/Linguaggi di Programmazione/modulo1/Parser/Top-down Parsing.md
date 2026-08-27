@@ -7,7 +7,7 @@ aliases:
 data: "`2024-10-30 18:31`"
 ---
 - # Def:
-	- data $G=(NT, T, S, R)$ _libera_, costruisco il [[Automi a Pila (PDA)|PDA]] 
+	- data $G=(NT, T, S, R)$ [[Grammatica|grammatica libera]], costruisco il [[Automi a Pila (PDA)|PDA]] 
 		- $$M=(T, \{q\}, T\cup NT, \delta,q, S, \emptyset)$$
 	- che riconosce per [[Automi a Pila (PDA)#^a594b1|pila vuota]] dove $\delta$ è definita come:
 		- $$A\to B\in R \implies (q, \beta)\in \delta(q,\epsilon,A)$$

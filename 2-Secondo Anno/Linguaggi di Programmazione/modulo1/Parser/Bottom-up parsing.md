@@ -11,19 +11,24 @@ aliases:
 data: "`2024-10-30 19:02`"
 ---
 - # Def:
-	- data $G=(NT, T, S, R)$ *libera*  , costruisco il [[Automi a Pila (PDA)|PDA]] 
-		- $$M=(T, \{q\}, T\cup NT\cup \{z\}, \delta,q, z, \emptyset)$$
-			- che riconosce $L(G)\cdot {\$}$  
-	- dove:
-		- $$\forall a\in T, \forall X\in T\cup NT\cup \{z\} \ \ \ (q,aX)\in \delta(q,a,X)$$
-			- *SHIFT* 
-		- $$(A\to \alpha) \in R \implies (q, A)\in \delta(q,\epsilon, \alpha^{R})$$
-			- _REDUCE_
-			- $\alpha^{R}$ è una generalizzazione dei *PDA* in cui si consuma una stringa sulla pila invece di solamente il _top_   
-		- $$(q, \epsilon)\in \delta(q,{\$}, SZ)$$
-			- _ACCEPT_  ^8768af
-			- “$” è il simbolo di fine input
-			- $S$ deve essere alla fine sulla pila.
+	- data $G=(NT, T, S, R)$ [[Grammatica|grammatica libera]] , costruisco il [[Automi a Pila (PDA)|PDA]] che riconosce $L(G)\cdot {\$}$:
+		- $$M=(T, \{q\}, T\cup NT\cup \{Z\}, \delta,q, z, \emptyset)$$
+			- $T$: terminali della grammatica 
+			- $T\cup NT \cup \{Z\}$: sono i simboli sulla pila 
+				- Z è il simbolo di inizio pila della grammatica 
+			- $q$: unico stato del _PDA_
+			- $\emptyset$: non ci sono stati finali 
+			- $\delta$ è definita come:
+				- $$\forall a\in T, \forall X\in T\cup NT\cup \{z\} \ \ \ (q,aX)\in \delta(q,a,X)$$
+					- *SHIFT* 
+						- se sono nello stato $q$ leggo in input $a$ e sullo stack c'è $X$, allora sposto $a$ sullo stack in cima sopra $X$ 
+				- $$(A\to \alpha) \in R \implies (q, A)\in \delta(q,\epsilon, \alpha^{R})$$
+					- _REDUCE_
+						- se sono nello stato $q$ e in cima allo stack ho $\alpha^{R}$ e non consumo l'input allora cancello $\alpha^{R}$ e tengo solo $A$ in questo modo si può rimuovere un'intera sequenza di caratteri invece che uno solo alla volta.
+				- $$(q, \epsilon)\in \delta(q,{\$}, SZ)$$
+					- _ACCEPT_  ^8768af
+					- “$” è il simbolo di fine input
+					- $S$ deve essere alla fine sulla pila.
 - # ES:
 	- $$G: S\to aSb \ |\  ab$$
 	- ![[Pasted image 20250730173747.png|500]]

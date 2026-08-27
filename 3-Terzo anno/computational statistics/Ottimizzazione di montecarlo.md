@@ -38,7 +38,7 @@ data: "`2025-12-11 09:24`"
 		- In R ci sono funzioni come `optimize` che è quello che si usa nell' [[accept & reject algorithm]] per trovare $M$, questo è un metodo _deterministico globale_ per problemi ad una dimensione
 			- _globale_ perché guarda all'intera funzione e non a regioni specifiche
 			- ### ES:
-				- Massimizzare una cauchy likelihood $C(\theta, 1)$
+				- Massimizzare una Cauchy likelihood $C(\theta, 1)$
 				- Si estrae quindi da:
 					- $$l(\theta|\ x_{1},...,x_{n})=\frac{1}{\pi}\prod_{i=1}^{n} \frac{1}{1+(x_{i}-\theta)^{2}}$$
 					- Si assume che queste estrazioni siano [[Teoremi limite#^e7ebba|iid]] 
@@ -143,7 +143,7 @@ data: "`2025-12-11 09:24`"
 				- Si parte da una densità $\pi_{0}$ con una _temperatura iniziale_ $T_{0}$ e si _estrae un valore inziale_ $\theta_{0}$
 				- Si aggiorna poi la densità in $\pi_{1}$ e la sua temperatura $T_{1}$ e estraggo $\theta_{1}$
 				- Si ripete il passo precedente 
-				- $\pi_{0,...,n }$ sono una sequenza di densità le cui _mode_ verranno saranno [confondenti](https://it.wikipedia.org/wiki/Confondente) con l' $\arg \max h(\theta)$ 
+				- $\pi_{0,...,n }$ sono una sequenza di densità le cui _mode_ saranno [confondenti](https://it.wikipedia.org/wiki/Confondente) con l' $\arg \max h(\theta)$ 
 			- #### Es:
 				- ![[Pasted image 20260114154829.png]]
 				- Ad ogni iterazione e quindi modifica della densità $\pi_{i}$ l'estrazione di $\theta_{i}$ (che tende ad essere la moda) si avvicinerà sempre di più al $\arg \max h(\theta)$ 

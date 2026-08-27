@@ -33,6 +33,11 @@ data: "`2024-10-19 16:41`"
 				- ($\Sigma \cup \{\epsilon\}$) consuma un simbolo dell'input $\Sigma$ oppure no $\epsilon$ 
 				- $\Gamma$ consuma il simbolo in cima alla pila.
 				- $P(Q\times \Gamma^{*})$ : Sulla pila scrive una stringa di lunghezza qualsiasi di simboli $\Gamma$ 
+				- questa funzione risulta non-deterministica in quanto:
+					- 1) $|\delta(q,\sigma, A)|$ può essere $>1$ e quindi avere più output a parità di input 
+					- 2) nel caso si richiedesse che $|\delta(q,\sigma, A)|\le 1 \forall q,\sigma,A$ potrebbe esistere uno stato $q'$ un simbolo dell'alfabeto $b$ e un simbolo della pila $B$ tali che:
+						- $$|\delta(q',\epsilon, B|=1 \ \ \wedge\ \ |\delta(q',b,B)|=1 $$
+						- avendo quindi un nondeterminismo tra la mossa "$\epsilon$" e la mossa "$b$" 
 			- $\bot\in \Gamma$ : è il simbolo inziale sulla pila.
 			- $F$ : sono gli stati finali 
 - # Transizioni di un PDA:
@@ -43,63 +48,79 @@ data: "`2024-10-19 16:41`"
 		- $\beta\in \Gamma^{*}$ stringa sulla pila 
 	- ## Mossa:
 		- ![[Pasted image 20241019170918.png]]
+			- queste due mosse rappresentano:
+				- consumo un carattere nell'input
+				- eseguo una mossa $\epsilon$ 
+			- supponendo quindi di essere in una _ID_ $(q,aw,X \beta)$ si prende la terna $(q,a,X)$ e si guarda cosa si ottiene applicando $\delta$ 
 	- ## Computazione:
 		- ![[Pasted image 20241019170943.png]]
 - # Linguaggio riconosciuto: ^edde38
-	- due modi per il riconoscimento: 
-	- $N=(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$ 
-	- ## Per stato finale: ^879bee
-		- $$L[N]=\{w\in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \alpha) \ \ q\in F \}$$
-	- ## Per pila vuota: ^a594b1
-		- $$P[N]=\{w \in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \epsilon)\}$$
+	- ci sono due modi per capire se un linguaggio è riconosciuto da un _PDA_ $N=(\Sigma, Q, \Gamma, \delta, q_{0}, \bot, F)$: 
+		- ## Per stato finale: ^879bee
+			- $$L[N]=\{w\in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \alpha) \ \ q\in F \}$$
+			- il [[Linguaggio riconosciuto]] è dato dalle stringhe che partendo dalle _configurazioni iniziali_ $(q_{0},w,\bot)$ e tramite un numero indefinito di passi arrivino su una configurazione $(q,\epsilon,\alpha)$ dove $q$ è uno stato finale. Allora $w$ sarà riconosciuta dall'automa e l'insieme di tutte le stringhe con queste proprietà formano il linguaggio riconosciuto per _statto finale_ 
+		- ## Per pila vuota: ^a594b1
+			- $$P[N]=\{w \in \Sigma^{*}| (q_{0},w,\bot) \vdash_{N}^{*} (q,\epsilon, \epsilon)\}$$
 	- ### OSS:
 		- Spesso per un certo PDA $N$ 
 			- $$L[N]\ne P[N]$$ 
-		- $$L=L[N]\implies \exists N': L=P[N']$$
+		- però:
+			- $$L=L[N]\implies \exists N': L=P[N']$$
 			- ovvero non cambia la classe dei linguaggi riconosciuti da PDA per stato finale o per pila vuota
 - # ES:
-	- ![[Pasted image 20241022171731.png]]
-	- ![[Pasted image 20241022171758.png]]
+	- si vuole realizzare il PDA per $L=\{ww^{R}|w\in \{a,b\}^{*} \}$
+	- ![[Pasted image 20241022171731.png|708]]
+	- ![[Pasted image 20241022171758.png|707]]
+		- $X$ viene inteso come simbolo generico sulla pila.
+	- ![[Pasted image 20260803182944.png|709]]
+	- visto che esiste una computazione per $abba$ che porta l'automa $N$ allo stato finale $s_{2}$ allora vuol dire che $abba$ è riconosciuta (per stato finale e per pila vuota) 
 - # Determinismo:
-	- $|\delta(q,a,Z)|\le 1$    $\forall q \in Q, \ \ \forall a\in \Sigma, \ \ \forall Z \in \Gamma$
-	- $\delta(q,\epsilon,Z)\ne \emptyset \implies \delta(q,a,Z)= \emptyset$   $\forall a \in \Sigma$ 
-	- ![[Pasted image 20241022172300.png]]
-	- PDA deterministico perché rispetta le condizioni descritte.
+	- ![[Pasted image 20241022172300.png|730]]
+		- $|\delta(q,a,Z)|\le 1$    $\forall q \in Q, \ \ \forall a\in \Sigma, \ \ \forall Z \in \Gamma$
+		- $\delta(q,\epsilon,Z)\ne \emptyset \implies \delta(q,a,Z)= \emptyset$   $\forall a \in \Sigma$ 
+		- Questo è un [[PDA deterministico]] perché rispetta le condizioni descritte.
 	- ## OSS: 
-		- i PDA a differenza dei [[Automi finiti deterministici||DFA]] non garantiscono di leggere tutta la stringa in input infatti l'esempio precedente si blocca con $acc$ 
+		- i PDA deterministici a differenza dei [[Automi finiti deterministici||DFA]] non garantiscono di leggere tutta la stringa in input infatti l'esempio precedente si blocca con $acc$ 
 - # Teorema:
 	- la classe dei linguaggi riconosciuti per pila vuota o per stato finale _non cambia_
 	- (1) se $L=P[N]$ allora posso costruire $N'$ tale che $L=L[N']$
 	- (2) se $L=L[N]$ allora posso costruire $N'$ tale che $L=P[N']$
 	- ## Dim:
 		- (1) ![[Pasted image 20241022172907.png]]
+			- supponendo che ci sia un unico stato finale $f$ in tutte le situazioni in cui si finisce per esaurire sia la pila che l'input basta aggiungere una condizione che porti allo stato finale in ogni stato.
 		- (2) ![[Pasted image 20241022173002.png]]
 			- $Z$ può essere rimossa dallo stack solo grazie alla $X\in \Gamma \cup \{Z\}$ perché $Z\notin \Gamma$ 
 - # Da linguaggio a PDA:
 	- $$L=\{ a^{n}c b^{n}| n\ge 0\}$$
 	- $Z$ simbolo iniziale; $\Gamma=\{A,Z\}$ ; $X\in \Gamma$
 	- ![[Pasted image 20241022173255.png]]
-	- $L=L[N]=P[N]$ 
+		- $L=L[N]=P[N]$ 
 - # Da grammatica a PDA:
 	- $S\to aSb\ |\  \epsilon$
 	- ![[Pasted image 20241022173416.png]]
+		- $S$ simbolo iniziale della pila 
+		- e questo PDA riconosce solo per pila vuota 
 - # Teorema 2:
-	- un linguaggio $L$ è libero da contesto sse è accettato da un PDA 
+	- sia $L$ un linguaggio e N un $PDA$ 
+		- $$L\in \mathbf{Linguaggi \ liberi} \iff \exists N: L = L[N] \vee L = P[N]$$
+			- ovvero un linguaggio $L$ è libero da contesto sse è _accettato_ da un PDA 
 	- ## Dim:
-		- $\implies$)  $L$ è libero, $\implies\exists G= (NT, T, R, S)$ libera tale che:
-			- $$L=P[N]$$
-			- $$N=(\underset{\Sigma}{T}\ ,\  \{q\}\ ,\  \underset{\Gamma}{T\cup NT}\ ,\  \delta\ ,\  q\ ,\  \underset{\bot}{S}\ ,\  \emptyset)$$
-				- $\delta(q, \epsilon, A)=\{(q,\beta)| A\to \beta \in R\}$ $\forall A\in NT$
-				- $\delta(q,a,a)=\{(q, \epsilon)\}$ 
+		- $\implies$)  $L$ è libero, $\implies\exists G= (NT, T, R, S)$ libera tale che $L=L(G)$:
+			- si costruisce un PDA:
+				- $$N=(\underset{\Sigma}{T}\ ,\  \{q\}\ ,\  \underset{\Gamma}{T\cup NT}\ ,\  \delta\ ,\  q\ ,\  \underset{\bot}{S}\ ,\  \emptyset)$$
+					- $\delta(q, \epsilon, A)=\{(q,\beta)| A\to \beta \in R\}$ $\forall A\in NT$
+					- $\delta(q,a,a)=\{(q, \epsilon)\}$ 
 				- _ovvero_:
-					-  Ogni volta che $N$ ha $A$ in cima alla pila sceglie una regola per $A$, senza consumare l'input.
-					-  se invece c'è $a$ in cima e l'input ha $a$ allora vengono entrambi consumati.
+					-  Ogni volta che $N$ ha "$A$" in cima alla pila sceglie una regola per $A$, senza consumare l'input.
+					-  se invece c'è $a$ in cima alla pila e in input ha "$a$" allora vengono entrambi consumati.
 					-  se l'input invece è diverso dalla cima della pila ci si blocca e si fa backtracking provando un'altra regola. 
 		- $\impliedby$) $L=P[N] \implies \exists G$ libera tale che $L=L(G)$ 
 			- ## Lemma 1:
-				- ogni PDA  $N$ può essere simulato da uno $N'$ con un solo stato 
+				- ogni PDA  $N$ può essere simulato da uno $N'$ con un solo stato aumentando opportunamente i simboli della pila
 			- ## Lemma 2:
 				- Ogni PDA con un solo stato ha una equivalente [[Definire finitamente un linguaggio#^c95cdc||grammatica libera]] 
+			- se $(q,B_{1}...B_{k})\in \delta(q,a,A)$ con $a\in \Sigma \cup \{\epsilon\}$ nel PDA con un solo stato allora la grammatica $G$ contiene la produzione $A\to aB_{1}...B_{k}$
+			- si può dimostrare che $S \Rightarrow^{*}_{G}w\iff (q,w,S)\vdash^{*}_{N}(q,\epsilon,\epsilon)$    
 - # Riassunto:
 	- _Un linguaggio $L$ è libero sse è accettato da un PDA (nondeterministico)_
 - # Link Utili:

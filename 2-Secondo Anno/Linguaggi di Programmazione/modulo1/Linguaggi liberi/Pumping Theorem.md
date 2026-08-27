@@ -14,12 +14,35 @@ data: "`2024-10-22 18:08`"
 	- ## Dim:
 		- Sia $G$ una [[Definire finitamente un linguaggio#^c95cdc||grammatica libera]] tale che $L=L(G)$ 
 		- sia $b$ il massimo numero di simboli che compaiono nella parte destra di una regola $R$ 
-			- $b=max\{|\alpha|\ \ |\ A\to \alpha\in R\}$ 
+			- $b=max\{\ |\alpha|\ \ |\ A\to \alpha\in R\}$ 
 			- $b\ge2$ altrimenti la grammatica sarebbe _banale_
+		- un albero di altezza $h$ e fattore di ramificazione $b$ avrà al massimo $b^{h}$ foglie 
+			- ![[Pasted image 20260804160112.png|448]]
 		- Fissato $N=b^{|NT|+1}$ allora ogni [[Alberi di derivazione]] per $z$ con $|z|\ge N$ deve avere altezza $|NT|+1$ 
 		- Preso un qualunque $z\in L$ con $|z|\ge N$ considero il suo albero di derivazione:
 			- ![[Pasted image 20241022181749.png]]
-	- Questo Teorema lo si usa spesso per determinare se un _linguaggio non è libero_. Un esempio di questo può essere:
+			- l'albero di derivazione risultante sarebbe:
+				- ![[Pasted image 20260804160633.png|713]]
+				- allora:
+					- $S\Rightarrow^{*} uAy \Rightarrow^{*} uwy$ avendo quindi $k=0$
+					- $S \Rightarrow^{*}uAy \Rightarrow^{*} uvAxy\Rightarrow^{*}uvwxy$ avendo quindi $k=1$
+					- $S \Rightarrow^{*}uAy \Rightarrow^{*} uvAxy\Rightarrow^{*}uv^{2}Ax^{2}y$ con $k=2$
+			- si devono verificare i vincoli:
+				- $|vx|\ge 1$:
+					- suppongo per assurdo che $v,x=\epsilon$ avendo quindi come foglie $uwy$ e mettendo questo sottoalbero al posto di uno di quelli precedenti si ottiene la stringa $uv^{0}wx^{0}y$ che risulta valida per il linguaggio $L$; il problema consiste nel cammino che porta alle foglie in quanto viene accorciato e risulta quindi più corto di $k+2$ ma ciò è un assurdo in quanto si era affermato che ogni percorso per arrivare alle foglie fosse lungo almeno $k+2$ con $k=|NT|$
+					- quindi il vincolo $|vx|\ge 1$ risulta verificato
+				- $|vwx|\le N$ :
+					- se si prende il cammino da $A$ alla foglia esso è di lunghezza $\le |NT|+1$ quindi la $A$ non potrà generare stringhe più lunghe di $b^{|NT|+1}=N$ quindi il vincolo è verificato 
+- # Utilizzo:
+	- Questo Teorema lo si usa spesso per determinare se un _linguaggio non è libero_ applicando quindi la sua negazione
+		- se $\forall N>0, \exists z\in L: |z|\ge N$ tale che $\forall u,v,w,x,y$ se 
+			- 1) $z=uvwxy$
+			- 2) $|vwx|\le N$ 
+			- 3) $|vx|\ge 1$ 
+		- allora $\exists k\ge 0: uv^{k}wx^{k}y \notin L$ 
+		- Se tutto questo è rispettato allora $L$ non è libero 
+		- in sostanza se pompando le sottostringhe $v,x$ di una certa quantità $k$ la tringa totale non appartiene più al linguaggio $L$ allora $L\notin$ _Linguaggi liberi_
+	- ## ES:
 		- $$L=\{a^{n}b^{n}c^{n}| n\ge 0\}$$
 		- fisso $N>0$ generico.
 		- scelgo $z=a^{N}b^{N}c^{N}$ 
@@ -27,13 +50,11 @@ data: "`2024-10-22 18:08`"
 			- (1) $z=uvwxy$
 			- (2) $|vwx|\le N$
 			- (3) $|vx|\ge 1$
-			- $\implies$ le estremità di $vwx$ non possono essere $a$ e $c$ 
-		- Caso $vwx$ non contiene $c$: 
-			- (le $c$ sono tutte in $y$)
-			- $\implies$ $uv^{2}wx^{2}y$ cambia il numero di $a$ e/o $b$ ma non quelle di $c$ $\implies$ $uv^{2}wx^{2}y\notin L$   
+			- $\implies$ le estremità di $vwx$ non possono essere sia $a$ che $c$ perché essendo $vwx$ la parte centrale se contenesse entrambe le lettere vuol dire che conterrebbe tutte le N $b$ più almeno una $a$ e almeno una $c$ non facendo rispettare la condizione _(2)_ 
+		- Caso in cui $vwx$ non contiene le lettere $c$:
+			- quindi saranno tutte dentro la sottostringa $y$ ma se si procede a pompare $v,x$ di una certa quantità $k$ allora il numero di $a$ e/o $b$ cambierà mentre le $c$ rimarranno invariate quindi $uv^{k+1}wx^{k+1}y\notin L$
 		- Caso $vwx$ non contiene $a$:
-			- (le $a$ sono tutte in $u$) 
-			- $\implies$ $uv^{2}wx^{2}y$ cambia il numero di $b$ e/o $c$ ma non di $a$ $\implies$ $uv^{2}wx^{2}y\notin L$ 
+			- Le $a$ sono tutte in $u$ analogamente a prima il numero di $a$ rimarrà invariato mentre quello delle $b$ e/o $c$ cambierà $\implies$ $uv^{k+1}wx^{k+1}y\notin L$ 
 		- Da tutto ciò risulta che $L$ _non è libero_.
 - # Link Utili:
 	- 

@@ -26,13 +26,13 @@ data: "`2024-10-22 17:51`"
 	- ## Dim:
 		-  ![[Pasted image 20241022180210.png]]
 		- $N$ segue le mosse di $N_{1}$ tenendo traccia dello stato raggiunto da $N_{2}$ 
-- # ES:
-	- mostrare che l'intersezione tra $L_{1}\cap L_{2}$ è un linguaggio libero
-		- $$L_{1}=\{a^{n}b^{n}|n\geq 0\}$$
-		- $$L_{2}=\{w\in \{a,b\}^{*}|\exists k\in \mathbb{N}. |w|=4k\}$$
-		- ![[Pasted image 20241022180524.png]]
-- # OSS:
-	- 1) se $L_{1}\cap L_{2}$ non è regolare, ma $L_{2}$ lo è, allora $L_{1}$ non è regolare (_a causa della chiusura per l'intersezione_)
-	- 2) se $L_{1}\cap L_{2}$ non è libero, ma $L_{2}$ è regolare, allora $L_{1}$ non è libero (_perché l'intersezione di un libero con un regolare da un libero_)
+	- ## ES:
+		- mostrare che l'intersezione tra $L_{1}\cap L_{2}$ è un linguaggio libero
+			- $$L_{1}=\{a^{n}b^{n}|n\geq 0\}$$
+			- $$L_{2}=\{w\in \{a,b\}^{*}|\exists k\in \mathbb{N}. |w|=4k\}$$
+			- ![[Pasted image 20241022180524.png]]
+	- ## OSS:
+		- 1) se $L_{1}\cap L_{2}$ non è regolare, ma $L_{2}$ lo è, allora $L_{1}$ non è regolare (_a causa della chiusura per l'intersezione_)
+		- 2) se $L_{1}\cap L_{2}$ non è libero, ma $L_{2}$ è regolare, allora $L_{1}$ non è libero (_perché l'intersezione di un libero con un regolare da un libero_)
 - # Link Utili:
 	- 

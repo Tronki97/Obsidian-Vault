@@ -6,7 +6,7 @@ aliases:
 data: "`2024-10-15 18:44`"
 ---
 - # LEX:
-	- Generatore di scanner, specifico di Unix
+	- Generatore di _analizzatori lessicali_ o _scanner_, specifico di Unix
 	- _FLEX_ più recente
 	- ## Input:
 		- `File.l` che ha insieme di definizioni e assiomi

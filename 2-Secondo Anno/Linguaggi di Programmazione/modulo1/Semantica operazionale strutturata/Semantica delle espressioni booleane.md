@@ -1,7 +1,6 @@
 ---
 tags:
   - LdP
-  - TODO
 aliases:
   - espressioni booleane
 date:

@@ -33,7 +33,7 @@ SORT file.ctime DESC
 	- Tentativi: 2
 - [[Algebra e Geometria]]
 	- [x] Passato
-	- Voto: ~~10~~, ~~14~~, 
+	- Voto: ~~10~~, ~~14~~, 21
 	- Tentativi: 3
 - [[Algoritmi e strutture dati]]
 	- [x] Passato

@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "40a45a9a6361e33a",
+            "id": "b5948f3129af5b26",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
+                "file": "Tirocinio.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,16 +52,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Linguaggi di Programmazione"
+              "title": "Tirocinio"
             }
           },
           {
-            "id": "3a6a69fb0257a855",
+            "id": "02e04ef418cb1188",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
+                "file": "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,59 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Equivalenza o indistinguibilità degli stati"
-            }
-          },
-          {
-            "id": "f69b61575491aef3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/minimizzazione.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "minimizzazione"
-            }
-          },
-          {
-            "id": "97a38bc6dd2dc920",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Equivalenza o indistinguibilità degli stati"
+              "title": "sviluppo di un sistema software in python"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -148,7 +100,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true,
+                "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -322,6 +274,30 @@
             "id": "1be58b3f4b27f073",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Linguaggi di Programmazione"
+            }
+          },
+          {
+            "id": "81d52433cf94c005",
+            "type": "leaf",
+            "state": {
               "type": "review-queue-list-view",
               "state": {},
               "icon": "SpacedRepIcon",
@@ -359,44 +335,45 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/minimizzazione.md",
-    "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Equivalenza o indistinguibilità degli stati.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Grammatiche regolari ed Expr.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Linguaggi regolari ed elementi costruttivi.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Grammatiche regolari.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Grammatica.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Definire finitamente un linguaggio/Linguaggio Generato.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi finiti non deterministici.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Da DFA a grammatiche regolari.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/equivalenza NFA-DFA.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Da exp regolari a NFA equivalenti.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi finiti deterministici.md",
-    "Homepage.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Linguaggio riconosciuto.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi regolari/Automi a stati finiti.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica operazionale strutturata.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica delle espressioni aritmetiche.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Lessico e linguaggio formale.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Descrivere un linguaggio/Operazioni su linguaggi.md",
+    "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
+    "Tirocinio.md",
+    "Pasted image 20260827185318.png",
+    "Pasted image 20260827185318.png.~tmp",
     "latexsheet-a4.pdf",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Errori dinamici.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica dei comandi.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/nondeterminismo e parallelismo.md",
-    "Pasted image 20260730193132.png",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Semantica delle espressioni booleane.md",
-    "2-Secondo Anno/Sistemi Operativi/Modulo 1/Concorrenza/Proprietà di un programma.md",
-    "Pasted image 20260730192010.png",
-    "Pasted image 20260730191852.png",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Semantica operazionale strutturata/Equivalenze tra espressioni.md",
-    "Pasted image 20260730184232.png",
-    "Pasted image 20260730184009.png",
-    "immagini/Pasted image 20241001110818.png",
+    "Homepage.md",
+    "1-Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
+    "3-Terzo anno/computational statistics/Ottimizzazione di MonteCarlo.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "0-Mostarda/Secondo Anno/Calcolo delle probabilità e statistica.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
+    "0-Mostarda/Terzo Anno/Computational statistics.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Catene di Markov.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Comportamento asintotico delle catene di Markov.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
+    "3-Terzo anno/computational statistics/accept & reject algorithm.md",
+    "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Distribuzione invariante.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
+    "3-Terzo anno/computational statistics/probability integral transform.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/vettori aleatori (bidimensionali) discreti.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/Vettori aleatori.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Grammatica LL(k).md",
+    "immagini/Pasted image 20260804183403.png",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
+    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
+    "immagini/Pasted image 20260824205214.png",
+    "immagini/Pasted image 20260824182812.png",
+    "immagini/Pasted image 20260822174556.png",
+    "immagini/Pasted image 20260805123243.png",
+    "immagini/Pasted image 20260730184009.png",
+    "immagini/Pasted image 20260804170210.png",
+    "immagini/Pasted image 20260804170047.png",
+    "immagini/Pasted image 20260804160633.png",
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
-    "immagini/Pasted image 20260313185147.png",
-    "immagini/uc.png",
-    "immagini/Teoria di Dijkstra.png",
-    "immagini/Teoria Dijkstra.png",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
     "0-Mostarda/Terzo Anno",
@@ -404,7 +381,6 @@
     "0-Mostarda/Primo Anno",
     "3-Terzo anno/Informatica teorica/Complessità/Oracoli",
     "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità temporale",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

@@ -6,34 +6,39 @@ aliases:
   - simboli inutili
   - ricorsione sinistra
   - fattorizzazione a sinistra
+  - simbolo annullabile
+  - simboli annullabili
+  - simboli raggiungibili
+  - simboli generatori
+  - coppia unitaria
 data: "`2024-11-05 11:09`"
 ---
 - # Eliminazioni da fare:
-	- ## produzioni $\epsilon$:
+	- ## Produzioni $\epsilon$:
 		- del tipo $A\to \epsilon$. Inadatte al [[Bottom-up parsing]] 
-	- ## produzione unitaria:
-		- del tipo $B\to B$ che possono creare dei cicli visto che vanno in dei NT 
-	- ## simboli inutili:
-		- T o NT che non sono raggiungibili dal simbolo iniziale o che non producono parole 
-	- ## ricorsione sinistra:
+	- ## Produzione unitaria:
+		- del tipo $A\to B$ che possono creare dei cicli visto che vanno in dei NT 
+	- ## Simboli inutili:
+		- simboli T o NT che non sono raggiungibili dal simbolo iniziale $S$ o che non producono parole 
+	- ## Ricorsione sinistra:
 		- $A\to A \alpha$ perché inadatte al [[Top-down Parsing]] 
-	- ## fattorizzazione di grammatiche:
-		- raggruppare diverse produzioni per rendere le grammatiche meno non deterministiche.
+	- ## Fattorizzazione di grammatiche:
+		- Raggruppare diverse produzioni per rendere le grammatiche meno non deterministiche.
 - # Semplificare:
 	- ## Eliminare $\epsilon$:
-		- voglio una $G'$ tale che $L(G')=L(G)-\{\epsilon\}$ 
+		- data una [[Grammatica|grammatica libera]] $G$ con produzioni del tipo $A\to \epsilon$  voglio una $G'$ tale che $L(G')=L(G)-\{\epsilon\}$ quindi che non abbia produzioni $\epsilon$
 		- ### Oss:
 			- con $\epsilon \in L(G)$ e voglio una grammatica $G'': L(G)=L(G'')$ 
-			- considero $G'=(NT, T, S, R')$
-			- definisco: 
+			- considero $G'=(NT, T, S, R')$ e definisco: 
 				- $$G''=G'\cup \{S'\to \epsilon|S\}$$
 				-  $$G''=(NT\cup \{S'\}, T, S', R'\cup \{S'\to \epsilon|S\})$$
-		- ### Simbolo annullabile:
-			- per definire un algoritmo che la genera bisogna definire un simbolo annullabile :
-				- $A\in NT: S \Rightarrow^{+} \epsilon$
+		- ### Simbolo annullabile: ^0a0997
+			- $A\in NT: S \Rightarrow^{+} \epsilon$
+			- $N(G)=\{A\in NT|A \Rightarrow^{+} \epsilon\}$
+				- questo è l'insieme di tutti i simboli annullabili di $G$
 			- bisogna calcolare tutti quelli appartenenti a quella grammatica
 			- $$N_{0}(G)=\{A\in NT| A\to \epsilon\in R\}$$
-				- insieme dei simboli annullabili al passo 0
+				- insieme dei simboli annullabili al passo 0 quindi senza fare passi  
 			- $$N_{i+1}=N_{i}(G)\cup\{B\in NT|B\to c_{1}...c_{k}\in R\wedge c_{1},...,c_{k}\in N_{i}(G)\}$$
 			- #### OSS:
 				- questo insieme non può essere infinito siccome $NT$ è finito quindi esiste un passo $i$ al quale $N_{i}(G)=N_{i+1}(G)$ 
@@ -45,16 +50,21 @@ data: "`2024-11-05 11:09`"
 			- ![[Pasted image 20241105224451.png]]
 			- ![[Pasted image 20241105224510.png]]
 	- ## Eliminare le produzioni unitarie:
-		- _coppie unitarie_: $(A,B): A \Rightarrow^{*}B$ 
-		- ### Calcolarle:
-			- $$U_{0}(G)=\{(A,A)|A\in NT\}$$
-			- $$U_{i+1}(G)=U_{i}(G)\cup \{(A,C)| (A,B)\in U_{i}(G)\wedge B\to C\in R\}$$
+		- ### Produzioni unitarie
+			- $A\to B$ con $A,B\in NT$
+		- ### Coppie unitarie:
+			- $(A,B): A \Rightarrow^{*}B$ usando solo produzioni unitarie 
+			- #### Calcolarle:
+				- $$U_{0}(G)=\{(A,A)|A\in NT\}$$
+					- ogni non-terminale fa coppia con se stesso  
+				- $$U_{i+1}(G)=U_{i}(G)\cup \{(A,C)| (A,B)\in U_{i}(G)\wedge B\to C\in R\}$$
+					- prendo le coppie del passo precedente e ci aggiungo quelle $(A,C)$ tali che $(A,B)$ appartengono al passo precedente e $B\to C$ è una _produzione unitaria_
 		- ### OSS:
 			- $$U_{i}(G)\subseteq U_{i+1}(G)$$
 			- per lo stesso motivo delle degli insiemi di simboli annullabili.
-		- ### Algoritmo:
+		- ### Algoritmo per l'eliminazione:
 			- data $G$ libera, definisco $G'=(NT, T, S, R')$ dove, $\forall (A,B)\in U(G)$ $R'$ contiene tutte le produzioni $A\to \alpha$, dove $B\to \alpha \in R$ _e non è unitaria_.
-		- ## ES:
+		- ### ES:
 			- ![[Pasted image 20241105225620.png|600]]
 			-  ![[Pasted image 20241105225925.png|600]]
 	- ## Eliminare i simboli inutili:
@@ -62,7 +72,7 @@ data: "`2024-11-05 11:09`"
 			- un simbolo $X\in T \cup NT$ :
 				- _Generatore_ $\iff \exists w\in T^{*}\ |X \Rightarrow^{*}w$
 				- _raggiungibile_ $\iff S \Rightarrow^{*} \alpha X \beta$ per qualche $\alpha, \beta \in (T\cup NT)^{*}$ 
-				- _Utile_: se è sia generatore che raggiungibile. Ovvero se $X$ compare in almeno una derivazione  di una stringa $z\in L(G)$ 
+				- _Utile_: se è sia generatore che raggiungibile. Ovvero se $X$ compare in almeno una derivazione di una stringa $z\in L(G)$ 
 		- ### ES:
 			- ![[Pasted image 20241106123715.png]]
 			- Siccome $B$ non è più raggiungibile posso eliminarlo.
@@ -98,6 +108,19 @@ data: "`2024-11-05 11:09`"
 				- $S\to a$
 				- $B\to b$ 
 				- _La quale non è priva di simboli inutili_ 
+		- ### TH:
+			- sia $G=(NT,T,R,S)$ una grammatica libera tale che $L(G)\ne \emptyset$ 
+				- sia $G_{1}$ la grammatica che si ottiene da $G$ eliminando tutti i simboli _non generatori_, e tutte le produzioni che fanno uso di almeno uno di tali simboli.
+				- Sia $G_{2}$ la grammatica che si ottiene da $G_{1}$ eliminando i simboli _non raggiungibili_, e tutte le produzioni che fanno uso di almeno uno di tali simboli.
+				- allora $G_{2}$ non ha tali simboli inutili e $L(G_{2})=L(G)$ 
+		- ### Dim:
+			- $L(G_{2})\subseteq L(G)$:
+				- ovvio in quanto $G_{2}$ non contiene alcuni simboli e produzioni di $G$ 
+			- $L(G)\subseteq L(G_{2})$:
+				- si dimostra che se $S\Rightarrow^{*}_{G} w$ allora $S\Rightarrow^{*}_{G_{2}} w$ 
+				- ogni simbolo usato in $S\Rightarrow^{*}_{G} w$ è sia raggiungibile sia generatore, allora questa derivazione è anche una derivazione per $G_{2}$ 
+	- ## Esempio abbastanza comprensivo:
+		- ![[Pasted image 20260805123243.png|615]]
 	- ## Eliminare la ricorsione sinistra:
 		- ### Eliminare quella immediata:
 			- $A\to A \alpha_{1}|...|A \alpha_{n}|\beta_{1}|...|\beta_{m}$
