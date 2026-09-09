@@ -1,0 +1,55 @@
+---
+tags:
+  - tirocinio
+aliases:
+  - omofilia
+data: "`2026-09-01 11:23`"
+---
+- # Argomento:
+	-  usato comunemente negli studi sociali. 
+	- ogni intervistato detto _ego_ fornisce informazioni sulle persone dette _alters_ 
+	- i _dati di rete ego_ forniscono solo pezzi dell'intera rete visto che non c'è modo di sapere se le persone nominate da due ego diversi siano le stesse.
+	- Bisogna quindi separare concettualmente le informazioni sugli _ego_ da quelle sugli _alters_ che vengono nominati.
+	- di solito hanno 4 tipi di informazioni:
+		- 1) demografica, comportamentale degli _ego_ 
+		- 2) demografica, comportamentale degli _alters_ nominati 
+		- 3) informazioni sulla relazione tra _ego_ e _alter_ 
+		- 4) informazioni sulle relazioni tra gli _alters_
+- # Omofilia:
+	- Caratteristica fondamentale delle reti sociali, gli individui tendono ad interagire con altri simili a loro. 
+	- Questa caratteristica emerge nelle reti a causa di:  
+		- varie opportunità (individui con stipendi più alti tendono a vivere in quartieri simili, ecc)
+		- differenze in accesso alle risorse 
+		- preferenze (persone tendono ad avere amici simili a loro)
+- esaminando i _dati di rete ego_ si può scoprire molto sulla società 
+	- per esempio si possono osservare i legami tra persone con colore della pelle diverso e legami tra persone di sesso opposto e verificare quale dei due risulta più probabile esserci.
+- si può voler anche analizzare quanto forte sia l'homofilia tra i vari tipi di relazioni 
+- # Costruire reti Ego:
+	- in _R_ si usa la funzione `egor()` del pacchetto `egor` la quale assume che i dati in input arrivino da 3 file diversi (_ego_, _alter_, _alter_alter_)
+		- `alters`
+		- `egos`
+		- `aaties`: data frame dei legami _alter_alter_ 
+		- `alter_design`: lista di argomenti per specificare informazioni di nominazione dal sondaggio. 
+		- `ego_design`: lista di argomenti per specificare il design del sondaggio dello studio.
+		- `ID.vars`: lista di nomi di variabili corrispondenti alle colonne chiave:
+			- `ego`
+			- `alter` 
+			- `source`: nome della variabile della sorgente del legame 
+			- `source`: nome della variabile della destinazione del legame
+- # Omofilia degli attributi:
+	- interessante è sapere il livello di omofilia comparando gli attributi degli _alter_ e degli _ego_
+		- un esempio può essere: sapendo che l'ego è _maschio_ quanti degli _alters_ sono anch'essi _maschi_ 
+- # Analizzare l'Omofilia a livello di coppie:
+	- è interessante sapere quanto è probabile che esista un legame tra persone dello stesso sesso/razza. 
+	- serve quindi pensare ai dati in maniera _diadica_, dove si vuole riassumere il rapporto delle interazioni tra 2 gruppi diversi guardando tutte le coppie _ego-alter_ nei dati 
+		- per esempio quale percentuale di collegamenti sono omogenei sull'aspetto del sesso.
+	- si ottengono quindi delle tabelle che se analizzate ci dicono in che proporzione sono presenti rapporti tra persone con un certo attributo uguale
+	- queste informazioni sono limitate dal fatto che non è presente una base su cui confrontarle quindi:
+		- si possono utilizzare dei modelli probabilistici per capire se l'omofilia è più forte sapendo che entrambe le entità hanno lo stesso sesso piuttosto che se questi collegamenti si fossero formati in maniera casuale.
+- # Ego network come Come fattori predittivi:
+	- si possono usare per predire la dimensione della rete in funzione di alcune caratteristiche.
+	- oppure predire alcuni attributi della rete usando le sue caratteristiche:
+		- gli individui con _reti ego_ più grandi sono più felici?
+		- la composizione della rete importa?
+- # Link Utili:
+	- 

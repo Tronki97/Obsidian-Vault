@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Tirocinio/Indici delle reti.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Indici delle reti"
             }
           },
           {
-            "id": "b5948f3129af5b26",
+            "id": "b73cca88567146ad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tirocinio.md",
+                "file": "Tirocinio/Misure chiave delle reti.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,35 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Tirocinio"
-            }
-          },
-          {
-            "id": "02e04ef418cb1188",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "sviluppo di un sistema software in python"
+              "title": "Misure chiave delle reti"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -114,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "blockmo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -335,15 +310,31 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "Tirocinio/Misure chiave delle reti.md",
+    "Tirocinio/Indici delle reti.md",
+    "Domande.md",
+    "Tirocinio/Modelli statistici per le reti.md",
+    "Homepage.md",
+    "Tirocinio/Posizioni e ruoli.md",
+    "Tirocinio/Analisi delle corrispondenze.md",
+    "Tirocinio/Reti a due modalità.md",
+    "Tirocinio/Centralità e gerarchia di una rete.md",
+    "Tirocinio/Coesione e Comunità nelle reti.md",
+    "2-Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
+    "Tirocinio/Dati di rete mancanti.md",
+    "Tirocinio/Diadi e triadi.md",
+    "Tirocinio/Dati di rete.md",
+    "Tirocinio/Dati di rete Ego.md",
+    "immagini/Pasted image 20260827185318.png",
+    "Tirocinio",
+    "immagini/Pasted image 20260829193923.png",
+    "immagini/Pasted image 20260829184341.png",
+    "immagini/Pasted image 20260829183315.png",
     "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
-    "Tirocinio.md",
-    "Pasted image 20260827185318.png",
     "Pasted image 20260827185318.png.~tmp",
     "latexsheet-a4.pdf",
-    "Homepage.md",
     "1-Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
     "3-Terzo anno/computational statistics/Ottimizzazione di MonteCarlo.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "0-Mostarda/Secondo Anno/Calcolo delle probabilità e statistica.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
     "0-Mostarda/Terzo Anno/Computational statistics.md",
@@ -352,27 +343,12 @@
     "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Catene di Markov.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Comportamento asintotico delle catene di Markov.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
-    "3-Terzo anno/computational statistics/accept & reject algorithm.md",
-    "3-Terzo anno/computational statistics/integrazione di MonteCarlo.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Probabilità condizionata/Formula di Bayes.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Distribuzione invariante.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli continue.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Distribuzioni notevoli di variabili aleatorie discrete.md",
-    "3-Terzo anno/computational statistics/probability integral transform.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/vettori aleatori (bidimensionali) discreti.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Vettori aleatori/Vettori aleatori.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Grammatica LL(k).md",
     "immagini/Pasted image 20260804183403.png",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Parser/Parser bottom-up.md",
-    "2-Secondo Anno/Linguaggi di Programmazione/modulo1/Linguaggi liberi/(LLD) Linguaggi liberi deterministici/Linguaggio libero deterministico.md",
     "immagini/Pasted image 20260824205214.png",
     "immagini/Pasted image 20260824182812.png",
     "immagini/Pasted image 20260822174556.png",
     "immagini/Pasted image 20260805123243.png",
     "immagini/Pasted image 20260730184009.png",
-    "immagini/Pasted image 20260804170210.png",
-    "immagini/Pasted image 20260804170047.png",
-    "immagini/Pasted image 20260804160633.png",
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
@@ -380,7 +356,6 @@
     "0-Mostarda/Secondo Anno",
     "0-Mostarda/Primo Anno",
     "3-Terzo anno/Informatica teorica/Complessità/Oracoli",
-    "3-Terzo anno/Informatica teorica/Complessità/Complessità spaziale",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

@@ -1,0 +1,39 @@
+---
+tags:
+  - tirocinio
+aliases:
+  - cancellazione su liste
+  - bias
+  - imputazione semplice
+  - imputazione asimmetrica
+  - imputazione simmetrica
+  - imputazione probabilistica
+data: "`2026-09-01 11:22`"
+---
+- # Argomento:
+	- ogni tanto può capitare che alcune entità o nodi non siano presenta nel momento della rilevazione dei dati per vari motivi e ciò potrebbe creare dei bias.
+- # Cancellazione su liste:
+	- in questo caso tutti i nodi mancanti vengono droppati dalla rete mentre l'oggetto viene costruito, questo implica che tutti i legami da nodi presenti verso quelli mancanti non verranno inclusi nella rete
+	- in seguito si possono fare le classiche misure come: distanza, grado, densità...
+- # Misurare il livello di Bias:
+	- dopo aver fatto le misure si ottiene un risultato che risulta sballato, quindi con del bias, per il fatto che dei dati erano mancanti, serve quindi misurare quanto bias c'è per questo motivo, e di conseguenza aggiustare il risultato.
+	- esistono diverse tecniche per misurare questo Bias
+	- ## Usare risultati passati:
+		- di solito si tende ad usare risultati ottenuti in un lasso temporale precedente a quello in cui mancano i dati, e spesso si usano dei dati che siano conformi agli studi fatti e che quindi fanno più comodo.
+	- ## Usare modelli predittivi
+		- si mettono varie features dello studio in un modello che fornisce un livello di Bias stimato.
+- # Opzioni di imputazione semplice:
+	- l'imputazione semplice si basa sull'idea che si possono sfruttare le indicazioni fornite dai nodi presenti per i nodi mancanti al fine di colmare certe mancanze nei dati.
+	- ci sono _3 diversi tipi di imputazioni_ semplici per le _reti direzionali_, ma prima si preparano i dati trovando quali nodi mancanti vengono nominati almeno una volta da quelli presenti mantenendoli e eliminando quelli che non vengono nominati.
+		- ## Opzione Asimmetrica:
+			- dopo aver capito quali nodi far rientrare nella _rete imputata_, serve capire quali legami vanno imputati, concentrandosi su quella da parte dei nodi mancanti verso quelli presenti che li hanno nominati.
+			- Non avendo informazioni visibili su questi legami bisogna decidere come trattarli 
+			- in questo caso si assume che non ci siano legami dai nodi mancanti verso quelli presenti che li hanno nominati
+			- sia $n$ nodo presente e $m$ mancante, si assume che tutti i legami da $n$ a $m$ siano asimmetrici, quindi $m\to n$ non esiste.  
+		- ## Opzione Simmetrica:
+			- si fa lo stesso procedimento di prima solo con assunzioni diverse ovvero si ha che $n \to m \implies m\to n$  
+		- ## Probabilistiche:
+			- si usano delle opzioni probabilistiche inferendo l'esistenza di legami tra i nodi.
+			- se esiste $n\to m$ si assume che esista $m\to n$ con probabilità $p$ che avrà valore in base al _rateo di reciprocità_.
+- # Link Utili:
+	- 

@@ -1,0 +1,44 @@
+---
+tags:
+  - TODO
+aliases:
+  - analisi ruoli
+  - hierarchical clustering
+  - blockmodel
+  - equivalenza strutturale
+  - equivalenza locale
+data: "`2026-09-04 17:43`"
+---
+- # Analisi delle posizioni :
+	- si piazzano i nodi i posizioni basate sul loro pattern di collegamenti ad altri nodi 
+	- per prima cosa si posizionano i nodi in delle _posizioni_ di equivalenza 
+		- per esempio nodi collegati ad altri nodi con caratteristiche simili vengono posizionati nella stessa _posizione_ 
+		- per similitudine si intende: calcolare la distanza tra le righe.
+			- per esempio: persone che sono amiche delle stesse persone dovrebbero essere nella stessa posizione.
+	- un problema che emerge è la necessità di far uso di più relazioni, serve quindi mettere insieme nodi con gli stessi pattern di interazioni nelle diverse relazioni
+	- ## Equivalenza strutturale: ^b31dc2
+		- avendo una matrice $n\times mn$ che rappresenta varie relazioni messe insieme si può generare una matrice $n \times n$ che mostri il grado di equivalenza strutturale di ogni nodo della rete.
+		- nodi con un pattern simile di collegamenti nella rete avranno una bassa distanza 
+		- questo si calcola con la funzione `dist(x, method="euclidian")`
+	- per misurare la somiglianza tra righe si può anche usare la _correlazione_ 
+	- ## Definire le posizioni:
+		- si prende la matrice delle distanze e si cerca di raggruppare i nodi vicini nelle stesse posizioni.
+			- da notare come questo sia diverso dal concetto di [[Coesione e Comunità nelle reti#^d7ee51|comunità]], in quanto i nodi nelle stesse posizioni hanno lo stesso pattern di collegamenti verso _altri_ nodi quindi è possibile che le posizioni abbiano una bassa densità interna 
+		- ### hierarchical clustering:
+			- `hclust()`: ogni nodo inizia nel proprio cluster, ad ogni stage quelli più vicini, sempre secondo la matrice delle distanze, vengono uniti tutto questo finché tutti i nodi non sono in un unico cluster. 
+- # Analisi dei ruoli:
+	- descrive il pattern dei legami che esistono tra le posizioni che emergono nella rete.
+	- è fatta per incorporare più relazioni 
+	- si crea una versione ridotta della rete, dove le _posizioni_ diventano i nodi di interesse e si procede ad analizzare i collegamenti tra le posizioni, analizzando non più ad un livello individuale ma piuttosto ad un livello più alto, dove magari alcune posizioni hanno certe caratteristiche.
+	- ## Blockmodel:
+		- Una matrice dove le posizioni stesse sono i nodi di interesse. In questo modo le posizioni trovate in precedenza diventano le righe/colonne della matrice.
+		- in questo modo tutti nodi che erano nella posizione $1$ vengono collassati nel _Blocco 1_, stessa cosa vale analogamente per gli altri nodi.
+		- ### Interpretarli:
+			- la domanda è: quali comportamenti o aspettative comportamentali vengono mappate su ciascun blocco.
+- # Equivalenza locale:
+	- i nodi vengono raggruppati insieme se hanno le stesse tendenze basate sul modo in cui agiscono nel loro "vicinato". 
+	- quindi i nodi vengono raggruppati non in base alle persone con cui parlano ma in base a come interagiscono.
+	- prima si caratterizzano i nodi in base alle [[Diadi e triadi#^d2eedd||triadi]] a cui appartengono, poi si calcola la correlazione tra di essi in base al tipo di triade. Si usare questa correlazione sull'appartenenza ad una certa triade per identifica le posizioni 
+		- i nodi con la stessa distribuzione di tipo di triade verranno messi nella stessa _posizione_ 
+- # Link Utili:
+	- 

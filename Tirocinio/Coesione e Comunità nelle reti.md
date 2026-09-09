@@ -1,0 +1,74 @@
+---
+tags:
+  - TODO
+aliases:
+  - comunità
+  - coesione
+  - walktrap
+  - edge betweenness
+  - scree plots
+  - multi-level clustering
+  - cohesive blocking
+data: "`2026-09-01 17:36`"
+---
+- # Coesione:
+	- si analizza la forza di una rete quando viene frammentata 
+	- si potrebbe analizzare la [[Misure chiave delle reti#^97d343|densità]] delle rete ma non basta, in quanto reti con molti collegamenti possono comunque essere fragili perché alcuni collegamenti della rete possono o essere mancanti o essere deboli.
+	- è importante quindi considerare altre misure come la dimensione del componente:
+		- il _componente principale_ è il più grande insieme di nodi tali che $i$ e $j$ possono raggiungersi a vicenda 
+		- ma anche questa misura non è molto indicativa perché non riesce a catturare l'effettiva interconnessione tra $i$ e $j$, ma mi dice solo che sono raggiungibili a vicenda. 
+	- la _dimensione bicomponente_ è un estensione della misura precedente e mostra un insieme di nodi che sono connessi da almeno due [[Misure chiave delle reti#^849281|percorsi]] indipendenti, in modo che se si rimuove un singolo nodo l'intero insieme rimane connesso. 
+	- una rete con alta coesione è quindi resistente rispetto alla perdita di nodi chiave ed esiste come unità più grande oltre che alla presenza di determinati nodi 
+		- come un gruppo di amici che non esiste solo per la presenza di una o due persone 
+- # Comunità: ^d7ee51
+	- si analizzano quali insiemi di attori formano dei gruppi dentro all'eventuale rete con alta coesione.
+	- l'obiettivo è quindi identificare sottoinsiemi di nodi che hanno un'alta densità tra di loro e bassi legami con i nodi al di fuori del loro gruppo.
+	- le domande principali sono:
+		- la rete si può dividere in diversi gruppi più piccoli oppure si divide in due grandi comunità separate da una forte linea divisiva? 
+		- un certo attributo influisce molto sulla formazione di una comunità?
+		- quanto contribuiscono i collegamenti tra diverse comunità per la coesione generale della rete?
+	- Un fattore importante è riuscire a identificare queste comunità e ci sono 4 principali metodi per farlo:
+		- ## Walktrap:
+			- rileva le comunità attraverso una serie di corti [[Misure chiave delle reti#^7102b4|cammini]] casuali, con l'idea che tutti i nodi incontrati sullo stesso cammino abbiano un'alta probabilità di appartenere alla stessa comunità.
+			- inizialmente l'algoritmo tratta ogni nodo come comunità a se stante per poi procedere ad unirle in comunità più grandi e sempre più grandi 
+			- di solito si specifica la lunghezza di questi cammini
+				- è buona norma avere una lunghezza di $4$ o $5$ anche se non è garantito il risultato migliore.
+		- ## Edge betweenness:
+			- ### Def:
+				- l'_Edge Betweenness_  è una misura che calcola quanti percorsi più corti per ogni coppia di nodi utilizzino quell'arco 
+			- l'idea è che degli archi che collegano comunità diverse abbiano un'alta _edge betweenness_, e quindi tutti i percorsi più corti da una comunità all'altra devono per forza attraversarli.
+			- quindi rimuovendo gli archi con la più alta _edge betweenness_ si dovrebbe riuscire ad ottenere una mappa gerarchica delle comunità nel grafo.
+				- perché di fatto si sta togliendo un ponte che collega due zona altrimenti isolate.
+			- ### Scree plots:
+				- questo approccio serve per allontanarsi dalla verifica ad occhio per individuare le comunità ma si usa la misura della _modularità_ che se molto alta implica che i nodi all'interno di un gruppo sono molto collegati tra loro e poco collegati con quelli all'esterno.
+				- si usa la _disaggregazione_ quindi dividere la rete in sempre più gruppi e misurare come cambia la _modularità_.  
+				- si nota successivamente con quante comunità si ha un valore di modularità più alto e si analizzano nel dettaglio.
+		- ## multi-level clustering:
+			- ogni nodo inizia come comunità singola per poi essere spostato in una comunità in maniera tale che si aumenti il più possibile la _modularità_, se nessuna mossa porta all'aumento del valore il nodo rimane nella sua comunità 
+			- si ripete il passaggio precedente finché non si raggiunge un massimo locale sul valore della modularità.
+			- Il processo poi ricomincia considerando come nodi le comunità formatesi nello step precedente.
+		- ## Cohesive blocking:
+			- si creano dei sottoinsiemi della rete basati sulla connettività dei nodi. 
+			- un insieme di nodi è _k-connesso_ se servisse rimuovere $k$ nodi per far si che nessuno dei nodi all'interno di quell'insieme riuscisse più a raggiungerne nessun altro.
+			- l'algoritmo procede con cercare gli insiemi di nodi con i più alti livelli di _connettività_  
+	- ## Caratteristiche demografiche:
+		- si analizzano le caratteristiche dei nodi appartenenti a certe comunità per rilevare alcune implicazioni, come la presenza o meno di comportamenti devianti che portano un certo nodo ad avere meno collegamenti di altri. Si cerca quindi di capire come gli attributi dei nodi rappresentino la comunità in toto.
+			- un esempio può essere se i gruppi di amicizie formatisi in una classe si basino magari sul colore della pelle di chi li forma.
+		- anche qui serve comparare i dati ottenuti con una baseline casuale.
+	- ## Sovrapposizione delle comunità:
+		- si analizza il livello di contatto tra le comunità, quanti legami ci sono dentro alla comunità e da una all'altra, si parla in questo caso di _interconnessione_ 
+		- analizzando ciò si riesce anche ad avere informazioni sulla coesione della _rete_ in quanto più l'interconnessione è alta più aumenta la coesione.
+- # Il caso dei Big Data:
+	- si usa un esempio che riguarda le mail di persone che lavorano in un grande istituto di ricerca.
+		- più di $200k$ nodi e più di $400k$ archi.
+	- gli archi rappresentano se la persona $i$ ha mandato una mail alla persona $j$ 
+	- si rimuovono le mai inviate a se stessi.
+	- come metodo per individuare le comunità si usa il multi-level clustering in quanto risulta più efficace per reti di grandi dimensioni.
+	- come risultato si ottiene che la maggior parte delle comunità è formata da un paio di nodi, ma comunque ne esistono alcune formate da decine di migliaia le quali sono troppo grandi per essere interpretate direttamente.
+	- l'idea è quindi di ripartire dalle ritrovate comunità e ripetere questo processo di _community detection_ dentro ad ogni comunità in questo modo si individuerebbero nuove comunità all'interno di altre riuscendo quindi ad analizzarle in maniera più accurata.
+	- ## osservare la struttura delle comunità all'interno di altre comunità:
+		- siccome si stanno analizzando comunità sempre più piccole si possono usare algoritmi diversi 
+		- per ognuna di queste comunità serve creare una rete che comprenda solo loro e poi effettivamente attuare l'individuazione. 
+		- da questa analisi risulta che all'interno di una delle comunità più grandi se ne notano un certo numero 
+- # Link Utili:
+	- 

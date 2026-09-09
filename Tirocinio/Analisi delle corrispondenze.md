@@ -1,0 +1,34 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-09-08 16:47`"
+---
+- # Argomento:
+	- come dataset di riferimento si usa uno in cui sono elencati il numero di studenti di un determinato corso che hanno fatto una tesi di dottorato su un determinato argomento.
+	- l'analisi metterà nello stesso spazio sia i _dipartimenti_ che gli _argomenti_ 
+		- i dipartimenti, per esempio, saranno vicini se gli studenti di quei dipartimenti hanno fatto le loro tesi sullo stesso argomento in sostanza sono [[Posizioni e ruoli#^b31dc2|strutturalmente equivalenti]] 
+	- formalmente l'analisi delle corrispondenze funziona prendendo la distanza pesata tra le righe che si basa sulla probabilità che finiscano in una determinata colonna detta _chi-square distance_ 
+- # Scegliere il numero di dimensioni:
+	- più è alto più fitta con il modello e meno è interpretabile graficamente, serve quindi il numero giusto di dimensioni per rappresentare lo spazio 
+	- ## Autovalori:
+		- gli _autovalori_ aiutano dicendo quanto ogni dimensione contribuisce nello spiegare la [[Varianza]] totale nei dati 
+			- nell'esempio sembra che oltre 2 o 3 dimensioni non ci siano miglioramenti sostanziali 
+	- ## Average rule:
+		- un altro modo per scegliere il numero di dimensioni è guardare con quale numero si ha un risultato migliore della dimensione media. 
+			- da questo sembra che servano 6 dimensioni ma c'è anche da dire che con 5 e 6 si aggiunga solo un $5\%$ alla varianza quindi come buon compromesso si potrebbe usare $5$ come valore 
+			- inoltre in questo caso la _average rule_ tenderebbe a restituire un valore di dimensioni troppo alto 
+	- ## Test di Malinvaud:
+		- restituisce una tabella con una colonna che indica un $p-value$, più basso è più la dimensione a cui è legato è valida da includere.
+			- in questo caso non sembra molto informativo visto che tutte le dimensioni fino ala $19$ sono significative 
+	- Quindi quale dei 3 risultati precedenti scegliere?
+		- quello degli autovalori sembra il migliore dove un numero di $2$ o $3$ dimensioni sembra adeguato 
+- # Importanza di righe e colonne:
+	- serve capire quali oggetti della rete contribuiscono di più ad una determinata dimensione 
+	- valori più alti indicano che una riga è più importante per definire tale dimensione:
+		- per esempio le location di altri dipartimenti sono basate sulla location estrema di un determinato dipartimento  
+- # Clustering gerarchico 
+	- potrebbe essere utile raggruppare i _dipartimenti_ e gli _argomenti_ in insiemi _strutturalmente equivalenti_ dove i dipartimenti e topics che sono vicini nello spazio sono piazzati nello stesso cluster. 
+		- è interessante notare come nell'esempio non sono solo raggruppati gli argomenti ma anche i dipartimenti che tendono a studiarli
+- # Link Utili:
+	- 

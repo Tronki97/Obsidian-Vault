@@ -1,0 +1,36 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-09-02 19:35`"
+---
+- # Centralità:
+	- è un tipo di misura che cerca di dire quale nodo è il più importante della rete alcuni esempi possono essere _grado_ e la _betweenness_ e possono essere usati come _predictor_ per altri risultati
+	- ## Indegree centrality:
+		- misura quanti archi ogni nodo riceve 
+	- ## Outdegree centrality:
+		- stesso di prima ma conta gli archi uscenti.
+	- ## in-closeness centrality:
+		- calcola il numero media di passi necessari per arrivare ad un determinato nodo $i$ partendo da ogni altro nodo nella rete.
+	- ## out-closeness centrality:
+		- conta il numero medio di passi par arrivare a qualsiasi nodo della rete partendo da un nodo specifico.
+	- ## betweenness centrality:
+		- si basa sul numero di percorsi più corti che passano attraverso uno specifico nodo.
+	- ## centralità autovettoriale:
+		- questa misura fornisce un peso maggiore ai nodi connessi ad altri nodi altamente connessi più essi lo sono
+		- di solito viene interpretata come la misura dell'importanza di un nodo nella rete.
+		- nei grafi diretti esiste sia la variante _in_ che _out_
+			- per esempio se si parla di flusso di informazioni un nodo con un alto valore _in-autovettore_ mi direbbe che esso riceve molte informazioni. Mentre quelli con alto valore _out_ mi dicono che diffondono molto le informazioni.
+	- ## Correlazione tra le misure di centralità:
+		- interessa sapere quali misure tendono a nominare gli stessi nodi come centrali e quali tendono ad essere in disaccordo su quali nodi siano i più importanti.
+	- ## Centralizzazione:
+		- ci da informazioni su tutta la rete, per esempio un nodo con la maggior parte dei valori di centralità incentrati su di lui ci dice che la rete è _altamente centralizzata_ o _altamente iniqua_ visto che la maggior parte delle attività è concentrata su di un nodo in particolare.
+		- una rete altamente centralizzata è anche _relativamente fragile_ visto che se si rimuovesse questo nodo si ridurrebbe di molto la connettività della rete.
+- # Gerarchia:
+	- si parla di misure che riguardano la rete a livello generale piuttosto che controllare le sue singole parti come [[Coesione e Comunità nelle reti#^d7ee51|comunità]], [[Diadi e triadi]]. 
+	- ## Statistica tau:
+		- questa misura mi dice come i _micro-processi_ si aggreghino per formare delle _macro-strutture_
+		- l'idea è quella di creare ipotesi formate da [[Diadi e triadi#^d2eedd|triadi]] diverse; in sostanza ipotizzando quali tipi di triadi dovrebbero essere nella rete con una diversa percentuale di presenza fa emergere diverse feature ad un macro-livello.
+		- comparando il conto delle triadi con quello atteso sotto una ipotesi nulla si possono notare quali tipi di organizzazioni gerarchiche esistono nella rete.
+- # Link Utili:
+	- 

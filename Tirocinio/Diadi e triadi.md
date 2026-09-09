@@ -1,0 +1,57 @@
+---
+tags:
+  - TODO
+aliases:
+data: "`2026-09-01 11:28`"
+---
+- # Diadi:
+	- sono coppie di nodi e possono essere _nulle, asimmetriche o mutue_.
+	- un fattore interessante sarebbe sapere la percentuale di diadi mutue presenti nella rete.
+		- chiamandolo _rapporto di reciprocità_ 
+	- ma ora serve sapere quel risultato cosa comporta, per farlo serve compararlo con qualche _valore baseline_, il quale potrebbe essere quello di una rete con la stessa densità generata in maniera casuale
+		- nell'esempio visto su R la rete delle amicizie ha un _rapporto di reciprocità_ dello $0.291$ mentre in una reta con stessa densità con legami formatisi in maniera casuale ci si aspetta in media un valore di $0.14$
+	- ## Censimento delle diadi tramite gli attributi:
+		- si nota come nell'esempio le diadi mutue siano più presenti di quelle attese, mentre quelle asimmetriche sono molto meno comuni. 
+		- è interessante quindi analizzare se esistono certe condizioni per le quali è più probabile che certi legami siano asimmetrici piuttosto che mutui.
+			- una possibile domanda potrebbe essere se sia più probabile che relazioni tra individui di sesso opposto siano reciproche.
+		- per farlo si analizzano tutte le coppie di nodi e si controlla che tipo di diade formano (_asimmetrica, mutua, nulla_) e poi per ognuna di quelle diadi si controllano gli attributi dei nodi, contando quali diadi di un determinato tipo condividano lo stesso valore per un determinato attributo.   
+- # Triadi: ^d2eedd
+	- aggiungendo un terzo nodo alla diade apre nuove possibili interpretazioni per una rete, per esempio la relazione tra il nodo $A$ e il nodo $B$ può essere influenzata dalla relazione del nodo $B$ con un terzo nodo $C$
+	- ## Censimento delle triadi:
+		- esistono $16$ tipi di triadi:
+			- $003: \ A, B, C$ triade vuota
+			- $012:\  A\rightarrow B, C$
+			- $102 :A\leftrightarrow B, C$
+			- $021D:  A\leftarrow B\rightarrow C$
+			- $021U: A\rightarrow B\leftarrow C$
+			- $021C:  A\rightarrow B\rightarrow C$
+			- $111D: A\leftrightarrow B\leftarrow C$
+			- $111U: A\leftrightarrow B\rightarrow C$
+			- $030T: A\rightarrow B\leftarrow C, A\rightarrow C$
+			- $030C: A\leftarrow B\leftarrow C, A\rightarrow C$
+			- $201:  A\leftrightarrow B\leftrightarrow C$
+			- $120D: A\leftarrow B\rightarrow C, A\leftrightarrow C$
+			- $120U:  A\rightarrow B\leftarrow C, A\leftrightarrow C$
+			- $120C: A\rightarrow B\rightarrow C, A\leftrightarrow C$
+			- $210: A\rightarrow B\leftrightarrow C, A\leftrightarrow C$
+			- $300: A\leftrightarrow B\leftrightarrow C, A\leftrightarrow C$ _completamente connessa_
+		- usare la funzione `triad.census()` ritornerà una lista con il numero di triadi per ogni tipologia e utilizza i codici precedenti per differenziarle. 
+			- ed è appunto interessante analizzare in che contesto quali tipologie di triadi siano più comuni 
+		- Di solito le triadi di tipo _transitivo_ ($021D, 120D, 021U, 030T, 120U$) tendono ad essere più frequenti in reti dove è presente una sorta di gerarchia tra i nodi
+			- per esempio un certo nodo $B$ (datore di lavoro) da lo stipendio ai dipendenti $A,C$ e questa appunto è una triade $021D$. 
+		- ### N.B:
+			- paragonare reti diverse basandosi solo su che tipo di triadi presentano può essere fuorviante in quanto differenziandosi presentano caratteristiche diverse, come la densità e eventualmente la reciprocità.
+			- quindi bisogna sempre confrontarsi con reti che hanno i legami tra i nodi formatisi in maniera casuale da usare come _baseline_. 
+				- per farlo si usa sempre la funzione `cug.test()` 
+	- # Transitività:
+		- si può usare come misura riassuntiva del censimento delle triadi. 
+		- è definita come la proporzione delle triadi _transitive_, le quali sono tutte le triadi con nodi $i,j,k$ tali che:
+			- $i\to j \wedge j \to k \implies i\to k$  (anche detto un amico di un mio amico è un mio amico). 
+		- in _R_ per calcolare questa proporzione si usa la funzione `gtrans(data, measure)`
+			- `measure` è un opzione che imposterà il denominatore della proporzione:
+				- `weak`: dividerà le triadi _transitive_ per il numero di quelle potenzialmente intransitive
+					- $$\frac{\#Trans}{\#non-Trans}$$
+				- `strong`: divide il numero di triadi _transitive_ per tutte le triadi 
+					- $$\frac{\#Trans}{\#Triad}$$
+- # Link Utili:
+	- 

@@ -1,0 +1,58 @@
+---
+tags:
+  - TODO
+  - produzione
+aliases:
+data: "`2026-09-09 12:31`"
+---
+- # Grado (Degree):
+	- La misura che per ogni nodo ne indica i legami con altri e si divide in 2 tipologie ognuna con varie metodologie per calcolarle: 
+		- ## In-degree:
+			- per ogni nodo $i$ rappresenta il numero di collegamenti che vanno da un nodo $j\ne i$ verso il nodo $i$ 
+			- ### Calcolo:
+				- #### Matrice dei collegamenti:
+					- data la matrice $M$ dei collegamenti tra i nodi dove $M[i,j] = 1 \implies$ $i\to j$ si potrebbe calcolare l'_in-degree_ di ogni nodo facendo una sommatoria sulle colonne della matrice 
+						- `outdeg = colSums(M)` 
+				- #### igraph:
+					- Nella libreria `igraph` si usa la funzione `degree(graph, mode = "in")` in questo modo verrà restituita una lista dei nodi con il relativo _in-degree_
+		- ## Out-degree:
+			- per ogni nodi $i$ rappresenta il numero di collegamenti che partono da esso e incidono su di un altro nodo $j\ne i$ 
+			- ### Calcolo:
+				- #### Matrice dei collegamenti:
+					- data la matrice $M$ dei collegamenti tra i nodi dove $M[i,j] = 1 \implies$ $i\to j$ , si potrebbe calcolare l'_out-degree_ di ogni nodo facendo una sommatoria sulle righe della matrice 
+						- `outdeg = rowSums(M)` 
+				- #### igraph:
+					- nella libreria `igraph` si usa la funzione `degree(graph, mode = "out")` in questo modo verrà restituita una lista dei nodi con il relativo _out-degree_
+- # Densità (Density):
+	- Questa misura calcola il numero totale di archi presenti nella rete e lo divide per il numero possibile di archi.
+	- ## Calcolo:
+		- ### Manuale:
+			- prima si ricava il numero totale di archi nella rete
+				- `num_edges = gsize(Graph)`
+			- successivamente si ricava il numero di nodi della rete
+				- `num_nodes = gorder(Graph)`
+			- Si calcola poi il numero di archi possibili per la rete
+				- `num_dyads = (num_nodes * (num_nodes - 1))`
+			- infine si calcola la densità 
+				- `den = num_edges / num_dyads` 
+		- ### igraph:
+			- si usa la funzione della libreria chiamata `edge_density(graph)`
+- # Cammini (Walks):
+	- Un cammino è una sequenza di nodi e archi (in avanti o indietro) che connette un nodo $i$ e un nodo $j$ 
+	- ## Numero di cammini di una determinata lunghezza:
+		- si calcola il numero di cammini di una determinata lunghezza che collegano due nodi 
+		- ### Matrice:
+			- Si può usare la matrice dei collegamenti $M$ per calcolare questa misura.
+			- Si moltiplica la matrice per se stessa $n$ volte dove $n$ è la lunghezza dei cammini che si stanno cercando 
+				- `M2 = M %*% M` in questo modo si è ottenuta una matrice dove $M2[i,j]$ indica il numero di cammini di lunghezza $2$ che vanno dal nodo $i$ al nodo $j$ 
+- # Percorsi:
+	- sono sequenze di nodi e archi che iniziano con un nodo e finiscono con un altro, inoltre ad un percorso non è permesso di ripassare su di un nodo già visitato 
+	- ## Distanza:
+		- è definita come il percorso più corto tra due nodi nella rete 
+		- ### Calcolo:
+			- #### igraph:
+				- si usa la funzione `distances(graph, mode)`
+					- impostando `mode = "out"` si ottiene la distanza da $i$ a $j$ che è quella più richiesta di norma.
+				- il risultato della funzione è una 
+- # Link Utili:
+	- 

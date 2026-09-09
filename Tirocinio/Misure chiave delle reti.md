@@ -1,0 +1,53 @@
+---
+tags:
+  - tirocinio
+aliases:
+  - densità
+  - cammino
+  - cammini
+  - percorso
+  - vicinanza
+  - distanza media
+  - raggiungibilità
+  - diametro
+  - grado di un nodo
+data: "`2026-09-01 11:20`"
+---
+- # Grado di un nodo:
+	- è una misura che indica il numero di archi che incidono su di un nodo (_in-degree_ o _centralità_) oppure il numero di archi che partono da quel nodo (_out-degree_)
+	- calcolabile su _R_ con la funzione `degree(graph = class_netbyedgelist, mode = "out")` per cambiare il tipo di grado basta mettere `mode = "in"`
+- # Densità: ^97d343
+	- rappresenta il rapporto tra il numero di vertici $E$ e il numero di possibili vertici totali $|V|*(|V|-1)$
+	- calcolabile in _R_ con la funzione `edge_density()`
+- # Cammini: ^7102b4
+	- sono una qualsiasi sequenza di nodi e archi (sia in avanti che indietro) che connettono un nodo $i$ e uno $j$ per esempio:
+		- $i \to k \to m \to k \to j$ è un cammino da $i$ a $j$ di lunghezza $4$
+	- un oggetto di interesse però è per esempio il numero di cammini di una _determinata lunghezza_ che collegano _due determinati nodi_ 
+		- per calcolarlo basta elevare la matrice che indica i collegamenti tra i nodi alla $n-esima$ potenza dove $n$ è la lunghezza del cammino che si sta cercando 
+- # Percorsi, distanza e vicinanza ^849281
+	- è un cammino da $i$ a $j$ con $i\ne j$ e non è permesso visitare lo stesso nodo più di una volta, per esempio:
+		- $i\to k \to j$ è un percorso di lunghezza $2$ 
+	- ## Percorso più corto:
+		- di solito è di interesse conoscere qual è il percorso più corto, anche detto _distanza_, tra due nodi. 
+		- in _R_ si può usare la funzione `distance(graph, mode)` 
+			- con `mode = "out"` si calcola la distanza da $i$ a $j$ che di solito è quello che si cerca.
+			- ovviamente la distanza tra $i$ e $j$ con $i=j$ è $0$ 
+			- mentre se non esiste un cammino da $i$ a $j$ la loro distanza sarà $\inf$ 
+		- con la funzione `all_shortest_paths(graph, from, to)` si può calcolare tutti i percorsi più brevi tra due nodi.
+	- ## Distanza media:
+		- a volte è interessante riassumere la distanza di tutte le coppie $(i,j)$ di nodi, come conoscere la distanza media tra ogni coppia di nodi
+		- usando la funzione `mean()` escludendo ogni nodo non raggiungile posso calcolare questa distanza media.
+		- ### N.B:
+			- se non escludessi i nodi non raggiungibili tra loro, otterrei $\inf$ come risultato e ciò può anche essere utile perché mi dice che c'è almeno una coppia di nodi che tra di loro non sono raggiungibili. 
+	- ## Vicinanza:
+		- è una sorta di misura da usare quando ci sono nodi non raggiungibili tra loro, invertendo la matrice delle distanze tutti le coppie con $\inf$ avranno ora distanza $0$ e quindi si potranno aggiungere nel calcolo della media 
+		- il problema risulta nel fatto che la lettura non risulta molto intuitiva.
+- # Raggiungibilità:
+	- rappresenta se $i$ può raggiungere il nodo $j$ o meno attraverso un qualsiasi percorso 
+	- ciò è rappresentabile facilmente anche dalla _matrice delle distanze_, dove se la distanza tra due nodi è minore di $\inf$ allora esiste un percorso tra i due.
+	- in _R_ si può usare la funzione `ifelse()` con la condizione desiderata per, come dire, filtrare queste coppie di nodi e mettere `0` se $i$ non può raggiungere $j$ e `1` in caso contrario.
+- # Diametro:
+	- la _matrice delle distanze_ può essere usata anche per calcolare il _diametro_, ovvero la distanza più lunga tra due nodi qualsiasi della rete 
+	- come per il calcolo della media è necessario rimuovere dalla rilevazione il parametro $\inf$ 
+- # Link Utili:
+	- 
