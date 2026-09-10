@@ -15,6 +15,12 @@ data: "`2026-09-09 12:31`"
 						- `outdeg = colSums(M)` 
 				- #### igraph:
 					- Nella libreria `igraph` si usa la funzione `degree(graph, mode = "in")` in questo modo verrà restituita una lista dei nodi con il relativo _in-degree_
+				- #### tsna:
+					- per le reti dinamiche continue si usa la funzione `tSnaStats(nd, snafun = "degree", time.interval, aggregate.dur, cmode = "indegree")`
+						- `nd` rappresenta la rete dinamica di interesse 
+						- `time.interval` serve per dividere la rete in intervalli di tempo da visualizzare 
+						- `aggregate.dur` indica gli intervalli di tempo da considerare nel calcolo
+					- il risultato sarà una matrice con le colonne che rappresentano i nodi e le righe che rappresentano l'intervallo di tempo 
 		- ## Out-degree:
 			- per ogni nodi $i$ rappresenta il numero di collegamenti che partono da esso e incidono su di un altro nodo $j\ne i$ 
 			- ### Calcolo:
@@ -37,6 +43,14 @@ data: "`2026-09-09 12:31`"
 				- `den = num_edges / num_dyads` 
 		- ### igraph:
 			- si usa la funzione della libreria chiamata `edge_density(graph)`
+		- ### tsna:
+			- Per le reti dinamiche al posto che calcolare a mano ogni volta la densità per ogni rete si usa la funzione `tSnaStats(nd, snafun = "gden")` con `nd` che è la rete dinamica di riferimento.
+			- la funzione ritornerà la densità per ognuna delle reti di riferimento
+		- ### egor:
+			- per calcolare la densità delle reti _alter-alter_ negli _ego data network_ si usa la funzione `ego_density(en)`
+				- `en` rappresenta la lista delle reti degli _ego_ 
+			- il risultato è una tabella avente 2 colonne e $n$ righe dove $n$ è il numero di _ego_ nella rete
+				- le due colonne rappresentano l'_ego_ e la densità della sua rete _alter-alter_ 
 - # Cammini (Walks):
 	- Un cammino è una sequenza di nodi e archi (in avanti o indietro) che connette un nodo $i$ e un nodo $j$ 
 	- ## Numero di cammini di una determinata lunghezza:
@@ -45,14 +59,108 @@ data: "`2026-09-09 12:31`"
 			- Si può usare la matrice dei collegamenti $M$ per calcolare questa misura.
 			- Si moltiplica la matrice per se stessa $n$ volte dove $n$ è la lunghezza dei cammini che si stanno cercando 
 				- `M2 = M %*% M` in questo modo si è ottenuta una matrice dove $M2[i,j]$ indica il numero di cammini di lunghezza $2$ che vanno dal nodo $i$ al nodo $j$ 
-- # Percorsi:
+- # Percorsi (Paths):
 	- sono sequenze di nodi e archi che iniziano con un nodo e finiscono con un altro, inoltre ad un percorso non è permesso di ripassare su di un nodo già visitato 
-	- ## Distanza:
+	- ## Distanza (distance):
 		- è definita come il percorso più corto tra due nodi nella rete 
 		- ### Calcolo:
 			- #### igraph:
 				- si usa la funzione `distances(graph, mode)`
 					- impostando `mode = "out"` si ottiene la distanza da $i$ a $j$ che è quella più richiesta di norma.
-				- il risultato della funzione è una 
+				- il risultato della funzione è una matrice $M$ con
+					- $$\begin{cases} M[i,j]= n  &  \exists \ i\xrightarrow{n} j \\ M[i,j] = 0 & i=j \\ M[i,j] = \inf & \not \exists i \to j \end{cases}$$
+	- ## Distanza media:
+		- ### Calcolo:
+			- #### Matrice:
+				- Tramite la matrice ottenuta dalla funzione `distances()` si può calcolare la distanza media tra ogni coppia di nodi.
+				- siccome la diagonale della matrice è composta da $0$ la si sostituisce con dei `NA` per non intaccare la media. 
+					- `diag(M) = NA` 
+				- Inoltre serve ignorare tutte le celle che contengono $\inf$ in quanto renderebbero il risultato della media uguale a $\inf$ 
+					- `mean(M[M != Inf], na.rm = T)`, si usa `na.rm = T` per non contare tutte le celle che contengono degli `NA` 
+	- ## Vicinanza (closeness):
+		- Si usa quando nella rete sono presenti delle coppie non raggiungibili e si basa sull'inverso della _matrice delle distanze_ 
+		- ### Calcolo:
+			- #### Matrice:
+				- invertendo la matrice delle distanze si ottiene che tutti i valori $\inf$ diventano $0$ e in questo modo possono essere inseriti nel eventuale calcolo della media.
+					- `M_inv = 1 / M` 
+				- più il valore di `M_inv[i,j]` si avvicina ad $1$ più è corto il percorso che connette i due nodi, con `M_inv[i,j] = 0` si ha che non esiste un percorso da $i$ a $j$ 
+	- ## Raggiungibilità:
+		- Rappresenta la possibilità di esistenza di un percorso che collega due nodi $i$ e $j$ quindi si può anche dire che se la distanza tra due nodi è minore di $\inf$ allora uno può raggiungere l'altro.
+		- ### Calcolo:
+			- #### Matrice delle distanze:
+				- Se nella matrice delle distanze $M$ si prendono solo le celle con $M[i,j]< \inf$ allora si ottiene una matrice delle raggiungibilità:
+					- `M_reach= ifelse(M < Inf, yes = 1, no = 0)` 
+						- $M[i,j]=1$ se $i$ può raggiungere $j$, se non lo può raggiungere il valore sarà $0$ e $M[i,j]=NA$ se $i=j$ 
+	- ## Diametro:
+		- Rappresenta la lunghezza del percorso più lungo presente nella rete.
+		- ### Calcolo:
+			- #### Matrice delle distanze:
+				- Si prende la matrice delle distanze $M$ e si calcola il valore massimo presente ignorando le coppie di nodi non raggiungibili.
+					- `max(M[M != Inf], na.rm =T )`
+			- #### igraph:
+				- si può usare la funzione `diameter(graph)` 
+- # Omofilia:
+	- è una caratteristica che indica il livello di somiglianza in un insieme, nelle reti si misura analizzando le coppie di nodi con dei collegamenti e verificando quali attributi condividano.
+	- ### Calcolo:
+		- #### Reti ego:
+			- nelle reti ego è interessante guardare in che proporzione l'_ego_ condivida un determinato attributo con i suoi _alter_ 
+				- per farlo semplicemente si controllano gli attributi per ogni alter 
+					- `same = sum(ego.attr == alt.attr, na.rm = T)` senza considerare i dati mancanti 
+				- si calcola la proporzione:
+					- `prop_same = same / sum(!is.na(alt.attr))` sempre senza considerare i dati mancanti.
+				- infine se è l'_ego_ ad essere mancante lo si rende nullo 
+					- `prop_same[is.na(ego.attr)] = NA`
+			- il risultato è una tabella con 2 colonne (ego, proporzione) e tante righe quanti sono gli _ego_  
+		- #### A livello di rete:
+			- Invece di guardare solo le reti ego si guarda la rete a livello di coppie _ego-alter_ 
+			- si prende il data frame che avrà su ogni riga sia gli attributi dell'_ego_ che gli attributi dell'_alter_, quindi basta scegliere un determinato attributo su cui si vuole fare il confronto e si costruisce la tabella:
+				- `tab = table(ego_alter_dat[, ego.attr], ego_alter_dat[, alt.attr])` 
+			- la tabella risultante avrà sulla diagonale principale il numero di archi _ego-alter_ con lo stesso valore per quell'attributo.
+			- per calcolare la proporzione di coppie con lo stesso valore di un attributo basta dividere la somma della diagonale per la sommatoria di tutti gli elementi della tabella:
+				- `sum(diag(tab)) / sum(tab)` 
+- # Diversity:
+	- è una misura utilizzata per indicare quanto diversi siano gli _alters_ in una rete ego 
+	- ## Entropia di Shannon:
+		- La formula per calcolarla è `-1 * (sum(pi * log(pi)))` e `pi` è la proporzione di _alters_ per la categoria $i$ 
+		- più questo valore è alto più la rete _ego_ è "variegata" 
+		- per calcolarla in _R_ si usa la funzione:
+			- `alts_diversity_entropy(en, alt.attr, base)` 
+				- `base` indica la base del logaritmo con cui si esegue il calcolo
+			- il risultato è una tabella con 2 colonne (ego, entropia) e $n$ righe dove $n$ è il numero di _ego_ non mancanti. 
+- # Conta delle Diadi:
+	- le diadi sono delle coppie di nodi che presentano un percorso diretto (oppure nessun percorso) e ne esistono di 3 tipi 
+		- _Nulle_: la coppia di nodi non è collegata   
+		- _Asimmetriche_: il collegamento è unidirezionale, per la coppia di nodi $(i,j)$ o $i\to j$ oppure $j\to i$  
+		- _Mutue_: il collegamento tra i due nodi è bidirezionale, per la coppia $(i,j)$ $i\to j$ e $j\to i$
+	- in _R_ si usa la funzione `dyad.census(graph)` e il risultato è una tabella con il numero di ogni tipo di _diade_
+	- ## Reciprocità:
+		- rappresenta il numero di diadi _mutue_ 
+		- ### Calcolo manuale:
+			- si divide il numero di diadi _mutue_ per la somma tra il numero di diadi mutue e quelle asimmetriche.
+		- ### sna:
+			- si usa la funzione `grecip(net, measure = "dyadic.nonnull")` 
+				- `dyadic.nonnull` indica che si considerano solo le diadi non nulle 
+- # Conta delle Triadi:
+	- le Triadi sono triple di nodi e ne esistono $16$ varianti che rappresentano i vari pattern che possono formarsi tra quei 3 nodi.
+	- ## Calcolo:
+		- ### sna:
+			- si usa la funzione `triad.census(graph)` per ottenere una tabella con la conta di ognuno di quei tipi di triadi.
+	- ## Transitività:
+		- è la proporzione delle triadi che sono transitive, ovvero quelle triadi $(i,j,k)$ tali che $i\to j \wedge j\to k \implies i \to k$ 
+		- ### Calcolo:
+			- si usa la funzione `gtrans(graph, measure)` 
+				- `measure = "weak"` implica che si divide il numero di triadi transitive per il numero di quelle potenzialmente transitive ovvero tutte quelle che hanno $i\to j \wedge j\to k$ 
+				- `measure = "strong"` si divide il numero di triadi transitive per il numero totale di triadi.
+- # Connettività:
+	- ## A livello dei nodi:
+		- per una coppia di nodi $(i,j)$ rappresenta il numero di nodi necessari da rimuovere affinché $i$ non possa più raggiungere $j$ 
+		- ### Calcolo:
+			- #### igraph:
+				- si usa la funzione `vertex_disjoint_paths(graph, from, to)`
+	- ## A livello della rete:
+		- Si guarda l'intera rete e quindi rappresenta il numero minimo di nodi necessari da rimuovere affinché un qualsiasi nodo $i$ non riesca più a raggiungere un qualsiasi altro nodo $j$ 
+			- ### Calcolo:
+				- #### igraph:
+					- si usa la funzione `vertex_connectivity(graph)` e bisogna stare attenti e rimuovere i nodi isolati altrimenti il risultato sarà sempre $0$ in quanto non ci sarebbe bisogno di rimuovere nessun nodo. 
 - # Link Utili:
 	- 
