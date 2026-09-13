@@ -162,5 +162,62 @@ data: "`2026-09-09 12:31`"
 			- ### Calcolo:
 				- #### igraph:
 					- si usa la funzione `vertex_connectivity(graph)` e bisogna stare attenti e rimuovere i nodi isolati altrimenti il risultato sarà sempre $0$ in quanto non ci sarebbe bisogno di rimuovere nessun nodo. 
-- # Link Utili:
+- # Centralità:
+	- è un insieme di misure che rappresentano quali nodi sono i più importanti della rete.
+	- ## Betweenness:
+		- è una misura che indica il numero di percorsi più brevi che passano per uno specifico nodo della rete 
+		- ### Calcolo:
+			- #### igraph:
+				- si calcola usando la funzione `betweenness(graph, normalized)`
+					- `normalized` determina se il risultato debba essere normalizzato dal numero di coppie di nodi 
+	- ## Autovettore:
+		- da maggior valore, quindi peso, ai nodi con più collegamenti ad altri nodi altamente collegati, esistono le versioni, _in_ e _out_, ma per molti tipi di dati si usa la versione non orientata 
+		- ### Calcolo:
+			- #### igraph:
+				- Se la rete è orientata la si rende non orientata con la funzione `as_undirected(graph, mode)`
+					- `mode` serve per dire in che modo trasformare gli archi diretti in indiretti. 
+				- si prosegue con la funzione `eigen_centrality(graph_und)` che restituisce come risultato un oggetto con varie informazioni e per ricavare il vettore basta fare riferimento al campo `$vector` 
+	- ## Bonacich power centrality:
+		- generalizza la _centralità autovettoriale_ permettendo di aggiungere un parametro di attenuazione che se positivo e molto basso agisce come con gli autovettori, invece se lo si imposta negativo fa si che essere collegati a nodi altamente connessi diminuisce il "punteggio" di quel nodo
+			- https://metricgate.com/docs/network-katz-bonacich-power/
+		- ### Calcolo:
+			- #### igraph:
+				- si usa la funzione `power_centrality(graph, exponent)` che restituirà il valore di centralità per ogni nodo della rete. 
+					- `exponent` rappresenta il parametro di attenuazione.
+- # Centralizzazione:
+	- parametro che cerca di riassumere la distribuzione delle varie misure di centralità della rete, se la rete risulta altamente centralizzata significa che è anche molto fragile in quanto la maggior parte dei collegamenti è incentrata su un piccolo gruppo di nodi, che se rimossi ridurrebbero di molto la _connettività_ della rete.
+	- ## Calcolo:
+		- si può basare su diverse misure di centralità e si usano le funzioni della libreria `igraph` 
+			- ### Grado:
+				- si usa la funzione `centr_degree(graph, mode, loops)` 
+					- `mode` serve per indicare se interessa _out-_ o _in-_ _degree_
+					- `loops` serve per indicare se siano presenti dei _cappi_ o _cicli_
+			- ### Vicinanza:
+				- `centr_clo(graph_noisolates, normalized)`
+					- in questo caso serve che non siano presenti i nodi isolati altrimenti il valore della _vicinanza_ diventa $\inf$ e quindi il valore della centralizzazione diventa `NaN` 
+			- ### Autovettore:
+				- `centr_eigen(graph, directed, normalized)`
+					- `directed` usato per indicare se la rete sia orientata.
+			- ### Betweenness:
+				- `centr_betw(graph, directed, normalize)`
+		- tutte le funzioni precedenti restituiscono un oggetto del quale serve selezionale il campo `$centralization` 
+- # Tau:
+	- Questa misura cerca di catturare come dei micro-processi si aggreghino per formare diverse macro-strutture. 
+	- si fanno delle ipotesi, ovvero si stima in che quantità certi tipi di triadi debbano essere presenti e in questo modo si otterrà una diversa struttura al livello superiore 
+	- ## Calcolo:
+		- si mettono a confronto il conto delle _triadi_ presenti con uno _ipotizzato_ in una rete generata in maniera casuale con lo stesso conto dei vari tipi di _diadi_ 
+		- il risultato in sostanza è una deviazione standard dal valore ipotizzato 
+		- si usa la funzione implementata in https://raw.githubusercontent.com/JeffreyAlanSmith/Integrated_Network_Science/master/R/tau_functions.R chiamata `tau_stat_function(network, weight.vector)`
+			- `wieght.vector` è una lista che rappresenta quali tipi di triadi sono nell'ipotesi.
+		- il risultato è il valore _tau_, della rete sotto quell'ipotesi, e un data frame con le triadi osservate e quelle previste. 
+			- più il valore _tau_ è alto e più esso avvalora l'ipotesi fatta in quanto si sta dando più peso alle triadi che sono più presenti  
+- # Matrice di Equivalenza strutturale:
+	- Una misura che indica quanto ogni nodo $i$ sia simile al nodo $j$ con $i\ne j$, prendendo come riferimento diverse reti aventi tutte gli stessi nodi ma collegamenti diversi.
+	- più i pattern di collegamento tra le varie reti sono simili più la distanza quei tra due nodi sarà bassa.  
+	- ## Calcolo:
+		- si usa la funzione di `igraph` `dist(mat, method)`
+			- `mat` è la matrice avente $n$ righe e $n*m$ colonne dove $n$ è il numero di nodi e $m$ è il numero di reti diverse, in sostanza questa matrice è formata dalle _matrici dei collegamenti_ delle reti _standardizzate_ messe insieme 
+			- `method` è il tipo di metodo usato per quantificare l'equivalenza dei nodi 
+		- il risultato è una matrice $n*n$ con i valori di distanza dei nodi. 
+ - # Link Utili:
 	- 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tirocinio/Dati di rete.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,11 +28,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Dati di rete"
+              "title": "Homepage"
             }
           },
           {
-            "id": "f0d3945cd0750697",
+            "id": "16583f698efffaee",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -311,11 +311,11 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Tirocinio/Dati di rete.md",
-    "Domande.md",
+    "Homepage.md",
     "Tirocinio/Indici delle reti.md",
     "Tirocinio/Centralità e gerarchia di una rete.md",
-    "Homepage.md",
+    "Tirocinio/Dati di rete.md",
+    "Domande.md",
     "Tirocinio/Misure chiave delle reti.md",
     "Tirocinio/Modelli statistici per le reti.md",
     "Tirocinio/Posizioni e ruoli.md",
