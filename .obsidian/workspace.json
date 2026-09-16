@@ -13,31 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Homepage"
-            }
-          },
-          {
-            "id": "16583f698efffaee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tirocinio/Indici delle reti.md",
+                "file": "Tirocinio/produzione/Indici delle reti.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -55,8 +31,7 @@
               "title": "Indici delle reti"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -311,17 +286,25 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "Tirocinio/produzione/Visualizzare le Network data.md",
+    "Tirocinio/produzione/Pasted image 20260915165619.png",
+    "Tirocinio/produzione/Pasted image 20260915165709.png",
+    "Tirocinio/produzione",
+    "Tirocinio/Algoritmi di visualizzazione.R",
     "Homepage.md",
-    "Tirocinio/Indici delle reti.md",
-    "Tirocinio/Centralità e gerarchia di una rete.md",
-    "Tirocinio/Dati di rete.md",
+    "Tirocinio/produzione/Pasted image 20260915171224.png",
+    "Tirocinio/produzione/Pasted image 20260915171026.png",
+    "Tirocinio/produzione/Pasted image 20260915170652.png",
+    "Tirocinio/Coesione e Comunità nelle reti.md",
+    "Tirocinio/produzione/Indici delle reti.md",
     "Domande.md",
+    "Tirocinio/Dati di rete.md",
+    "Tirocinio/Analisi delle corrispondenze.md",
+    "Tirocinio/Centralità e gerarchia di una rete.md",
     "Tirocinio/Misure chiave delle reti.md",
     "Tirocinio/Modelli statistici per le reti.md",
     "Tirocinio/Posizioni e ruoli.md",
-    "Tirocinio/Analisi delle corrispondenze.md",
     "Tirocinio/Reti a due modalità.md",
-    "Tirocinio/Coesione e Comunità nelle reti.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Calcolo combinatorio.md",
     "Tirocinio/Dati di rete mancanti.md",
     "Tirocinio/Diadi e triadi.md",
@@ -342,21 +325,12 @@
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Catene di Markov.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Comportamento asintotico delle catene di Markov.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Varianza.md",
     "immagini/Pasted image 20260804183403.png",
-    "immagini/Pasted image 20260824205214.png",
-    "immagini/Pasted image 20260824182812.png",
-    "immagini/Pasted image 20260822174556.png",
-    "immagini/Pasted image 20260805123243.png",
-    "immagini/Pasted image 20260730184009.png",
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
     "0-Mostarda/Terzo Anno",
     "0-Mostarda/Secondo Anno",
-    "0-Mostarda/Primo Anno",
-    "3-Terzo anno/Informatica teorica/Complessità/Oracoli",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",

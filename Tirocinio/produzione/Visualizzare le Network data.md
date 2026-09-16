@@ -1,0 +1,32 @@
+---
+tags:
+  - TODO
+  - produzione
+aliases:
+data: "`2026-09-14 16:40`"
+---
+- # Adjusted spring layout:
+	- Preso da [CompositeView: A Network-Based Visualization Tool](https://www.mdpi.com/2504-2289/6/2/66) 
+	- è un tipo di layout per la visualizzazione di reti dove sono presenti due tipi di nodo:
+		- _source_
+		- _target_
+	- in pratica si parla di _reti bimodali_ 
+	- tutti i collegamenti sono di tipo _source-target_ quindi i nodi target non avranno mai un arco che li collega.
+	- il problema che vuole risolvere è che durante la visualizzazione di queste reti, i nodi _target_ finiscono per rimanere in mezzo a tutti gli altri nodi _source_ e in questo modo si finisce per non avere un'interpretazione precisa di come siano costituiti i cluster di nodi _source_ 
+	- ## Immagini:
+		- ![[Pasted image 20260915165619.png|459]]
+			- tutti questi layout riportano questo problema a vari livelli
+		- ![[Pasted image 20260915165709.png|561]]
+			- qua si può invece notare come la suddivisione dei cluster di nodi _source_ è abbastanza chiara nonostante alcuni nodi _target_ condividano molti dei nodi _source_ e questo porta a non avere un'idea chiarissima ma comunque un netto miglioramento rispetto agli altri.
+	- ## Algoritmo:
+		- Si parte isolando i nodi _target_ e simulandoli con l'algoritmo _FR_ (Fruchterman-Reingold) ed essi saranno collegati tramite degli archi artificiali che si basano sulla presenza o meno di collegamenti ad un insieme di nodi _source_ condivisi. Quindi se 2 _target_ sono entrambi collegati ad uno stesso insieme di nodi _source_ allora essi saranno collegati da uno di questi archi artificiali.
+			- il peso associato a questi archi, che determina la "forza di attrazione" che collega due nodi, è inversamente proporzionale al numero di nodi _source_ connessi un insieme condiviso di nodi _target_.
+			- ![[Pasted image 20260915170652.png]]
+		- si procede poi aggiungendo i nodi _source_ e collegandoli ai relativi _target_ rimuovendo gli _archi artificiali_ messi in precedenza  
+			- tutti i nodi _source_ che condividono dei _target_ sono piazzati intorno al _centroide_ di questi target seguendo una _distribuzione gaussiana_ 
+			- ![[Pasted image 20260915171026.png]]
+		- Infine si esegue nuovamente l'algoritmo _FR_ con un po' meno di iterazioni per evitare un lungo tempo di elaborazione andando così però a minare l'interpretabilità.
+			- ![[Pasted image 20260915171224.png]]
+		- https://github.com/pathology-dynamics/composite_view/tree/main
+- # Link Utili:
+	- 

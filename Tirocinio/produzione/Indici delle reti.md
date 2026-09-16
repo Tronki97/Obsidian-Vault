@@ -219,5 +219,11 @@ data: "`2026-09-09 12:31`"
 			- `mat` è la matrice avente $n$ righe e $n*m$ colonne dove $n$ è il numero di nodi e $m$ è il numero di reti diverse, in sostanza questa matrice è formata dalle _matrici dei collegamenti_ delle reti _standardizzate_ messe insieme 
 			- `method` è il tipo di metodo usato per quantificare l'equivalenza dei nodi 
 		- il risultato è una matrice $n*n$ con i valori di distanza dei nodi. 
+- # Indici vari:
+	- ## Jaccard:
+	- ## Sorensen:
+	- ## Common-neighbor:
+		- CAR-based 
+	- 
  - # Link Utili:
 	- 
