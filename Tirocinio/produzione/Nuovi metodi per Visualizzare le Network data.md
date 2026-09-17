@@ -1,0 +1,72 @@
+---
+tags:
+  - TODO
+  - produzione
+aliases:
+data: "`2026-09-14 16:40`"
+---
+- # Adjusted spring layout:
+	- Preso da [CompositeView: A Network-Based Visualization Tool](https://www.mdpi.com/2504-2289/6/2/66) 
+	- è un tipo di layout per la visualizzazione di reti dove sono presenti due tipi di nodo:
+		- _source_
+		- _target_
+	- in pratica si parla di _reti bimodali_ 
+	- tutti i collegamenti sono di tipo _source-target_ quindi i nodi target non avranno mai un arco che li collega.
+	- il problema che vuole risolvere è che durante la visualizzazione di queste reti, i nodi _target_ finiscono per rimanere in mezzo a tutti gli altri nodi _source_ e in questo modo si finisce per non avere un'interpretazione precisa di come siano costituiti i cluster di nodi _source_ 
+	- ## Immagini:
+		- ![[Pasted image 20260915165619.png|459]]
+			- tutti questi layout riportano questo problema a vari livelli
+		- ![[Pasted image 20260915165709.png|561]]
+			- qua si può invece notare come la suddivisione dei cluster di nodi _source_ è abbastanza chiara nonostante alcuni nodi _target_ condividano molti dei nodi _source_ e questo porta a non avere un'idea chiarissima ma comunque un netto miglioramento rispetto agli altri.
+	- ## Algoritmo:
+		- Si parte isolando i nodi _target_ e simulandoli con l'algoritmo _FR_ (Fruchterman-Reingold) ed essi saranno collegati tramite degli archi artificiali che si basano sulla presenza o meno di collegamenti ad un insieme di nodi _source_ condivisi. Quindi se 2 _target_ sono entrambi collegati ad uno stesso insieme di nodi _source_ allora essi saranno collegati da uno di questi archi artificiali.
+			- il peso associato a questi archi, che determina la "forza di attrazione" che collega due nodi, è inversamente proporzionale al numero di nodi _source_ connessi un insieme condiviso di nodi _target_.
+			- ![[Pasted image 20260915170652.png]]
+		- si procede poi aggiungendo i nodi _source_ e collegandoli ai relativi _target_ rimuovendo gli _archi artificiali_ messi in precedenza  
+			- tutti i nodi _source_ che condividono dei _target_ sono piazzati intorno al _centroide_ di questi target seguendo una _distribuzione gaussiana_ 
+			- ![[Pasted image 20260915171026.png]]
+		- Infine si esegue nuovamente l'algoritmo _FR_ con un po' meno di iterazioni per evitare un lungo tempo di elaborazione andando così però a minare l'interpretabilità.
+			- ![[Pasted image 20260915171224.png]]
+		- https://github.com/pathology-dynamics/composite_view/tree/main
+- # TrammelGraph:
+	- https://link.springer.com/article/10.1007/s12650-020-00706-2
+	- Una tecnica che riesca a illustrare la struttura generale di un grafo (come fa una normale visualizzazione _nodi-link_) ed elimini il problema del disordine visivo causato dalla sovrapposizione dei nodi e archi (come fa la rappresentazione tramite _matrice di adiacenza_), questo design si basa su [UnTangle Map](https://ieeexplore.ieee.org/abstract/document/7091015) che usa una rete triangolare per ancorare un'astrazione di un grafo dettagliato.
+		- ogni vertice di questa rete triangolare rappresenta un nodo del grafo
+		- I nodi con con forti connessioni tra di loro vengono posizionati vicini in questa rete triangolare 
+		- alcuni archi vengono rimossi e quelli che rimangono vengono posizionati lungo gli archi di questa rete 
+	- il layout finale risulta simile ad uno _nodi-link_ ma non presenta l'accavallamento degli archi o sovrapposizione dei nodi e soprattutto mantiene gli elementi chiave strutturali del grafo originale  
+	- ## Algoritmo:
+		- si divide in due step principali:
+		- ### Graph embedding:
+			- Si calcola un vettore delle feature che rappresenta ogni nodo del grafo $G(E,V)$ usando una tecnica di embedding per grafi.
+				- questi vettori delle feature devono riflettere le connessioni dei nodi del grafo originale 
+				- le coppie di nodi che sono più connesse vengono rappresentate da vettori con distanze minori tra di loro nello spazio delle feature.
+			- si utilizza _Node2Vec_ per proiettare ogni nodo del grafo in un spazio delle feature $k$-dimensionale 
+				- le distanze euclidee tra i vettori di ogni nodi rappresentano la forza dei collegamenti tra le coppie di nodi 
+			- nello specifico un nodo $u$ viene proiettato in base ai suoi vicini usando il _modello skip-gram_ che punta a massimizzare la likelihood $\prod_{n_{i}\in N(u)}\mathbb{P}(n_{i}|u)$  di un insieme di vicini $N(u)$ osservati per il nodo $u$. La funzione obiettivo è definita come:
+				- $$\max \sum_{u\in V}\sum_{n_{i}\in N(u)}\log(\mathbb{P}(n_{i}|u))$$
+				- $P(n_{i}|u)$ è determinata dal prodotto scalare delle feature usando una è parametrizzazione softmax:
+					- $$\mathbb{P}(n_{i}|u)=\frac{\exp (<f_{n_{i}} , \ f_{u}>)}{\sum\limits_{v\in V}\exp(<f_{v}, f_{u}>)}$$
+						- $f_{v}$ è il vettore delle feature del nodo $v$ 
+						- i vicini di $u$ ovvero $N(u)$ vengono definiti da un algoritmo _$l$-step random walk_
+			- #### l-step random walk:
+				- per un nodo $u$ consiste in $l$ nodi; l'$i$-esimo nodo visitato durante il cammino viene identificato con $c_{i}$ e $c_{0}=u$, la probabilità di visitare $c_{i}$ è data da:
+					- $$\mathbb{P}(c_{i} = x | c_{i-1}=v, c_{i-2}=t)=\begin{cases} \pi_{vx} & (v,x) \in E \\ 0 & altrimenti\end{cases}$$
+						- $\pi_{vx}$ è la probabilità di transizione tra $v$ e $x$ che viene normalizzata dalla costante $Z$; la transizione e ulteriormente influenzata dal peso degli archi:
+							- $$\pi(v,x)=w_{v,x}*\alpha(t,x,p,q)$$
+								- $w_{v,x}$ è il peso dell'arco 
+								- $$\alpha(t,x,p,q)=\begin{cases} \frac{1}{p} & d(t,x)=0 \\ 1 &d(t,x)=1 \\ \frac{1}{q}&d(t,x)=2 \end{cases}$$
+									- $d()$ è la distanza tra due nodi 
+									- $p,q$ rappresentano una preferenza per l'attraversamento durante le random walk (rispettivamente _breadth-first_ e _depth-first_) in questo caso impostate a $p=1$ e $1=0.5$ 
+			- dopo aver cercato ogni vicino di ogni nodo del grafo, la funzione obiettivo viene ottimizzata usando l'_ascesa del gradiente stocastica_ per identificare il vettore $k$-dimensionale $f$ per ogni nodo 
+		- ### Structure abstraction:
+			- produce una rappresentazione astratta del grafo originale.
+			- si mappa ogni nodo del grafo alla location del vertice nella rete triangolare 
+				- questa mappatura sfrutta i vettori delle feature ottenuti nello step precedente per assicurarsi che i nodi più connessi siano più vicini 
+- # Layout non nuovi:
+	- OpenOrd
+	- Force Atlas 2
+	- Yifan Hu 
+	- Radial Axis
+- # Link Utili:
+	- 

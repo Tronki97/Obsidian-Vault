@@ -184,6 +184,16 @@ data: "`2026-09-09 12:31`"
 			- #### igraph:
 				- si usa la funzione `power_centrality(graph, exponent)` che restituirà il valore di centralità per ogni nodo della rete. 
 					- `exponent` rappresenta il parametro di attenuazione.
+	- ## Page rank:
+		- Una formula sviluppata da google per calcolare la centralità di un nodo (_pagina_) in base all'importanza dei nodi che puntano ad essa.
+		- ### Calcolo:
+			- la formula del page rank è:
+				- $$PR(i)=\frac{{1-d}}{N}+ d*\sum\limits_{j\in M(i)} \frac{{PR(j)}}{L(j)}$$
+					- $PR(i)$ è il page rank del nodo $i$ 
+					- $d$ è il _fattore di attenuazione_ (di solito $d=0.85$) 
+					- $N$ numero di nodi della rete.
+					- $M(i)$ è l'insieme dei nodi della rete che puntano ad $i$  
+					- $L(j)$ è il numero di archi in uscita da $j$ (_out-degree_ di $j$)
 - # Centralizzazione:
 	- parametro che cerca di riassumere la distribuzione delle varie misure di centralità della rete, se la rete risulta altamente centralizzata significa che è anche molto fragile in quanto la maggior parte dei collegamenti è incentrata su un piccolo gruppo di nodi, che se rimossi ridurrebbero di molto la _connettività_ della rete.
 	- ## Calcolo:

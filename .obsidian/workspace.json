@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "Indici delle reti"
             }
+          },
+          {
+            "id": "7d167ff1767bc231",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Nuovi metodi per Visualizzare le Network data"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -284,9 +309,14 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "7d167ff1767bc231",
   "lastOpenFiles": [
-    "Tirocinio/produzione/Visualizzare le Network data.md",
+    "Tirocinio/produzione/Indici delle reti.md",
+    "Tirocinio/produzione/tesi analizzate/CompositeView-Adjusted Spring Layout.pdf",
+    "Tirocinio/produzione/tesi analizzate",
+    "Tirocinio/Misure chiave delle reti.md",
+    "Domande.md",
+    "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
     "Tirocinio/produzione/Pasted image 20260915165619.png",
     "Tirocinio/produzione/Pasted image 20260915165709.png",
     "Tirocinio/produzione",
@@ -296,12 +326,9 @@
     "Tirocinio/produzione/Pasted image 20260915171026.png",
     "Tirocinio/produzione/Pasted image 20260915170652.png",
     "Tirocinio/Coesione e Comunità nelle reti.md",
-    "Tirocinio/produzione/Indici delle reti.md",
-    "Domande.md",
     "Tirocinio/Dati di rete.md",
     "Tirocinio/Analisi delle corrispondenze.md",
     "Tirocinio/Centralità e gerarchia di una rete.md",
-    "Tirocinio/Misure chiave delle reti.md",
     "Tirocinio/Modelli statistici per le reti.md",
     "Tirocinio/Posizioni e ruoli.md",
     "Tirocinio/Reti a due modalità.md",
@@ -329,8 +356,6 @@
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
-    "0-Mostarda/Terzo Anno",
-    "0-Mostarda/Secondo Anno",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",
