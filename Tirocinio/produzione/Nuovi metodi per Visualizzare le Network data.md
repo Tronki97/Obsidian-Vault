@@ -43,7 +43,7 @@ data: "`2026-09-14 16:40`"
 				- le coppie di nodi che sono più connesse vengono rappresentate da vettori con distanze minori tra di loro nello spazio delle feature.
 			- si utilizza _Node2Vec_ per proiettare ogni nodo del grafo in un spazio delle feature $k$-dimensionale 
 				- le distanze euclidee tra i vettori di ogni nodi rappresentano la forza dei collegamenti tra le coppie di nodi 
-			- nello specifico un nodo $u$ viene proiettato in base ai suoi vicini usando il _modello skip-gram_ che punta a massimizzare la likelihood $\prod_{n_{i}\in N(u)}\mathbb{P}(n_{i}|u)$  di un insieme di vicini $N(u)$ osservati per il nodo $u$. La funzione obiettivo è definita come:
+			- nello specifico un nodo $u$ viene proiettato in base ai suoi vicini usando il _modello skip-gram_ che punta a massimizzare la likelihood $\prod_{n_{i}\in N(u)}\mathbb{P}(n_{i}|u)$  di un insieme di vicini $N(u)$ osservati per il nodo $u$. La _funzione obiettivo_ è definita come:
 				- $$\max \sum_{u\in V}\sum_{n_{i}\in N(u)}\log(\mathbb{P}(n_{i}|u))$$
 				- $P(n_{i}|u)$ è determinata dal prodotto scalare delle feature usando una è parametrizzazione softmax:
 					- $$\mathbb{P}(n_{i}|u)=\frac{\exp (<f_{n_{i}} , \ f_{u}>)}{\sum\limits_{v\in V}\exp(<f_{v}, f_{u}>)}$$
@@ -62,7 +62,31 @@ data: "`2026-09-14 16:40`"
 		- ### Structure abstraction:
 			- produce una rappresentazione astratta del grafo originale.
 			- si mappa ogni nodo del grafo alla location del vertice nella rete triangolare 
-				- questa mappatura sfrutta i vettori delle feature ottenuti nello step precedente per assicurarsi che i nodi più connessi siano più vicini 
+				- questa mappatura sfrutta i vettori delle feature ottenuti nello step precedente per assicurarsi che i nodi più connessi siano più vicini e quelli non raggiungibili tra di loro rimangano sconnessi
+			- si usa un algoritmo greedy per ottenere una soluzione approssimata:
+				- si piazza il nodo con il _grado_ più alto al centro della rete, si piazza poi iterativamente ogni nodo $v_{i}$ rimanente uno ad uno in questa rete triangolare cercando di massimizzare la funzione obiettivo:
+					- $$\arg \max_{v_{i}} \  \alpha* \frac{1}{\sum\limits_{(v_{j},v_{k})\in E_{i}} \frac{1}{d^{2}_{p}(v_{j},v_{k})}}* \sum\limits_{(v_{j},v_{k})\in E_{i}} \frac{c_{jk}}{d^{2}_{p}(v_{j},v_{k})}+(1-\alpha)* \frac{1}{|T|}*\sum\limits_{t\in T}c_{t}$$
+						- $c_{jk}$ è la _correlazione di Pearson_ tra i nodi $v_{j}$ e $v_{k}$ calcolata in basa ai loro vettori delle feature 
+						- $d^{2}_{p}(v_{j},v_{k})$ rappresenta la distanza tra $v_{j}$ e $v_{k}$ nella rete triangolare 
+						- $E_{i}$ rappresenta tutti i percorsi che lunghi massimo $N$ che partono da un nodo $v_{i}$ 
+						- $T$ è l'insieme dei triangoli nella rete 
+						- $t\in T$ è uno dei triangoli della rete.
+						- $$c_{t}=\frac{c_{ij}+c_{ik}+c_{jk}}{3}$$
+							- è quindi la correlazione media delle coppie che formano un triangolo 
+					- $$\alpha* \frac{1}{\sum\limits_{(v_{j},v_{k})\in E_{i}} \frac{1}{d^{2}_{p}(v_{j},v_{k})}}* \sum\limits_{(v_{j},v_{k})\in E_{i}} \frac{c_{jk}}{d^{2}_{p}(v_{j},v_{k})}$$
+						- questa parte cerca di massimizzare il valore medio delle correlazione delle coppie di vertici, pesati rispetto alla loro distanza. Di conseguenza i nodi più connessi nel grafo originale saranno piazzati vicini. 
+					- $$(1-\alpha)* \frac{1}{|T|}*\sum\limits_{t\in T}c_{t}$$
+						- serve a massimizzare la correlazione media dei triangoli nella rete, cosicché i nodi disconnessi nel grafo originale vengano tenuti separati 
+					- $\alpha$ è un peso che controlla come le due parti della funzione obiettivo vengano combinate; in questo caso è impostato a $0.5$ 
+		- ### Complessità:
+			- entrambi i passaggi dell'algoritmo si svolgono in $O(n)$ quindi la complessità finale risulta $O(n)$ 
+	- ## Risultati:
+		- ![[Pasted image 20260918130506.png|783]]
+			- esempio contenuto, con 11 nodi 
+		- ![[Pasted image 20260918130655.png]]
+			- esempio con $50$ nodi.
+	- ## Motivazioni:
+		- questo layout, siccome presenta limitazioni, come la necessaria cancellazione di alcuni archi, causati dal fatto che ogni vertice della rete può avere al massimo 6 archi, è utile principalmente per comparare diverse reti più che per analizzarle singolarmente nelle caratteristiche a livello dei nodi.  
 - # Layout non nuovi:
 	- OpenOrd
 	- Force Atlas 2

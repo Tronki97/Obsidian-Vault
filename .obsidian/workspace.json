@@ -13,30 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tirocinio/produzione/Indici delle reti.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Indici delle reti"
-            }
-          },
-          {
-            "id": "7d167ff1767bc231",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
                 "mode": "source",
                 "source": false,
@@ -53,6 +29,30 @@
               },
               "icon": "lucide-file",
               "title": "Nuovi metodi per Visualizzare le Network data"
+            }
+          },
+          {
+            "id": "1ba3884fbd6153d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tirocinio/produzione/Indici delle reti.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Indici delle reti"
             }
           }
         ],
@@ -309,22 +309,25 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "7d167ff1767bc231",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
+    "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
+    "Homepage.md",
     "Tirocinio/produzione/Indici delle reti.md",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260915165619.png",
+    "Tirocinio/produzione/immagini produzione",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260918130655.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260918130506.png",
     "Tirocinio/produzione/tesi analizzate/CompositeView-Adjusted Spring Layout.pdf",
     "Tirocinio/produzione/tesi analizzate",
     "Tirocinio/Misure chiave delle reti.md",
     "Domande.md",
-    "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
-    "Tirocinio/produzione/Pasted image 20260915165619.png",
-    "Tirocinio/produzione/Pasted image 20260915165709.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260915165709.png",
     "Tirocinio/produzione",
     "Tirocinio/Algoritmi di visualizzazione.R",
-    "Homepage.md",
-    "Tirocinio/produzione/Pasted image 20260915171224.png",
-    "Tirocinio/produzione/Pasted image 20260915171026.png",
-    "Tirocinio/produzione/Pasted image 20260915170652.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260915171224.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260915171026.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260915170652.png",
     "Tirocinio/Coesione e Comunità nelle reti.md",
     "Tirocinio/Dati di rete.md",
     "Tirocinio/Analisi delle corrispondenze.md",
@@ -340,7 +343,6 @@
     "Tirocinio",
     "immagini/Pasted image 20260829193923.png",
     "immagini/Pasted image 20260829184341.png",
-    "immagini/Pasted image 20260829183315.png",
     "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
     "Pasted image 20260827185318.png.~tmp",
     "latexsheet-a4.pdf",
@@ -352,10 +354,8 @@
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Catene di Markov.md",
-    "immagini/Pasted image 20260804183403.png",
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
-    "3-Terzo anno/Fondamenti di cybersecurity/Buffer Overflow",
     "Senza nome.canvas",
     "Untitled.canvas",
     "template/Senza nome.canvas",
