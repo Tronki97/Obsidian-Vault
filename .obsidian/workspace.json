@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
+                "file": "Homepage.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Nuovi metodi per Visualizzare le Network data"
-            }
-          },
-          {
-            "id": "1ba3884fbd6153d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tirocinio/produzione/Indici delle reti.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Indici delle reti"
+              "title": "Homepage"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +86,8 @@
               "title": "Segnalibri"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -131,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Homepage.md",
+                "file": "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -269,16 +245,6 @@
               "icon": "lucide-file",
               "title": "Linguaggi di Programmazione"
             }
-          },
-          {
-            "id": "81d52433cf94c005",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Coda di note da rivedere"
-            }
           }
         ],
         "currentTab": 1
@@ -297,7 +263,6 @@
       "canvas:Crea nuova lavagna": false,
       "templates:Inserisci modello": false,
       "command-palette:Apri riquadro comandi": false,
-      "markdown-importer:Apri importazione Markdown": false,
       "audio-recorder:Avvia/ferma registrazione": false,
       "darlal-switcher-plus:Open in Headings Mode": false,
       "darlal-switcher-plus:Open Symbols for the active editor": false,
@@ -311,23 +276,29 @@
   },
   "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
     "Homepage.md",
+    "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
+    "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Espressività e training dei modelli.md",
+    "Pasted image 20261006171902.png",
+    "come procedere per l'elaborato del tirocinio..md",
     "Tirocinio/produzione/Indici delle reti.md",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260924160641.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260923180100.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260924132318.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260924125255.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260924125111.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260924124624.png",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20260923180119.png",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260915165619.png",
     "Tirocinio/produzione/immagini produzione",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260918130655.png",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260918130506.png",
     "Tirocinio/produzione/tesi analizzate/CompositeView-Adjusted Spring Layout.pdf",
     "Tirocinio/produzione/tesi analizzate",
     "Tirocinio/Misure chiave delle reti.md",
     "Domande.md",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260915165709.png",
     "Tirocinio/produzione",
     "Tirocinio/Algoritmi di visualizzazione.R",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260915171224.png",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260915171026.png",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260915170652.png",
     "Tirocinio/Coesione e Comunità nelle reti.md",
     "Tirocinio/Dati di rete.md",
     "Tirocinio/Analisi delle corrispondenze.md",
@@ -339,10 +310,7 @@
     "Tirocinio/Dati di rete mancanti.md",
     "Tirocinio/Diadi e triadi.md",
     "Tirocinio/Dati di rete Ego.md",
-    "immagini/Pasted image 20260827185318.png",
     "Tirocinio",
-    "immagini/Pasted image 20260829193923.png",
-    "immagini/Pasted image 20260829184341.png",
     "3-Terzo anno/Ingegneria del software/software development/sviluppo di un sistema software in python.md",
     "Pasted image 20260827185318.png.~tmp",
     "latexsheet-a4.pdf",
@@ -352,8 +320,6 @@
     "2-Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
     "0-Mostarda/Terzo Anno/Computational statistics.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Media.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Catene di Markov/Catene di Markov.md",
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "Senza nome.canvas",

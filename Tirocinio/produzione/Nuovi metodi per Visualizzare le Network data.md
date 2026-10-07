@@ -28,6 +28,7 @@ data: "`2026-09-14 16:40`"
 		- Infine si esegue nuovamente l'algoritmo _FR_ con un po' meno di iterazioni per evitare un lungo tempo di elaborazione andando così però a minare l'interpretabilità.
 			- ![[Pasted image 20260915171224.png]]
 		- https://github.com/pathology-dynamics/composite_view/tree/main
+		- applicabile anche a reti normali collassando la rete. 
 - # TrammelGraph:
 	- https://link.springer.com/article/10.1007/s12650-020-00706-2
 	- Una tecnica che riesca a illustrare la struttura generale di un grafo (come fa una normale visualizzazione _nodi-link_) ed elimini il problema del disordine visivo causato dalla sovrapposizione dei nodi e archi (come fa la rappresentazione tramite _matrice di adiacenza_), questo design si basa su [UnTangle Map](https://ieeexplore.ieee.org/abstract/document/7091015) che usa una rete triangolare per ancorare un'astrazione di un grafo dettagliato.
@@ -87,10 +88,91 @@ data: "`2026-09-14 16:40`"
 			- esempio con $50$ nodi.
 	- ## Motivazioni:
 		- questo layout, siccome presenta limitazioni, come la necessaria cancellazione di alcuni archi, causati dal fatto che ogni vertice della rete può avere al massimo 6 archi, è utile principalmente per comparare diverse reti più che per analizzarle singolarmente nelle caratteristiche a livello dei nodi.  
-- # Layout non nuovi:
-	- OpenOrd
-	- Force Atlas 2
-	- Yifan Hu 
-	- Radial Axis
+- 
+- # VSAN:
+	- https://link.springer.com/article/10.1007/s11704-022-2078-5
+- # Algoritmo di Layouting per la visualizzazione di una rete cerebrale:
+	- https://www.sciencedirect.com/science/article/pii/S0097849322000668
+	- questo algoritmo è usato per rappresentare le reti cerebrali 3D in un layout _nodo-link_ 2D mantenendone le caratteristiche strutturali, quindi le regioni del cervello anatomicamente adiacenti saranno rappresentate come nodi vicini nel layout 2D e la forma generale del cervello viene riflessa nel layout. 
+	- ## Algoritmo:
+		- ### Input:
+			- uno degli input dell'algoritmo è una _parcellazione del cervello_, ovvero una suddivisione delle regioni del cervello in 3D, ogni regione è definita tramite delle coordinate 3D 
+				- queste coordinate possono essere i voxel (la controparte 3D dei pixel) che formano una regione oppure il centro di massa delle regioni  
+				- ogni regione ha: nome, acronimo, codice-colore, dimensione e una lista di sotto-regioni  
+			- un altro input è la _rete cerebrale_ in formato di grafo con nodi rappresentanti gli elementi neurali a livello delle regioni, gli archi hanno un peso che rappresenta il livello di connettività che c'è tra i nodi
+		- ### Steps:
+			- #### 1:
+				- si crea una _Parcellation-Derived Connectivity_ che rappresenta la vicinanza delle regioni del cervello tramite la parcellazione di esso, ciò viene fatto calcolando il numero di _voxel_ di ogni regione che sono adiacenti a quelli di altre, questa misura viene normalizzata dal numero totale di _voxel_ per quella determinata regione  
+				- ![[Pasted image 20260923180100.png]]
+			- #### 2:
+				- Siccome le reti cerebrali sono spesso incomplete si aggiungono dei _nodi ombra_ che coprono le parti del cervello che non facevano parte della rete ricevuta in input
+					- Questi _nodi ombra_ non verranno visualizzati alla fine ma occuperanno dello spazio che sarà di un colore riconoscibile (grigio)
+					- il rapporto di nodi ombra può essere scelto in base alle esigenze della visualizzazione:
+						- `shadow_node_ratio = 0`: vengono usati per il layout solo i nodi della rete cerebrale originale 
+						- `shadow_node_ratio = 1`: si imposta un livello di gerarchia dei nodi ombra in modo che occupino la stessa quantità di area dei nodi della rete cerebrale 
+						- `shadow_node_ratio = N` i nodi ombra occuperanno un'area N volte quella dei nodi normali.
+				- ![[Pasted image 20260923180119.png]]
+			- #### 3:
+				- si proiettano le posizioni 3D delle regioni della rete cerebrale come dei nodi, di fatto rendendo quelle coordinate 2D occupate per il layout finale  
+				- ![[Pasted image 20260924124624.png]]
+			- #### 4:
+				- si crea il layout basato sulla _Parcellation-Derived Connectivity_, creata nello step 1, usando un algoritmo di layout _force-directed_ in particolare _CoSE-Bilkent_, le forze di repulsione e attrazione vanno però manualmente modificate in base alla sovrapposizione dei nodi nella proiezione dello step 3 
+				- ![[Pasted image 20260924125111.png]]
+			- #### 5:
+				- lo step precedente può comunque lasciare alcuni nodi sovrapposti, quindi si cerca di equalizzare la distribuzione dei nodi nello spazio 2D, si generano poi gli archi basandosi sulla triangolazione tra i nodi e si esegue di nuovo un algoritmo per il layout _force-directed_ 
+				- ![[Pasted image 20260924125255.png]]
+			- #### 6:
+				- ora serve creare una parcellazione colorando delle aree 2D per creare un contesto anatomico.
+				- per prima cosa tutti i nodi 2D vengono parcellati tramite [Diagramma di Voronoi](https://it.wikipedia.org/wiki/Diagramma_di_Voronoi) limitando l'area su cui può agire creando un involucro convesso con un po' di padding intorno ai nodi. Attorno all'involucro si piazzano dei nodi virtuali che vengono considerati solo durante la creazione del _diagramma Voronoi_. Si raggruppano poi tutte le celle occupate in base alle regioni 2D di sfondo.
+				- queste regioni di sfondo si identificano tramite un algoritmo ricorsivo che, dato un numero, impostato dall'utente, di _regioni di sfondo_, attraversa la gerarchia per trovare le regioni del cervello che si assomigliano in termini di _dimensione_ o _numero di archi_; queste regioni di sfondo trovate avranno poi il colore che avevano nella parcellazione di input.
+					- ![[Pasted image 20260924132318.png|538]]
+			- #### 7:
+				- Ora si lasciano solo i nodi della rete cerebrale sopra le regioni di sfondo che rappresentano mettendo le etichette relative ad essi, incluso l'emisfero di cui fanno parte (dx o sx)  
+				- nel caso la rete cerebrale di input avesse più dettagli della parcellazione si mettono più nodi per regione con colori simili a quelli adiacenti
+				- più un collegamento tra nodi è forte meno un arco che li collega sarà trasparente 
+				- ![[Pasted image 20260924160641.png]]
+	- https://biomedia.doc.ic.ac.uk/brain-parcellation-survey/ dataset per la parcellazione 
+- # visualizzazione delle reti sociali basata sull'entropia strutturale:
+	- https://kops.uni-konstanz.de/entities/publication/b1640da4-2e09-48d7-8170-94d8e84427aa
+	- si cerca di rivelare l'organizzazione modulare della rete usando l'_entropia strutturale_, ovvero una misura che descrive la connettività di una rete data una specifica partizione gerarchica.
+		- una bassa entropia implica un'organizzazione più regolarizzata della rete, ovvero le strutture delle comunità saranno più chiare
+	- si costruisce un _albero di codifica_ che cattura la gerarchia _unendo ricorsivamente_ i cluster per minimizzare l'entropia usando una strategia _greedy_, in questo modo si rivela la struttura delle comunità multi-scala della rete
+	- per scegliere il livello della partizione si usa una strategia adattiva che si basa su una _coda con priorità sulla entropia minima_ 
+		- questo approccio seleziona i sotto-grafi in maniera incrementale dando priorità ai minori aumenti dell'entropia  
+	- questo metodo riesce ad analizzare e visualizzare efficacemente reti con fino a $7,700$ nodi e $360,000$ archi 
+	- ## Algoritmo:
+		- ### Albero di codifica:
+			- Questo albero viene costruito basandosi sull'entropia strutturale in 3 step principali
+			- #### 1:
+				- costruzione _Bottom-Up_
+				- si costruisce l'albero binario _iterativamente_ unendo due nodi figli per formare una nuova divisione, cercando di massimizzare la riduzione dell'entropia ad ogni step 
+			- #### 2: 
+				- _compressione dell'albero_
+				- si riduce l'altezza dell'albero di $k$ rimuovendo selettivamente dei nodi intermedi per mantenere un'entropia strutturale minima. 
+			- #### 3: 
+				- _Cross-layer link resolution_ 
+				- per garantire consistenza si aggiungono dei nodi intermedi dove serve per preservare delle relazioni gerarchiche valide tra i layer senza alterare l'entropia calcolata.
+			- la costruzione di questo albero ha un costo computazionale di 
+				- $O(2|V | + h_{max}(|E| \log |V | + |V |))$
+					- $|V|$ numero di nodi della rete 
+					- $|E|$ numero di archi della rete 
+					- $h_{max}$ è l'altezza del primo albero costruito prima di aver rimosso $k$ livelli e questo valore risulta spesso essere $\log |V|$ 
+		- ### Partizione adattiva:
+			- per assicurarsi che le partizioni riflettano la vera organizzazione della rete si selezionano delle comunità dai diversi livelli della gerarchia
+			- ![[Pasted image 20261006171902.png]]
+		- ### Layout:
+			- Il layout da generare sarà basato sulle comunità rilevate e che quindi le faccia risaltare minimizzando la distanza fra i nodi nelle stesse comunità,
+			- per farlo si cerca di massimizzare l'entropia del layout e nel mentre mantenere attive le forze che attraggono tra loro i nodi della stessa comunità con il seguente modello di ottimizzazione:
+				- $$\max_{x}H(X)=\sum\limits_{(i,j)\in E} \ln \| x_{i}-x_{j} \|$$
+				- nel frattempo deve essere garantito che:
+					- $$\min \sum\limits_{c\in C}\sum\limits_{(i, j)\in c}\| x_{i} − x_{j}\|^{2}$$
+					- $C$ rappresenta l'insieme delle comunità 
+					- $X$ è la posizione dei nodi nel layout
+			- successivamente si modellando le forze di _attrazione_ e _repulsione_ basandosi sui pesi degli archi che a loro volta sono basati sull'entropia 
+				- $F^{a}_{i, j} = w_{i, j} ||x_{i} − x_{j}||^{2}$
+				- $F^{r}_{i, j} = 1/||x_{i} − x_{j}||$
+					- $$w_{i,j} = \begin{cases} f_{map}\left( 1-\frac{SE_{target}}{W[i,j]}\right) & \frac{SE_{target}}{W[i,j]} < 1 \\ 0 & altrimenti  \end{cases}$$
+						- $SE_{target}$ rappresenta l'entropia della partizione selezionata 
+						- $f_{map}$ è la funzione di mapping e può essere _sigmoide_, _lineare_ o altro 
 - # Link Utili:
 	- 
