@@ -30,7 +30,7 @@ data: "`2026-09-14 16:40`"
 		- https://github.com/pathology-dynamics/composite_view/tree/main
 		- applicabile anche a reti normali collassando la rete. 
 - # TrammelGraph:
-	- https://link.springer.com/article/10.1007/s12650-020-00706-2
+	- preso da [TrammelGraph: visual graph abstraction for comparison](https://link.springer.com/article/10.1007/s12650-020-00706-2)
 	- Una tecnica che riesca a illustrare la struttura generale di un grafo (come fa una normale visualizzazione _nodi-link_) ed elimini il problema del disordine visivo causato dalla sovrapposizione dei nodi e archi (come fa la rappresentazione tramite _matrice di adiacenza_), questo design si basa su [UnTangle Map](https://ieeexplore.ieee.org/abstract/document/7091015) che usa una rete triangolare per ancorare un'astrazione di un grafo dettagliato.
 		- ogni vertice di questa rete triangolare rappresenta un nodo del grafo
 		- I nodi con con forti connessioni tra di loro vengono posizionati vicini in questa rete triangolare 
@@ -87,12 +87,9 @@ data: "`2026-09-14 16:40`"
 		- ![[Pasted image 20260918130655.png]]
 			- esempio con $50$ nodi.
 	- ## Motivazioni:
-		- questo layout, siccome presenta limitazioni, come la necessaria cancellazione di alcuni archi, causati dal fatto che ogni vertice della rete può avere al massimo 6 archi, è utile principalmente per comparare diverse reti più che per analizzarle singolarmente nelle caratteristiche a livello dei nodi.  
-- 
-- # VSAN:
-	- https://link.springer.com/article/10.1007/s11704-022-2078-5
-- # Algoritmo di Layouting per la visualizzazione di una rete cerebrale:
-	- https://www.sciencedirect.com/science/article/pii/S0097849322000668
+		- questo layout, siccome presenta limitazioni, come la necessaria cancellazione di alcuni archi, causati dal fatto che ogni vertice della rete può avere al massimo 6 archi, è utile principalmente per comparare diverse reti piuttosto che per analizzarle singolarmente nelle caratteristiche a livello dei nodi.  
+- # Algoritmo di Layout per la visualizzazione di una rete cerebrale:
+	- preso da https://www.sciencedirect.com/science/article/pii/S0097849322000668
 	- questo algoritmo è usato per rappresentare le reti cerebrali 3D in un layout _nodo-link_ 2D mantenendone le caratteristiche strutturali, quindi le regioni del cervello anatomicamente adiacenti saranno rappresentate come nodi vicini nel layout 2D e la forma generale del cervello viene riflessa nel layout. 
 	- ## Algoritmo:
 		- ### Input:
@@ -140,6 +137,13 @@ data: "`2026-09-14 16:40`"
 	- per scegliere il livello della partizione si usa una strategia adattiva che si basa su una _coda con priorità sulla entropia minima_ 
 		- questo approccio seleziona i sotto-grafi in maniera incrementale dando priorità ai minori aumenti dell'entropia  
 	- questo metodo riesce ad analizzare e visualizzare efficacemente reti con fino a $7,700$ nodi e $360,000$ archi 
+	- ## Entropia strutturale:
+		- L'entropia strutturale di un grafo rispetto al suo albero di codifica $T$ è:
+			- $$H_{T}(G)=-\sum\limits_{v_{t}} \frac{g_{v_{t}}}{vol(V)}\log_{2}  \frac{vol(v_{t})}{vol(v_{t}^{+})}$$
+				- $v_{t}$ è un nodo non-radice in $T$ che corrisponde ad un sottoinsieme di nodi $V$ del grafo $G$ 
+				- $v_{t}^{+}$ è il genitore di $v_{t}$ 
+				- $g_{v_{t}}$ rappresenta il numero di archi che collegano almeno uno dei nodi che sono presenti nelle foglie appartenenti alla partizione di $v_{t}$ 
+				- $vol(V)$ e $vol(v_{t}^{+})$ sono la somma dei gradi dei nodi foglia in $V$ e $v_{t}^{+}$ 
 	- ## Algoritmo:
 		- ### Albero di codifica:
 			- Questo albero viene costruito basandosi sull'entropia strutturale in 3 step principali
@@ -148,7 +152,7 @@ data: "`2026-09-14 16:40`"
 				- si costruisce l'albero binario _iterativamente_ unendo due nodi figli per formare una nuova divisione, cercando di massimizzare la riduzione dell'entropia ad ogni step 
 			- #### 2: 
 				- _compressione dell'albero_
-				- si riduce l'altezza dell'albero di $k$ rimuovendo selettivamente dei nodi intermedi per mantenere un'entropia strutturale minima. 
+				- si riduce l'altezza dell'albero a $k$ rimuovendo selettivamente dei nodi intermedi per mantenere un'entropia strutturale minima. 
 			- #### 3: 
 				- _Cross-layer link resolution_ 
 				- per garantire consistenza si aggiungono dei nodi intermedi dove serve per preservare delle relazioni gerarchiche valide tra i layer senza alterare l'entropia calcolata.

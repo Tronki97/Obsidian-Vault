@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "506db24d209529a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Homepage.md",
+                "file": "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,107 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Nuovi metodi per Visualizzare le Network data"
+            }
+          },
+          {
+            "id": "01b9818a89a3cfd3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tirocinio/Analisi delle corrispondenze.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Analisi delle corrispondenze"
+            }
+          },
+          {
+            "id": "704edbbeafda2488",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tirocinio/produzione/come procedere per l'elaborato del tirocinio..md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "come procedere per l'elaborato del tirocinio."
+            }
+          },
+          {
+            "id": "fca9be31aa7d55c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tirocinio/produzione/Elaborato per Tirocinio.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Elaborato per Tirocinio"
+            }
+          },
+          {
+            "id": "a4f37160933b056a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tirocinio/produzione/Indici delle reti.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Indici delle reti"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -86,8 +183,7 @@
               "title": "Segnalibri"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -102,21 +198,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4803e3cd3f4a91ea",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Struttura"
-            }
-          },
-          {
             "id": "e685526dce0dc2c7",
             "type": "leaf",
             "state": {
@@ -124,6 +205,21 @@
               "state": {},
               "icon": "git-pull-request",
               "title": "Source Control"
+            }
+          },
+          {
+            "id": "4803e3cd3f4a91ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura"
             }
           },
           {
@@ -245,9 +341,18 @@
               "icon": "lucide-file",
               "title": "Linguaggi di Programmazione"
             }
+          },
+          {
+            "id": "d5b70592ff6e1c89",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Coda di note da rivedere"
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -274,15 +379,19 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "e685526dce0dc2c7",
+  "active": "fca9be31aa7d55c2",
   "lastOpenFiles": [
-    "Homepage.md",
+    "Tirocinio/produzione/Indici delle reti.md",
+    "Tirocinio/produzione/Elaborato per Tirocinio.md",
+    "Tirocinio/produzione/come procedere per l'elaborato del tirocinio..md",
+    "Tirocinio/Analisi delle corrispondenze.md",
     "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
+    "Domande.md",
+    "Homepage.md",
+    "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Espressività e training dei modelli.md",
     "Pasted image 20261006171902.png",
-    "come procedere per l'elaborato del tirocinio..md",
-    "Tirocinio/produzione/Indici delle reti.md",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260924160641.png",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260923180100.png",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260924132318.png",
@@ -296,12 +405,10 @@
     "Tirocinio/produzione/tesi analizzate/CompositeView-Adjusted Spring Layout.pdf",
     "Tirocinio/produzione/tesi analizzate",
     "Tirocinio/Misure chiave delle reti.md",
-    "Domande.md",
     "Tirocinio/produzione",
     "Tirocinio/Algoritmi di visualizzazione.R",
     "Tirocinio/Coesione e Comunità nelle reti.md",
     "Tirocinio/Dati di rete.md",
-    "Tirocinio/Analisi delle corrispondenze.md",
     "Tirocinio/Centralità e gerarchia di una rete.md",
     "Tirocinio/Modelli statistici per le reti.md",
     "Tirocinio/Posizioni e ruoli.md",
@@ -318,8 +425,6 @@
     "3-Terzo anno/computational statistics/Ottimizzazione di MonteCarlo.md",
     "0-Mostarda/Secondo Anno/Calcolo delle probabilità e statistica.md",
     "2-Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
-    "0-Mostarda/Terzo Anno/Computational statistics.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Variabili aleatorie/Variabili aleatorie.md",
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "Senza nome.canvas",
