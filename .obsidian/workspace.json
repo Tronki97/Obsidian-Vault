@@ -8,79 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "506db24d209529a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Nuovi metodi per Visualizzare le Network data"
-            }
-          },
-          {
-            "id": "01b9818a89a3cfd3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tirocinio/Analisi delle corrispondenze.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Analisi delle corrispondenze"
-            }
-          },
-          {
-            "id": "704edbbeafda2488",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tirocinio/produzione/come procedere per l'elaborato del tirocinio..md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "come procedere per l'elaborato del tirocinio."
-            }
-          },
-          {
-            "id": "fca9be31aa7d55c2",
+            "id": "e43ff479f5c086b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -104,12 +32,12 @@
             }
           },
           {
-            "id": "47364a4f2caa209c",
+            "id": "61c11878f631fa30",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tirocinio/Diadi e triadi.md",
+                "file": "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,83 +52,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Diadi e triadi"
-            }
-          },
-          {
-            "id": "7e7aaa79adc79629",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tirocinio/Coesione e Comunità nelle reti.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Coesione e Comunità nelle reti"
-            }
-          },
-          {
-            "id": "955f670fc79c0d9d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tirocinio/Dati di rete Ego.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Dati di rete Ego"
-            }
-          },
-          {
-            "id": "a4f37160933b056a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tirocinio/produzione/Indici delle reti.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Indici delle reti"
+              "title": "Nuovi metodi per Visualizzare le Network data"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -451,11 +306,18 @@
       "obsidian-spaced-repetition:Rivisita schede": false
     }
   },
-  "active": "fca9be31aa7d55c2",
+  "active": "e685526dce0dc2c7",
   "lastOpenFiles": [
-    "Tirocinio/produzione/come procedere per l'elaborato del tirocinio..md",
+    "Pasted image 20261016194314.png",
+    "Pasted image 20261016194256.png",
+    "Pasted image 20261016194211.png",
+    "Pasted image 20261016194057.png",
     "Tirocinio/produzione/Nuovi metodi per Visualizzare le Network data.md",
     "Tirocinio/produzione/Elaborato per Tirocinio.md",
+    "Tirocinio/produzione/immagini produzione/Pasted image 20261006171902.png",
+    "Tirocinio/produzione/Risultato_trammel.png",
+    "Homepage.md",
+    "Tirocinio/produzione/come procedere per l'elaborato del tirocinio..md",
     "Tirocinio/Analisi delle corrispondenze.md",
     "Tirocinio/Dati di rete Ego.md",
     "Tirocinio/Coesione e Comunità nelle reti.md",
@@ -463,21 +325,15 @@
     "Tirocinio/produzione/Indici delle reti.md",
     "Tirocinio/Reti a due modalità.md",
     "Domande.md",
-    "Homepage.md",
     "0-Mostarda/Secondo Anno/Linguaggi di Programmazione.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Reti neurali.md",
     "3-Terzo anno/Introduzione all'apprendimento automatico/deep learning/Espressività e training dei modelli.md",
-    "Pasted image 20261006171902.png",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260924160641.png",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260923180100.png",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260924132318.png",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260924125255.png",
     "Tirocinio/produzione/immagini produzione/Pasted image 20260924125111.png",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260924124624.png",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260923180119.png",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260915165619.png",
     "Tirocinio/produzione/immagini produzione",
-    "Tirocinio/produzione/immagini produzione/Pasted image 20260918130655.png",
     "Tirocinio/produzione/tesi analizzate/CompositeView-Adjusted Spring Layout.pdf",
     "Tirocinio/produzione/tesi analizzate",
     "Tirocinio/Misure chiave delle reti.md",
@@ -496,7 +352,6 @@
     "1-Primo Anno/Algoritmi e strutture dati/Modulo2/Grafi/Grafi.md",
     "3-Terzo anno/computational statistics/Ottimizzazione di MonteCarlo.md",
     "0-Mostarda/Secondo Anno/Calcolo delle probabilità e statistica.md",
-    "2-Secondo Anno/Calcolo della probabilità e statistica/Teoremi limite.md",
     "1-Primo Anno/Algebra e geometria/Domande_Teoria_AG_Inf.pdf",
     "3-Terzo anno/Fondamenti di cybersecurity/laboratorio",
     "Senza nome.canvas",
